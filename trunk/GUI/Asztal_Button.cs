@@ -6,7 +6,14 @@
     using System.Drawing;
     using BusinessLogic;
 
-
+    public enum  Asztal_colors : int
+    {
+        Over = 1, // ha fölémegy az egér
+        Selected = 2, // az éppen kiválasztottat mutatja
+        Free = 0, //szabad nincs hozzá foglalás és rendelés
+        used = 3, // ülnek ott és van rendelésük
+        reserved = 4 // foglalás vn az asztalra
+    }
 
     public class Asztal_Button : System.Windows.Forms.ButtonBase
     {
@@ -34,6 +41,9 @@
         int hdl;
 
         private int _Asztal_id;
+        private int _Selected;
+        private int _Free;
+        private int _Over;
 
         public int Asztal_id
         {
@@ -44,11 +54,18 @@
 
         public Asztal_Button()
         {
+            _Asztal_id = -1;
+            _Selected = 0;
+            _Over = 0;
+            _Free = 1;
         }
 
         public Asztal_Button(int aId)
         {
             _Asztal_id = aId;
+            _Selected = 0;
+            _Free = 1;
+            _Over = 0;
         }
 
 
@@ -56,7 +73,7 @@
         {
             // Override the MouseDown function to set a new image
             // Display Image No 1 from ButtonImageList when mouse is clicked on the button
-            ImageIndex = 1;
+            _Selected = 1;
             Invalidate();
         }
 
@@ -64,7 +81,7 @@
         {
             // Override the MouseLeave function to set a new image
             // Display Image No 2 from ButtonImageList when mouse leaves the button
-            ImageIndex = 2;
+            _Over = 0;
             Invalidate();
         }
 
@@ -72,7 +89,8 @@
         {
             // Override the MouseEnter function to set a new image
             // Display Image No 0 from ButtonImageList when mouse enters the button area
-            ImageIndex = 0;
+            ImageIndex = ImageIndex = (int)Asztal_colors.Over;
+            _Over = 1;
             Invalidate();
         }
 
@@ -99,6 +117,17 @@
 
             // Get the Bounding Rectnalge for the button
             Rectangle rect = e.ClipRectangle;
+
+            if (_Selected == 1) { ImageIndex = (int)Asztal_colors.Selected; }
+            else if (_Over == 1)
+            {
+                ImageIndex = (int)Asztal_colors.Over;
+            }
+            else if (_Free == 1)
+            {
+                ImageIndex = (int)Asztal_colors.Free;
+            }
+
 
             // Paint the rectangle with the color you want
             //g.FillRectangle(new SolidBrush(Color.FromArgb(127, 255, 255, 255)), rect);

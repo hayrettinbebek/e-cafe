@@ -41,10 +41,7 @@ namespace e_Cafe
             bvCIKK.BindingSource = bindingSource;
             dataGridView1.DataSource = bindingSource;
 
-            selected_CIKK_ID.DataBindings.Add(
-                            new Binding("Text",
-                            bindingSource,
-                            "CIKK_ID"));
+
 
         }
 
@@ -75,10 +72,7 @@ namespace e_Cafe
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            iCikk = new Cikk(Convert.ToInt16(selected_CIKK_ID.Text), MMenu.blObj);
-        }
+
 
 
 
