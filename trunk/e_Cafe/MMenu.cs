@@ -18,6 +18,11 @@ namespace e_Cafe
         clFIELDINFO_LIST FieldInfo;
         public static TBLObj blObj;
 
+        public string DebugMessage
+        {
+            set { label1.Text = value; }
+        }
+
 
         public MMenu()
         {
@@ -31,7 +36,7 @@ namespace e_Cafe
             panel3.Controls.Clear();
             Asztalok a = new Asztalok(panel3, blObj);
             a.Click += Asztal_click;
-            a.RefreshAsztalok();
+            a.RefreshAsztalok(true);
 
         }
 
@@ -62,6 +67,16 @@ namespace e_Cafe
             AdminTools adm = new AdminTools(blObj);
             adm.ShowDialog();// = true;
             //adm.Show();
+        }
+
+        public void DoAsztalSelect(int iASZTAL_ID)
+        {
+
+        }
+
+        private void notepad_Rendeles1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
