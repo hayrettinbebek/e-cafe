@@ -13,6 +13,7 @@ namespace e_Cafe
     public partial class AsztalSetup : Form
     {
         TBLObj asBlObj;
+        Asztalok a;
 
         public AsztalSetup()
         {
@@ -28,8 +29,18 @@ namespace e_Cafe
         private void button1_Click(object sender, EventArgs e)
         {
             pnlAsztalHelyek.Controls.Clear();
-            Asztalok a = new Asztalok(pnlAsztalHelyek, asBlObj, true);
+            a = new Asztalok(pnlAsztalHelyek, asBlObj, true);
             a.RefreshAsztalok();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < a.aList.lASZTAL.Count; i++)
+            {
+                a.aList.SaveList();
+
+            }
+            
         }
     }
 }

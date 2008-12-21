@@ -15,6 +15,7 @@ namespace e_Cafe
     {
         protected TBLObj bl_object;
         protected bool _isAdmin;
+        public Asztal_List aList;
 
         public Asztalok(Control p, TBLObj bl)
         {
@@ -37,16 +38,15 @@ namespace e_Cafe
 
         public void RefreshAsztalok()
         {
-            Asztal_List aList = new Asztal_List(bl_object);
+            aList = new Asztal_List(bl_object);
             
             for (int i = 0; i < aList.lASZTAL.Count; i++)
             {
-                Asztal_Button ab = new Asztal_Button(i);
+                Asztal_Button ab = new Asztal_Button(aList.lASZTAL[i].fASZTAL_ID);
 
                 ab.ImageList = AsztalType1List;
                 ab.Location = new Point(aList.lASZTAL[i].fASZTAL_POS_X, aList.lASZTAL[i].fASZTAL_POS_Y);
                 ab.Text = aList.lASZTAL[i].fASZTAL_SZAM;
-                ab.ImageIndex = 1;
                 ab.Size = new System.Drawing.Size(75, 23);
                 //ab.Click += this.Asztalok_Click;
                 if (_isAdmin) { ab.MouseMove += this.Asztalok_MouseMove; }
@@ -79,7 +79,10 @@ namespace e_Cafe
                 {
                     Asztal_Button tmp_a = (Asztal_Button)sender;
                     tmp_a.Location = new Point(tmp_a.Location.X + (e.X), tmp_a.Location.Y + (e.Y));
-                    label1.Text = tmp_a.Location.ToString() + " egér:" + e.X.ToString() + "y:" + e.Y.ToString();
+                    aList.lASZTAL[aList.GetItemIndex(tmp_a.Asztal_id)].fASZTAL_POS_X = tmp_a.Location.X;
+                    aList.lASZTAL[aList.GetItemIndex(tmp_a.Asztal_id)].fASZTAL_POS_Y = tmp_a.Location.Y;
+
+                    label1.Text = tmp_a.Asztal_id.ToString() + tmp_a.Location.ToString() + " egér:" + e.X.ToString() + "y:" + e.Y.ToString();
                 }
                 catch { }
             }

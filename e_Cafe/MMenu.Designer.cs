@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.lblTime = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(132, 581);
             this.panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(22, 409);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "admin";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -88,11 +98,6 @@
             this.panel4.Size = new System.Drawing.Size(136, 581);
             this.panel4.TabIndex = 0;
             // 
-            // tmrTime
-            // 
-            this.tmrTime.Enabled = true;
-            this.tmrTime.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // lblTime
             // 
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -103,15 +108,10 @@
             this.lblTime.Text = "button2";
             this.lblTime.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // tmrTime
             // 
-            this.button2.Location = new System.Drawing.Point(22, 409);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "admin";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.tmrTime.Enabled = true;
+            this.tmrTime.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MMenu
             // 
