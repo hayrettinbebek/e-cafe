@@ -41,7 +41,7 @@
         int hdl;
 
         private int _Asztal_id;
-        private int _Selected;
+        private bool _Selected;
         private int _Free;
         private int _Over;
 
@@ -51,11 +51,16 @@
             set { _Asztal_id = value; }
         }
 
+        public bool vSelected
+        {
+            get { return _Selected; }
+            set { _Selected = value; }
+        }
 
         public Asztal_Button()
         {
             _Asztal_id = -1;
-            _Selected = 0;
+            _Selected = false;
             _Over = 0;
             _Free = 1;
         }
@@ -63,7 +68,7 @@
         public Asztal_Button(int aId)
         {
             _Asztal_id = aId;
-            _Selected = 0;
+            _Selected = false;
             _Free = 1;
             _Over = 0;
         }
@@ -73,8 +78,8 @@
         {
             // Override the MouseDown function to set a new image
             // Display Image No 1 from ButtonImageList when mouse is clicked on the button
-            _Selected = 1;
-            Invalidate();
+            //_Selected = 1;
+            //Invalidate();
         }
 
         protected override void OnMouseLeave(EventArgs e)
@@ -118,7 +123,7 @@
             // Get the Bounding Rectnalge for the button
             Rectangle rect = e.ClipRectangle;
 
-            if (_Selected == 1) { ImageIndex = (int)Asztal_colors.Selected; }
+            if (_Selected ) { ImageIndex = (int)Asztal_colors.Selected; }
             else if (_Over == 1)
             {
                 ImageIndex = (int)Asztal_colors.Over;

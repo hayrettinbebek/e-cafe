@@ -50,13 +50,36 @@
     <Compile Include="Asztal_Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Notepad_Rendeles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notepad_Rendeles.Designer.cs">
+      <DependentUpon>Notepad_Rendeles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
       <Project>{4423B230-FAEA-458A-94FC-F8D912C2709A}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Notepad_Rendeles.resx">
+      <DependentUpon>Notepad_Rendeles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="notepad_T.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

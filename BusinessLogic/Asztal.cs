@@ -15,6 +15,7 @@ namespace BusinessLogic
         public string fASZTAL_SZAM;
         public int fASZTAL_POS_X;
         public int fASZTAL_POS_Y;
+        public bool vSelected;
 
         public Asztal()
         {
@@ -23,15 +24,17 @@ namespace BusinessLogic
             fASZTAL_TIPUS = -1;
             fASZTAL_POS_X = -1;
             fASZTAL_POS_Y = -1;
+            vSelected = false;
         }
 
-        public Asztal(int iASZTAL_ID, string iASZTAL_SZAM, int iASZTAL_TIPUS, int iASZTAL_POS_X, int iASZTAL_POS_Y)
+        public Asztal(int iASZTAL_ID, string iASZTAL_SZAM, int iASZTAL_TIPUS, int iASZTAL_POS_X, int iASZTAL_POS_Y, bool iSelected)
         {
             fASZTAL_ID = iASZTAL_ID;
             fASZTAL_SZAM = iASZTAL_SZAM;
             fASZTAL_TIPUS = iASZTAL_TIPUS;
             fASZTAL_POS_X = iASZTAL_POS_X;
             fASZTAL_POS_Y = iASZTAL_POS_Y;
+            vSelected = iSelected;
         }
     }
 
@@ -58,7 +61,7 @@ namespace BusinessLogic
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                Asztal t = new Asztal((int)rdr["ASZTAL_ID"], rdr["ASZTAL_SZAM"].ToString(), (int)rdr["ASZTAL_TIPUS"], (int)rdr["ASZTAL_POS_X"], (int)rdr["ASZTAL_POS_Y"]);
+                Asztal t = new Asztal((int)rdr["ASZTAL_ID"], rdr["ASZTAL_SZAM"].ToString(), (int)rdr["ASZTAL_TIPUS"], (int)rdr["ASZTAL_POS_X"], (int)rdr["ASZTAL_POS_Y"], false);
                 lASZTAL.Add(t);
             }
             rdr.Close();
@@ -90,7 +93,18 @@ namespace BusinessLogic
 
         }
 
+        public void SelectAsztal(int iASZTAL_ID)
+        {
 
+            for (int i = 0; i < lASZTAL.Count; i++)
+            {
+                if (lASZTAL[i].fASZTAL_ID == iASZTAL_ID) { lASZTAL[i].vSelected = true; }
+                else { lASZTAL[i].vSelected = false; }
+
+            }
+
+
+        }
         public void  SaveList()
         {
             

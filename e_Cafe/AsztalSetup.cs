@@ -30,7 +30,7 @@ namespace e_Cafe
         {
             pnlAsztalHelyek.Controls.Clear();
             a = new Asztalok(pnlAsztalHelyek, asBlObj, true);
-            a.RefreshAsztalok();
+            a.RefreshAsztalok(true);
         }
 
         private void button2_Click(object sender, EventArgs e)
