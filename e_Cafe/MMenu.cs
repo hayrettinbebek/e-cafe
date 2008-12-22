@@ -56,6 +56,8 @@ namespace e_Cafe
             try
             {
                 Asztal_Button tmp_a = (Asztal_Button)sender;
+                CikkSelector ck_sel = new CikkSelector();
+                ck_sel.Show();
                 MessageBox.Show(Convert.ToString(tmp_a.Asztal_id));
             }
             catch { }

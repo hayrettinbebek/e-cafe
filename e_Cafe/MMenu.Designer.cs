@@ -99,7 +99,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(132, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(566, 639);
+            this.panel3.Size = new System.Drawing.Size(599, 639);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -107,9 +107,9 @@
             this.panel4.Controls.Add(this.notepad_Rendeles1);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(698, 0);
+            this.panel4.Location = new System.Drawing.Point(731, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(318, 639);
+            this.panel4.Size = new System.Drawing.Size(285, 639);
             this.panel4.TabIndex = 0;
             // 
             // tmrTime
@@ -119,17 +119,18 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
             this.panel5.Controls.Add(this.lblTime);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(318, 59);
+            this.panel5.Size = new System.Drawing.Size(285, 59);
             this.panel5.TabIndex = 3;
             // 
             // lblTime
             // 
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTime.Location = new System.Drawing.Point(33, 9);
+            this.lblTime.Location = new System.Drawing.Point(87, 9);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(108, 41);
             this.lblTime.TabIndex = 3;
@@ -138,10 +139,11 @@
             // 
             // notepad_Rendeles1
             // 
+            this.notepad_Rendeles1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
             this.notepad_Rendeles1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.notepad_Rendeles1.Location = new System.Drawing.Point(0, 59);
             this.notepad_Rendeles1.Name = "notepad_Rendeles1";
-            this.notepad_Rendeles1.Size = new System.Drawing.Size(318, 580);
+            this.notepad_Rendeles1.Size = new System.Drawing.Size(285, 580);
             this.notepad_Rendeles1.TabIndex = 4;
             this.notepad_Rendeles1.Load += new System.EventHandler(this.notepad_Rendeles1_Load);
             // 
