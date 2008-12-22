@@ -55,7 +55,7 @@
             this.pictureBox1.Image = global::GUI.Properties.Resources.notepad_T;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(333, 512);
+            this.pictureBox1.Size = new System.Drawing.Size(319, 512);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -65,12 +65,13 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lbRendelesSor);
             this.panel1.Controls.Add(this.rtHeader);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(19, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 404);
+            this.panel1.Size = new System.Drawing.Size(277, 404);
             this.panel1.TabIndex = 2;
             // 
             // rtHeader
@@ -80,7 +81,7 @@
             this.rtHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rtHeader.Location = new System.Drawing.Point(0, 0);
             this.rtHeader.Name = "rtHeader";
-            this.rtHeader.Size = new System.Drawing.Size(289, 40);
+            this.rtHeader.Size = new System.Drawing.Size(277, 40);
             this.rtHeader.TabIndex = 2;
             this.rtHeader.Text = "Rendelések";
             // 
@@ -100,7 +101,7 @@
             this.lbRendelesSor.Location = new System.Drawing.Point(0, 40);
             this.lbRendelesSor.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.lbRendelesSor.Name = "lbRendelesSor";
-            this.lbRendelesSor.Size = new System.Drawing.Size(289, 325);
+            this.lbRendelesSor.Size = new System.Drawing.Size(277, 325);
             this.lbRendelesSor.TabIndex = 3;
             // 
             // panel2
@@ -111,7 +112,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 377);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 27);
+            this.panel2.Size = new System.Drawing.Size(277, 27);
             this.panel2.TabIndex = 5;
             // 
             // richTextBox1
@@ -122,7 +123,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(161, 27);
+            this.richTextBox1.Size = new System.Drawing.Size(149, 27);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "Összesen:";
             // 
@@ -131,7 +132,7 @@
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox2.Location = new System.Drawing.Point(161, 0);
+            this.richTextBox2.Location = new System.Drawing.Point(149, 0);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(128, 27);
@@ -145,7 +146,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Notepad_Rendeles";
-            this.Size = new System.Drawing.Size(333, 512);
+            this.Size = new System.Drawing.Size(319, 512);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

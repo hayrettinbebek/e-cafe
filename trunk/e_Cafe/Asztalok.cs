@@ -83,6 +83,8 @@ namespace e_Cafe
                 aList.SelectAsztal(tmp_a.Asztal_id);
                 tmp_a.vSelected = true;
                 RefreshAsztalok(false);
+                CikkSelector ck_sel = new CikkSelector();
+                ck_sel.Show();
                 mm.DebugMessage = tmp_a.Asztal_id.ToString() + tmp_a.vSelected.ToString(); 
             }
             catch { }
