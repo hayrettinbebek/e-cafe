@@ -8,39 +8,29 @@ namespace BusinessLogic
 {
     public class Cikk
     {
-        private SqlConnection sc;
-
         public int fCIKK_ID;
         public string fMEGNEVEZES;
         public int fCIKK_TIPUS;
         public int fCIKKCSOPORT_ID;
 
-        public Cikk(int cikk_id, TBLObj iBLObj)
+        public Cikk(int pCIKK_ID,
+                    string pMEGNEVEZES,
+                    int pCIKK_TIPUS,
+                    int pCIKKCSOPORT_ID
+                    )
         {
-            TBLObj pBLObj = iBLObj;
-            sc = iBLObj.sqlConnection;
-            // itt jön hogy a DB ből kiszedi az értékeket.
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = sc;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID  FROM CIKK ";
-            SqlDataReader rdr = cmd.ExecuteReader();
-            
-            while (rdr.Read())
-            {
-                fCIKK_ID = (int)rdr["CIKK_ID"];
-                fMEGNEVEZES = (string)rdr["MEGNEVEZES"];
-                fCIKK_TIPUS = (int)rdr["CIKK_TIPUS"];
-                fCIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
 
-            }
-            rdr.Close();
+                fCIKK_ID = pCIKK_ID;
+                fMEGNEVEZES = pMEGNEVEZES;
+                fCIKK_TIPUS = pCIKK_TIPUS;
+                fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
+
+
         }
 
-        public Cikk(TBLObj iBLObj)
+        public Cikk()
         {
-            TBLObj pBLObj = iBLObj;
-            sc = iBLObj.sqlConnection;
+
             fCIKK_ID = -1;
         }
 
@@ -52,6 +42,40 @@ namespace BusinessLogic
         
     }
 
+    class Cikk_list
+    {
+        private SqlConnection sc;
+
+        public List<Cikk> lCIKK = new List<Cikk>();
+        TBLObj pBLObj;
+
+        public Cikk_list(TBLObj iBLObj)
+        {
+            pBLObj = iBLObj;
+            sc = pBLObj.sqlConnection;
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID  FROM CIKK";
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                Cikk t = new Cikk((int)rdr["CIKK_ID"],
+                                  (string)rdr["MEGNEVEZES"], 
+                                  (int)rdr["CIKK_TIPUS"], 
+                                  (int)rdr["CIKKCSOPORT_ID"]);
+                lCIKK.Add(t);
+            }
+            rdr.Close();
+        }
+
+    }
+
     class Recept
     {
     }
@@ -60,26 +84,58 @@ namespace BusinessLogic
     {
     }
 
-
-    class Cikkcsoport
+    #region Cikkcsoport
+    public class Cikkcsoport
     {
-        private SqlConnection sc;
-
         public int fCIKKCSOPORT_ID;
         public string fCIKKCSOPORT_NEV;
 
-        public Cikkcsoport(int cikk_id, TBLObj iBLObj)
+        public Cikkcsoport(int pCIKKCSOPORT_ID, string pCIKKCSOPORT_NEV)
         {
-            TBLObj pBLObj = iBLObj;
-            sc = iBLObj.sqlConnection;
-            // itt jön hogy a DB ből kiszedi az értékeket.
+
+                fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
+                fCIKKCSOPORT_NEV = pCIKKCSOPORT_NEV;
+
+
+
         }
 
-        public Cikkcsoport(TBLObj iBLObj)
+        public Cikkcsoport()
         {
-            TBLObj pBLObj = iBLObj;
-            sc = iBLObj.sqlConnection;
             fCIKKCSOPORT_ID = -1;
         }
     }
+
+    public class Cikkcsoport_list
+    {
+        private SqlConnection sc;
+
+        public List<Cikkcsoport> lCIKKCSOPORT = new List<Cikkcsoport>();
+        TBLObj pBLObj;
+
+        public Cikkcsoport_list(TBLObj iBLObj)
+        {
+            pBLObj = iBLObj;
+            sc = pBLObj.sqlConnection;
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT CIKKCSOPORT_ID, CIKKCSOPORT_NEV  FROM CIKKCSOPORT";
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                Cikkcsoport t = new Cikkcsoport((int)rdr["CIKKCSOPORT_ID"],
+                                  (string)rdr["CIKKCSOPORT_NEV"]);
+                lCIKKCSOPORT.Add(t);
+            }
+            rdr.Close();
+        }
+
+    }
+    #endregion
 }
