@@ -37,12 +37,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.nr1 = new GUI.Notepad_Rendeles();
             this.panel5 = new System.Windows.Forms.Panel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.usrClock2 = new e_Cafe.UsrClock();
             this.lblTime = new System.Windows.Forms.Button();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
-            this.nr1 = new GUI.Notepad_Rendeles();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -126,6 +125,17 @@
             this.panel4.Size = new System.Drawing.Size(285, 639);
             this.panel4.TabIndex = 0;
             // 
+            // nr1
+            // 
+            this.nr1.Asztal_id = 0;
+            this.nr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
+            this.nr1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nr1.Location = new System.Drawing.Point(0, 111);
+            this.nr1.Name = "nr1";
+            this.nr1.Size = new System.Drawing.Size(285, 528);
+            this.nr1.TabIndex = 4;
+            this.nr1.Load += new System.EventHandler(this.notepad_Rendeles1_Load);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
@@ -145,7 +155,7 @@
             this.elementHost1.Size = new System.Drawing.Size(113, 111);
             this.elementHost1.TabIndex = 4;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.usrClock2;
+            this.elementHost1.Child = null;
             // 
             // lblTime
             // 
@@ -161,17 +171,6 @@
             // 
             this.tmrTime.Enabled = true;
             this.tmrTime.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // nr1
-            // 
-            this.nr1.Asztal_id = 0;
-            this.nr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
-            this.nr1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nr1.Location = new System.Drawing.Point(0, 111);
-            this.nr1.Name = "nr1";
-            this.nr1.Size = new System.Drawing.Size(285, 528);
-            this.nr1.TabIndex = 4;
-            this.nr1.Load += new System.EventHandler(this.notepad_Rendeles1_Load);
             // 
             // MMenu
             // 

@@ -75,10 +75,10 @@
     <Compile Include="AdminTools.Designer.cs">
       <DependentUpon>AdminTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="Asztalok.cs">
+    <Compile Include="UserControls\Asztalok.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Asztalok.Designer.cs">
+    <Compile Include="UserControls\Asztalok.Designer.cs">
       <DependentUpon>Asztalok.cs</DependentUpon>
     </Compile>
     <Compile Include="Cikkek.cs">
@@ -93,11 +93,11 @@
     <Compile Include="AsztalSetup.Designer.cs">
       <DependentUpon>AsztalSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="CikkSelector.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\CikkValaszt.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CikkSelector.Designer.cs">
-      <DependentUpon>CikkSelector.cs</DependentUpon>
+    <Compile Include="UserControls\CikkValaszt.Designer.cs">
+      <DependentUpon>CikkValaszt.cs</DependentUpon>
     </Compile>
     <Compile Include="MMenu.cs">
       <SubType>Form</SubType>
@@ -110,7 +110,7 @@
     <EmbeddedResource Include="AdminTools.resx">
       <DependentUpon>AdminTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Asztalok.resx">
+    <EmbeddedResource Include="UserControls\Asztalok.resx">
       <DependentUpon>Asztalok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AsztalSetup.resx">
@@ -119,8 +119,8 @@
     <EmbeddedResource Include="Cikkek.resx">
       <DependentUpon>Cikkek.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CikkSelector.resx">
-      <DependentUpon>CikkSelector.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\CikkValaszt.resx">
+      <DependentUpon>CikkValaszt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MMenu.resx">
       <DependentUpon>MMenu.cs</DependentUpon>
@@ -143,7 +143,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UsrClock.xaml.cs">
+    <Compile Include="UserControls\UsrClock.xaml.cs">
       <DependentUpon>UsrClock.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -158,7 +158,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="UsrClock.xaml">
+    <Page Include="UserControls\UsrClock.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
