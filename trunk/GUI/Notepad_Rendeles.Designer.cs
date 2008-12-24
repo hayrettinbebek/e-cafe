@@ -33,11 +33,11 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rtHeader = new System.Windows.Forms.RichTextBox();
             this.lbRendelesSor = new System.Windows.Forms.ListBox();
+            this.rtHeader = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rtSum = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,17 +74,6 @@
             this.panel1.Size = new System.Drawing.Size(277, 404);
             this.panel1.TabIndex = 2;
             // 
-            // rtHeader
-            // 
-            this.rtHeader.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rtHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rtHeader.Location = new System.Drawing.Point(0, 0);
-            this.rtHeader.Name = "rtHeader";
-            this.rtHeader.Size = new System.Drawing.Size(277, 40);
-            this.rtHeader.TabIndex = 2;
-            this.rtHeader.Text = "Rendelések";
-            // 
             // lbRendelesSor
             // 
             this.lbRendelesSor.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -104,10 +93,21 @@
             this.lbRendelesSor.Size = new System.Drawing.Size(277, 325);
             this.lbRendelesSor.TabIndex = 3;
             // 
+            // rtHeader
+            // 
+            this.rtHeader.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rtHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rtHeader.Location = new System.Drawing.Point(0, 0);
+            this.rtHeader.Name = "rtHeader";
+            this.rtHeader.Size = new System.Drawing.Size(277, 40);
+            this.rtHeader.TabIndex = 2;
+            this.rtHeader.Text = "Rendelések";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.richTextBox1);
-            this.panel2.Controls.Add(this.richTextBox2);
+            this.panel2.Controls.Add(this.rtSum);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 377);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
@@ -127,17 +127,17 @@
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "Összesen:";
             // 
-            // richTextBox2
+            // rtSum
             // 
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox2.Location = new System.Drawing.Point(149, 0);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(128, 27);
-            this.richTextBox2.TabIndex = 6;
-            this.richTextBox2.Text = "32 123 Ft";
+            this.rtSum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtSum.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rtSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rtSum.Location = new System.Drawing.Point(149, 0);
+            this.rtSum.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.rtSum.Name = "rtSum";
+            this.rtSum.Size = new System.Drawing.Size(128, 27);
+            this.rtSum.TabIndex = 6;
+            this.rtSum.Text = "32 123 Ft";
             // 
             // Notepad_Rendeles
             // 
@@ -160,10 +160,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox lbRendelesSor;
-        private System.Windows.Forms.RichTextBox rtHeader;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rtSum;
+        public System.Windows.Forms.RichTextBox rtHeader;
 
     }
 }

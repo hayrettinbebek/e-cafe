@@ -36,6 +36,13 @@ namespace BusinessLogic
             fASZTAL_POS_Y = iASZTAL_POS_Y;
             vSelected = iSelected;
         }
+
+        public bool isUsed()
+        {
+            //select ami lekérdezi a foglaltásgot
+
+            return ((fASZTAL_ID % 2) == 0);
+        }
     }
 
     public class Asztal_List
@@ -56,12 +63,12 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT ASZTAL_ID, ASZTAL_SZAM, ASZTAL_TIPUS, ASZTAL_POS_X, ASZTAL_POS_Y  FROM ASZTAL ";
+            cmd.CommandText = "SELECT ASZTAL_ID, ASZTAL_SZAM, ASZTAL_TIPUS_ID, ASZTAL_POS_X, ASZTAL_POS_Y  FROM ASZTAL ";
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                Asztal t = new Asztal((int)rdr["ASZTAL_ID"], rdr["ASZTAL_SZAM"].ToString(), (int)rdr["ASZTAL_TIPUS"], (int)rdr["ASZTAL_POS_X"], (int)rdr["ASZTAL_POS_Y"], false);
+                Asztal t = new Asztal((int)rdr["ASZTAL_ID"], rdr["ASZTAL_SZAM"].ToString(), (int)rdr["ASZTAL_TIPUS_ID"], (int)rdr["ASZTAL_POS_X"], (int)rdr["ASZTAL_POS_Y"], false);
                 lASZTAL.Add(t);
             }
             rdr.Close();
@@ -145,6 +152,14 @@ namespace BusinessLogic
 
 
         }
+
+        public bool isUsed(int iASZTAL_ID)
+        {
+            //select ami lekérdezi a foglaltásgot
+
+            return (GetItem(iASZTAL_ID).isUsed());
+        }
+
     }
 
 }
