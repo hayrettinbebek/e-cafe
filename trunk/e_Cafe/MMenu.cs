@@ -54,8 +54,7 @@ namespace e_Cafe
         public void Asztal_click(object sender, EventArgs e)
         {
             // ha egy asztalra klikkelünk
-            try
-            {
+
                 Asztal_Button tmp_a = (Asztal_Button)sender;
 
                 a.aList.SelectAsztal(tmp_a.Asztal_id);
@@ -74,6 +73,16 @@ namespace e_Cafe
                     preAsk.ShowDialog();
                     if (preAsk.DialogResult == DialogResult.OK)
                     {
+                        if (preAsk.pChoice == "R")
+                        {
+                            panel3.Controls.Clear();
+                            CikkValaszt cv = new CikkValaszt(panel3, blObj);
+                            panel3.Controls.Add(cv);
+                            cv.InitCikkValaszt();
+                            
+                        }
+                            
+
 
 
                     }
@@ -88,8 +97,7 @@ namespace e_Cafe
 
 
                 a.RefreshAsztalok(false); 
-            }
-            catch {  }
+
 
         }
 
