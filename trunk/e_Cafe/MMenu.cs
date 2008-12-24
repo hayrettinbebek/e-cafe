@@ -34,10 +34,7 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            a = new Asztalok(panel3, blObj);
-            a.Click += Asztal_click;
-            a.RefreshAsztalok(true);
+            goMainMenu();
 
         }
 
@@ -69,7 +66,7 @@ namespace e_Cafe
                 {
                     nr1.clear();
                     // ha szükség van előválaztóra!!
-                    TableActionSelect preAsk = new TableActionSelect("Asztal " + tmp_a.Asztal_id.ToString() + ": Válasszon feladatok!");
+                    TableActionSelect preAsk = new TableActionSelect("Asztal " + a.aList.GetItem(tmp_a.Asztal_id).fASZTAL_SZAM.ToString() + ": Válasszon feladatok!");
                     preAsk.ShowDialog();
                     if (preAsk.DialogResult == DialogResult.OK)
                     {
@@ -78,6 +75,7 @@ namespace e_Cafe
                             panel3.Controls.Clear();
                             CikkValaszt cv = new CikkValaszt(panel3, blObj);
                             panel3.Controls.Add(cv);
+                            cv.Dock = DockStyle.Fill;
                             cv.InitCikkValaszt();
                             
                         }
@@ -99,6 +97,13 @@ namespace e_Cafe
                 a.RefreshAsztalok(false); 
 
 
+        }
+        public void goMainMenu()
+        {
+            panel3.Controls.Clear();
+            a = new Asztalok(panel3, blObj);
+            a.Click += Asztal_click;
+            a.RefreshAsztalok(true);
         }
 
         private void button2_Click(object sender, EventArgs e)

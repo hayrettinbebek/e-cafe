@@ -33,7 +33,7 @@
         private static extern int SetWindowRgn(int hWnd, int hRgn, int bRedraw);
 
 
-        Font f1 = new System.Drawing.Font("System", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+        Font f1 = new System.Drawing.Font("System", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
         Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
         Font f3 = new System.Drawing.Font("Courier", 10F, System.Drawing.FontStyle.Regular | System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 

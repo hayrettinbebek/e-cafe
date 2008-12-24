@@ -53,7 +53,7 @@ namespace e_Cafe
 
                 ab.ImageList = GetimageList(aList.lASZTAL[i].fASZTAL_TIPUS);
                 ab.Location = new Point(aList.lASZTAL[i].fASZTAL_POS_X, aList.lASZTAL[i].fASZTAL_POS_Y);
-                ab.Text = aList.lASZTAL[i].fASZTAL_SZAM;
+                ab.Text = aList.lASZTAL[i].fASZTAL_SZAM + ". asztal";
                 ab.Size = new System.Drawing.Size(300, 123);
                 if (!_isAdmin) { ab.Click += mm.Asztal_click; }// .Asztalok_Click;
                 ab.vSelected = aList.lASZTAL[i].vSelected;
