@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:customControl="clr-namespace:GUI;assembly=GUI"
              xmlns:local="clr-namespace:e_Cafe"
-    Height="230" Width="255">
+    Height="116" Width="115">
     <StackPanel HorizontalAlignment="Center" Height="112">
         <StackPanel.Resources>
             <local:SecondsConverter x:Key="secondsConverter"/>
