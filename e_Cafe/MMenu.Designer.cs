@@ -36,10 +36,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.nr1 = new GUI.Notepad_Rendeles();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Button();
-            this.notepad_Rendeles1 = new GUI.Notepad_Rendeles();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.button3 = new System.Windows.Forms.Button();
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
+            this.usrClock1 = new e_Cafe.UsrClock();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -66,6 +69,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -104,7 +108,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.notepad_Rendeles1);
+            this.panel4.Controls.Add(this.nr1);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(731, 0);
@@ -112,40 +116,62 @@
             this.panel4.Size = new System.Drawing.Size(285, 639);
             this.panel4.TabIndex = 0;
             // 
-            // tmrTime
+            // nr1
             // 
-            this.tmrTime.Enabled = true;
-            this.tmrTime.Tick += new System.EventHandler(this.timer1_Tick);
+            this.nr1.Asztal_id = 0;
+            this.nr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
+            this.nr1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nr1.Location = new System.Drawing.Point(0, 111);
+            this.nr1.Name = "nr1";
+            this.nr1.Size = new System.Drawing.Size(285, 528);
+            this.nr1.TabIndex = 4;
+            this.nr1.Load += new System.EventHandler(this.notepad_Rendeles1_Load);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.elementHost1);
             this.panel5.Controls.Add(this.lblTime);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(285, 59);
+            this.panel5.Size = new System.Drawing.Size(285, 111);
             this.panel5.TabIndex = 3;
             // 
             // lblTime
             // 
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTime.Location = new System.Drawing.Point(87, 9);
+            this.lblTime.Location = new System.Drawing.Point(174, 9);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(108, 41);
             this.lblTime.TabIndex = 3;
             this.lblTime.Text = "button2";
             this.lblTime.UseVisualStyleBackColor = true;
             // 
-            // notepad_Rendeles1
+            // tmrTime
             // 
-            this.notepad_Rendeles1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
-            this.notepad_Rendeles1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.notepad_Rendeles1.Location = new System.Drawing.Point(0, 59);
-            this.notepad_Rendeles1.Name = "notepad_Rendeles1";
-            this.notepad_Rendeles1.Size = new System.Drawing.Size(285, 580);
-            this.notepad_Rendeles1.TabIndex = 4;
-            this.notepad_Rendeles1.Load += new System.EventHandler(this.notepad_Rendeles1_Load);
+            this.tmrTime.Enabled = true;
+            this.tmrTime.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(79, 200);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(36, 57);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // elementHost1
+            // 
+            this.elementHost1.Location = new System.Drawing.Point(3, 0);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(108, 108);
+            this.elementHost1.TabIndex = 4;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.elementHost1_ChildChanged);
+            this.elementHost1.Child = this.usrClock1;
             // 
             // MMenu
             // 
@@ -180,7 +206,10 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button lblTime;
-        private GUI.Notepad_Rendeles notepad_Rendeles1;
+        private GUI.Notepad_Rendeles nr1;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
+        private UsrClock usrClock1;
+        private System.Windows.Forms.Button button3;
     }
 }
 

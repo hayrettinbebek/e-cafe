@@ -17,6 +17,7 @@ namespace e_Cafe
         string ConSTR = @"server=ERNIE-HOME\SQLEXPRESS;database=ECAFE;uid=sa;password=x";
         clFIELDINFO_LIST FieldInfo;
         public static TBLObj blObj;
+        Asztalok a;
 
         public string DebugMessage
         {
@@ -34,7 +35,7 @@ namespace e_Cafe
         private void button1_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
-            Asztalok a = new Asztalok(panel3, blObj);
+            a = new Asztalok(panel3, blObj);
             a.Click += Asztal_click;
             a.RefreshAsztalok(true);
 
@@ -50,17 +51,45 @@ namespace e_Cafe
             blObj = new TBLObj(-1, ConSTR, FieldInfo);
         }
 
-        private void Asztal_click(object sender, EventArgs e)
+        public void Asztal_click(object sender, EventArgs e)
         {
             // ha egy asztalra klikkelünk
             try
             {
                 Asztal_Button tmp_a = (Asztal_Button)sender;
-                CikkSelector ck_sel = new CikkSelector();
-                ck_sel.Show();
-                MessageBox.Show(Convert.ToString(tmp_a.Asztal_id));
+
+                a.aList.SelectAsztal(tmp_a.Asztal_id);
+                tmp_a.vSelected = true;
+
+
+                DebugMessage = tmp_a.Asztal_id.ToString() + tmp_a.vSelected.ToString();
+
+                // Választó lista megjelenítése
+
+                if (!a.aList.isUsed(tmp_a.Asztal_id))
+                {
+                    nr1.clear();
+                    // ha szükség van előválaztóra!!
+                    TableActionSelect preAsk = new TableActionSelect("Asztal " + tmp_a.Asztal_id.ToString() + ": Válasszon feladatok!");
+                    preAsk.ShowDialog();
+                    if (preAsk.DialogResult == DialogResult.OK)
+                    {
+
+
+                    }
+                }
+                else 
+                { // A rendelések panel aktivizálása
+                    nr1.rtHeader.Text = tmp_a.Asztal_id.ToString() + ". asztal rendelései:";
+
+
+                }
+
+
+
+                a.RefreshAsztalok(false); 
             }
-            catch { }
+            catch {  }
 
         }
 
@@ -68,6 +97,7 @@ namespace e_Cafe
         {
             AdminTools adm = new AdminTools(blObj);
             adm.ShowDialog();// = true;
+
             //adm.Show();
         }
 
@@ -77,6 +107,16 @@ namespace e_Cafe
         }
 
         private void notepad_Rendeles1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void elementHost1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
 
         }

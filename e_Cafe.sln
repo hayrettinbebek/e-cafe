@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e_Cafe", "e_Cafe\e_Cafe.csproj", "{A7488A0A-74C8-421D-AA37-A6ED050F5B5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControl1.xaml", "e_Cafe\UserControl1.xaml.csproj", "{A7488A0A-74C8-421D-AA37-A6ED050F5B5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{7A9003C7-484C-4510-BE0F-128F219A812B}"
 EndProject
