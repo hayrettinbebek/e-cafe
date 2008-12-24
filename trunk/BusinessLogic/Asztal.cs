@@ -51,7 +51,7 @@ namespace BusinessLogic
 
         public List<Asztal> lASZTAL = new List<Asztal>();
         TBLObj pBLObj;
-
+        
         public Asztal_List(TBLObj iBLObj)
         {
             pBLObj = iBLObj;
