@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
+using System.Linq;
 using System.Data.SqlClient;
 
 namespace BusinessLogic
@@ -74,15 +75,27 @@ namespace BusinessLogic
             rdr.Close();
         }
 
+        public List<Cikk> CikkListByCsoport(int iCsoportId)
+        {
+            List<Cikk> iTmpRet = new List<Cikk>();
+
+            var ret_cikk =
+                from c in lCIKK
+                where c.fCIKKCSOPORT_ID == iCsoportId
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
+
     }
 
     class Recept
     {
     }
 
-    class CikkListByCsoport
-    {
-    }
+
 
     #region Cikkcsoport
     public class Cikkcsoport

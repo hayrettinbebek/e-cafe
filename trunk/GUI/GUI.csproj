@@ -65,6 +65,9 @@
     <Compile Include="Asztal_Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Class1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Clock.cs" />
     <Compile Include="Notepad_Rendeles.cs">
       <SubType>UserControl</SubType>
