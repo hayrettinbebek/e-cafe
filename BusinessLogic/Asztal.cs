@@ -76,27 +76,42 @@ namespace BusinessLogic
 
         public Asztal GetItem(int iASZTAL_ID)
         {
-            Asztal ret = new Asztal();
+            Asztal _ret = new Asztal();
+            var ret_asztal =
+                from c in lASZTAL
+                where c.fASZTAL_ID == iASZTAL_ID
+                select c;
+            ret_asztal.Each(c => _ret = c);
+            return (_ret);
 
-            IEnumerable<Asztal> r = lASZTAL.Where(p => p.fASZTAL_ID == iASZTAL_ID);
 
-            foreach (var n in r)
-            {
-                ret = n;
-            }
-            return ret;
+            //IEnumerable<Asztal> r = lASZTAL.Where(p => p.fASZTAL_ID == iASZTAL_ID);
+
+            //foreach (var n in r)
+            //{
+            //    ret = n;
+            //}
+            return _ret;
         }
 
         public int GetItemIndex(int iASZTAL_ID)
         {
             int _ret = -1;
-            for (int i = 0; i < lASZTAL.Count; i++)
-            {
-                if (lASZTAL[i].fASZTAL_ID == iASZTAL_ID) { _ret = i; break; }
-                else { _ret = -1; }
+            //for (int i = 0; i < lASZTAL.Count; i++)
+            //{
+            //    if (lASZTAL[i].fASZTAL_ID == iASZTAL_ID) { _ret = i; break; }
+            //    else { _ret = -1; }
 
-            }
-            return(_ret);
+            //}
+            //return(_ret);
+
+            var ret_asztal =
+                from c in lASZTAL
+                where c.fASZTAL_ID == iASZTAL_ID
+                select c;
+            ret_asztal.Each(c => _ret = c.fASZTAL_ID);
+            return (_ret);
+
 
         }
 

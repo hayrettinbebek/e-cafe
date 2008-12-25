@@ -32,16 +32,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.nr1 = new GUI.Notepad_Rendeles();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.lblTime = new System.Windows.Forms.Button();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -68,83 +71,114 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(132, 639);
+            this.panel2.Size = new System.Drawing.Size(132, 626);
             this.panel2.TabIndex = 1;
             // 
-            // button3
+            // button5
             // 
-            this.button3.Location = new System.Drawing.Point(79, 200);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(36, 57);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
+            this.button5.Location = new System.Drawing.Point(28, 141);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(104, 51);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Pult";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(22, 409);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
+            this.button2.Location = new System.Drawing.Point(28, 416);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(104, 51);
             this.button2.TabIndex = 1;
-            this.button2.Text = "admin";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "Adminisztrátor";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
+            this.button7.Location = new System.Drawing.Point(28, 287);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(104, 51);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Személyzet";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
+            this.button6.Location = new System.Drawing.Point(28, 214);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(104, 51);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Törzsvásárlók";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 17);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
+            this.button1.Location = new System.Drawing.Point(28, 61);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 33);
+            this.button1.Size = new System.Drawing.Size(104, 51);
             this.button1.TabIndex = 0;
-            this.button1.Text = "eladótér";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Kávézó";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(133)))), ((int)(((byte)(92)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(132, 0);
+            this.panel3.Location = new System.Drawing.Point(132, 13);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(599, 639);
+            this.panel3.Size = new System.Drawing.Size(756, 626);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.nr1);
+            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.lblTime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(731, 0);
+            this.panel4.Location = new System.Drawing.Point(888, 13);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(285, 639);
+            this.panel4.Size = new System.Drawing.Size(128, 626);
             this.panel4.TabIndex = 0;
             // 
-            // nr1
+            // button4
             // 
-            this.nr1.Asztal_id = 0;
-            this.nr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
-            this.nr1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nr1.Location = new System.Drawing.Point(0, 111);
-            this.nr1.Name = "nr1";
-            this.nr1.Size = new System.Drawing.Size(285, 528);
-            this.nr1.TabIndex = 4;
-            this.nr1.Load += new System.EventHandler(this.notepad_Rendeles1_Load);
+            this.button4.Location = new System.Drawing.Point(44, 417);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(53, 63);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "exit";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
+            this.panel5.BackColor = System.Drawing.Color.Gray;
             this.panel5.Controls.Add(this.elementHost1);
-            this.panel5.Controls.Add(this.lblTime);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(285, 111);
+            this.panel5.Size = new System.Drawing.Size(128, 113);
             this.panel5.TabIndex = 3;
             // 
             // elementHost1
@@ -152,7 +186,7 @@
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Left;
             this.elementHost1.Location = new System.Drawing.Point(0, 0);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(113, 111);
+            this.elementHost1.Size = new System.Drawing.Size(113, 113);
             this.elementHost1.TabIndex = 4;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = null;
@@ -160,7 +194,7 @@
             // lblTime
             // 
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTime.Location = new System.Drawing.Point(174, 9);
+            this.lblTime.Location = new System.Drawing.Point(6, 129);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(108, 41);
             this.lblTime.TabIndex = 3;
@@ -172,17 +206,29 @@
             this.tmrTime.Enabled = true;
             this.tmrTime.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Gray;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1016, 13);
+            this.panel6.TabIndex = 0;
+            // 
             // MMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 741);
+            this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel6);
             this.Name = "MMenu";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -205,11 +251,14 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button lblTime;
-        private GUI.Notepad_Rendeles nr1;
-        private UsrClock usrClock1;
-        private System.Windows.Forms.Button button3;
+
         private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private UsrClock usrClock2;
+
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 

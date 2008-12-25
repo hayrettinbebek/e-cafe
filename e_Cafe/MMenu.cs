@@ -57,14 +57,18 @@ namespace e_Cafe
                 a.aList.SelectAsztal(tmp_a.Asztal_id);
                 tmp_a.vSelected = true;
 
-
                 DebugMessage = tmp_a.Asztal_id.ToString() + tmp_a.vSelected.ToString();
 
-                // Választó lista megjelenítése
+                MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id), blObj);
+                mr.ShowDialog();
+                a.RefreshAsztalok(false);
 
+                // Választó lista megjelenítése
+/*
                 if (!a.aList.isUsed(tmp_a.Asztal_id))
                 {
-                    nr1.clear();
+
+                    
                     // ha szükség van előválaztóra!!
                     TableActionSelect preAsk = new TableActionSelect("Asztal " + a.aList.GetItem(tmp_a.Asztal_id).fASZTAL_SZAM.ToString() + ": Válasszon feladatok!");
                     preAsk.ShowDialog();
@@ -79,11 +83,10 @@ namespace e_Cafe
                             cv.InitCikkValaszt();
                             
                         }
-                            
-
-
-
                     }
+                    
+
+
                 }
                 else 
                 { // A rendelések panel aktivizálása
@@ -91,18 +94,13 @@ namespace e_Cafe
 
 
                 }
-
-
-
-                a.RefreshAsztalok(false); 
-
+*/
 
         }
         public void goMainMenu()
         {
             panel3.Controls.Clear();
             a = new Asztalok(panel3, blObj);
-            a.Click += Asztal_click;
             a.RefreshAsztalok(true);
         }
 
@@ -124,14 +122,16 @@ namespace e_Cafe
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void elementHost1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
