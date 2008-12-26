@@ -72,8 +72,6 @@ namespace e_Cafe
 
             tlpButtons.RowCount = (cl.lCIKKCSOPORT.Count * 2) - 1;
             
-            int iSplitterCount= 0;
-
             for (int i = 0; i < (cl.lCIKKCSOPORT.Count); i++)
             {
                 //tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 40));

@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.pnlButtonPlace = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlRendeles = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlButtonPlace = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlOtherFilter = new System.Windows.Forms.Panel();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -59,9 +60,42 @@
             this.pnlButtons.TabIndex = 0;
             this.pnlButtons.Click += new System.EventHandler(this.pnlButtons_Click);
             // 
+            // pnlButtonPlace
+            // 
+            this.pnlButtonPlace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlButtonPlace.Location = new System.Drawing.Point(16, 114);
+            this.pnlButtonPlace.Name = "pnlButtonPlace";
+            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 381);
+            this.pnlButtonPlace.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 114);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(16, 381);
+            this.panel5.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 495);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(173, 129);
+            this.panel6.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(173, 114);
+            this.panel2.TabIndex = 7;
+            // 
             // pnlRendeles
             // 
             this.pnlRendeles.BackColor = System.Drawing.Color.Gray;
+            this.pnlRendeles.Controls.Add(this.label1);
             this.pnlRendeles.Controls.Add(this.button4);
             this.pnlRendeles.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRendeles.Location = new System.Drawing.Point(703, 0);
@@ -82,7 +116,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pnlOtherFilter);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(173, 0);
             this.panel3.Name = "panel3";
@@ -93,7 +127,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 7);
+            this.label1.Location = new System.Drawing.Point(6, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -113,37 +147,14 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pnlButtonPlace
+            // pnlOtherFilter
             // 
-            this.pnlButtonPlace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlButtonPlace.Location = new System.Drawing.Point(16, 114);
-            this.pnlButtonPlace.Name = "pnlButtonPlace";
-            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 381);
-            this.pnlButtonPlace.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(173, 114);
-            this.panel2.TabIndex = 7;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 114);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 381);
-            this.panel5.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 495);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(173, 129);
-            this.panel6.TabIndex = 7;
+            this.pnlOtherFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(198)))), ((int)(((byte)(148)))));
+            this.pnlOtherFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlOtherFilter.Location = new System.Drawing.Point(0, 0);
+            this.pnlOtherFilter.Name = "pnlOtherFilter";
+            this.pnlOtherFilter.Size = new System.Drawing.Size(530, 50);
+            this.pnlOtherFilter.TabIndex = 0;
             // 
             // MRendeles
             // 
@@ -162,8 +173,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlButtons.ResumeLayout(false);
             this.pnlRendeles.ResumeLayout(false);
+            this.pnlRendeles.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -181,5 +192,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlOtherFilter;
     }
 }
