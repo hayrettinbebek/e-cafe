@@ -97,6 +97,61 @@ namespace BusinessLogic
 
 
 
+    #region Other filter
+    public class OTF
+    {
+        public int fOTF_ID;
+        public int fCIKKCSOPORT_ID;
+        public string fOTHER_NAME;
+
+        public OTF(int pOTF_ID,int pCIKKCSOPORT_ID, string pOTHER_NAME)
+        {
+
+            fOTF_ID = pOTF_ID;
+            fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
+            fOTHER_NAME = pOTHER_NAME;
+        }
+
+        public OTF()
+        {
+            fOTF_ID = -1;
+        }
+    }
+
+    public class OTF_list
+    {
+        private SqlConnection sc;
+
+        public List<OTF> lOTF = new List<OTF>();
+        TBLObj pBLObj;
+
+        public OTF_list(int pCIKKCSOP_ID, TBLObj iBLObj)
+        {
+            pBLObj = iBLObj;
+            sc = pBLObj.sqlConnection;
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT OTHER_FILTER_ID ,CIKKCSOPORT_ID  ,OTHER_NAME FROM CIKCSOP_OTHER_FILTER WHERE CIKKCSOPORT_ID = " + pCIKKCSOP_ID.ToString();
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                OTF t = new OTF((int)rdr["OTHER_FILTER_ID"], 
+                                (int)rdr["CIKKCSOPORT_ID"],
+                                (string)rdr["OTHER_NAME"]);
+                lOTF.Add(t);
+            }
+            rdr.Close();
+        }
+
+    }
+    #endregion
+
     #region Cikkcsoport
     public class Cikkcsoport
     {
@@ -106,8 +161,8 @@ namespace BusinessLogic
         public Cikkcsoport(int pCIKKCSOPORT_ID, string pCIKKCSOPORT_NEV)
         {
 
-                fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
-                fCIKKCSOPORT_NEV = pCIKKCSOPORT_NEV;
+            fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
+            fCIKKCSOPORT_NEV = pCIKKCSOPORT_NEV;
 
 
 

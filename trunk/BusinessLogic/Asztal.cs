@@ -91,26 +91,26 @@ namespace BusinessLogic
             //{
             //    ret = n;
             //}
-            return _ret;
+         
         }
 
         public int GetItemIndex(int iASZTAL_ID)
         {
             int _ret = -1;
-            //for (int i = 0; i < lASZTAL.Count; i++)
-            //{
-            //    if (lASZTAL[i].fASZTAL_ID == iASZTAL_ID) { _ret = i; break; }
-            //    else { _ret = -1; }
+            for (int i = 0; i < lASZTAL.Count; i++)
+            {
+                if (lASZTAL[i].fASZTAL_ID == iASZTAL_ID) { _ret = i; break; }
+                else { _ret = -1; }
 
-            //}
-            //return(_ret);
-
-            var ret_asztal =
-                from c in lASZTAL
-                where c.fASZTAL_ID == iASZTAL_ID
-                select c;
-            ret_asztal.Each(c => _ret = c.fASZTAL_ID);
+            }
             return (_ret);
+
+            //var ret_asztal =
+            //    from c in lASZTAL
+            //    where c.fASZTAL_ID == iASZTAL_ID
+            //    select c;
+            //ret_asztal.Each(c => _ret = c.fASZTAL_ID);
+            //return (_ret);
 
 
         }
