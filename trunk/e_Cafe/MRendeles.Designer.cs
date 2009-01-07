@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRendeles));
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.pnlButtonPlace = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -38,11 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlOldalsav = new System.Windows.Forms.Panel();
             this.pnlOtherFilter = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlOldalsav = new System.Windows.Forms.Panel();
+            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -137,6 +139,24 @@
             this.panel3.TabIndex = 1;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pnlOldalsav);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(25, 574);
+            this.panel1.TabIndex = 1;
+            // 
+            // pnlOldalsav
+            // 
+            this.pnlOldalsav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(198)))), ((int)(((byte)(148)))));
+            this.pnlOldalsav.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlOldalsav.Location = new System.Drawing.Point(0, 0);
+            this.pnlOldalsav.Name = "pnlOldalsav";
+            this.pnlOldalsav.Size = new System.Drawing.Size(25, 36);
+            this.pnlOldalsav.TabIndex = 0;
+            // 
             // pnlOtherFilter
             // 
             this.pnlOtherFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(198)))), ((int)(((byte)(148)))));
@@ -160,23 +180,12 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel1
+            // btmImgList
             // 
-            this.panel1.Controls.Add(this.pnlOldalsav);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(25, 574);
-            this.panel1.TabIndex = 1;
-            // 
-            // pnlOldalsav
-            // 
-            this.pnlOldalsav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(198)))), ((int)(((byte)(148)))));
-            this.pnlOldalsav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlOldalsav.Location = new System.Drawing.Point(0, 0);
-            this.pnlOldalsav.Name = "pnlOldalsav";
-            this.pnlOldalsav.Size = new System.Drawing.Size(25, 36);
-            this.pnlOldalsav.TabIndex = 0;
+            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
+            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.btmImgList.Images.SetKeyName(0, "off.png");
+            this.btmImgList.Images.SetKeyName(1, "aktiv.png");
             // 
             // MRendeles
             // 
@@ -218,5 +227,6 @@
         private System.Windows.Forms.Panel pnlOtherFilter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlOldalsav;
+        private System.Windows.Forms.ImageList btmImgList;
     }
 }

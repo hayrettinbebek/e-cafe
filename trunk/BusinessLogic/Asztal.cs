@@ -52,7 +52,7 @@ namespace BusinessLogic
         public List<Asztal> lASZTAL = new List<Asztal>();
         TBLObj pBLObj;
         
-        public Asztal_List(TBLObj iBLObj)
+        public Asztal_List(TBLObj iBLObj,int aHelyId)
         {
             pBLObj = iBLObj;
             sc = pBLObj.sqlConnection;
@@ -63,7 +63,7 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT ASZTAL_ID, ASZTAL_SZAM, ASZTAL_TIPUS_ID, ASZTAL_POS_X, ASZTAL_POS_Y  FROM ASZTAL ";
+            cmd.CommandText = "SELECT ASZTAL_ID, ASZTAL_SZAM, ASZTAL_TIPUS_ID, ASZTAL_POS_X, ASZTAL_POS_Y  FROM ASZTAL WHERE HELY_ID ="+aHelyId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
@@ -177,4 +177,55 @@ namespace BusinessLogic
 
     }
 
+    #region Helyek
+    public class Hely
+    {
+        public int fHELY_ID;
+        public int fHELY_VAN_KEP;
+        public string fHELY_NEV;
+
+        public Hely(int pHELY_ID, string pHELY_NEV, int pHELY_VAN_KEP)
+        {
+
+            fHELY_ID = pHELY_ID;
+            fHELY_NEV = pHELY_NEV;
+            fHELY_VAN_KEP = pHELY_VAN_KEP;
+        }
+    }
+
+    public class Helyek
+    {
+        private SqlConnection sc;
+
+        public List<Hely> lHelyek = new List<Hely>();
+        TBLObj pBLObj;
+
+        public Helyek(TBLObj iBLObj)
+        {
+            pBLObj = iBLObj;
+            sc = pBLObj.sqlConnection;
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "select h.HELY_ID, h.HELY_NEV, h.HELY_VAN_DESIGN from HELY h inner join ASZTAL a on h.HELY_ID = a.HELY_ID " +
+                                " union " +
+                                " select h.HELY_ID, h.HELY_NEV, h.HELY_VAN_DESIGN from HELY h where h.HELY_VAN_DESIGN = 0";
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                Hely t = new Hely((int)rdr["HELY_ID"],
+                                (string)rdr["HELY_NEV"],
+                                (int)rdr["HELY_VAN_DESIGN"]);
+                lHelyek.Add(t);
+            }
+            rdr.Close();
+        }
+
+    }
+    #endregion
 }

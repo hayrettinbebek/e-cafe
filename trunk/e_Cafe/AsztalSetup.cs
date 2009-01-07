@@ -26,12 +26,7 @@ namespace e_Cafe
             asBlObj = bl;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pnlAsztalHelyek.Controls.Clear();
-            a = new Asztalok(pnlAsztalHelyek, asBlObj, true);
-            a.RefreshAsztalok(true);
-        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
