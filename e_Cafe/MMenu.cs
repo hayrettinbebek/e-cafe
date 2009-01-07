@@ -34,7 +34,7 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            goMainMenu();
+            goMainMenu(0);
 
         }
 
@@ -46,7 +46,41 @@ namespace e_Cafe
         private void MMenu_Load(object sender, EventArgs e)
         {
             blObj = new TBLObj(-1, ConSTR, FieldInfo);
+            initHelyek();
+
         }
+
+        private void initHelyek()
+        {
+            Helyek cl = new Helyek(blObj);
+
+            TableLayoutPanel tlpButtons = new TableLayoutPanel();
+            pnlHelyek.Controls.Add(tlpButtons);
+            tlpButtons.Dock = DockStyle.Fill;
+            tlpButtons.GrowStyle = TableLayoutPanelGrowStyle.AddRows;
+
+            tlpButtons.RowCount = cl.lHelyek.Count + 1;
+
+            for (int i = 0; i < (cl.lHelyek.Count); i++)
+            {
+
+                HelyButton bt = new HelyButton(cl.lHelyek[i]);
+                bt.Location = new Point(0, 0);
+                bt.Text = cl.lHelyek[i].fHELY_NEV;
+                bt.TextAlign = ContentAlignment.BottomLeft;
+                bt.Dock = DockStyle.Fill;
+                bt.Click += HelyMenuClick;
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 60));
+                tlpButtons.Controls.Add(bt);
+            }
+            tlpButtons.Refresh();
+        }
+
+        private void HelyMenuClick(object sender, EventArgs e)
+        {
+            goMainMenu(((HelyButton)sender)._Hely.fHELY_ID);
+        }
+
 
         public void Asztal_click(object sender, EventArgs e)
         {
@@ -97,10 +131,10 @@ namespace e_Cafe
 */
 
         }
-        public void goMainMenu()
+        public void goMainMenu(int aHelyId)
         {
             panel3.Controls.Clear();
-            a = new Asztalok(panel3, blObj);
+            a = new Asztalok(panel3, blObj, aHelyId);
             a.RefreshAsztalok(true);
         }
 
@@ -132,6 +166,11 @@ namespace e_Cafe
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

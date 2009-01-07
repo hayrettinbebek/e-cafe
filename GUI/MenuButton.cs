@@ -12,6 +12,17 @@ namespace GUI
         public CikkcsopButton(Cikkcsoport aCcs)
         {
             _Cikkcsoport = aCcs;
+            FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            FlatAppearance.BorderSize = 0;
+        }
+    }
+
+    public class HelyButton : System.Windows.Forms.Button
+    {
+        public Hely _Hely;
+        public HelyButton(Hely aHely)
+        {
+            _Hely = aHely;
         }
     }
 

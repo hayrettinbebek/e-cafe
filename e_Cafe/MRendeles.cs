@@ -82,6 +82,8 @@ namespace e_Cafe
                 bt.TextAlign = ContentAlignment.BottomLeft;
                 bt.Dock = DockStyle.Fill;
                 bt.Click += CikkcsopMenuClick;
+                bt.ImageList = btmImgList;
+                bt.ImageIndex = 1;
                 tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 60));
                 tlpButtons.Controls.Add(bt);
             }

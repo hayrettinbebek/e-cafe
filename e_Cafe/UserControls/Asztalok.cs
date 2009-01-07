@@ -19,25 +19,28 @@ namespace e_Cafe
 
         protected TBLObj bl_object;
         protected bool _isAdmin;
+        protected int _HelyId;
         public Asztal_List aList;
         MMenu mm;
 
-        public Asztalok(Control p, TBLObj bl)
+        public Asztalok(Control p, TBLObj bl, int pHelyId)
         {
             InitializeComponent();
             Parent = p;
             Dock = DockStyle.Fill;
             bl_object = bl;
+            _HelyId = pHelyId;
             _isAdmin = false;
             mm = (MMenu)Parent.Parent;
 
         }
-        public Asztalok(Control p, TBLObj bl, bool adminMode)
+        public Asztalok(Control p, TBLObj bl, int pHelyId, bool adminMode)
         {
             InitializeComponent();
             Parent = p;
             Dock = DockStyle.Fill;
             bl_object = bl;
+            _HelyId = pHelyId;
             _isAdmin = adminMode;
             if (!adminMode) {mm = (MMenu)Parent.Parent;}
 
@@ -45,7 +48,7 @@ namespace e_Cafe
 
         public void RefreshAsztalok(bool DB_refresh)
         {
-            if (DB_refresh) { aList = new Asztal_List(bl_object); }
+            if (DB_refresh) { aList = new Asztal_List(bl_object,_HelyId); }
             this.Controls.Clear();
             for (int i = 0; i < aList.lASZTAL.Count; i++)
             {
