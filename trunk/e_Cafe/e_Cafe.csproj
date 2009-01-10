@@ -81,6 +81,12 @@
     <Compile Include="MRendeles.Designer.cs">
       <DependentUpon>MRendeles.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AsztalInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AsztalInfo.Designer.cs">
+      <DependentUpon>AsztalInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Asztalok.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="MRendeles.resx">
       <DependentUpon>MRendeles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AsztalInfo.resx">
+      <DependentUpon>AsztalInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Asztalok.resx">
       <DependentUpon>Asztalok.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,12 +148,16 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainMenuBtn.resx">
+      <DependentUpon>MainMenuBtn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MMenuButton.resx">
       <DependentUpon>MMenuButton.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,6 +167,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserControls\MainMenuBtn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainMenuBtn.Designer.cs">
+      <DependentUpon>MainMenuBtn.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\MMenuButton.cs">
       <SubType>Component</SubType>
@@ -180,6 +199,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off_T.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

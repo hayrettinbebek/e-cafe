@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using GUI;
+using System.Data;
+using System.IO;
 using BusinessLogic;
 
 namespace e_Cafe
@@ -54,7 +56,7 @@ namespace e_Cafe
             {
                 Asztal_Button ab = new Asztal_Button(aList.lASZTAL[i].fASZTAL_ID);
 
-                ab.ImageList = GetimageList(aList.lASZTAL[i].fASZTAL_TIPUS);
+                ab.ImageList = GetimageList(aList.lASZTAL[i].fASZTAL_TIPUS, aList.lASZTAL[i].fASZTAL_ROTATE);
                 ab.Location = new Point(aList.lASZTAL[i].fASZTAL_POS_X, aList.lASZTAL[i].fASZTAL_POS_Y);
                 ab.Text = aList.lASZTAL[i].fASZTAL_SZAM + ". asztal";
                 ab.Size = new System.Drawing.Size(300, 123);
@@ -62,6 +64,7 @@ namespace e_Cafe
                 ab.vSelected = aList.lASZTAL[i].vSelected;
                 ab.Invalidate();
                 if (_isAdmin) { ab.MouseMove += this.Asztalok_MouseMove; }
+                if (!_isAdmin) { ab.MouseDown += this.Asztalok_MouseDown; }
                 this.Controls.Add(ab);
             }
 
@@ -77,24 +80,20 @@ namespace e_Cafe
         }
 
 
-        private ImageList GetimageList(int iAsztalType)
+        private ImageList GetimageList(int iAsztalType, int iRotate)
         {
-            switch (iAsztalType) 
-	        {
-                case 11: return(imageListA); break;
-                case 12: return(imageListB);break;
-                case 13: return(imageListC);break;
-                case 14: return(imageListD);break;
-                case 15: return(imageListE);break;
-                case 16: return(imageListF);break;
-                case 17: return(imageListG);break;
-                case 18: return(imageListH);break;
-                case 19: return(imageListI);break;
-                case 20: return(imageListJ);break;
-                case 21: return (imageListK); break;
+            ImageList ilTmp = new System.Windows.Forms.ImageList();;
+            String tmpPath = @"G:\WORK\E-Cafe_Google\e-cafe\GUI\asztalok\";
 
-                default: return(AsztalType1List);break;
-	        }
+            ilTmp.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+
+            ilTmp.ImageSize = Image.FromFile(tmpPath + iAsztalType.ToString() + "\\"+iRotate.ToString()+"\\01_off.png").Size;
+
+            ilTmp.Images.Add(Image.FromFile(tmpPath + iAsztalType.ToString() + "\\" + iRotate.ToString() + "\\01_off.png"));
+            ilTmp.Images.Add(Image.FromFile(tmpPath + iAsztalType.ToString() + "\\" + iRotate.ToString() + "\\02_on.png"));
+
+            return (ilTmp);
+
         }
 
         private void Asztalok_MouseMove(object sender, MouseEventArgs e)
@@ -115,7 +114,16 @@ namespace e_Cafe
                 catch { }
             }
         }
-
+        private void Asztalok_MouseDown(object sender, MouseEventArgs e)
+        {
+            AsztalInfo ai = new AsztalInfo();
+            if (!mm.rbRendel.Checked)
+            {
+                ai.Location = e.Location;
+                ai.Show();
+            }
+               
+        }
  
 
 
