@@ -62,6 +62,8 @@ namespace e_Cafe
         }
         #endregion
 
+        #region Gombok
+
         private void InitMenuButtons()
         {
             Cikkcsoport_list cl = new Cikkcsoport_list(_bl);
@@ -81,14 +83,31 @@ namespace e_Cafe
                 bt.Text = cl.lCIKKCSOPORT[i].fCIKKCSOPORT_NEV;
                 bt.TextAlign = ContentAlignment.BottomLeft;
                 bt.Dock = DockStyle.Fill;
+                bt.BackColor = Color.Transparent;
                 bt.Click += CikkcsopMenuClick;
                 bt.ImageList = btmImgList;
-                bt.ImageIndex = 1;
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 60));
+                bt.ImageIndex = 0;
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 70));
                 tlpButtons.Controls.Add(bt);
+                //bt.Invalidate();
             }
             tlpButtons.Refresh();
         }
+
+        private void DeselectAll()
+        {
+            for (int i = 0; i < pnlButtonPlace.Controls[0].Controls.Count; i++)
+            {
+                try {
+                    ((CikkcsopButton)pnlButtonPlace.Controls[0].Controls[i]).ImageIndex=0;
+                    
+                }
+                catch {}
+                
+            }
+        }
+
+        #endregion 
 
 
         private void button4_Click(object sender, EventArgs e)
@@ -100,6 +119,8 @@ namespace e_Cafe
 
         private void CikkcsopMenuClick(object sender, EventArgs e)
         {
+            DeselectAll();
+            ((CikkcsopButton)sender).ImageIndex = 1;
             OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, _bl);
             if (otf.lOTF.Count > 0)
             {
@@ -136,7 +157,7 @@ namespace e_Cafe
                 pnlOldalsav.Visible = true;
                 pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
             }
-
+            ((CikkcsopButton)sender).Refresh();
         }
 
         private void dataRepeater1_ItemTemplate_Click(object sender, EventArgs e)

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRendeles));
+            Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.pnlButtonPlace = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -45,6 +46,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btmImgList = new System.Windows.Forms.ImageList(this.components);
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,17 +71,17 @@
             // pnlButtonPlace
             // 
             this.pnlButtonPlace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlButtonPlace.Location = new System.Drawing.Point(16, 114);
+            this.pnlButtonPlace.Location = new System.Drawing.Point(16, 60);
             this.pnlButtonPlace.Name = "pnlButtonPlace";
-            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 381);
+            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 435);
             this.pnlButtonPlace.TabIndex = 6;
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 114);
+            this.panel5.Location = new System.Drawing.Point(0, 60);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 381);
+            this.panel5.Size = new System.Drawing.Size(16, 435);
             this.panel5.TabIndex = 7;
             // 
             // panel6
@@ -91,17 +94,19 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(173, 114);
+            this.panel2.Size = new System.Drawing.Size(173, 60);
             this.panel2.TabIndex = 7;
             // 
             // pnlRendeles
             // 
-            this.pnlRendeles.BackColor = System.Drawing.Color.Gray;
-            this.pnlRendeles.Controls.Add(this.label1);
+            this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlRendeles.Controls.Add(this.button4);
+            this.pnlRendeles.Controls.Add(this.label1);
+            this.pnlRendeles.Controls.Add(this.shapeContainer2);
             this.pnlRendeles.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRendeles.Location = new System.Drawing.Point(703, 0);
             this.pnlRendeles.Name = "pnlRendeles";
@@ -120,12 +125,17 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(83, 441);
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ImageKey = "aktiv_T.bmp";
+            this.button4.ImageList = this.btmImgList;
+            this.button4.Location = new System.Drawing.Point(72, 293);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 39);
+            this.button4.Size = new System.Drawing.Size(160, 88);
             this.button4.TabIndex = 0;
             this.button4.Text = "exit";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel3
@@ -184,8 +194,30 @@
             // 
             this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
             this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.btmImgList.Images.SetKeyName(0, "off.png");
-            this.btmImgList.Images.SetKeyName(1, "aktiv.png");
+            this.btmImgList.Images.SetKeyName(0, "off_T.bmp");
+            this.btmImgList.Images.SetKeyName(1, "aktiv_T.bmp");
+            // 
+            // rectangleShape1
+            // 
+            rectangleShape1.BackColor = System.Drawing.Color.Yellow;
+            rectangleShape1.FillColor = System.Drawing.Color.Yellow;
+            rectangleShape1.FillGradientColor = System.Drawing.Color.Yellow;
+            rectangleShape1.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
+            rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            rectangleShape1.Location = new System.Drawing.Point(208, 240);
+            rectangleShape1.Name = "rectangleShape1";
+            rectangleShape1.Size = new System.Drawing.Size(23, 240);
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            rectangleShape1});
+            this.shapeContainer2.Size = new System.Drawing.Size(313, 624);
+            this.shapeContainer2.TabIndex = 1;
+            this.shapeContainer2.TabStop = false;
             // 
             // MRendeles
             // 
@@ -228,5 +260,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlOldalsav;
         private System.Windows.Forms.ImageList btmImgList;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
     }
 }

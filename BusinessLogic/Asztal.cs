@@ -16,6 +16,7 @@ namespace BusinessLogic
         public int fASZTAL_POS_X;
         public int fASZTAL_POS_Y;
         public bool vSelected;
+        public int fASZTAL_ROTATE;
 
         public Asztal()
         {
@@ -27,13 +28,14 @@ namespace BusinessLogic
             vSelected = false;
         }
 
-        public Asztal(int iASZTAL_ID, string iASZTAL_SZAM, int iASZTAL_TIPUS, int iASZTAL_POS_X, int iASZTAL_POS_Y, bool iSelected)
+        public Asztal(int iASZTAL_ID, string iASZTAL_SZAM, int iASZTAL_TIPUS, int iASZTAL_POS_X, int iASZTAL_POS_Y, bool iSelected, int iASZTAL_ROTATE)
         {
             fASZTAL_ID = iASZTAL_ID;
             fASZTAL_SZAM = iASZTAL_SZAM;
             fASZTAL_TIPUS = iASZTAL_TIPUS;
             fASZTAL_POS_X = iASZTAL_POS_X;
             fASZTAL_POS_Y = iASZTAL_POS_Y;
+            fASZTAL_ROTATE = iASZTAL_ROTATE;
             vSelected = iSelected;
         }
 
@@ -63,12 +65,12 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT ASZTAL_ID, ASZTAL_SZAM, ASZTAL_TIPUS_ID, ASZTAL_POS_X, ASZTAL_POS_Y  FROM ASZTAL WHERE HELY_ID ="+aHelyId.ToString();
+            cmd.CommandText = "SELECT ASZTAL_ID, ASZTAL_SZAM, ASZTAL_TIPUS_ID, ASZTAL_POS_X, ASZTAL_POS_Y, ASZTAL_ROTATE  FROM ASZTAL WHERE HELY_ID ="+aHelyId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                Asztal t = new Asztal((int)rdr["ASZTAL_ID"], rdr["ASZTAL_SZAM"].ToString(), (int)rdr["ASZTAL_TIPUS_ID"], (int)rdr["ASZTAL_POS_X"], (int)rdr["ASZTAL_POS_Y"], false);
+                Asztal t = new Asztal((int)rdr["ASZTAL_ID"], rdr["ASZTAL_SZAM"].ToString(), (int)rdr["ASZTAL_TIPUS_ID"], (int)rdr["ASZTAL_POS_X"], (int)rdr["ASZTAL_POS_Y"], false, (int)rdr["ASZTAL_ROTATE"]);
                 lASZTAL.Add(t);
             }
             rdr.Close();
