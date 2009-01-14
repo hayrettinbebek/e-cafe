@@ -61,10 +61,13 @@ namespace e_Cafe
             Helyek cl = new Helyek(blObj);
 
             tlpButtons = new MainMenuBtn();
+
             //TableLayoutPanel tlpButtons = new TableLayoutPanel();
-            tlpButtons.Location = new Point(panel8.Width, panel6.Height+panel7.Height);
-            tlpButtons.Height = panel8.Height; ;
-            tlpButtons.Width = 150;
+            tlpButtons.Location = new Point(panel8.Width+17, panel6.Height+panel7.Height);
+
+            tlpButtons.Height = panel8.Height;
+            tlpButtons.Width = 158;
+            //mf.Controls.Add(tlpButtons);
             pnlHelyek.Controls.Add(tlpButtons);
             //this.Controls.Add(tlpButtons);
             tlpButtons.Dock = DockStyle.Fill;
@@ -88,17 +91,17 @@ namespace e_Cafe
                 bt.ImageAlign = ContentAlignment.MiddleCenter;
                 bt.FlatStyle = FlatStyle.Flat;
                 bt.FlatAppearance.BorderSize = 0;
-                //bt.BackColor = Color.Red;
-                //bt.BackColor = Color.Transparent;
+                bt.FlatAppearance.MouseOverBackColor = Color.Transparent;
+
                 bt.Click += HelyMenuClick;
 
                 
 
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 60));
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 64));
                 tlpButtons.Controls.Add(bt);
             }
             tlpButtons.Refresh();
-            //bb.Refresh();
+
         }
 
         private void HelyMenuClick(object sender, EventArgs e)
@@ -180,22 +183,10 @@ namespace e_Cafe
             //adm.Show();
         }
 
-        public void DoAsztalSelect(int iASZTAL_ID)
-        {
-
-        }
-
-        private void notepad_Rendeles1_Load(object sender, EventArgs e)
-        {
-
-        }
 
 
 
-        private void elementHost1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-        {
 
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -205,7 +196,10 @@ namespace e_Cafe
         private void lblTime_Click(object sender, EventArgs e)
         {
             tlpButtons.Invalidate();
+
+
         }
+
 
 
 
