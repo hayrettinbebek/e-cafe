@@ -94,18 +94,6 @@ namespace e_Cafe
             tlpButtons.Refresh();
         }
 
-        private void DeselectAll()
-        {
-            for (int i = 0; i < pnlButtonPlace.Controls[0].Controls.Count; i++)
-            {
-                try {
-                    ((CikkcsopButton)pnlButtonPlace.Controls[0].Controls[i]).ImageIndex=0;
-                    
-                }
-                catch {}
-                
-            }
-        }
 
         #endregion 
 
@@ -119,13 +107,14 @@ namespace e_Cafe
 
         private void CikkcsopMenuClick(object sender, EventArgs e)
         {
-            DeselectAll();
-            ((CikkcsopButton)sender).ImageIndex = 1;
+
+            bool Call = true;
+
             OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, _bl);
             if (otf.lOTF.Count > 0)
             {
                 pnlOtherFilter.Visible = true;
-                
+                Call = false;
 
                 TableLayoutPanel tlpOTFButtons = new TableLayoutPanel();
 
@@ -144,6 +133,7 @@ namespace e_Cafe
                     bt.Text = otf.lOTF[i].fOTHER_NAME;
                     bt.TextAlign = ContentAlignment.BottomLeft;
                     bt.Dock = DockStyle.Fill;
+                    bt.Click += AlcsopMenuClick;
                     
                     tlpOTFButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(SizeType.Absolute, 120));
                     tlpOTFButtons.Controls.Add(bt);
@@ -158,6 +148,36 @@ namespace e_Cafe
                 pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
             }
             ((CikkcsopButton)sender).Refresh();
+
+            if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
+        }
+
+        private void AlcsopMenuClick(object sender, EventArgs e)
+        {
+            loadCikkek(((OtherFButton)sender)._OTF.fCIKKCSOPORT_ID, ((OtherFButton)sender)._OTF.fOTF_ID);
+        }
+
+        private void loadCikkek(int pCikkcsoport, int pAlcsoportId)
+        {
+            Cikk_list lCikkList = new Cikk_list(_bl);
+            List<Cikk> lButtons = new List<Cikk>();
+            if (pAlcsoportId == -1)
+            {
+                lButtons = lCikkList.CikkListByCsoport(pCikkcsoport);
+            }
+            else
+            {
+                lButtons = lCikkList.CikkListByAlcsoport(pCikkcsoport, pAlcsoportId);
+            }
+
+            for (int i = 0; i < lButtons.Count; i++)
+            {
+                CikkButton cb = new CikkButton();
+                cb.fCIKK = lButtons[i];
+                flpCikkek.Controls.Add(cb);
+
+            }
+
         }
 
         private void dataRepeater1_ItemTemplate_Click(object sender, EventArgs e)

@@ -29,30 +29,42 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRendeles));
             Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRendeles));
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.pnlButtonPlace = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlRendeles = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOldalsav = new System.Windows.Forms.Panel();
             this.pnlOtherFilter = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.flpCikkek = new System.Windows.Forms.FlowLayoutPanel();
             rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // rectangleShape1
+            // 
+            rectangleShape1.BackColor = System.Drawing.Color.Yellow;
+            rectangleShape1.FillColor = System.Drawing.Color.Yellow;
+            rectangleShape1.FillGradientColor = System.Drawing.Color.Yellow;
+            rectangleShape1.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
+            rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            rectangleShape1.Location = new System.Drawing.Point(208, 240);
+            rectangleShape1.Name = "rectangleShape1";
+            rectangleShape1.Size = new System.Drawing.Size(23, 240);
             // 
             // pnlButtons
             // 
@@ -114,18 +126,10 @@
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ImageKey = "aktiv_T.bmp";
             this.button4.ImageList = this.btmImgList;
@@ -138,8 +142,36 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btmImgList
+            // 
+            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
+            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.btmImgList.Images.SetKeyName(0, "off_T.bmp");
+            this.btmImgList.Images.SetKeyName(1, "aktiv_T.bmp");
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            rectangleShape1});
+            this.shapeContainer2.Size = new System.Drawing.Size(313, 624);
+            this.shapeContainer2.TabIndex = 1;
+            this.shapeContainer2.TabStop = false;
+            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.flpCikkek);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.pnlOtherFilter);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -190,34 +222,13 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btmImgList
+            // flpCikkek
             // 
-            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
-            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.btmImgList.Images.SetKeyName(0, "off_T.bmp");
-            this.btmImgList.Images.SetKeyName(1, "aktiv_T.bmp");
-            // 
-            // rectangleShape1
-            // 
-            rectangleShape1.BackColor = System.Drawing.Color.Yellow;
-            rectangleShape1.FillColor = System.Drawing.Color.Yellow;
-            rectangleShape1.FillGradientColor = System.Drawing.Color.Yellow;
-            rectangleShape1.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
-            rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            rectangleShape1.Location = new System.Drawing.Point(208, 240);
-            rectangleShape1.Name = "rectangleShape1";
-            rectangleShape1.Size = new System.Drawing.Size(23, 240);
-            // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            rectangleShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(313, 624);
-            this.shapeContainer2.TabIndex = 1;
-            this.shapeContainer2.TabStop = false;
+            this.flpCikkek.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpCikkek.Location = new System.Drawing.Point(25, 50);
+            this.flpCikkek.Name = "flpCikkek";
+            this.flpCikkek.Size = new System.Drawing.Size(505, 574);
+            this.flpCikkek.TabIndex = 2;
             // 
             // MRendeles
             // 
@@ -261,5 +272,6 @@
         private System.Windows.Forms.Panel pnlOldalsav;
         private System.Windows.Forms.ImageList btmImgList;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private System.Windows.Forms.FlowLayoutPanel flpCikkek;
     }
 }

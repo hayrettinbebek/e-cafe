@@ -88,16 +88,13 @@ namespace e_Cafe
                 bt.Dock = DockStyle.Fill;
                 bt.ImageList = btmImgList;
                 bt.ImageIndex = 0;
-                bt.ImageAlign = ContentAlignment.MiddleCenter;
-                bt.FlatStyle = FlatStyle.Flat;
-                bt.FlatAppearance.BorderSize = 0;
-                bt.FlatAppearance.MouseOverBackColor = Color.Transparent;
+
 
                 bt.Click += HelyMenuClick;
 
                 
 
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 64));
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 66));
                 tlpButtons.Controls.Add(bt);
             }
             tlpButtons.Refresh();
