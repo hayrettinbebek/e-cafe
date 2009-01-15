@@ -32,7 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.rbRendel = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlHelyek = new System.Windows.Forms.Panel();
@@ -40,16 +42,14 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.lblTime = new System.Windows.Forms.Button();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.rbRendel = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -80,6 +80,19 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button7.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(659, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 64);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Adminisztrátor";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
@@ -90,6 +103,22 @@
             this.button6.Text = "Törzsvásárlók";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button6.UseVisualStyleBackColor = false;
+            // 
+            // rbRendel
+            // 
+            this.rbRendel.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbRendel.AutoSize = true;
+            this.rbRendel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.rbRendel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.rbRendel.Image = global::e_Cafe.Properties.Resources.off_T;
+            this.rbRendel.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.rbRendel.Location = new System.Drawing.Point(82, 14);
+            this.rbRendel.Name = "rbRendel";
+            this.rbRendel.Size = new System.Drawing.Size(146, 56);
+            this.rbRendel.TabIndex = 3;
+            this.rbRendel.Tag = "2";
+            this.rbRendel.Text = "Rendel";
+            this.rbRendel.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -109,7 +138,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(175, 626);
+            this.panel2.Size = new System.Drawing.Size(180, 626);
             this.panel2.TabIndex = 1;
             // 
             // pnlHelyek
@@ -117,7 +146,7 @@
             this.pnlHelyek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHelyek.Location = new System.Drawing.Point(25, 55);
             this.pnlHelyek.Name = "pnlHelyek";
-            this.pnlHelyek.Size = new System.Drawing.Size(150, 571);
+            this.pnlHelyek.Size = new System.Drawing.Size(155, 571);
             this.pnlHelyek.TabIndex = 9;
             // 
             // panel8
@@ -133,16 +162,16 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(175, 55);
+            this.panel7.Size = new System.Drawing.Size(180, 55);
             this.panel7.TabIndex = 6;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(133)))), ((int)(((byte)(92)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(175, 13);
+            this.panel3.Location = new System.Drawing.Point(180, 13);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(713, 626);
+            this.panel3.Size = new System.Drawing.Size(708, 626);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -157,6 +186,30 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(128, 626);
             this.panel4.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageIndex = 0;
+            this.button1.ImageList = this.btmImgList;
+            this.button1.Location = new System.Drawing.Point(-17, 233);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 71);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btmImgList
+            // 
+            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
+            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.btmImgList.Images.SetKeyName(0, "off.png");
+            this.btmImgList.Images.SetKeyName(1, "aktiv.png");
             // 
             // button4
             // 
@@ -214,55 +267,6 @@
             this.panel6.Size = new System.Drawing.Size(1016, 13);
             this.panel6.TabIndex = 0;
             // 
-            // btmImgList
-            // 
-            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
-            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.btmImgList.Images.SetKeyName(0, "off.png");
-            this.btmImgList.Images.SetKeyName(1, "aktiv.png");
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ImageIndex = 0;
-            this.button1.ImageList = this.btmImgList;
-            this.button1.Location = new System.Drawing.Point(3, 295);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(659, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Adminisztrátor";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // rbRendel
-            // 
-            this.rbRendel.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbRendel.AutoSize = true;
-            this.rbRendel.Image = global::e_Cafe.Properties.Resources.off_T;
-            this.rbRendel.Location = new System.Drawing.Point(82, 14);
-            this.rbRendel.Name = "rbRendel";
-            this.rbRendel.Size = new System.Drawing.Size(146, 56);
-            this.rbRendel.TabIndex = 3;
-            this.rbRendel.Text = "Rendel";
-            this.rbRendel.UseVisualStyleBackColor = true;
-            // 
             // MMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,7 +312,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnlHelyek;
-        public System.Windows.Forms.CheckBox rbRendel;
+        public System.Windows.Forms.RadioButton rbRendel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList btmImgList;
         

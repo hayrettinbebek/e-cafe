@@ -13,6 +13,7 @@ namespace BusinessLogic
         public string fMEGNEVEZES;
         public int fCIKK_TIPUS;
         public int fCIKKCSOPORT_ID;
+        public int fOTHER_FILTER_ID;
 
         public Cikk(int pCIKK_ID,
                     string pMEGNEVEZES,
@@ -43,7 +44,7 @@ namespace BusinessLogic
         
     }
 
-    class Cikk_list
+    public class Cikk_list
     {
         private SqlConnection sc;
 
@@ -61,7 +62,7 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID  FROM CIKK";
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID  FROM CIKK";
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
@@ -70,6 +71,7 @@ namespace BusinessLogic
                                   (string)rdr["MEGNEVEZES"], 
                                   (int)rdr["CIKK_TIPUS"], 
                                   (int)rdr["CIKKCSOPORT_ID"]);
+                t.fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
                 lCIKK.Add(t);
             }
             rdr.Close();
@@ -82,6 +84,20 @@ namespace BusinessLogic
             var ret_cikk =
                 from c in lCIKK
                 where c.fCIKKCSOPORT_ID == iCsoportId
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
+
+        public List<Cikk> CikkListByAlcsoport(int iCsoportId, int iAlcsoportId)
+        {
+            List<Cikk> iTmpRet = new List<Cikk>();
+
+            var ret_cikk =
+                from c in lCIKK
+                where (c.fCIKKCSOPORT_ID == iCsoportId) && (c.fOTHER_FILTER_ID == iAlcsoportId)
                 select c;
             ret_cikk.Each(c => iTmpRet.Add(c));
 
