@@ -8,6 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
 using GUI;
+using System.Resources;
+
+using XPTable;
+using XPTable.Models;
+using XPTable.Renderers;
 
 namespace e_Cafe
 {
@@ -16,16 +21,22 @@ namespace e_Cafe
         Asztal _SelAsztal;
         TBLObj _bl;
         int _InactivityCounter;
+        ResourceManager myResources;
 
         #region Constructor
         public MRendeles(Asztal iAsztal, TBLObj iConn)
         {
+            System.Reflection.Assembly myAssembly;
+            myAssembly = this.GetType().Assembly;
+            myResources = new ResourceManager("e_Cafe.OtherImages", myAssembly);
+
             InitializeComponent();
             _SelAsztal = iAsztal;
             _bl = iConn;
             label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
             _InactivityCounter = 0;
             InitMenuButtons();
+
         }
 
         #endregion
@@ -185,6 +196,85 @@ namespace e_Cafe
             
             MessageBox.Show("fuck");
         }
+
+        #region Rendelés tábla
+
+        private void initRendelTabla()
+        {
+            //1. oszlop
+            ImageColumn imageColumn = new ImageColumn("", 20);
+            imageColumn.Editable = false;
+
+            NumberColumn numberColumn = new NumberColumn("db", 25);
+            numberColumn.Editable = false;
+
+            TextColumn textColumn = new TextColumn("név", 100);
+            textColumn.Editable = false;
+
+            NumberColumn ertekColumn = new NumberColumn("érték", 70);
+            ertekColumn.Editable = false;
+
+
+            DateTimeColumn datetimeColumn = new DateTimeColumn("idő", 50);
+            datetimeColumn.DateTimeFormat = DateTimePickerFormat.Time;
+            datetimeColumn.Editable = false;
+            
+
+            tblRendeles.ColumnModel = new ColumnModel(new Column[] {imageColumn,
+																	  numberColumn,
+																	  textColumn,
+																	  ertekColumn,
+																	  datetimeColumn});
+
+            tblRendeles.HeaderRenderer = new GradientHeaderRenderer();
+
+
+            // feltöltés default értékkel
+            tblRendeles.TableModel = new TableModel(new Row[] {	new Row(new Cell[] {new Cell(),
+																						new Cell(1),
+																						new Cell("Sör"),
+																						new Cell(250),
+																						new Cell(new DateTime(2009, 1, 17, 11, 49, 2, 0))}),
+																 new Row(new Cell[] {new Cell("",(Image) myResources.GetObject("OK_ICON")),
+																						new Cell(1),
+																						new Cell("Kóla"),
+																						new Cell(180),
+																						new Cell(new DateTime(2009, 1, 17, 12, 05, 2, 0))}),
+                                                                new Row(new Cell[] {new Cell(),
+																						new Cell(1),
+																						new Cell("Dreher"),
+																						new Cell(460),
+																						new Cell(new DateTime(2009, 1, 17, 12, 10, 2, 0))}),
+            });
+
+            tblRendeles.TableModel.RowHeight = 70;
+
+
+        }
+        private void tblRendeles_SelectionChanged(object sender, XPTable.Events.SelectionEventArgs e)
+        {
+
+            for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
+            {
+                tblRendeles.TableModel.Rows[i].Cells[0].Image = null;
+            }
+
+            foreach (var r in tblRendeles.SelectedItems)
+            {
+                r.Cells[0].Image = (Image)myResources.GetObject("OK_ICON");
+            }
+
+
+        }
+
+        #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            initRendelTabla();
+        }
+
+
 
 
 

@@ -84,6 +84,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="OtherImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OtherImages.resx</DependentUpon>
+    </Compile>
     <Compile Include="TableActionSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +110,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="OtherImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OtherImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="TableActionSelect.resx">
       <DependentUpon>TableActionSelect.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +129,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK_ICON.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kepek\OK_ICON.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

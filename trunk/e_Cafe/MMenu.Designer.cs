@@ -32,9 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.rbRendel = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlHelyek = new System.Windows.Forms.Panel();
@@ -42,7 +40,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -50,6 +47,10 @@
             this.lblTime = new System.Windows.Forms.Button();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.rbRendel = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button6);
@@ -80,19 +82,6 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(659, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Adminisztrátor";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
@@ -103,22 +92,6 @@
             this.button6.Text = "Törzsvásárlók";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button6.UseVisualStyleBackColor = false;
-            // 
-            // rbRendel
-            // 
-            this.rbRendel.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbRendel.AutoSize = true;
-            this.rbRendel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.rbRendel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.rbRendel.Image = global::e_Cafe.Properties.Resources.off_T;
-            this.rbRendel.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.rbRendel.Location = new System.Drawing.Point(82, 14);
-            this.rbRendel.Name = "rbRendel";
-            this.rbRendel.Size = new System.Drawing.Size(146, 56);
-            this.rbRendel.TabIndex = 3;
-            this.rbRendel.Tag = "2";
-            this.rbRendel.Text = "Rendel";
-            this.rbRendel.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -187,23 +160,6 @@
             this.panel4.Size = new System.Drawing.Size(128, 626);
             this.panel4.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ImageIndex = 0;
-            this.button1.ImageList = this.btmImgList;
-            this.button1.Location = new System.Drawing.Point(-17, 233);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // btmImgList
             // 
             this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
@@ -267,6 +223,63 @@
             this.panel6.Size = new System.Drawing.Size(1016, 13);
             this.panel6.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageIndex = 0;
+            this.button1.ImageList = this.btmImgList;
+            this.button1.Location = new System.Drawing.Point(-17, 233);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 71);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(659, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 64);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Adminisztrátor";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // rbRendel
+            // 
+            this.rbRendel.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbRendel.AutoSize = true;
+            this.rbRendel.Checked = true;
+            this.rbRendel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.rbRendel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.rbRendel.Image = global::e_Cafe.Properties.Resources.off_T;
+            this.rbRendel.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.rbRendel.Location = new System.Drawing.Point(82, 14);
+            this.rbRendel.Name = "rbRendel";
+            this.rbRendel.Size = new System.Drawing.Size(146, 56);
+            this.rbRendel.TabIndex = 3;
+            this.rbRendel.TabStop = true;
+            this.rbRendel.Tag = "2";
+            this.rbRendel.Text = "Rendel";
+            this.rbRendel.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "h:mm:ss";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(256, 32);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(174, 20);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
             // MMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +328,7 @@
         public System.Windows.Forms.RadioButton rbRendel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList btmImgList;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         
     }
 }
