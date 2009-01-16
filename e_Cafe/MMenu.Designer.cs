@@ -232,10 +232,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageIndex = 0;
             this.button1.ImageList = this.btmImgList;
-            this.button1.Location = new System.Drawing.Point(-17, 233);
+            this.button1.Location = new System.Drawing.Point(-8, 283);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 71);
+            this.button1.Size = new System.Drawing.Size(136, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
@@ -263,6 +263,7 @@
             this.rbRendel.Image = global::e_Cafe.Properties.Resources.off_T;
             this.rbRendel.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.rbRendel.Location = new System.Drawing.Point(82, 14);
+            this.rbRendel.Margin = new System.Windows.Forms.Padding(0);
             this.rbRendel.Name = "rbRendel";
             this.rbRendel.Size = new System.Drawing.Size(146, 56);
             this.rbRendel.TabIndex = 3;
