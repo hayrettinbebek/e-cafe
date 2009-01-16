@@ -218,6 +218,7 @@ namespace e_Cafe
             DateTimeColumn datetimeColumn = new DateTimeColumn("idő", 50);
             datetimeColumn.DateTimeFormat = DateTimePickerFormat.Time;
             datetimeColumn.Editable = false;
+            datetimeColumn.ShowDropDownButton = false;
             
 
             tblRendeles.ColumnModel = new ColumnModel(new Column[] {imageColumn,
@@ -247,7 +248,7 @@ namespace e_Cafe
 																						new Cell(new DateTime(2009, 1, 17, 12, 10, 2, 0))}),
             });
 
-            tblRendeles.TableModel.RowHeight = 70;
+            tblRendeles.TableModel.RowHeight = 80;
 
 
         }
