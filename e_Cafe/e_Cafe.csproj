@@ -71,6 +71,10 @@
       <HintPath>C:\WINDOWS\assembly\GAC_MSIL\WindowsFormsIntegration\3.0.0.0__31bf3856ad364e35\WindowsFormsIntegration.dll</HintPath>
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GUI\XPTable\XPTable.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminTools.cs">
@@ -84,6 +88,11 @@
     </Compile>
     <Compile Include="MRendeles.Designer.cs">
       <DependentUpon>MRendeles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherImages.Designer.cs">
+      <DependentUpon>OtherImages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="UserControls\AsztalInfo.cs">
       <SubType>UserControl</SubType>
@@ -128,6 +137,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MRendeles.resx">
       <DependentUpon>MRendeles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OtherImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AsztalInfo.resx">
       <DependentUpon>AsztalInfo.cs</DependentUpon>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRendeles));
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.pnlButtonPlace = new System.Windows.Forms.Panel();
@@ -37,34 +36,30 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlRendeles = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.flpCikkek = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOldalsav = new System.Windows.Forms.Panel();
             this.pnlOtherFilter = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.flpCikkek = new System.Windows.Forms.FlowLayoutPanel();
-            rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.checkBoxColumn1 = new XPTable.Models.CheckBoxColumn();
+            this.numberColumn1 = new XPTable.Models.NumberColumn();
+            this.textColumn1 = new XPTable.Models.TextColumn();
+            this.numberColumn2 = new XPTable.Models.NumberColumn();
+            this.dateTimeColumn1 = new XPTable.Models.DateTimeColumn();
+            this.tblRendeles = new XPTable.Models.Table();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.SuspendLayout();
-            // 
-            // rectangleShape1
-            // 
-            rectangleShape1.BackColor = System.Drawing.Color.Yellow;
-            rectangleShape1.FillColor = System.Drawing.Color.Yellow;
-            rectangleShape1.FillGradientColor = System.Drawing.Color.Yellow;
-            rectangleShape1.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Central;
-            rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            rectangleShape1.Location = new System.Drawing.Point(208, 240);
-            rectangleShape1.Name = "rectangleShape1";
-            rectangleShape1.Size = new System.Drawing.Size(23, 240);
             // 
             // pnlButtons
             // 
@@ -116,31 +111,15 @@
             // pnlRendeles
             // 
             this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlRendeles.Controls.Add(this.button4);
+            this.pnlRendeles.Controls.Add(this.button1);
+            this.pnlRendeles.Controls.Add(this.tblRendeles);
             this.pnlRendeles.Controls.Add(this.label1);
-            this.pnlRendeles.Controls.Add(this.shapeContainer2);
             this.pnlRendeles.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRendeles.Location = new System.Drawing.Point(703, 0);
             this.pnlRendeles.Name = "pnlRendeles";
             this.pnlRendeles.Size = new System.Drawing.Size(313, 624);
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ImageKey = "aktiv_T.bmp";
-            this.button4.ImageList = this.btmImgList;
-            this.button4.Location = new System.Drawing.Point(72, 293);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 88);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "exit";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btmImgList
             // 
@@ -158,17 +137,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            rectangleShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(313, 624);
-            this.shapeContainer2.TabIndex = 1;
-            this.shapeContainer2.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.flpCikkek);
@@ -180,6 +148,14 @@
             this.panel3.Size = new System.Drawing.Size(530, 624);
             this.panel3.TabIndex = 1;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            // 
+            // flpCikkek
+            // 
+            this.flpCikkek.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpCikkek.Location = new System.Drawing.Point(25, 50);
+            this.flpCikkek.Name = "flpCikkek";
+            this.flpCikkek.Size = new System.Drawing.Size(505, 574);
+            this.flpCikkek.TabIndex = 2;
             // 
             // panel1
             // 
@@ -210,6 +186,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 624);
             this.panel4.Name = "panel4";
@@ -222,13 +199,41 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // flpCikkek
+            // tblRendeles
             // 
-            this.flpCikkek.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpCikkek.Location = new System.Drawing.Point(25, 50);
-            this.flpCikkek.Name = "flpCikkek";
-            this.flpCikkek.Size = new System.Drawing.Size(505, 574);
-            this.flpCikkek.TabIndex = 2;
+            this.tblRendeles.Location = new System.Drawing.Point(10, 117);
+            this.tblRendeles.MultiSelect = true;
+            this.tblRendeles.Name = "tblRendeles";
+            this.tblRendeles.Size = new System.Drawing.Size(291, 402);
+            this.tblRendeles.TabIndex = 1;
+            this.tblRendeles.Text = "table1";
+            this.tblRendeles.SelectionChanged += new XPTable.Events.SelectionEventHandler(this.tblRendeles_SelectionChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(134, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ImageKey = "aktiv_T.bmp";
+            this.button4.ImageList = this.btmImgList;
+            this.button4.Location = new System.Drawing.Point(130, 27);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(152, 65);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "exit";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MRendeles
             // 
@@ -250,6 +255,8 @@
             this.pnlRendeles.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,7 +278,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlOldalsav;
         private System.Windows.Forms.ImageList btmImgList;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private System.Windows.Forms.FlowLayoutPanel flpCikkek;
+        private XPTable.Models.CheckBoxColumn checkBoxColumn1;
+        private XPTable.Models.NumberColumn numberColumn1;
+        private XPTable.Models.TextColumn textColumn1;
+        private XPTable.Models.NumberColumn numberColumn2;
+        private XPTable.Models.DateTimeColumn dateTimeColumn1;
+        private XPTable.Models.Table tblRendeles;
+        private System.Windows.Forms.Button button1;
     }
 }
