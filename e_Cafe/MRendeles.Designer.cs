@@ -36,29 +36,31 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlRendeles = new System.Windows.Forms.Panel();
-            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
+            this.btnUP = new System.Windows.Forms.Button();
+            this.btnDOWN = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tblRendeles = new XPTable.Models.Table();
             this.label1 = new System.Windows.Forms.Label();
+            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpCikkek = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOldalsav = new System.Windows.Forms.Panel();
             this.pnlOtherFilter = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.checkBoxColumn1 = new XPTable.Models.CheckBoxColumn();
             this.numberColumn1 = new XPTable.Models.NumberColumn();
             this.textColumn1 = new XPTable.Models.TextColumn();
             this.numberColumn2 = new XPTable.Models.NumberColumn();
             this.dateTimeColumn1 = new XPTable.Models.DateTimeColumn();
-            this.tblRendeles = new XPTable.Models.Table();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlButtons
@@ -111,6 +113,8 @@
             // pnlRendeles
             // 
             this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlRendeles.Controls.Add(this.btnUP);
+            this.pnlRendeles.Controls.Add(this.btnDOWN);
             this.pnlRendeles.Controls.Add(this.button1);
             this.pnlRendeles.Controls.Add(this.tblRendeles);
             this.pnlRendeles.Controls.Add(this.label1);
@@ -121,12 +125,54 @@
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
             // 
-            // btmImgList
+            // btnUP
             // 
-            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
-            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.btmImgList.Images.SetKeyName(0, "off_T.bmp");
-            this.btmImgList.Images.SetKeyName(1, "aktiv_T.bmp");
+            this.btnUP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnUP.Location = new System.Drawing.Point(161, 525);
+            this.btnUP.Name = "btnUP";
+            this.btnUP.Size = new System.Drawing.Size(93, 31);
+            this.btnUP.TabIndex = 4;
+            this.btnUP.Text = "UP";
+            this.btnUP.UseVisualStyleBackColor = false;
+            this.btnUP.Click += new System.EventHandler(this.btnUP_Click);
+            // 
+            // btnDOWN
+            // 
+            this.btnDOWN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnDOWN.Location = new System.Drawing.Point(48, 525);
+            this.btnDOWN.Name = "btnDOWN";
+            this.btnDOWN.Size = new System.Drawing.Size(93, 31);
+            this.btnDOWN.TabIndex = 3;
+            this.btnDOWN.Text = "DOWN";
+            this.btnDOWN.UseVisualStyleBackColor = false;
+            this.btnDOWN.Click += new System.EventHandler(this.btnDOWN_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(134, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tblRendeles
+            // 
+            this.tblRendeles.AllowSelection = false;
+            this.tblRendeles.FullRowSelect = true;
+            this.tblRendeles.Location = new System.Drawing.Point(10, 117);
+            this.tblRendeles.MultiSelect = true;
+            this.tblRendeles.Name = "tblRendeles";
+            this.tblRendeles.NoItemsText = "Nincs kiválasztott cikk";
+            this.tblRendeles.Scrollable = false;
+            this.tblRendeles.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tblRendeles.SelectionStyle = XPTable.Models.SelectionStyle.Grid;
+            this.tblRendeles.Size = new System.Drawing.Size(292, 402);
+            this.tblRendeles.TabIndex = 1;
+            this.tblRendeles.Text = "table1";
+            this.tblRendeles.CellClick += new XPTable.Events.CellMouseEventHandler(this.tblRendeles_CellClick);
+            this.tblRendeles.SelectionChanged += new XPTable.Events.SelectionEventHandler(this.tblRendeles_SelectionChanged);
             // 
             // label1
             // 
@@ -136,6 +182,13 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
+            // 
+            // btmImgList
+            // 
+            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
+            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.btmImgList.Images.SetKeyName(0, "off_T.bmp");
+            this.btmImgList.Images.SetKeyName(1, "aktiv_T.bmp");
             // 
             // panel3
             // 
@@ -193,32 +246,6 @@
             this.panel4.Size = new System.Drawing.Size(1016, 117);
             this.panel4.TabIndex = 1;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // tblRendeles
-            // 
-            this.tblRendeles.Location = new System.Drawing.Point(10, 117);
-            this.tblRendeles.MultiSelect = true;
-            this.tblRendeles.Name = "tblRendeles";
-            this.tblRendeles.Size = new System.Drawing.Size(291, 402);
-            this.tblRendeles.TabIndex = 1;
-            this.tblRendeles.Text = "table1";
-            this.tblRendeles.SelectionChanged += new XPTable.Events.SelectionEventHandler(this.tblRendeles_SelectionChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(134, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
@@ -234,6 +261,12 @@
             this.button4.Text = "exit";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MRendeles
             // 
@@ -253,10 +286,10 @@
             this.pnlButtons.ResumeLayout(false);
             this.pnlRendeles.ResumeLayout(false);
             this.pnlRendeles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,5 +319,7 @@
         private XPTable.Models.DateTimeColumn dateTimeColumn1;
         private XPTable.Models.Table tblRendeles;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDOWN;
+        private System.Windows.Forms.Button btnUP;
     }
 }

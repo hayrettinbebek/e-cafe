@@ -10,6 +10,8 @@ using System.Runtime.InteropServices ;
 
 namespace GUI
 {
+
+
     public class CikkcsopButton : System.Windows.Forms.RadioButton
     {
 
@@ -41,9 +43,25 @@ namespace GUI
 
     public class HelyButton : System.Windows.Forms.RadioButton
     {
+        // Import the CreateRoundRectRgn function from the GDI32.DLL 
+        // From the Unmanaged Code
+        [DllImport("GDI32.DLL", EntryPoint = "CreateRoundRectRgn")]
+        private static extern int CreateRoundRectRgn(int x1, int y1, int x2, int y2, int x3, int y3);
+
+        // Import the SetWindowRgn function from the user32.DLL
+        // From the Unmanaged Code
+        [DllImport("user32.DLL", EntryPoint = "SetWindowRgn")]
+        private static extern int SetWindowRgn(int hWnd, int hRgn, int bRedraw);
+
+        int rg;
+        int hdl;
+
         public Hely _Hely;
         public HelyButton(Hely aHely)
         {
+
+
+
             _Hely = aHely;
             Appearance = Appearance.Button;
             FlatStyle = FlatStyle.Flat;
@@ -51,7 +69,7 @@ namespace GUI
             FlatAppearance.MouseDownBackColor = Color.Transparent;
             FlatAppearance.CheckedBackColor = Color.Transparent;
             FlatAppearance.BorderSize = 0;
-            ImageAlign = ContentAlignment.BottomRight;
+            ImageAlign = ContentAlignment.MiddleCenter;
             BackColor = Color.Transparent;
 
 
@@ -62,13 +80,20 @@ namespace GUI
             base.OnPaint(e);
         }
 
-        protected override void OnCheckedChanged(EventArgs e)
+        public void HInit()
         {
-            if (ImageIndex == 1) { ImageIndex = 0; }
-            else ImageIndex = 1;
-            base.OnCheckedChanged(e);
-            
+
+            // Get the dimension of the client rectangle 
+            Rectangle rect = this.ClientRectangle;
+            // Invoke the unmanaged DLL function here to create the RoundRectangleRegion
+            rg = CreateRoundRectRgn(rect.Left, rect.Top, rect.Right, rect.Bottom, 1, 1);
+            // Get the handle to the window. 
+            hdl = this.Handle.ToInt32();
+            // Set the Window Region to a a Rectangle with rounded corners
+            SetWindowRgn(hdl, rg, 1);
         }
+
+
 
     }
 
@@ -103,7 +128,23 @@ namespace GUI
         int hdl;
         private Cikk _Cikk;
 
+        // Import the CreateRoundRectRgn function from the GDI32.DLL 
+        // From the Unmanaged Code
+        [DllImport("GDI32.DLL", EntryPoint = "CreateRoundRectRgn")]
+        private static extern int CreateRoundRectRgn(int x1, int y1, int x2, int y2, int x3, int y3);
 
+        // Import the SetWindowRgn function from the user32.DLL
+        // From the Unmanaged Code
+        [DllImport("user32.DLL", EntryPoint = "SetWindowRgn")]
+        private static extern int SetWindowRgn(int hWnd, int hRgn, int bRedraw);
+
+        Font f1 = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+        Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+
+        private Label lKeszlet;
+        private Label lMegnevezes;
+        private Label lKiszereles;
+        private Label lAr;
 
 
         public Cikk fCIKK
@@ -112,25 +153,25 @@ namespace GUI
             set
             {
                 _Cikk = value;
-                this.Text = value.fMEGNEVEZES;
+                lMegnevezes.Text = value.fMEGNEVEZES;
+                lKeszlet.Text = value.fKESZLET.ToString();
+                lAr.Text = "250 .-";
+                lKiszereles.Text = "korsó (5dl)";
+                
             }
         }
 
-        // Import the CreateRoundRectRgn function from the GDI32.DLL 
-		// From the Unmanaged Code
-		[DllImport("GDI32.DLL",EntryPoint="CreateRoundRectRgn")]
-		private static extern int CreateRoundRectRgn(int x1 , int y1 ,int x2 , int y2 , int x3 , int y3);
+        protected void OnLabelClick(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
 
-		// Import the SetWindowRgn function from the user32.DLL
-		// From the Unmanaged Code
-		[DllImport("user32.DLL",EntryPoint="SetWindowRgn")]
-		private static extern int SetWindowRgn( int hWnd , int hRgn , int bRedraw ) ;
 
 
         
         public CikkButton()
         {
-            Width = 100;
+            Width = 150;
             Height = 75;
             // Get the dimension of the client rectangle 
 			Rectangle rect = this.ClientRectangle  ;	
@@ -145,14 +186,40 @@ namespace GUI
 
             BackColor = Color.Gray;
 
-            Label l = new Label();
-            l.Width = 30;
-            l.Height = 30;
-            l.BackColor = Color.Red;
-            l.Text = "15";
-            l.Location = new Point(70, 0);
-            this.Controls.Add(l);
+            lKeszlet = new Label();
+            lKeszlet.Width = 40;
+            lKeszlet.Height = 20;
+            lKeszlet.BackColor = Color.DarkRed;
+            lKeszlet.Location = new Point(90, 0);
+            lKeszlet.Click += this.OnLabelClick;
+            this.Controls.Add(lKeszlet);
 
+            lMegnevezes = new Label();
+            lMegnevezes.Width = 120;
+            lMegnevezes.Height = 20;
+            lMegnevezes.BackColor = Color.Transparent;
+            lMegnevezes.Location = new Point(10, 20);
+            lMegnevezes.Font = f2;
+            lMegnevezes.Click += this.OnLabelClick;
+            this.Controls.Add(lMegnevezes);
+
+            lKiszereles = new Label();
+            lKiszereles.Width = 70;
+            lKiszereles.Height = 20;
+            lKiszereles.BackColor = Color.Transparent;
+            lKiszereles.Location = new Point(10, 45);
+            lKiszereles.Font = f1;
+            lKiszereles.Click += this.OnLabelClick;
+            this.Controls.Add(lKiszereles);
+
+            lAr = new Label();
+            lAr.Width = 50;
+            lAr.Height = 20;
+            lAr.BackColor = Color.Transparent;
+            lAr.Location = new Point(92, 45);
+            lAr.Font = f1;
+            lAr.Click += this.OnLabelClick;
+            this.Controls.Add(lAr);
       
         }
 
