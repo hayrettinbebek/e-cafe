@@ -9,6 +9,7 @@ using System.Threading;
 using System.Windows.Forms;
 using BusinessLogic;
 using GUI;
+using GUI.billentyu;
 
 
 namespace e_Cafe
@@ -216,6 +217,19 @@ namespace e_Cafe
 
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            TouchKeyboard tk = new TouchKeyboard();
+            tk.ShowDialog();
+            textBox1.Text = tk.txtRet.Text;
+        }
+
 
 
 
