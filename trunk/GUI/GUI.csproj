@@ -65,6 +65,18 @@
     <Compile Include="Asztal_Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="billentyu\keyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="billentyu\keyboard.Designer.cs">
+      <DependentUpon>keyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="billentyu\TouchKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="billentyu\TouchKeyboard.Designer.cs">
+      <DependentUpon>TouchKeyboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="billentyu\keyboard.resx">
+      <DependentUpon>keyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="billentyu\TouchKeyboard.resx">
+      <DependentUpon>TouchKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Notepad_Rendeles.resx">
       <DependentUpon>Notepad_Rendeles.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +153,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="kepek\OK_ICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="billentyu\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="billentyu\button.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

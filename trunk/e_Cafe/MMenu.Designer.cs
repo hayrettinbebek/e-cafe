@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(164)))));
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.button4);
@@ -76,10 +77,18 @@
             this.panel1.Size = new System.Drawing.Size(1016, 102);
             this.panel1.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(158, 58);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 20);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            // 
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(597, 20);
+            this.button3.Location = new System.Drawing.Point(645, 23);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 75);
             this.button3.TabIndex = 7;
@@ -116,6 +125,7 @@
             this.button7.Text = "Személyzet";
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button2
             // 
@@ -132,7 +142,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
-            this.button6.Location = new System.Drawing.Point(487, 20);
+            this.button6.Location = new System.Drawing.Point(520, 14);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(104, 51);
             this.button6.TabIndex = 4;
@@ -204,7 +214,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(180, 13);
             this.panel3.Name = "panel3";
@@ -214,6 +223,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.lblTime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -231,7 +241,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageIndex = 0;
             this.button1.ImageList = this.btmImgList;
-            this.button1.Location = new System.Drawing.Point(508, 400);
+            this.button1.Location = new System.Drawing.Point(-42, 418);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 64);
@@ -309,7 +319,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -342,6 +351,7 @@
         private System.Windows.Forms.ImageList btmImgList;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
         
     }
 }
