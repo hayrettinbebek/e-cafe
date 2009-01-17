@@ -22,6 +22,10 @@ namespace e_Cafe
         public  bool _Rendel;
         MainMenuBtn tlpButtons;
 
+        private static int C_HELYEK_WIDTH = 150;
+        private static int C_HELYEK_HEIGHT = 60;
+
+
         public string DebugMessage
         {
             set { label1.Text = value; }
@@ -66,7 +70,7 @@ namespace e_Cafe
             tlpButtons.Location = new Point(panel8.Width+17, panel6.Height+panel7.Height);
 
             tlpButtons.Height = panel8.Height;
-            tlpButtons.Width = 158;
+            tlpButtons.Width = C_HELYEK_WIDTH;
             //mf.Controls.Add(tlpButtons);
             pnlHelyek.Controls.Add(tlpButtons);
             //this.Controls.Add(tlpButtons);
@@ -85,20 +89,36 @@ namespace e_Cafe
                 bt.Location = new Point(0, 0);
                 bt.Text = cl.lHelyek[i].fHELY_NEV;
                 bt.TextAlign = ContentAlignment.BottomLeft;
+                bt.Location = new Point(0, 0);
+                bt.Width = C_HELYEK_WIDTH;
+                bt.Height = C_HELYEK_HEIGHT;
                 bt.Dock = DockStyle.Fill;
-                bt.ImageList = btmImgList;
-                bt.ImageIndex = 0;
+                bt.BackgroundImage = btmImgList.Images[0];
+                bt.BackgroundImageLayout = ImageLayout.Stretch;
+                //bt.ImageList = btmImgList;
+                //bt.ImageIndex = 0;
+                bt.HInit();
 
 
                 bt.Click += HelyMenuClick;
+                bt.CheckedChanged += HelyOnCheckedChanged;
 
-                
 
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 66));
+
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, C_HELYEK_HEIGHT));
                 tlpButtons.Controls.Add(bt);
             }
             tlpButtons.Refresh();
 
+        }
+
+        private void HelyOnCheckedChanged(object sender, EventArgs e)
+        {
+            if (((HelyButton)sender).Checked)
+            {
+                ((HelyButton)sender).BackgroundImage = btmImgList.Images[1];
+            }
+            else { ((HelyButton)sender).BackgroundImage = btmImgList.Images[0]; }
         }
 
         private void HelyMenuClick(object sender, EventArgs e)
@@ -196,6 +216,9 @@ namespace e_Cafe
 
 
         }
+
+
+
 
 
 

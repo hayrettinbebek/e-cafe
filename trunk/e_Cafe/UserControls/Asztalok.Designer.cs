@@ -97,7 +97,7 @@ namespace e_Cafe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.asztalInfo1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.asztal_Button1);

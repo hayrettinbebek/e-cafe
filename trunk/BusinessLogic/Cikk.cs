@@ -14,6 +14,8 @@ namespace BusinessLogic
         public int fCIKK_TIPUS;
         public int fCIKKCSOPORT_ID;
         public int fOTHER_FILTER_ID;
+        public int fKESZLET;
+        
 
         public Cikk(int pCIKK_ID,
                     string pMEGNEVEZES,
@@ -72,6 +74,7 @@ namespace BusinessLogic
                                   (int)rdr["CIKK_TIPUS"], 
                                   (int)rdr["CIKKCSOPORT_ID"]);
                 t.fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
+                t.fKESZLET = 15;
                 lCIKK.Add(t);
             }
             rdr.Close();

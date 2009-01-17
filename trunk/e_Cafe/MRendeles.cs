@@ -23,6 +23,8 @@ namespace e_Cafe
         int _InactivityCounter;
         ResourceManager myResources;
 
+        Rendeles _AktRendeles;
+
         #region Constructor
         public MRendeles(Asztal iAsztal, TBLObj iConn)
         {
@@ -35,8 +37,10 @@ namespace e_Cafe
             _bl = iConn;
             label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
             _InactivityCounter = 0;
-            InitMenuButtons();
+            _AktRendeles = new Rendeles(_SelAsztal.fASZTAL_ID);
 
+            InitMenuButtons();
+            initRendelTabla();
         }
 
         #endregion
@@ -75,6 +79,18 @@ namespace e_Cafe
 
         #region Gombok
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        #endregion 
+
+
+
+
+        #region Menü vezérélés
         private void InitMenuButtons()
         {
             Cikkcsoport_list cl = new Cikkcsoport_list(_bl);
@@ -84,8 +100,8 @@ namespace e_Cafe
             tlpButtons.Dock = DockStyle.Fill;
             tlpButtons.GrowStyle = TableLayoutPanelGrowStyle.AddRows;
 
-            tlpButtons.RowCount = cl.lCIKKCSOPORT.Count+1;
-            
+            tlpButtons.RowCount = cl.lCIKKCSOPORT.Count + 1;
+
             for (int i = 0; i < (cl.lCIKKCSOPORT.Count); i++)
             {
 
@@ -106,19 +122,9 @@ namespace e_Cafe
         }
 
 
-        #endregion 
-
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-
         private void CikkcsopMenuClick(object sender, EventArgs e)
         {
-
+            resetCounter();
             bool Call = true;
 
             OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, _bl);
@@ -159,17 +165,22 @@ namespace e_Cafe
                 pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
             }
             ((CikkcsopButton)sender).Refresh();
-
-            if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
+            loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1);
+            //if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
         }
 
         private void AlcsopMenuClick(object sender, EventArgs e)
         {
+            resetCounter();
             loadCikkek(((OtherFButton)sender)._OTF.fCIKKCSOPORT_ID, ((OtherFButton)sender)._OTF.fOTF_ID);
         }
 
+        #endregion
+
+        #region Cikk betöltés
         private void loadCikkek(int pCikkcsoport, int pAlcsoportId)
         {
+            flpCikkek.Controls.Clear();
             Cikk_list lCikkList = new Cikk_list(_bl);
             List<Cikk> lButtons = new List<Cikk>();
             if (pAlcsoportId == -1)
@@ -185,11 +196,24 @@ namespace e_Cafe
             {
                 CikkButton cb = new CikkButton();
                 cb.fCIKK = lButtons[i];
+                cb.Click += onCikkClick;
                 flpCikkek.Controls.Add(cb);
 
             }
 
         }
+
+        #endregion
+
+        #region Cikk események
+
+        private void onCikkClick(object sender, EventArgs e)
+        {
+            _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
+            initRendelTabla();
+        }
+
+        #endregion
 
         private void dataRepeater1_ItemTemplate_Click(object sender, EventArgs e)
         {
@@ -201,54 +225,16 @@ namespace e_Cafe
 
         private void initRendelTabla()
         {
-            //1. oszlop
-            ImageColumn imageColumn = new ImageColumn("", 20);
-            imageColumn.Editable = false;
-
-            NumberColumn numberColumn = new NumberColumn("db", 25);
-            numberColumn.Editable = false;
-
-            TextColumn textColumn = new TextColumn("név", 100);
-            textColumn.Editable = false;
-
-            NumberColumn ertekColumn = new NumberColumn("érték", 70);
-            ertekColumn.Editable = false;
-
-
-            DateTimeColumn datetimeColumn = new DateTimeColumn("idő", 50);
-            datetimeColumn.DateTimeFormat = DateTimePickerFormat.Time;
-            datetimeColumn.Editable = false;
-            datetimeColumn.ShowDropDownButton = false;
-            
-
-            tblRendeles.ColumnModel = new ColumnModel(new Column[] {imageColumn,
-																	  numberColumn,
-																	  textColumn,
-																	  ertekColumn,
-																	  datetimeColumn});
+            resetCounter();
+            tblRendeles.ColumnModel = _AktRendeles.fColumnModel;
 
             tblRendeles.HeaderRenderer = new GradientHeaderRenderer();
 
 
             // feltöltés default értékkel
-            tblRendeles.TableModel = new TableModel(new Row[] {	new Row(new Cell[] {new Cell(),
-																						new Cell(1),
-																						new Cell("Sör"),
-																						new Cell(250),
-																						new Cell(new DateTime(2009, 1, 17, 11, 49, 2, 0))}),
-																 new Row(new Cell[] {new Cell("",(Image) myResources.GetObject("OK_ICON")),
-																						new Cell(1),
-																						new Cell("Kóla"),
-																						new Cell(180),
-																						new Cell(new DateTime(2009, 1, 17, 12, 05, 2, 0))}),
-                                                                new Row(new Cell[] {new Cell(),
-																						new Cell(1),
-																						new Cell("Dreher"),
-																						new Cell(460),
-																						new Cell(new DateTime(2009, 1, 17, 12, 10, 2, 0))}),
-            });
-
-            tblRendeles.TableModel.RowHeight = 80;
+            tblRendeles.TableModel = _AktRendeles.getTableModel();
+            tblRendeles.Font = DEFS.f2;
+            tblRendeles.TableModel.RowHeight = 40;
 
 
         }
@@ -272,8 +258,38 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string str = "";
+            for (int i = 0; i < tblRendeles.ColumnModel.Columns.Count; i++)
+            {
+                str += tblRendeles.ColumnModel.Columns[i].Width.ToString() + ',';
+            }
+            MessageBox.Show(str);
+        }
+
+        private void tblRendeles_CellClick(object sender, XPTable.Events.CellMouseEventArgs e)
+        {
+            if (tblRendeles.TableModel.Selections.IsRowSelected(e.Row)) {
+                tblRendeles.TableModel.Selections.RemoveCell(e.Row, 0);
+            } else {
+            tblRendeles.TableModel.Selections.AddCell(e.Row, 0);
+            }
+        }
+
+        private void btnDOWN_Click(object sender, EventArgs e)
+        {
+            if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Min(_AktRendeles._ScrollPos + 1, _AktRendeles.lRendelesSor.Count-9); }
             initRendelTabla();
         }
+
+        private void btnUP_Click(object sender, EventArgs e)
+        {
+            if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Max(_AktRendeles._ScrollPos-1,0); }
+            initRendelTabla();
+        }
+
+
+
+
 
 
 
