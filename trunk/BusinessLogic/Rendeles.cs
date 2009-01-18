@@ -99,6 +99,10 @@ namespace BusinessLogic
             _AsztalId = pAsztalID;
             setColumnModel();
             _ScrollPos = 0;
+            fRENDELES_ID = pRendeles_id;
+            fDATUM = DateTime.Now;
+            fFIZETVE = false;
+            fASZTAL_ID = pAsztalID;
 
             sc = pBLObj.sqlConnection;
            
@@ -153,14 +157,85 @@ namespace BusinessLogic
 
         #endregion
 
-
+        #region Mentés
         public void SaveRendeles()
         {
+            sc = pBLObj.sqlConnection;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = sc;
+            cmd.CommandType = CommandType.Text;
 
+            switch (fRENDELES_ID)
+            {
+                case -1: {
+                    //új rekord!!
+                    cmd.CommandText = "INSERT INTO RENDELES_FEJ " +
+                                        "(ASZTAL_ID "+
+                                        ",DATUM " +
+                                        ",PARTNER_ID " +
+                                        ",FIZETVE) " +
+                                    "VALUES " +
+                                        "(@ASZTAL_ID  " +
+                                        ",@DATUM  " +
+                                        ",@PARTNER_ID " +
+                                        ",@FIZETVE)";
+
+                    break;}
+                default:{
+                    cmd.CommandText = "UPDATE RENDELES_FEJ SET ASZTAL_ID = @ASZTAL_ID, " +
+                                                   " DATUM = @DATUM, " +
+                                                   " PARTNER_ID = @PARTNER_ID, "+
+                                                   " FIZETVE = @FIZETVE, "+
+                                       "WHERE RENDELES_ID = @RENDELES_ID";
+                    cmd.Parameters.Add(new SqlParameter("RENDELES_ID", SqlDbType.Int));
+                    cmd.Parameters["RENDELES_ID"].Value = fRENDELES_ID;
+                    break;
+                    }
+            }
+
+            cmd.Parameters.Add(new SqlParameter("ASZTAL_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("DATUM", SqlDbType.DateTime));
+            cmd.Parameters.Add(new SqlParameter("PARTNER_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("FIZETVE", SqlDbType.Int));
+
+
+            cmd.Parameters["ASZTAL_ID"].Value = fASZTAL_ID;
+            cmd.Parameters["DATUM"].Value = fDATUM;
+            cmd.Parameters["PARTNER_ID"].Value = fPARTNER_ID;
+            cmd.Parameters["FIZETVE"].Value = 0;
+            
+            
+            cmd.ExecuteNonQuery();
+
+            cmd.Parameters.Clear();
+            cmd.CommandText = "";
+            if (fRENDELES_ID == -1)
+            {
+                cmd.CommandText = "SELECT max(RENDELES_ID) as RENDELES_ID FROM RENDELES_FEJ WHERE ASZTAL_ID = @ASZTAL_ID AND FIZETVE = 0 ";
+                cmd.Parameters.Add(new SqlParameter("ASZTAL_ID", SqlDbType.Int));
+                cmd.Parameters["ASZTAL_ID"].Value = fASZTAL_ID;
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    fRENDELES_ID = (int)rdr["RENDELES_ID"];
+
+                }
+                rdr.Close();
+            }
+
+            if (fRENDELES_ID != -1)
+            {
+                //Sorok mentése
+                foreach (var sor in lRendelesSor)
+                {
+                    sor.SaveSor(fRENDELES_ID);
+                }
+            }
         }
 
 
-
+        #endregion
     }
 
 
@@ -206,6 +281,74 @@ namespace BusinessLogic
 
             }
             rdr2.Close();
+
+        }
+
+        public void SaveSor(int pRendelesId)
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+           
+
+            switch (_SOR_ID)
+            {
+                case -1:
+                    {
+                        //új rekord!!
+                        cmd.CommandText = "INSERT INTO RENDELES_SOR " +
+                                            "(RENDELES_ID " +
+                                            ",CIKK_ID " +
+                                            ",DB " +
+                                            ",DATUM "+
+                                            ",ERTEK) " +
+                                        "VALUES " +
+                                            "(@RENDELES_ID " +
+                                            ",@CIKK_ID " +
+                                            ",@DB " +
+                                            ",@DATUM " +
+                                            ",@ERTEK)";
+
+                        break;
+                    }
+                default:
+                    {
+                        cmd.CommandText = "UPDATE RENDELES_FEJ SET RENDELES_ID = @RENDELES_ID, " +
+                                                       " CIKK_ID = @CIKK_ID, " +
+                                                       " DB = @DB, " +
+                                                       " DATUM = @DATUM, " +
+                                                       " ERTEK = @ERTEK, " +
+                                           "WHERE SOR_ID = @SOR_ID";
+                        cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
+                        cmd.Parameters["SOR_ID"].Value = _SOR_ID;
+                        break;
+                    }
+            }
+            cmd.Parameters.Add(new SqlParameter("RENDELES_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("DATUM", SqlDbType.DateTime));
+            cmd.Parameters.Add(new SqlParameter("DB", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("ERTEK", SqlDbType.Float));
+
+            cmd.Parameters["RENDELES_ID"].Value = pRendelesId;
+            cmd.Parameters["CIKK_ID"].Value = _Cikk.fCIKK_ID;
+            cmd.Parameters["DB"].Value = _db;
+            cmd.Parameters["DATUM"].Value = _datum;
+            cmd.Parameters["ERTEK"].Value = _Ertek;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                string s = "Hiba a rendelés sorok mentése közben!" + _SOR_ID.ToString() ;
+            }
+
 
         }
     }

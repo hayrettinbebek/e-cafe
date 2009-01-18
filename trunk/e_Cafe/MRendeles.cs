@@ -257,15 +257,7 @@ namespace e_Cafe
 
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string str = "";
-            for (int i = 0; i < tblRendeles.ColumnModel.Columns.Count; i++)
-            {
-                str += tblRendeles.ColumnModel.Columns[i].Width.ToString() + ',';
-            }
-            MessageBox.Show(str);
-        }
+
 
         private void tblRendeles_CellClick(object sender, XPTable.Events.CellMouseEventArgs e)
         {
@@ -286,6 +278,11 @@ namespace e_Cafe
         {
             if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Max(_AktRendeles._ScrollPos-1,0); }
             initRendelTabla();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            _AktRendeles.SaveRendeles();
         }
 
 

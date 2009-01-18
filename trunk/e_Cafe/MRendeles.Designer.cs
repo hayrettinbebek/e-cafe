@@ -38,7 +38,7 @@
             this.pnlRendeles = new System.Windows.Forms.Panel();
             this.btnUP = new System.Windows.Forms.Button();
             this.btnDOWN = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.tblRendeles = new XPTable.Models.Table();
             this.label1 = new System.Windows.Forms.Label();
             this.btmImgList = new System.Windows.Forms.ImageList(this.components);
@@ -115,7 +115,7 @@
             this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlRendeles.Controls.Add(this.btnUP);
             this.pnlRendeles.Controls.Add(this.btnDOWN);
-            this.pnlRendeles.Controls.Add(this.button1);
+            this.pnlRendeles.Controls.Add(this.btnSave);
             this.pnlRendeles.Controls.Add(this.tblRendeles);
             this.pnlRendeles.Controls.Add(this.label1);
             this.pnlRendeles.Dock = System.Windows.Forms.DockStyle.Right;
@@ -147,15 +147,15 @@
             this.btnDOWN.UseVisualStyleBackColor = false;
             this.btnDOWN.Click += new System.EventHandler(this.btnDOWN_Click);
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(134, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.Location = new System.Drawing.Point(134, 60);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 40);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "button1";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tblRendeles
             // 
@@ -318,7 +318,7 @@
         private XPTable.Models.NumberColumn numberColumn2;
         private XPTable.Models.DateTimeColumn dateTimeColumn1;
         private XPTable.Models.Table tblRendeles;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDOWN;
         private System.Windows.Forms.Button btnUP;
     }

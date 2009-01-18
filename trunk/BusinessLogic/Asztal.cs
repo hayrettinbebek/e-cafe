@@ -170,7 +170,7 @@ namespace BusinessLogic
             catch (Exception e)
             {
                 
-                string s = "Hiba az asztal pozició mentése közben mentése közben!";
+                string s = "Hiba az asztal pozició mentése közben!";
                 return false;
             }
 
