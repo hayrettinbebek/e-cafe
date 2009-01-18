@@ -17,6 +17,8 @@ namespace BusinessLogic
         public int fASZTAL_POS_Y;
         public bool vSelected;
         public int fASZTAL_ROTATE;
+        public int fRENDELES_ID;
+
 
         public Asztal()
         {
@@ -25,6 +27,7 @@ namespace BusinessLogic
             fASZTAL_TIPUS = -1;
             fASZTAL_POS_X = -1;
             fASZTAL_POS_Y = -1;
+            fRENDELES_ID = -1;
             vSelected = false;
         }
 
@@ -37,6 +40,7 @@ namespace BusinessLogic
             fASZTAL_POS_Y = iASZTAL_POS_Y;
             fASZTAL_ROTATE = iASZTAL_ROTATE;
             vSelected = iSelected;
+            fRENDELES_ID = -1;
         }
 
         public bool isUsed()
@@ -65,12 +69,15 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT ASZTAL_ID, ASZTAL_SZAM, ASZTAL_TIPUS_ID, ASZTAL_POS_X, ASZTAL_POS_Y, ASZTAL_ROTATE  FROM ASZTAL WHERE HELY_ID ="+aHelyId.ToString();
+            cmd.CommandText = "SELECT a.ASZTAL_ID, a.ASZTAL_SZAM, a.ASZTAL_TIPUS_ID, a.ASZTAL_POS_X, a.ASZTAL_POS_Y, " +
+                    " a.ASZTAL_ROTATE, isnull((select max(RENDELES_ID) from RENDELES_FEJ where ASZTAL_ID = a.ASZTAL_ID),-1) as RENDELES_ID " +
+                    " FROM ASZTAL a WHERE a.HELY_ID =" + aHelyId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
                 Asztal t = new Asztal((int)rdr["ASZTAL_ID"], rdr["ASZTAL_SZAM"].ToString(), (int)rdr["ASZTAL_TIPUS_ID"], (int)rdr["ASZTAL_POS_X"], (int)rdr["ASZTAL_POS_Y"], false, (int)rdr["ASZTAL_ROTATE"]);
+                t.fRENDELES_ID = (int)rdr["RENDELES_ID"];
                 lASZTAL.Add(t);
             }
             rdr.Close();

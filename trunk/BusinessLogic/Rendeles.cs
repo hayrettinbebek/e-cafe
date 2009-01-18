@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 using XPTable;
 using XPTable.Models;
@@ -14,6 +16,8 @@ namespace BusinessLogic
     {
         private int _AsztalId;
         public int _ScrollPos;
+        TBLObj pBLObj;
+        private SqlConnection sc;
 
         public int fRENDELES_ID;
         public int fASZTAL_ID;
@@ -88,12 +92,54 @@ namespace BusinessLogic
         public List<RendelesSor> lRendelesSor = new List<RendelesSor>();
 
 
-        public Rendeles(int pAsztalID)
+        public Rendeles(TBLObj bl, int pAsztalID, int pRendeles_id)
         {
+            pBLObj = bl;
+            
             _AsztalId = pAsztalID;
             setColumnModel();
             _ScrollPos = 0;
 
+            sc = pBLObj.sqlConnection;
+           
+            if (pRendeles_id != -1)
+            {
+                // meglevő rendelés be kell tölteni az ID-ra a rendelést.
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = sc;
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "SELECT ASZTAL_ID, isnull(PARTNER_ID,-1) PARTNER_ID, DATUM, FIZETVE FROM RENDELES_FEJ WHERE RENDELES_ID =" + pRendeles_id.ToString();
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    fASZTAL_ID = (int)rdr["ASZTAL_ID"];
+                    fPARTNER_ID = (int)rdr["PARTNER_ID"];
+                    fDATUM = (DateTime)rdr["DATUM"];
+                    fFIZETVE = (1 == (int)rdr["FIZETVE"]);
+                }
+                rdr.Close();
+
+
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE RENDELES_ID =" + pRendeles_id.ToString();
+
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(bl.strConnectionString)));
+
+                }
+                rdr.Close();
+                
+
+            }
+            
 
         }
 
@@ -106,6 +152,15 @@ namespace BusinessLogic
         }
 
         #endregion
+
+
+        public void SaveRendeles()
+        {
+
+        }
+
+
+
     }
 
 
@@ -125,6 +180,33 @@ namespace BusinessLogic
             _db = pDb;
             _Ertek = pErtek;
             _SOR_ID = -1;
+        }
+
+        public RendelesSor(int pRendelesSorID, SqlConnection c)
+        {
+            SqlCommand cmd2 = new SqlCommand();
+            c.Open();
+
+            cmd2.Connection = c;
+
+            cmd2.CommandType = CommandType.Text;
+
+            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK FROM RENDELES_SOR WHERE SOR_ID =" + pRendelesSorID.ToString();
+            
+            SqlDataReader rdr2 = cmd2.ExecuteReader();
+
+            while (rdr2.Read())
+            {
+                _SOR_ID = (int)rdr2["SOR_ID"];
+                _datum = (DateTime)rdr2["DATUM"];
+                _Ertek = Convert.ToDouble(rdr2["ERTEK"].ToString());
+                _db = (int)rdr2["DB"];
+
+                _Cikk = new Cikk((int)rdr2["CIKK_ID"], new SqlConnection(DEFS.ConSTR));
+
+            }
+            rdr2.Close();
+
         }
     }
 

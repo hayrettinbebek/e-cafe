@@ -38,6 +38,30 @@ namespace BusinessLogic
             fCIKK_ID = -1;
         }
 
+        public Cikk(int pCikkId, SqlConnection c)
+        {
+            if (c.State == ConnectionState.Closed) { c.Open(); }
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID  FROM CIKK WHERE CIKK_ID =" + pCikkId.ToString();
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                fCIKK_ID = (int)rdr["CIKK_ID"];
+                fMEGNEVEZES = (string)rdr["MEGNEVEZES"];
+                fCIKK_TIPUS = (int)rdr["CIKK_TIPUS"];
+                fCIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
+                fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
+                fKESZLET = 15;
+            }
+
+        }
+
         public void Save(TBLObj iBLObj)
         {
             // a mentés valósítja meg.
