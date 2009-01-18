@@ -41,6 +41,8 @@
         int rg;
         int hdl;
 
+        public Asztal aObj;
+
         private int _Asztal_id;
         private int _Asztal_type;
         private bool _Selected;

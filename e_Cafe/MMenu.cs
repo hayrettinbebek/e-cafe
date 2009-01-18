@@ -16,7 +16,7 @@ namespace e_Cafe
 {
     public partial class MMenu : Form
     {
-        string ConSTR = @"server=ERNIE-HOME\SQLEXPRESS;database=ECAFE;uid=sa;password=x";
+        
         clFIELDINFO_LIST FieldInfo;
         public static TBLObj blObj;
         Asztalok a;
@@ -36,7 +36,7 @@ namespace e_Cafe
         public MMenu()
         {
             InitializeComponent();
-            FieldInfo = new clFIELDINFO_LIST(ConSTR);
+            FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
             _Rendel = false;
 
             
@@ -55,7 +55,7 @@ namespace e_Cafe
 
         private void MMenu_Load(object sender, EventArgs e)
         {
-            blObj = new TBLObj(-1, ConSTR, FieldInfo);
+            blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
             initHelyek();
             Invalidate();
 

@@ -37,7 +37,7 @@ namespace e_Cafe
             _bl = iConn;
             label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
             _InactivityCounter = 0;
-            _AktRendeles = new Rendeles(_SelAsztal.fASZTAL_ID);
+            _AktRendeles = new Rendeles(_bl, _SelAsztal.fASZTAL_ID, _SelAsztal.fRENDELES_ID);
 
             InitMenuButtons();
             initRendelTabla();
@@ -110,6 +110,7 @@ namespace e_Cafe
                 bt.Text = cl.lCIKKCSOPORT[i].fCIKKCSOPORT_NEV;
                 bt.TextAlign = ContentAlignment.BottomLeft;
                 bt.Dock = DockStyle.Fill;
+
                 bt.BackColor = Color.Transparent;
                 bt.Click += CikkcsopMenuClick;
                 bt.ImageList = btmImgList;
