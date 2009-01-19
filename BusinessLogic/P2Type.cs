@@ -11,6 +11,17 @@ namespace BusinessLogic
     {
         
     }
+    public class eCell : XPTable.Models.Cell
+    {
+        public RendelesSor rSor;
+
+        public eCell(RendelesSor r)
+        {
+            rSor = r;
+        }
+
+
+    }
 
     /*********************************************
     * 

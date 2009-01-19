@@ -283,6 +283,22 @@ namespace e_Cafe
         private void btnSave_Click(object sender, EventArgs e)
         {
             _AktRendeles.SaveRendeles();
+            _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
+            
+            initRendelTabla();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            foreach (var s in tblRendeles.SelectedItems)
+            {
+                ((eCell)s.Cells[0]).rSor.DeleteSor();
+            }
+            _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
+
+            initRendelTabla();
+            
+            
         }
 
 
