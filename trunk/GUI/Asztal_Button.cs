@@ -124,24 +124,18 @@
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            // Override this function, since we do not want the control
-            // to paint the button. We want to do all the painting ourselves
-
-            // Get the Graphics Object ( .aka. the CDC or the Device Context Object ) 
+           
             Graphics g = e.Graphics;
 
-            // Get the Bounding Rectnalge for the button
             Rectangle rect = e.ClipRectangle;
 
-            if (_Selected ) { ImageIndex = (int)Asztal_colors.Selected; }
+            if (aObj.fRENDELES_ID != -1 ) { ImageIndex = (int)Asztal_colors.Selected; }
             else if (_Free == 1)
             {
                 ImageIndex = (int)Asztal_colors.Free;
             }
 
 
-            // Paint the rectangle with the color you want
-            //g.FillRectangle(new SolidBrush(Color.FromArgb(127, 255, 255, 255)), rect);
             if (_MouseOver) { g.FillRectangle(new SolidBrush(DEFS.Selected_Color), rect); }
             else
             {
@@ -150,13 +144,10 @@
             
            // rect.Inflate(5, 5);
 
-            // Define a StringFormat Object to display the string in your custom format
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Center;
             sf.LineAlignment = StringAlignment.Center;
 
-            // Get the current Image that we have set depending on the location of 
-            // mouse on the contol.  Refer to the OnMouseDown,OnMouseEnter,OnMouseLeave events
             if (this.ImageList != null)
             {
                 if (ImageIndex >= 0)
@@ -164,7 +155,6 @@
                     Image ig = RotateImage(this.ImageList.Images[ImageIndex],0);
 
 
-                    // Initialize the rectangle where you want the Image
                     Rectangle rimg = rect;
                     //rimg.X += rect.Right / 2 - 16;
                     //rimg.Y += rect.Bottom - 90;
@@ -179,7 +169,6 @@
                 }
             }
 
-            // Draw the String in the rectngle region you want
             //rect.Y = rect.Bottom - 75;
             g.DrawString(Text, f1, new SolidBrush(Color.Black), rect, sf);
             

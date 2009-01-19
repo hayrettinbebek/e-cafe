@@ -147,7 +147,7 @@ namespace e_Cafe
 
                 MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id), blObj);
                 mr.ShowDialog();
-                a.RefreshAsztalok(false);
+                a.RefreshAsztalok(true);
 
                 // Választó lista megjelenítése
                 /*

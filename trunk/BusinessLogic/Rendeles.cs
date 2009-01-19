@@ -51,8 +51,8 @@ namespace BusinessLogic
 
             NumberColumn ertekColumn = new NumberColumn("érték", 50);
             ertekColumn.Editable = false;
-
-
+            
+            
             DateTimeColumn datetimeColumn = new DateTimeColumn("idő", 70);
             datetimeColumn.DateTimeFormat = DateTimePickerFormat.Time;
             datetimeColumn.Editable = false;
@@ -69,10 +69,11 @@ namespace BusinessLogic
         public TableModel getTableModel()
         {
             TableModel tmpMod = new TableModel( new Row[] {});
+            
             for (int i = _ScrollPos; i < lRendelesSor.Count; i++)
             {
 
-                tmpMod.Rows.Add(new Row(new Cell[] {new Cell(),
+                tmpMod.Rows.Add(new Row(new Cell[] {new eCell(lRendelesSor[i]),
 													new Cell(lRendelesSor[i]._db),
 													new Cell(lRendelesSor[i]._Cikk.fMEGNEVEZES),
 													new Cell(lRendelesSor[i]._Ertek),
@@ -131,7 +132,7 @@ namespace BusinessLogic
 
                 cmd.CommandType = CommandType.Text;
 
-                cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE RENDELES_ID =" + pRendeles_id.ToString();
+                cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE DELETED = 0 AND RENDELES_ID =" + pRendeles_id.ToString();
 
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read())
@@ -157,7 +158,7 @@ namespace BusinessLogic
 
         #endregion
 
-        #region Mentés
+        #region Mentés / módosítás / törlés / beolvasás
         public void SaveRendeles()
         {
             sc = pBLObj.sqlConnection;
@@ -185,7 +186,7 @@ namespace BusinessLogic
                     cmd.CommandText = "UPDATE RENDELES_FEJ SET ASZTAL_ID = @ASZTAL_ID, " +
                                                    " DATUM = @DATUM, " +
                                                    " PARTNER_ID = @PARTNER_ID, "+
-                                                   " FIZETVE = @FIZETVE, "+
+                                                   " FIZETVE = @FIZETVE "+
                                        "WHERE RENDELES_ID = @RENDELES_ID";
                     cmd.Parameters.Add(new SqlParameter("RENDELES_ID", SqlDbType.Int));
                     cmd.Parameters["RENDELES_ID"].Value = fRENDELES_ID;
@@ -234,7 +235,29 @@ namespace BusinessLogic
             }
         }
 
+        public void InitRendeles(int pRendeles_id)
+        {
+            lRendelesSor.Clear();
+            SqlCommand cmd = new SqlCommand();
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+            cmd.Connection = c;
 
+
+            cmd.CommandType = CommandType.Text;
+
+            
+            cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE DELETED = 0 AND RENDELES_ID =" + pRendeles_id.ToString();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            
+            while (rdr.Read())
+            {
+                lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR)));
+
+            }
+            rdr.Close();
+        }
+        
         #endregion
     }
 
@@ -266,7 +289,7 @@ namespace BusinessLogic
 
             cmd2.CommandType = CommandType.Text;
 
-            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK FROM RENDELES_SOR WHERE SOR_ID =" + pRendelesSorID.ToString();
+            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK FROM RENDELES_SOR WHERE DELETED = 0 AND SOR_ID =" + pRendelesSorID.ToString();
             
             SqlDataReader rdr2 = cmd2.ExecuteReader();
 
@@ -351,6 +374,33 @@ namespace BusinessLogic
 
 
         }
+
+        public void DeleteSor()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+
+            cmd.CommandText = "UPDATE RENDELES_SOR SET DELETED = 1 WHERE SOR_ID =" + _SOR_ID.ToString();
+
+
+
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                string s = "Hiba a rendelés sorok törlése közben!" + _SOR_ID.ToString();
+            }
+
+        }
+
     }
 
 }

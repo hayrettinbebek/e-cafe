@@ -55,6 +55,7 @@
             this.textColumn1 = new XPTable.Models.TextColumn();
             this.numberColumn2 = new XPTable.Models.NumberColumn();
             this.dateTimeColumn1 = new XPTable.Models.DateTimeColumn();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
@@ -113,6 +114,7 @@
             // pnlRendeles
             // 
             this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlRendeles.Controls.Add(this.btnDelete);
             this.pnlRendeles.Controls.Add(this.btnUP);
             this.pnlRendeles.Controls.Add(this.btnDOWN);
             this.pnlRendeles.Controls.Add(this.btnSave);
@@ -149,11 +151,11 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(134, 60);
+            this.btnSave.Location = new System.Drawing.Point(20, 60);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 40);
             this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "button1";
+            this.btnSave.Text = "Ment";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -268,6 +270,16 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(160, 67);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(93, 32);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Töröl";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,5 +333,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDOWN;
         private System.Windows.Forms.Button btnUP;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
