@@ -55,11 +55,16 @@ namespace e_Cafe
 
         private void MMenu_Load(object sender, EventArgs e)
         {
+
             blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
+            DEFS.LoadNyitottNap();
+
             initHelyek();
             Invalidate();
 
+            MessageBox.Show("Nyitott nap:"+DEFS.NyitNap_EV.ToString() + DEFS.NyitNap_HO.ToString() + DEFS.NyitNap_NAP.ToString());
         }
+
 
         private void initHelyek()
         {

@@ -193,6 +193,13 @@ namespace BusinessLogic
         public int fHELY_VAN_KEP;
         public string fHELY_NEV;
 
+        public string HELY_NEV
+        {
+            get { return (fHELY_NEV); }
+
+
+        }
+
         public Hely(int pHELY_ID, string pHELY_NEV, int pHELY_VAN_KEP)
         {
 
