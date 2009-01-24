@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
+
 
 namespace e_Cafe
 {
@@ -36,6 +37,37 @@ namespace e_Cafe
 
             }
             
+        }
+
+        private void AsztalSetup_Load(object sender, EventArgs e)
+        {
+            Helyek h = new Helyek(asBlObj);
+            ArrayList arr = new ArrayList();
+            
+            cmbHelyek.ValueMember = "HELY_ID" ;
+            cmbHelyek.DisplayMember = "HELY_NEV";
+
+            foreach (Hely i in h.lHelyek)
+            {
+                arr.Add(i);
+                cmbHelyek.Items.Add((Hely)i);
+               
+            }
+
+        }
+
+        private void cmbHelyek_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pnlAsztalHelyek.Controls.Clear();
+            
+
+            a = new Asztalok(pnlAsztalHelyek, asBlObj, ((Hely)cmbHelyek.Items[cmbHelyek.SelectedIndex]).fHELY_ID, true);
+            a.RefreshAsztalok(true);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

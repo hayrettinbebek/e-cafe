@@ -14,8 +14,26 @@ namespace BusinessLogic
         public int fCIKK_TIPUS;
         public int fCIKKCSOPORT_ID;
         public int fOTHER_FILTER_ID;
-        public int fKESZLET;
         
+        public int fDEFAULT_RAKTAR;
+        public List<CikkKeszlet> lKESZLET = new List<CikkKeszlet>();
+
+        public double fKESZLET
+        {
+            get
+            {
+                 double iTmpRet = 0;
+
+            var ret_cikk =
+                from c in lKESZLET
+                where c.fRAKTAR_ID == fDEFAULT_RAKTAR
+                select c;
+            ret_cikk.Each(c => iTmpRet = c.fKESZLET );
+
+            return (iTmpRet);
+            }
+        }
+
 
         public Cikk(int pCIKK_ID,
                     string pMEGNEVEZES,
@@ -38,6 +56,40 @@ namespace BusinessLogic
             fCIKK_ID = -1;
         }
 
+        public void getKeszlet()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+            SqlCommand gk = new SqlCommand("select * from GetKeszlet(@EV,@HO,@NAP,@cikk_id,@raktar_id)", c);
+            gk.CommandType = CommandType.Text;
+            gk.Parameters.Add("@EV", SqlDbType.Int);
+            gk.Parameters["@EV"].Direction = ParameterDirection.Input;
+            gk.Parameters["@EV"].Value = DEFS.NyitNap_EV;
+
+            gk.Parameters.Add("@HO", SqlDbType.Int);
+            gk.Parameters["@HO"].Direction = ParameterDirection.Input;
+            gk.Parameters["@HO"].Value = DEFS.NyitNap_HO;
+
+            gk.Parameters.Add("@NAP", SqlDbType.Int);
+            gk.Parameters["@NAP"].Direction = ParameterDirection.Input;
+            gk.Parameters["@NAP"].Value = DEFS.NyitNap_NAP;
+
+            gk.Parameters.Add("@cikk_id", SqlDbType.Int);
+            gk.Parameters["@cikk_id"].Direction = ParameterDirection.Input;
+            gk.Parameters["@cikk_id"].Value = fCIKK_ID;
+
+            gk.Parameters.Add("@raktar_id", SqlDbType.Int);
+            gk.Parameters["@raktar_id"].Direction = ParameterDirection.Input;
+            gk.Parameters["@raktar_id"].Value = -1;
+
+            SqlDataReader rdr = gk.ExecuteReader();
+            while (rdr.Read())
+            {
+                lKESZLET.Add(new CikkKeszlet((int)rdr["RAKTAR_ID"], (double)rdr["KESZLET"], (double)rdr["KESZLET_ERTEK"]));
+            }
+
+        }
+
         public Cikk(int pCikkId, SqlConnection c)
         {
             if (c.State == ConnectionState.Closed) { c.Open(); }
@@ -47,7 +99,8 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID  FROM CIKK WHERE CIKK_ID =" + pCikkId.ToString();
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
+                            " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK WHERE CIKK_ID =" + pCikkId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
@@ -57,8 +110,10 @@ namespace BusinessLogic
                 fCIKK_TIPUS = (int)rdr["CIKK_TIPUS"];
                 fCIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
                 fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
-                fKESZLET = 15;
+                fDEFAULT_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                
             }
+            getKeszlet();
 
         }
 
@@ -70,6 +125,22 @@ namespace BusinessLogic
         
     }
 
+
+    public class CikkKeszlet
+    {
+        public int fRAKTAR_ID;
+        public double fKESZLET;
+        public double fKESZLET_ERTEK;
+
+
+        public CikkKeszlet(int pRakt_id, double pKeszlet, double pKeszlet_ert)
+        {
+            fRAKTAR_ID = pRakt_id;
+            fKESZLET = pKeszlet;
+            fKESZLET_ERTEK = pKeszlet_ert;
+        }
+
+    }
     public class Cikk_list
     {
         private SqlConnection sc;
@@ -88,7 +159,7 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID  FROM CIKK";
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR  FROM CIKK";
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
@@ -98,7 +169,8 @@ namespace BusinessLogic
                                   (int)rdr["CIKK_TIPUS"], 
                                   (int)rdr["CIKKCSOPORT_ID"]);
                 t.fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
-                t.fKESZLET = 15;
+                t.fDEFAULT_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                t.getKeszlet();
                 lCIKK.Add(t);
             }
             rdr.Close();
