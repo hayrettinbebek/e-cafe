@@ -60,15 +60,6 @@ namespace e_Cafe.Properties {
             }
         }
         
-        /// <summary>
-        ///   Looks up a localized string similar to AAA.
-        /// </summary>
-        public static string ConnSTR {
-            get {
-                return ResourceManager.GetString("ConnSTR", resourceCulture);
-            }
-        }
-        
         public static System.Drawing.Bitmap off_T {
             get {
                 object obj = ResourceManager.GetObject("off_T", resourceCulture);

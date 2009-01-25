@@ -31,5 +31,17 @@ namespace e_Cafe.Properties {
                 return ((string)(this["cnSTR"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=ERNIE-HOME\\SQLEXPRESS;database=ECAFE;uid=sa;password=x")]
+        public string notrixCN {
+            get {
+                return ((string)(this["notrixCN"]));
+            }
+            set {
+                this["notrixCN"] = value;
+            }
+        }
     }
 }
