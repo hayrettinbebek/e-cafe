@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="cnSTR" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">@"server=ERNIE-HOME\SQLEXPRESS;database=ECAFE;uid=sa;password=x"</Value>
+      <Value Profile="(Default)">server=ERNIE-HOME\SQLEXPRESS;database=ECAFE;uid=sa;password=x</Value>
     </Setting>
   </Settings>
 </SettingsFile>

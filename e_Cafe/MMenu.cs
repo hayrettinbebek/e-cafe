@@ -35,9 +35,11 @@ namespace e_Cafe
 
         public MMenu()
         {
+            DEFS.ConSTR = e_Cafe.Properties.Settings.Default.cnSTR;
             InitializeComponent();
             FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
             _Rendel = false;
+            
 
             
         }

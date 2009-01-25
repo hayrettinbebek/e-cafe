@@ -23,6 +23,7 @@ namespace e_Cafe
         TBLObj _bl;
         int _InactivityCounter;
         ResourceManager myResources;
+        Object LastCikkcsopMenu;
 
         Rendeles _AktRendeles;
 
@@ -127,7 +128,8 @@ namespace e_Cafe
         private void CikkcsopMenuClick(object sender, EventArgs e)
         {
             resetCounter();
-            bool Call = true;
+            bool Call;
+            LastCikkcsopMenu = sender;
 
             OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.ID, new SqlConnection(DEFS.ConSTR));
             if (otf.lOTF.Count > 0)
@@ -223,6 +225,7 @@ namespace e_Cafe
                     {
 
                         _AktRendeles.addTetel(((CikkButton)sender).fCIKK,frm.retRaktID);
+                        _AktRendeles.SaveRendeles();
                         initRendelTabla();
                     }
 
@@ -235,9 +238,11 @@ namespace e_Cafe
             {
 
                 _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
+                _AktRendeles.SaveRendeles();
                 initRendelTabla();
 
             }
+            
         }
 
         #endregion
@@ -253,6 +258,8 @@ namespace e_Cafe
         private void initRendelTabla()
         {
             resetCounter();
+            if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu,null); }
+            _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
             tblRendeles.ColumnModel = _AktRendeles.fColumnModel;
 
             tblRendeles.HeaderRenderer = new GradientHeaderRenderer();
@@ -308,10 +315,7 @@ namespace e_Cafe
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _AktRendeles.SaveRendeles();
-            _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
-            
-            initRendelTabla();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -320,9 +324,11 @@ namespace e_Cafe
             {
                 ((eCell)s.Cells[0]).rSor.DeleteSor();
             }
+            _AktRendeles.SaveRendeles();
             _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
 
             initRendelTabla();
+
             
             
         }

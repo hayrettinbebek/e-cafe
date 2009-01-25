@@ -13,7 +13,7 @@ namespace e_Cafe.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "9.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
@@ -25,7 +25,7 @@ namespace e_Cafe.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"server=ERNIE-HOME\\SQLEXPRESS;database=ECAFE;uid=sa;password=x\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=ERNIE-HOME\\SQLEXPRESS;database=ECAFE;uid=sa;password=x")]
         public string cnSTR {
             get {
                 return ((string)(this["cnSTR"]));

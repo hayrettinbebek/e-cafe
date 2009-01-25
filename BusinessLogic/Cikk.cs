@@ -151,7 +151,7 @@ namespace BusinessLogic
             {
                 lKESZLET.Add(new CikkKeszlet((int)rdr["RAKTAR_ID"], (string)rdr["RAKTAR_NEV"], (double)rdr["KESZLET"], (double)rdr["KESZLET_ERTEK"]));
             }
-
+            c.Close();
         }
 
         public Cikk(int pCikkId, SqlConnection c)
@@ -182,7 +182,8 @@ namespace BusinessLogic
             }
             getKeszlet();
             CIKK_KISZERELES = new CikkKiszerelesList(fCIKK_ID, new SqlConnection(DEFS.ConSTR));
-
+            c.Close();
+            
         }
 
         public void Save()
@@ -267,7 +268,7 @@ namespace BusinessLogic
             {
                 k.Save();
             }
-
+            c.Close();
         }
 
 
@@ -329,6 +330,7 @@ namespace BusinessLogic
                 lCIKK.Add(t);
             }
             rdr.Close();
+            sc.Close();
         }
 
         public List<Cikk> CikkListByCsoport(int iCsoportId)
@@ -472,7 +474,7 @@ namespace BusinessLogic
             {
                 string s = "Hiba a rendelés sorok mentése közben!" + fLIT_KISZ_ID.ToString();
             }
-
+            c.Close();
             
         }
     }
@@ -507,6 +509,7 @@ namespace BusinessLogic
                 lCikkKiszereles.Add(t);
             }
             rdr.Close();
+            sc.Close();
         }
 
     }
@@ -580,6 +583,7 @@ namespace BusinessLogic
                 lOTF.Add(t);
             }
             rdr.Close();
+            sc.Close();
         }
 
     }
@@ -655,6 +659,7 @@ namespace BusinessLogic
                 lCIKKCSOPORT.Add(t);
             }
             rdr.Close();
+            sc.Close();
         }
 
     }

@@ -261,6 +261,7 @@ namespace BusinessLogic
 
             }
             rdr.Close();
+            c.Close();
         }
         
         #endregion
@@ -322,6 +323,7 @@ namespace BusinessLogic
 
             }
             rdr2.Close();
+            c.Close();
 
         }
 
@@ -394,6 +396,7 @@ namespace BusinessLogic
             {
                 string s = "Hiba a rendelés sorok mentése közben!" + _SOR_ID.ToString() ;
             }
+            c.Close();
 
 
         }
@@ -421,6 +424,7 @@ namespace BusinessLogic
             {
                 string s = "Hiba a rendelés sorok törlése közben!" + _SOR_ID.ToString();
             }
+            c.Close();
 
         }
 
