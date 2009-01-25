@@ -36,7 +36,7 @@ namespace e_Cafe
 
             var cikkcsoportok =
                 from c in cCS.lCIKKCSOPORT
-                where c.fCIKKCSOPORT_ID > 0
+                where c.ID > 0
                 select c;
             cikkcsoportok.Each(c => lstCikkcsoport.Items.Add(c.NEV));
         }

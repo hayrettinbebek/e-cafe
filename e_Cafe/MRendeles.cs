@@ -129,7 +129,7 @@ namespace e_Cafe
             resetCounter();
             bool Call = true;
 
-            OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, new SqlConnection(DEFS.ConSTR));
+            OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.ID, new SqlConnection(DEFS.ConSTR));
             if (otf.lOTF.Count > 0)
             {
                 pnlOtherFilter.Visible = true;
@@ -167,7 +167,7 @@ namespace e_Cafe
                 pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
             }
             ((CikkcsopButton)sender).Refresh();
-            loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1);
+            loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1);
             //if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
         }
 
@@ -211,9 +211,33 @@ namespace e_Cafe
 
         private void onCikkClick(object sender, EventArgs e)
         {
+            if ((((CikkButton)sender).fCIKK.fKESZLET == 0) && (((CikkButton)sender).fCIKK.fKESZLET < ((CikkButton)sender).fCIKK.KISZ_MENNY))
+            {
+                if (((CikkButton)sender).fCIKK.fKESZLET_ALL >= ((CikkButton)sender).fCIKK.KISZ_MENNY)
+                {
+                    // nincs az alapértelmezett raktárban
+                    ChooseKeszletek frm = new ChooseKeszletek(((CikkButton)sender).fCIKK.lKESZLET);
+                    frm.ShowDialog(this);
 
-            _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
-            initRendelTabla();
+                    if (frm.DialogResult == DialogResult.OK)
+                    {
+
+                        _AktRendeles.addTetel(((CikkButton)sender).fCIKK,frm.retRaktID);
+                        initRendelTabla();
+                    }
+
+
+
+                }
+                else MessageBox.Show("Nincs elegendő készlet!!");
+            }
+            else
+            {
+
+                _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
+                initRendelTabla();
+
+            }
         }
 
         #endregion

@@ -156,11 +156,12 @@ namespace GUI
             {
                 _Cikk = value;
                 lMegnevezes.Text = value.MEGNEVEZES;
+                lKiszereles.Text = value.KISZ_MEGN;
                 lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
                 lKeszletOther.Text = value.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
                 lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
                 lAr.Text = "250 .-";
-                lKiszereles.Text = "korsó (5dl)";
+
                 
             }
         }

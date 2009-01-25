@@ -153,7 +153,12 @@ namespace BusinessLogic
         public void addTetel(Cikk pCikk)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk,1,250,DateTime.Now));
+            lRendelesSor.Add(new RendelesSor(pCikk,pCikk.KISZ_MENNY,250,DateTime.Now));
+        }
+        public void addTetel(Cikk pCikk, int pRakt)
+        {
+
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, 250, DateTime.Now,pRakt));
         }
 
         #endregion
@@ -266,11 +271,12 @@ namespace BusinessLogic
     {
         private int _SOR_ID;
         public Cikk _Cikk;
-        public int _db;
+        public double _db;
         public double _Ertek;
         public DateTime _datum;
+        public int _RaktarId;
 
-        public RendelesSor(Cikk pCikk, int pDb, double pErtek, DateTime pDatum)
+        public RendelesSor(Cikk pCikk, double pDb, double pErtek, DateTime pDatum)
         {
 
             _Cikk = pCikk;
@@ -278,6 +284,18 @@ namespace BusinessLogic
             _db = pDb;
             _Ertek = pErtek;
             _SOR_ID = -1;
+            _RaktarId = pCikk.ALAP_RAKTAR;
+        }
+
+        public RendelesSor(Cikk pCikk, double pDb, double pErtek, DateTime pDatum, int pRaktar)
+        {
+
+            _Cikk = pCikk;
+            _datum = pDatum;
+            _db = pDb;
+            _Ertek = pErtek;
+            _SOR_ID = -1;
+            _RaktarId = pRaktar;
         }
 
         public RendelesSor(int pRendelesSorID, SqlConnection c)
@@ -289,7 +307,7 @@ namespace BusinessLogic
 
             cmd2.CommandType = CommandType.Text;
 
-            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK FROM RENDELES_SOR WHERE DELETED = 0 AND SOR_ID =" + pRendelesSorID.ToString();
+            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(RAKTAR_ID,-1) as RAKTAR_ID FROM RENDELES_SOR WHERE DELETED = 0 AND SOR_ID =" + pRendelesSorID.ToString();
             
             SqlDataReader rdr2 = cmd2.ExecuteReader();
 
@@ -298,8 +316,8 @@ namespace BusinessLogic
                 _SOR_ID = (int)rdr2["SOR_ID"];
                 _datum = (DateTime)rdr2["DATUM"];
                 _Ertek = Convert.ToDouble(rdr2["ERTEK"].ToString());
-                _db = (int)rdr2["DB"];
-
+                _db = (double)rdr2["DB"];
+                _RaktarId = (int)rdr2["RAKTAR_ID"];
                 _Cikk = new Cikk((int)rdr2["CIKK_ID"], new SqlConnection(DEFS.ConSTR));
 
             }
@@ -328,12 +346,14 @@ namespace BusinessLogic
                                             ",CIKK_ID " +
                                             ",DB " +
                                             ",DATUM "+
+                                            ",RAKTAR_ID " +
                                             ",ERTEK) " +
                                         "VALUES " +
                                             "(@RENDELES_ID " +
                                             ",@CIKK_ID " +
                                             ",@DB " +
                                             ",@DATUM " +
+                                            ",@RAKTAR_ID " +
                                             ",@ERTEK)";
 
                         break;
@@ -344,6 +364,7 @@ namespace BusinessLogic
                                                        " CIKK_ID = @CIKK_ID, " +
                                                        " DB = @DB, " +
                                                        " DATUM = @DATUM, " +
+                                                       " RAKTAR_ID = @RAKTAR_ID, " +
                                                        " ERTEK = @ERTEK, " +
                                            "WHERE SOR_ID = @SOR_ID";
                         cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
@@ -354,13 +375,15 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("RENDELES_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("DATUM", SqlDbType.DateTime));
-            cmd.Parameters.Add(new SqlParameter("DB", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("DB", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("ERTEK", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
 
             cmd.Parameters["RENDELES_ID"].Value = pRendelesId;
             cmd.Parameters["CIKK_ID"].Value = _Cikk.fCIKK_ID;
             cmd.Parameters["DB"].Value = _db;
             cmd.Parameters["DATUM"].Value = _datum;
+            cmd.Parameters["RAKTAR_ID"].Value = _RaktarId;
             cmd.Parameters["ERTEK"].Value = _Ertek;
 
             try
