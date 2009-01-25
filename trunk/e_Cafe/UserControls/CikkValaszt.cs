@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Data.SqlClient;
 
 using System.Linq;
 using System.Text;
@@ -31,13 +32,13 @@ namespace e_Cafe
 
         public void InitCikkValaszt()
         {
-            cCS = new Cikkcsoport_list(bl_object);
+            cCS = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
 
             var cikkcsoportok =
                 from c in cCS.lCIKKCSOPORT
                 where c.fCIKKCSOPORT_ID > 0
                 select c;
-            cikkcsoportok.Each(c => lstCikkcsoport.Items.Add(c.fCIKKCSOPORT_NEV));
+            cikkcsoportok.Each(c => lstCikkcsoport.Items.Add(c.NEV));
         }
 
 

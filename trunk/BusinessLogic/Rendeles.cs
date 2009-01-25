@@ -75,7 +75,7 @@ namespace BusinessLogic
 
                 tmpMod.Rows.Add(new Row(new Cell[] {new eCell(lRendelesSor[i]),
 													new Cell(lRendelesSor[i]._db),
-													new Cell(lRendelesSor[i]._Cikk.fMEGNEVEZES),
+													new Cell(lRendelesSor[i]._Cikk.MEGNEVEZES),
 													new Cell(lRendelesSor[i]._Ertek),
 													new Cell(lRendelesSor[i]._datum)}));
             }
@@ -237,7 +237,7 @@ namespace BusinessLogic
 
         public void InitRendeles(int pRendeles_id)
         {
-            lRendelesSor.Clear();
+            lRendelesSor.Clear(); 
             SqlCommand cmd = new SqlCommand();
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();

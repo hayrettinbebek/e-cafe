@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using BusinessLogic;
 using GUI;
 using System.Resources;
+using System.Data.SqlClient;
 
 using XPTable;
 using XPTable.Models;
@@ -93,7 +94,7 @@ namespace e_Cafe
         #region Menü vezérélés
         private void InitMenuButtons()
         {
-            Cikkcsoport_list cl = new Cikkcsoport_list(_bl);
+            Cikkcsoport_list cl = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
 
             TableLayoutPanel tlpButtons = new TableLayoutPanel();
             pnlButtonPlace.Controls.Add(tlpButtons);
@@ -107,7 +108,7 @@ namespace e_Cafe
 
                 CikkcsopButton bt = new CikkcsopButton(cl.lCIKKCSOPORT[i]);
                 bt.Location = new Point(0, 0);
-                bt.Text = cl.lCIKKCSOPORT[i].fCIKKCSOPORT_NEV;
+                bt.Text = cl.lCIKKCSOPORT[i].NEV;
                 bt.TextAlign = ContentAlignment.BottomLeft;
                 bt.Dock = DockStyle.Fill;
 
@@ -128,7 +129,7 @@ namespace e_Cafe
             resetCounter();
             bool Call = true;
 
-            OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, _bl);
+            OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, new SqlConnection(DEFS.ConSTR));
             if (otf.lOTF.Count > 0)
             {
                 pnlOtherFilter.Visible = true;
@@ -148,7 +149,7 @@ namespace e_Cafe
 
                     OtherFButton bt = new OtherFButton(otf.lOTF[i]);
                     bt.Location = new Point(0, 0);
-                    bt.Text = otf.lOTF[i].fOTHER_NAME;
+                    bt.Text = otf.lOTF[i].ONEV;
                     bt.TextAlign = ContentAlignment.BottomLeft;
                     bt.Dock = DockStyle.Fill;
                     bt.Click += AlcsopMenuClick;
@@ -173,7 +174,7 @@ namespace e_Cafe
         private void AlcsopMenuClick(object sender, EventArgs e)
         {
             resetCounter();
-            loadCikkek(((OtherFButton)sender)._OTF.fCIKKCSOPORT_ID, ((OtherFButton)sender)._OTF.fOTF_ID);
+            loadCikkek(((OtherFButton)sender)._OTF.CikkCsopID, ((OtherFButton)sender)._OTF.OID);
         }
 
         #endregion
@@ -182,7 +183,7 @@ namespace e_Cafe
         private void loadCikkek(int pCikkcsoport, int pAlcsoportId)
         {
             flpCikkek.Controls.Clear();
-            Cikk_list lCikkList = new Cikk_list(_bl);
+            Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
             List<Cikk> lButtons = new List<Cikk>();
             if (pAlcsoportId == -1)
             {
@@ -210,6 +211,7 @@ namespace e_Cafe
 
         private void onCikkClick(object sender, EventArgs e)
         {
+
             _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
             initRendelTabla();
         }

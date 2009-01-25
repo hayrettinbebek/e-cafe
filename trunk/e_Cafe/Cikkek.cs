@@ -15,7 +15,6 @@ namespace e_Cafe
     {
 
         private SqlConnection sc;
-        private Cikk iCikk;
 
 
 
@@ -27,49 +26,46 @@ namespace e_Cafe
 
         private void Cikkek_Load(object sender, EventArgs e)
         {
+            Cikk_list l = new Cikk_list(new SqlConnection(DEFS.ConSTR));
+            cikkBindingSource.Clear();
             
-            SqlCommand cmd = new SqlCommand();
-            //cmd.Connection = sc;
-            //cmd.CommandType = CommandType.Text;
-            //cmd.CommandText = "SELECT *  FROM CIKK ";
-            //SqlDataReader rdr = cmd.ExecuteReader();
+            foreach (var c in l.lCIKK)
+            {
+                cikkBindingSource.Add(c); 
+            }
+
+            Cikkcsoport_list cl = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
+            cikkcsoportBindingSource.Clear();
+
+            foreach (var s in cl.lCIKKCSOPORT)
+            {
+                cikkcsoportBindingSource.Add(s);
+            }
+
             
-            DataSet cikklista = GetData("SELECT *  FROM CIKK ");
 
-            BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = cikklista.Tables["CIKKEK"];
-            bvCIKK.BindingSource = bindingSource;
-            dataGridView1.DataSource = bindingSource;
+        }
 
+
+        private void tsMent_Click(object sender, EventArgs e)
+        {
 
 
         }
 
-        DataSet GetData(String queryString)
+        private void cikkBindingSource_PositionChanged(object sender, EventArgs e)
         {
-
-            // Retrieve the connection string stored in the Web.config file.
-            
-            DataSet ds = new DataSet();
-
-            try
+            if (cmbCikkcsop.SelectedIndex != -1)
             {
+                OTF_list o = new OTF_list((int)cmbCikkcsop.SelectedValue, new SqlConnection(DEFS.ConSTR));
+                oTFBindingSource.Clear();
 
-                SqlDataAdapter adapter = new SqlDataAdapter(queryString, sc);
-                // ide kell betenni az esetleges update/insert scriptjeit.
-                // Fill the DataSet.
-                adapter.Fill(ds, "CIKKEK");
+                foreach (var s in o.lOTF)
+                {
+                    oTFBindingSource.Add(s);
+                }
 
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-               
-
-            }
-            
-            return ds;
-
         }
 
 
