@@ -45,7 +45,8 @@ namespace e_Cafe
             {
                 cikkcsoportBindingSource.Add(s);
             }
-
+            
+            ertTipBindingSource.Clear();
             ertTipBindingSource.Add(new ertTip("L", "Folyó"));
             ertTipBindingSource.Add(new ertTip("D", "Darab"));
 
@@ -134,6 +135,11 @@ namespace e_Cafe
             //((CikkKiszereles)cikkKiszerelesBindingSource.Current).LIT_KISZ_CIKK_ID = AktCikkId;
             
 
+        }
+
+        private void cikkBindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            e.NewObject = new Cikk();
         }
 
 

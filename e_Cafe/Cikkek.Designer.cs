@@ -57,14 +57,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbKiszereles = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.cikkKiszerelesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbKeszlet = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tbOsszetett = new System.Windows.Forms.TabPage();
             this.lITKISZIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lITKISZCIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lITKISZNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lITKISZMENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cikkKiszerelesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbKeszlet = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tbOsszetett = new System.Windows.Forms.TabPage();
             tbAlap = new System.Windows.Forms.TabPage();
             tbAlap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBindingSource)).BeginInit();
@@ -116,6 +116,7 @@
             // cikkBindingSource
             // 
             this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
+            this.cikkBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.cikkBindingSource_AddingNew);
             this.cikkBindingSource.PositionChanged += new System.EventHandler(this.cikkBindingSource_PositionChanged);
             // 
             // label1
@@ -198,7 +199,6 @@
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.cikkBindingSource, "ERTEKESITES_TIPUSA", true));
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ertTipBindingSource, "NEV", true));
             this.comboBox2.DataSource = this.ertTipBindingSource;
             this.comboBox2.DisplayMember = "NEV";
             this.comboBox2.FormattingEnabled = true;
@@ -342,6 +342,34 @@
             this.dataGridView2.Size = new System.Drawing.Size(1002, 350);
             this.dataGridView2.TabIndex = 0;
             // 
+            // lITKISZIDDataGridViewTextBoxColumn
+            // 
+            this.lITKISZIDDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_ID";
+            this.lITKISZIDDataGridViewTextBoxColumn.HeaderText = "LIT_KISZ_ID";
+            this.lITKISZIDDataGridViewTextBoxColumn.Name = "lITKISZIDDataGridViewTextBoxColumn";
+            this.lITKISZIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lITKISZCIKKIDDataGridViewTextBoxColumn
+            // 
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_CIKK_ID";
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn.HeaderText = "LIT_KISZ_CIKK_ID";
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn.Name = "lITKISZCIKKIDDataGridViewTextBoxColumn";
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lITKISZNEVDataGridViewTextBoxColumn
+            // 
+            this.lITKISZNEVDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_NEV";
+            this.lITKISZNEVDataGridViewTextBoxColumn.HeaderText = "Megnevezés";
+            this.lITKISZNEVDataGridViewTextBoxColumn.Name = "lITKISZNEVDataGridViewTextBoxColumn";
+            this.lITKISZNEVDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // lITKISZMENNYDataGridViewTextBoxColumn
+            // 
+            this.lITKISZMENNYDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_MENNY";
+            this.lITKISZMENNYDataGridViewTextBoxColumn.HeaderText = "Mennyisége (literben)";
+            this.lITKISZMENNYDataGridViewTextBoxColumn.Name = "lITKISZMENNYDataGridViewTextBoxColumn";
+            this.lITKISZMENNYDataGridViewTextBoxColumn.Width = 160;
+            // 
             // cikkKiszerelesBindingSource
             // 
             this.cikkKiszerelesBindingSource.AllowNew = true;
@@ -378,34 +406,6 @@
             this.tbOsszetett.Text = "Összetett cikk";
             this.tbOsszetett.UseVisualStyleBackColor = true;
             this.tbOsszetett.Click += new System.EventHandler(this.tbOsszetett_Click);
-            // 
-            // lITKISZIDDataGridViewTextBoxColumn
-            // 
-            this.lITKISZIDDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_ID";
-            this.lITKISZIDDataGridViewTextBoxColumn.HeaderText = "LIT_KISZ_ID";
-            this.lITKISZIDDataGridViewTextBoxColumn.Name = "lITKISZIDDataGridViewTextBoxColumn";
-            this.lITKISZIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // lITKISZCIKKIDDataGridViewTextBoxColumn
-            // 
-            this.lITKISZCIKKIDDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_CIKK_ID";
-            this.lITKISZCIKKIDDataGridViewTextBoxColumn.HeaderText = "LIT_KISZ_CIKK_ID";
-            this.lITKISZCIKKIDDataGridViewTextBoxColumn.Name = "lITKISZCIKKIDDataGridViewTextBoxColumn";
-            this.lITKISZCIKKIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // lITKISZNEVDataGridViewTextBoxColumn
-            // 
-            this.lITKISZNEVDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_NEV";
-            this.lITKISZNEVDataGridViewTextBoxColumn.HeaderText = "Megnevezés";
-            this.lITKISZNEVDataGridViewTextBoxColumn.Name = "lITKISZNEVDataGridViewTextBoxColumn";
-            this.lITKISZNEVDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // lITKISZMENNYDataGridViewTextBoxColumn
-            // 
-            this.lITKISZMENNYDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_MENNY";
-            this.lITKISZMENNYDataGridViewTextBoxColumn.HeaderText = "Mennyisége (literben)";
-            this.lITKISZMENNYDataGridViewTextBoxColumn.Name = "lITKISZMENNYDataGridViewTextBoxColumn";
-            this.lITKISZMENNYDataGridViewTextBoxColumn.Width = 160;
             // 
             // Cikkek
             // 

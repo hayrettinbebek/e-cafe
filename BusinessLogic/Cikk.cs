@@ -207,7 +207,7 @@ namespace BusinessLogic
                                             ",CIKK_TIPUS " +
                                             ",CIKKCSOPORT_ID " +
                                             ",ERTEKESITES_TIPUSA " +
-                                            ",MEGYS_ID,"+
+                                            ",MEGYS_ID"+
                                             ",OTHER_FILTER_ID " +
                                             ",DEFAULT_RAKTAR " +
                                             //",ERTEKESITES_TIPUSA " +
@@ -263,10 +263,12 @@ namespace BusinessLogic
             {
                 string s = "Hiba a rendelés sorok mentése közben!" + fCIKK_ID.ToString();
             }
-
-            foreach (var k in CIKK_KISZERELES.lCikkKiszereles)
+            if (CIKK_KISZERELES != null)
             {
-                k.Save();
+                foreach (var k in CIKK_KISZERELES.lCikkKiszereles)
+                {
+                    k.Save();
+                }
             }
             c.Close();
         }
