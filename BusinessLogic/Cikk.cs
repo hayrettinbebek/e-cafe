@@ -10,19 +10,19 @@ namespace BusinessLogic
     public class Cikk
     {
         public int fCIKK_ID;
-        public string fMEGNEVEZES;
+        private string fMEGNEVEZES;
         public int fCIKK_TIPUS;
-        public int fCIKKCSOPORT_ID;
-        public int fOTHER_FILTER_ID;
+        private int fCIKKCSOPORT_ID;
+        private int fOTHER_FILTER_ID;
         
-        public int fDEFAULT_RAKTAR;
+        private int fDEFAULT_RAKTAR;
         public List<CikkKeszlet> lKESZLET = new List<CikkKeszlet>();
 
         public double fKESZLET
         {
             get
             {
-                 double iTmpRet = 0;
+            double iTmpRet = 0;
 
             var ret_cikk =
                 from c in lKESZLET
@@ -33,6 +33,47 @@ namespace BusinessLogic
             return (iTmpRet);
             }
         }
+
+        public double fKESZLET_ALL
+        {
+            get
+            {
+                double iTmpRet = 0;
+
+                var ret_cikk =
+                    from c in lKESZLET
+                    //where c.fRAKTAR_ID == fDEFAULT_RAKTAR
+                    select c;
+                ret_cikk.Each(c => iTmpRet += c.fKESZLET);
+
+                return (iTmpRet);
+
+            }
+        }
+
+        public int ALCSOPORT
+        {
+            get { return (fOTHER_FILTER_ID); }
+            set { fOTHER_FILTER_ID = value; }
+        }
+
+        public string MEGNEVEZES
+        {
+            get { return(fMEGNEVEZES);}
+            set { fMEGNEVEZES = value; }
+        }
+
+        public int CIKKCSOPORT_ID
+        {
+            get { return (fCIKKCSOPORT_ID); }
+            set { fCIKKCSOPORT_ID = value; }
+        }
+        public int ALAP_RAKTAR
+        {
+            get { return (fDEFAULT_RAKTAR); }
+            set { fDEFAULT_RAKTAR = value; }
+        }
+
 
 
         public Cikk(int pCIKK_ID,
@@ -54,6 +95,7 @@ namespace BusinessLogic
         {
 
             fCIKK_ID = -1;
+            
         }
 
         public void getKeszlet()
@@ -143,16 +185,13 @@ namespace BusinessLogic
     }
     public class Cikk_list
     {
-        private SqlConnection sc;
 
         public List<Cikk> lCIKK = new List<Cikk>();
-        TBLObj pBLObj;
+        
 
-        public Cikk_list(TBLObj iBLObj)
+        public Cikk_list(SqlConnection sc)
         {
-            pBLObj = iBLObj;
-            sc = pBLObj.sqlConnection;
-
+            sc.Open();
             SqlCommand cmd = new SqlCommand();
 
             cmd.Connection = sc;
@@ -168,8 +207,8 @@ namespace BusinessLogic
                                   (string)rdr["MEGNEVEZES"], 
                                   (int)rdr["CIKK_TIPUS"], 
                                   (int)rdr["CIKKCSOPORT_ID"]);
-                t.fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
-                t.fDEFAULT_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                t.ALCSOPORT = (int)rdr["OTHER_FILTER_ID"];
+                t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
                 t.getKeszlet();
                 lCIKK.Add(t);
             }
@@ -182,7 +221,7 @@ namespace BusinessLogic
 
             var ret_cikk =
                 from c in lCIKK
-                where c.fCIKKCSOPORT_ID == iCsoportId
+                where c.CIKKCSOPORT_ID == iCsoportId
                 select c;
             ret_cikk.Each(c => iTmpRet.Add(c));
 
@@ -196,7 +235,7 @@ namespace BusinessLogic
 
             var ret_cikk =
                 from c in lCIKK
-                where (c.fCIKKCSOPORT_ID == iCsoportId) && (c.fOTHER_FILTER_ID == iAlcsoportId)
+                where (c.CIKKCSOPORT_ID == iCsoportId) && (c.ALCSOPORT == iAlcsoportId)
                 select c;
             ret_cikk.Each(c => iTmpRet.Add(c));
 
@@ -215,9 +254,27 @@ namespace BusinessLogic
     #region Other filter
     public class OTF
     {
-        public int fOTF_ID;
-        public int fCIKKCSOPORT_ID;
-        public string fOTHER_NAME;
+        private int fOTF_ID;
+        private int fCIKKCSOPORT_ID;
+        private string fOTHER_NAME;
+
+        public string ONEV
+        {
+            get { return (fOTHER_NAME); }
+            set { fOTHER_NAME = value; }
+        }
+
+        public int OID
+        {
+            get { return (fOTF_ID); }
+            set { fOTF_ID = value; }
+        }
+        public int CikkCsopID
+        {
+            get { return (fCIKKCSOPORT_ID); }
+            set { fCIKKCSOPORT_ID = value; }
+        }
+
 
         public OTF(int pOTF_ID,int pCIKKCSOPORT_ID, string pOTHER_NAME)
         {
@@ -235,15 +292,15 @@ namespace BusinessLogic
 
     public class OTF_list
     {
-        private SqlConnection sc;
+        
 
         public List<OTF> lOTF = new List<OTF>();
         TBLObj pBLObj;
 
-        public OTF_list(int pCIKKCSOP_ID, TBLObj iBLObj)
+        public OTF_list(int pCIKKCSOP_ID, SqlConnection sc)
         {
-            pBLObj = iBLObj;
-            sc = pBLObj.sqlConnection;
+            
+            sc.Open();
 
             SqlCommand cmd = new SqlCommand();
 
@@ -271,7 +328,18 @@ namespace BusinessLogic
     public class Cikkcsoport
     {
         public int fCIKKCSOPORT_ID;
-        public string fCIKKCSOPORT_NEV;
+        private string fCIKKCSOPORT_NEV;
+        public string NEV
+        {
+            get { return (fCIKKCSOPORT_NEV); }
+            set { fCIKKCSOPORT_NEV = value; }
+        }
+
+        public int ID
+        {
+            get { return (fCIKKCSOPORT_ID); }
+            set { fCIKKCSOPORT_ID = value; }
+        }
 
         public Cikkcsoport(int pCIKKCSOPORT_ID, string pCIKKCSOPORT_NEV)
         {
@@ -291,15 +359,15 @@ namespace BusinessLogic
 
     public class Cikkcsoport_list
     {
-        private SqlConnection sc;
+       
 
         public List<Cikkcsoport> lCIKKCSOPORT = new List<Cikkcsoport>();
         TBLObj pBLObj;
 
-        public Cikkcsoport_list(TBLObj iBLObj)
+        public Cikkcsoport_list(SqlConnection sc)
         {
-            pBLObj = iBLObj;
-            sc = pBLObj.sqlConnection;
+            
+            sc.Open();
 
             SqlCommand cmd = new SqlCommand();
 

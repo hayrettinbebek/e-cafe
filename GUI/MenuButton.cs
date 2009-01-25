@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -142,6 +143,7 @@ namespace GUI
         Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 
         private Label lKeszlet;
+        private Label lKeszletOther;
         private Label lMegnevezes;
         private Label lKiszereles;
         private Label lAr;
@@ -153,8 +155,10 @@ namespace GUI
             set
             {
                 _Cikk = value;
-                lMegnevezes.Text = value.fMEGNEVEZES;
-                lKeszlet.Text = value.fKESZLET.ToString();
+                lMegnevezes.Text = value.MEGNEVEZES;
+                lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
+                lKeszletOther.Text = value.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
+                lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
                 lAr.Text = "250 .-";
                 lKiszereles.Text = "korsó (5dl)";
                 
@@ -187,12 +191,20 @@ namespace GUI
             BackColor = Color.Gray;
 
             lKeszlet = new Label();
-            lKeszlet.Width = 40;
+            lKeszlet.Width = 30;
             lKeszlet.Height = 20;
             lKeszlet.BackColor = Color.DarkRed;
-            lKeszlet.Location = new Point(90, 0);
+            lKeszlet.Location = new Point(70, 0);
             lKeszlet.Click += this.OnLabelClick;
             this.Controls.Add(lKeszlet);
+
+            lKeszletOther = new Label();
+            lKeszletOther.Width = 30;
+            lKeszletOther.Height = 20;
+            lKeszletOther.BackColor = Color.DarkGreen;
+            lKeszletOther.Location = new Point(100, 0);
+            lKeszletOther.Click += this.OnLabelClick;
+            this.Controls.Add(lKeszletOther);
 
             lMegnevezes = new Label();
             lMegnevezes.Width = 120;
