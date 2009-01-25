@@ -57,6 +57,7 @@
     <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="P2Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raktar.cs" />
     <Compile Include="Rendeles.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -118,6 +118,12 @@
     <Compile Include="AsztalSetup.Designer.cs">
       <DependentUpon>AsztalSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ChooseKeszletek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\ChooseKeszletek.Designer.cs">
+      <DependentUpon>ChooseKeszletek.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CikkValaszt.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cikkek.resx">
       <DependentUpon>Cikkek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ChooseKeszletek.resx">
+      <DependentUpon>ChooseKeszletek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CikkValaszt.resx">
       <DependentUpon>CikkValaszt.cs</DependentUpon>
@@ -223,8 +232,11 @@
   <ItemGroup>
     <None Include="Properties\DataSources\BusinessLogic.Cikk.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Cikkcsoport.datasource" />
+    <None Include="Properties\DataSources\BusinessLogic.CikkKiszereles.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Cikk_list.datasource" />
+    <None Include="Properties\DataSources\BusinessLogic.ertTip.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.OTF.datasource" />
+    <None Include="Properties\DataSources\BusinessLogic.Raktar.datasource" />
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

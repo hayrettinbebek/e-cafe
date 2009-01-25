@@ -23,6 +23,18 @@ namespace BusinessLogic
 
     }
 
+    public class RaktCell : XPTable.Models.Cell
+    {
+        public CikkKeszlet rK;
+
+        public RaktCell(CikkKeszlet k)
+        {
+            rK = k;
+        }
+
+
+    }
+
     /*********************************************
     * 
     *   userrights
