@@ -104,6 +104,12 @@
     <Compile Include="AdminTools.Designer.cs">
       <DependentUpon>AdminTools.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bevetelezes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bevetelezes.Designer.cs">
+      <DependentUpon>Bevetelezes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MRendeles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminTools.resx">
       <DependentUpon>AdminTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bevetelezes.resx">
+      <DependentUpon>Bevetelezes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MRendeles.resx">
       <DependentUpon>MRendeles.cs</DependentUpon>
@@ -254,6 +263,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="e_Cafe_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\BusinessLogic.Bevetel_fej.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Cikk.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Cikkcsoport.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.CikkKiszereles.datasource" />

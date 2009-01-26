@@ -36,11 +36,11 @@
             this.asztalokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.törzsekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikkekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.készletkezelésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttBevetelezes = new System.Windows.Forms.ToolStripMenuItem();
+            this.készletkartonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paraméterekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riportokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.készletkezelésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bevételezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.készletkartonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,28 @@
             this.cikkekToolStripMenuItem.Text = "Cikkek";
             this.cikkekToolStripMenuItem.Click += new System.EventHandler(this.cikkekToolStripMenuItem_Click);
             // 
+            // készletkezelésToolStripMenuItem
+            // 
+            this.készletkezelésToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttBevetelezes,
+            this.készletkartonToolStripMenuItem});
+            this.készletkezelésToolStripMenuItem.Name = "készletkezelésToolStripMenuItem";
+            this.készletkezelésToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.készletkezelésToolStripMenuItem.Text = "Készletkezelés";
+            // 
+            // ttBevetelezes
+            // 
+            this.ttBevetelezes.Name = "ttBevetelezes";
+            this.ttBevetelezes.Size = new System.Drawing.Size(152, 22);
+            this.ttBevetelezes.Text = "Bevételezés";
+            this.ttBevetelezes.Click += new System.EventHandler(this.ttBevetelezes_Click);
+            // 
+            // készletkartonToolStripMenuItem
+            // 
+            this.készletkartonToolStripMenuItem.Name = "készletkartonToolStripMenuItem";
+            this.készletkartonToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.készletkartonToolStripMenuItem.Text = "Készletkarton";
+            // 
             // paraméterekToolStripMenuItem
             // 
             this.paraméterekToolStripMenuItem.Name = "paraméterekToolStripMenuItem";
@@ -108,27 +130,6 @@
             this.riportokToolStripMenuItem.Name = "riportokToolStripMenuItem";
             this.riportokToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.riportokToolStripMenuItem.Text = "Riportok";
-            // 
-            // készletkezelésToolStripMenuItem
-            // 
-            this.készletkezelésToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bevételezésToolStripMenuItem,
-            this.készletkartonToolStripMenuItem});
-            this.készletkezelésToolStripMenuItem.Name = "készletkezelésToolStripMenuItem";
-            this.készletkezelésToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.készletkezelésToolStripMenuItem.Text = "Készletkezelés";
-            // 
-            // bevételezésToolStripMenuItem
-            // 
-            this.bevételezésToolStripMenuItem.Name = "bevételezésToolStripMenuItem";
-            this.bevételezésToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.bevételezésToolStripMenuItem.Text = "Bevételezés";
-            // 
-            // készletkartonToolStripMenuItem
-            // 
-            this.készletkartonToolStripMenuItem.Name = "készletkartonToolStripMenuItem";
-            this.készletkartonToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.készletkartonToolStripMenuItem.Text = "Készletkarton";
             // 
             // AdminTools
             // 
@@ -160,7 +161,7 @@
         private System.Windows.Forms.ToolStripMenuItem paraméterekToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem riportokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem készletkezelésToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bevételezésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ttBevetelezes;
         private System.Windows.Forms.ToolStripMenuItem készletkartonToolStripMenuItem;
     }
 }

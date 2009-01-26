@@ -110,5 +110,12 @@ namespace e_Cafe
             ck.MdiParent = this;
             ck.Show();
         }
+
+        private void ttBevetelezes_Click(object sender, EventArgs e)
+        {
+            Bevetelezes f = new Bevetelezes();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
