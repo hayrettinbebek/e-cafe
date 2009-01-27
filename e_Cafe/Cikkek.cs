@@ -80,8 +80,8 @@ namespace e_Cafe
             }
             if (cikkBindingSource.Current != null)
             {
-                AktCikkId = ((Cikk)cikkBindingSource.Current).fCIKK_ID;
-                if (((Cikk)cikkBindingSource.Current).fCIKK_ID != -1)
+                AktCikkId = ((Cikk)cikkBindingSource.Current).CIKK_ID;
+                if (((Cikk)cikkBindingSource.Current).CIKK_ID != -1)
                 {
                     cikkKiszerelesBindingSource.Clear();
 

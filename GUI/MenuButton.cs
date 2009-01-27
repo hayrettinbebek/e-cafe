@@ -192,18 +192,18 @@ namespace GUI
             BackColor = Color.Gray;
 
             lKeszlet = new Label();
-            lKeszlet.Width = 30;
+            lKeszlet.Width = 50;
             lKeszlet.Height = 20;
             lKeszlet.BackColor = Color.DarkRed;
-            lKeszlet.Location = new Point(70, 0);
+            lKeszlet.Location = new Point(40, 0);
             lKeszlet.Click += this.OnLabelClick;
             this.Controls.Add(lKeszlet);
 
             lKeszletOther = new Label();
-            lKeszletOther.Width = 30;
+            lKeszletOther.Width = 50;
             lKeszletOther.Height = 20;
             lKeszletOther.BackColor = Color.DarkGreen;
-            lKeszletOther.Location = new Point(100, 0);
+            lKeszletOther.Location = new Point(90, 0);
             lKeszletOther.Click += this.OnLabelClick;
             this.Controls.Add(lKeszletOther);
 

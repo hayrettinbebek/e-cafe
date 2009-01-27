@@ -382,7 +382,7 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
 
             cmd.Parameters["RENDELES_ID"].Value = pRendelesId;
-            cmd.Parameters["CIKK_ID"].Value = _Cikk.fCIKK_ID;
+            cmd.Parameters["CIKK_ID"].Value = _Cikk.CIKK_ID;
             cmd.Parameters["DB"].Value = _db;
             cmd.Parameters["DATUM"].Value = _datum;
             cmd.Parameters["RAKTAR_ID"].Value = _RaktarId;

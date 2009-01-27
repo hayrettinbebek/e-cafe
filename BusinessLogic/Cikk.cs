@@ -10,10 +10,16 @@ namespace BusinessLogic
     #region Cikk
     public class Cikk
     {
-        public int fCIKK_ID;
         public CikkKiszerelesList CIKK_KISZERELES;
         public String KISZ_MEGN;
         public double KISZ_MENNY;
+
+        private int fCIKK_ID;
+        public int CIKK_ID
+        {
+            get { return (fCIKK_ID); }
+            set { fCIKK_ID = value; }
+        }
 
         //cikk típus
         public int fCIKK_TIPUS;
