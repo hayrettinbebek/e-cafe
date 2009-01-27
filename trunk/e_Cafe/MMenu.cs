@@ -35,11 +35,16 @@ namespace e_Cafe
 
         public MMenu()
         {
-            DEFS.ConSTR = e_Cafe.Properties.Settings.Default.cnSTR;
-            InitializeComponent();
-            FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
-            _Rendel = false;
-            
+            string s = System.IO.File.ReadAllText(@"ConnSTR.txt");
+
+            try
+            {
+                DEFS.ConSTR = s;// e_Cafe.Properties.Settings.Default.cnSTR;
+                InitializeComponent();
+                FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
+                _Rendel = false;
+            }
+            catch (Exception c) { MessageBox.Show(c.Message); }
 
             
         }

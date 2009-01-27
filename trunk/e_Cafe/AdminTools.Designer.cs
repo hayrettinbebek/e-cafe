@@ -93,7 +93,7 @@
             // cikkekToolStripMenuItem
             // 
             this.cikkekToolStripMenuItem.Name = "cikkekToolStripMenuItem";
-            this.cikkekToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cikkekToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.cikkekToolStripMenuItem.Text = "Cikkek";
             this.cikkekToolStripMenuItem.Click += new System.EventHandler(this.cikkekToolStripMenuItem_Click);
             // 
@@ -109,14 +109,14 @@
             // ttBevetelezes
             // 
             this.ttBevetelezes.Name = "ttBevetelezes";
-            this.ttBevetelezes.Size = new System.Drawing.Size(152, 22);
+            this.ttBevetelezes.Size = new System.Drawing.Size(150, 22);
             this.ttBevetelezes.Text = "Bevételezés";
             this.ttBevetelezes.Click += new System.EventHandler(this.ttBevetelezes_Click);
             // 
             // készletkartonToolStripMenuItem
             // 
             this.készletkartonToolStripMenuItem.Name = "készletkartonToolStripMenuItem";
-            this.készletkartonToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.készletkartonToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.készletkartonToolStripMenuItem.Text = "Készletkarton";
             // 
             // paraméterekToolStripMenuItem
@@ -141,6 +141,7 @@
             this.IsMdiContainer = true;
             this.Name = "AdminTools";
             this.Text = "Adminisztrátori funkciók";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
