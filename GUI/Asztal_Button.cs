@@ -129,12 +129,14 @@
 
             Rectangle rect = e.ClipRectangle;
 
-            if (aObj.fRENDELES_ID != -1 ) { ImageIndex = (int)Asztal_colors.Selected; }
-            else if (_Free == 1)
+            if (ImageList != null)
             {
-                ImageIndex = (int)Asztal_colors.Free;
+                if (aObj.fRENDELES_ID != -1) { ImageIndex = (int)Asztal_colors.Selected; }
+                else if (_Free == 1)
+                {
+                    ImageIndex = (int)Asztal_colors.Free;
+                }
             }
-
 
             if (_MouseOver) { g.FillRectangle(new SolidBrush(DEFS.Selected_Color), rect); }
             else

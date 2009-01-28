@@ -165,7 +165,549 @@
     <None Include="billentyu\bill.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="asztal\11\0\Thumbs.db" />
+    <None Include="asztal\13\0\Thumbs.db" />
+    <None Include="asztal\13\Thumbs.db" />
+    <None Include="asztal\15\90\Thumbs.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="asztal\17\0\Thumbs.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="asztal\17\Thumbs.db" />
+    <None Include="asztal\180cw\.svn\all-wcprops" />
+    <None Include="asztal\180cw\.svn\entries" />
+    <None Include="asztal\180cw\.svn\format" />
+    <None Include="asztal\180cw\.svn\prop-base\asztal5n_aktiv.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\asztal5n_aktivover.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\asztal5n_over.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\fotel_aktiv.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\fotel_aktivover.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\fotel_over.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\kanape2_aktiv.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\kanape2_aktivover.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\kanape2_over.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\kanape3_aktiv.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\kanape3_aktivover.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\kanape3_over.png.svn-base" />
+    <None Include="asztal\180cw\.svn\prop-base\Thumbs.db.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\asztal5n_aktiv.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\asztal5n_aktivover.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\asztal5n_over.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\fotel_aktiv.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\fotel_aktivover.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\fotel_over.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\kanape2_aktiv.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\kanape2_aktivover.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\kanape2_over.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\kanape3_aktiv.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\kanape3_aktivover.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\kanape3_over.png.svn-base" />
+    <None Include="asztal\180cw\.svn\text-base\Thumbs.db.svn-base" />
+    <None Include="asztal\180cw\Thumbs.db" />
+    <None Include="asztal\21\Thumbs.db" />
+    <None Include="asztal\90ccw\Thumbs.db" />
+    <None Include="asztal\90cw\Thumbs.db" />
+    <None Include="asztal\11\90\Thumbs.db" />
+    <None Include="asztal\pult\Thumbs.db" />
     <None Include="billentyu\button.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="asztal\11\01_off.png" />
+    <Content Include="asztal\11\02_on.png" />
+    <Content Include="asztal\11\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\B01_asztal4k_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\B02_asztal4k_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\B03_asztal4k_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\B04_asztal4k_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\12\B05_asztal4k_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\C01_asztal4n_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\C02_asztal4n_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\C03_asztal4n_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\C04_asztal4n_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\13\C05_asztal4n_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\D01_asztal5n_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\D02_asztal5n_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\D03_asztal5n_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\D04_asztal5n_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\14\D05_asztal5n_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\E01asztal6n_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\E02_asztal6n_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\E03_asztal6n_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\E04_asztal6n_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\15\E05_asztal6n_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\F01_asztaln4k_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\F02_asztaln4k_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\F03_asztaln4k_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\F04_asztaln4k_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\16\F05_asztaln4k_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\G01_asztaln4n_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\G02_asztaln4n_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\G03_asztaln4n_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\G04_asztaln4n_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\17\G05_asztaln4n_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\180cw\asztal5n_aktiv.png" />
+    <Content Include="asztal\180cw\asztal5n_aktivover.png" />
+    <Content Include="asztal\180cw\asztal5n_over.png" />
+    <Content Include="asztal\180cw\fotel_aktiv.png" />
+    <Content Include="asztal\180cw\fotel_aktivover.png" />
+    <Content Include="asztal\180cw\fotel_over.png" />
+    <Content Include="asztal\180cw\kanape2_aktiv.png" />
+    <Content Include="asztal\180cw\kanape2_aktivover.png" />
+    <Content Include="asztal\180cw\kanape2_over.png" />
+    <Content Include="asztal\180cw\kanape3_aktiv.png" />
+    <Content Include="asztal\180cw\kanape3_aktivover.png" />
+    <Content Include="asztal\180cw\kanape3_over.png" />
+    <Content Include="asztal\11\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\H01_doasz_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\H02_doasz_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\H03_doasz_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\H04_doasz_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\18\H05doasz_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\I01_fotel_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\I02_fotel_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\I03_fotel_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\I04_fotel_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\19\I05_fotel_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\J01_kanape2_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\J02_kanape2_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\J03_kanape2_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\J04_kanape2_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\20\J05_kanape2_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\180\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\180\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\K01_kanape3_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\K02_kanape3_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\K03_kanape3_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\K04_kanape3_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\21\K05_kanape3_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\270\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\270\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\90ccw\asztal5n_aktiv.png" />
+    <Content Include="asztal\90ccw\asztal5n_aktivover.png" />
+    <Content Include="asztal\90ccw\asztal5n_over.png" />
+    <Content Include="asztal\90ccw\fotel_aktiv.png" />
+    <Content Include="asztal\90ccw\fotel_aktivover.png" />
+    <Content Include="asztal\90ccw\fotel_off.png" />
+    <Content Include="asztal\90ccw\fotel_on.png" />
+    <Content Include="asztal\90ccw\fotel_over.png" />
+    <Content Include="asztal\90ccw\kanape2_aktiv.png" />
+    <Content Include="asztal\90ccw\kanape2_aktivover.png" />
+    <Content Include="asztal\90ccw\kanape2_off.png" />
+    <Content Include="asztal\90ccw\kanape2_on.png" />
+    <Content Include="asztal\90ccw\kanape2_over.png" />
+    <Content Include="asztal\90ccw\kanape3_aktiv.png" />
+    <Content Include="asztal\90ccw\kanape3_aktivover.png" />
+    <Content Include="asztal\90ccw\kanape3_over.png" />
+    <Content Include="asztal\90cw\asztal5n_aktiv.png" />
+    <Content Include="asztal\90cw\asztal5n_aktivover.png" />
+    <Content Include="asztal\90cw\asztal5n_over.png" />
+    <Content Include="asztal\90cw\asztal6n_aktiv.png" />
+    <Content Include="asztal\90cw\asztal6n_aktivover.png" />
+    <Content Include="asztal\90cw\asztal6n_over.png" />
+    <Content Include="asztal\90cw\doasz_aktiv.png" />
+    <Content Include="asztal\90cw\doasz_aktivover.png" />
+    <Content Include="asztal\90cw\doasz_over.png" />
+    <Content Include="asztal\90cw\fotel_aktiv.png" />
+    <Content Include="asztal\90cw\fotel_aktivover.png" />
+    <Content Include="asztal\90cw\fotel_over.png" />
+    <Content Include="asztal\90cw\kanape2_aktiv.png" />
+    <Content Include="asztal\90cw\kanape2_aktivover.png" />
+    <Content Include="asztal\90cw\kanape2_off.png" />
+    <Content Include="asztal\90cw\kanape2_on.png" />
+    <Content Include="asztal\90cw\kanape2_over.png" />
+    <Content Include="asztal\90cw\kanape3_aktiv.png" />
+    <Content Include="asztal\90cw\kanape3_aktivover.png" />
+    <Content Include="asztal\90cw\kanape3_over.png" />
+    <Content Include="asztal\11\90\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\90\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\90\asztal2n_aktiv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\90\asztal2n_aktivover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\90\asztal2n_over.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\97\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\97\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\98\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\98\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\99\0\01_off.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\99\0\02_on.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="asztal\11\A03_asztal2n_aktiv.png" />
+    <Content Include="asztal\11\A04_asztal2n_aktivover.png" />
+    <Content Include="asztal\11\A05_asztal2n_over.png" />
+    <Content Include="asztal\pult\pult_aktiv.png" />
+    <Content Include="asztal\pult\pult_aktivover.png" />
+    <Content Include="asztal\pult\pult_off.png" />
+    <Content Include="asztal\pult\pult_on.png" />
+    <Content Include="asztal\pult\pult_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="asztal\180cw\.svn\props\" />
+    <Folder Include="asztal\180cw\.svn\tmp\prop-base\" />
+    <Folder Include="asztal\180cw\.svn\tmp\props\" />
+    <Folder Include="asztal\180cw\.svn\tmp\text-base\" />
+    <Folder Include="asztal\21\270\" />
+    <Folder Include="asztal\21\90\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
