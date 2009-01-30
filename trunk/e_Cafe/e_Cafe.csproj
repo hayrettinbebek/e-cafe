@@ -119,6 +119,46 @@
     <Compile Include="CikkSelector.Designer.cs">
       <DependentUpon>CikkSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="ECAFEDataSet.cs">
+      <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ECAFEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ECAFEDataSetAFA.cs">
+      <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ECAFEDataSetAFA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ECAFEDataSetHELY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ECAFEDataSetOTHER_FILTER.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Torzsek\frmAFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmAFA.Designer.cs">
+      <DependentUpon>frmAFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Torzsek\frmCikkcsoport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmCikkcsoport.Designer.cs">
+      <DependentUpon>frmCikkcsoport.cs</DependentUpon>
+    </Compile>
     <Compile Include="MRendeles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +171,18 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="Torzsek\frmHelyek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmHelyek.Designer.cs">
+      <DependentUpon>frmHelyek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Torzsek\frmOtherFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmOtherFilter.Designer.cs">
+      <DependentUpon>frmOtherFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AsztalInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,10 +195,10 @@
     <Compile Include="UserControls\Asztalok.Designer.cs">
       <DependentUpon>Asztalok.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cikkek.cs">
+    <Compile Include="Torzsek\Cikkek.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cikkek.Designer.cs">
+    <Compile Include="Torzsek\Cikkek.Designer.cs">
       <DependentUpon>Cikkek.cs</DependentUpon>
     </Compile>
     <Compile Include="AsztalSetup.cs">
@@ -184,12 +236,24 @@
     <EmbeddedResource Include="CikkSelector.resx">
       <DependentUpon>CikkSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmAFA.resx">
+      <DependentUpon>frmAFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmCikkcsoport.resx">
+      <DependentUpon>frmCikkcsoport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MRendeles.resx">
       <DependentUpon>MRendeles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OtherImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmHelyek.resx">
+      <DependentUpon>frmHelyek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmOtherFilter.resx">
+      <DependentUpon>frmOtherFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AsztalInfo.resx">
       <DependentUpon>AsztalInfo.cs</DependentUpon>
@@ -200,7 +264,7 @@
     <EmbeddedResource Include="AsztalSetup.resx">
       <DependentUpon>AsztalSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cikkek.resx">
+    <EmbeddedResource Include="Torzsek\Cikkek.resx">
       <DependentUpon>Cikkek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ChooseKeszletek.resx">
@@ -274,6 +338,50 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ECAFEDataSet.xsc">
+      <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ECAFEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ECAFEDataSet.xss">
+      <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetAFA.xsc">
+      <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetAFA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ECAFEDataSetAFA.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ECAFEDataSetAFA.xss">
+      <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetHELY.xsc">
+      <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetHELY.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ECAFEDataSetHELY.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ECAFEDataSetHELY.xss">
+      <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetOTHER_FILTER.xsc">
+      <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetOTHER_FILTER.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ECAFEDataSetOTHER_FILTER.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ECAFEDataSetOTHER_FILTER.xss">
+      <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
+    </None>
     <None Include="e_Cafe_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\BusinessLogic.BevetelSor.datasource" />

@@ -41,6 +41,15 @@
             this.készletkartonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paraméterekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riportokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cikkcsoportokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.áfaKódokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmafa_kodok = new System.Windows.Forms.ToolStripMenuItem();
+            this.cikkcsoportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cikkcsoportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alcsoportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alcsoportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helyekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,16 +94,22 @@
             // törzsekToolStripMenuItem
             // 
             this.törzsekToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cikkekToolStripMenuItem});
+            this.cikkekToolStripMenuItem,
+            this.cikkcsoportokToolStripMenuItem,
+            this.áfaKódokToolStripMenuItem});
             this.törzsekToolStripMenuItem.Name = "törzsekToolStripMenuItem";
             this.törzsekToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.törzsekToolStripMenuItem.Text = "Törzsek";
             // 
             // cikkekToolStripMenuItem
             // 
+            this.cikkekToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ciToolStripMenuItem,
+            this.cikkcsoportToolStripMenuItem1,
+            this.alcsoportToolStripMenuItem});
             this.cikkekToolStripMenuItem.Name = "cikkekToolStripMenuItem";
-            this.cikkekToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.cikkekToolStripMenuItem.Text = "Cikkek";
+            this.cikkekToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.cikkekToolStripMenuItem.Text = "Cikk";
             this.cikkekToolStripMenuItem.Click += new System.EventHandler(this.cikkekToolStripMenuItem_Click);
             // 
             // készletkezelésToolStripMenuItem
@@ -109,14 +124,14 @@
             // ttBevetelezes
             // 
             this.ttBevetelezes.Name = "ttBevetelezes";
-            this.ttBevetelezes.Size = new System.Drawing.Size(150, 22);
+            this.ttBevetelezes.Size = new System.Drawing.Size(152, 22);
             this.ttBevetelezes.Text = "Bevételezés";
             this.ttBevetelezes.Click += new System.EventHandler(this.ttBevetelezes_Click);
             // 
             // készletkartonToolStripMenuItem
             // 
             this.készletkartonToolStripMenuItem.Name = "készletkartonToolStripMenuItem";
-            this.készletkartonToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.készletkartonToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.készletkartonToolStripMenuItem.Text = "Készletkarton";
             // 
             // paraméterekToolStripMenuItem
@@ -130,6 +145,70 @@
             this.riportokToolStripMenuItem.Name = "riportokToolStripMenuItem";
             this.riportokToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.riportokToolStripMenuItem.Text = "Riportok";
+            // 
+            // cikkcsoportokToolStripMenuItem
+            // 
+            this.cikkcsoportokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cikkcsoportToolStripMenuItem,
+            this.alcsoportToolStripMenuItem1});
+            this.cikkcsoportokToolStripMenuItem.Name = "cikkcsoportokToolStripMenuItem";
+            this.cikkcsoportokToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.cikkcsoportokToolStripMenuItem.Text = "Cikkcsoport";
+            // 
+            // áfaKódokToolStripMenuItem
+            // 
+            this.áfaKódokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mmafa_kodok,
+            this.helyekToolStripMenuItem});
+            this.áfaKódokToolStripMenuItem.Name = "áfaKódokToolStripMenuItem";
+            this.áfaKódokToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.áfaKódokToolStripMenuItem.Text = "Egyéb törzsek";
+            this.áfaKódokToolStripMenuItem.Click += new System.EventHandler(this.áfaKódokToolStripMenuItem_Click);
+            // 
+            // mmafa_kodok
+            // 
+            this.mmafa_kodok.Name = "mmafa_kodok";
+            this.mmafa_kodok.Size = new System.Drawing.Size(152, 22);
+            this.mmafa_kodok.Text = "Áfa kódok";
+            this.mmafa_kodok.Click += new System.EventHandler(this.áfaKódokToolStripMenuItem1_Click);
+            // 
+            // cikkcsoportToolStripMenuItem
+            // 
+            this.cikkcsoportToolStripMenuItem.Name = "cikkcsoportToolStripMenuItem";
+            this.cikkcsoportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cikkcsoportToolStripMenuItem.Text = "Cikkcsoport";
+            this.cikkcsoportToolStripMenuItem.Click += new System.EventHandler(this.cikkcsoportToolStripMenuItem_Click);
+            // 
+            // ciToolStripMenuItem
+            // 
+            this.ciToolStripMenuItem.Name = "ciToolStripMenuItem";
+            this.ciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ciToolStripMenuItem.Text = "Cikkek";
+            // 
+            // cikkcsoportToolStripMenuItem1
+            // 
+            this.cikkcsoportToolStripMenuItem1.Name = "cikkcsoportToolStripMenuItem1";
+            this.cikkcsoportToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cikkcsoportToolStripMenuItem1.Text = "Cikkcsoport";
+            // 
+            // alcsoportToolStripMenuItem
+            // 
+            this.alcsoportToolStripMenuItem.Name = "alcsoportToolStripMenuItem";
+            this.alcsoportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alcsoportToolStripMenuItem.Text = "Alcsoport";
+            // 
+            // alcsoportToolStripMenuItem1
+            // 
+            this.alcsoportToolStripMenuItem1.Name = "alcsoportToolStripMenuItem1";
+            this.alcsoportToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.alcsoportToolStripMenuItem1.Text = "Alcsoport";
+            this.alcsoportToolStripMenuItem1.Click += new System.EventHandler(this.alcsoportToolStripMenuItem1_Click);
+            // 
+            // helyekToolStripMenuItem
+            // 
+            this.helyekToolStripMenuItem.Name = "helyekToolStripMenuItem";
+            this.helyekToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.helyekToolStripMenuItem.Text = "Helyek";
             // 
             // AdminTools
             // 
@@ -164,6 +243,15 @@
         private System.Windows.Forms.ToolStripMenuItem készletkezelésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ttBevetelezes;
         private System.Windows.Forms.ToolStripMenuItem készletkartonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cikkcsoportokToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem áfaKódokToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mmafa_kodok;
+        private System.Windows.Forms.ToolStripMenuItem cikkcsoportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cikkcsoportToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem alcsoportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alcsoportToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem helyekToolStripMenuItem;
     }
 }
 

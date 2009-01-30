@@ -43,5 +43,16 @@ namespace e_Cafe.Properties {
                 this["notrixCN"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ERNIE-HOME\\SQLEXPRESS;Initial Catalog=ECAFE;Persist Security Info=Tru" +
+            "e;User ID=sa")]
+        public string ECAFEConnectionString {
+            get {
+                return ((string)(this["ECAFEConnectionString"]));
+            }
+        }
     }
 }
