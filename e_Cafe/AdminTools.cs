@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
+using e_Cafe.Torzsek;
 
 namespace e_Cafe
 {
@@ -114,6 +115,37 @@ namespace e_Cafe
         private void ttBevetelezes_Click(object sender, EventArgs e)
         {
             Bevetelezes f = new Bevetelezes();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void cikkcsoportokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void áfaKódokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void áfaKódokToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAFA f = new frmAFA();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void cikkcsoportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCikkcsoport f = new frmCikkcsoport();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void alcsoportToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmOtherFilter f = new frmOtherFilter();
             f.MdiParent = this;
             f.Show();
         }

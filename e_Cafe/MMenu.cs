@@ -39,7 +39,8 @@ namespace e_Cafe
 
             try
             {
-                DEFS.ConSTR = s;// e_Cafe.Properties.Settings.Default.cnSTR;
+
+                DEFS.ConSTR = e_Cafe.Properties.Settings.Default.ECAFEConnectionString; // e_Cafe.Properties.Settings.Default.cnSTR;
                 InitializeComponent();
                 FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
                 _Rendel = false;
