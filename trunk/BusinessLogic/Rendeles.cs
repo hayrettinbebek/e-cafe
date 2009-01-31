@@ -392,7 +392,7 @@ namespace BusinessLogic
             {
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 string s = "Hiba a rendelés sorok mentése közben!" + _SOR_ID.ToString() ;
             }

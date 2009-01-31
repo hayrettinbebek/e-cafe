@@ -100,7 +100,7 @@ namespace e_Cafe
 
         private void cikkekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cikkek ck = new Cikkek();
+            frmCikk ck = new frmCikk();
             ck.MdiParent = this;
             ck.Show();
         }
@@ -124,11 +124,6 @@ namespace e_Cafe
 
         }
 
-        private void áfaKódokToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void áfaKódokToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmAFA f = new frmAFA();
@@ -146,6 +141,25 @@ namespace e_Cafe
         private void alcsoportToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmOtherFilter f = new frmOtherFilter();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void AdminTools_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helyekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHelyek f = new frmHelyek();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void mmRaktar_Click(object sender, EventArgs e)
+        {
+            frmRaktar f = new frmRaktar();
             f.MdiParent = this;
             f.Show();
         }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7A9003C7-484C-4510-BE0F-128F219A812B}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -124,23 +124,29 @@
   <ItemGroup>
     <EmbeddedResource Include="billentyu\keyboard.resx">
       <DependentUpon>keyboard.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="billentyu\TouchKeyboard.resx">
       <DependentUpon>TouchKeyboard.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Notepad_Rendeles.resx">
       <DependentUpon>Notepad_Rendeles.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OtherImages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TableActionSelect.resx">
       <DependentUpon>TableActionSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
