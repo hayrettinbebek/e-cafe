@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -20,6 +20,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetZone>Custom</TargetZone>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <PublishUrl>G:\WORK\E-Cafe_Google\ecafeinstaller\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -33,7 +34,6 @@
     <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
-    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ECAFEDataSetCIKK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ECAFEDataSetHELY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -147,11 +152,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ECAFEDataSetRAKTAR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Torzsek\frmAFA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Torzsek\frmAFA.Designer.cs">
       <DependentUpon>frmAFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Torzsek\frmCikk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmCikk.Designer.cs">
+      <DependentUpon>frmCikk.cs</DependentUpon>
     </Compile>
     <Compile Include="Torzsek\frmCikkcsoport.cs">
       <SubType>Form</SubType>
@@ -182,6 +198,12 @@
     </Compile>
     <Compile Include="Torzsek\frmOtherFilter.Designer.cs">
       <DependentUpon>frmOtherFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Torzsek\frmRaktar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmRaktar.Designer.cs">
+      <DependentUpon>frmRaktar.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AsztalInfo.cs">
       <SubType>UserControl</SubType>
@@ -229,52 +251,76 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminTools.resx">
       <DependentUpon>AdminTools.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Bevetelezes.resx">
       <DependentUpon>Bevetelezes.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CikkSelector.resx">
       <DependentUpon>CikkSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmAFA.resx">
       <DependentUpon>frmAFA.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmCikk.resx">
+      <DependentUpon>frmCikk.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmCikkcsoport.resx">
       <DependentUpon>frmCikkcsoport.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MRendeles.resx">
       <DependentUpon>MRendeles.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OtherImages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmHelyek.resx">
       <DependentUpon>frmHelyek.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmOtherFilter.resx">
       <DependentUpon>frmOtherFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmRaktar.resx">
+      <DependentUpon>frmRaktar.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AsztalInfo.resx">
       <DependentUpon>AsztalInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Asztalok.resx">
       <DependentUpon>Asztalok.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AsztalSetup.resx">
       <DependentUpon>AsztalSetup.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\Cikkek.resx">
       <DependentUpon>Cikkek.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ChooseKeszletek.resx">
       <DependentUpon>ChooseKeszletek.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CikkValaszt.resx">
       <DependentUpon>CikkValaszt.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MMenu.resx">
       <DependentUpon>MMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -283,9 +329,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MainMenuBtn.resx">
       <DependentUpon>MainMenuBtn.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MMenuButton.resx">
       <DependentUpon>MMenuButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -360,6 +408,17 @@
     <None Include="ECAFEDataSetAFA.xss">
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </None>
+    <None Include="ECAFEDataSetCIKK.xsc">
+      <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetCIKK.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ECAFEDataSetCIKK.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ECAFEDataSetCIKK.xss">
+      <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
+    </None>
     <None Include="ECAFEDataSetHELY.xsc">
       <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
     </None>
@@ -382,6 +441,17 @@
     <None Include="ECAFEDataSetOTHER_FILTER.xss">
       <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
     </None>
+    <None Include="ECAFEDataSetRAKTAR.xsc">
+      <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetRAKTAR.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ECAFEDataSetRAKTAR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ECAFEDataSetRAKTAR.xss">
+      <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
+    </None>
     <None Include="e_Cafe_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\BusinessLogic.BevetelSor.datasource" />
@@ -396,11 +466,6 @@
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
@@ -438,16 +503,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="ConnSTR.txt">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Auto</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
