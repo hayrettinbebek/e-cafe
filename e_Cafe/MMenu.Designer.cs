@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPartnerek = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +52,6 @@
             this.lblTime = new System.Windows.Forms.Button();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnPartnerek = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -67,7 +66,6 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label1);
@@ -76,6 +74,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1016, 102);
             this.panel1.TabIndex = 0;
+            // 
+            // btnPartnerek
+            // 
+            this.btnPartnerek.BackColor = System.Drawing.Color.Transparent;
+            this.btnPartnerek.Location = new System.Drawing.Point(721, 14);
+            this.btnPartnerek.Name = "btnPartnerek";
+            this.btnPartnerek.Size = new System.Drawing.Size(83, 75);
+            this.btnPartnerek.TabIndex = 9;
+            this.btnPartnerek.Text = "Partnerek";
+            this.btnPartnerek.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnPartnerek.UseVisualStyleBackColor = false;
+            this.btnPartnerek.Click += new System.EventHandler(this.btnPartnerek_Click);
             // 
             // textBox1
             // 
@@ -114,18 +124,6 @@
             this.button4.Text = "Kilépés";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(222)))), ((int)(((byte)(120)))));
-            this.button7.Location = new System.Drawing.Point(388, 48);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(104, 51);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Személyzet";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button2
             // 
@@ -285,18 +283,6 @@
             this.panel6.Size = new System.Drawing.Size(1016, 13);
             this.panel6.TabIndex = 0;
             // 
-            // btnPartnerek
-            // 
-            this.btnPartnerek.BackColor = System.Drawing.Color.Transparent;
-            this.btnPartnerek.Location = new System.Drawing.Point(721, 14);
-            this.btnPartnerek.Name = "btnPartnerek";
-            this.btnPartnerek.Size = new System.Drawing.Size(83, 75);
-            this.btnPartnerek.TabIndex = 9;
-            this.btnPartnerek.Text = "Partnerek";
-            this.btnPartnerek.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnPartnerek.UseVisualStyleBackColor = false;
-            this.btnPartnerek.Click += new System.EventHandler(this.btnPartnerek_Click);
-            // 
             // MMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,7 +322,6 @@
         private System.Windows.Forms.Integration.ElementHost elementHost1;
 
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
