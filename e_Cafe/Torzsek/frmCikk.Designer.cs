@@ -63,10 +63,18 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eCAFEDataSet = new e_Cafe.ECAFEDataSet();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tpKiszereles = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.lITKISZIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lITKISZNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lITKISZMENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lITKISZBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,12 +95,12 @@
             this.mAXKEDVEZMENYSZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mAXKEDVEZMFTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIKKTableAdapter = new e_Cafe.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
             this.eCAFEDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cIKKCSOPORTTableAdapter = new e_Cafe.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
             this.cIKCSOP_OTHER_FILTERTableAdapter = new e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter();
             this.rAKTARTableAdapter = new e_Cafe.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cIKKTableAdapter = new e_Cafe.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
+            this.lIT_KISZTableAdapter = new e_Cafe.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -105,6 +113,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
+            this.tpKiszereles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lITKISZBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBindingSource)).BeginInit();
@@ -126,14 +137,15 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(50, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(46, 22);
             this.toolStripButton1.Text = "Mentés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tpKiszereles);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Location = new System.Drawing.Point(0, 138);
             this.tabControl1.Name = "tabControl1";
@@ -215,6 +227,8 @@
             // 
             this.cIKKBindingSource.DataMember = "CIKK";
             this.cIKKBindingSource.DataSource = this.eCAFEDataSetCIKK;
+            this.cIKKBindingSource.CurrentChanged += new System.EventHandler(this.cIKKBindingSource_CurrentChanged);
+            this.cIKKBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.cIKKBindingSource_AddingNew);
             // 
             // eCAFEDataSetCIKK
             // 
@@ -410,6 +424,17 @@
             this.eCAFEDataSet.DataSetName = "ECAFEDataSet";
             this.eCAFEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.cIKKBindingSource, "AKTIV", true));
+            this.checkBox2.Location = new System.Drawing.Point(502, 33);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(52, 17);
+            this.checkBox2.TabIndex = 2;
+            this.checkBox2.Text = "Aktív";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -439,15 +464,76 @@
             this.textBox1.Size = new System.Drawing.Size(123, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // tabPage2
+            // tpKiszereles
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(889, 229);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tpKiszereles.Controls.Add(this.dataGridView2);
+            this.tpKiszereles.Location = new System.Drawing.Point(4, 22);
+            this.tpKiszereles.Name = "tpKiszereles";
+            this.tpKiszereles.Padding = new System.Windows.Forms.Padding(3);
+            this.tpKiszereles.Size = new System.Drawing.Size(889, 229);
+            this.tpKiszereles.TabIndex = 1;
+            this.tpKiszereles.Text = "Kiszerelések";
+            this.tpKiszereles.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lITKISZIDDataGridViewTextBoxColumn,
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn,
+            this.lITKISZNEVDataGridViewTextBoxColumn,
+            this.lITKISZMENNYDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.lITKISZBindingSource;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(883, 223);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // lITKISZIDDataGridViewTextBoxColumn
+            // 
+            this.lITKISZIDDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_ID";
+            this.lITKISZIDDataGridViewTextBoxColumn.HeaderText = "LIT_KISZ_ID";
+            this.lITKISZIDDataGridViewTextBoxColumn.Name = "lITKISZIDDataGridViewTextBoxColumn";
+            this.lITKISZIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lITKISZIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lITKISZCIKKIDDataGridViewTextBoxColumn
+            // 
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_CIKK_ID";
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn.HeaderText = "Cikk ";
+            this.lITKISZCIKKIDDataGridViewTextBoxColumn.Name = "lITKISZCIKKIDDataGridViewTextBoxColumn";
+            // 
+            // lITKISZNEVDataGridViewTextBoxColumn
+            // 
+            this.lITKISZNEVDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_NEV";
+            this.lITKISZNEVDataGridViewTextBoxColumn.HeaderText = "Kiszerelés megnevezése";
+            this.lITKISZNEVDataGridViewTextBoxColumn.Name = "lITKISZNEVDataGridViewTextBoxColumn";
+            this.lITKISZNEVDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // lITKISZMENNYDataGridViewTextBoxColumn
+            // 
+            this.lITKISZMENNYDataGridViewTextBoxColumn.DataPropertyName = "LIT_KISZ_MENNY";
+            this.lITKISZMENNYDataGridViewTextBoxColumn.HeaderText = "Kiszerelés mennyisége";
+            this.lITKISZMENNYDataGridViewTextBoxColumn.Name = "lITKISZMENNYDataGridViewTextBoxColumn";
+            this.lITKISZMENNYDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // lITKISZBindingSource
+            // 
+            this.lITKISZBindingSource.DataMember = "LIT_KISZ";
+            this.lITKISZBindingSource.DataSource = this.eCAFEDataSetCIKK;
+            this.lITKISZBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.lITKISZBindingSource_AddingNew);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(889, 229);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -485,6 +571,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(897, 113);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -608,10 +695,6 @@
             this.mEGJEGYZESDataGridViewTextBoxColumn.HeaderText = "MEGJEGYZES";
             this.mEGJEGYZESDataGridViewTextBoxColumn.Name = "mEGJEGYZESDataGridViewTextBoxColumn";
             // 
-            // cIKKTableAdapter
-            // 
-            this.cIKKTableAdapter.ClearBeforeFill = true;
-            // 
             // eCAFEDataSetBindingSource
             // 
             this.eCAFEDataSetBindingSource.DataSource = this.eCAFEDataSet;
@@ -629,16 +712,13 @@
             // 
             this.rAKTARTableAdapter.ClearBeforeFill = true;
             // 
-            // checkBox2
+            // cIKKTableAdapter
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.cIKKBindingSource, "AKTIV", true));
-            this.checkBox2.Location = new System.Drawing.Point(502, 33);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(52, 17);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Aktív";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cIKKTableAdapter.ClearBeforeFill = true;
+            // 
+            // lIT_KISZTableAdapter
+            // 
+            this.lIT_KISZTableAdapter.ClearBeforeFill = true;
             // 
             // frmCikk
             // 
@@ -666,6 +746,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
+            this.tpKiszereles.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lITKISZBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBindingSource)).EndInit();
@@ -679,7 +762,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tpKiszereles;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private ECAFEDataSetCIKK eCAFEDataSetCIKK;
@@ -739,5 +822,13 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource lITKISZBindingSource;
+        private e_Cafe.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter lIT_KISZTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lITKISZIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lITKISZCIKKIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lITKISZNEVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lITKISZMENNYDataGridViewTextBoxColumn;
     }
 }

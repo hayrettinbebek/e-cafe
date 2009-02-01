@@ -55,6 +55,7 @@
     <Compile Include="Bevetelezes.cs" />
     <Compile Include="Cikk.cs" />
     <Compile Include="DEFS.cs" />
+    <Compile Include="EmailSending.cs" />
     <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="P2Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

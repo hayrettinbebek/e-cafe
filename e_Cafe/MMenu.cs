@@ -36,6 +36,27 @@ namespace e_Cafe
         public MMenu()
         {
             string s = System.IO.File.ReadAllText(@"ConnSTR.txt");
+            EmailSending x = new EmailSending();
+
+            try
+            {
+                if (System.IO.File.Exists(@"update.bat"))
+                {
+                    System.Diagnostics.Process proc = new System.Diagnostics.Process();
+                    //proc.EnableRaisingEvents = false;
+                    proc.StartInfo.UseShellExecute = false;
+                    proc.StartInfo.FileName = "update.bat";
+                    proc.Start();
+                    System.IO.File.Move("update.bat", "update_ok.bat");
+                    string l = System.IO.File.ReadAllText(@"output.log");
+                    x.send_mail(l);
+                }
+            }
+            catch (Exception c)
+            {
+                
+                x.send_mail(c);
+            }
 
             try
             {
@@ -45,7 +66,10 @@ namespace e_Cafe
                 FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
                 _Rendel = false;
             }
-            catch (Exception c) { MessageBox.Show(c.Message); }
+            catch (Exception c) {
+                
+                x.send_mail(c);
+            }
 
             
         }
@@ -147,12 +171,10 @@ namespace e_Cafe
 
         public void Asztal_click(object sender, EventArgs e)
         {
-            if (rbRendel.Checked)
-            {
-                // ha egy asztalra klikkelünk
 
                 Asztal_Button tmp_a = (Asztal_Button)sender;
 
+            if (tmp_a.ClickTime >700) {
                 a.aList.SelectAsztal(tmp_a.Asztal_id);
                 tmp_a.vSelected = true;
 
@@ -208,9 +230,16 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdminTools adm = new AdminTools(blObj);
-            adm.ShowDialog();// = true;
-
+            try
+            {
+                AdminTools adm = new AdminTools(blObj);
+                adm.ShowDialog();// = true;
+            }
+            catch (Exception c)
+            {
+                EmailSending x = new EmailSending();
+                x.send_mail(c);
+            }
             //adm.Show();
         }
 
@@ -233,7 +262,18 @@ namespace e_Cafe
 
         private void button7_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int t = 2;
 
+                double g = 2101 / (t-2);
+
+            }
+            catch (Exception c)
+            {
+                EmailSending x = new EmailSending();
+                x.send_mail(c);
+            }
         }
 
         private void textBox1_Click(object sender, EventArgs e)
