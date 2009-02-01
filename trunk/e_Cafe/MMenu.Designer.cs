@@ -38,7 +38,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.rbRendel = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlHelyek = new System.Windows.Forms.Panel();
@@ -69,7 +68,6 @@
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.rbRendel);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 639);
@@ -149,22 +147,6 @@
             this.button6.Text = "Törzsvásárlók";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button6.UseVisualStyleBackColor = false;
-            // 
-            // rbRendel
-            // 
-            this.rbRendel.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbRendel.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.rbRendel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.rbRendel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.rbRendel.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.rbRendel.Location = new System.Drawing.Point(44, 15);
-            this.rbRendel.Margin = new System.Windows.Forms.Padding(0);
-            this.rbRendel.Name = "rbRendel";
-            this.rbRendel.Size = new System.Drawing.Size(83, 75);
-            this.rbRendel.TabIndex = 3;
-            this.rbRendel.Tag = "2";
-            this.rbRendel.Text = "Rendel";
-            this.rbRendel.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -346,7 +328,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnlHelyek;
-        public System.Windows.Forms.CheckBox rbRendel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList btmImgList;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

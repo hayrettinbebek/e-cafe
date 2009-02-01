@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using BusinessLogic;
+
 namespace e_Cafe.Torzsek
 {
     public partial class frmHelyek : Form
@@ -25,7 +27,15 @@ namespace e_Cafe.Torzsek
 
         private void frmHelyek_FormClosing(object sender, FormClosingEventArgs e)
         {
-            hELYTableAdapter.Update(eCAFEDataSetHELY);
+            try
+            {
+                hELYTableAdapter.Update(eCAFEDataSetHELY);
+            }
+            catch (Exception c)
+            {
+                EmailSending x = new EmailSending();
+                x.send_mail(c);
+            }
         }
     }
 }

@@ -43,6 +43,10 @@
 
         public Asztal aObj;
 
+        public double ClickTime;
+
+        private DateTime t1;
+        private DateTime t2;
         private int _Asztal_id;
         private int _Asztal_type;
         private bool _Selected;
@@ -89,6 +93,7 @@
             // Display Image No 1 from ButtonImageList when mouse is clicked on the button
             //_Selected = 1;
             //Invalidate();
+            t1 = DateTime.Now;
         }
 
         protected override void OnMouseLeave(EventArgs e)
@@ -107,6 +112,13 @@
             Invalidate();
             _MouseOver = true;
             
+        }
+
+        protected override void OnMouseUp(MouseEventArgs mevent)
+        {
+            t2 = DateTime.Now;
+
+            ClickTime = (t2 - t1).TotalMilliseconds;
         }
 
         public void Init()

@@ -36,7 +36,34 @@ namespace e_Cafe.Torzsek
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            cIKKTableAdapter.Update(eCAFEDataSetCIKK);
+            
+            
+            cIKKTableAdapter.Update(eCAFEDataSetCIKK.CIKK);
+            lIT_KISZTableAdapter.Update(eCAFEDataSetCIKK.LIT_KISZ);
+        }
+        
+
+        private void cIKKBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (cIKKBindingSource.Current != null) {
+            
+            lIT_KISZTableAdapter.Fill(eCAFEDataSetCIKK.LIT_KISZ, (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
+        
+            }
+        }
+
+        private void lITKISZBindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            e.NewObject = eCAFEDataSetCIKK.LIT_KISZ.AddLIT_KISZRow((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], "", 0);
+           
+           
+        }
+
+        private void cIKKBindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            
+            e.NewObject = eCAFEDataSetCIKK.CIKK.AddCIKKRow();//"", 0, 1, "", "", 1, -1, "", "", "", 0, 0, 0, -1, 0, 0, "", 1);
+            cIKKBindingSource.ResetBindings(true);
         }
 
     }

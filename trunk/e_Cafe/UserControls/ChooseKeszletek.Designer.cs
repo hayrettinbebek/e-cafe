@@ -51,10 +51,10 @@
             this.tblKeszletek.Size = new System.Drawing.Size(317, 247);
             this.tblKeszletek.TabIndex = 2;
             this.tblKeszletek.Text = "table1";
-            this.tblKeszletek.Click += new System.EventHandler(this.tblKeszletek_Click);
+            
             this.tblKeszletek.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tblKeszletek_MouseDown);
             this.tblKeszletek.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tblKeszletek_MouseUp);
-            this.tblKeszletek.SelectionChanged += new XPTable.Events.SelectionEventHandler(this.tblKeszletek_SelectionChanged);
+            
             // 
             // panel1
             // 

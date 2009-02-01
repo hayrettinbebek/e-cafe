@@ -44,6 +44,11 @@ namespace e_Cafe
             }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            cikkBindingSource.Filter = "MEGNEVEZES like '%" + textBox1.Text + "'";
+        }
+
 
     }
 }

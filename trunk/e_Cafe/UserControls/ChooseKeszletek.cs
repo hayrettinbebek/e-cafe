@@ -93,11 +93,6 @@ namespace e_Cafe
                 }
 
             }
-
-
-            //MessageBox.Show((t2 - t1).TotalMilliseconds.ToString());   
-            
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -106,26 +101,15 @@ namespace e_Cafe
             this.Close();
         }
 
-
-
-
         private void tblKeszletek_MouseDown(object sender, MouseEventArgs e)
         {
             t1 = DateTime.Now;
             label1.Text = t1.ToString();
-
-            
+ 
         }
 
-        private void tblKeszletek_SelectionChanged(object sender, XPTable.Events.SelectionEventArgs e)
-        {
-            MessageBox.Show((t2 - t1).TotalMilliseconds.ToString());
-        }
 
-        private void tblKeszletek_Click(object sender, EventArgs e)
-        {
 
-        }
 
 
     }

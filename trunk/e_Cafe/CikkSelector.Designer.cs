@@ -32,7 +32,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aLAPRAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oSSZETETTDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -42,6 +41,7 @@
             this.aLCSOPORTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(226, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnOK
             // 
@@ -82,10 +83,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(479, 233);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // cikkBindingSource
-            // 
-            this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
             // 
             // mEGNEVEZESDataGridViewTextBoxColumn
             // 
@@ -148,6 +145,10 @@
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn.HeaderText = "ERTEKESITES_TIPUSA";
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn.Name = "eRTEKESITESTIPUSADataGridViewTextBoxColumn";
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cikkBindingSource
+            // 
+            this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
             // 
             // CikkSelector
             // 

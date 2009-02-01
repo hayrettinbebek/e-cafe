@@ -118,8 +118,10 @@ namespace e_Cafe
         private void Asztalok_MouseDown(object sender, MouseEventArgs e)
         {
             AsztalInfo ai = new AsztalInfo();
-            if (!mm.rbRendel.Checked)
-            {
+            Asztal_Button tmp_a = (Asztal_Button)sender;
+
+            if (tmp_a.ClickTime < 700) {
+
                 ai.Location = e.Location;
                 ai.Show();
             }
