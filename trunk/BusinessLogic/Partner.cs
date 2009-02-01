@@ -210,6 +210,7 @@ namespace BusinessLogic
             set { _nem = value; }
         }
         #endregion
+
         #region KOD
         private string _kod;
         public string KOD
@@ -1023,7 +1024,6 @@ namespace BusinessLogic
         }
 
     }
-
 
     public class Partner_bsz
     {
