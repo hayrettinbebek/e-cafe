@@ -261,21 +261,7 @@ namespace e_Cafe
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int t = 2;
 
-                double g = 2101 / (t-2);
-
-            }
-            catch (Exception c)
-            {
-                EmailSending x = new EmailSending();
-                x.send_mail(c);
-            }
-        }
 
         private void textBox1_Click(object sender, EventArgs e)
         {
@@ -286,8 +272,10 @@ namespace e_Cafe
 
         private void btnPartnerek_Click(object sender, EventArgs e)
         {
-            Szallito s = new Szallito(1, new SqlConnection(DEFS.ConSTR));
-            MessageBox.Show(s.ToString());
+            MMPartnerek f = new MMPartnerek();
+            
+            f.ShowDialog();
+
         }
 
 

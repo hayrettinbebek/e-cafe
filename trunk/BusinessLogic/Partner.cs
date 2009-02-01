@@ -653,7 +653,7 @@ namespace BusinessLogic
     public class Partner_list
     {
         public List<Szallito> lSzallitok = new List<Szallito>();
-
+        public List<Vevo> lVevok = new List<Vevo>();
 
         public Partner_list(SqlConnection sc)
         {
@@ -679,6 +679,8 @@ namespace BusinessLogic
                         }
                     case "V":
                         {
+                            Vevo t = new Vevo((int)rdr["PARTNER_ID"], new SqlConnection(DEFS.ConSTR));
+                            lVevok.Add(t);
                             break;
                         }
                     case "":
