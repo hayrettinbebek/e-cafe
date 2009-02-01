@@ -163,5 +163,12 @@ namespace e_Cafe
             f.MdiParent = this;
             f.Show();
         }
+
+        private void mmSzallitok_Click(object sender, EventArgs e)
+        {
+            frmSzallito f = new frmSzallito();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

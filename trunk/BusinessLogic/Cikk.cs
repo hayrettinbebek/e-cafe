@@ -567,7 +567,7 @@ namespace BusinessLogic
         
 
         public List<OTF> lOTF = new List<OTF>();
-        TBLObj pBLObj;
+        
 
         public OTF_list(int pCIKKCSOP_ID, SqlConnection sc)
         {
@@ -643,7 +643,7 @@ namespace BusinessLogic
        
 
         public List<Cikkcsoport> lCIKKCSOPORT = new List<Cikkcsoport>();
-        TBLObj pBLObj;
+        
 
         public Cikkcsoport_list(SqlConnection sc)
         {
