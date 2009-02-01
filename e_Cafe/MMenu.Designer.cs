@@ -52,6 +52,7 @@
             this.lblTime = new System.Windows.Forms.Button();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnPartnerek = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -61,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(173)))), ((int)(((byte)(164)))));
+            this.panel1.Controls.Add(this.btnPartnerek);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -283,6 +285,18 @@
             this.panel6.Size = new System.Drawing.Size(1016, 13);
             this.panel6.TabIndex = 0;
             // 
+            // btnPartnerek
+            // 
+            this.btnPartnerek.BackColor = System.Drawing.Color.Transparent;
+            this.btnPartnerek.Location = new System.Drawing.Point(721, 14);
+            this.btnPartnerek.Name = "btnPartnerek";
+            this.btnPartnerek.Size = new System.Drawing.Size(83, 75);
+            this.btnPartnerek.TabIndex = 9;
+            this.btnPartnerek.Text = "Partnerek";
+            this.btnPartnerek.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnPartnerek.UseVisualStyleBackColor = false;
+            this.btnPartnerek.Click += new System.EventHandler(this.btnPartnerek_Click);
+            // 
             // MMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +347,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnPartnerek;
         
     }
 }

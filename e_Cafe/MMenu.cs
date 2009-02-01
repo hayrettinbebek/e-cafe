@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,38 +39,38 @@ namespace e_Cafe
             string s = System.IO.File.ReadAllText(@"ConnSTR.txt");
             EmailSending x = new EmailSending();
 
-            try
-            {
-                if (System.IO.File.Exists(@"update.bat"))
-                {
-                    System.Diagnostics.Process proc = new System.Diagnostics.Process();
-                    //proc.EnableRaisingEvents = false;
-                    proc.StartInfo.UseShellExecute = false;
-                    proc.StartInfo.FileName = "update.bat";
-                    proc.Start();
-                    System.IO.File.Move("update.bat", "update_ok.bat");
-                    string l = System.IO.File.ReadAllText(@"output.log");
-                    x.send_mail(l);
-                }
-            }
-            catch (Exception c)
-            {
+            //try
+            //{
+            //    if (System.IO.File.Exists(@"update.bat"))
+            //    {
+            //        System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            //        //proc.EnableRaisingEvents = false;
+            //        proc.StartInfo.UseShellExecute = false;
+            //        proc.StartInfo.FileName = "update.bat";
+            //        proc.Start();
+            //        System.IO.File.Move("update.bat", "update_ok.bat");
+            //        string l = System.IO.File.ReadAllText(@"output.log");
+            //        x.send_mail(l);
+            //    }
+            //}
+            //catch (Exception c)
+            //{
                 
-                x.send_mail(c);
-            }
+            //    x.send_mail(c);
+            //}
 
-            try
-            {
+            //try
+            //{
 
                 DEFS.ConSTR = e_Cafe.Properties.Settings.Default.ECAFEConnectionString; // e_Cafe.Properties.Settings.Default.cnSTR;
                 InitializeComponent();
                 FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
                 _Rendel = false;
-            }
-            catch (Exception c) {
+            //}
+            //catch (Exception c) {
                 
-                x.send_mail(c);
-            }
+            //    x.send_mail(c);
+            //}
 
             
         }
@@ -230,16 +231,16 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 AdminTools adm = new AdminTools(blObj);
                 adm.ShowDialog();// = true;
-            }
-            catch (Exception c)
-            {
-                EmailSending x = new EmailSending();
-                x.send_mail(c);
-            }
+            //}
+            //catch (Exception c)
+            //{
+            //    EmailSending x = new EmailSending();
+            //    x.send_mail(c);
+            //}
             //adm.Show();
         }
 
@@ -281,6 +282,12 @@ namespace e_Cafe
             TouchKeyboard tk = new TouchKeyboard();
             tk.ShowDialog();
             textBox1.Text = tk.txtRet.Text;
+        }
+
+        private void btnPartnerek_Click(object sender, EventArgs e)
+        {
+            Szallito s = new Szallito(1, new SqlConnection(DEFS.ConSTR));
+            MessageBox.Show(s.ToString());
         }
 
 
