@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace GUI.billentyu
 {
-    public partial class TouchKeyboard : Form
+    public partial class keyb2 : UserControl
     {
-        public TouchKeyboard()
+        public keyb2()
         {
             InitializeComponent();
         }
@@ -22,22 +22,18 @@ namespace GUI.billentyu
             SendKeys.Send(((Button)sender).Text);
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void back_Click(object sender, EventArgs e)
         {
-             txtRet.Focus();
-             SendKeys.Send("{BACKSPACE}");
-            
+            txtRet.Focus();
+            SendKeys.Send("{BACKSPACE}");
+
         }
 
 
-        private void button17_Click(object sender, EventArgs e)
+        private void space_Click(object sender, EventArgs e)
         {
             txtRet.Focus();
             SendKeys.Send(" ");
         }
-
-
-
-
     }
 }

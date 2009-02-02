@@ -32,6 +32,7 @@ namespace e_Cafe
 
         private void loadPartnerek()
         {
+            flpPartner.Controls.Clear();
             Partner_list pl = new Partner_list(new SqlConnection(DEFS.ConSTR));
             for (int i = 0; i < pl.lSzallitok.Count; i++)
             {
@@ -42,5 +43,14 @@ namespace e_Cafe
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmShadowLayer p = new frmShadowLayer();
+            p.ShowDialog();
+
+        }
+
+
     }
 }

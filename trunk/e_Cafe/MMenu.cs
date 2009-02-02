@@ -174,8 +174,8 @@ namespace e_Cafe
         {
 
                 Asztal_Button tmp_a = (Asztal_Button)sender;
-
-            if (tmp_a.ClickTime >700) {
+                tmp_a.Text = tmp_a.ClickTime.ToString();
+            if (tmp_a.ClickTime >300) {
                 a.aList.SelectAsztal(tmp_a.Asztal_id);
                 tmp_a.vSelected = true;
 

@@ -636,7 +636,7 @@
             this.button42.TabIndex = 42;
             this.button42.Text = "ENTER";
             this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
+            
             // 
             // button43
             // 
@@ -799,7 +799,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(638, 274);
+            this.ClientSize = new System.Drawing.Size(632, 242);
+            this.ControlBox = false;
             this.Controls.Add(this.button43);
             this.Controls.Add(this.button44);
             this.Controls.Add(this.button45);
@@ -859,6 +860,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
