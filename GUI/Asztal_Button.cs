@@ -113,6 +113,12 @@
             _MouseOver = true;
             
         }
+        protected override void OnClick(EventArgs e)
+        {
+            t2 = DateTime.Now;
+            ClickTime = (t2 - t1).TotalMilliseconds;
+            base.OnClick(e);
+        }
 
         protected override void OnMouseUp(MouseEventArgs mevent)
         {

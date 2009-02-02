@@ -580,11 +580,12 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT OTHER_FILTER_ID ,CIKKCSOPORT_ID  ,OTHER_NAME FROM CIKCSOP_OTHER_FILTER WHERE CIKKCSOPORT_ID = " + pCIKKCSOP_ID.ToString();
+            cmd.CommandText = "SELECT OTHER_FILTER_ID ,CIKKCSOPORT_ID  ,isnull(OTHER_NAME,'') as OTHER_NAME FROM CIKCSOP_OTHER_FILTER WHERE CIKKCSOPORT_ID = " + pCIKKCSOP_ID.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
+
                 OTF t = new OTF((int)rdr["OTHER_FILTER_ID"], 
                                 (int)rdr["CIKKCSOPORT_ID"],
                                 (string)rdr["OTHER_NAME"]);
