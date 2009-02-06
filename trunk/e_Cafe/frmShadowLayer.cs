@@ -11,15 +11,18 @@ namespace e_Cafe
 {
     public partial class frmShadowLayer : Form
     {
+        public int param;
+
         public frmShadowLayer()
         {
             InitializeComponent();
-
+            param = 0;
         }
 
         private void frmShadowLayer_Load(object sender, EventArgs e)
         {
-            frmPartnerInsert p = new frmPartnerInsert();
+            if (param == 0) { Close(); }
+            frmPartnerInsert p = new frmPartnerInsert(param);
             p.ShowDialog();
             Close();
         }

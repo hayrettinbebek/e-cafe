@@ -547,6 +547,8 @@
     <Content Include="ConnSTR.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\DataSources\BusinessLogic.DynCombo.datasource" />
+    <None Include="Properties\DataSources\BusinessLogic.Vevo.datasource" />
     <None Include="Resources\also.PNG" />
     <None Include="Resources\oldal.PNG" />
     <None Include="Resources\hatter.png" />

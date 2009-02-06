@@ -31,8 +31,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.flpPartner = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox2 = new System.Windows.Forms.RadioButton();
@@ -79,14 +79,6 @@
             this.panel9.Size = new System.Drawing.Size(214, 486);
             this.panel9.TabIndex = 2;
             // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(828, 28);
-            this.panel8.TabIndex = 1;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
@@ -98,6 +90,14 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(828, 28);
+            this.panel8.TabIndex = 1;
             // 
             // panel4
             // 
@@ -147,7 +147,7 @@
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(120, 54);
             this.checkBox2.TabIndex = 8;
-            this.checkBox2.Tag = "1";
+            this.checkBox2.Tag = "D";
             this.checkBox2.Text = "Dolgozók";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
@@ -167,7 +167,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(120, 54);
             this.checkBox1.TabIndex = 7;
-            this.checkBox1.Tag = "1";
+            this.checkBox1.Tag = "T";
             this.checkBox1.Text = "Törzsvendégek";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
@@ -187,7 +187,8 @@
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(120, 54);
             this.checkBox3.TabIndex = 6;
-            this.checkBox3.Tag = "1";
+            this.checkBox3.TabStop = true;
+            this.checkBox3.Tag = "V";
             this.checkBox3.Text = "Partnerek";
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);

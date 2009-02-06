@@ -11,6 +11,8 @@ namespace GUI.billentyu
 {
     public partial class keyb2 : UserControl
     {
+        public TextBox OutTxtBox;
+
         public keyb2()
         {
             InitializeComponent();
@@ -34,6 +36,16 @@ namespace GUI.billentyu
         {
             txtRet.Focus();
             SendKeys.Send(" ");
+        }
+
+        private void txtRet_TextChanged(object sender, EventArgs e)
+        {
+            OutTxtBox.Text = txtRet.Text;
+        }
+
+        private void keyb2_Load(object sender, EventArgs e)
+        {
+            if (OutTxtBox != null) { txtRet.Visible = false; }
         }
     }
 }

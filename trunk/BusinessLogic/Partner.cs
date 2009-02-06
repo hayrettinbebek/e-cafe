@@ -7,6 +7,8 @@ using System.Text;
 
 namespace BusinessLogic
 {
+
+
     public class Szallito : Partner
     {
         private int Uj;
@@ -202,6 +204,7 @@ namespace BusinessLogic
 
     public class Vevo : Partner
     {
+        private int Uj;
         #region NEM
         private string _nem;
         public string NEM
@@ -272,6 +275,7 @@ namespace BusinessLogic
             : base()
         {
             P_TIPUS = "V";
+            Uj = -1;
 
         }
 
@@ -345,7 +349,7 @@ namespace BusinessLogic
 
 
 
-            switch (PARTNER_ID)
+            switch (Uj)
             {
                 case -1:
                     {
@@ -442,7 +446,7 @@ namespace BusinessLogic
         private string _nev1;
         public string P_NEV
         {
-            get { return (_nev1); }
+            get { if (_nev1 == null) { _nev1 = ""; } return (_nev1); }
             set { _nev1 = value; }
         }
         #endregion
@@ -451,7 +455,7 @@ namespace BusinessLogic
         private string _nev2;
         public string P_NEV2
         {
-            get { return (_nev2); }
+            get { if (_nev2 == null) { _nev2 = ""; } return (_nev2); }
             set { _nev2 = value; }
         }
         #endregion
@@ -460,7 +464,8 @@ namespace BusinessLogic
         private string _nev3;
         public string P_NEV3
         {
-            get { return (_nev3); }
+            get { if (_nev3 == null) {_nev3 = "";}
+                    return (_nev3); }
             set { _nev3 = value; }
         }
         #endregion
@@ -610,27 +615,12 @@ namespace BusinessLogic
             cmd.Parameters["P_NEV2"].Value = _nev2;
             cmd.Parameters["P_NEV3"].Value = _nev3;
 
-            //try
-            //{
             cmd.ExecuteNonQuery();
             if (_partner_id == -1)
             {
-                //cmd.CommandText = "SELECT TOP 1 PARTNER_ID FROM PARTNER " +
-                //                           "WHERE P_TIPUS = @P_TIPUS " +
-                //                              "AND P_NEV = @P_NEV " +
-                //                              "AND P_NEV2 = @P_NEV2 " +
-                //                              "AND P_NEV3 = @P_NEV3 ";
-                //cmd.Parameters["P_TIPUS"].Value = _tipus;
-                //cmd.Parameters["P_NEV"].Value = _nev1;
-                //cmd.Parameters["P_NEV2"].Value = _nev2;
-                //cmd.Parameters["P_NEV3"].Value = _nev3;
                 new_p_id = (int)cmd.Parameters["newid"].Value;
             }
-            //}
-            //catch (Exception e)
-            //{
-            //    string s = "Hiba a rendelés sorok mentése közben!" + _BEVETEL_FEJ_ID.ToString()+ e.Data;
-            //}
+            
             c.Close();
             foreach (var t in lTelefon)
             {
