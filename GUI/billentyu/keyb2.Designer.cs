@@ -767,6 +767,7 @@
             this.txtRet.Name = "txtRet";
             this.txtRet.Size = new System.Drawing.Size(534, 23);
             this.txtRet.TabIndex = 57;
+            this.txtRet.TextChanged += new System.EventHandler(this.txtRet_TextChanged);
             // 
             // button2
             // 
@@ -855,6 +856,7 @@
             this.Controls.Add(this.button1);
             this.Name = "keyb2";
             this.Size = new System.Drawing.Size(640, 250);
+            this.Load += new System.EventHandler(this.keyb2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
