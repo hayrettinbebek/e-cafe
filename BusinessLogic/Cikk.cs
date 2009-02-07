@@ -585,11 +585,13 @@ namespace BusinessLogic
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-
-                OTF t = new OTF((int)rdr["OTHER_FILTER_ID"], 
-                                (int)rdr["CIKKCSOPORT_ID"],
-                                (string)rdr["OTHER_NAME"]);
-                lOTF.Add(t);
+                if (rdr["OTHER_FILTER_ID"] != DBNull.Value)
+                {
+                    OTF t = new OTF((int)rdr["OTHER_FILTER_ID"],
+                                    (int)rdr["CIKKCSOPORT_ID"],
+                                    (string)rdr["OTHER_NAME"]);
+                    lOTF.Add(t);
+                }
             }
             rdr.Close();
             sc.Close();

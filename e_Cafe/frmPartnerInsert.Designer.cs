@@ -38,9 +38,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.vevoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -51,25 +53,27 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.NemSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlKeyb.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,6 +82,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NemSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlKeyb
@@ -104,12 +111,13 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(544, 257);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(422, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 26);
+            this.button1.Size = new System.Drawing.Size(88, 26);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Exit";
+            this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -153,71 +161,63 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.checkBox1);
-            this.panel4.Controls.Add(this.textBox7);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.textBox11);
-            this.panel4.Controls.Add(this.textBox9);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.textBox10);
-            this.panel4.Controls.Add(this.textBox4);
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.shapeContainer1);
+            this.panel4.Controls.Add(this.panel11);
+            this.panel4.Controls.Add(this.panel10);
+            this.panel4.Controls.Add(this.panel9);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(586, 496);
             this.panel4.TabIndex = 1;
             // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(401, 112);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(163, 98);
+            this.panel8.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(331, 116);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Szállítási cím";
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.vevoBindingSource, "TORZSV", true));
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(79, 463);
+            this.checkBox1.Location = new System.Drawing.Point(20, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(83, 17);
             this.checkBox1.TabIndex = 13;
             this.checkBox1.Text = "Törzsvásárló";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // vevoBindingSource
+            // 
+            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
+            // 
             // textBox7
             // 
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "BANK_SZLA", true));
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox7.Location = new System.Drawing.Point(95, 363);
+            this.textBox7.Location = new System.Drawing.Point(105, 324);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(201, 19);
             this.textBox7.TabIndex = 8;
             this.textBox7.Click += new System.EventHandler(this.txt_to_keyboard_Click);
             this.textBox7.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
-            // vevoBindingSource
-            // 
-            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1, 368);
+            this.label6.Location = new System.Drawing.Point(4, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 13);
             this.label6.TabIndex = 1;
@@ -228,7 +228,7 @@
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "SZULETESNAP", true));
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox11.Location = new System.Drawing.Point(98, 308);
+            this.textBox11.Location = new System.Drawing.Point(105, 269);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(104, 19);
             this.textBox11.TabIndex = 7;
@@ -240,7 +240,7 @@
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "VEVO_MAIL", true));
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox9.Location = new System.Drawing.Point(98, 257);
+            this.textBox9.Location = new System.Drawing.Point(105, 218);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(201, 19);
             this.textBox9.TabIndex = 5;
@@ -250,7 +250,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(53, 262);
+            this.label10.Location = new System.Drawing.Point(56, 223);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 1;
@@ -261,7 +261,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "MOBIL_SZAM", true));
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox5.Location = new System.Drawing.Point(98, 233);
+            this.textBox5.Location = new System.Drawing.Point(105, 194);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(201, 19);
             this.textBox5.TabIndex = 4;
@@ -271,7 +271,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 236);
+            this.label9.Location = new System.Drawing.Point(23, 197);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 13);
             this.label9.TabIndex = 1;
@@ -279,14 +279,14 @@
             // 
             // panel7
             // 
-            this.panel7.Location = new System.Drawing.Point(95, 155);
+            this.panel7.Location = new System.Drawing.Point(96, 112);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(238, 67);
+            this.panel7.Size = new System.Drawing.Size(219, 67);
             this.panel7.TabIndex = 11;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(19, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 72);
             this.pictureBox1.TabIndex = 10;
@@ -299,7 +299,7 @@
             this.comboBox2.DisplayMember = "DISPLAY_MEMBER";
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(417, 342);
+            this.comboBox2.Location = new System.Drawing.Point(416, 299);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(73, 21);
             this.comboBox2.TabIndex = 9;
@@ -309,27 +309,10 @@
             // 
             this.NemSource.DataSource = typeof(BusinessLogic.DynCombo);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vevoBindingSource, "P_TIPUS", true));
-            this.comboBox1.DataSource = this.dynComboBindingSource;
-            this.comboBox1.DisplayMember = "DISPLAY_MEMBER";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(417, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(117, 21);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.ValueMember = "VALUE_MEMBER";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // dynComboBindingSource
-            // 
-            this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
-            // 
             // textBox10
             // 
             this.textBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "HITEL", true));
-            this.textBox10.Location = new System.Drawing.Point(417, 369);
+            this.textBox10.Location = new System.Drawing.Point(419, 326);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 20);
             this.textBox10.TabIndex = 7;
@@ -341,7 +324,7 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "KOD", true));
             this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(105, 12);
+            this.textBox4.Location = new System.Drawing.Point(91, 15);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(126, 20);
             this.textBox4.TabIndex = 5;
@@ -351,7 +334,7 @@
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "SZEMELYI", true));
-            this.textBox6.Location = new System.Drawing.Point(98, 289);
+            this.textBox6.Location = new System.Drawing.Point(105, 250);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(120, 13);
             this.textBox6.TabIndex = 6;
@@ -363,7 +346,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "P_NEV3", true));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(94, 117);
+            this.textBox3.Location = new System.Drawing.Point(78, 73);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(313, 25);
             this.textBox3.TabIndex = 3;
@@ -375,7 +358,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "P_NEV2", true));
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(94, 91);
+            this.textBox2.Location = new System.Drawing.Point(78, 42);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(313, 25);
             this.textBox2.TabIndex = 2;
@@ -387,26 +370,17 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "P_NEV", true));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(94, 66);
+            this.textBox1.Location = new System.Drawing.Point(78, 14);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(313, 25);
             this.textBox1.TabIndex = 1;
             this.textBox1.Click += new System.EventHandler(this.txt_to_keyboard_Click);
             this.textBox1.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(372, 125);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Típus";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(372, 342);
+            this.label3.Location = new System.Drawing.Point(370, 302);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 1;
@@ -418,7 +392,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(26, 15);
+            this.label2.Location = new System.Drawing.Point(3, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 1;
@@ -427,7 +401,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(372, 372);
+            this.label7.Location = new System.Drawing.Point(371, 329);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 13);
             this.label7.TabIndex = 1;
@@ -436,7 +410,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 313);
+            this.label5.Location = new System.Drawing.Point(27, 274);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 1;
@@ -445,7 +419,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 155);
+            this.label1.Location = new System.Drawing.Point(64, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 1;
@@ -454,43 +428,31 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 289);
+            this.label4.Location = new System.Drawing.Point(42, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Személyi";
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(586, 496);
-            this.shapeContainer1.TabIndex = 12;
-            this.shapeContainer1.TabStop = false;
             // 
             // lineShape2
             // 
             this.lineShape2.BorderColor = System.Drawing.Color.Silver;
             this.lineShape2.BorderWidth = 2;
             this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 407;
-            this.lineShape2.X2 = 407;
-            this.lineShape2.Y1 = 153;
-            this.lineShape2.Y2 = 435;
+            this.lineShape2.X1 = 400;
+            this.lineShape2.X2 = 400;
+            this.lineShape2.Y1 = 112;
+            this.lineShape2.Y2 = 394;
             // 
             // lineShape1
             // 
             this.lineShape1.BorderColor = System.Drawing.Color.Silver;
             this.lineShape1.BorderWidth = 2;
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 91;
-            this.lineShape1.X2 = 91;
-            this.lineShape1.Y1 = 153;
-            this.lineShape1.Y2 = 435;
+            this.lineShape1.X1 = 95;
+            this.lineShape1.X2 = 95;
+            this.lineShape1.Y1 = 99;
+            this.lineShape1.Y2 = 381;
             // 
             // panel3
             // 
@@ -499,6 +461,87 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(586, 14);
             this.panel3.TabIndex = 0;
+            // 
+            // dynComboBindingSource
+            // 
+            this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.Controls.Add(this.textBox4);
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(586, 60);
+            this.panel9.TabIndex = 15;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.Controls.Add(this.checkBox1);
+            this.panel10.Controls.Add(this.button1);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(0, 452);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(586, 44);
+            this.panel10.TabIndex = 16;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.textBox10);
+            this.panel11.Controls.Add(this.comboBox2);
+            this.panel11.Controls.Add(this.panel8);
+            this.panel11.Controls.Add(this.label3);
+            this.panel11.Controls.Add(this.label7);
+            this.panel11.Controls.Add(this.label11);
+            this.panel11.Controls.Add(this.pictureBox1);
+            this.panel11.Controls.Add(this.label8);
+            this.panel11.Controls.Add(this.textBox1);
+            this.panel11.Controls.Add(this.textBox2);
+            this.panel11.Controls.Add(this.label6);
+            this.panel11.Controls.Add(this.textBox7);
+            this.panel11.Controls.Add(this.label10);
+            this.panel11.Controls.Add(this.label9);
+            this.panel11.Controls.Add(this.panel7);
+            this.panel11.Controls.Add(this.textBox11);
+            this.panel11.Controls.Add(this.textBox6);
+            this.panel11.Controls.Add(this.textBox9);
+            this.panel11.Controls.Add(this.textBox5);
+            this.panel11.Controls.Add(this.label5);
+            this.panel11.Controls.Add(this.label1);
+            this.panel11.Controls.Add(this.label4);
+            this.panel11.Controls.Add(this.shapeContainer2);
+            this.panel11.Controls.Add(this.textBox3);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(0, 60);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(586, 392);
+            this.panel11.TabIndex = 17;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer2.Size = new System.Drawing.Size(586, 392);
+            this.shapeContainer2.TabIndex = 12;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(413, 73);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Típus";
             // 
             // frmPartnerInsert
             // 
@@ -520,11 +563,16 @@
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vevoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NemSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -552,16 +600,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource dynComboBindingSource;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.BindingSource NemSource;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
@@ -571,6 +616,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private System.Windows.Forms.Label label8;
 
     }
 }

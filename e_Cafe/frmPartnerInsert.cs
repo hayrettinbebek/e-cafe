@@ -69,5 +69,10 @@ namespace e_Cafe
         {
 
         }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
