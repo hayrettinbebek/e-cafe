@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TouchKeyboard));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtRet = new System.Windows.Forms.TextBox();
@@ -636,7 +637,6 @@
             this.button42.TabIndex = 42;
             this.button42.Text = "ENTER";
             this.button42.UseVisualStyleBackColor = true;
-            
             // 
             // button43
             // 
@@ -799,6 +799,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(632, 242);
             this.ControlBox = false;
             this.Controls.Add(this.button43);
@@ -860,7 +862,6 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

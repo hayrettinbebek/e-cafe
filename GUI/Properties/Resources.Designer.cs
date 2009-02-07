@@ -60,6 +60,13 @@ namespace GUI.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap backspace_T {
+            get {
+                object obj = ResourceManager.GetObject("backspace_T", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap bill {
             get {
                 object obj = ResourceManager.GetObject("bill", resourceCulture);
@@ -74,9 +81,23 @@ namespace GUI.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap enter_T {
+            get {
+                object obj = ResourceManager.GetObject("enter_T", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap notepad_T {
             get {
                 object obj = ResourceManager.GetObject("notepad_T", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap space_T {
+            get {
+                object obj = ResourceManager.GetObject("space_T", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

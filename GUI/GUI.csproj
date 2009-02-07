@@ -715,6 +715,9 @@
     <Content Include="asztal\pult\pult_off.png" />
     <Content Include="asztal\pult\pult_on.png" />
     <Content Include="asztal\pult\pult_over.png" />
+    <None Include="billentyu\backspace_T.bmp" />
+    <None Include="billentyu\enter_T.bmp" />
+    <None Include="billentyu\space_T.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="asztal\180cw\.svn\props\" />

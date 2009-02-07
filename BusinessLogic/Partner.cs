@@ -231,6 +231,34 @@ namespace BusinessLogic
             set { _szig = value; }
         }
         #endregion
+
+
+        #region TORZSV
+        
+        public bool TORZSV
+        {
+            get { return (P_TIPUS == "T"); }
+            set
+            {
+                switch (value)
+                {
+                    case true:
+                        {
+                            P_TIPUS = "T";
+                            break;
+                        }
+                    case false:
+                        {
+                            P_TIPUS = "V";
+                            break;
+                        }
+
+                }
+            }
+                
+                
+        }
+        #endregion
                 
         #region SZULETESNAP
         private DateTime _szuldat;
@@ -268,6 +296,104 @@ namespace BusinessLogic
         }
         #endregion
 
+        #region MOBIL_SZAM
+        
+        public string MOBIL_SZAM
+        {
+            get {
+                string ret_telszam = "";
+                var ret_telefonszam =
+                    from c in lTelefon
+                    where c.TEL_TIPUS == 1
+                    select c;
+                ret_telefonszam.Each(c => ret_telszam = c.TELEFON);
+                return (ret_telszam);
+                }
+            set { string NewTelszam = value;
+
+                    var ret_telefonszam =
+                            from c in lTelefon
+                            where c.TEL_TIPUS == 1
+                            select c;
+                    if (ret_telefonszam.Count() > 0)
+                    {
+                        ret_telefonszam.Each(c => c.TELEFON = NewTelszam);
+                    }
+                    else
+                    {
+                        lTelefon.Add(new Partner_tel(PARTNER_ID, NewTelszam,1));
+                    }
+            }
+        }
+        #endregion
+
+        #region VEVO_MAIL
+
+        public string VEVO_MAIL
+        {
+            get
+            {
+                string ret_telszam = "";
+                var ret_telefonszam =
+                    from c in lTelefon
+                    where c.TEL_TIPUS == 2
+                    select c;
+                ret_telefonszam.Each(c => ret_telszam = c.TELEFON);
+                return (ret_telszam);
+            }
+            set
+            {
+                string NewTelszam = value;
+
+                var ret_telefonszam =
+                        from c in lTelefon
+                        where c.TEL_TIPUS == 2
+                        select c;
+                if (ret_telefonszam.Count() > 0)
+                {
+                    ret_telefonszam.Each(c => c.TELEFON = NewTelszam);
+                }
+                else
+                {
+                    lTelefon.Add(new Partner_tel(PARTNER_ID, NewTelszam, 2));
+                }
+            }
+        }
+        #endregion
+
+        #region BANK_SZLA
+
+        public string BANK_SZLA
+        {
+            get
+            {
+                string ret_banksz = "";
+                var ret_bankszamla =
+                    from c in lBankszamlak
+                    //where c. == 1
+                    select c;
+                ret_bankszamla.Each(c => ret_banksz = c.BANKSZAMLA);
+                return (ret_banksz);
+            }
+            set
+            {
+                string NewBanksz = value;
+
+                var ret_bankszamla =
+                    from c in lBankszamlak
+                    //where c. == 1
+                    select c;
+                if (ret_bankszamla.Count() > 0)
+                {
+                    ret_bankszamla.Each(c => c.BANKSZAMLA = NewBanksz);
+                }
+                else
+                {
+                    lBankszamlak.Add(new Partner_bsz(PARTNER_ID, NewBanksz));
+                }
+            }
+        }
+        #endregion
 
 
 
@@ -673,6 +799,12 @@ namespace BusinessLogic
                             lVevok.Add(t);
                             break;
                         }
+                    case "T":
+                        {
+                            Vevo t = new Vevo((int)rdr["PARTNER_ID"], new SqlConnection(DEFS.ConSTR));
+                            lVevok.Add(t);
+                            break;
+                        }
                     case "":
                         {
 
@@ -711,6 +843,13 @@ namespace BusinessLogic
         #endregion
 
         #region TEL_TIPUS
+        /*
+         * 1 - Mobil
+         * 2 - E-mail
+         * 3 - 
+         * 
+         
+         */
         private int _tel_tipus;
         public int TEL_TIPUS
         {
@@ -732,6 +871,14 @@ namespace BusinessLogic
         {
             _tel_id = -1;
             _partner_id = pPartner;
+        }
+
+        public Partner_tel(int pPartner, string pSzam, int ptype)
+        {
+            _tel_id = -1;
+            _partner_id = pPartner;
+            _telefon = pSzam;
+            _tel_tipus = ptype;
         }
 
         public Partner_tel(int pTel_id, SqlConnection c)
@@ -1060,6 +1207,14 @@ namespace BusinessLogic
         {
             _bsz_id = -1;
             _partner_id = pPartner;
+        }
+
+        public Partner_bsz(int pPartner, string pBSZ)
+        {
+            _bsz_id = -1;
+            _partner_id = pPartner;
+            _bank = "";
+            _bankszamla = pBSZ;
         }
 
         public Partner_bsz(int pbsz_id, SqlConnection c)

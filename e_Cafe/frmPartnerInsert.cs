@@ -40,15 +40,17 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            foreach (var k in vevoBindingSource.List)
+            {
+                ((Vevo)k).Save();
+            }
+
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (var k in vevoBindingSource.List)
-            {
-                ((Vevo)k).Save();
-            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -58,8 +60,14 @@ namespace e_Cafe
 
         private void txt_to_keyboard_Click(object sender, EventArgs e)
         {
+            keyb21.txtRet.Text = ((TextBox)sender).Text;
             keyb21.OutTxtBox = (TextBox)sender;
             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
