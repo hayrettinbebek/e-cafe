@@ -40,12 +40,20 @@ namespace GUI.billentyu
 
         private void txtRet_TextChanged(object sender, EventArgs e)
         {
-            OutTxtBox.Text = txtRet.Text;
+           
         }
 
         private void keyb2_Load(object sender, EventArgs e)
         {
             if (OutTxtBox != null) { txtRet.Visible = false; }
+        }
+
+        private void button42_Click(object sender, EventArgs e)
+        {
+            OutTxtBox.Text = txtRet.Text;
+            OutTxtBox.Focus();
+            SendKeys.Send("{TAB}");
+
         }
     }
 }

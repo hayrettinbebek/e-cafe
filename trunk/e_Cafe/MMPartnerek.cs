@@ -27,7 +27,7 @@ namespace e_Cafe
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            loadPartnerek("V");
+            loadPartnerek(((ButtonBase)sender).Tag.ToString());
         }
 
         private void loadPartnerek(string pPartnerType)
@@ -36,14 +36,17 @@ namespace e_Cafe
             Partner_list pl = new Partner_list(new SqlConnection(DEFS.ConSTR));
             switch (pPartnerType)
             {
-                case "S":
+                case "T":
                     {
-                        for (int i = 0; i < pl.lSzallitok.Count; i++)
+                        for (int i = 0; i < pl.lVevok.Count; i++)
                         {
-                            PartnerButton pb = new PartnerButton();
-                            pb.fPARTNER = (Partner)pl.lSzallitok[i];
-                            //cb.Click += onCikkClick;
-                            flpPartner.Controls.Add(pb);
+                            if (((Partner)pl.lVevok[i]).P_TIPUS == pPartnerType)
+                            {
+                                PartnerButton pb = new PartnerButton();
+                                pb.fPARTNER = (Partner)pl.lVevok[i];
+                                pb.Click += ShowPartner;
+                                flpPartner.Controls.Add(pb);
+                            }
 
                         }
                         break;
@@ -54,7 +57,7 @@ namespace e_Cafe
                         {
                             PartnerButton pb = new PartnerButton();
                             pb.fPARTNER = (Partner)pl.lVevok[i];
-                            //cb.Click += onCikkClick;
+                            pb.Click += ShowPartner;
                             flpPartner.Controls.Add(pb);
 
                         }
@@ -63,6 +66,13 @@ namespace e_Cafe
                     }       
 
             }
+
+        }
+        private void ShowPartner(object sender, EventArgs e)
+        {
+            frmShadowLayer p = new frmShadowLayer();
+            p.param = ((PartnerButton)sender).fPARTNER.PARTNER_ID;
+            p.ShowDialog();
 
         }
 

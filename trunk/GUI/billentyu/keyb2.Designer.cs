@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(keyb2));
             this.button43 = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
@@ -245,7 +246,7 @@
             // 
             this.button30.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button30.Image = global::GUI.Properties.Resources.button;
-            this.button30.Location = new System.Drawing.Point(472, 121);
+            this.button30.Location = new System.Drawing.Point(481, 121);
             this.button30.Margin = new System.Windows.Forms.Padding(0);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(38, 39);
@@ -258,7 +259,7 @@
             // 
             this.button31.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button31.Image = global::GUI.Properties.Resources.button;
-            this.button31.Location = new System.Drawing.Point(434, 121);
+            this.button31.Location = new System.Drawing.Point(443, 121);
             this.button31.Margin = new System.Windows.Forms.Padding(0);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(38, 39);
@@ -271,7 +272,7 @@
             // 
             this.button32.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button32.Image = global::GUI.Properties.Resources.button;
-            this.button32.Location = new System.Drawing.Point(396, 121);
+            this.button32.Location = new System.Drawing.Point(405, 121);
             this.button32.Margin = new System.Windows.Forms.Padding(0);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(38, 39);
@@ -284,7 +285,7 @@
             // 
             this.button33.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button33.Image = global::GUI.Properties.Resources.button;
-            this.button33.Location = new System.Drawing.Point(358, 121);
+            this.button33.Location = new System.Drawing.Point(367, 121);
             this.button33.Margin = new System.Windows.Forms.Padding(0);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(38, 39);
@@ -297,7 +298,7 @@
             // 
             this.button34.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button34.Image = global::GUI.Properties.Resources.button;
-            this.button34.Location = new System.Drawing.Point(320, 121);
+            this.button34.Location = new System.Drawing.Point(329, 121);
             this.button34.Margin = new System.Windows.Forms.Padding(0);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(38, 39);
@@ -310,7 +311,7 @@
             // 
             this.button35.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button35.Image = global::GUI.Properties.Resources.button;
-            this.button35.Location = new System.Drawing.Point(282, 121);
+            this.button35.Location = new System.Drawing.Point(291, 121);
             this.button35.Margin = new System.Windows.Forms.Padding(0);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(38, 39);
@@ -323,7 +324,7 @@
             // 
             this.button36.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button36.Image = global::GUI.Properties.Resources.button;
-            this.button36.Location = new System.Drawing.Point(244, 121);
+            this.button36.Location = new System.Drawing.Point(253, 121);
             this.button36.Margin = new System.Windows.Forms.Padding(0);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(38, 39);
@@ -336,7 +337,7 @@
             // 
             this.button37.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button37.Image = global::GUI.Properties.Resources.button;
-            this.button37.Location = new System.Drawing.Point(206, 121);
+            this.button37.Location = new System.Drawing.Point(215, 121);
             this.button37.Margin = new System.Windows.Forms.Padding(0);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(38, 39);
@@ -349,7 +350,7 @@
             // 
             this.button38.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button38.Image = global::GUI.Properties.Resources.button;
-            this.button38.Location = new System.Drawing.Point(168, 121);
+            this.button38.Location = new System.Drawing.Point(177, 121);
             this.button38.Margin = new System.Windows.Forms.Padding(0);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(38, 39);
@@ -362,7 +363,7 @@
             // 
             this.button39.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button39.Image = global::GUI.Properties.Resources.button;
-            this.button39.Location = new System.Drawing.Point(130, 121);
+            this.button39.Location = new System.Drawing.Point(139, 121);
             this.button39.Margin = new System.Windows.Forms.Padding(0);
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(38, 39);
@@ -375,7 +376,7 @@
             // 
             this.button40.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button40.Image = global::GUI.Properties.Resources.button;
-            this.button40.Location = new System.Drawing.Point(92, 121);
+            this.button40.Location = new System.Drawing.Point(101, 121);
             this.button40.Margin = new System.Windows.Forms.Padding(0);
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(38, 39);
@@ -388,7 +389,7 @@
             // 
             this.button41.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button41.Image = global::GUI.Properties.Resources.button;
-            this.button41.Location = new System.Drawing.Point(54, 121);
+            this.button41.Location = new System.Drawing.Point(63, 121);
             this.button41.Margin = new System.Windows.Forms.Padding(0);
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(38, 39);
@@ -399,26 +400,27 @@
             // 
             // button42
             // 
+            this.button42.BackgroundImage = global::GUI.Properties.Resources.enter_T;
+            this.button42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button42.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button42.Image = global::GUI.Properties.Resources.button;
             this.button42.Location = new System.Drawing.Point(498, 82);
             this.button42.Margin = new System.Windows.Forms.Padding(0);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(78, 78);
+            this.button42.Size = new System.Drawing.Size(88, 78);
             this.button42.TabIndex = 97;
-            this.button42.Text = "ENTER";
             this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
             // button17
             // 
+            this.button17.BackgroundImage = global::GUI.Properties.Resources.space_T;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button17.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button17.Image = global::GUI.Properties.Resources.button;
-            this.button17.Location = new System.Drawing.Point(66, 199);
+            this.button17.Location = new System.Drawing.Point(139, 199);
             this.button17.Margin = new System.Windows.Forms.Padding(0);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(456, 39);
+            this.button17.Size = new System.Drawing.Size(333, 39);
             this.button17.TabIndex = 84;
-            this.button17.Text = "SPACE";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.space_Click);
             // 
@@ -580,14 +582,14 @@
             // 
             // button16
             // 
+            this.button16.BackgroundImage = global::GUI.Properties.Resources.backspace_T;
+            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button16.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button16.Image = global::GUI.Properties.Resources.button;
             this.button16.Location = new System.Drawing.Point(510, 43);
             this.button16.Margin = new System.Windows.Forms.Padding(0);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(97, 39);
             this.button16.TabIndex = 71;
-            this.button16.Text = "BACK";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.back_Click);
             // 
@@ -799,6 +801,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.button43);
             this.Controls.Add(this.button44);
             this.Controls.Add(this.button45);
@@ -854,6 +858,7 @@
             this.Controls.Add(this.txtRet);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.Name = "keyb2";
             this.Size = new System.Drawing.Size(640, 250);
             this.Load += new System.EventHandler(this.keyb2_Load);
