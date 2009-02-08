@@ -4,6 +4,7 @@ using System.Text;
 using System.Data;
 using System.Linq;
 using System.Data.SqlClient;
+using NSpring.Logging;
 
 namespace BusinessLogic
 {
@@ -156,6 +157,7 @@ namespace BusinessLogic
             while (rdr.Read())
             {
                 lKESZLET.Add(new CikkKeszlet((int)rdr["RAKTAR_ID"], (string)rdr["RAKTAR_NEV"], (double)rdr["KESZLET"], (double)rdr["KESZLET_ERTEK"]));
+                DEFS.log(Level.Debug, "Keszlet:" + "-->" + rdr["RAKTAR_ID"] + "-->" + rdr["RAKTAR_NEV"] + "-->" + rdr["KESZLET"] + "-->" + rdr["KESZLET_ERTEK"]);
             }
             c.Close();
         }
@@ -185,6 +187,9 @@ namespace BusinessLogic
                 ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
                 KISZ_MEGN = (string)rdr["KISZ_NEV"];
                 KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+                DEFS.log(Level.Debug, "CikK olvasása" + rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
+                        rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + rdr["KISZ_NEV"] + "#" + rdr["KISZ_MENNY"] + "#" + "#" + "#" + "#");
+
             }
             getKeszlet();
             CIKK_KISZERELES = new CikkKiszerelesList(fCIKK_ID, new SqlConnection(DEFS.ConSTR));
@@ -261,13 +266,15 @@ namespace BusinessLogic
             cmd.Parameters["OTHER_FILTER_ID"].Value = ALCSOPORT;
             cmd.Parameters["DEFAULT_RAKTAR"].Value = ALAP_RAKTAR;
 
+            DEFS.log(Level.Debug, @"Cikk instert / update" + cmd.CommandText);
             try
             {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                string s = "Hiba a rendelés sorok mentése közben!" + fCIKK_ID.ToString();
+                DEFS.log(Level.Info, "Hiba a Cikk mentése során:" + "/n" + e.Message + "/n" + e.StackTrace);
+                
             }
             if (CIKK_KISZERELES != null)
             {
@@ -336,6 +343,8 @@ namespace BusinessLogic
                 t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
                 t.getKeszlet();
                 lCIKK.Add(t);
+                DEFS.log(Level.Debug, rdr["CIKK_ID"]+"#"+rdr["MEGNEVEZES"]+"#"+rdr["CIKK_TIPUS"]+"#"+rdr["CIKKCSOPORT_ID"]+"#"+
+                        rdr["OTHER_FILTER_ID"]+"#"+rdr["DEFAULT_RAKTAR"]+"#"+rdr["ERT_TIPUS"]+"#"+rdr["KISZ_NEV"]+"#"+rdr["KISZ_MENNY"]+"#"+"#"+"#"+"#");
             }
             rdr.Close();
             sc.Close();
@@ -464,6 +473,7 @@ namespace BusinessLogic
                         break;
                     }
             }
+            DEFS.log(Level.Debug, "Kiszerelések:" + cmd.CommandText);
 
             cmd.Parameters.Add(new SqlParameter("LIT_KISZ_CIKK_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("LIT_KISZ_NEV", SqlDbType.VarChar));
@@ -480,7 +490,8 @@ namespace BusinessLogic
             }
             catch (Exception e)
             {
-                string s = "Hiba a rendelés sorok mentése közben!" + fLIT_KISZ_ID.ToString();
+                DEFS.log(Level.Info,"Hiba a rendelés sorok mentése közben!" + fLIT_KISZ_ID.ToString() + "/n" + e.Message + "/n" + e.StackTrace);
+                
             }
             c.Close();
             
@@ -508,8 +519,10 @@ namespace BusinessLogic
             cmd.CommandText = "SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ WHERE LIT_KISZ_CIKK_ID = " + pCikkId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
+            
             while (rdr.Read())
             {
+                
                 CikkKiszereles t = new CikkKiszereles((int)rdr["LIT_KISZ_ID"],
                                 (int)rdr["LIT_KISZ_CIKK_ID"],
                                 (string)rdr["LIT_KISZ_NEV"],
@@ -581,7 +594,7 @@ namespace BusinessLogic
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "SELECT OTHER_FILTER_ID ,CIKKCSOPORT_ID  ,isnull(OTHER_NAME,'') as OTHER_NAME FROM CIKCSOP_OTHER_FILTER WHERE CIKKCSOPORT_ID = " + pCIKKCSOP_ID.ToString();
-
+            
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
@@ -660,7 +673,7 @@ namespace BusinessLogic
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "SELECT CIKKCSOPORT_ID, CIKKCSOPORT_NEV, AFA_KOD  FROM CIKKCSOPORT";
-
+            DEFS.log(Level.Debug, "Get Cikkcsoportok:");
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
@@ -668,6 +681,8 @@ namespace BusinessLogic
                                   (string)rdr["CIKKCSOPORT_NEV"]);
                 t.AFA_KOD = (string)rdr["AFA_KOD"];
                 lCIKKCSOPORT.Add(t);
+                DEFS.log(Level.Debug, rdr["CIKKCSOPORT_ID"]+"-->"+rdr["CIKKCSOPORT_NEV"]+"-->"+rdr["AFA_KOD"]);
+
             }
             rdr.Close();
             sc.Close();
