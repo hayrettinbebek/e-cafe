@@ -6,8 +6,14 @@ using System.Drawing;
 using System.Data;
 using System.Data.SqlClient;
 
+using NSpring.Logging;
+using NSpring.Logging.EventFormatters;
+
+
+
 namespace BusinessLogic
 {
+
     
     public abstract class DEFS
     {
@@ -19,6 +25,9 @@ namespace BusinessLogic
         public static int NyitNap_EV;
         public static int NyitNap_HO;
         public static int NyitNap_NAP;
+
+        private static Logger APP_LOG;
+
 
 
         public static void LoadNyitottNap()
@@ -42,6 +51,50 @@ namespace BusinessLogic
             c.Close();
 
             
+        }
+
+        public static void createLogger()
+        {
+            APP_LOG = Logger.CreateFileLogger(AppDomain.CurrentDomain.BaseDirectory + "\\log\\e_cafe_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.Year + "_" +
+                                                    DateTime.Now.Hour + "_" + DateTime.Now.Minute + "_" + DateTime.Now.Second +".log");
+            APP_LOG.IsBufferingEnabled = true;
+            APP_LOG.BufferSize = 1000;
+            APP_LOG.EventFormatter = new PatternEventFormatter("{mm}/{dd}/{yyyy} {time}  [{ln:uc}]  {msg}");
+            APP_LOG.Open();
+        }
+
+
+        public static void ExLog( string t)
+        {
+            if (!APP_LOG.IsOpen) { APP_LOG.Open(); }
+            APP_LOG.Log("\n");
+            APP_LOG.Log(Level.Exception, t);
+            APP_LOG.Log("\n");
+
+
+            APP_LOG.Close();
+        }
+
+        public static void ObjLog(string t, object o)
+        {
+            if (!APP_LOG.IsOpen) { APP_LOG.Open(); }
+            APP_LOG.Log("\n");
+            APP_LOG.Log(t, o.ToString());
+            APP_LOG.Log("\n");
+
+
+            APP_LOG.Close();
+        }
+
+
+        public static void log(Level l, string t)
+        {
+            if (!APP_LOG.IsOpen) {APP_LOG.Open();}
+            APP_LOG.Log("\n");
+            APP_LOG.Log(l, t);
+            APP_LOG.Log("\n");
+
+            APP_LOG.Close();
         }
         
     }
@@ -98,5 +151,9 @@ namespace BusinessLogic
         }
 
     }
+
+
+
+
    
 }

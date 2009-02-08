@@ -125,6 +125,7 @@ namespace BusinessLogic
             isModified = false;
             _SZALLITOLEVEL_SZAM = "";
             _SZAMLASZAM = "";
+            _BISZ_SZAM = "";
 
         }
 

@@ -770,7 +770,7 @@ namespace BusinessLogic
     {
         public List<Szallito> lSzallitok = new List<Szallito>();
         public List<Vevo> lVevok = new List<Vevo>();
-
+        
         public Partner_list(SqlConnection sc)
         {
             sc.Open();
@@ -817,6 +817,7 @@ namespace BusinessLogic
             }
             rdr.Close();
             sc.Close();
+            
         }
 
 

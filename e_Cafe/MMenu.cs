@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using BusinessLogic;
 using GUI;
 using GUI.billentyu;
+using System.Threading;
+
+using NSpring.Logging;
 
 
 namespace e_Cafe
@@ -24,7 +27,7 @@ namespace e_Cafe
         public  bool _Rendel;
         MainMenuBtn tlpButtons;
 
-        private static int C_HELYEK_WIDTH = 150;
+        private static int C_HELYEK_WIDTH = 120;
         private static int C_HELYEK_HEIGHT = 60;
 
 
@@ -39,39 +42,22 @@ namespace e_Cafe
             string s = System.IO.File.ReadAllText(@"ConnSTR.txt");
             EmailSending x = new EmailSending();
 
-            //try
-            //{
-            //    if (System.IO.File.Exists(@"update.bat"))
-            //    {
-            //        System.Diagnostics.Process proc = new System.Diagnostics.Process();
-            //        //proc.EnableRaisingEvents = false;
-            //        proc.StartInfo.UseShellExecute = false;
-            //        proc.StartInfo.FileName = "update.bat";
-            //        proc.Start();
-            //        System.IO.File.Move("update.bat", "update_ok.bat");
-            //        string l = System.IO.File.ReadAllText(@"output.log");
-            //        x.send_mail(l);
-            //    }
-            //}
-            //catch (Exception c)
-            //{
-                
-            //    x.send_mail(c);
-            //}
+            DEFS.createLogger();
 
-            //try
-            //{
+            
 
                 DEFS.ConSTR = e_Cafe.Properties.Settings.Default.ECAFEConnectionString; // e_Cafe.Properties.Settings.Default.cnSTR;
                 InitializeComponent();
-                FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
+                try
+                {
+                    FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
+                } catch (Exception c)
+                {
+                    DEFS.log(Level.Exception, c.Message);
+                }
                 _Rendel = false;
-            //}
-            //catch (Exception c) {
-                
-            //    x.send_mail(c);
-            //}
 
+                DEFS.log(Level.Info, "Sikeres belépés");
             
         }
 
@@ -119,7 +105,8 @@ namespace e_Cafe
 
 
             tlpButtons.RowCount = cl.lHelyek.Count + 1;
-            
+            DEFS.log(Level.Debug, "Helyek betöltése");
+
             for (int i = 0; i < (cl.lHelyek.Count); i++)
             {
 
@@ -131,12 +118,14 @@ namespace e_Cafe
                 bt.Location = new Point(0, 0);
                 bt.Width = C_HELYEK_WIDTH;
                 bt.Height = C_HELYEK_HEIGHT;
-                bt.Dock = DockStyle.Fill;
                 bt.BackgroundImage = btmImgList.Images[0];
                 bt.BackgroundImageLayout = ImageLayout.Stretch;
+                
+                bt.Dock = DockStyle.Fill;
+                
                 //bt.ImageList = btmImgList;
                 //bt.ImageIndex = 0;
-                bt.HInit();
+                //bt.HInit();
 
 
                 bt.Click += HelyMenuClick;
@@ -146,8 +135,10 @@ namespace e_Cafe
 
                 tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, C_HELYEK_HEIGHT));
                 tlpButtons.Controls.Add(bt);
+                DEFS.log(Level.Debug, "Hely:" + cl.lHelyek[i].fHELY_ID.ToString() + ":" + cl.lHelyek[i].fHELY_NEV.ToString() + ":" + cl.lHelyek[i].fHELY_VAN_KEP.ToString());
             }
             tlpButtons.Refresh();
+            DEFS.log(Level.Debug, "Helyek inicializálása megtörtént");
 
         }
 
@@ -174,6 +165,10 @@ namespace e_Cafe
         {
 
                 Asztal_Button tmp_a = (Asztal_Button)sender;
+
+            DEFS.log(Level.Debug, "Asztal Klikk: id:"+tmp_a.aObj.fASZTAL_ID.ToString()+" rendeles:"+tmp_a.aObj.fRENDELES_ID.ToString());
+
+
                 tmp_a.Text = tmp_a.ClickTime.ToString();
             if (tmp_a.ClickTime >300) {
                 a.aList.SelectAsztal(tmp_a.Asztal_id);
@@ -275,6 +270,21 @@ namespace e_Cafe
             MMPartnerek f = new MMPartnerek();
             
             f.ShowDialog();
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
 
         }
 
