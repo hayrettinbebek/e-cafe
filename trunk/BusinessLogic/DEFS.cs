@@ -5,7 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 using NSpring.Logging;
 using NSpring.Logging.EventFormatters;
 
@@ -96,7 +96,14 @@ namespace BusinessLogic
 
             APP_LOG.Close();
         }
-        
+
+        public static void SendSaveErrMessage(string t)
+        {
+            string s = "Hiba a mentés során!" + "\n" + "Oka:" +"\n";
+            log(Level.Exception, s + t);
+            MessageBox.Show(s + t);
+
+        }
     }
 
 

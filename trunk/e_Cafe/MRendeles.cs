@@ -15,6 +15,8 @@ using XPTable;
 using XPTable.Models;
 using XPTable.Renderers;
 
+using NSpring.Logging;
+
 namespace e_Cafe
 {
     public partial class MRendeles : Form
@@ -187,6 +189,8 @@ namespace e_Cafe
             flpCikkek.Controls.Clear();
             Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
             List<Cikk> lButtons = new List<Cikk>();
+            DEFS.log(Level.Debug, "LoadCikkek() "+ pAlcsoportId.ToString() + " Cikkcsoport: " + pCikkcsoport.ToString());
+
             if (pAlcsoportId == -1)
             {
                 lButtons = lCikkList.CikkListByCsoport(pCikkcsoport);

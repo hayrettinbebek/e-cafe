@@ -56,7 +56,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -74,6 +73,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pnlKeyb.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -173,6 +173,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.dateTimePicker1);
             this.panel11.Controls.Add(this.textBox10);
             this.panel11.Controls.Add(this.comboBox2);
             this.panel11.Controls.Add(this.panel8);
@@ -188,7 +189,6 @@
             this.panel11.Controls.Add(this.label10);
             this.panel11.Controls.Add(this.label9);
             this.panel11.Controls.Add(this.panel7);
-            this.panel11.Controls.Add(this.textBox11);
             this.panel11.Controls.Add(this.textBox6);
             this.panel11.Controls.Add(this.textBox9);
             this.panel11.Controls.Add(this.textBox5);
@@ -354,18 +354,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(210, 67);
             this.panel7.TabIndex = 11;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "SZULETESNAP", true));
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox11.Location = new System.Drawing.Point(105, 269);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(104, 19);
-            this.textBox11.TabIndex = 7;
-            this.textBox11.Click += new System.EventHandler(this.txt_to_keyboard_Click);
-            this.textBox11.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
             // textBox6
             // 
@@ -545,6 +533,18 @@
             // 
             this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vevoBindingSource, "SZULETESNAP", true));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 270);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2012, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(111, 20);
+            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.Value = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+            // 
             // frmPartnerInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,7 +613,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox11;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox7;
@@ -625,6 +624,7 @@
         private System.Windows.Forms.Panel panel11;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
     }
 }

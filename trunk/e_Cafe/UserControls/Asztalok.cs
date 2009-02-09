@@ -84,7 +84,7 @@ namespace e_Cafe
         private ImageList GetimageList(int iAsztalType, int iRotate)
         {
             ImageList ilTmp = new System.Windows.Forms.ImageList();;
-            String tmpPath = @"asztal\";
+            String tmpPath = @"..\asztal\";
 
             ilTmp.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
 

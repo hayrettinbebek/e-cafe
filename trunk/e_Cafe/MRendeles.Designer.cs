@@ -36,12 +36,12 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlRendeles = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnUP = new System.Windows.Forms.Button();
             this.btnDOWN = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.tblRendeles = new XPTable.Models.Table();
             this.label1 = new System.Windows.Forms.Label();
-            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpCikkek = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -55,7 +55,7 @@
             this.textColumn1 = new XPTable.Models.TextColumn();
             this.numberColumn2 = new XPTable.Models.NumberColumn();
             this.dateTimeColumn1 = new XPTable.Models.DateTimeColumn();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
@@ -127,6 +127,16 @@
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(160, 67);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(93, 32);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Töröl";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // btnUP
             // 
             this.btnUP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -184,13 +194,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
-            // 
-            // btmImgList
-            // 
-            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
-            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.btmImgList.Images.SetKeyName(0, "off_T.bmp");
-            this.btmImgList.Images.SetKeyName(1, "aktiv_T.bmp");
             // 
             // panel3
             // 
@@ -254,8 +257,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ImageKey = "aktiv_T.bmp";
-            this.button4.ImageList = this.btmImgList;
-            this.button4.Location = new System.Drawing.Point(130, 27);
+            this.button4.Location = new System.Drawing.Point(804, 20);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(152, 65);
@@ -270,15 +272,12 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnDelete
+            // btmImgList
             // 
-            this.btnDelete.Location = new System.Drawing.Point(160, 67);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(93, 32);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Töröl";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
+            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.btmImgList.Images.SetKeyName(0, "off.png");
+            this.btmImgList.Images.SetKeyName(1, "aktiv.png");
             // 
             // MRendeles
             // 
@@ -322,7 +321,6 @@
         private System.Windows.Forms.Panel pnlOtherFilter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlOldalsav;
-        private System.Windows.Forms.ImageList btmImgList;
         private System.Windows.Forms.FlowLayoutPanel flpCikkek;
         private XPTable.Models.CheckBoxColumn checkBoxColumn1;
         private XPTable.Models.NumberColumn numberColumn1;
@@ -334,5 +332,6 @@
         private System.Windows.Forms.Button btnDOWN;
         private System.Windows.Forms.Button btnUP;
         private System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.ImageList btmImgList;
     }
 }

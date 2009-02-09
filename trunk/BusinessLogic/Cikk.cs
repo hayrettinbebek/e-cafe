@@ -332,19 +332,28 @@ namespace BusinessLogic
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                Cikk t = new Cikk((int)rdr["CIKK_ID"],
-                                  (string)rdr["MEGNEVEZES"], 
-                                  (int)rdr["CIKK_TIPUS"], 
-                                  (int)rdr["CIKKCSOPORT_ID"]);
-                t.ALCSOPORT = (int)rdr["OTHER_FILTER_ID"];
-                t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
-                t.ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
-                t.KISZ_MEGN = (string)rdr["KISZ_NEV"];
-                t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
-                t.getKeszlet();
-                lCIKK.Add(t);
-                DEFS.log(Level.Debug, rdr["CIKK_ID"]+"#"+rdr["MEGNEVEZES"]+"#"+rdr["CIKK_TIPUS"]+"#"+rdr["CIKKCSOPORT_ID"]+"#"+
-                        rdr["OTHER_FILTER_ID"]+"#"+rdr["DEFAULT_RAKTAR"]+"#"+rdr["ERT_TIPUS"]+"#"+rdr["KISZ_NEV"]+"#"+rdr["KISZ_MENNY"]+"#"+"#"+"#"+"#");
+                DEFS.log(Level.Debug, rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
+                        rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + rdr["KISZ_NEV"] + "#" + rdr["KISZ_MENNY"] + "#" + "#" + "#" + "#");
+
+                try
+                {
+                    Cikk t = new Cikk((int)rdr["CIKK_ID"],
+                                      (string)rdr["MEGNEVEZES"],
+                                      (int)rdr["CIKK_TIPUS"],
+                                      (int)rdr["CIKKCSOPORT_ID"]);
+                    t.ALCSOPORT = (int)rdr["OTHER_FILTER_ID"];
+                    t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                    t.ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
+                    t.KISZ_MEGN = (string)rdr["KISZ_NEV"];
+                    t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+                    t.getKeszlet();
+                    lCIKK.Add(t);
+                }
+                catch (Exception e)
+                {
+                    DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                }
+                
             }
             rdr.Close();
             sc.Close();

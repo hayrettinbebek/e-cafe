@@ -5,6 +5,9 @@ using System.Linq;
 using System.Data.SqlClient;
 using System.Text;
 
+using NSpring.Logging;
+
+
 namespace BusinessLogic
 {
 
@@ -117,9 +120,9 @@ namespace BusinessLogic
             c.Close();
         }
 
-        public override int Save()
+        public override int Save(out bool ok)
         {
-            int part_id = base.Save();
+            int part_id = base.Save(out ok);
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
 
@@ -463,9 +466,14 @@ namespace BusinessLogic
         }
 
         
-        public override int Save()
+        public override int Save(out bool ok)
         {
-            int part_id = base.Save();
+            int part_id = base.Save(out ok);
+            string msg;
+            msg = "";
+            ok = checkKitoltes(out msg);
+            if (ok) {
+
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
 
@@ -532,18 +540,65 @@ namespace BusinessLogic
             cmd.Parameters["PARTNER_KOD"].Value = _kod;
             cmd.Parameters["NEM"].Value = _nem;
             cmd.Parameters["SZEMELYI_IG"].Value = _szig;
-            cmd.Parameters["SZULETESNAP"].Value = _szuldat;
+            
+            
+                cmd.Parameters["SZULETESNAP"].Value = _szuldat;
+            
             cmd.Parameters["NEVNAP_HO"].Value = _nevn_ho;
             cmd.Parameters["NEVNAP_NAP"].Value = _nevn_nap;
             cmd.Parameters["HITEL_CREDIT"].Value = _hitel;
 
-            //try
-            //{
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                ok = false;
+                DEFS.SendSaveErrMessage("Adatbázis hiba!! Logokat küldje be az adminisztrátornak!"+"\n" + e.Message+"\n"+"Trace: "+e.StackTrace);
+            }
+
+            } else {DEFS.SendSaveErrMessage(msg);}
 
             return (part_id);
         }
 
+        protected override bool checkKitoltes(out string s)
+        {
+            bool ret = base.checkKitoltes(out s);
+
+            if (_kod == null)
+            {
+                ret = false;
+                s += "Partner kód  <null> értéket kapott!";
+            }
+            if (_nem == null)
+            {
+                ret = false;
+                s += "Partner neme  <null> értéket kapott!";
+            }
+            if (!((_nem == "N") | (_nem == "F")))
+            {
+                ret = false;
+                s += "Partner neme  csak <F> Férfi és <N> Nő lehet!";
+            }
+            if (_szig == null)
+            {
+                _szig = "";
+                DEFS.log(Level.Info, "Személyi igazolvány <null> érték üres stringre javítva");
+
+            }
+            if (_szuldat < new DateTime(1920,1,1,1,1,1,1))
+            {
+                _szuldat = new DateTime(1920, 1, 1, 1, 1, 1, 1);
+                DEFS.log(Level.Info, "Születési dátum a kezdeti értékre javítva");
+
+            }
+            
+
+            DEFS.log(Level.Info, s);
+            return (ret);
+        }
         
     }
 
@@ -683,86 +738,139 @@ namespace BusinessLogic
             c.Close();
         }
 
-        public virtual int Save()
+        protected virtual bool checkKitoltes(out string s)
         {
-            SqlConnection c = new SqlConnection(DEFS.ConSTR);
-            c.Open();
+            bool ret = true;
+            s = "";
+            if (!((_tipus == "S") || (_tipus == "V") || (_tipus == "D") || (_tipus == "T"))) 
+            { 
+                ret = false; 
+                s = "Partner tipus nem megfelelő"+ "\n";
+                
+                
+            }
+
+            if (_nev1 == null)
+            {
+                ret = false;
+                s += "Partner megnevezése 1 <null> értéket kapott!";
+            }
+            if (_nev2 == null)
+            {
+                ret = false;
+                s += "Partner megnevezése 2 <null> értéket kapott!";
+            }
+            if (_nev3 == null)
+            {
+                ret = false;
+                s += "Partner megnevezése 3 <null> értéket kapott!";
+            }
+
+            
+            return (ret);
+        }
+
+        public virtual int Save(out bool ok)
+        {
             int new_p_id;
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = c;
-            cmd.CommandType = CommandType.Text;
-
-
             new_p_id = _partner_id;
 
-            switch (_partner_id)
+            string msg;
+            ok = checkKitoltes(out msg);
+            if (ok)
             {
-                case -1:
-                    {
-                        //új rekord!!
-                        cmd.CommandText = "INSERT INTO PARTNER " +
-                                           "(P_TIPUS " +
-                                           ",P_NEV " +
-                                           ",P_NEV2 " +
-                                           ",P_NEV3) " +
-                                     "VALUES " +
-                                           "(@P_TIPUS " +
-                                           ",@P_NEV " +
-                                           ",@P_NEV2 " +
-                                           ",@P_NEV3) SET @newid = SCOPE_IDENTITY()";
-                        cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
-                        cmd.Parameters["newid"].Direction = ParameterDirection.Output;
-                        break;
-                    }
-                default:
-                    {
-                        
-                        cmd.CommandText = "UPDATE PARTNER " +
-                                           "SET P_TIPUS = @P_TIPUS " +
-                                              ",P_NEV = @P_NEV " +
-                                              ",P_NEV2 = @P_NEV2 " +
-                                              ",P_NEV3 = @P_NEV3 " +
-                                         "WHERE  PARTNER_ID= @PARTNER_ID";
-                        cmd.Parameters.Add(new SqlParameter("PARTNER_ID", SqlDbType.Int));
-                        cmd.Parameters["PARTNER_ID"].Value = _partner_id;
-                        break;
-                    }
-            }
 
 
-            cmd.Parameters.Add(new SqlParameter("P_TIPUS", SqlDbType.VarChar));
-            cmd.Parameters.Add(new SqlParameter("P_NEV", SqlDbType.VarChar));
-            cmd.Parameters.Add(new SqlParameter("P_NEV2", SqlDbType.VarChar));
-            cmd.Parameters.Add(new SqlParameter("P_NEV3", SqlDbType.VarChar));
 
-            cmd.Parameters["P_TIPUS"].Value = _tipus;
-            cmd.Parameters["P_NEV"].Value = _nev1;
-            cmd.Parameters["P_NEV2"].Value = _nev2;
-            cmd.Parameters["P_NEV3"].Value = _nev3;
+                SqlConnection c = new SqlConnection(DEFS.ConSTR);
+                c.Open();
+                
 
-            cmd.ExecuteNonQuery();
-            if (_partner_id == -1)
-            {
-                new_p_id = (int)cmd.Parameters["newid"].Value;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = c;
+                cmd.CommandType = CommandType.Text;
+
+
+                
+
+                switch (_partner_id)
+                {
+                    case -1:
+                        {
+                            //új rekord!!
+                            cmd.CommandText = "INSERT INTO PARTNER " +
+                                               "(P_TIPUS " +
+                                               ",P_NEV " +
+                                               ",P_NEV2 " +
+                                               ",P_NEV3) " +
+                                         "VALUES " +
+                                               "(@P_TIPUS " +
+                                               ",@P_NEV " +
+                                               ",@P_NEV2 " +
+                                               ",@P_NEV3) SET @newid = SCOPE_IDENTITY()";
+                            cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
+                            cmd.Parameters["newid"].Direction = ParameterDirection.Output;
+                            break;
+                        }
+                    default:
+                        {
+
+                            cmd.CommandText = "UPDATE PARTNER " +
+                                               "SET P_TIPUS = @P_TIPUS " +
+                                                  ",P_NEV = @P_NEV " +
+                                                  ",P_NEV2 = @P_NEV2 " +
+                                                  ",P_NEV3 = @P_NEV3 " +
+                                             "WHERE  PARTNER_ID= @PARTNER_ID";
+                            cmd.Parameters.Add(new SqlParameter("PARTNER_ID", SqlDbType.Int));
+                            cmd.Parameters["PARTNER_ID"].Value = _partner_id;
+                            break;
+                        }
+                }
+
+
+                cmd.Parameters.Add(new SqlParameter("P_TIPUS", SqlDbType.VarChar));
+                cmd.Parameters.Add(new SqlParameter("P_NEV", SqlDbType.VarChar));
+                cmd.Parameters.Add(new SqlParameter("P_NEV2", SqlDbType.VarChar));
+                cmd.Parameters.Add(new SqlParameter("P_NEV3", SqlDbType.VarChar));
+
+                cmd.Parameters["P_TIPUS"].Value = _tipus;
+                cmd.Parameters["P_NEV"].Value = _nev1;
+                cmd.Parameters["P_NEV2"].Value = _nev2;
+                cmd.Parameters["P_NEV3"].Value = _nev3;
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    ok = false;
+                    DEFS.SendSaveErrMessage("Adatbázis hiba!! Logokat küldje be az adminisztrátornak!" + "\n" + e.Message + "\n" + "Trace: " + e.StackTrace);
+                }
+
+                if (_partner_id == -1)
+                {
+                    new_p_id = (int)cmd.Parameters["newid"].Value;
+                }
+
+                c.Close();
+                foreach (var t in lTelefon)
+                {
+                    t.Save();
+                }
+                foreach (var cm in lCimek)
+                {
+                    cm.Save();
+                }
+                foreach (var b in lBankszamlak)
+                {
+                    b.Save();
+                }
+
+                return (new_p_id);
             }
-            
-            c.Close();
-            foreach (var t in lTelefon)
-            {
-                t.Save();
-            }
-            foreach (var cm in lCimek)
-            {
-                cm.Save();
-            }
-            foreach (var b in lBankszamlak)
-            {
-                b.Save();
-            }
+            else { DEFS.SendSaveErrMessage(msg); }
 
             return (new_p_id);
-
         }
     }
 
