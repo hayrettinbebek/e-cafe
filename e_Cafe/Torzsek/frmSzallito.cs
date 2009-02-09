@@ -84,9 +84,10 @@ namespace e_Cafe.Torzsek
 
         private void tsbtnSave_Click(object sender, EventArgs e)
         {
+            bool ok;
             foreach (var k in szallitoBindingSource.List)
             {
-                ((Szallito)k).Save();
+                ((Szallito)k).Save(out ok);
             }
 
             foreach (var k in partnertelBindingSource.List)

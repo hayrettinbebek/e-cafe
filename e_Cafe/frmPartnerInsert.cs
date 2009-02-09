@@ -40,12 +40,16 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool ok = true;
+            bool ok2;
             foreach (var k in vevoBindingSource.List)
             {
-                ((Vevo)k).Save();
+                
+                ((Vevo)k).Save(out ok2);
+                ok = ok && ok2;
             }
 
-            Close();
+            if (ok) { Close(); }
         }
 
         private void button2_Click(object sender, EventArgs e)

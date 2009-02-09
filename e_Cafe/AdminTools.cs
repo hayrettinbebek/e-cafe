@@ -170,5 +170,22 @@ namespace e_Cafe
             f.MdiParent = this;
             f.Show();
         }
+
+        private void adatbázisFrissítésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Egyeléőre csak kézzel lehet az update.bat paranccsal");
+        }
+
+        private void logokKüldéseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string[] s = System.IO.Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory+ @"log");
+            EmailSending x = new EmailSending();
+            x.sendLogs(s);
+
+            System.IO.Directory.Move(AppDomain.CurrentDomain.BaseDirectory + @"log", AppDomain.CurrentDomain.BaseDirectory + @"old_log"+ DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.Year + "_" +
+                                                    DateTime.Now.Hour + "_" + DateTime.Now.Minute + "_" + DateTime.Now.Second);
+
+
+        }
     }
 }

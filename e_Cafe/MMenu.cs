@@ -40,7 +40,7 @@ namespace e_Cafe
         public MMenu()
         {
             string s = System.IO.File.ReadAllText(@"ConnSTR.txt");
-            EmailSending x = new EmailSending();
+            
 
             DEFS.createLogger();
 
@@ -233,8 +233,8 @@ namespace e_Cafe
             //}
             //catch (Exception c)
             //{
-            //    EmailSending x = new EmailSending();
-            //    x.send_mail(c);
+                //EmailSending x = new EmailSending();
+                //x.send_mail(c);
             //}
             //adm.Show();
         }

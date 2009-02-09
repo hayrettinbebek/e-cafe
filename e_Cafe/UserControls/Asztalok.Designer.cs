@@ -34,7 +34,6 @@ namespace e_Cafe
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Asztalok));
             this.AsztalType1List = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.asztalInfo1 = new e_Cafe.AsztalInfo();
             this.SuspendLayout();
             // 
             // AsztalType1List
@@ -55,20 +54,11 @@ namespace e_Cafe
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // asztalInfo1
-            // 
-            this.asztalInfo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.asztalInfo1.Location = new System.Drawing.Point(78, 170);
-            this.asztalInfo1.Name = "asztalInfo1";
-            this.asztalInfo1.Size = new System.Drawing.Size(212, 90);
-            this.asztalInfo1.TabIndex = 3;
-            // 
             // Asztalok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.Controls.Add(this.asztalInfo1);
             this.Controls.Add(this.label1);
             this.Name = "Asztalok";
             this.Size = new System.Drawing.Size(743, 418);
@@ -82,6 +72,5 @@ namespace e_Cafe
 
         private System.Windows.Forms.ImageList AsztalType1List;
         private System.Windows.Forms.Label label1;
-        private e_Cafe.AsztalInfo asztalInfo1;
     }
 }
