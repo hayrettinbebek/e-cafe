@@ -93,6 +93,8 @@ namespace e_Cafe
                 }
             }
 
+            MessageBox.Show("cikkBindingSource_PositionChanged: " + ((Cikk)cikkBindingSource.Current).MEGNEVEZES);
+
 
 
         }
@@ -140,6 +142,16 @@ namespace e_Cafe
         private void cikkBindingSource_AddingNew(object sender, AddingNewEventArgs e)
         {
             e.NewObject = new Cikk();
+        }
+
+        private void cikkBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(((Cikk)cikkBindingSource.Current).MEGNEVEZES);
+        }
+
+        private void cikkBindingSource_CurrentItemChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("CurrentItemChanged: " +((Cikk)cikkBindingSource.Current).MEGNEVEZES);
         }
 
 

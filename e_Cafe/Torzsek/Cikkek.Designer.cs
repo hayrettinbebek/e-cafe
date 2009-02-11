@@ -116,8 +116,10 @@
             // cikkBindingSource
             // 
             this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
+            this.cikkBindingSource.CurrentChanged += new System.EventHandler(this.cikkBindingSource_CurrentChanged);
             this.cikkBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.cikkBindingSource_AddingNew);
             this.cikkBindingSource.PositionChanged += new System.EventHandler(this.cikkBindingSource_PositionChanged);
+            this.cikkBindingSource.CurrentItemChanged += new System.EventHandler(this.cikkBindingSource_CurrentItemChanged);
             // 
             // label1
             // 

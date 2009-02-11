@@ -66,7 +66,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMegnevezes = new System.Windows.Forms.TextBox();
             this.tpKiszereles = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lITKISZIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,6 +101,7 @@
             this.rAKTARTableAdapter = new e_Cafe.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             this.cIKKTableAdapter = new e_Cafe.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
             this.lIT_KISZTableAdapter = new e_Cafe.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -124,7 +125,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(897, 25);
@@ -175,7 +177,7 @@
             this.tabPage1.Controls.Add(this.checkBox2);
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtMegnevezes);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -225,10 +227,12 @@
             // 
             // cIKKBindingSource
             // 
+            this.cIKKBindingSource.AllowNew = true;
             this.cIKKBindingSource.DataMember = "CIKK";
             this.cIKKBindingSource.DataSource = this.eCAFEDataSetCIKK;
             this.cIKKBindingSource.CurrentChanged += new System.EventHandler(this.cIKKBindingSource_CurrentChanged);
             this.cIKKBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.cIKKBindingSource_AddingNew);
+            this.cIKKBindingSource.PositionChanged += new System.EventHandler(this.cIKKBindingSource_PositionChanged);
             // 
             // eCAFEDataSetCIKK
             // 
@@ -456,13 +460,14 @@
             this.label1.Tag = "";
             this.label1.Text = "Megnevezés";
             // 
-            // textBox1
+            // txtMegnevezes
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cIKKBindingSource, "MEGNEVEZES", true));
-            this.textBox1.Location = new System.Drawing.Point(123, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtMegnevezes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cIKKBindingSource, "MEGNEVEZES", true));
+            this.txtMegnevezes.Location = new System.Drawing.Point(123, 2);
+            this.txtMegnevezes.Name = "txtMegnevezes";
+            this.txtMegnevezes.Size = new System.Drawing.Size(123, 20);
+            this.txtMegnevezes.TabIndex = 0;
+            this.txtMegnevezes.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // tpKiszereles
             // 
@@ -546,6 +551,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -574,6 +580,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(897, 113);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_RowValidating);
             // 
             // cIKKIDDataGridViewTextBoxColumn
             // 
@@ -720,6 +727,16 @@
             // 
             this.lIT_KISZTableAdapter.ClearBeforeFill = true;
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "új";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // frmCikk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -775,7 +792,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMegnevezes;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIKKIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGNEVEZESDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn cIKKTIPUSDataGridViewTextBoxColumn;
@@ -830,5 +847,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lITKISZCIKKIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lITKISZNEVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lITKISZMENNYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

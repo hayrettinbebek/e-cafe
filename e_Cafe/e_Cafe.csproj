@@ -141,6 +141,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ECAFEDataSetBEVETELEZES.cs">
+      <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ECAFEDataSetBEVETELEZES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ECAFEDataSetCIKK.cs">
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -548,6 +557,17 @@
     <Content Include="ConnSTR.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="ECAFEDataSetBEVETELEZES.xsc">
+      <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
+    </None>
+    <None Include="ECAFEDataSetBEVETELEZES.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ECAFEDataSetBEVETELEZES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ECAFEDataSetBEVETELEZES.xss">
+      <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
+    </None>
     <None Include="Resources\off_T.bmp" />
     <None Include="Properties\DataSources\BusinessLogic.DynCombo.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Vevo.datasource" />
