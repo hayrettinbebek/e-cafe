@@ -670,8 +670,10 @@ namespace e_Cafe {
                 this.columnMEGNEVEZES.MaxLength = 50;
                 this.columnCIKK_TIPUS.AllowDBNull = false;
                 this.columnCIKK_TIPUS.DefaultValue = ((int)(0));
+                this.columnCIKKCSOPORT_ID.AllowDBNull = false;
                 this.columnERTEKESITES_TIPUSA.MaxLength = 1;
                 this.columnMEGYS_ID.MaxLength = 10;
+                this.columnDEFAULT_RAKTAR.AllowDBNull = false;
                 this.columnSZJ_SZAM.MaxLength = 30;
                 this.columnCIKKSZAM.MaxLength = 50;
                 this.columnEAN_KOD.MaxLength = 28;
@@ -1117,12 +1119,7 @@ namespace e_Cafe {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public int CIKKCSOPORT_ID {
                 get {
-                    if (this.IsCIKKCSOPORT_IDNull()) {
-                        return 1;
-                    }
-                    else {
-                        return ((int)(this[this.tableCIKK.CIKKCSOPORT_IDColumn]));
-                    }
+                    return ((int)(this[this.tableCIKK.CIKKCSOPORT_IDColumn]));
                 }
                 set {
                     this[this.tableCIKK.CIKKCSOPORT_IDColumn] = value;
@@ -1177,12 +1174,7 @@ namespace e_Cafe {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public int DEFAULT_RAKTAR {
                 get {
-                    try {
-                        return ((int)(this[this.tableCIKK.DEFAULT_RAKTARColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DEFAULT_RAKTAR\' in table \'CIKK\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableCIKK.DEFAULT_RAKTARColumn]));
                 }
                 set {
                     this[this.tableCIKK.DEFAULT_RAKTARColumn] = value;
@@ -1355,16 +1347,6 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsCIKKCSOPORT_IDNull() {
-                return this.IsNull(this.tableCIKK.CIKKCSOPORT_IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetCIKKCSOPORT_IDNull() {
-                this[this.tableCIKK.CIKKCSOPORT_IDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsERTEKESITES_TIPUSANull() {
                 return this.IsNull(this.tableCIKK.ERTEKESITES_TIPUSAColumn);
             }
@@ -1392,16 +1374,6 @@ namespace e_Cafe {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetOTHER_FILTER_IDNull() {
                 this[this.tableCIKK.OTHER_FILTER_IDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsDEFAULT_RAKTARNull() {
-                return this.IsNull(this.tableCIKK.DEFAULT_RAKTARColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetDEFAULT_RAKTARNull() {
-                this[this.tableCIKK.DEFAULT_RAKTARColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2065,11 +2037,11 @@ FROM            CIKK";
                     int Original_CIKK_ID, 
                     string Original_MEGNEVEZES, 
                     int Original_CIKK_TIPUS, 
-                    global::System.Nullable<int> Original_CIKKCSOPORT_ID, 
+                    int Original_CIKKCSOPORT_ID, 
                     string Original_ERTEKESITES_TIPUSA, 
                     string Original_MEGYS_ID, 
                     global::System.Nullable<int> Original_OTHER_FILTER_ID, 
-                    global::System.Nullable<int> Original_DEFAULT_RAKTAR, 
+                    int Original_DEFAULT_RAKTAR, 
                     string Original_SZJ_SZAM, 
                     string Original_CIKKSZAM, 
                     string Original_EAN_KOD, 
@@ -2089,14 +2061,8 @@ FROM            CIKK";
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_MEGNEVEZES));
             }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_CIKK_TIPUS));
-            if ((Original_CIKKCSOPORT_ID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_CIKKCSOPORT_ID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_CIKKCSOPORT_ID));
             if ((Original_ERTEKESITES_TIPUSA == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -2121,14 +2087,8 @@ FROM            CIKK";
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_DEFAULT_RAKTAR.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_DEFAULT_RAKTAR.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_DEFAULT_RAKTAR));
             if ((Original_SZJ_SZAM == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
@@ -2239,11 +2199,11 @@ FROM            CIKK";
         public virtual int Insert(
                     string MEGNEVEZES, 
                     int CIKK_TIPUS, 
-                    global::System.Nullable<int> CIKKCSOPORT_ID, 
+                    int CIKKCSOPORT_ID, 
                     string ERTEKESITES_TIPUSA, 
                     string MEGYS_ID, 
                     global::System.Nullable<int> OTHER_FILTER_ID, 
-                    global::System.Nullable<int> DEFAULT_RAKTAR, 
+                    int DEFAULT_RAKTAR, 
                     string SZJ_SZAM, 
                     string CIKKSZAM, 
                     string EAN_KOD, 
@@ -2262,12 +2222,7 @@ FROM            CIKK";
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(MEGNEVEZES));
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(CIKK_TIPUS));
-            if ((CIKKCSOPORT_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(CIKKCSOPORT_ID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(CIKKCSOPORT_ID));
             if ((ERTEKESITES_TIPUSA == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
@@ -2286,12 +2241,7 @@ FROM            CIKK";
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((DEFAULT_RAKTAR.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(DEFAULT_RAKTAR.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(DEFAULT_RAKTAR));
             if ((SZJ_SZAM == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
@@ -2380,11 +2330,11 @@ FROM            CIKK";
         public virtual int Update(
                     string MEGNEVEZES, 
                     int CIKK_TIPUS, 
-                    global::System.Nullable<int> CIKKCSOPORT_ID, 
+                    int CIKKCSOPORT_ID, 
                     string ERTEKESITES_TIPUSA, 
                     string MEGYS_ID, 
                     global::System.Nullable<int> OTHER_FILTER_ID, 
-                    global::System.Nullable<int> DEFAULT_RAKTAR, 
+                    int DEFAULT_RAKTAR, 
                     string SZJ_SZAM, 
                     string CIKKSZAM, 
                     string EAN_KOD, 
@@ -2399,11 +2349,11 @@ FROM            CIKK";
                     int Original_CIKK_ID, 
                     string Original_MEGNEVEZES, 
                     int Original_CIKK_TIPUS, 
-                    global::System.Nullable<int> Original_CIKKCSOPORT_ID, 
+                    int Original_CIKKCSOPORT_ID, 
                     string Original_ERTEKESITES_TIPUSA, 
                     string Original_MEGYS_ID, 
                     global::System.Nullable<int> Original_OTHER_FILTER_ID, 
-                    global::System.Nullable<int> Original_DEFAULT_RAKTAR, 
+                    int Original_DEFAULT_RAKTAR, 
                     string Original_SZJ_SZAM, 
                     string Original_CIKKSZAM, 
                     string Original_EAN_KOD, 
@@ -2423,12 +2373,7 @@ FROM            CIKK";
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(MEGNEVEZES));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(CIKK_TIPUS));
-            if ((CIKKCSOPORT_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(CIKKCSOPORT_ID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(CIKKCSOPORT_ID));
             if ((ERTEKESITES_TIPUSA == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
@@ -2447,12 +2392,7 @@ FROM            CIKK";
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((DEFAULT_RAKTAR.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(DEFAULT_RAKTAR.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(DEFAULT_RAKTAR));
             if ((SZJ_SZAM == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
@@ -2527,14 +2467,8 @@ FROM            CIKK";
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_MEGNEVEZES));
             }
             this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_CIKK_TIPUS));
-            if ((Original_CIKKCSOPORT_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_CIKKCSOPORT_ID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_CIKKCSOPORT_ID));
             if ((Original_ERTEKESITES_TIPUSA == null)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
@@ -2559,14 +2493,8 @@ FROM            CIKK";
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((Original_DEFAULT_RAKTAR.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_DEFAULT_RAKTAR.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_DEFAULT_RAKTAR));
             if ((Original_SZJ_SZAM == null)) {
                 this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
@@ -2678,11 +2606,11 @@ FROM            CIKK";
         public virtual int Update(
                     string MEGNEVEZES, 
                     int CIKK_TIPUS, 
-                    global::System.Nullable<int> CIKKCSOPORT_ID, 
+                    int CIKKCSOPORT_ID, 
                     string ERTEKESITES_TIPUSA, 
                     string MEGYS_ID, 
                     global::System.Nullable<int> OTHER_FILTER_ID, 
-                    global::System.Nullable<int> DEFAULT_RAKTAR, 
+                    int DEFAULT_RAKTAR, 
                     string SZJ_SZAM, 
                     string CIKKSZAM, 
                     string EAN_KOD, 
@@ -2697,11 +2625,11 @@ FROM            CIKK";
                     int Original_CIKK_ID, 
                     string Original_MEGNEVEZES, 
                     int Original_CIKK_TIPUS, 
-                    global::System.Nullable<int> Original_CIKKCSOPORT_ID, 
+                    int Original_CIKKCSOPORT_ID, 
                     string Original_ERTEKESITES_TIPUSA, 
                     string Original_MEGYS_ID, 
                     global::System.Nullable<int> Original_OTHER_FILTER_ID, 
-                    global::System.Nullable<int> Original_DEFAULT_RAKTAR, 
+                    int Original_DEFAULT_RAKTAR, 
                     string Original_SZJ_SZAM, 
                     string Original_CIKKSZAM, 
                     string Original_EAN_KOD, 

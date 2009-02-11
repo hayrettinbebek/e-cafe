@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using NSpring.Logging;
+using BusinessLogic;
+
 namespace e_Cafe.Torzsek
 {
     public partial class frmCikk : Form
@@ -48,7 +51,8 @@ namespace e_Cafe.Torzsek
             if (cIKKBindingSource.Current != null) {
             
             lIT_KISZTableAdapter.Fill(eCAFEDataSetCIKK.LIT_KISZ, (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
-        
+            
+              
             }
         }
 
@@ -62,9 +66,36 @@ namespace e_Cafe.Torzsek
         private void cIKKBindingSource_AddingNew(object sender, AddingNewEventArgs e)
         {
             
-            e.NewObject = eCAFEDataSetCIKK.CIKK.AddCIKKRow();//"", 0, 1, "", "", 1, -1, "", "", "", 0, 0, 0, -1, 0, 0, "", 1);
+            //e.NewObject = eCAFEDataSetCIKK.CIKK.AddCIKKRow();
             cIKKBindingSource.ResetBindings(true);
         }
+
+        private void cIKKBindingSource_PositionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            
+
+        }
+
+        private void dataGridView1_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            //if (!((((DataRowView)dataGridView1.Rows[e.RowIndex].DataBoundItem)["MEGNEVEZES"].ToString()).Trim().Length > 0))
+            //{ e.Cancel = true; DEFS.SendValidatingMessage("Megnevezés", "A mező értéke nem lehet üres!"); }
+
+
+           
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+           
+            cIKKBindingSource.AddNew();
+        }
+
 
     }
 }

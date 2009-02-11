@@ -18,41 +18,31 @@ namespace e_Cafe
             InitializeComponent();
         }
 
-        private void bevetelfejBindingSource_AddingNew(object sender, AddingNewEventArgs e)
-        {
-            e.NewObject = new Bevetel_fej();
-            ((Bevetel_fej)e.NewObject).DATUM = DateTime.Now;
-        }
+
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            foreach (var k in bevetelfejBindingSource.List)
-            {
-                if (((Bevetel_fej)k).isModified) { ((Bevetel_fej)k).Save(); }
-            }
+            bEVETEL_FEJTableAdapter.Update(eCAFEDataSetBEVETELEZES.BEVETEL_FEJ);
+            bEVETEL_SORTableAdapter.Update(eCAFEDataSetBEVETELEZES.BEVETEL_SOR);
 
-            foreach (var s in bevetelSorBindingSource.List)
-            {
-                ((BevetelSor)s).Save();
-            }
 
             loadData();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            bevetelfejBindingSource.AddNew();
+            eCAFEDataSetBEVETELEZESBindingSource.AddNew();
         }
 
         private void loadData()
         {
-            BevetelFList l = new BevetelFList(new SqlConnection(DEFS.ConSTR));
-            bevetelfejBindingSource.Clear();
+            //BevetelFList l = new BevetelFList(new SqlConnection(DEFS.ConSTR));
+            //bevetelfejBindingSource.Clear();
 
-            foreach (var c in l.lBevFej)
-            {
-                bevetelfejBindingSource.Add(c);
-            }
+            //foreach (var c in l.lBevFej)
+            //{
+            //    bevetelfejBindingSource.Add(c);
+            //}
 
             Cikk_list cl = new Cikk_list(new SqlConnection(DEFS.ConSTR));
             cikkBindingSource.Clear();
@@ -71,6 +61,9 @@ namespace e_Cafe
 
         private void Bevetelezes_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'eCAFEDataSetBEVETELEZES.BEVETEL_FEJ' table. You can move, or remove it, as needed.
+            this.bEVETEL_FEJTableAdapter.Fill(this.eCAFEDataSetBEVETELEZES.BEVETEL_FEJ);
+
             loadData();
         }
 
@@ -100,6 +93,33 @@ namespace e_Cafe
           //  bevetelfejBindingSource.ResetCurrentItem();
         }
 
+        private void eCAFEDataSetBEVETELEZESBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (eCAFEDataSetBEVETELEZESBindingSource.Current != null)
+            {
+
+                bEVETEL_SORTableAdapter.Fill(eCAFEDataSetBEVETELEZES.BEVETEL_SOR, (int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"]);
+
+
+            }
+        }
+
+
+
+        private void bEVETELSORBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (bEVETELSORBindingSource.Current != null)
+            {
+                if (((DataRowView)bEVETELSORBindingSource.Current).IsNew == true) {
+
+                    ((DataRowView)bEVETELSORBindingSource.Current)["BEVETEL_FEJ_ID"] = ((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"];
+                }
+                
+            }
+        }
+
+
+
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridView2.Columns.IndexOf(dgvcCIKK))
@@ -110,31 +130,15 @@ namespace e_Cafe
 
                 if (fc.DialogResult == DialogResult.OK)
                 {
-                    if (bevetelSorBindingSource.Current != null)
+                    if (bEVETELSORBindingSource.Current != null)
                     {
-                        ((BevetelSor)bevetelSorBindingSource.Current).CIKK_ID = fc.CIKK_ID;
-                        ((BevetelSor)bevetelSorBindingSource.Current).RAKTAR_ID = fc.DEF_RAKT;
+                        ((DataRowView)bEVETELSORBindingSource.Current)["CIKK_ID"] = fc.CIKK_ID;
+                        ((DataRowView)bEVETELSORBindingSource.Current)["RAKTAR_ID"] = fc.DEF_RAKT;
                     }
                 }
             }
         }
 
-        private void bevetelfejBindingSource_PositionChanged(object sender, EventArgs e)
-        {
-            if (bevetelfejBindingSource.Current != null)
-            {
-                AktBevId = ((Bevetel_fej)bevetelfejBindingSource.Current).BEVETEL_FEJ_ID;
-                if (((Bevetel_fej)bevetelfejBindingSource.Current).BEVETEL_FEJ_ID != -1)
-                {
-                    bevetelSorBindingSource.Clear();
 
-                    foreach (var s in ((Bevetel_fej)bevetelfejBindingSource.Current).lBevetelSorok)
-                    {
-                        bevetelSorBindingSource.Add(s);
-                    }
-
-                }
-            }
-        }
     }
 }

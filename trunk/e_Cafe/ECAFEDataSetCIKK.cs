@@ -6,14 +6,13 @@
         {
 
             
-        
 
         public CIKKRow AddCIKKRow()
         {
             CIKKRow rowCIKKRow = ((CIKKRow)(NewRow()));
             object[] columnValuesArray = new object[] {
                         null,
-                        "",
+                        null,
                         0,
                         null,
                         null,
@@ -44,5 +43,10 @@ namespace e_Cafe.ECAFEDataSetCIKKTableAdapters {
     
     
     public partial class LIT_KISZTableAdapter {
+    
+       
+    
     }
+
+    
 }

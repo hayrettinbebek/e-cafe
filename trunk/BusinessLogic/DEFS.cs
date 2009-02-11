@@ -104,6 +104,14 @@ namespace BusinessLogic
             MessageBox.Show(s + t);
 
         }
+
+        public static void SendValidatingMessage(string hol, string t)
+        {
+            string s = "Érvénytelen adatok a "+hol+ " mezőben !" + "\n" + "Oka:" + "\n";
+            log(Level.Exception, s + t);
+            MessageBox.Show(s + t);
+
+        }
     }
 
 
