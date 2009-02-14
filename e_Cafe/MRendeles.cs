@@ -243,7 +243,10 @@ namespace e_Cafe
 
                 _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
                 _AktRendeles.SaveRendeles();
-                initRendelTabla();
+                ((CikkButton)sender).fCIKK.getKeszlet();
+                ((CikkButton)sender).re_SetCikk();
+                ((CikkButton)sender).Refresh();
+                initRendelTablaNoDraw();
 
             }
             
@@ -264,6 +267,24 @@ namespace e_Cafe
             resetCounter();
             if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu,null); }
             _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
+            tblRendeles.ColumnModel = _AktRendeles.fColumnModel;
+
+            tblRendeles.HeaderRenderer = new GradientHeaderRenderer();
+
+
+            // feltöltés default értékkel
+            tblRendeles.TableModel = _AktRendeles.getTableModel();
+            tblRendeles.Font = DEFS.f2;
+            tblRendeles.TableModel.RowHeight = 40;
+
+
+        }
+
+        private void initRendelTablaNoDraw()
+        {
+            resetCounter();
+            //if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            //_AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
             tblRendeles.ColumnModel = _AktRendeles.fColumnModel;
 
             tblRendeles.HeaderRenderer = new GradientHeaderRenderer();
@@ -308,13 +329,13 @@ namespace e_Cafe
         private void btnDOWN_Click(object sender, EventArgs e)
         {
             if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Min(_AktRendeles._ScrollPos + 1, _AktRendeles.lRendelesSor.Count-9); }
-            initRendelTabla();
+            initRendelTablaNoDraw();
         }
 
         private void btnUP_Click(object sender, EventArgs e)
         {
             if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Max(_AktRendeles._ScrollPos-1,0); }
-            initRendelTabla();
+            initRendelTablaNoDraw();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

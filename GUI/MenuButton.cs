@@ -166,6 +166,16 @@ namespace GUI
             }
         }
 
+        public void re_SetCikk()
+        {
+            lMegnevezes.Text = _Cikk.MEGNEVEZES;
+            lKiszereles.Text = _Cikk.KISZ_MEGN;
+            lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
+            lKeszletOther.Text = _Cikk.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
+            lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
+            lAr.Text = "250 .-";
+        }
+
         protected void OnLabelClick(object sender, EventArgs e)
         {
             this.OnClick(e);

@@ -129,6 +129,7 @@ namespace BusinessLogic
 
         public void getKeszlet()
         {
+            lKESZLET.Clear();
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
             SqlCommand gk = new SqlCommand("select * from GetKeszlet(@EV,@HO,@NAP,@cikk_id,@raktar_id)", c);
