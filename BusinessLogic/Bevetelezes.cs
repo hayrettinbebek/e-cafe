@@ -126,6 +126,7 @@ namespace BusinessLogic
             _SZALLITOLEVEL_SZAM = "";
             _SZAMLASZAM = "";
             _BISZ_SZAM = "";
+            _DATUM = DateTime.Now;
 
         }
 
@@ -189,8 +190,9 @@ namespace BusinessLogic
 
         }
 
-        public void Save()
+        public int Save()
         {
+            int new_p_id = _BEVETEL_FEJ_ID;
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
 
@@ -219,8 +221,9 @@ namespace BusinessLogic
                            " ,@PARTNER_ID " +
                            " ,@SZALLITOLEVEL_SZAM " +
                            " ,@KONYVELT " +
-                           " ,@BIZONYLATSZAM, @SZAMLA_SZAM, @SZAMLA_OSSZESEN, @SZAMLA_OSSZ_BRUTTO)";
-
+                           " ,@BIZONYLATSZAM, @SZAMLA_SZAM, @SZAMLA_OSSZESEN, @SZAMLA_OSSZ_BRUTTO)  SET @newid = SCOPE_IDENTITY()";
+                        cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
+                        cmd.Parameters["newid"].Direction = ParameterDirection.Output;
                         break;
                     }
                 default:
@@ -264,13 +267,16 @@ namespace BusinessLogic
             //try
             //{
             cmd.ExecuteNonQuery();
-            //}
-            //catch (Exception e)
-            //{
-            //    string s = "Hiba a rendelés sorok mentése közben!" + _BEVETEL_FEJ_ID.ToString()+ e.Data;
-            //}
 
+            if (_BEVETEL_FEJ_ID == -1)
+            {
+                new_p_id = (int)cmd.Parameters["newid"].Value;
+            }
+            //DEFS.SendSaveErrMessage(new_p_id.ToString() +" : Sikertelen bevlételezés mentés");
+
+            _BEVETEL_FEJ_ID = new_p_id;
             c.Close();
+            return (new_p_id);
         }
 
         public List<BevetelSor> lBevetelSorok = new List<BevetelSor>();
@@ -523,7 +529,7 @@ namespace BusinessLogic
             cmd.Connection = c;
             cmd.CommandType = CommandType.Text;
 
-
+            int new_p_id = _BEVETEL_SOR_ID;
 
             switch (_BEVETEL_SOR_ID)
             {
@@ -553,7 +559,9 @@ namespace BusinessLogic
                                                ",@RAKTAR_ID " +
                                                ",@FELADVA " +
                                                ",@MEGJEGYZES " +
-                                               ",@BRUTTO_ERTEK)";
+                                               ",@BRUTTO_ERTEK) SET @newid = SCOPE_IDENTITY()";
+                        cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
+                        cmd.Parameters["newid"].Direction = ParameterDirection.Output;
 
                         break;
                     }
@@ -603,11 +611,15 @@ namespace BusinessLogic
             //try
             //{
             cmd.ExecuteNonQuery();
-            //}
-            //catch (Exception e)
-            //{
-            //    string s = "Hiba a rendelés sorok mentése közben!" + _BEVETEL_FEJ_ID.ToString()+ e.Data;
-            //}
+
+
+            if (_BEVETEL_SOR_ID == -1)
+            {
+                new_p_id = (int)cmd.Parameters["newid"].Value;
+            }
+            //DEFS.SendSaveErrMessage(new_p_id.ToString() +" : Sikertelen bevlételezés mentés");
+
+            _BEVETEL_FEJ_ID = new_p_id;
 
             c.Close();
         }

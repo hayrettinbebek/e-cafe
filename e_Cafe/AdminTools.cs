@@ -187,5 +187,12 @@ namespace e_Cafe
 
 
         }
+
+        private void mmBevetel2_Click(object sender, EventArgs e)
+        {
+            frmBevetel f = new frmBevetel();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

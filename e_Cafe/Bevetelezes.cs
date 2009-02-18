@@ -22,16 +22,23 @@ namespace e_Cafe
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            bEVETEL_FEJTableAdapter.Update(eCAFEDataSetBEVETELEZES.BEVETEL_FEJ);
-            bEVETEL_SORTableAdapter.Update(eCAFEDataSetBEVETELEZES.BEVETEL_SOR);
+            if ((Boolean)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["KONYVELT"])
+            {
+                DEFS.SendInfoMessage("A tétel már készletre van veztve: nem könyvelhető!!");
+            }
+            else
+            {
+                frmBevetel f = new frmBevetel();
+                f.bevfej_id = (int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"];
 
-
-            loadData();
+                f.ShowDialog();
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            eCAFEDataSetBEVETELEZESBindingSource.AddNew();
+            frmBevetel f = new frmBevetel();
+            f.ShowDialog();
         }
 
         private void loadData()
@@ -137,6 +144,34 @@ namespace e_Cafe
                     }
                 }
             }
+        }
+
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmBevetel f = new frmBevetel();
+            f.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsKeszVezet_Click(object sender, EventArgs e)
+        {
+            Bevetel_fej bf = new Bevetel_fej((int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"],new  SqlConnection(DEFS.ConSTR));
+            foreach (var bs in bf.lBevetelSorok)
+            {
+                if (bs.FELADVA == 0)
+                {
+                    bs.FELADVA = 1;
+                    bs.Save();
+                }
+            }
+            bf.KONYVELT = true;
+            bf.Save();
         }
 
 
