@@ -163,6 +163,29 @@ namespace BusinessLogic
             c.Close();
         }
 
+        public double getAfaSzaz()
+        {
+            double ret = 0;
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+            SqlCommand gk = new SqlCommand("select isnull(a.AFA_ERTEK,0) as AFA_SZAZ from cikkcsoport cs " +
+                                            " inner join cikk c on cs.cikkcsoport_id = c.cikkcsoport_id " +
+                                            " inner join afa a on cs.AFA_KOD = a.AFA_KOD " +
+                                            " WHERE c.CIKK_ID = @cikk_id", c);
+            gk.CommandType = CommandType.Text;
+            gk.Parameters.Add("@cikk_id", SqlDbType.Int);
+            gk.Parameters["@cikk_id"].Direction = ParameterDirection.Input;
+            gk.Parameters["@cikk_id"].Value = fCIKK_ID;
+            SqlDataReader rdr = gk.ExecuteReader();
+            while (rdr.Read())
+            {
+                ret = (double)rdr["AFA_SZAZ"];
+                
+            }
+            c.Close();
+            return (ret);
+        }
+
         public Cikk(int pCikkId, SqlConnection c)
         {
             if (c.State == ConnectionState.Closed) { c.Open(); }

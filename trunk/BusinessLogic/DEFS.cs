@@ -75,6 +75,17 @@ namespace BusinessLogic
             APP_LOG.Close();
         }
 
+        public static void DebugLog(string t)
+        {
+            if (!APP_LOG.IsOpen) { APP_LOG.Open(); }
+            APP_LOG.Log("\n");
+            APP_LOG.Log(Level.Debug, t);
+            APP_LOG.Log("\n");
+
+
+            APP_LOG.Close();
+        }
+
         public static void ObjLog(string t, object o)
         {
             if (!APP_LOG.IsOpen) { APP_LOG.Open(); }
@@ -110,6 +121,14 @@ namespace BusinessLogic
             string s = "Érvénytelen adatok a "+hol+ " mezőben !" + "\n" + "Oka:" + "\n";
             log(Level.Exception, s + t);
             MessageBox.Show(s + t);
+
+        }
+
+        public static void SendInfoMessage(string t)
+        {
+            
+            log(Level.Info, t);
+            MessageBox.Show(t);
 
         }
     }

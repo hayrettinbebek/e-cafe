@@ -174,6 +174,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmBevetelSor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBevetelSor.Designer.cs">
+      <DependentUpon>frmBevetelSor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPartnerInsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,11 +198,23 @@
     <Compile Include="MMPartnerek.Designer.cs">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
     </Compile>
+    <Compile Include="PartnerSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartnerSelector.Designer.cs">
+      <DependentUpon>PartnerSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Torzsek\frmAFA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Torzsek\frmAFA.Designer.cs">
       <DependentUpon>frmAFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Torzsek\frmBevetel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmBevetel.Designer.cs">
+      <DependentUpon>frmBevetel.cs</DependentUpon>
     </Compile>
     <Compile Include="Torzsek\frmCikk.cs">
       <SubType>Form</SubType>
@@ -302,6 +320,9 @@
       <DependentUpon>CikkSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBevetelSor.resx">
+      <DependentUpon>frmBevetelSor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPartnerInsert.resx">
       <DependentUpon>frmPartnerInsert.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,9 +333,15 @@
       <DependentUpon>MMPartnerek.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PartnerSelector.resx">
+      <DependentUpon>PartnerSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmAFA.resx">
       <DependentUpon>frmAFA.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmBevetel.resx">
+      <DependentUpon>frmBevetel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmCikk.resx">
       <DependentUpon>frmCikk.cs</DependentUpon>
@@ -568,6 +595,7 @@
     <None Include="ECAFEDataSetBEVETELEZES.xss">
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\BusinessLogic.Partner.datasource" />
     <None Include="Resources\off_T.bmp" />
     <None Include="Properties\DataSources\BusinessLogic.DynCombo.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Vevo.datasource" />

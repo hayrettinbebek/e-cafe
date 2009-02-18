@@ -56,6 +56,7 @@
             this.supportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logokKüldéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbázisFrissítésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmBevetel2 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -210,6 +211,7 @@
             // készletkezelésToolStripMenuItem
             // 
             this.készletkezelésToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mmBevetel2,
             this.ttBevetelezes,
             this.készletkartonToolStripMenuItem});
             this.készletkezelésToolStripMenuItem.Name = "készletkezelésToolStripMenuItem";
@@ -219,14 +221,14 @@
             // ttBevetelezes
             // 
             this.ttBevetelezes.Name = "ttBevetelezes";
-            this.ttBevetelezes.Size = new System.Drawing.Size(150, 22);
-            this.ttBevetelezes.Text = "Bevételezés";
+            this.ttBevetelezes.Size = new System.Drawing.Size(211, 22);
+            this.ttBevetelezes.Text = "Bevételezések áttekintése";
             this.ttBevetelezes.Click += new System.EventHandler(this.ttBevetelezes_Click);
             // 
             // készletkartonToolStripMenuItem
             // 
             this.készletkartonToolStripMenuItem.Name = "készletkartonToolStripMenuItem";
-            this.készletkartonToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.készletkartonToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.készletkartonToolStripMenuItem.Text = "Készletkarton";
             // 
             // paraméterekToolStripMenuItem
@@ -263,6 +265,13 @@
             this.adatbázisFrissítésToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.adatbázisFrissítésToolStripMenuItem.Text = "Adatbázis frissítés";
             this.adatbázisFrissítésToolStripMenuItem.Click += new System.EventHandler(this.adatbázisFrissítésToolStripMenuItem_Click);
+            // 
+            // mmBevetel2
+            // 
+            this.mmBevetel2.Name = "mmBevetel2";
+            this.mmBevetel2.Size = new System.Drawing.Size(211, 22);
+            this.mmBevetel2.Text = "Új Bevételezés";
+            this.mmBevetel2.Click += new System.EventHandler(this.mmBevetel2_Click);
             // 
             // AdminTools
             // 
@@ -313,6 +322,7 @@
         private System.Windows.Forms.ToolStripMenuItem supportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logokKüldéseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adatbázisFrissítésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mmBevetel2;
     }
 }
 

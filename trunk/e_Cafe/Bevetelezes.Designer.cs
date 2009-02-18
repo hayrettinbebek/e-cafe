@@ -59,11 +59,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bEVETELSORBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.raktarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bEVETEL_FEJTableAdapter = new e_Cafe.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_FEJTableAdapter();
-            this.bEVETEL_SORTableAdapter = new e_Cafe.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter();
             this.sORIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bEVETELFEJIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvcCIKK = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -75,6 +70,12 @@
             this.fELADVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAKTARIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bEVETELSORBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bEVETEL_FEJTableAdapter = new e_Cafe.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_FEJTableAdapter();
+            this.bEVETEL_SORTableAdapter = new e_Cafe.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter();
+            this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.raktarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tsKeszVezet = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBEVETELEZESBindingSource)).BeginInit();
@@ -92,7 +93,8 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.tsKeszVezet});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(914, 25);
@@ -115,8 +117,8 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(46, 22);
-            this.toolStripButton2.Text = "Mentés";
+            this.toolStripButton2.Size = new System.Drawing.Size(48, 22);
+            this.toolStripButton2.Text = "Módosít";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // dataGridView1
@@ -127,7 +129,6 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BIZONYLATSZAM,
-            this.SZAMLASZAM,
             this.SZAMLA_OSSZESEN,
             this.SZAMLA_OSSZ_BRUTTO,
             this.bEVETELFEJIDDataGridViewTextBoxColumn,
@@ -138,7 +139,8 @@
             this.kONYVELTDataGridViewTextBoxColumn,
             this.sZAMLASZAMDataGridViewTextBoxColumn,
             this.sZAMLAOSSZESENDataGridViewTextBoxColumn,
-            this.sZAMLAOSSZBRUTTODataGridViewTextBoxColumn});
+            this.sZAMLAOSSZBRUTTODataGridViewTextBoxColumn,
+            this.SZAMLASZAM});
             this.dataGridView1.DataSource = this.eCAFEDataSetBEVETELEZESBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
@@ -328,6 +330,8 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -345,32 +349,11 @@
             this.dataGridView2.DataSource = this.bEVETELSORBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(6, 6);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(900, 243);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            // 
-            // bEVETELSORBindingSource
-            // 
-            this.bEVETELSORBindingSource.DataMember = "BEVETEL_SOR";
-            this.bEVETELSORBindingSource.DataSource = this.eCAFEDataSetBEVETELEZES;
-            this.bEVETELSORBindingSource.CurrentChanged += new System.EventHandler(this.bEVETELSORBindingSource_CurrentChanged);
-            // 
-            // cikkBindingSource
-            // 
-            this.cikkBindingSource.AllowNew = false;
-            this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
-            // 
-            // raktarBindingSource
-            // 
-            this.raktarBindingSource.DataSource = typeof(BusinessLogic.Raktar);
-            // 
-            // bEVETEL_FEJTableAdapter
-            // 
-            this.bEVETEL_FEJTableAdapter.ClearBeforeFill = true;
-            // 
-            // bEVETEL_SORTableAdapter
-            // 
-            this.bEVETEL_SORTableAdapter.ClearBeforeFill = true;
+            
             // 
             // sORIDDataGridViewTextBoxColumn
             // 
@@ -385,6 +368,7 @@
             this.bEVETELFEJIDDataGridViewTextBoxColumn1.DataPropertyName = "BEVETEL_FEJ_ID";
             this.bEVETELFEJIDDataGridViewTextBoxColumn1.HeaderText = "BEVETEL_FEJ_ID";
             this.bEVETELFEJIDDataGridViewTextBoxColumn1.Name = "bEVETELFEJIDDataGridViewTextBoxColumn1";
+            this.bEVETELFEJIDDataGridViewTextBoxColumn1.ReadOnly = true;
             this.bEVETELFEJIDDataGridViewTextBoxColumn1.Visible = false;
             // 
             // dgvcCIKK
@@ -392,6 +376,7 @@
             this.dgvcCIKK.DataPropertyName = "CIKK_ID";
             this.dgvcCIKK.HeaderText = "Cikk";
             this.dgvcCIKK.Name = "dgvcCIKK";
+            this.dgvcCIKK.ReadOnly = true;
             this.dgvcCIKK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvcCIKK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -400,36 +385,42 @@
             this.mENNYDataGridViewTextBoxColumn.DataPropertyName = "MENNY";
             this.mENNYDataGridViewTextBoxColumn.HeaderText = "MENNY";
             this.mENNYDataGridViewTextBoxColumn.Name = "mENNYDataGridViewTextBoxColumn";
+            this.mENNYDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bESZARDataGridViewTextBoxColumn
             // 
             this.bESZARDataGridViewTextBoxColumn.DataPropertyName = "BESZ_AR";
             this.bESZARDataGridViewTextBoxColumn.HeaderText = "BESZ_AR";
             this.bESZARDataGridViewTextBoxColumn.Name = "bESZARDataGridViewTextBoxColumn";
+            this.bESZARDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nETTOERTEKDataGridViewTextBoxColumn
             // 
             this.nETTOERTEKDataGridViewTextBoxColumn.DataPropertyName = "NETTO_ERTEK";
             this.nETTOERTEKDataGridViewTextBoxColumn.HeaderText = "NETTO_ERTEK";
             this.nETTOERTEKDataGridViewTextBoxColumn.Name = "nETTOERTEKDataGridViewTextBoxColumn";
+            this.nETTOERTEKDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // aFAERTEKDataGridViewTextBoxColumn
             // 
             this.aFAERTEKDataGridViewTextBoxColumn.DataPropertyName = "AFA_ERTEK";
             this.aFAERTEKDataGridViewTextBoxColumn.HeaderText = "AFA_ERTEK";
             this.aFAERTEKDataGridViewTextBoxColumn.Name = "aFAERTEKDataGridViewTextBoxColumn";
+            this.aFAERTEKDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bRUTTOERTEKDataGridViewTextBoxColumn
             // 
             this.bRUTTOERTEKDataGridViewTextBoxColumn.DataPropertyName = "BRUTTO_ERTEK";
             this.bRUTTOERTEKDataGridViewTextBoxColumn.HeaderText = "BRUTTO_ERTEK";
             this.bRUTTOERTEKDataGridViewTextBoxColumn.Name = "bRUTTOERTEKDataGridViewTextBoxColumn";
+            this.bRUTTOERTEKDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fELADVADataGridViewTextBoxColumn
             // 
             this.fELADVADataGridViewTextBoxColumn.DataPropertyName = "FELADVA";
             this.fELADVADataGridViewTextBoxColumn.HeaderText = "FELADVA";
             this.fELADVADataGridViewTextBoxColumn.Name = "fELADVADataGridViewTextBoxColumn";
+            this.fELADVADataGridViewTextBoxColumn.ReadOnly = true;
             this.fELADVADataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // rAKTARIDDataGridViewTextBoxColumn
@@ -437,12 +428,46 @@
             this.rAKTARIDDataGridViewTextBoxColumn.DataPropertyName = "RAKTAR_ID";
             this.rAKTARIDDataGridViewTextBoxColumn.HeaderText = "RAKTAR_ID";
             this.rAKTARIDDataGridViewTextBoxColumn.Name = "rAKTARIDDataGridViewTextBoxColumn";
+            this.rAKTARIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mEGJEGYZESDataGridViewTextBoxColumn
             // 
             this.mEGJEGYZESDataGridViewTextBoxColumn.DataPropertyName = "MEGJEGYZES";
             this.mEGJEGYZESDataGridViewTextBoxColumn.HeaderText = "MEGJEGYZES";
             this.mEGJEGYZESDataGridViewTextBoxColumn.Name = "mEGJEGYZESDataGridViewTextBoxColumn";
+            this.mEGJEGYZESDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bEVETELSORBindingSource
+            // 
+            this.bEVETELSORBindingSource.DataMember = "BEVETEL_SOR";
+            this.bEVETELSORBindingSource.DataSource = this.eCAFEDataSetBEVETELEZES;
+            this.bEVETELSORBindingSource.CurrentChanged += new System.EventHandler(this.bEVETELSORBindingSource_CurrentChanged);
+            // 
+            // bEVETEL_FEJTableAdapter
+            // 
+            this.bEVETEL_FEJTableAdapter.ClearBeforeFill = true;
+            // 
+            // bEVETEL_SORTableAdapter
+            // 
+            this.bEVETEL_SORTableAdapter.ClearBeforeFill = true;
+            // 
+            // cikkBindingSource
+            // 
+            this.cikkBindingSource.AllowNew = false;
+            this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
+            // 
+            // raktarBindingSource
+            // 
+            this.raktarBindingSource.DataSource = typeof(BusinessLogic.Raktar);
+            // 
+            // tsKeszVezet
+            // 
+            this.tsKeszVezet.Image = ((System.Drawing.Image)(resources.GetObject("tsKeszVezet.Image")));
+            this.tsKeszVezet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsKeszVezet.Name = "tsKeszVezet";
+            this.tsKeszVezet.Size = new System.Drawing.Size(112, 22);
+            this.tsKeszVezet.Text = "Készletre vezetés";
+            this.tsKeszVezet.Click += new System.EventHandler(this.tsKeszVezet_Click);
             // 
             // Bevetelezes
             // 
@@ -520,5 +545,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fELADVADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAKTARIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGJEGYZESDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton tsKeszVezet;
     }
 }
