@@ -392,9 +392,9 @@ namespace BusinessLogic
             {
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                string s = "Hiba a rendelés sorok mentése közben!" + _SOR_ID.ToString() ;
+                DEFS.SendSaveErrMessage("Hiba a rendelés sorok mentése közben!" + _SOR_ID.ToString() + e.Message + "\n" + e.StackTrace) ;
             }
             c.Close();
 
@@ -422,7 +422,7 @@ namespace BusinessLogic
             }
             catch (Exception e)
             {
-                string s = "Hiba a rendelés sorok törlése közben!" + _SOR_ID.ToString();
+                DEFS.SendSaveErrMessage("Hiba a rendelés sorok törlése közben!" + _SOR_ID.ToString() + e.Message + "\n" + e.StackTrace);
             }
             c.Close();
 

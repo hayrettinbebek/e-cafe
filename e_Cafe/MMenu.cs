@@ -39,7 +39,7 @@ namespace e_Cafe
 
         public MMenu()
         {
-            string s = System.IO.File.ReadAllText(@"ConnSTR.txt");
+            
             
 
             DEFS.createLogger();
