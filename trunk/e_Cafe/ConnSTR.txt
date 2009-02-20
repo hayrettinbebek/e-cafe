@@ -1,1 +1,0 @@
-﻿server=ERNIE-HOME\SQLEXPRESS;database=ECAFE;uid=sa;password=x
