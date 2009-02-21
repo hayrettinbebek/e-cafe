@@ -194,5 +194,14 @@ namespace e_Cafe
             f.MdiParent = this;
             f.Show();
         }
+
+        private void mennyiségiEgységekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHelyek f = new frmHelyek();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+
     }
 }

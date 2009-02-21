@@ -30,6 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMenu));
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlHelyek = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,24 +58,125 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlHelyek = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(184, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(782, 470);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(966, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(128, 470);
+            this.panel4.TabIndex = 0;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTime.Location = new System.Drawing.Point(3, 14);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(108, 41);
+            this.lblTime.TabIndex = 3;
+            this.lblTime.Text = "button2";
+            this.lblTime.UseVisualStyleBackColor = true;
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.panel5.Controls.Add(this.lblTime);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(128, 113);
+            this.panel5.TabIndex = 3;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // btmImgList
+            // 
+            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
+            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.btmImgList.Images.SetKeyName(0, "off.png");
+            this.btmImgList.Images.SetKeyName(1, "aktiv.png");
+            // 
+            // tmrTime
+            // 
+            this.tmrTime.Enabled = true;
+            this.tmrTime.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DimGray;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(184, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(782, 20);
+            this.panel6.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.BackgroundImage = global::e_Cafe.Properties.Resources.oldal;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.pnlHelyek);
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(184, 470);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnlHelyek
+            // 
+            this.pnlHelyek.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHelyek.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHelyek.Location = new System.Drawing.Point(10, 55);
+            this.pnlHelyek.Name = "pnlHelyek";
+            this.pnlHelyek.Size = new System.Drawing.Size(150, 415);
+            this.pnlHelyek.TabIndex = 9;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(160, 55);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(24, 415);
+            this.panel9.TabIndex = 10;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 55);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 415);
+            this.panel8.TabIndex = 7;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(184, 55);
+            this.panel7.TabIndex = 6;
             // 
             // panel1
             // 
@@ -267,130 +380,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.BackgroundImage = global::e_Cafe.Properties.Resources.oldal;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.pnlHelyek);
-            this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(184, 470);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnlHelyek
-            // 
-            this.pnlHelyek.BackColor = System.Drawing.Color.Transparent;
-            this.pnlHelyek.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHelyek.Location = new System.Drawing.Point(10, 55);
-            this.pnlHelyek.Name = "pnlHelyek";
-            this.pnlHelyek.Size = new System.Drawing.Size(150, 415);
-            this.pnlHelyek.TabIndex = 9;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(160, 55);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(24, 415);
-            this.panel9.TabIndex = 10;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 55);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 415);
-            this.panel8.TabIndex = 7;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(184, 55);
-            this.panel7.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DimGray;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(184, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(782, 470);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DimGray;
-            this.panel4.Controls.Add(this.lblTime);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(966, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(128, 470);
-            this.panel4.TabIndex = 0;
-            // 
-            // lblTime
-            // 
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTime.Location = new System.Drawing.Point(8, 141);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(108, 41);
-            this.lblTime.TabIndex = 3;
-            this.lblTime.Text = "button2";
-            this.lblTime.UseVisualStyleBackColor = true;
-            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Controls.Add(this.elementHost1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(128, 113);
-            this.panel5.TabIndex = 3;
-            // 
-            // elementHost1
-            // 
-            this.elementHost1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.elementHost1.Location = new System.Drawing.Point(0, 0);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(113, 113);
-            this.elementHost1.TabIndex = 4;
-            this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = null;
-            // 
-            // btmImgList
-            // 
-            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
-            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.btmImgList.Images.SetKeyName(0, "off.png");
-            this.btmImgList.Images.SetKeyName(1, "aktiv.png");
-            // 
-            // tmrTime
-            // 
-            this.tmrTime.Enabled = true;
-            this.tmrTime.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.DimGray;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(184, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(782, 20);
-            this.panel6.TabIndex = 0;
-            // 
             // MMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,11 +395,11 @@
             this.ShowIcon = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MMenu_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -426,8 +415,6 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button lblTime;
-
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
 
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel6;

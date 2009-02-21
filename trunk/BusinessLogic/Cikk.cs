@@ -15,15 +15,26 @@ namespace BusinessLogic
         public String KISZ_MEGN;
         public double KISZ_MENNY;
 
+        #region CIKK_ID
         private int fCIKK_ID;
         public int CIKK_ID
         {
             get { return (fCIKK_ID); }
             set { fCIKK_ID = value; }
         }
+        #endregion
 
-        //cikk típus
-        public int fCIKK_TIPUS;
+        #region MEGYS_ID
+        private int fMEGYS_ID;
+        public int MEGYS_ID
+        {
+            get { return (fMEGYS_ID); }
+            set { fMEGYS_ID = value; }
+        }
+        #endregion
+        
+        #region CIKK_TIPUS
+        private int fCIKK_TIPUS;
         public bool OSSZETETT
         {
             get { return (fCIKK_TIPUS == 1); }
@@ -31,8 +42,9 @@ namespace BusinessLogic
             else { fCIKK_TIPUS = 0; }
             }
         }
+        #endregion
 
-        //készlet
+        #region készlet
         public List<CikkKeszlet> lKESZLET = new List<CikkKeszlet>();
         public double fKESZLET
         {
@@ -65,15 +77,18 @@ namespace BusinessLogic
 
             }
         }
+        #endregion
 
-        //Alcsoport
+        #region Alcsoport
         private int fOTHER_FILTER_ID;
         public int ALCSOPORT
         {
             get { return (fOTHER_FILTER_ID); }
             set { fOTHER_FILTER_ID = value; }
         }
+        #endregion
 
+        #region MEGNEVEZES
         //megnevezés
         private string fMEGNEVEZES;
         public string MEGNEVEZES
@@ -81,21 +96,105 @@ namespace BusinessLogic
             get { return(fMEGNEVEZES);}
             set { fMEGNEVEZES = value; }
         }
-        //Cikkcsoport
+        #endregion
+
+        #region MEGJEGYZES
+        //megnevezés
+        private string fMEGJEGYZES;
+        public string MEGJEGYZES
+        {
+            get { return (fMEGJEGYZES); }
+            set { fMEGJEGYZES = value; }
+        }
+        #endregion
+        
+        #region CIKKSZAM
+        //megnevezés
+        private string fCIKKSZAM;
+        public string CIKKSZAM
+        {
+            get { return (fCIKKSZAM); }
+            set { fCIKKSZAM = value; }
+        }
+        #endregion
+
+        #region GYORSKOD
+        //megnevezés
+        private string fGYORSKOD;
+        public string GYORSKOD
+        {
+            get { return (fGYORSKOD); }
+            set { fGYORSKOD = value; }
+        }
+        #endregion
+
+        #region EAN
+        //megnevezés
+        private string fEAN;
+        public string EAN
+        {
+            get { return (fEAN); }
+            set { fEAN = value; }
+        }
+        #endregion
+
+        #region MINIMUM_KESZLET
+        //megnevezés
+        private double fMINIMUM_KESZLET;
+        public double MINIMUM_KESZLET
+        {
+            get { return (fMINIMUM_KESZLET); }
+            set { fMINIMUM_KESZLET = value; }
+        }
+        #endregion
+
+        #region OPTIMALIS_KESZLET
+        //megnevezés
+        private double fOPTIMALIS_KESZLET;
+        public double OPTIMALIS_KESZLET
+        {
+            get { return (fOPTIMALIS_KESZLET); }
+            set { fOPTIMALIS_KESZLET = value; }
+        }
+        #endregion
+
+        #region ELADASI_AR
+        //megnevezés
+        private double fELADASI_AR;
+        public double ELADASI_AR
+        {
+            get { return (fELADASI_AR); }
+            set { fELADASI_AR = value; }
+        }
+        #endregion
+
+        #region SZJ
+        //megnevezés
+        private string fSZJ;
+        public string SZJ
+        {
+            get { return (fSZJ); }
+            set { fSZJ = value; }
+        }
+        #endregion
+
+        #region Cikkcsoport
         private int fCIKKCSOPORT_ID;
         public int CIKKCSOPORT_ID
         {
             get { return (fCIKKCSOPORT_ID); }
             set { fCIKKCSOPORT_ID = value; }
         }
+        #endregion
 
-        //alap raktár
+        #region alap raktár
         private int fDEFAULT_RAKTAR;
         public int ALAP_RAKTAR
         {
             get { return (fDEFAULT_RAKTAR); }
             set { fDEFAULT_RAKTAR = value; }
         }
+        #endregion
 
         //megnevezés
         private string fERT_TIP;
@@ -157,8 +256,9 @@ namespace BusinessLogic
             SqlDataReader rdr = gk.ExecuteReader();
             while (rdr.Read())
             {
-                lKESZLET.Add(new CikkKeszlet((int)rdr["RAKTAR_ID"], (string)rdr["RAKTAR_NEV"], (double)rdr["KESZLET"], (double)rdr["KESZLET_ERTEK"]));
+                lKESZLET.Add(new CikkKeszlet((int)rdr["RAKTAR_ID"], (string)rdr["RAKTAR_NEV"], (double)rdr["KESZLET"], (double)rdr["KESZLET_ERTEK"], (double)rdr["ATLAGAR"]));
                 DEFS.log(Level.Debug, "Keszlet:" + "-->" + rdr["RAKTAR_ID"] + "-->" + rdr["RAKTAR_NEV"] + "-->" + rdr["KESZLET"] + "-->" + rdr["KESZLET_ERTEK"]);
+
             }
             c.Close();
         }
@@ -195,8 +295,10 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(CIKKSZAM,'') as CIKKSZAM, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
                             " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY " +
+                            " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
+                            " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID  " +
                             " FROM CIKK  c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE CIKK_ID =" + pCikkId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -208,9 +310,19 @@ namespace BusinessLogic
                 fCIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
                 fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
                 fDEFAULT_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                MEGYS_ID = (int)rdr["DEFAULT_RAKTAR"];
                 ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
+                CIKKSZAM = (string)rdr["CIKKSZAM"];
+                GYORSKOD = (string)rdr["GYORSKOD"];
+                EAN = (string)rdr["EAN_KOD"];
+                SZJ = (string)rdr["SZJ_SZAM"];
+                MEGJEGYZES = (string)rdr["MEGJEGYZES"];
                 KISZ_MEGN = (string)rdr["KISZ_NEV"];
                 KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+                MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
+                OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
+                ELADASI_AR = (double)rdr["ELADASI_AR"];
+
                 DEFS.log(Level.Debug, "CikK olvasása" + rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
                         rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + rdr["KISZ_NEV"] + "#" + rdr["KISZ_MENNY"] + "#" + "#" + "#" + "#");
 
@@ -220,6 +332,52 @@ namespace BusinessLogic
             c.Close();
             
         }
+
+        public Cikk(int pCikkId, bool ForEdit, SqlConnection c)
+        {
+            if (c.State == ConnectionState.Closed) { c.Open(); }
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(CIKKSZAM,'') as CIKKSZAM, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
+                            " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS," +
+                            " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , "+
+                            " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID  " +
+                            " FROM CIKK  WHERE CIKK_ID =" + pCikkId.ToString();
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                fCIKK_ID = (int)rdr["CIKK_ID"];
+                fMEGNEVEZES = (string)rdr["MEGNEVEZES"];
+                fCIKK_TIPUS = (int)rdr["CIKK_TIPUS"];
+                fCIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
+                fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
+                fDEFAULT_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                MEGYS_ID = (int)rdr["DEFAULT_RAKTAR"];
+                ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
+                CIKKSZAM = (string)rdr["CIKKSZAM"];
+                GYORSKOD = (string)rdr["GYORSKOD"];
+                EAN = (string)rdr["EAN_KOD"];
+                SZJ = (string)rdr["SZJ_SZAM"];
+                MEGJEGYZES = (string)rdr["MEGJEGYZES"];
+                MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
+                OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
+                ELADASI_AR = (double)rdr["ELADASI_AR"];
+
+                DEFS.log(Level.Debug, "CikK olvasása" + rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
+                        rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + "#" + "#" + "#" + "#");
+
+            }
+            getKeszlet();
+            CIKK_KISZERELES = new CikkKiszerelesList(fCIKK_ID, new SqlConnection(DEFS.ConSTR));
+            c.Close();
+
+        }
+
 
         public void Save()
         {
@@ -242,8 +400,16 @@ namespace BusinessLogic
                                             ",CIKK_TIPUS " +
                                             ",CIKKCSOPORT_ID " +
                                             ",ERTEKESITES_TIPUSA " +
-                                            ",MEGYS_ID"+
                                             ",OTHER_FILTER_ID " +
+                                            ",CIKKSZAM " +
+                                            ",GYORSKOD " +
+                                            ",EAN_KOD " +
+                                            ",SZJ_SZAM " +
+                                            ",MINIMUM_KESZLET " +
+                                            ",OPTIMALIS_KESZLET " +
+                                            ",ELADASI_AR " +
+                                            ",MEGJEGYZES " +
+                                            ",MEGYS_ID " +
                                             ",DEFAULT_RAKTAR " +
                                             //",ERTEKESITES_TIPUSA " +
                                             " ) " +
@@ -252,8 +418,16 @@ namespace BusinessLogic
                                             ",@CIKK_TIPUS " +
                                             ",@CIKKCSOPORT_ID " +
                                             ",@ERTEKESITES_TIPUSA " +
-                                            ",@MEGYS_ID " +
                                             ",@OTHER_FILTER_ID " +
+                                            ",@CIKKSZAM " +
+                                            ",@GYORSKOD " +
+                                            ",@EAN " +
+                                            ",@SZJ " +
+                                            ",@MINIMUM_KESZLET " +
+                                            ",@OPTIMALIS_KESZLET " +
+                                            ",@ELADASI_AR " +
+                                            ",@MEGJEGYZES " +
+                                            ",@MEGYS_ID " +
                                             ",@DEFAULT_RAKTAR)";
 
                         break;
@@ -264,9 +438,17 @@ namespace BusinessLogic
                                                        " CIKK_TIPUS = @CIKK_TIPUS, " +
                                                        " CIKKCSOPORT_ID = @CIKKCSOPORT_ID, " +
                                                        " ERTEKESITES_TIPUSA = @ERTEKESITES_TIPUSA, " +
-                                                       " MEGYS_ID = @MEGYS_ID, " +
                                                        " OTHER_FILTER_ID = @OTHER_FILTER_ID, " +
-                                                       " DEFAULT_RAKTAR = @DEFAULT_RAKTAR " +
+                                                       " DEFAULT_RAKTAR = @DEFAULT_RAKTAR, " +
+                                                       " CIKKSZAM = @CIKKSZAM, " +
+                                                       " GYORSKOD = @GYORSKOD, " +
+                                                       " EAN_KOD = @EAN, " +
+                                                       " SZJ_SZAM = @SZJ, " +
+                                                       " MINIMUM_KESZLET = @MINIMUM_KESZLET, " +
+                                                       " OPTIMALIS_KESZLET = @OPTIMALIS_KESZLET, " +
+                                                       " ELADASI_AR = @ELADASI_AR, " +
+                                                       " MEGJEGYZES = @MEGJEGYZES, " +
+                                                       " MEGYS_ID = @MEGYS_ID " +
 
                                            "WHERE CIKK_ID = @CIKK_ID";
                         cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
@@ -278,17 +460,34 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("CIKK_TIPUS", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("CIKKCSOPORT_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("ERTEKESITES_TIPUSA", SqlDbType.VarChar));
-            cmd.Parameters.Add(new SqlParameter("MEGYS_ID", SqlDbType.VarChar));
             cmd.Parameters.Add(new SqlParameter("OTHER_FILTER_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("DEFAULT_RAKTAR", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("CIKKSZAM", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("GYORSKOD", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("EAN", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("SZJ", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("MINIMUM_KESZLET", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("OPTIMALIS_KESZLET", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("ELADASI_AR", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("MEGJEGYZES", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("MEGYS_ID", SqlDbType.Int));
 
+            
             cmd.Parameters["MEGNEVEZES"].Value = MEGNEVEZES;
             cmd.Parameters["CIKK_TIPUS"].Value = fCIKK_TIPUS;
             cmd.Parameters["CIKKCSOPORT_ID"].Value = CIKKCSOPORT_ID;
             cmd.Parameters["ERTEKESITES_TIPUSA"].Value = ERTEKESITES_TIPUSA;
-            cmd.Parameters["MEGYS_ID"].Value = "1";
             cmd.Parameters["OTHER_FILTER_ID"].Value = ALCSOPORT;
             cmd.Parameters["DEFAULT_RAKTAR"].Value = ALAP_RAKTAR;
+            cmd.Parameters["CIKKSZAM"].Value = CIKKSZAM;
+            cmd.Parameters["GYORSKOD"].Value = GYORSKOD;
+            cmd.Parameters["SZJ"].Value = SZJ;
+            cmd.Parameters["EAN"].Value = EAN;
+            cmd.Parameters["MINIMUM_KESZLET"].Value = MINIMUM_KESZLET;
+            cmd.Parameters["OPTIMALIS_KESZLET"].Value = OPTIMALIS_KESZLET;
+            cmd.Parameters["ELADASI_AR"].Value = ELADASI_AR;
+            cmd.Parameters["MEGJEGYZES"].Value = MEGJEGYZES;
+            cmd.Parameters["MEGYS_ID"].Value = MEGYS_ID;
 
             DEFS.log(Level.Debug, @"Cikk instert / update" + cmd.CommandText);
             try
@@ -316,18 +515,57 @@ namespace BusinessLogic
    
     public class CikkKeszlet
     {
-        public int fRAKTAR_ID;
-        public double fKESZLET;
-        public double fKESZLET_ERTEK;
+        #region Raktár
+        //megnevezés
         public string fNEV;
+        public string RAKTAR
+        {
+            get { return (fNEV); }
+            set { fNEV = value; }
+        }
+        #endregion
 
+        #region KESZLET
+        //megnevezés
+        public double fKESZLET;
+        public double KESZLET
+        {
+            get { return (fKESZLET); }
+            set { fKESZLET = value; }
+        }
+        #endregion
 
-        public CikkKeszlet(int pRakt_id, string RaktarNev, double pKeszlet, double pKeszlet_ert)
+        #region KESZLET_ERTEK
+        //megnevezés
+        public double fKESZLET_ERTEK;
+        public double KESZLET_ERTEK
+        {
+            get { return (fKESZLET_ERTEK); }
+            set { fKESZLET_ERTEK = value; }
+        }
+        #endregion
+
+        #region ATLAGAR
+        //megnevezés
+        public double fATLAGAR;
+        public double ATLAGAR
+        {
+            get { return (fATLAGAR); }
+            set { fATLAGAR = value; }
+        }
+        #endregion
+
+        public int fRAKTAR_ID;
+        
+        
+        
+        public CikkKeszlet(int pRakt_id, string RaktarNev, double pKeszlet, double pKeszlet_ert, double pAtlagar)
         {
             fRAKTAR_ID = pRakt_id;
             fKESZLET = pKeszlet;
             fKESZLET_ERTEK = pKeszlet_ert;
             fNEV = RaktarNev;
+            fATLAGAR = pAtlagar;
         }
 
     }
@@ -409,6 +647,20 @@ namespace BusinessLogic
 
 
             return (iTmpRet);
+        }
+
+        public Cikk CikkByID(int iCikkId)
+        {
+           Cikk tc = null;
+
+            var ret_cikk =
+                from c in lCIKK
+                where c.CIKK_ID == iCikkId
+                select c;
+            ret_cikk.Each(c => tc = c);
+
+
+            return (tc);
         }
 
     }

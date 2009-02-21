@@ -33,13 +33,11 @@
             this.txtSzallitolevel = new System.Windows.Forms.TextBox();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblSzallito = new System.Windows.Forms.Label();
             this.txtSzamlaszam = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.sORIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bEVETELFEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +50,9 @@
             this.fELADVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bevetelSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bevetelSorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(426, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 0;
@@ -68,14 +68,15 @@
             // 
             // txtSzallitolevel
             // 
-            this.txtSzallitolevel.Location = new System.Drawing.Point(82, 6);
+            this.txtSzallitolevel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSzallitolevel.Location = new System.Drawing.Point(496, 5);
             this.txtSzallitolevel.Name = "txtSzallitolevel";
             this.txtSzallitolevel.Size = new System.Drawing.Size(100, 20);
             this.txtSzallitolevel.TabIndex = 1;
             // 
             // dtpDatum
             // 
-            this.dtpDatum.Location = new System.Drawing.Point(493, 5);
+            this.dtpDatum.Location = new System.Drawing.Point(79, 5);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(120, 20);
             this.dtpDatum.TabIndex = 2;
@@ -83,43 +84,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(423, 9);
+            this.label2.Location = new System.Drawing.Point(9, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dátum";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Szállító";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(82, 32);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Választ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Szállító";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblSzallito
             // 
             this.lblSzallito.AutoSize = true;
-            this.lblSzallito.Location = new System.Drawing.Point(167, 37);
+            this.lblSzallito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSzallito.Location = new System.Drawing.Point(81, 34);
             this.lblSzallito.Name = "lblSzallito";
-            this.lblSzallito.Size = new System.Drawing.Size(35, 13);
+            this.lblSzallito.Size = new System.Drawing.Size(52, 17);
             this.lblSzallito.TabIndex = 5;
             this.lblSzallito.Text = "label4";
             // 
             // txtSzamlaszam
             // 
-            this.txtSzamlaszam.Location = new System.Drawing.Point(288, 6);
+            this.txtSzamlaszam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSzamlaszam.Location = new System.Drawing.Point(307, 6);
             this.txtSzamlaszam.Name = "txtSzamlaszam";
             this.txtSzamlaszam.Size = new System.Drawing.Size(100, 20);
             this.txtSzamlaszam.TabIndex = 1;
@@ -127,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(218, 9);
+            this.label4.Location = new System.Drawing.Point(236, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 0;
@@ -158,16 +154,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(647, 143);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(275, 62);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 25);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "új sor";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // sORIDDataGridViewTextBoxColumn
             // 
@@ -253,15 +239,42 @@
             // 
             this.bevetelSorBindingSource.DataSource = typeof(BusinessLogic.BevetelSor);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(189)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.Location = new System.Drawing.Point(0, 64);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 25);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "+ Új sor felvitele";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(572, 64);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Bezár";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "Mentés";
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(491, 64);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Mégse";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmBevetel
             // 
@@ -273,8 +286,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblSzallito);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSzamlaszam);
@@ -282,7 +295,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "frmBevetel";
-            this.Text = "frmBevetel";
+            this.ShowInTaskbar = false;
+            this.Text = "Bevételezés";
             this.Load += new System.EventHandler(this.frmBevetel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bevetelSorBindingSource)).EndInit();
@@ -297,7 +311,6 @@
         private System.Windows.Forms.TextBox txtSzallitolevel;
         private System.Windows.Forms.DateTimePicker dtpDatum;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblSzallito;
         private System.Windows.Forms.TextBox txtSzamlaszam;
@@ -317,5 +330,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGJEGYZESDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
