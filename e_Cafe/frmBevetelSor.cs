@@ -14,7 +14,7 @@ namespace e_Cafe
     public partial class frmBevetelSor : Form
     {
         private int cikk_id;
-        private int def_rakt;
+        
         public BevetelSor retSor;
         private double afa_szaz;
 
@@ -33,10 +33,12 @@ namespace e_Cafe
             {
 
                 cikk_id = fc.CIKK_ID;
-                def_rakt = fc.DEF_RAKT;
+                
+                cmbRaktar.SelectedValue = fc.DEF_RAKT;
                 lblCikk.Text = fc.CIKK_NEV;
                 afa_szaz = fc.AFA_SZAZ;
-                lblMert.Text = fc.c.OSSZETETT.ToString();
+                lblMert.Text = fc.c.MEGYS_ID.ToString();
+                lblPenz.Text = "Ft / " + fc.c.MEGYS_ID.ToString();
                 
             }
         }
@@ -83,7 +85,8 @@ namespace e_Cafe
                 retSor.MEGJEGYZES = txtMegj.Text;
                 retSor.FELADVA = 0;
                 retSor.CIKK_ID = cikk_id;
-                retSor.RAKTAR_ID = def_rakt;
+                retSor.RAKTAR_ID = (int)cmbRaktar.SelectedValue;
+                
                 retSor.AFA_ERTEK =  Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text)*(afa_szaz/100);
                 retSor.BRUTTO_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text) * (1+(afa_szaz / 100));
                 this.DialogResult = DialogResult.OK;
@@ -104,6 +107,31 @@ namespace e_Cafe
         private void lblCikk_Click(object sender, EventArgs e)
         {
             button1_Click(sender,e);
+        }
+
+        private void frmBevetelSor_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'eCAFEDataSetRAKTAR.RAKTAR' table. You can move, or remove it, as needed.
+            this.rAKTARTableAdapter.Fill(this.eCAFEDataSetRAKTAR.RAKTAR);
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmUjCikk fc = new frmUjCikk();
+            fc.ShowDialog();
+
+            if (fc.DialogResult == DialogResult.OK)
+            {
+                cikk_id = fc.newCikk.CIKK_ID;
+                cmbRaktar.SelectedValue = fc.newCikk.ALAP_RAKTAR;
+                lblCikk.Text = fc.newCikk.MEGNEVEZES;
+                afa_szaz = fc.newCikk.getAfaSzaz();
+                lblMert.Text = fc.newCikk.MEGYS_MEGNEVEZES;
+                lblPenz.Text = "Ft / " + fc.newCikk.MEGYS_MEGNEVEZES;
+
+            }
+            
         }
     }
 }

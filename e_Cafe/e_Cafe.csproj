@@ -185,6 +185,12 @@
     <Compile Include="frmBevetelSor.Designer.cs">
       <DependentUpon>frmBevetelSor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPartnerInsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBevetelSor.resx">
       <DependentUpon>frmBevetelSor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPartnerInsert.resx">
       <DependentUpon>frmPartnerInsert.cs</DependentUpon>

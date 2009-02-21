@@ -74,6 +74,7 @@ namespace e_Cafe
 
         private void MMenu_Load(object sender, EventArgs e)
         {
+            if (!Login()) { Application.Exit(); }
 
             blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
             DEFS.LoadNyitottNap();
@@ -84,6 +85,45 @@ namespace e_Cafe
             MessageBox.Show("Nyitott nap:"+DEFS.NyitNap_EV.ToString() + DEFS.NyitNap_HO.ToString() + DEFS.NyitNap_NAP.ToString());
         }
 
+        private bool Login()
+        {
+            bool r = false;
+            ECafeLogin l = new ECafeLogin();
+            int k = 0;
+            while (k < 3)
+            {
+                k++;
+
+                frmLogin fl = new frmLogin();
+                fl.ShowDialog();
+                if (fl.DialogResult == DialogResult.OK)
+                {
+                    if (!l.AuthenticateUser(fl._usr, fl._pw))
+                    {
+                        if ((fl._usr == "x") && (fl._pw == "11"))
+                        {
+                            DEFS.SendInfoMessage("Sikertelen belépés de tudod a titkos kódot :)!");
+                            r = true;
+                            break;
+                        }
+                        //else
+                        //{
+                        //    DEFS.SendInfoMessage("Sikertelen belépés!");
+                        //}
+                    }
+                    else
+                    {
+                        r = true;
+                        break;
+
+                    }
+
+                }
+            }
+
+            return (r);
+
+        }
 
         private void initHelyek()
         {
@@ -273,25 +313,7 @@ namespace e_Cafe
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
 
 

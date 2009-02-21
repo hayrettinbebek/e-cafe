@@ -850,6 +850,7 @@ namespace BusinessLogic
                 if (_partner_id == -1)
                 {
                     new_p_id = (int)cmd.Parameters["newid"].Value;
+                    PARTNER_ID = new_p_id;
                 }
 
                 c.Close();

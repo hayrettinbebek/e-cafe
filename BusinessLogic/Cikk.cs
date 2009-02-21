@@ -24,12 +24,25 @@ namespace BusinessLogic
         }
         #endregion
 
+        
         #region MEGYS_ID
         private int fMEGYS_ID;
         public int MEGYS_ID
         {
             get { return (fMEGYS_ID); }
             set { fMEGYS_ID = value; }
+        }
+
+        public string MEGYS_MEGNEVEZES
+        {
+            get
+            {
+                Megys_list ml = new Megys_list(new SqlConnection(DEFS.ConSTR));
+                
+                return (ml.MegysById(MEGYS_ID).NEV);
+
+            }
+           
         }
         #endregion
         
@@ -296,7 +309,7 @@ namespace BusinessLogic
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(CIKKSZAM,'') as CIKKSZAM, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
-                            " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY " +
+                            " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY, " +
                             " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
                             " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID  " +
                             " FROM CIKK  c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE CIKK_ID =" + pCikkId.ToString();
@@ -381,6 +394,8 @@ namespace BusinessLogic
 
         public void Save()
         {
+            int new_c_id;
+            new_c_id = fCIKK_ID;
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
 
@@ -428,8 +443,9 @@ namespace BusinessLogic
                                             ",@ELADASI_AR " +
                                             ",@MEGJEGYZES " +
                                             ",@MEGYS_ID " +
-                                            ",@DEFAULT_RAKTAR)";
-
+                                            ",@DEFAULT_RAKTAR) SET @newid = SCOPE_IDENTITY()";
+                        cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
+                        cmd.Parameters["newid"].Direction = ParameterDirection.Output;
                         break;
                     }
                 default:
@@ -499,6 +515,13 @@ namespace BusinessLogic
                 DEFS.log(Level.Info, "Hiba a Cikk mentése során:" + "/n" + e.Message + "/n" + e.StackTrace);
                 
             }
+
+            if (fCIKK_ID == -1)
+            {
+                new_c_id = (int)cmd.Parameters["newid"].Value;
+                fCIKK_ID = new_c_id;
+            }
+
             if (CIKK_KISZERELES != null)
             {
                 foreach (var k in CIKK_KISZERELES.lCikkKiszereles)
@@ -974,5 +997,88 @@ namespace BusinessLogic
         }
 
     }
+
+
     #endregion
+
+    #region Mértékegységek
+    public class Megys
+    {
+        private int _id;
+        public int ID
+        {
+            get { return (_id); }
+            set { _id = value; }
+        }
+
+        private string _nev;
+        public string NEV
+        {
+            get { return (_nev); }
+            set { _nev = value; }
+        }
+
+        public Megys(int pId, string pNev)
+        {
+            _id = pId;
+            _nev = pNev;
+        }
+
+
+    }
+
+    public class Megys_list
+    {
+
+
+        public List<Megys> lMegys = new List<Megys>();
+
+
+        public Megys_list(SqlConnection sc)
+        {
+
+            sc.Open();
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT MEGYS_ID, MEGYS_MEGNEVEZES FROM MEGYS";
+            DEFS.log(Level.Debug, "Get mértékegységek:");
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                Megys t = new Megys((int)rdr["MEGYS_ID"],
+                                  (string)rdr["MEGYS_MEGNEVEZES"]);
+
+                lMegys.Add(t);
+                DEFS.log(Level.Debug, rdr["MEGYS_ID"] + "-->" + rdr["MEGYS_MEGNEVEZES"]);
+
+            }
+            rdr.Close();
+            sc.Close();
+        }
+
+        public Megys MegysById(int iId)
+        {
+            Megys tc = null;
+
+            var ret_cikk =
+                from c in lMegys
+                where c.ID == iId
+                select c;
+            ret_cikk.Each(c => tc = c);
+
+
+            return (tc);
+        }
+
+    }
+
+
+
+    #endregion
+
 }

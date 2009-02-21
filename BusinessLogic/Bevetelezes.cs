@@ -394,9 +394,29 @@ namespace BusinessLogic
         public int CIKK_ID
         {
             get { return (_CIKK_ID); }
-            set { if (_CIKK_ID != value) { isModified = true; } _CIKK_ID = value; }
+            set
+            {
+                if (_CIKK_ID != value) { isModified = true; } 
+                _CIKK_ID = value;
+
+            }
         }
         #endregion
+
+        #region CIKK_NEV
+        //Szállítólevél száma
+        private string _CIKK_NEV;
+        public string CIKK_NEV
+        {
+            get
+            {
+                Cikk c = new Cikk(_CIKK_ID,true, new SqlConnection(DEFS.ConSTR));
+                return (c.MEGNEVEZES);
+            }
+            
+        }
+        #endregion
+
 
         #region MENNY
         private double _MENNY;
@@ -449,9 +469,27 @@ namespace BusinessLogic
         public int RAKTAR_ID
         {
             get { return (_RAKTAR_ID); }
-            set { if (_RAKTAR_ID != value) { isModified = true; } _RAKTAR_ID = value; }
+            set
+            {
+                if (_RAKTAR_ID != value) { isModified = true; }
+                _RAKTAR_ID = value;
+            }
         }
         #endregion
+
+        #region RAKTAR_NEV
+        //Szállítólevél száma
+        private string _RAKTAR_NEV;
+        public string RAKTAR_NEV
+        {
+            get {
+                RaktarLista r = new RaktarLista(new System.Data.SqlClient.SqlConnection(DEFS.ConSTR));
+                return ((r.RaktarByID(_RAKTAR_ID)).KOD);
+            }
+            
+        }
+        #endregion
+
 
         #region FELADVA
         //cikk

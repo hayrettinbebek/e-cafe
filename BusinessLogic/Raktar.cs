@@ -76,6 +76,19 @@ namespace BusinessLogic
             rdr.Close();
         }
 
+        public Raktar RaktarByID(int pRaktarID)
+        {
+            Raktar iTmpRet = null;
+
+            var ret_rakt =
+                from c in lRAKTAR
+                where c.ID == pRaktarID
+                select c;
+            ret_rakt.Each(c => iTmpRet =c);
+
+
+            return (iTmpRet);
+        }
     }
     #endregion
 }

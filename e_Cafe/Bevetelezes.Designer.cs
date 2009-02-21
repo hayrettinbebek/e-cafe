@@ -33,9 +33,9 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tsKeszVezet = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BIZONYLATSZAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SZAMLASZAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SZAMLA_OSSZESEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SZAMLA_OSSZ_BRUTTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bEVETELFEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,16 +47,10 @@
             this.sZAMLASZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sZAMLAOSSZESENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sZAMLAOSSZBRUTTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SZAMLASZAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eCAFEDataSetBEVETELEZESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eCAFEDataSetBEVETELEZES = new e_Cafe.ECAFEDataSetBEVETELEZES();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tPSorok = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.sORIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,13 +69,12 @@
             this.bEVETEL_SORTableAdapter = new e_Cafe.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter();
             this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.raktarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tsKeszVezet = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBEVETELEZESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBEVETELEZES)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tPSorok.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bEVETELSORBindingSource)).BeginInit();
@@ -94,10 +87,11 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.tsKeszVezet});
+            this.tsKeszVezet,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(914, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(927, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -120,6 +114,15 @@
             this.toolStripButton2.Size = new System.Drawing.Size(48, 22);
             this.toolStripButton2.Text = "Módosít";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // tsKeszVezet
+            // 
+            this.tsKeszVezet.Image = ((System.Drawing.Image)(resources.GetObject("tsKeszVezet.Image")));
+            this.tsKeszVezet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsKeszVezet.Name = "tsKeszVezet";
+            this.tsKeszVezet.Size = new System.Drawing.Size(112, 22);
+            this.tsKeszVezet.Text = "Készletre vezetés";
+            this.tsKeszVezet.Click += new System.EventHandler(this.tsKeszVezet_Click);
             // 
             // dataGridView1
             // 
@@ -145,7 +148,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(914, 191);
+            this.dataGridView1.Size = new System.Drawing.Size(927, 238);
             this.dataGridView1.TabIndex = 1;
             // 
             // BIZONYLATSZAM
@@ -153,12 +156,6 @@
             this.BIZONYLATSZAM.DataPropertyName = "BIZONYLATSZAM";
             this.BIZONYLATSZAM.HeaderText = "Bizonylatszám";
             this.BIZONYLATSZAM.Name = "BIZONYLATSZAM";
-            // 
-            // SZAMLASZAM
-            // 
-            this.SZAMLASZAM.DataPropertyName = "SZAMLASZAM";
-            this.SZAMLASZAM.HeaderText = "Számlaszám";
-            this.SZAMLASZAM.Name = "SZAMLASZAM";
             // 
             // SZAMLA_OSSZESEN
             // 
@@ -227,6 +224,12 @@
             this.sZAMLAOSSZBRUTTODataGridViewTextBoxColumn.HeaderText = "SZAMLA_OSSZ_BRUTTO";
             this.sZAMLAOSSZBRUTTODataGridViewTextBoxColumn.Name = "sZAMLAOSSZBRUTTODataGridViewTextBoxColumn";
             // 
+            // SZAMLASZAM
+            // 
+            this.SZAMLASZAM.DataPropertyName = "SZAMLASZAM";
+            this.SZAMLASZAM.HeaderText = "Számlaszám";
+            this.SZAMLASZAM.Name = "SZAMLASZAM";
+            // 
             // eCAFEDataSetBEVETELEZESBindingSource
             // 
             this.eCAFEDataSetBEVETELEZESBindingSource.DataMember = "BEVETEL_FEJ";
@@ -240,82 +243,13 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tPSorok);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 216);
+            this.tabControl1.Location = new System.Drawing.Point(0, 263);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(914, 339);
+            this.tabControl1.Size = new System.Drawing.Size(927, 240);
             this.tabControl1.TabIndex = 2;
-            this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
-            // 
-            // tPSorok
-            // 
-            this.tPSorok.Controls.Add(this.label3);
-            this.tPSorok.Controls.Add(this.label2);
-            this.tPSorok.Controls.Add(this.label1);
-            this.tPSorok.Controls.Add(this.textBox2);
-            this.tPSorok.Controls.Add(this.textBox1);
-            this.tPSorok.Controls.Add(this.dateTimePicker1);
-            this.tPSorok.Location = new System.Drawing.Point(4, 22);
-            this.tPSorok.Name = "tPSorok";
-            this.tPSorok.Padding = new System.Windows.Forms.Padding(3);
-            this.tPSorok.Size = new System.Drawing.Size(906, 313);
-            this.tPSorok.TabIndex = 0;
-            this.tPSorok.Text = "Alapadatok";
-            this.tPSorok.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Számlaszám";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Szállítólevél";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Dátum";
-            // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eCAFEDataSetBEVETELEZESBindingSource, "SZAMLA_SZAM", true));
-            this.textBox2.Location = new System.Drawing.Point(92, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 20);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eCAFEDataSetBEVETELEZESBindingSource, "SZALLITOLEVEL_SZAM", true));
-            this.textBox1.Location = new System.Drawing.Point(92, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.eCAFEDataSetBEVETELEZESBindingSource, "DATUM", true));
-            this.dateTimePicker1.Location = new System.Drawing.Point(66, 11);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
-            this.dateTimePicker1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -323,7 +257,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(906, 313);
+            this.tabPage2.Size = new System.Drawing.Size(919, 214);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sorok";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -350,10 +284,9 @@
             this.dataGridView2.Location = new System.Drawing.Point(6, 6);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(900, 243);
+            this.dataGridView2.Size = new System.Drawing.Size(900, 191);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            
             // 
             // sORIDDataGridViewTextBoxColumn
             // 
@@ -460,25 +393,28 @@
             // 
             this.raktarBindingSource.DataSource = typeof(BusinessLogic.Raktar);
             // 
-            // tsKeszVezet
+            // toolStripButton3
             // 
-            this.tsKeszVezet.Image = ((System.Drawing.Image)(resources.GetObject("tsKeszVezet.Image")));
-            this.tsKeszVezet.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsKeszVezet.Name = "tsKeszVezet";
-            this.tsKeszVezet.Size = new System.Drawing.Size(112, 22);
-            this.tsKeszVezet.Text = "Készletre vezetés";
-            this.tsKeszVezet.Click += new System.EventHandler(this.tsKeszVezet_Click);
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(44, 22);
+            this.toolStripButton3.Text = "Kilépés";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // Bevetelezes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 555);
+            this.ClientSize = new System.Drawing.Size(927, 503);
+            this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Bevetelezes";
-            this.Text = "Bevetelezes";
+            this.ShowInTaskbar = false;
+            this.Text = "Bevetelezesek áttekintése";
             this.Load += new System.EventHandler(this.Bevetelezes_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -486,8 +422,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBEVETELEZESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBEVETELEZES)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tPSorok.ResumeLayout(false);
-            this.tPSorok.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bEVETELSORBindingSource)).EndInit();
@@ -504,19 +438,12 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tPSorok;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn BIZONYLATSZAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn SZAMLASZAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn SZAMLA_OSSZESEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn SZAMLA_OSSZ_BRUTTO;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource cikkBindingSource;
         private System.Windows.Forms.BindingSource raktarBindingSource;
@@ -546,5 +473,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rAKTARIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGJEGYZESDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripButton tsKeszVezet;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
