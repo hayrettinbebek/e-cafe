@@ -217,14 +217,6 @@ namespace e_Cafe {
             base.Tables.Add(this.tableCIKK);
             this.tableLIT_KISZ = new LIT_KISZDataTable();
             base.Tables.Add(this.tableLIT_KISZ);
-            global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("CIKK_LIT_KISZ", new global::System.Data.DataColumn[] {
-                        this.tableCIKK.CIKK_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableLIT_KISZ.LIT_KISZ_CIKK_IDColumn});
-            this.tableLIT_KISZ.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -302,21 +294,7 @@ namespace e_Cafe {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class CIKKDataTable : global::System.Data.TypedTableBase<CIKKRow> {
             
-            private global::System.Data.DataColumn columnCIKK_ID;
-            
             private global::System.Data.DataColumn columnMEGNEVEZES;
-            
-            private global::System.Data.DataColumn columnCIKK_TIPUS;
-            
-            private global::System.Data.DataColumn columnCIKKCSOPORT_ID;
-            
-            private global::System.Data.DataColumn columnERTEKESITES_TIPUSA;
-            
-            private global::System.Data.DataColumn columnMEGYS_ID;
-            
-            private global::System.Data.DataColumn columnOTHER_FILTER_ID;
-            
-            private global::System.Data.DataColumn columnDEFAULT_RAKTAR;
             
             private global::System.Data.DataColumn columnSZJ_SZAM;
             
@@ -339,6 +317,24 @@ namespace e_Cafe {
             private global::System.Data.DataColumn columnMEGJEGYZES;
             
             private global::System.Data.DataColumn columnAKTIV;
+            
+            private global::System.Data.DataColumn columnCIKK_TIPUS;
+            
+            private global::System.Data.DataColumn columnCIKKCSOPORT;
+            
+            private global::System.Data.DataColumn columnERT_TIPUS;
+            
+            private global::System.Data.DataColumn columnMEGYS_MEGNEVEZES;
+            
+            private global::System.Data.DataColumn columnALCSOPORT;
+            
+            private global::System.Data.DataColumn columnRAKTAR_KOD;
+            
+            private global::System.Data.DataColumn columnGYORSKOD;
+            
+            private global::System.Data.DataColumn columnCIKK_ID;
+            
+            private global::System.Data.DataColumn columnERTEKESITES_TIPUSA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public CIKKDataTable() {
@@ -371,58 +367,9 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn CIKK_IDColumn {
-                get {
-                    return this.columnCIKK_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public global::System.Data.DataColumn MEGNEVEZESColumn {
                 get {
                     return this.columnMEGNEVEZES;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn CIKK_TIPUSColumn {
-                get {
-                    return this.columnCIKK_TIPUS;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn CIKKCSOPORT_IDColumn {
-                get {
-                    return this.columnCIKKCSOPORT_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn ERTEKESITES_TIPUSAColumn {
-                get {
-                    return this.columnERTEKESITES_TIPUSA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn MEGYS_IDColumn {
-                get {
-                    return this.columnMEGYS_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn OTHER_FILTER_IDColumn {
-                get {
-                    return this.columnOTHER_FILTER_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn DEFAULT_RAKTARColumn {
-                get {
-                    return this.columnDEFAULT_RAKTAR;
                 }
             }
             
@@ -504,6 +451,69 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CIKK_TIPUSColumn {
+                get {
+                    return this.columnCIKK_TIPUS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CIKKCSOPORTColumn {
+                get {
+                    return this.columnCIKKCSOPORT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ERT_TIPUSColumn {
+                get {
+                    return this.columnERT_TIPUS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MEGYS_MEGNEVEZESColumn {
+                get {
+                    return this.columnMEGYS_MEGNEVEZES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ALCSOPORTColumn {
+                get {
+                    return this.columnALCSOPORT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn RAKTAR_KODColumn {
+                get {
+                    return this.columnRAKTAR_KOD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn GYORSKODColumn {
+                get {
+                    return this.columnGYORSKOD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CIKK_IDColumn {
+                get {
+                    return this.columnCIKK_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn ERTEKESITES_TIPUSAColumn {
+                get {
+                    return this.columnERTEKESITES_TIPUSA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -534,12 +544,6 @@ namespace e_Cafe {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public CIKKRow AddCIKKRow(
                         string MEGNEVEZES, 
-                        int CIKK_TIPUS, 
-                        int CIKKCSOPORT_ID, 
-                        string ERTEKESITES_TIPUSA, 
-                        string MEGYS_ID, 
-                        int OTHER_FILTER_ID, 
-                        int DEFAULT_RAKTAR, 
                         string SZJ_SZAM, 
                         string CIKKSZAM, 
                         string EAN_KOD, 
@@ -550,17 +554,18 @@ namespace e_Cafe {
                         double MAX_KEDVEZMENY_SZ, 
                         double MAX_KEDVEZM_FT, 
                         string MEGJEGYZES, 
-                        int AKTIV) {
+                        int AKTIV, 
+                        string CIKK_TIPUS, 
+                        string CIKKCSOPORT, 
+                        string ERT_TIPUS, 
+                        string MEGYS_MEGNEVEZES, 
+                        string ALCSOPORT, 
+                        string RAKTAR_KOD, 
+                        string GYORSKOD, 
+                        string ERTEKESITES_TIPUSA) {
                 CIKKRow rowCIKKRow = ((CIKKRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         MEGNEVEZES,
-                        CIKK_TIPUS,
-                        CIKKCSOPORT_ID,
-                        ERTEKESITES_TIPUSA,
-                        MEGYS_ID,
-                        OTHER_FILTER_ID,
-                        DEFAULT_RAKTAR,
                         SZJ_SZAM,
                         CIKKSZAM,
                         EAN_KOD,
@@ -571,7 +576,16 @@ namespace e_Cafe {
                         MAX_KEDVEZMENY_SZ,
                         MAX_KEDVEZM_FT,
                         MEGJEGYZES,
-                        AKTIV};
+                        AKTIV,
+                        CIKK_TIPUS,
+                        CIKKCSOPORT,
+                        ERT_TIPUS,
+                        MEGYS_MEGNEVEZES,
+                        ALCSOPORT,
+                        RAKTAR_KOD,
+                        GYORSKOD,
+                        null,
+                        ERTEKESITES_TIPUSA};
                 rowCIKKRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCIKKRow);
                 return rowCIKKRow;
@@ -597,14 +611,7 @@ namespace e_Cafe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
-                this.columnCIKK_ID = base.Columns["CIKK_ID"];
                 this.columnMEGNEVEZES = base.Columns["MEGNEVEZES"];
-                this.columnCIKK_TIPUS = base.Columns["CIKK_TIPUS"];
-                this.columnCIKKCSOPORT_ID = base.Columns["CIKKCSOPORT_ID"];
-                this.columnERTEKESITES_TIPUSA = base.Columns["ERTEKESITES_TIPUSA"];
-                this.columnMEGYS_ID = base.Columns["MEGYS_ID"];
-                this.columnOTHER_FILTER_ID = base.Columns["OTHER_FILTER_ID"];
-                this.columnDEFAULT_RAKTAR = base.Columns["DEFAULT_RAKTAR"];
                 this.columnSZJ_SZAM = base.Columns["SZJ_SZAM"];
                 this.columnCIKKSZAM = base.Columns["CIKKSZAM"];
                 this.columnEAN_KOD = base.Columns["EAN_KOD"];
@@ -616,26 +623,21 @@ namespace e_Cafe {
                 this.columnMAX_KEDVEZM_FT = base.Columns["MAX_KEDVEZM_FT"];
                 this.columnMEGJEGYZES = base.Columns["MEGJEGYZES"];
                 this.columnAKTIV = base.Columns["AKTIV"];
+                this.columnCIKK_TIPUS = base.Columns["CIKK_TIPUS"];
+                this.columnCIKKCSOPORT = base.Columns["CIKKCSOPORT"];
+                this.columnERT_TIPUS = base.Columns["ERT_TIPUS"];
+                this.columnMEGYS_MEGNEVEZES = base.Columns["MEGYS_MEGNEVEZES"];
+                this.columnALCSOPORT = base.Columns["ALCSOPORT"];
+                this.columnRAKTAR_KOD = base.Columns["RAKTAR_KOD"];
+                this.columnGYORSKOD = base.Columns["GYORSKOD"];
+                this.columnCIKK_ID = base.Columns["CIKK_ID"];
+                this.columnERTEKESITES_TIPUSA = base.Columns["ERTEKESITES_TIPUSA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnCIKK_ID = new global::System.Data.DataColumn("CIKK_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCIKK_ID);
                 this.columnMEGNEVEZES = new global::System.Data.DataColumn("MEGNEVEZES", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMEGNEVEZES);
-                this.columnCIKK_TIPUS = new global::System.Data.DataColumn("CIKK_TIPUS", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCIKK_TIPUS);
-                this.columnCIKKCSOPORT_ID = new global::System.Data.DataColumn("CIKKCSOPORT_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCIKKCSOPORT_ID);
-                this.columnERTEKESITES_TIPUSA = new global::System.Data.DataColumn("ERTEKESITES_TIPUSA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnERTEKESITES_TIPUSA);
-                this.columnMEGYS_ID = new global::System.Data.DataColumn("MEGYS_ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMEGYS_ID);
-                this.columnOTHER_FILTER_ID = new global::System.Data.DataColumn("OTHER_FILTER_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOTHER_FILTER_ID);
-                this.columnDEFAULT_RAKTAR = new global::System.Data.DataColumn("DEFAULT_RAKTAR", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDEFAULT_RAKTAR);
                 this.columnSZJ_SZAM = new global::System.Data.DataColumn("SZJ_SZAM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSZJ_SZAM);
                 this.columnCIKKSZAM = new global::System.Data.DataColumn("CIKKSZAM", typeof(string), null, global::System.Data.MappingType.Element);
@@ -658,26 +660,48 @@ namespace e_Cafe {
                 base.Columns.Add(this.columnMEGJEGYZES);
                 this.columnAKTIV = new global::System.Data.DataColumn("AKTIV", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAKTIV);
+                this.columnCIKK_TIPUS = new global::System.Data.DataColumn("CIKK_TIPUS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCIKK_TIPUS);
+                this.columnCIKKCSOPORT = new global::System.Data.DataColumn("CIKKCSOPORT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCIKKCSOPORT);
+                this.columnERT_TIPUS = new global::System.Data.DataColumn("ERT_TIPUS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnERT_TIPUS);
+                this.columnMEGYS_MEGNEVEZES = new global::System.Data.DataColumn("MEGYS_MEGNEVEZES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMEGYS_MEGNEVEZES);
+                this.columnALCSOPORT = new global::System.Data.DataColumn("ALCSOPORT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnALCSOPORT);
+                this.columnRAKTAR_KOD = new global::System.Data.DataColumn("RAKTAR_KOD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRAKTAR_KOD);
+                this.columnGYORSKOD = new global::System.Data.DataColumn("GYORSKOD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGYORSKOD);
+                this.columnCIKK_ID = new global::System.Data.DataColumn("CIKK_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCIKK_ID);
+                this.columnERTEKESITES_TIPUSA = new global::System.Data.DataColumn("ERTEKESITES_TIPUSA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnERTEKESITES_TIPUSA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCIKK_ID}, true));
+                this.columnMEGNEVEZES.AllowDBNull = false;
+                this.columnMEGNEVEZES.MaxLength = 50;
+                this.columnSZJ_SZAM.MaxLength = 30;
+                this.columnCIKKSZAM.MaxLength = 50;
+                this.columnEAN_KOD.MaxLength = 28;
+                this.columnMEGJEGYZES.MaxLength = 4000;
+                this.columnCIKK_TIPUS.ReadOnly = true;
+                this.columnCIKK_TIPUS.MaxLength = 9;
+                this.columnCIKKCSOPORT.MaxLength = 50;
+                this.columnERT_TIPUS.ReadOnly = true;
+                this.columnERT_TIPUS.MaxLength = 5;
+                this.columnMEGYS_MEGNEVEZES.MaxLength = 50;
+                this.columnALCSOPORT.MaxLength = 50;
+                this.columnRAKTAR_KOD.MaxLength = 50;
+                this.columnGYORSKOD.MaxLength = 10;
                 this.columnCIKK_ID.AutoIncrement = true;
                 this.columnCIKK_ID.AutoIncrementSeed = -1;
                 this.columnCIKK_ID.AutoIncrementStep = -1;
                 this.columnCIKK_ID.AllowDBNull = false;
                 this.columnCIKK_ID.ReadOnly = true;
                 this.columnCIKK_ID.Unique = true;
-                this.columnMEGNEVEZES.AllowDBNull = false;
-                this.columnMEGNEVEZES.MaxLength = 50;
-                this.columnCIKK_TIPUS.AllowDBNull = false;
-                this.columnCIKK_TIPUS.DefaultValue = ((int)(0));
-                this.columnCIKKCSOPORT_ID.AllowDBNull = false;
                 this.columnERTEKESITES_TIPUSA.MaxLength = 1;
-                this.columnMEGYS_ID.MaxLength = 10;
-                this.columnDEFAULT_RAKTAR.AllowDBNull = false;
-                this.columnSZJ_SZAM.MaxLength = 30;
-                this.columnCIKKSZAM.MaxLength = 50;
-                this.columnEAN_KOD.MaxLength = 28;
-                this.columnMEGJEGYZES.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1087,97 +1111,12 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int CIKK_ID {
-                get {
-                    return ((int)(this[this.tableCIKK.CIKK_IDColumn]));
-                }
-                set {
-                    this[this.tableCIKK.CIKK_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public string MEGNEVEZES {
                 get {
                     return ((string)(this[this.tableCIKK.MEGNEVEZESColumn]));
                 }
                 set {
                     this[this.tableCIKK.MEGNEVEZESColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int CIKK_TIPUS {
-                get {
-                    return ((int)(this[this.tableCIKK.CIKK_TIPUSColumn]));
-                }
-                set {
-                    this[this.tableCIKK.CIKK_TIPUSColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int CIKKCSOPORT_ID {
-                get {
-                    return ((int)(this[this.tableCIKK.CIKKCSOPORT_IDColumn]));
-                }
-                set {
-                    this[this.tableCIKK.CIKKCSOPORT_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string ERTEKESITES_TIPUSA {
-                get {
-                    try {
-                        return ((string)(this[this.tableCIKK.ERTEKESITES_TIPUSAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ERTEKESITES_TIPUSA\' in table \'CIKK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCIKK.ERTEKESITES_TIPUSAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string MEGYS_ID {
-                get {
-                    try {
-                        return ((string)(this[this.tableCIKK.MEGYS_IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MEGYS_ID\' in table \'CIKK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCIKK.MEGYS_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int OTHER_FILTER_ID {
-                get {
-                    try {
-                        return ((int)(this[this.tableCIKK.OTHER_FILTER_IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OTHER_FILTER_ID\' in table \'CIKK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCIKK.OTHER_FILTER_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int DEFAULT_RAKTAR {
-                get {
-                    return ((int)(this[this.tableCIKK.DEFAULT_RAKTARColumn]));
-                }
-                set {
-                    this[this.tableCIKK.DEFAULT_RAKTARColumn] = value;
                 }
             }
             
@@ -1347,33 +1286,133 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsERTEKESITES_TIPUSANull() {
-                return this.IsNull(this.tableCIKK.ERTEKESITES_TIPUSAColumn);
+            public string CIKK_TIPUS {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.CIKK_TIPUSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CIKK_TIPUS\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.CIKK_TIPUSColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetERTEKESITES_TIPUSANull() {
-                this[this.tableCIKK.ERTEKESITES_TIPUSAColumn] = global::System.Convert.DBNull;
+            public string CIKKCSOPORT {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.CIKKCSOPORTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CIKKCSOPORT\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.CIKKCSOPORTColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsMEGYS_IDNull() {
-                return this.IsNull(this.tableCIKK.MEGYS_IDColumn);
+            public string ERT_TIPUS {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.ERT_TIPUSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ERT_TIPUS\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.ERT_TIPUSColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetMEGYS_IDNull() {
-                this[this.tableCIKK.MEGYS_IDColumn] = global::System.Convert.DBNull;
+            public string MEGYS_MEGNEVEZES {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.MEGYS_MEGNEVEZESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MEGYS_MEGNEVEZES\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.MEGYS_MEGNEVEZESColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsOTHER_FILTER_IDNull() {
-                return this.IsNull(this.tableCIKK.OTHER_FILTER_IDColumn);
+            public string ALCSOPORT {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.ALCSOPORTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ALCSOPORT\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.ALCSOPORTColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetOTHER_FILTER_IDNull() {
-                this[this.tableCIKK.OTHER_FILTER_IDColumn] = global::System.Convert.DBNull;
+            public string RAKTAR_KOD {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.RAKTAR_KODColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RAKTAR_KOD\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.RAKTAR_KODColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string GYORSKOD {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.GYORSKODColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GYORSKOD\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.GYORSKODColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CIKK_ID {
+                get {
+                    return ((int)(this[this.tableCIKK.CIKK_IDColumn]));
+                }
+                set {
+                    this[this.tableCIKK.CIKK_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string ERTEKESITES_TIPUSA {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.ERTEKESITES_TIPUSAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ERTEKESITES_TIPUSA\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.ERTEKESITES_TIPUSAColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1484,6 +1523,86 @@ namespace e_Cafe {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetAKTIVNull() {
                 this[this.tableCIKK.AKTIVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCIKK_TIPUSNull() {
+                return this.IsNull(this.tableCIKK.CIKK_TIPUSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCIKK_TIPUSNull() {
+                this[this.tableCIKK.CIKK_TIPUSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCIKKCSOPORTNull() {
+                return this.IsNull(this.tableCIKK.CIKKCSOPORTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCIKKCSOPORTNull() {
+                this[this.tableCIKK.CIKKCSOPORTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsERT_TIPUSNull() {
+                return this.IsNull(this.tableCIKK.ERT_TIPUSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetERT_TIPUSNull() {
+                this[this.tableCIKK.ERT_TIPUSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsMEGYS_MEGNEVEZESNull() {
+                return this.IsNull(this.tableCIKK.MEGYS_MEGNEVEZESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetMEGYS_MEGNEVEZESNull() {
+                this[this.tableCIKK.MEGYS_MEGNEVEZESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsALCSOPORTNull() {
+                return this.IsNull(this.tableCIKK.ALCSOPORTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetALCSOPORTNull() {
+                this[this.tableCIKK.ALCSOPORTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsRAKTAR_KODNull() {
+                return this.IsNull(this.tableCIKK.RAKTAR_KODColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetRAKTAR_KODNull() {
+                this[this.tableCIKK.RAKTAR_KODColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsGYORSKODNull() {
+                return this.IsNull(this.tableCIKK.GYORSKODColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetGYORSKODNull() {
+                this[this.tableCIKK.GYORSKODColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsERTEKESITES_TIPUSANull() {
+                return this.IsNull(this.tableCIKK.ERTEKESITES_TIPUSAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetERTEKESITES_TIPUSANull() {
+                this[this.tableCIKK.ERTEKESITES_TIPUSAColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1768,14 +1887,7 @@ namespace e_Cafe.ECAFEDataSetCIKKTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "CIKK";
-            tableMapping.ColumnMappings.Add("CIKK_ID", "CIKK_ID");
             tableMapping.ColumnMappings.Add("MEGNEVEZES", "MEGNEVEZES");
-            tableMapping.ColumnMappings.Add("CIKK_TIPUS", "CIKK_TIPUS");
-            tableMapping.ColumnMappings.Add("CIKKCSOPORT_ID", "CIKKCSOPORT_ID");
-            tableMapping.ColumnMappings.Add("ERTEKESITES_TIPUSA", "ERTEKESITES_TIPUSA");
-            tableMapping.ColumnMappings.Add("MEGYS_ID", "MEGYS_ID");
-            tableMapping.ColumnMappings.Add("OTHER_FILTER_ID", "OTHER_FILTER_ID");
-            tableMapping.ColumnMappings.Add("DEFAULT_RAKTAR", "DEFAULT_RAKTAR");
             tableMapping.ColumnMappings.Add("SZJ_SZAM", "SZJ_SZAM");
             tableMapping.ColumnMappings.Add("CIKKSZAM", "CIKKSZAM");
             tableMapping.ColumnMappings.Add("EAN_KOD", "EAN_KOD");
@@ -1787,182 +1899,16 @@ namespace e_Cafe.ECAFEDataSetCIKKTableAdapters {
             tableMapping.ColumnMappings.Add("MAX_KEDVEZM_FT", "MAX_KEDVEZM_FT");
             tableMapping.ColumnMappings.Add("MEGJEGYZES", "MEGJEGYZES");
             tableMapping.ColumnMappings.Add("AKTIV", "AKTIV");
+            tableMapping.ColumnMappings.Add("CIKK_TIPUS", "CIKK_TIPUS");
+            tableMapping.ColumnMappings.Add("CIKKCSOPORT", "CIKKCSOPORT");
+            tableMapping.ColumnMappings.Add("ERT_TIPUS", "ERT_TIPUS");
+            tableMapping.ColumnMappings.Add("MEGYS_MEGNEVEZES", "MEGYS_MEGNEVEZES");
+            tableMapping.ColumnMappings.Add("ALCSOPORT", "ALCSOPORT");
+            tableMapping.ColumnMappings.Add("RAKTAR_KOD", "RAKTAR_KOD");
+            tableMapping.ColumnMappings.Add("GYORSKOD", "GYORSKOD");
+            tableMapping.ColumnMappings.Add("CIKK_ID", "CIKK_ID");
+            tableMapping.ColumnMappings.Add("ERTEKESITES_TIPUSA", "ERTEKESITES_TIPUSA");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [CIKK] WHERE (([CIKK_ID] = @Original_CIKK_ID) AND ([MEGNEVEZES] = @Or" +
-                "iginal_MEGNEVEZES) AND ([CIKK_TIPUS] = @Original_CIKK_TIPUS) AND ((@IsNull_CIKKC" +
-                "SOPORT_ID = 1 AND [CIKKCSOPORT_ID] IS NULL) OR ([CIKKCSOPORT_ID] = @Original_CIK" +
-                "KCSOPORT_ID)) AND ((@IsNull_ERTEKESITES_TIPUSA = 1 AND [ERTEKESITES_TIPUSA] IS N" +
-                "ULL) OR ([ERTEKESITES_TIPUSA] = @Original_ERTEKESITES_TIPUSA)) AND ((@IsNull_MEG" +
-                "YS_ID = 1 AND [MEGYS_ID] IS NULL) OR ([MEGYS_ID] = @Original_MEGYS_ID)) AND ((@I" +
-                "sNull_OTHER_FILTER_ID = 1 AND [OTHER_FILTER_ID] IS NULL) OR ([OTHER_FILTER_ID] =" +
-                " @Original_OTHER_FILTER_ID)) AND ((@IsNull_DEFAULT_RAKTAR = 1 AND [DEFAULT_RAKTA" +
-                "R] IS NULL) OR ([DEFAULT_RAKTAR] = @Original_DEFAULT_RAKTAR)) AND ((@IsNull_SZJ_" +
-                "SZAM = 1 AND [SZJ_SZAM] IS NULL) OR ([SZJ_SZAM] = @Original_SZJ_SZAM)) AND ((@Is" +
-                "Null_CIKKSZAM = 1 AND [CIKKSZAM] IS NULL) OR ([CIKKSZAM] = @Original_CIKKSZAM)) " +
-                "AND ((@IsNull_EAN_KOD = 1 AND [EAN_KOD] IS NULL) OR ([EAN_KOD] = @Original_EAN_K" +
-                "OD)) AND ((@IsNull_MINIMUM_KESZLET = 1 AND [MINIMUM_KESZLET] IS NULL) OR ([MINIM" +
-                "UM_KESZLET] = @Original_MINIMUM_KESZLET)) AND ((@IsNull_OPTIMALIS_KESZLET = 1 AN" +
-                "D [OPTIMALIS_KESZLET] IS NULL) OR ([OPTIMALIS_KESZLET] = @Original_OPTIMALIS_KES" +
-                "ZLET)) AND ((@IsNull_ELADASI_AR = 1 AND [ELADASI_AR] IS NULL) OR ([ELADASI_AR] =" +
-                " @Original_ELADASI_AR)) AND ((@IsNull_HELYETTES_TERMEK = 1 AND [HELYETTES_TERMEK" +
-                "] IS NULL) OR ([HELYETTES_TERMEK] = @Original_HELYETTES_TERMEK)) AND ((@IsNull_M" +
-                "AX_KEDVEZMENY_SZ = 1 AND [MAX_KEDVEZMENY_SZ] IS NULL) OR ([MAX_KEDVEZMENY_SZ] = " +
-                "@Original_MAX_KEDVEZMENY_SZ)) AND ((@IsNull_MAX_KEDVEZM_FT = 1 AND [MAX_KEDVEZM_" +
-                "FT] IS NULL) OR ([MAX_KEDVEZM_FT] = @Original_MAX_KEDVEZM_FT)) AND ((@IsNull_MEG" +
-                "JEGYZES = 1 AND [MEGJEGYZES] IS NULL) OR ([MEGJEGYZES] = @Original_MEGJEGYZES)) " +
-                "AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MEGNEVEZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGNEVEZES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_TIPUS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_TIPUS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CIKKCSOPORT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKKCSOPORT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ERTEKESITES_TIPUSA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ERTEKESITES_TIPUSA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ERTEKESITES_TIPUSA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ERTEKESITES_TIPUSA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MEGYS_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGYS_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MEGYS_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGYS_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OTHER_FILTER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_FILTER_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OTHER_FILTER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_FILTER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DEFAULT_RAKTAR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEFAULT_RAKTAR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DEFAULT_RAKTAR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEFAULT_RAKTAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZJ_SZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZJ_SZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZJ_SZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZJ_SZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CIKKSZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKSZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKKSZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKSZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EAN_KOD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EAN_KOD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EAN_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EAN_KOD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MINIMUM_KESZLET", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MINIMUM_KESZLET", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MINIMUM_KESZLET", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MINIMUM_KESZLET", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OPTIMALIS_KESZLET", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OPTIMALIS_KESZLET", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OPTIMALIS_KESZLET", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OPTIMALIS_KESZLET", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ELADASI_AR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ELADASI_AR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ELADASI_AR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ELADASI_AR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HELYETTES_TERMEK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELYETTES_TERMEK", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELYETTES_TERMEK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELYETTES_TERMEK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MAX_KEDVEZMENY_SZ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZMENY_SZ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MAX_KEDVEZMENY_SZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZMENY_SZ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MAX_KEDVEZM_FT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZM_FT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MAX_KEDVEZM_FT", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZM_FT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MEGJEGYZES", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MEGJEGYZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [CIKK] ([MEGNEVEZES], [CIKK_TIPUS], [CIKKCSOPORT_ID], [ERTEKESITES_TIPUSA], [MEGYS_ID], [OTHER_FILTER_ID], [DEFAULT_RAKTAR], [SZJ_SZAM], [CIKKSZAM], [EAN_KOD], [MINIMUM_KESZLET], [OPTIMALIS_KESZLET], [ELADASI_AR], [HELYETTES_TERMEK], [MAX_KEDVEZMENY_SZ], [MAX_KEDVEZM_FT], [MEGJEGYZES], [AKTIV]) VALUES (@MEGNEVEZES, @CIKK_TIPUS, @CIKKCSOPORT_ID, @ERTEKESITES_TIPUSA, @MEGYS_ID, @OTHER_FILTER_ID, @DEFAULT_RAKTAR, @SZJ_SZAM, @CIKKSZAM, @EAN_KOD, @MINIMUM_KESZLET, @OPTIMALIS_KESZLET, @ELADASI_AR, @HELYETTES_TERMEK, @MAX_KEDVEZMENY_SZ, @MAX_KEDVEZM_FT, @MEGJEGYZES, @AKTIV);
-SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, ERTEKESITES_TIPUSA, MEGYS_ID, OTHER_FILTER_ID, DEFAULT_RAKTAR, SZJ_SZAM, CIKKSZAM, EAN_KOD, MINIMUM_KESZLET, OPTIMALIS_KESZLET, ELADASI_AR, HELYETTES_TERMEK, MAX_KEDVEZMENY_SZ, MAX_KEDVEZM_FT, MEGJEGYZES, AKTIV FROM CIKK WHERE (CIKK_ID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGNEVEZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGNEVEZES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKK_TIPUS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_TIPUS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKKCSOPORT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ERTEKESITES_TIPUSA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ERTEKESITES_TIPUSA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGYS_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGYS_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OTHER_FILTER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_FILTER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DEFAULT_RAKTAR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEFAULT_RAKTAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZJ_SZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZJ_SZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKKSZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKSZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EAN_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EAN_KOD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MINIMUM_KESZLET", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MINIMUM_KESZLET", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OPTIMALIS_KESZLET", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OPTIMALIS_KESZLET", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ELADASI_AR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ELADASI_AR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELYETTES_TERMEK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELYETTES_TERMEK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAX_KEDVEZMENY_SZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZMENY_SZ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAX_KEDVEZM_FT", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZM_FT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGJEGYZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [CIKK] SET [MEGNEVEZES] = @MEGNEVEZES, [CIKK_TIPUS] = @CIKK_TIPUS, [CIKKCS" +
-                "OPORT_ID] = @CIKKCSOPORT_ID, [ERTEKESITES_TIPUSA] = @ERTEKESITES_TIPUSA, [MEGYS_" +
-                "ID] = @MEGYS_ID, [OTHER_FILTER_ID] = @OTHER_FILTER_ID, [DEFAULT_RAKTAR] = @DEFAU" +
-                "LT_RAKTAR, [SZJ_SZAM] = @SZJ_SZAM, [CIKKSZAM] = @CIKKSZAM, [EAN_KOD] = @EAN_KOD," +
-                " [MINIMUM_KESZLET] = @MINIMUM_KESZLET, [OPTIMALIS_KESZLET] = @OPTIMALIS_KESZLET," +
-                " [ELADASI_AR] = @ELADASI_AR, [HELYETTES_TERMEK] = @HELYETTES_TERMEK, [MAX_KEDVEZ" +
-                "MENY_SZ] = @MAX_KEDVEZMENY_SZ, [MAX_KEDVEZM_FT] = @MAX_KEDVEZM_FT, [MEGJEGYZES] " +
-                "= @MEGJEGYZES, [AKTIV] = @AKTIV WHERE (([CIKK_ID] = @Original_CIKK_ID) AND ([MEG" +
-                "NEVEZES] = @Original_MEGNEVEZES) AND ([CIKK_TIPUS] = @Original_CIKK_TIPUS) AND (" +
-                "(@IsNull_CIKKCSOPORT_ID = 1 AND [CIKKCSOPORT_ID] IS NULL) OR ([CIKKCSOPORT_ID] =" +
-                " @Original_CIKKCSOPORT_ID)) AND ((@IsNull_ERTEKESITES_TIPUSA = 1 AND [ERTEKESITE" +
-                "S_TIPUSA] IS NULL) OR ([ERTEKESITES_TIPUSA] = @Original_ERTEKESITES_TIPUSA)) AND" +
-                " ((@IsNull_MEGYS_ID = 1 AND [MEGYS_ID] IS NULL) OR ([MEGYS_ID] = @Original_MEGYS" +
-                "_ID)) AND ((@IsNull_OTHER_FILTER_ID = 1 AND [OTHER_FILTER_ID] IS NULL) OR ([OTHE" +
-                "R_FILTER_ID] = @Original_OTHER_FILTER_ID)) AND ((@IsNull_DEFAULT_RAKTAR = 1 AND " +
-                "[DEFAULT_RAKTAR] IS NULL) OR ([DEFAULT_RAKTAR] = @Original_DEFAULT_RAKTAR)) AND " +
-                "((@IsNull_SZJ_SZAM = 1 AND [SZJ_SZAM] IS NULL) OR ([SZJ_SZAM] = @Original_SZJ_SZ" +
-                "AM)) AND ((@IsNull_CIKKSZAM = 1 AND [CIKKSZAM] IS NULL) OR ([CIKKSZAM] = @Origin" +
-                "al_CIKKSZAM)) AND ((@IsNull_EAN_KOD = 1 AND [EAN_KOD] IS NULL) OR ([EAN_KOD] = @" +
-                "Original_EAN_KOD)) AND ((@IsNull_MINIMUM_KESZLET = 1 AND [MINIMUM_KESZLET] IS NU" +
-                "LL) OR ([MINIMUM_KESZLET] = @Original_MINIMUM_KESZLET)) AND ((@IsNull_OPTIMALIS_" +
-                "KESZLET = 1 AND [OPTIMALIS_KESZLET] IS NULL) OR ([OPTIMALIS_KESZLET] = @Original" +
-                "_OPTIMALIS_KESZLET)) AND ((@IsNull_ELADASI_AR = 1 AND [ELADASI_AR] IS NULL) OR (" +
-                "[ELADASI_AR] = @Original_ELADASI_AR)) AND ((@IsNull_HELYETTES_TERMEK = 1 AND [HE" +
-                "LYETTES_TERMEK] IS NULL) OR ([HELYETTES_TERMEK] = @Original_HELYETTES_TERMEK)) A" +
-                "ND ((@IsNull_MAX_KEDVEZMENY_SZ = 1 AND [MAX_KEDVEZMENY_SZ] IS NULL) OR ([MAX_KED" +
-                "VEZMENY_SZ] = @Original_MAX_KEDVEZMENY_SZ)) AND ((@IsNull_MAX_KEDVEZM_FT = 1 AND" +
-                " [MAX_KEDVEZM_FT] IS NULL) OR ([MAX_KEDVEZM_FT] = @Original_MAX_KEDVEZM_FT)) AND" +
-                " ((@IsNull_MEGJEGYZES = 1 AND [MEGJEGYZES] IS NULL) OR ([MEGJEGYZES] = @Original" +
-                "_MEGJEGYZES)) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Origin" +
-                "al_AKTIV)));\r\nSELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, ERTEKESITE" +
-                "S_TIPUSA, MEGYS_ID, OTHER_FILTER_ID, DEFAULT_RAKTAR, SZJ_SZAM, CIKKSZAM, EAN_KOD" +
-                ", MINIMUM_KESZLET, OPTIMALIS_KESZLET, ELADASI_AR, HELYETTES_TERMEK, MAX_KEDVEZME" +
-                "NY_SZ, MAX_KEDVEZM_FT, MEGJEGYZES, AKTIV FROM CIKK WHERE (CIKK_ID = @CIKK_ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGNEVEZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGNEVEZES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKK_TIPUS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_TIPUS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKKCSOPORT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ERTEKESITES_TIPUSA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ERTEKESITES_TIPUSA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGYS_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGYS_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OTHER_FILTER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_FILTER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DEFAULT_RAKTAR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEFAULT_RAKTAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZJ_SZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZJ_SZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKKSZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKSZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EAN_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EAN_KOD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MINIMUM_KESZLET", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MINIMUM_KESZLET", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OPTIMALIS_KESZLET", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OPTIMALIS_KESZLET", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ELADASI_AR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ELADASI_AR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELYETTES_TERMEK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELYETTES_TERMEK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAX_KEDVEZMENY_SZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZMENY_SZ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAX_KEDVEZM_FT", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZM_FT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGJEGYZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MEGNEVEZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGNEVEZES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_TIPUS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_TIPUS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CIKKCSOPORT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKKCSOPORT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ERTEKESITES_TIPUSA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ERTEKESITES_TIPUSA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ERTEKESITES_TIPUSA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ERTEKESITES_TIPUSA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MEGYS_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGYS_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MEGYS_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGYS_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OTHER_FILTER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_FILTER_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OTHER_FILTER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_FILTER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DEFAULT_RAKTAR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEFAULT_RAKTAR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DEFAULT_RAKTAR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DEFAULT_RAKTAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZJ_SZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZJ_SZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZJ_SZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZJ_SZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CIKKSZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKSZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKKSZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKSZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EAN_KOD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EAN_KOD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EAN_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EAN_KOD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MINIMUM_KESZLET", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MINIMUM_KESZLET", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MINIMUM_KESZLET", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MINIMUM_KESZLET", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OPTIMALIS_KESZLET", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OPTIMALIS_KESZLET", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OPTIMALIS_KESZLET", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OPTIMALIS_KESZLET", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ELADASI_AR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ELADASI_AR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ELADASI_AR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ELADASI_AR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HELYETTES_TERMEK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELYETTES_TERMEK", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELYETTES_TERMEK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELYETTES_TERMEK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MAX_KEDVEZMENY_SZ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZMENY_SZ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MAX_KEDVEZMENY_SZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZMENY_SZ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MAX_KEDVEZM_FT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZM_FT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MAX_KEDVEZM_FT", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAX_KEDVEZM_FT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MEGJEGYZES", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MEGJEGYZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKK_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1976,10 +1922,26 @@ SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, ERTEKESITES_TIPUSA, MEGY
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, ERTEKESITES_TIPUSA, MEGYS_ID, OTHER_FILTER_ID, DEFAULT_RAKTAR, SZJ_SZAM, 
-                         CIKKSZAM, EAN_KOD, MINIMUM_KESZLET, OPTIMALIS_KESZLET, ELADASI_AR, HELYETTES_TERMEK, MAX_KEDVEZMENY_SZ, MAX_KEDVEZM_FT, 
-                         MEGJEGYZES, AKTIV
-FROM            CIKK";
+            this._commandCollection[0].CommandText = @"select CIKK_ID, MEGNEVEZES,ERTEKESITES_TIPUSA,	
+	case when CIKK_TIPUS= 1 then 'Összetett' else 'Normál' end as CIKK_TIPUS,
+	cs.CIKKCSOPORT_NEV as CIKKCSOPORT,
+    case when ERTEKESITES_TIPUSA= 'D' then 'Darab' else 'Folyó' end as ERT_TIPUS,
+	m.MEGYS_MEGNEVEZES,
+	o.OTHER_NAME as ALCSOPORT,
+r.RAKTAR_KOD, 
+SZJ_SZAM, 
+CIKKSZAM, 
+EAN_KOD, 
+MINIMUM_KESZLET, 
+OPTIMALIS_KESZLET, 
+ELADASI_AR, 
+HELYETTES_TERMEK, MAX_KEDVEZMENY_SZ, MAX_KEDVEZM_FT, MEGJEGYZES, 
+AKTIV, GYORSKOD 
+from cikk c
+left join cikkcsoport cs on c.cikkcsoport_id = cs.cikkcsoport_id
+left join MEGYS m on c.MEGYS_ID = m.MEGYS_ID
+left join CIKCSOP_OTHER_FILTER o on c.OTHER_FILTER_ID = o.OTHER_FILTER_ID
+left join RAKTaR r on c.DEFAULT_RAKTAR = r.RAKTAR_ID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2003,645 +1965,6 @@ FROM            CIKK";
             ECAFEDataSetCIKK.CIKKDataTable dataTable = new ECAFEDataSetCIKK.CIKKDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ECAFEDataSetCIKK.CIKKDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ECAFEDataSetCIKK dataSet) {
-            return this.Adapter.Update(dataSet, "CIKK");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(
-                    int Original_CIKK_ID, 
-                    string Original_MEGNEVEZES, 
-                    int Original_CIKK_TIPUS, 
-                    int Original_CIKKCSOPORT_ID, 
-                    string Original_ERTEKESITES_TIPUSA, 
-                    string Original_MEGYS_ID, 
-                    global::System.Nullable<int> Original_OTHER_FILTER_ID, 
-                    int Original_DEFAULT_RAKTAR, 
-                    string Original_SZJ_SZAM, 
-                    string Original_CIKKSZAM, 
-                    string Original_EAN_KOD, 
-                    global::System.Nullable<double> Original_MINIMUM_KESZLET, 
-                    global::System.Nullable<double> Original_OPTIMALIS_KESZLET, 
-                    global::System.Nullable<double> Original_ELADASI_AR, 
-                    global::System.Nullable<int> Original_HELYETTES_TERMEK, 
-                    global::System.Nullable<double> Original_MAX_KEDVEZMENY_SZ, 
-                    global::System.Nullable<double> Original_MAX_KEDVEZM_FT, 
-                    string Original_MEGJEGYZES, 
-                    global::System.Nullable<int> Original_AKTIV) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CIKK_ID));
-            if ((Original_MEGNEVEZES == null)) {
-                throw new global::System.ArgumentNullException("Original_MEGNEVEZES");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_MEGNEVEZES));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_CIKK_TIPUS));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_CIKKCSOPORT_ID));
-            if ((Original_ERTEKESITES_TIPUSA == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_ERTEKESITES_TIPUSA));
-            }
-            if ((Original_MEGYS_ID == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_MEGYS_ID));
-            }
-            if ((Original_OTHER_FILTER_ID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_OTHER_FILTER_ID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_DEFAULT_RAKTAR));
-            if ((Original_SZJ_SZAM == null)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_SZJ_SZAM));
-            }
-            if ((Original_CIKKSZAM == null)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_CIKKSZAM));
-            }
-            if ((Original_EAN_KOD == null)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_EAN_KOD));
-            }
-            if ((Original_MINIMUM_KESZLET.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((double)(Original_MINIMUM_KESZLET.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((Original_OPTIMALIS_KESZLET.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((double)(Original_OPTIMALIS_KESZLET.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ELADASI_AR.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((double)(Original_ELADASI_AR.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            if ((Original_HELYETTES_TERMEK.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_HELYETTES_TERMEK.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MAX_KEDVEZMENY_SZ.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((double)(Original_MAX_KEDVEZMENY_SZ.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MAX_KEDVEZM_FT.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((double)(Original_MAX_KEDVEZM_FT.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MEGJEGYZES == null)) {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_MEGJEGYZES));
-            }
-            if ((Original_AKTIV.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((int)(Original_AKTIV.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(
-                    string MEGNEVEZES, 
-                    int CIKK_TIPUS, 
-                    int CIKKCSOPORT_ID, 
-                    string ERTEKESITES_TIPUSA, 
-                    string MEGYS_ID, 
-                    global::System.Nullable<int> OTHER_FILTER_ID, 
-                    int DEFAULT_RAKTAR, 
-                    string SZJ_SZAM, 
-                    string CIKKSZAM, 
-                    string EAN_KOD, 
-                    global::System.Nullable<double> MINIMUM_KESZLET, 
-                    global::System.Nullable<double> OPTIMALIS_KESZLET, 
-                    global::System.Nullable<double> ELADASI_AR, 
-                    global::System.Nullable<int> HELYETTES_TERMEK, 
-                    global::System.Nullable<double> MAX_KEDVEZMENY_SZ, 
-                    global::System.Nullable<double> MAX_KEDVEZM_FT, 
-                    string MEGJEGYZES, 
-                    global::System.Nullable<int> AKTIV) {
-            if ((MEGNEVEZES == null)) {
-                throw new global::System.ArgumentNullException("MEGNEVEZES");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(MEGNEVEZES));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(CIKK_TIPUS));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(CIKKCSOPORT_ID));
-            if ((ERTEKESITES_TIPUSA == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ERTEKESITES_TIPUSA));
-            }
-            if ((MEGYS_ID == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(MEGYS_ID));
-            }
-            if ((OTHER_FILTER_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(OTHER_FILTER_ID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(DEFAULT_RAKTAR));
-            if ((SZJ_SZAM == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(SZJ_SZAM));
-            }
-            if ((CIKKSZAM == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(CIKKSZAM));
-            }
-            if ((EAN_KOD == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(EAN_KOD));
-            }
-            if ((MINIMUM_KESZLET.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((double)(MINIMUM_KESZLET.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((OPTIMALIS_KESZLET.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(OPTIMALIS_KESZLET.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((ELADASI_AR.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((double)(ELADASI_AR.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((HELYETTES_TERMEK.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(HELYETTES_TERMEK.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((MAX_KEDVEZMENY_SZ.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((double)(MAX_KEDVEZMENY_SZ.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((MAX_KEDVEZM_FT.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((double)(MAX_KEDVEZM_FT.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((MEGJEGYZES == null)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(MEGJEGYZES));
-            }
-            if ((AKTIV.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(AKTIV.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string MEGNEVEZES, 
-                    int CIKK_TIPUS, 
-                    int CIKKCSOPORT_ID, 
-                    string ERTEKESITES_TIPUSA, 
-                    string MEGYS_ID, 
-                    global::System.Nullable<int> OTHER_FILTER_ID, 
-                    int DEFAULT_RAKTAR, 
-                    string SZJ_SZAM, 
-                    string CIKKSZAM, 
-                    string EAN_KOD, 
-                    global::System.Nullable<double> MINIMUM_KESZLET, 
-                    global::System.Nullable<double> OPTIMALIS_KESZLET, 
-                    global::System.Nullable<double> ELADASI_AR, 
-                    global::System.Nullable<int> HELYETTES_TERMEK, 
-                    global::System.Nullable<double> MAX_KEDVEZMENY_SZ, 
-                    global::System.Nullable<double> MAX_KEDVEZM_FT, 
-                    string MEGJEGYZES, 
-                    global::System.Nullable<int> AKTIV, 
-                    int Original_CIKK_ID, 
-                    string Original_MEGNEVEZES, 
-                    int Original_CIKK_TIPUS, 
-                    int Original_CIKKCSOPORT_ID, 
-                    string Original_ERTEKESITES_TIPUSA, 
-                    string Original_MEGYS_ID, 
-                    global::System.Nullable<int> Original_OTHER_FILTER_ID, 
-                    int Original_DEFAULT_RAKTAR, 
-                    string Original_SZJ_SZAM, 
-                    string Original_CIKKSZAM, 
-                    string Original_EAN_KOD, 
-                    global::System.Nullable<double> Original_MINIMUM_KESZLET, 
-                    global::System.Nullable<double> Original_OPTIMALIS_KESZLET, 
-                    global::System.Nullable<double> Original_ELADASI_AR, 
-                    global::System.Nullable<int> Original_HELYETTES_TERMEK, 
-                    global::System.Nullable<double> Original_MAX_KEDVEZMENY_SZ, 
-                    global::System.Nullable<double> Original_MAX_KEDVEZM_FT, 
-                    string Original_MEGJEGYZES, 
-                    global::System.Nullable<int> Original_AKTIV, 
-                    int CIKK_ID) {
-            if ((MEGNEVEZES == null)) {
-                throw new global::System.ArgumentNullException("MEGNEVEZES");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(MEGNEVEZES));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(CIKK_TIPUS));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(CIKKCSOPORT_ID));
-            if ((ERTEKESITES_TIPUSA == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(ERTEKESITES_TIPUSA));
-            }
-            if ((MEGYS_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(MEGYS_ID));
-            }
-            if ((OTHER_FILTER_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(OTHER_FILTER_ID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(DEFAULT_RAKTAR));
-            if ((SZJ_SZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(SZJ_SZAM));
-            }
-            if ((CIKKSZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(CIKKSZAM));
-            }
-            if ((EAN_KOD == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(EAN_KOD));
-            }
-            if ((MINIMUM_KESZLET.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(MINIMUM_KESZLET.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((OPTIMALIS_KESZLET.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(OPTIMALIS_KESZLET.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((ELADASI_AR.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(ELADASI_AR.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((HELYETTES_TERMEK.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(HELYETTES_TERMEK.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((MAX_KEDVEZMENY_SZ.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(MAX_KEDVEZMENY_SZ.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((MAX_KEDVEZM_FT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(MAX_KEDVEZM_FT.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((MEGJEGYZES == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(MEGJEGYZES));
-            }
-            if ((AKTIV.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(AKTIV.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_CIKK_ID));
-            if ((Original_MEGNEVEZES == null)) {
-                throw new global::System.ArgumentNullException("Original_MEGNEVEZES");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_MEGNEVEZES));
-            }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_CIKK_TIPUS));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_CIKKCSOPORT_ID));
-            if ((Original_ERTEKESITES_TIPUSA == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_ERTEKESITES_TIPUSA));
-            }
-            if ((Original_MEGYS_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_MEGYS_ID));
-            }
-            if ((Original_OTHER_FILTER_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_OTHER_FILTER_ID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_DEFAULT_RAKTAR));
-            if ((Original_SZJ_SZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_SZJ_SZAM));
-            }
-            if ((Original_CIKKSZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_CIKKSZAM));
-            }
-            if ((Original_EAN_KOD == null)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_EAN_KOD));
-            }
-            if ((Original_MINIMUM_KESZLET.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((double)(Original_MINIMUM_KESZLET.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            if ((Original_OPTIMALIS_KESZLET.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((double)(Original_OPTIMALIS_KESZLET.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ELADASI_AR.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((double)(Original_ELADASI_AR.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            if ((Original_HELYETTES_TERMEK.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_HELYETTES_TERMEK.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MAX_KEDVEZMENY_SZ.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((double)(Original_MAX_KEDVEZMENY_SZ.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MAX_KEDVEZM_FT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((double)(Original_MAX_KEDVEZM_FT.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MEGJEGYZES == null)) {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_MEGJEGYZES));
-            }
-            if ((Original_AKTIV.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(Original_AKTIV.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[53].Value = ((int)(CIKK_ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string MEGNEVEZES, 
-                    int CIKK_TIPUS, 
-                    int CIKKCSOPORT_ID, 
-                    string ERTEKESITES_TIPUSA, 
-                    string MEGYS_ID, 
-                    global::System.Nullable<int> OTHER_FILTER_ID, 
-                    int DEFAULT_RAKTAR, 
-                    string SZJ_SZAM, 
-                    string CIKKSZAM, 
-                    string EAN_KOD, 
-                    global::System.Nullable<double> MINIMUM_KESZLET, 
-                    global::System.Nullable<double> OPTIMALIS_KESZLET, 
-                    global::System.Nullable<double> ELADASI_AR, 
-                    global::System.Nullable<int> HELYETTES_TERMEK, 
-                    global::System.Nullable<double> MAX_KEDVEZMENY_SZ, 
-                    global::System.Nullable<double> MAX_KEDVEZM_FT, 
-                    string MEGJEGYZES, 
-                    global::System.Nullable<int> AKTIV, 
-                    int Original_CIKK_ID, 
-                    string Original_MEGNEVEZES, 
-                    int Original_CIKK_TIPUS, 
-                    int Original_CIKKCSOPORT_ID, 
-                    string Original_ERTEKESITES_TIPUSA, 
-                    string Original_MEGYS_ID, 
-                    global::System.Nullable<int> Original_OTHER_FILTER_ID, 
-                    int Original_DEFAULT_RAKTAR, 
-                    string Original_SZJ_SZAM, 
-                    string Original_CIKKSZAM, 
-                    string Original_EAN_KOD, 
-                    global::System.Nullable<double> Original_MINIMUM_KESZLET, 
-                    global::System.Nullable<double> Original_OPTIMALIS_KESZLET, 
-                    global::System.Nullable<double> Original_ELADASI_AR, 
-                    global::System.Nullable<int> Original_HELYETTES_TERMEK, 
-                    global::System.Nullable<double> Original_MAX_KEDVEZMENY_SZ, 
-                    global::System.Nullable<double> Original_MAX_KEDVEZM_FT, 
-                    string Original_MEGJEGYZES, 
-                    global::System.Nullable<int> Original_AKTIV) {
-            return this.Update(MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, ERTEKESITES_TIPUSA, MEGYS_ID, OTHER_FILTER_ID, DEFAULT_RAKTAR, SZJ_SZAM, CIKKSZAM, EAN_KOD, MINIMUM_KESZLET, OPTIMALIS_KESZLET, ELADASI_AR, HELYETTES_TERMEK, MAX_KEDVEZMENY_SZ, MAX_KEDVEZM_FT, MEGJEGYZES, AKTIV, Original_CIKK_ID, Original_MEGNEVEZES, Original_CIKK_TIPUS, Original_CIKKCSOPORT_ID, Original_ERTEKESITES_TIPUSA, Original_MEGYS_ID, Original_OTHER_FILTER_ID, Original_DEFAULT_RAKTAR, Original_SZJ_SZAM, Original_CIKKSZAM, Original_EAN_KOD, Original_MINIMUM_KESZLET, Original_OPTIMALIS_KESZLET, Original_ELADASI_AR, Original_HELYETTES_TERMEK, Original_MAX_KEDVEZMENY_SZ, Original_MAX_KEDVEZM_FT, Original_MEGJEGYZES, Original_AKTIV, Original_CIKK_ID);
         }
     }
     
@@ -2778,52 +2101,28 @@ FROM            CIKK";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [LIT_KISZ] ([LIT_KISZ_CIKK_ID], [LIT_KISZ_NEV], [LIT_KISZ_MENNY]) VAL" +
-                "UES (@LIT_KISZ_CIKK_ID, @LIT_KISZ_NEV, @LIT_KISZ_MENNY)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [LIT_KISZ] ([LIT_KISZ_CIKK_ID], [LIT_KISZ_NEV], [LIT_KISZ_MENNY]) VALUES (@LIT_KISZ_CIKK_ID, @LIT_KISZ_NEV, @LIT_KISZ_MENNY);
+SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ WHERE (LIT_KISZ_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE    LIT_KISZ\r\nSET              LIT_KISZ_CIKK_ID = @LIT_KISZ_CIKK_ID, LIT_KI" +
-                "SZ_NEV = @LIT_KISZ_NEV, LIT_KISZ_MENNY = @LIT_KISZ_MENNY\r\nWHERE     (LIT_KISZ_ID" +
-                " = @Original_LIT_KISZ_ID) AND (@IsNull_LIT_KISZ_CIKK_ID = 1) AND (LIT_KISZ_CIKK_" +
-                "ID IS NULL) AND (@IsNull_LIT_KISZ_NEV = 1) AND\r\n                       (LIT_KISZ" +
-                "_NEV IS NULL) AND (@IsNull_LIT_KISZ_MENNY = 1) AND (LIT_KISZ_MENNY IS NULL) OR\r\n" +
-                "                      (LIT_KISZ_ID = @Original_LIT_KISZ_ID) AND (LIT_KISZ_CIKK_I" +
-                "D = @Original_LIT_KISZ_CIKK_ID) AND (@IsNull_LIT_KISZ_NEV = 1) AND \r\n           " +
-                "           (LIT_KISZ_NEV IS NULL) AND (@IsNull_LIT_KISZ_MENNY = 1) AND (LIT_KISZ" +
-                "_MENNY IS NULL) OR\r\n                      (LIT_KISZ_ID = @Original_LIT_KISZ_ID) " +
-                "AND (@IsNull_LIT_KISZ_CIKK_ID = 1) AND (LIT_KISZ_CIKK_ID IS NULL) AND \r\n        " +
-                "              (LIT_KISZ_NEV = @Original_LIT_KISZ_NEV) AND (@IsNull_LIT_KISZ_MENN" +
-                "Y = 1) AND (LIT_KISZ_MENNY IS NULL) OR\r\n                      (LIT_KISZ_ID = @Or" +
-                "iginal_LIT_KISZ_ID) AND (LIT_KISZ_CIKK_ID = @Original_LIT_KISZ_CIKK_ID) AND (LIT" +
-                "_KISZ_NEV = @Original_LIT_KISZ_NEV) \r\n                      AND (@IsNull_LIT_KIS" +
-                "Z_MENNY = 1) AND (LIT_KISZ_MENNY IS NULL) OR\r\n                      (LIT_KISZ_ID" +
-                " = @Original_LIT_KISZ_ID) AND (@IsNull_LIT_KISZ_CIKK_ID = 1) AND (LIT_KISZ_CIKK_" +
-                "ID IS NULL) AND (@IsNull_LIT_KISZ_NEV = 1) AND\r\n                       (LIT_KISZ" +
-                "_NEV IS NULL) AND (LIT_KISZ_MENNY = @Original_LIT_KISZ_MENNY) OR\r\n              " +
-                "        (LIT_KISZ_ID = @Original_LIT_KISZ_ID) AND (LIT_KISZ_CIKK_ID = @Original_" +
-                "LIT_KISZ_CIKK_ID) AND (@IsNull_LIT_KISZ_NEV = 1) AND \r\n                      (LI" +
-                "T_KISZ_NEV IS NULL) AND (LIT_KISZ_MENNY = @Original_LIT_KISZ_MENNY) OR\r\n        " +
-                "              (LIT_KISZ_ID = @Original_LIT_KISZ_ID) AND (@IsNull_LIT_KISZ_CIKK_I" +
-                "D = 1) AND (LIT_KISZ_CIKK_ID IS NULL) AND \r\n                      (LIT_KISZ_NEV " +
-                "= @Original_LIT_KISZ_NEV) AND (LIT_KISZ_MENNY = @Original_LIT_KISZ_MENNY) OR\r\n  " +
-                "                    (LIT_KISZ_ID = @Original_LIT_KISZ_ID) AND (LIT_KISZ_CIKK_ID " +
-                "= @Original_LIT_KISZ_CIKK_ID) AND (LIT_KISZ_NEV = @Original_LIT_KISZ_NEV) \r\n    " +
-                "                  AND (LIT_KISZ_MENNY = @Original_LIT_KISZ_MENNY)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [LIT_KISZ] SET [LIT_KISZ_CIKK_ID] = @LIT_KISZ_CIKK_ID, [LIT_KISZ_NEV] = @LIT_KISZ_NEV, [LIT_KISZ_MENNY] = @LIT_KISZ_MENNY WHERE (([LIT_KISZ_ID] = @Original_LIT_KISZ_ID) AND ((@IsNull_LIT_KISZ_CIKK_ID = 1 AND [LIT_KISZ_CIKK_ID] IS NULL) OR ([LIT_KISZ_CIKK_ID] = @Original_LIT_KISZ_CIKK_ID)) AND ((@IsNull_LIT_KISZ_NEV = 1 AND [LIT_KISZ_NEV] IS NULL) OR ([LIT_KISZ_NEV] = @Original_LIT_KISZ_NEV)) AND ((@IsNull_LIT_KISZ_MENNY = 1 AND [LIT_KISZ_MENNY] IS NULL) OR ([LIT_KISZ_MENNY] = @Original_LIT_KISZ_MENNY)));
+SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ WHERE (LIT_KISZ_ID = @LIT_KISZ_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_NEV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_MENNY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2988,7 +2287,7 @@ FROM            CIKK";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY, int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY) {
+        public virtual int Update(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY, int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY, int LIT_KISZ_ID) {
             if ((LIT_KISZ_CIKK_ID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(LIT_KISZ_CIKK_ID.Value));
             }
@@ -3010,28 +2309,29 @@ FROM            CIKK";
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_LIT_KISZ_ID));
             if ((Original_LIT_KISZ_CIKK_ID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_LIT_KISZ_CIKK_ID.Value));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_LIT_KISZ_CIKK_ID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((Original_LIT_KISZ_NEV == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_LIT_KISZ_NEV));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_LIT_KISZ_NEV));
             }
             if ((Original_LIT_KISZ_MENNY.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_LIT_KISZ_MENNY.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(LIT_KISZ_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3046,6 +2346,13 @@ FROM            CIKK";
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY, int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY) {
+            return this.Update(LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY, Original_LIT_KISZ_ID, Original_LIT_KISZ_CIKK_ID, Original_LIT_KISZ_NEV, Original_LIT_KISZ_MENNY, Original_LIT_KISZ_ID);
         }
     }
     
@@ -3062,8 +2369,6 @@ FROM            CIKK";
         
         private UpdateOrderOption _updateOrder;
         
-        private CIKKTableAdapter _cIKKTableAdapter;
-        
         private LIT_KISZTableAdapter _lIT_KISZTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
@@ -3077,19 +2382,6 @@ FROM            CIKK";
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
-            "", "System.Drawing.Design.UITypeEditor")]
-        public CIKKTableAdapter CIKKTableAdapter {
-            get {
-                return this._cIKKTableAdapter;
-            }
-            set {
-                this._cIKKTableAdapter = value;
             }
         }
         
@@ -3123,10 +2415,6 @@ FROM            CIKK";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._cIKKTableAdapter != null) 
-                            && (this._cIKKTableAdapter.Connection != null))) {
-                    return this._cIKKTableAdapter.Connection;
-                }
                 if (((this._lIT_KISZTableAdapter != null) 
                             && (this._lIT_KISZTableAdapter.Connection != null))) {
                     return this._lIT_KISZTableAdapter.Connection;
@@ -3143,9 +2431,6 @@ FROM            CIKK";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._cIKKTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._lIT_KISZTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -3159,15 +2444,6 @@ FROM            CIKK";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateUpdatedRows(ECAFEDataSetCIKK dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._cIKKTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CIKK.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cIKKTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._lIT_KISZTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.LIT_KISZ.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -3186,14 +2462,6 @@ FROM            CIKK";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateInsertedRows(ECAFEDataSetCIKK dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._cIKKTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CIKK.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cIKKTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._lIT_KISZTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.LIT_KISZ.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -3216,14 +2484,6 @@ FROM            CIKK";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._lIT_KISZTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cIKKTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CIKK.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cIKKTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3264,11 +2524,6 @@ FROM            CIKK";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._cIKKTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._cIKKTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._lIT_KISZTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._lIT_KISZTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -3306,15 +2561,6 @@ FROM            CIKK";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._cIKKTableAdapter != null)) {
-                    revertConnections.Add(this._cIKKTableAdapter, this._cIKKTableAdapter.Connection);
-                    this._cIKKTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._cIKKTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._cIKKTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._cIKKTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._cIKKTableAdapter.Adapter);
-                    }
-                }
                 if ((this._lIT_KISZTableAdapter != null)) {
                     revertConnections.Add(this._lIT_KISZTableAdapter, this._lIT_KISZTableAdapter.Connection);
                     this._lIT_KISZTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -3381,10 +2627,6 @@ FROM            CIKK";
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._cIKKTableAdapter != null)) {
-                    this._cIKKTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cIKKTableAdapter]));
-                    this._cIKKTableAdapter.Transaction = null;
                 }
                 if ((this._lIT_KISZTableAdapter != null)) {
                     this._lIT_KISZTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._lIT_KISZTableAdapter]));

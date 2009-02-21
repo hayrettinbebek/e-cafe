@@ -36,6 +36,7 @@ namespace e_Cafe
                 def_rakt = fc.DEF_RAKT;
                 lblCikk.Text = fc.CIKK_NEV;
                 afa_szaz = fc.AFA_SZAZ;
+                lblMert.Text = fc.c.OSSZETETT.ToString();
                 
             }
         }
@@ -71,7 +72,7 @@ namespace e_Cafe
         private void button2_Click(object sender, EventArgs e)
         {
             
-            Close();
+            
             retSor = new BevetelSor();
 
             if (CheckInput())
@@ -86,12 +87,23 @@ namespace e_Cafe
                 retSor.AFA_ERTEK =  Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text)*(afa_szaz/100);
                 retSor.BRUTTO_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text) * (1+(afa_szaz / 100));
                 this.DialogResult = DialogResult.OK;
-
+                Close(); 
             }
             else {
                 this.DialogResult = DialogResult.No;
             }
-            Close();    
+               
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            Close(); 
+        }
+
+        private void lblCikk_Click(object sender, EventArgs e)
+        {
+            button1_Click(sender,e);
         }
     }
 }

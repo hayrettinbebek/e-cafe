@@ -10,7 +10,6 @@ using NSpring.Logging;
 using NSpring.Logging.EventFormatters;
 
 
-
 namespace BusinessLogic
 {
 

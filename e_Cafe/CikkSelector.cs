@@ -19,6 +19,7 @@ namespace e_Cafe
         public int DEF_RAKT;
         public double AFA_SZAZ;
         public string CIKK_NEV;
+        public Cikk c;
 
         public CikkSelector()
         {
@@ -40,7 +41,7 @@ namespace e_Cafe
                 CIKK_ID = ((Cikk)cikkBindingSource.Current).CIKK_ID;
                 CIKK_NEV = ((Cikk)cikkBindingSource.Current).MEGNEVEZES;
                 AFA_SZAZ= ((Cikk)cikkBindingSource.Current).getAfaSzaz();
-
+                c = ((Cikk)cikkBindingSource.Current);
                 DialogResult = DialogResult.OK;
 
 

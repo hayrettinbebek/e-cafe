@@ -67,14 +67,24 @@ namespace e_Cafe
             }
         }
 
-        private void SaveFej()
+        private bool SaveFej()
         {
-            aktBevfej.SZALLITOLEVEL_SZAM = txtSzallitolevel.Text;
-            aktBevfej.SZAMLASZAM = txtSzamlaszam.Text;
-            aktBevfej.DATUM = dtpDatum.Value;
-            aktBevfej.PARTNER_ID = p_id;
+            if ((txtSzallitolevel.Text == "") || (txtSzamlaszam.Text == ""))
+            {
+                return false;
+                DEFS.SendInfoMessage("Szállítólevél vagy számlaszám megadása kötelező!!");
 
-            bevfej_id = aktBevfej.Save();
+            }
+            else
+            {
+                aktBevfej.SZALLITOLEVEL_SZAM = txtSzallitolevel.Text;
+                aktBevfej.SZAMLASZAM = txtSzamlaszam.Text;
+                aktBevfej.DATUM = dtpDatum.Value;
+                aktBevfej.PARTNER_ID = p_id;
+
+                bevfej_id = aktBevfej.Save();
+                return true;
+            }
         }
 
         private void SaveSorok()
@@ -88,25 +98,35 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SaveFej();
-            frmBevetelSor fs = new frmBevetelSor();
-            fs.ShowDialog();
-            if (fs.DialogResult == DialogResult.OK)
+            if (SaveFej())
             {
-                fs.retSor.BEVETEL_FEJ_ID = bevfej_id;
+                ;
+                frmBevetelSor fs = new frmBevetelSor();
+                fs.ShowDialog();
+                if (fs.DialogResult == DialogResult.OK)
+                {
+                    fs.retSor.BEVETEL_FEJ_ID = bevfej_id;
 
-                
-                aktBevfej.lBevetelSorok.Add(fs.retSor);
-                DEFS.DebugLog("Sor hozáfűzve" + fs.retSor.BEVETEL_FEJ_ID.ToString());
 
+                    aktBevfej.lBevetelSorok.Add(fs.retSor);
+                    DEFS.DebugLog("Sor hozáfűzve" + fs.retSor.BEVETEL_FEJ_ID.ToString());
+
+                }
+                initGrid();
             }
-            initGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             SaveFej();
             SaveSorok();
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
             this.Close();
         }
     }
