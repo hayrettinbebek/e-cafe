@@ -96,6 +96,8 @@ namespace e_Cafe
 
         }
 
+        
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (SaveFej())
@@ -128,6 +130,30 @@ namespace e_Cafe
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void bevetelSorBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            txtVegAfa.Text = "";
+            txtVegBrutto.Text = "";
+            txtVegNet.Text = "";
+
+            double vegAfa = 0;
+            double vegNet = 0;
+            double vegBrutto = 0;
+
+            foreach (var bv in aktBevfej.lBevetelSorok)
+            {
+                vegAfa += bv.AFA_ERTEK;
+                vegNet += bv.NETTO_ERTEK;
+                vegBrutto += bv.BRUTTO_ERTEK;
+
+            }
+
+            txtVegAfa.Text = vegAfa.ToString("# ##0.00");
+            txtVegBrutto.Text = vegBrutto.ToString("# ##0.00");
+            txtVegNet.Text = vegNet.ToString("# ##0.00");
+
         }
     }
 }

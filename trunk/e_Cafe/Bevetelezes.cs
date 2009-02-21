@@ -22,11 +22,7 @@ namespace e_Cafe
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            if ((Boolean)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["KONYVELT"])
-            {
-                DEFS.SendInfoMessage("A tétel már készletre van veztve: nem könyvelhető!!");
-            }
-            else
+            if (eCAFEDataSetBEVETELEZESBindingSource.Current != null)
             {
                 frmBevetel f = new frmBevetel();
                 f.bevfej_id = (int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"];
@@ -74,14 +70,6 @@ namespace e_Cafe
             loadData();
         }
 
-        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedTab == tPSorok)
-            {
-
-
-            }
-        }
 
         private void bevetelfejBindingSource_DataSourceChanged(object sender, EventArgs e)
         {
@@ -161,17 +149,33 @@ namespace e_Cafe
 
         private void tsKeszVezet_Click(object sender, EventArgs e)
         {
-            Bevetel_fej bf = new Bevetel_fej((int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"],new  SqlConnection(DEFS.ConSTR));
-            foreach (var bs in bf.lBevetelSorok)
+            if (eCAFEDataSetBEVETELEZESBindingSource.Current != null)
             {
-                if (bs.FELADVA == 0)
+                if ((int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["KONYVELT"] == 1)
                 {
-                    bs.FELADVA = 1;
-                    bs.Save();
+                    DEFS.SendInfoMessage("A tétel már készletre van veztve: nem könyvelhető!!");
+                }
+                else
+                {
+                    Bevetel_fej bf = new Bevetel_fej((int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"], new SqlConnection(DEFS.ConSTR));
+                    foreach (var bs in bf.lBevetelSorok)
+                    {
+                        if (bs.FELADVA == 0)
+                        {
+                            bs.FELADVA = 1;
+                            bs.Save();
+                        }
+                    }
+                    bf.KONYVELT = true;
+                    bf.Save();
                 }
             }
-            bf.KONYVELT = true;
-            bf.Save();
+            bEVETEL_FEJTableAdapter.Fill(this.eCAFEDataSetBEVETELEZES.BEVETEL_FEJ);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 
