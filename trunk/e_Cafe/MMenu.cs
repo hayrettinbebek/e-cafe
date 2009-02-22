@@ -11,7 +11,9 @@ using System.Windows.Forms;
 using BusinessLogic;
 using GUI;
 using GUI.billentyu;
-using System.Threading;
+using System.IO;
+using Microsoft.SqlServer.Management.Common;
+using Microsoft.SqlServer.Management.Smo;
 
 using NSpring.Logging;
 
@@ -39,26 +41,67 @@ namespace e_Cafe
 
         public MMenu()
         {
-            
-            
-
             DEFS.createLogger();
+            DEFS.ConSTR = e_Cafe.Properties.Settings.Default.ECAFEConnectionString; // e_Cafe.Properties.Settings.Default.cnSTR;
+            InitializeComponent();
+            try
+            {
+                FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
+            }
+            catch (Exception c)
+            {
+                DEFS.log(Level.Exception, c.Message);
+            }
+            _Rendel = false;
 
+            DEFS.log(Level.Info, "Sikeres inicializálás");
+            RefreshDatabase();
+
+            if (!Login()) { Application.Exit(); }
+
+        }
+
+        //new FileInfo(@"C:\SQL\DROP.sql")
+        private void updateDB(FileInfo file)
+        {
+            try
+            {
+                //FileInfo file = new FileInfo(@"C:\SQL\DROP.sql");
+                string script = file.OpenText().ReadToEnd();
+                SqlConnection conn = new SqlConnection(DEFS.ConSTR);
+                Server server = new Server(new ServerConnection(conn));
+
+                server.ConnectionContext.ExecuteNonQuery(script);
+                
+
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                DEFS.log(Level.Exception, "Adatbázis update nem sikerült:" + file.ToString() + "\n" + "\n" + e.Message + "\n" + e.StackTrace);
+
+            }
             
 
-                DEFS.ConSTR = e_Cafe.Properties.Settings.Default.ECAFEConnectionString; // e_Cafe.Properties.Settings.Default.cnSTR;
-                InitializeComponent();
-                try
-                {
-                    FieldInfo = new clFIELDINFO_LIST(DEFS.ConSTR);
-                } catch (Exception c)
-                {
-                    DEFS.log(Level.Exception, c.Message);
-                }
-                _Rendel = false;
-
-                DEFS.log(Level.Info, "Sikeres belépés");
             
+        }
+
+        private void RefreshDatabase()
+        {
+            string tmpp = AppDomain.CurrentDomain.BaseDirectory;
+            updateDB(new FileInfo(tmpp+@"\SQL\DROP.sql"));
+
+            int db_ver = DEFS.GetDBVER();
+            MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
+            DEFS.log(Level.Debug, "Aktuális adatbázis verzió:"+db_ver.ToString());
+
+            if (db_ver < 1) { updateDB(new FileInfo(tmpp + @"\SQL\update_001.sql")); }
+            if (db_ver < 2) { updateDB(new FileInfo(tmpp + @"\SQL\update_002.sql")); }
+            if (db_ver < 3) { updateDB(new FileInfo(tmpp + @"\SQL\update_003.sql")); }
+            if (db_ver < 4) { updateDB(new FileInfo(tmpp + @"\SQL\update_004.sql")); }
+            
+
+            updateDB(new FileInfo(tmpp+@"\SQL\END.sql"));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,7 +117,7 @@ namespace e_Cafe
 
         private void MMenu_Load(object sender, EventArgs e)
         {
-            if (!Login()) { Application.Exit(); }
+            
 
             blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
             DEFS.LoadNyitottNap();
