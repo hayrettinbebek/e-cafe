@@ -52,6 +52,27 @@ namespace BusinessLogic
             
         }
 
+        public static int GetDBVER()
+        {
+            int tmpret = 0;
+            SqlConnection c = new SqlConnection(ConSTR);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT Cast(DB_VER as integer) as DB_VER FROM VERSION";
+            c.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                tmpret = (int)rdr["DB_VER"];
+            }
+
+            return tmpret;
+        }
+
         public static void createLogger()
         {
             APP_LOG = Logger.CreateFileLogger(AppDomain.CurrentDomain.BaseDirectory + "\\log\\e_cafe_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.Year + "_" +
