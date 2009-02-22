@@ -27,6 +27,7 @@ namespace BusinessLogic
 
         private static Logger APP_LOG;
 
+        public static _User LogInUser;
 
 
         public static void LoadNyitottNap()

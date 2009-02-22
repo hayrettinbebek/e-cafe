@@ -11,7 +11,7 @@ namespace BusinessLogic
 {
     public class ECafeLogin
     {
-        private int _USR_ID;
+        public int _USR_ID;
 
         public ECafeLogin()
         {
@@ -198,7 +198,7 @@ namespace BusinessLogic
             return Ok;
         }
 
-        public string Md5AddSecret(string strChange)
+        public  static string Md5AddSecret(string strChange)
         {
             //Change the syllable into UTF8 code
             byte[] pass = Encoding.UTF8.GetBytes(strChange);
@@ -209,4 +209,246 @@ namespace BusinessLogic
         }
 
     }
+
+    #region _User
+    public class _User
+    {
+        #region USER_ID
+        private int _USER_ID;
+        public int USER_ID
+        {
+            get { return (_USER_ID); }
+            set { _USER_ID = value; }
+        }
+        #endregion
+
+        #region NAME
+        private string _NAME;
+        public string NAME
+        {
+            get { return (_NAME); }
+            set { _NAME = value; }
+        }
+        #endregion
+
+        #region LOGIN_NAME
+        private string _LOGIN_NAME;
+        public string LOGIN_NAME
+        {
+            get { return (_LOGIN_NAME); }
+            set { _LOGIN_NAME = value; }
+        }
+        #endregion
+
+        #region PW
+        private string _PW;
+        public string PW
+        {
+            get { return (_PW); }
+            set { _PW = value; }
+        }
+        #endregion
+
+        #region SUPER
+        private int _SUPER;
+        public bool SUPER
+        {
+            get { return (_SUPER == 1); }
+            set
+            {
+                if (value) { _SUPER = 1; }
+                else { _SUPER = 0; }
+            }
+        }
+        #endregion
+         
+        #region LOCKED
+        private string _LOCKED;
+        public string LOCKED
+        {
+            get { return (_LOCKED); }
+            set { _LOCKED = value; }
+        }
+        #endregion
+
+        #region LOCKED_DATE
+        private DateTime _LOCKED_DATE;
+        public DateTime LOCKED_DATE
+        {
+            get { return (_LOCKED_DATE); }
+            set { _LOCKED_DATE = value; }
+        }
+        #endregion
+
+        #region AKTIV
+        private int _AKTIV;
+        public bool AKTIV
+        {
+            get { return (_AKTIV == 1); }
+            set { if (value) {_AKTIV = 1;}
+            else { _AKTIV = 0; } }
+        }
+        #endregion
+
+        public _User(int pU_ID)
+        {
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT USR_ID ,USR_NAME ,USR_LOGIN_NAME ,USR_PW ,USR_SUPERVISOR ,USR_LOCKED ,USR_LOCKED_DATE ,USR_AKTIV FROM _USER WHERE USR_ID ="+ pU_ID.ToString();
+      
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                USER_ID = (int)rdr["USR_ID"];
+                NAME = (string)rdr["USR_NAME"];
+                LOGIN_NAME = (string)rdr["USR_LOGIN_NAME"];
+                PW = (string)rdr["USR_PW"];
+                _SUPER = (int)rdr["USR_SUPERVISOR"];
+                LOCKED = (string)rdr["USR_LOCKED"];
+                LOCKED_DATE = (DateTime)rdr["USR_LOCKED_DATE"];
+                _AKTIV = (int)rdr["USR_AKTIV"];
+                
+
+            }
+            rdr.Close();
+
+            sc.Close();
+
+        }
+
+        public _User()
+        {
+            USER_ID = -1;
+        }
+
+        public void Save()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+
+
+            switch (_USER_ID)
+            {
+                case -1:
+                    {
+                        //új rekord!!
+                        cmd.CommandText = "INSERT INTO _USER " +
+                                          " (USR_NAME " +
+                                          " ,USR_LOGIN_NAME " +
+                                          " ,USR_PW " +
+                                          " ,USR_SUPERVISOR " +
+                                          " ,USR_LOCKED " +
+                                          " ,USR_LOCKED_DATE " +
+                                          " ,USR_AKTIV) " +
+                                        " VALUES " +
+                                          " (@USR_NAME " +
+                                          " ,@USR_LOGIN_NAME " +
+                                          " ,@USR_PW " +
+                                          " ,@USR_SUPERVISOR " +
+                                          " ,@USR_LOCKED " +
+                                          " ,@USR_LOCKED_DATE " +
+                                          " ,@USR_AKTIV)";
+
+                        break;
+                    }
+                default:
+                    {
+
+                        cmd.CommandText = "UPDATE _USER " +
+                                          "  SET USR_NAME = @USR_NAME " +
+                                          "    ,USR_LOGIN_NAME = @USR_LOGIN_NAME " +
+                                          "    ,USR_PW = @USR_PW " +
+                                          "    ,USR_SUPERVISOR = @USR_SUPERVISOR " +
+                                          "    ,USR_LOCKED = @USR_LOCKED " +
+                                          "    ,USR_LOCKED_DATE = @USR_LOCKED_DATE " +
+                                          "    ,USR_AKTIV = @USR_AKTIV " +
+                                         " WHERE USR_ID = @USR_ID";
+                        cmd.Parameters.Add(new SqlParameter("USR_ID", SqlDbType.Int));
+                        cmd.Parameters["USR_ID"].Value = _USER_ID;
+                        break;
+                    }
+            }
+
+            cmd.Parameters.Add(new SqlParameter("USR_NAME", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("USR_LOGIN_NAME", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("USR_PW", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("USR_SUPERVISOR", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("USR_LOCKED", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("USR_LOCKED_DATE", SqlDbType.DateTime));
+            cmd.Parameters.Add(new SqlParameter("USR_AKTIV", SqlDbType.Int));
+            
+
+            cmd.Parameters["USR_NAME"].Value = NAME;
+            cmd.Parameters["USR_LOGIN_NAME"].Value = LOGIN_NAME;
+            cmd.Parameters["USR_PW"].Value = PW;
+            cmd.Parameters["USR_SUPERVISOR"].Value = SUPER;
+            cmd.Parameters["USR_LOCKED"].Value = LOCKED;
+            cmd.Parameters["USR_LOCKED_DATE"].Value = LOCKED_DATE;
+            cmd.Parameters["USR_AKTIV"].Value = _AKTIV;
+            
+            cmd.ExecuteNonQuery();
+
+
+            c.Close();
+        }
+
+    }
+
+    public class UserLista
+    {
+
+
+        public List<_User> lUser = new List<_User>();
+
+
+        public UserLista()
+        {
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT USR_ID  FROM _USER";
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+
+                lUser.Add(new _User((int)rdr["USR_ID"]));
+            }
+            rdr.Close();
+            sc.Close();
+        }
+
+        public _User RaktarByID(int puID)
+        {
+            _User iTmpRet = null;
+
+            var ret_rakt =
+                from c in lUser
+                where c.USER_ID == puID
+                select c;
+            ret_rakt.Each(c => iTmpRet = c);
+
+
+            return (iTmpRet);
+        }
+    }
+    #endregion
 }

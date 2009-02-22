@@ -290,6 +290,18 @@
     <Compile Include="Torzsek\frmUjCikk.Designer.cs">
       <DependentUpon>frmUjCikk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Torzsek\frmUjUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmUjUser.Designer.cs">
+      <DependentUpon>frmUjUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Torzsek\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AsztalInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -407,6 +419,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmUjCikk.resx">
       <DependentUpon>frmUjCikk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmUjUser.resx">
+      <DependentUpon>frmUjUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AsztalInfo.resx">
       <DependentUpon>AsztalInfo.cs</DependentUpon>
@@ -637,6 +655,7 @@
     </None>
     <None Include="Properties\DataSources\BusinessLogic.CikkKeszlet.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Partner.datasource" />
+    <None Include="Properties\DataSources\BusinessLogic._User.datasource" />
     <None Include="Resources\off_T.bmp" />
     <None Include="Properties\DataSources\BusinessLogic.DynCombo.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Vevo.datasource" />

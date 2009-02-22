@@ -202,6 +202,13 @@ namespace e_Cafe
             f.Show();
         }
 
+        private void felhasználókToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmUser fu = new frmUser();
+            fu.MdiParent = this;
+            fu.Show();
+        }
+
 
     }
 }

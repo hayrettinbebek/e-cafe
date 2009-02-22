@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMenu));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Button();
             this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
@@ -58,6 +58,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,6 +86,16 @@
             this.panel4.Size = new System.Drawing.Size(128, 470);
             this.panel4.TabIndex = 0;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.panel5.Controls.Add(this.lblTime);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(128, 113);
+            this.panel5.TabIndex = 3;
+            // 
             // lblTime
             // 
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -94,17 +106,6 @@
             this.lblTime.Text = "button2";
             this.lblTime.UseVisualStyleBackColor = true;
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.panel5.Controls.Add(this.lblTime);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(128, 113);
-            this.panel5.TabIndex = 3;
-            
             // 
             // btmImgList
             // 
@@ -187,6 +188,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnPartnerek);
@@ -196,6 +198,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -253,7 +256,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(834, 92);
+            this.label3.Location = new System.Drawing.Point(935, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 10;
@@ -304,7 +307,6 @@
             this.button5.Size = new System.Drawing.Size(75, 74);
             this.button5.TabIndex = 7;
             this.button5.UseVisualStyleBackColor = true;
-            
             // 
             // button1
             // 
@@ -317,7 +319,6 @@
             this.button1.Size = new System.Drawing.Size(75, 74);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
-            
             // 
             // button3
             // 
@@ -330,7 +331,6 @@
             this.button3.Size = new System.Drawing.Size(75, 74);
             this.button3.TabIndex = 7;
             this.button3.UseVisualStyleBackColor = true;
-            
             // 
             // dateTimePicker1
             // 
@@ -362,7 +362,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(823, 15);
+            this.button2.Location = new System.Drawing.Point(924, 14);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 74);
             this.button2.TabIndex = 1;
@@ -379,6 +379,33 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(844, 11);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(74, 77);
+            this.button6.TabIndex = 1;
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(825, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 17);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Kijelentkezés";
             // 
             // MMenu
             // 
@@ -435,6 +462,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button5;
         public System.Windows.Forms.ImageList btmImgList;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label8;
         
     }
 }
