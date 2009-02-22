@@ -99,7 +99,7 @@ namespace e_Cafe
             if (db_ver < 2) { updateDB(new FileInfo(tmpp + @"\SQL\update_002.sql")); }
             if (db_ver < 3) { updateDB(new FileInfo(tmpp + @"\SQL\update_003.sql")); }
             if (db_ver < 4) { updateDB(new FileInfo(tmpp + @"\SQL\update_004.sql")); }
-            
+            if (db_ver < 5) { updateDB(new FileInfo(tmpp + @"\SQL\update_005.sql")); }
 
             updateDB(new FileInfo(tmpp+@"\SQL\END.sql"));
         }
@@ -156,6 +156,7 @@ namespace e_Cafe
                     }
                     else
                     {
+                        DEFS.LogInUser = new _User(l._USR_ID);
                         r = true;
                         break;
 
@@ -353,6 +354,11 @@ namespace e_Cafe
             MMPartnerek f = new MMPartnerek();
             
             f.ShowDialog();
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
 
         }
 

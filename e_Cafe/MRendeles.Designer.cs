@@ -56,6 +56,8 @@
             this.numberColumn2 = new XPTable.Models.NumberColumn();
             this.dateTimeColumn1 = new XPTable.Models.DateTimeColumn();
             this.btmImgList = new System.Windows.Forms.ImageList(this.components);
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
@@ -114,6 +116,8 @@
             // pnlRendeles
             // 
             this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlRendeles.Controls.Add(this.radioButton2);
+            this.pnlRendeles.Controls.Add(this.radioButton1);
             this.pnlRendeles.Controls.Add(this.btnDelete);
             this.pnlRendeles.Controls.Add(this.btnUP);
             this.pnlRendeles.Controls.Add(this.btnDOWN);
@@ -173,14 +177,14 @@
             // 
             this.tblRendeles.AllowSelection = false;
             this.tblRendeles.FullRowSelect = true;
-            this.tblRendeles.Location = new System.Drawing.Point(10, 117);
+            this.tblRendeles.Location = new System.Drawing.Point(9, 135);
             this.tblRendeles.MultiSelect = true;
             this.tblRendeles.Name = "tblRendeles";
             this.tblRendeles.NoItemsText = "Nincs kiválasztott cikk";
             this.tblRendeles.Scrollable = false;
             this.tblRendeles.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tblRendeles.SelectionStyle = XPTable.Models.SelectionStyle.Grid;
-            this.tblRendeles.Size = new System.Drawing.Size(292, 402);
+            this.tblRendeles.Size = new System.Drawing.Size(293, 384);
             this.tblRendeles.TabIndex = 1;
             this.tblRendeles.Text = "table1";
             this.tblRendeles.CellClick += new XPTable.Events.CellMouseEventHandler(this.tblRendeles_CellClick);
@@ -279,6 +283,36 @@
             this.btmImgList.Images.SetKeyName(0, "off.png");
             this.btmImgList.Images.SetKeyName(1, "aktiv.png");
             // 
+            // radioButton1
+            // 
+            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.radioButton1.Checked = true;
+            this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton1.Location = new System.Drawing.Point(20, 106);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(121, 24);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Tag = "3";
+            this.radioButton1.Text = "Részletes";
+            this.radioButton1.UseVisualStyleBackColor = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.radioButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton2.Location = new System.Drawing.Point(147, 105);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(121, 24);
+            this.radioButton2.TabIndex = 6;
+            this.radioButton2.Tag = "3";
+            this.radioButton2.Text = "Összetett";
+            this.radioButton2.UseVisualStyleBackColor = false;
+            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,5 +367,7 @@
         private System.Windows.Forms.Button btnUP;
         private System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.ImageList btmImgList;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
