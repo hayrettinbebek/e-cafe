@@ -62,3 +62,11 @@ GO
 /****** Object:  Trigger [tr_RendelSor_Keszletupdate]    Script Date: 02/21/2009 00:06:00 ******/
 IF  EXISTS (SELECT * FROM sys.triggers WHERE object_id = OBJECT_ID(N'[dbo].[tr_RendelSor_Keszletupdate]'))
 DROP TRIGGER [dbo].[tr_RendelSor_Keszletupdate]
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[SP_KESZLET_ATVEZET]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SP_KESZLET_ATVEZET]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[SP_KESZLET_ATVEZET]
+
+GO
