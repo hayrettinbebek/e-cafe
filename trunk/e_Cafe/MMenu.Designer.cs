@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPartnerek = new System.Windows.Forms.Button();
@@ -56,10 +57,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -121,7 +121,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.DimGray;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(184, 0);
             this.panel6.Name = "panel6";
@@ -251,6 +251,17 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Partnerek";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(825, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 17);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Kijelentkezés";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -282,7 +293,7 @@
             this.btnPartnerek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPartnerek.Location = new System.Drawing.Point(629, 14);
             this.btnPartnerek.Name = "btnPartnerek";
-            this.btnPartnerek.Size = new System.Drawing.Size(72, 75);
+            this.btnPartnerek.Size = new System.Drawing.Size(70, 75);
             this.btnPartnerek.TabIndex = 9;
             this.btnPartnerek.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnPartnerek.UseVisualStyleBackColor = false;
@@ -298,39 +309,42 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(319, 11);
+            this.button5.Location = new System.Drawing.Point(319, 14);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 74);
+            this.button5.Size = new System.Drawing.Size(70, 75);
             this.button5.TabIndex = 7;
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(420, 14);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 74);
+            this.button1.Size = new System.Drawing.Size(70, 75);
             this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(505, 15);
+            this.button3.Location = new System.Drawing.Point(505, 14);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 74);
+            this.button3.Size = new System.Drawing.Size(70, 75);
             this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
@@ -355,6 +369,22 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(838, 14);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(70, 75);
+            this.button6.TabIndex = 1;
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -364,7 +394,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(924, 14);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 74);
+            this.button2.Size = new System.Drawing.Size(70, 75);
             this.button2.TabIndex = 1;
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -379,33 +409,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(844, 11);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(74, 77);
-            this.button6.TabIndex = 1;
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(825, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 17);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Kijelentkezés";
             // 
             // MMenu
             // 

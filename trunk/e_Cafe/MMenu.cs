@@ -89,19 +89,32 @@ namespace e_Cafe
         private void RefreshDatabase()
         {
             string tmpp = AppDomain.CurrentDomain.BaseDirectory;
-            updateDB(new FileInfo(tmpp+@"\SQL\DROP.sql"));
+            
 
             int db_ver = DEFS.GetDBVER();
             MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
-            DEFS.log(Level.Debug, "Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 1) { updateDB(new FileInfo(tmpp + @"\SQL\update_001.sql")); }
-            if (db_ver < 2) { updateDB(new FileInfo(tmpp + @"\SQL\update_002.sql")); }
-            if (db_ver < 3) { updateDB(new FileInfo(tmpp + @"\SQL\update_003.sql")); }
-            if (db_ver < 4) { updateDB(new FileInfo(tmpp + @"\SQL\update_004.sql")); }
-            if (db_ver < 5) { updateDB(new FileInfo(tmpp + @"\SQL\update_005.sql")); }
+            if (db_ver < 5)
+            {
 
-            updateDB(new FileInfo(tmpp+@"\SQL\END.sql"));
+                if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+
+                    updateDB(new FileInfo(tmpp + @"\SQL\DROP.sql"));
+                    DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
+
+                    if (db_ver < 1) { updateDB(new FileInfo(tmpp + @"\SQL\update_001.sql")); }
+                    if (db_ver < 2) { updateDB(new FileInfo(tmpp + @"\SQL\update_002.sql")); }
+                    if (db_ver < 3) { updateDB(new FileInfo(tmpp + @"\SQL\update_003.sql")); }
+                    if (db_ver < 4) { updateDB(new FileInfo(tmpp + @"\SQL\update_004.sql")); }
+                    if (db_ver < 5) { updateDB(new FileInfo(tmpp + @"\SQL\update_005.sql")); }
+
+                    updateDB(new FileInfo(tmpp + @"\SQL\END.sql"));
+                    DEFS.SendInfoMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
+                                "\n" + "(Adminisztrátor:Support:Logok beküldése)");
+                }
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

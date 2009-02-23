@@ -93,7 +93,7 @@ namespace e_Cafe
                     newCikk.ALCSOPORT = Convert.ToInt16(cmbOTF.SelectedValue);
                     newCikk.ALAP_RAKTAR = Convert.ToInt16(cmbDefRakt.SelectedValue);
                     newCikk.ERTEKESITES_TIPUSA = cmbErtTip.SelectedValue.ToString();
-                    newCikk.MEGYS_ID = Convert.ToInt16(cmdMe.SelectedValue);
+                    newCikk.MEGYS_ID = Convert.ToString(cmdMe.SelectedValue);
                     newCikk.MINIMUM_KESZLET = Convert.ToDouble(txtMinKeszl.Text);
                     newCikk.OPTIMALIS_KESZLET = Convert.ToDouble(txtOptKeszl.Text);
                     newCikk.ELADASI_AR = Convert.ToDouble(txtEladAr.Text);
