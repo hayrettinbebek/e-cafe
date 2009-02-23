@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -360,15 +360,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBevetelSor.resx">
       <DependentUpon>frmBevetelSor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPartnerInsert.resx">
       <DependentUpon>frmPartnerInsert.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShadowLayer.resx">
       <DependentUpon>frmShadowLayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MMPartnerek.resx">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
@@ -376,6 +379,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PartnerSelector.resx">
       <DependentUpon>PartnerSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmAFA.resx">
       <DependentUpon>frmAFA.cs</DependentUpon>
@@ -383,6 +387,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmBevetel.resx">
       <DependentUpon>frmBevetel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmCikk.resx">
       <DependentUpon>frmCikk.cs</DependentUpon>

@@ -530,6 +530,44 @@ END
 
 GO
 
+-- =============================================
+-- Author:		Author,,Name>
+-- Create date: Create Date,,>
+-- Description:	Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[SP_KESZLET_ATVEZET]
+	-- Add the parameters for the stored procedure here
+	@from_raktar int,
+	@to_raktar int,
+	@cikk_id int,
+	@menny float
+	
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+declare @a_ev int,
+        @a_ho int,
+        @a_nap int
+
+execute getnyitottNap @a_ev out, @a_ho out, @a_nap out
+   
+/*
+INSERT INTO KESZLET_SOR
+           (EV,HO,NAP,RAKTAR_ID,CIKK_ID,DATUM,RENDELES_ID,BEVETEL_ID
+			,BIZONYLAT_ID,MENNYISEG,IRANY,EGYSEGAR,NETTO_ERTEK,AFA_ERTEK
+			,AFA_KOD,BRUTTO_ERTEK,MOZGAS_TIPUS,KESZLET_EGYS_AR)
+     VALUES
+           (@a_ev,@a_ho,@a_nap,RAKTAR_ID,CIKK_ID,DATUM,RENDELES_ID,BEVETEL_ID
+			,BIZONYLAT_ID,MENNYISEG,IRANY,EGYSEGAR,NETTO_ERTEK,AFA_ERTEK
+			,AFA_KOD,BRUTTO_ERTEK,MOZGAS_TIPUS,KESZLET_EGYS_AR)
+
+*/
+    
+END
+
+GO
 
 
 
