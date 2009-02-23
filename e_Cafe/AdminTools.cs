@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
 using e_Cafe.Torzsek;
+using e_Cafe.Keszlet;
 
 namespace e_Cafe
 {
@@ -207,6 +208,13 @@ namespace e_Cafe
             frmUser fu = new frmUser();
             fu.MdiParent = this;
             fu.Show();
+        }
+
+        private void készletÁtvezetésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAtvezetes fa = new frmAtvezetes();
+            fa.MdiParent = this;
+            fa.Show();
         }
 
 

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -212,6 +212,12 @@
     <Compile Include="frmShadowLayer.Designer.cs">
       <DependentUpon>frmShadowLayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Keszlet\frmAtvezetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmAtvezetes.Designer.cs">
+      <DependentUpon>frmAtvezetes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MMPartnerek.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,6 +378,9 @@
     <EmbeddedResource Include="frmShadowLayer.resx">
       <DependentUpon>frmShadowLayer.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmAtvezetes.resx">
+      <DependentUpon>frmAtvezetes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MMPartnerek.resx">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
@@ -667,6 +676,30 @@
     <None Include="Resources\also.PNG" />
     <None Include="Resources\oldal.PNG" />
     <None Include="Resources\hatter.png" />
+    <None Include="SQL\DROP.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\END.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\update_001.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\update_002.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\update_003.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\update_004.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\update_005.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\update_006.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

@@ -26,8 +26,8 @@ namespace BusinessLogic
 
         
         #region MEGYS_ID
-        private int fMEGYS_ID;
-        public int MEGYS_ID
+        private string fMEGYS_ID;
+        public string MEGYS_ID
         {
             get { return (fMEGYS_ID); }
             set { fMEGYS_ID = value; }
@@ -323,7 +323,7 @@ namespace BusinessLogic
                 fCIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
                 fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
                 fDEFAULT_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
-                MEGYS_ID = (int)rdr["DEFAULT_RAKTAR"];
+                MEGYS_ID = (string)rdr["MEGYS_ID"];
                 ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
                 CIKKSZAM = (string)rdr["CIKKSZAM"];
                 GYORSKOD = (string)rdr["GYORSKOD"];
@@ -370,7 +370,7 @@ namespace BusinessLogic
                 fCIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
                 fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
                 fDEFAULT_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
-                MEGYS_ID = (int)rdr["DEFAULT_RAKTAR"];
+                MEGYS_ID = (string)rdr["MEGYS_ID"];
                 ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
                 CIKKSZAM = (string)rdr["CIKKSZAM"];
                 GYORSKOD = (string)rdr["GYORSKOD"];
@@ -486,7 +486,7 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("OPTIMALIS_KESZLET", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("ELADASI_AR", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("MEGJEGYZES", SqlDbType.VarChar));
-            cmd.Parameters.Add(new SqlParameter("MEGYS_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("MEGYS_ID", SqlDbType.VarChar));
 
             
             cmd.Parameters["MEGNEVEZES"].Value = MEGNEVEZES;
@@ -538,6 +538,15 @@ namespace BusinessLogic
    
     public class CikkKeszlet
     {
+        #region Raktár id
+        //megnevezés
+        public int fRAKTAR_ID;
+        public int RAKTAR_ID
+        {
+            get { return (fRAKTAR_ID); }
+            set { fRAKTAR_ID = value; }
+        }
+        #endregion
         #region Raktár
         //megnevezés
         public string fNEV;
@@ -578,7 +587,7 @@ namespace BusinessLogic
         }
         #endregion
 
-        public int fRAKTAR_ID;
+
         
         
         
@@ -622,15 +631,13 @@ namespace BusinessLogic
 
                 try
                 {
-                    Cikk t = new Cikk((int)rdr["CIKK_ID"],
-                                      (string)rdr["MEGNEVEZES"],
-                                      (int)rdr["CIKK_TIPUS"],
-                                      (int)rdr["CIKKCSOPORT_ID"]);
-                    t.ALCSOPORT = (int)rdr["OTHER_FILTER_ID"];
-                    t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
-                    t.ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
-                    t.KISZ_MEGN = (string)rdr["KISZ_NEV"];
-                    t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+                    Cikk t = new Cikk((int)rdr["CIKK_ID"], true,new SqlConnection(DEFS.ConSTR));
+
+                    //t.ALCSOPORT = (int)rdr["OTHER_FILTER_ID"];
+                    //t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                    //t.ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
+                    //t.KISZ_MEGN = (string)rdr["KISZ_NEV"];
+                    //t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
                     t.getKeszlet();
                     lCIKK.Add(t);
                 }
@@ -1004,8 +1011,8 @@ namespace BusinessLogic
     #region Mértékegységek
     public class Megys
     {
-        private int _id;
-        public int ID
+        private string _id;
+        public string ID
         {
             get { return (_id); }
             set { _id = value; }
@@ -1018,7 +1025,7 @@ namespace BusinessLogic
             set { _nev = value; }
         }
 
-        public Megys(int pId, string pNev)
+        public Megys(string pId, string pNev)
         {
             _id = pId;
             _nev = pNev;
@@ -1050,7 +1057,7 @@ namespace BusinessLogic
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                Megys t = new Megys((int)rdr["MEGYS_ID"],
+                Megys t = new Megys((string)rdr["MEGYS_ID"],
                                   (string)rdr["MEGYS_MEGNEVEZES"]);
 
                 lMegys.Add(t);
@@ -1061,7 +1068,7 @@ namespace BusinessLogic
             sc.Close();
         }
 
-        public Megys MegysById(int iId)
+        public Megys MegysById(string iId)
         {
             Megys tc = null;
 
