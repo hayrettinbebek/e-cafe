@@ -19,38 +19,53 @@ namespace e_Cafe
     {
         Asztal_Button tmp_m;
 
-        protected TBLObj bl_object;
+        
         protected bool _isAdmin;
+        protected bool _selectMode;
         protected int _HelyId;
         public Asztal_List aList;
         MMenu mm;
+        frmAsztalSelect fm;
 
-        public Asztalok(Control p, TBLObj bl, int pHelyId)
+        public Asztalok(Control p,  int pHelyId)
         {
             InitializeComponent();
             Parent = p;
             Dock = DockStyle.Fill;
-            bl_object = bl;
+            
             _HelyId = pHelyId;
             _isAdmin = false;
             mm = (MMenu)Parent.Parent;
 
         }
-        public Asztalok(Control p, TBLObj bl, int pHelyId, bool adminMode)
+        public Asztalok(Control p,  int pHelyId, bool adminMode)
         {
             InitializeComponent();
             Parent = p;
             Dock = DockStyle.Fill;
-            bl_object = bl;
+            
             _HelyId = pHelyId;
             _isAdmin = adminMode;
             if (!adminMode) {mm = (MMenu)Parent.Parent;}
 
         }
 
+        public Asztalok(bool select, Control p, int pHelyId)
+        {
+            InitializeComponent();
+            Parent = p;
+            Dock = DockStyle.Fill;
+
+            _HelyId = pHelyId;
+            _selectMode = select;
+
+            if (_selectMode) { fm = (frmAsztalSelect)Parent.Parent; }
+
+        }
+
         public void RefreshAsztalok(bool DB_refresh)
         {
-            if (DB_refresh) { aList = new Asztal_List(bl_object,_HelyId); }
+            if (DB_refresh) { aList = new Asztal_List(_HelyId); }
             this.Controls.Clear();
             for (int i = 0; i < aList.lASZTAL.Count; i++)
             {
@@ -61,7 +76,14 @@ namespace e_Cafe
                 ab.Text = aList.lASZTAL[i].fASZTAL_SZAM + ". asztal";
                 ab.aObj = aList.lASZTAL[i];
                 ab.Size = new System.Drawing.Size(300, 123);
-                if (!_isAdmin) { ab.Click += mm.Asztal_click; }// .Asztalok_Click;
+                if (fm != null)
+                {
+                    if (_selectMode) { ab.Click += fm.Asztal_click; }// .Asztalok_Click;
+                }
+                if (mm != null)
+                {
+                    if (!_isAdmin) { ab.Click += mm.Asztal_click; }// .Asztalok_Click;
+                }
                 ab.vSelected = aList.lASZTAL[i].vSelected;
                 ab.Invalidate();
                 if (_isAdmin) { ab.MouseMove += this.Asztalok_MouseMove; }

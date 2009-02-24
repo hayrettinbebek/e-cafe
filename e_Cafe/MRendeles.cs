@@ -41,7 +41,7 @@ namespace e_Cafe
             _bl = iConn;
             label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
             _InactivityCounter = 0;
-            _AktRendeles = new Rendeles(_bl, _SelAsztal.fASZTAL_ID, _SelAsztal.fRENDELES_ID);
+            _AktRendeles = new Rendeles(_SelAsztal.fASZTAL_ID, _SelAsztal.fRENDELES_ID);
 
             InitMenuButtons();
             initRendelTabla();
@@ -356,6 +356,26 @@ namespace e_Cafe
 
             
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAsztalSelect fa = new frmAsztalSelect();
+            fa.ShowDialog();
+            if (fa.DialogResult == DialogResult.OK)
+            {
+                Rendeles nr = new Rendeles(fa.retA.fASZTAL_ID, fa.retA.fRENDELES_ID);
+                foreach (var s in tblRendeles.SelectedItems)
+                {
+                    nr.addTetel(((eCell)s.Cells[0]).rSor._Cikk);
+                    ((eCell)s.Cells[0]).rSor.DeleteSor();
+                }
+                nr.SaveRendeles();
+
+                _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
+
+                initRendelTabla();
+            }
         }
 
 
