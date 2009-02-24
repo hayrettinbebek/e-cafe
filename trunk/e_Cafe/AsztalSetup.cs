@@ -41,7 +41,7 @@ namespace e_Cafe
 
         private void AsztalSetup_Load(object sender, EventArgs e)
         {
-            Helyek h = new Helyek(asBlObj);
+            Helyek h = new Helyek();
             ArrayList arr = new ArrayList();
             
             cmbHelyek.ValueMember = "HELY_ID" ;
@@ -61,7 +61,7 @@ namespace e_Cafe
             pnlAsztalHelyek.Controls.Clear();
             
 
-            a = new Asztalok(pnlAsztalHelyek, asBlObj, ((Hely)cmbHelyek.Items[cmbHelyek.SelectedIndex]).fHELY_ID, true);
+            a = new Asztalok(pnlAsztalHelyek,  ((Hely)cmbHelyek.Items[cmbHelyek.SelectedIndex]).fHELY_ID, true);
             a.RefreshAsztalok(true);
         }
 

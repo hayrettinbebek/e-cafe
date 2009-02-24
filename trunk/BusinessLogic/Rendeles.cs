@@ -93,9 +93,9 @@ namespace BusinessLogic
         public List<RendelesSor> lRendelesSor = new List<RendelesSor>();
 
 
-        public Rendeles(TBLObj bl, int pAsztalID, int pRendeles_id)
+        public Rendeles(int pAsztalID, int pRendeles_id)
         {
-            pBLObj = bl;
+            
             
             _AsztalId = pAsztalID;
             setColumnModel();
@@ -105,7 +105,8 @@ namespace BusinessLogic
             fFIZETVE = false;
             fASZTAL_ID = pAsztalID;
 
-            sc = pBLObj.sqlConnection;
+            sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
            
             if (pRendeles_id != -1)
             {
@@ -137,16 +138,18 @@ namespace BusinessLogic
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(bl.strConnectionString)));
+                    lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR)));
 
                 }
                 rdr.Close();
                 
 
             }
-            
+            sc.Close();
 
         }
+
+       
 
         #region Lista funkciók
 
@@ -166,7 +169,8 @@ namespace BusinessLogic
         #region Mentés / módosítás / törlés / beolvasás
         public void SaveRendeles()
         {
-            sc = pBLObj.sqlConnection;
+            sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sc;
             cmd.CommandType = CommandType.Text;
@@ -238,6 +242,7 @@ namespace BusinessLogic
                     sor.SaveSor(fRENDELES_ID);
                 }
             }
+            sc.Close();
         }
 
         public void InitRendeles(int pRendeles_id)
@@ -282,7 +287,14 @@ namespace BusinessLogic
 
             _Cikk = pCikk;
             _datum = pDatum;
-            _db = pDb;
+            if (pDb == 0)
+            {
+                _db = 1;
+            }
+            else
+            {
+                _db = pDb;
+            }
             _Ertek = pErtek;
             _SOR_ID = -1;
             _RaktarId = pCikk.ALAP_RAKTAR;
@@ -293,7 +305,14 @@ namespace BusinessLogic
 
             _Cikk = pCikk;
             _datum = pDatum;
-            _db = pDb;
+            if (pDb == 0)
+            {
+                _db = 1;
+            }
+            else
+            {
+                _db = pDb;
+            }
             _Ertek = pErtek;
             _SOR_ID = -1;
             _RaktarId = pRaktar;
@@ -362,12 +381,12 @@ namespace BusinessLogic
                     }
                 default:
                     {
-                        cmd.CommandText = "UPDATE RENDELES_FEJ SET RENDELES_ID = @RENDELES_ID, " +
+                        cmd.CommandText = "UPDATE RENDELES_SOR SET RENDELES_ID = @RENDELES_ID, " +
                                                        " CIKK_ID = @CIKK_ID, " +
                                                        " DB = @DB, " +
                                                        " DATUM = @DATUM, " +
                                                        " RAKTAR_ID = @RAKTAR_ID, " +
-                                                       " ERTEK = @ERTEK, " +
+                                                       " ERTEK = @ERTEK " +
                                            "WHERE SOR_ID = @SOR_ID";
                         cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
                         cmd.Parameters["SOR_ID"].Value = _SOR_ID;

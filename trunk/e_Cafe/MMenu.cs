@@ -184,7 +184,7 @@ namespace e_Cafe
 
         private void initHelyek()
         {
-            Helyek cl = new Helyek(blObj);
+            Helyek cl = new Helyek();
 
             tlpButtons = new MainMenuBtn();
 
@@ -317,7 +317,7 @@ namespace e_Cafe
         public void goMainMenu(int aHelyId)
         {
             panel3.Controls.Clear();
-            a = new Asztalok(panel3, blObj, aHelyId);
+            a = new Asztalok(panel3,  aHelyId);
             a.RefreshAsztalok(true);
         }
 

@@ -56,13 +56,13 @@ namespace BusinessLogic
         private SqlConnection sc;
 
         public List<Asztal> lASZTAL = new List<Asztal>();
-        TBLObj pBLObj;
         
-        public Asztal_List(TBLObj iBLObj,int aHelyId)
+        
+        public Asztal_List(int aHelyId)
         {
-            pBLObj = iBLObj;
-            sc = pBLObj.sqlConnection;
-
+            
+            sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
             SqlCommand cmd = new SqlCommand();
 
             cmd.Connection = sc;
@@ -81,6 +81,7 @@ namespace BusinessLogic
                 lASZTAL.Add(t);
             }
             rdr.Close();
+            sc.Close();
         }
 
         public Asztal GetItem(int iASZTAL_ID)
@@ -149,7 +150,8 @@ namespace BusinessLogic
         }
         private bool SetAsztalPos(int iASZTAL_ID, int iPos_x, int iPos_y)
         {
-            sc = pBLObj.sqlConnection;
+            sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sc;
             cmd.CommandType = CommandType.Text;
@@ -173,6 +175,7 @@ namespace BusinessLogic
                 //string s = "Hiba az asztal pozició mentése közben!";
                 return false;
             }
+            sc.Close();
 
 
         }
@@ -211,15 +214,15 @@ namespace BusinessLogic
 
     public class Helyek
     {
-        private SqlConnection sc;
+       
 
         public List<Hely> lHelyek = new List<Hely>();
-        TBLObj pBLObj;
 
-        public Helyek(TBLObj iBLObj)
+        public Helyek()
         {
-            pBLObj = iBLObj;
-            sc = pBLObj.sqlConnection;
+
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
 
             SqlCommand cmd = new SqlCommand();
 
@@ -240,6 +243,7 @@ namespace BusinessLogic
                 lHelyek.Add(t);
             }
             rdr.Close();
+            sc.Close();
         }
 
     }
