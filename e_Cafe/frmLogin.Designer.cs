@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUsr = new System.Windows.Forms.TextBox();
             this.txtPw = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -42,25 +41,20 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.flpUser = new System.Windows.Forms.FlowLayoutPanel();
+            this.button12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // txtUsr
-            // 
-            this.txtUsr.Location = new System.Drawing.Point(15, 55);
-            this.txtUsr.Name = "txtUsr";
-            this.txtUsr.Size = new System.Drawing.Size(165, 20);
-            this.txtUsr.TabIndex = 0;
             // 
             // txtPw
             // 
-            this.txtPw.Location = new System.Drawing.Point(278, 14);
+            this.txtPw.Location = new System.Drawing.Point(422, 12);
             this.txtPw.Name = "txtPw";
             this.txtPw.Size = new System.Drawing.Size(135, 20);
             this.txtPw.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(278, 40);
+            this.button1.Location = new System.Drawing.Point(422, 38);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(41, 35);
             this.button1.TabIndex = 1;
@@ -70,7 +64,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(325, 40);
+            this.button2.Location = new System.Drawing.Point(469, 38);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(41, 35);
             this.button2.TabIndex = 1;
@@ -80,7 +74,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(372, 40);
+            this.button3.Location = new System.Drawing.Point(516, 38);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(41, 35);
             this.button3.TabIndex = 1;
@@ -90,7 +84,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(278, 81);
+            this.button4.Location = new System.Drawing.Point(422, 79);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(41, 35);
             this.button4.TabIndex = 1;
@@ -100,7 +94,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(325, 81);
+            this.button5.Location = new System.Drawing.Point(469, 79);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(41, 35);
             this.button5.TabIndex = 1;
@@ -110,7 +104,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(372, 81);
+            this.button6.Location = new System.Drawing.Point(516, 79);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(41, 35);
             this.button6.TabIndex = 1;
@@ -120,7 +114,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(278, 122);
+            this.button7.Location = new System.Drawing.Point(422, 120);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(41, 35);
             this.button7.TabIndex = 1;
@@ -130,7 +124,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(325, 122);
+            this.button8.Location = new System.Drawing.Point(469, 120);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(41, 35);
             this.button8.TabIndex = 1;
@@ -140,7 +134,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(372, 122);
+            this.button9.Location = new System.Drawing.Point(516, 120);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(41, 35);
             this.button9.TabIndex = 1;
@@ -150,7 +144,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(325, 163);
+            this.button10.Location = new System.Drawing.Point(469, 161);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(41, 35);
             this.button10.TabIndex = 1;
@@ -160,7 +154,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(190, 176);
+            this.button11.Location = new System.Drawing.Point(516, 159);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(55, 37);
             this.button11.TabIndex = 2;
@@ -171,18 +165,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 225);
+            this.label1.Location = new System.Drawing.Point(379, 275);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 13);
+            this.label1.Size = new System.Drawing.Size(119, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "A jelszóellenőrzés még hiányos. Átemenetileg a felhasználó: x a jelszó: 11";
+            this.label1.Text = "Adminisztrátor jelszó: 11";
+            // 
+            // flpUser
+            // 
+            this.flpUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpUser.Location = new System.Drawing.Point(0, 0);
+            this.flpUser.Name = "flpUser";
+            this.flpUser.Size = new System.Drawing.Size(373, 302);
+            this.flpUser.TabIndex = 4;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(382, 210);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(55, 37);
+            this.button12.TabIndex = 2;
+            this.button12.Text = "EXIT";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 262);
+            this.ClientSize = new System.Drawing.Size(590, 302);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.flpUser);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
@@ -195,9 +210,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPw);
-            this.Controls.Add(this.txtUsr);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Bejelentkezés";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +222,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUsr;
         private System.Windows.Forms.TextBox txtPw;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -219,5 +235,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flpUser;
+        private System.Windows.Forms.Button button12;
     }
 }

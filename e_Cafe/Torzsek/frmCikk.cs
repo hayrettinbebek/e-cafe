@@ -50,10 +50,16 @@ namespace e_Cafe.Torzsek
         {
             if (cIKKBindingSource.Current != null)
             {
-                btnKiszerelések.Visible = (string)((DataRowView)cIKKBindingSource.Current)["ERTEKESITES_TIPUSA"] == "F";
+                grpKiszerelesek.Visible = (string)((DataRowView)cIKKBindingSource.Current)["ERTEKESITES_TIPUSA"] == "L";
+
+                
+
                 if (cikkList != null)
                 {
                     aktCikk = cikkList.CikkByID((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
+
+                    grpRecept.Visible = aktCikk.OSSZETETT;
+
                     cikkKeszletBindingSource.Clear();
                     foreach (var k in aktCikk.lKESZLET)
                     {
@@ -118,6 +124,11 @@ namespace e_Cafe.Torzsek
                 fu.CikkID = (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"];
                 fu.ShowDialog();
             }
+        }
+
+        private void btnKiszerelések_Click(object sender, EventArgs e)
+        {
+            lIT_KISZTableAdapter.Update(eCAFEDataSetCIKK.LIT_KISZ);
         }
 
 

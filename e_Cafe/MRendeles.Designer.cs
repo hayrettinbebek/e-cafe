@@ -36,8 +36,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlRendeles = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbOsszetett = new System.Windows.Forms.RadioButton();
+            this.rbReszletes = new System.Windows.Forms.RadioButton();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUP = new System.Windows.Forms.Button();
             this.btnDOWN = new System.Windows.Forms.Button();
@@ -129,8 +129,8 @@
             // pnlRendeles
             // 
             this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlRendeles.Controls.Add(this.radioButton2);
-            this.pnlRendeles.Controls.Add(this.radioButton1);
+            this.pnlRendeles.Controls.Add(this.rbOsszetett);
+            this.pnlRendeles.Controls.Add(this.rbReszletes);
             this.pnlRendeles.Controls.Add(this.btnDelete);
             this.pnlRendeles.Controls.Add(this.btnUP);
             this.pnlRendeles.Controls.Add(this.btnDOWN);
@@ -143,44 +143,47 @@
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
             // 
-            // radioButton2
+            // rbOsszetett
             // 
-            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.radioButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton2.Location = new System.Drawing.Point(147, 105);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(121, 24);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.Tag = "3";
-            this.radioButton2.Text = "Összetett";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rbOsszetett.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbOsszetett.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rbOsszetett.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.rbOsszetett.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbOsszetett.Location = new System.Drawing.Point(147, 105);
+            this.rbOsszetett.Name = "rbOsszetett";
+            this.rbOsszetett.Size = new System.Drawing.Size(121, 24);
+            this.rbOsszetett.TabIndex = 6;
+            this.rbOsszetett.Tag = "3";
+            this.rbOsszetett.Text = "Összetett";
+            this.rbOsszetett.UseVisualStyleBackColor = false;
+            this.rbOsszetett.CheckedChanged += new System.EventHandler(this.rbOsszetett_CheckedChanged);
             // 
-            // radioButton1
+            // rbReszletes
             // 
-            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.radioButton1.Checked = true;
-            this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Location = new System.Drawing.Point(20, 106);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(121, 24);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Tag = "3";
-            this.radioButton1.Text = "Részletes";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rbReszletes.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbReszletes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rbReszletes.Checked = true;
+            this.rbReszletes.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.rbReszletes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbReszletes.Location = new System.Drawing.Point(20, 106);
+            this.rbReszletes.Name = "rbReszletes";
+            this.rbReszletes.Size = new System.Drawing.Size(121, 24);
+            this.rbReszletes.TabIndex = 6;
+            this.rbReszletes.TabStop = true;
+            this.rbReszletes.Tag = "3";
+            this.rbReszletes.Text = "Részletes";
+            this.rbReszletes.UseVisualStyleBackColor = false;
+            this.rbReszletes.CheckedChanged += new System.EventHandler(this.rbReszletes_CheckedChanged);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(160, 67);
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnDelete.Location = new System.Drawing.Point(96, 41);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(93, 32);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Töröl";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUP
@@ -561,8 +564,8 @@
         private System.Windows.Forms.Button btnUP;
         private System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.ImageList btmImgList;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbOsszetett;
+        private System.Windows.Forms.RadioButton rbReszletes;
         private System.Windows.Forms.Button btnPartnerek;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;

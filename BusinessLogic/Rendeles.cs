@@ -16,8 +16,6 @@ namespace BusinessLogic
     {
         private int _AsztalId;
         public int _ScrollPos;
-        TBLObj pBLObj;
-        private SqlConnection sc;
 
         public int fRENDELES_ID;
         public int fASZTAL_ID;
@@ -34,7 +32,13 @@ namespace BusinessLogic
             get { return (_ColumnModel); }
             set {}
         }
+        private ColumnModel _ColumnModelSum;
 
+        public ColumnModel fColumnModelSum
+        {
+            get { return (_ColumnModelSum); }
+            set { }
+        }
 
         private void setColumnModel()
         {
@@ -66,6 +70,36 @@ namespace BusinessLogic
 																	  datetimeColumn});
         }
 
+        private void setColumnModelSum()
+        {
+
+            //1. oszlop
+            ImageColumn imageColumn = new ImageColumn("", 30);
+            imageColumn.Editable = false;
+
+            NumberColumn numberColumn = new NumberColumn("db", 28);
+            numberColumn.Editable = false;
+
+            TextColumn textColumn = new TextColumn("név", 110);
+            textColumn.Editable = false;
+
+            NumberColumn ertekColumn = new NumberColumn("érték", 50);
+            ertekColumn.Editable = false;
+
+
+            DateTimeColumn datetimeColumn = new DateTimeColumn("idő", 70);
+            datetimeColumn.DateTimeFormat = DateTimePickerFormat.Time;
+            datetimeColumn.Editable = false;
+            datetimeColumn.ShowDropDownButton = false;
+
+
+            _ColumnModelSum = new ColumnModel(new Column[] {
+																	  numberColumn,
+																	  textColumn,
+																	  ertekColumn																	  
+            });
+        }
+
         public TableModel getTableModel()
         {
             TableModel tmpMod = new TableModel( new Row[] {});
@@ -88,6 +122,41 @@ namespace BusinessLogic
 
         }
 
+        public TableModel getTableModelSum()
+        {
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+            TableModel tmpMod = new TableModel(new Row[] { });
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT c.MEGNEVEZES,sum(s.DB) as DB, sum(s.ERTEK) as ERTEK FROM RENDELES_SOR s " +
+                                " inner join CIKK c on s.CIKK_Id = c.CIKK_ID " +
+                                " WHERE DELETED = 0 AND RENDELES_ID =" + this.fRENDELES_ID.ToString() +" " +
+                                " group by c.MEGNEVEZES" ;
+            SqlDataReader rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+
+
+                tmpMod.Rows.Add(new Row(new Cell[] {new Cell((double)rdr["DB"]),
+													new Cell((string)rdr["MEGNEVEZES"]),
+													new Cell((double)rdr["ERTEK"]),
+													}));
+            }
+            sc.Close();
+            return (tmpMod);
+
+
+
+
+
+        }
+
         #endregion
 
         public List<RendelesSor> lRendelesSor = new List<RendelesSor>();
@@ -99,13 +168,14 @@ namespace BusinessLogic
             
             _AsztalId = pAsztalID;
             setColumnModel();
+            setColumnModelSum();
             _ScrollPos = 0;
             fRENDELES_ID = pRendeles_id;
             fDATUM = DateTime.Now;
             fFIZETVE = false;
             fASZTAL_ID = pAsztalID;
 
-            sc = new SqlConnection(DEFS.ConSTR);
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
            
             if (pRendeles_id != -1)
@@ -156,12 +226,12 @@ namespace BusinessLogic
         public void addTetel(Cikk pCikk)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk,pCikk.KISZ_MENNY,250,DateTime.Now));
+            lRendelesSor.Add(new RendelesSor(pCikk,pCikk.KISZ_MENNY,pCikk.ELADASI_AR,DateTime.Now));
         }
         public void addTetel(Cikk pCikk, int pRakt)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, 250, DateTime.Now,pRakt));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, pCikk.ELADASI_AR, DateTime.Now,pRakt));
         }
 
         #endregion
@@ -169,7 +239,7 @@ namespace BusinessLogic
         #region Mentés / módosítás / törlés / beolvasás
         public void SaveRendeles()
         {
-            sc = new SqlConnection(DEFS.ConSTR);
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sc;
