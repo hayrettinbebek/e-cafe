@@ -160,7 +160,7 @@ namespace GUI
                 lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
                 lKeszletOther.Text = value.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
                 lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
-                lAr.Text = "250 .-";
+                lAr.Text = value.ELADASI_AR.ToString("0.00", CultureInfo.InvariantCulture);
 
                 
             }
@@ -296,6 +296,93 @@ namespace GUI
 
 
         public PartnerButton()
+        {
+            Width = 150;
+            Height = 75;
+            // Get the dimension of the client rectangle 
+            Rectangle rect = this.ClientRectangle;
+            // Invoke the unmanaged DLL function here to create the RoundRectangleRegion
+            rg = CreateRoundRectRgn(rect.Left, rect.Top, rect.Right, rect.Bottom, 10, 10);
+            // Get the handle to the window. 
+            hdl = this.Handle.ToInt32();
+            // Set the Window Region to a a Rectangle with rounded corners
+            SetWindowRgn(hdl, rg, 1);
+            FlatAppearance.BorderSize = 0;
+            FlatStyle = FlatStyle.Flat;
+
+            BackColor = Color.Gray;
+
+            lNAME = new Label();
+            lNAME.Width = 50;
+            lNAME.Height = 20;
+            lNAME.BackColor = Color.Transparent;
+            lNAME.Location = new Point(90, 25);
+            lNAME.Font = f1;
+            lNAME.Click += this.OnLabelClick;
+            this.Controls.Add(lNAME);
+
+
+            lNAME2 = new Label();
+            lNAME2.Width = 50;
+            lNAME2.Height = 20;
+            lNAME2.BackColor = Color.Transparent;
+            lNAME2.Location = new Point(91, 45);
+            lNAME2.Font = f1;
+            lNAME2.Click += this.OnLabelClick;
+            this.Controls.Add(lNAME2);
+
+        }
+
+
+    }
+
+    public class UserButton : System.Windows.Forms.Button
+    {
+        int rg;
+        int hdl;
+        private _User _fUser;
+
+        // Import the CreateRoundRectRgn function from the GDI32.DLL 
+        // From the Unmanaged Code
+        [DllImport("GDI32.DLL", EntryPoint = "CreateRoundRectRgn")]
+        private static extern int CreateRoundRectRgn(int x1, int y1, int x2, int y2, int x3, int y3);
+
+        // Import the SetWindowRgn function from the user32.DLL
+        // From the Unmanaged Code
+        [DllImport("user32.DLL", EntryPoint = "SetWindowRgn")]
+        private static extern int SetWindowRgn(int hWnd, int hRgn, int bRedraw);
+
+        Font f1 = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+        Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+
+        private Image lImage;
+        private Label lNAME;
+        private Label lNAME2;
+
+
+
+        public _User fUser
+        {
+            get { return (_fUser); }
+            set
+            {
+                _fUser = value;
+                lNAME.Text = _fUser.NAME;
+                lNAME2.Text = _fUser.LOGIN_NAME;
+
+
+            }
+        }
+
+        protected void OnLabelClick(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
+
+
+
+
+        public UserButton()
         {
             Width = 150;
             Height = 75;

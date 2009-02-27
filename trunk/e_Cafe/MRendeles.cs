@@ -294,9 +294,24 @@ namespace e_Cafe
             tblRendeles.TableModel = _AktRendeles.getTableModel();
             tblRendeles.Font = DEFS.f2;
             tblRendeles.TableModel.RowHeight = 40;
-
-
         }
+
+        private void initRendelTablaSumNoDraw()
+        {
+            resetCounter();
+            //if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            //_AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
+            tblRendeles.ColumnModel = _AktRendeles.fColumnModelSum;
+
+            tblRendeles.HeaderRenderer = new GradientHeaderRenderer();
+
+
+            // feltöltés default értékkel
+            tblRendeles.TableModel = _AktRendeles.getTableModelSum();
+            tblRendeles.Font = DEFS.f2;
+            tblRendeles.TableModel.RowHeight = 40;
+        }
+
         private void tblRendeles_SelectionChanged(object sender, XPTable.Events.SelectionEventArgs e)
         {
 
@@ -376,6 +391,16 @@ namespace e_Cafe
 
                 initRendelTabla();
             }
+        }
+
+        private void rbOsszetett_CheckedChanged(object sender, EventArgs e)
+        {
+            initRendelTablaSumNoDraw();
+        }
+
+        private void rbReszletes_CheckedChanged(object sender, EventArgs e)
+        {
+            initRendelTablaNoDraw();
         }
 
 
