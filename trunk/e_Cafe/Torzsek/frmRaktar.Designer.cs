@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.eCAFEDataSetRAKTAR = new e_Cafe.ECAFEDataSetRAKTAR();
+            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
             this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rAKTARTableAdapter = new e_Cafe.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
+            this.rAKTARTableAdapter = new e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             this.rAKTARIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAKTARKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAKTARLEIRASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,9 +110,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
+        private e_Cafe.SQL.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
         private System.Windows.Forms.BindingSource rAKTARBindingSource;
-        private e_Cafe.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
+        private e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAKTARIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAKTARKODDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAKTARLEIRASDataGridViewTextBoxColumn;

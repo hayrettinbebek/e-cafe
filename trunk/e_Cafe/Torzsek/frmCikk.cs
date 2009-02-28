@@ -170,6 +170,11 @@ namespace e_Cafe.Torzsek
             }
         }
 
+        private void txtMegnevezes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

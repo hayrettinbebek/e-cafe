@@ -34,8 +34,8 @@
             this.hELYNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hELYVANDESIGNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.hELYBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetHELY = new e_Cafe.ECAFEDataSetHELY();
-            this.hELYTableAdapter = new e_Cafe.ECAFEDataSetHELYTableAdapters.HELYTableAdapter();
+            this.eCAFEDataSetHELY = new e_Cafe.SQL.ECAFEDataSetHELY();
+            this.hELYTableAdapter = new e_Cafe.SQL.ECAFEDataSetHELYTableAdapters.HELYTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hELYBindingSource)).BeginInit();
@@ -124,9 +124,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ECAFEDataSetHELY eCAFEDataSetHELY;
+        private e_Cafe.SQL.ECAFEDataSetHELY eCAFEDataSetHELY;
         private System.Windows.Forms.BindingSource hELYBindingSource;
-        private e_Cafe.ECAFEDataSetHELYTableAdapters.HELYTableAdapter hELYTableAdapter;
+        private e_Cafe.SQL.ECAFEDataSetHELYTableAdapters.HELYTableAdapter hELYTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn hELYIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hELYNEVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn hELYVANDESIGNDataGridViewTextBoxColumn;

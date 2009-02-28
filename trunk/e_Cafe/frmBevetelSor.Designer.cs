@@ -44,8 +44,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbRaktar = new System.Windows.Forms.ComboBox();
             this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetRAKTAR = new e_Cafe.ECAFEDataSetRAKTAR();
-            this.rAKTARTableAdapter = new e_Cafe.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
+            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
+            this.rAKTARTableAdapter = new e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
@@ -259,9 +259,9 @@
         private System.Windows.Forms.Label lblPenz;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbRaktar;
-        private ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
+        private e_Cafe.SQL.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
         private System.Windows.Forms.BindingSource rAKTARBindingSource;
-        private e_Cafe.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
+        private e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
         private System.Windows.Forms.Button button1;
     }
 }

@@ -39,8 +39,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.vevoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.NemSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel8 = new System.Windows.Forms.Panel();
@@ -73,7 +74,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pnlKeyb.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -173,6 +173,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.textBox3);
             this.panel11.Controls.Add(this.dateTimePicker1);
             this.panel11.Controls.Add(this.textBox10);
             this.panel11.Controls.Add(this.comboBox2);
@@ -196,13 +197,28 @@
             this.panel11.Controls.Add(this.label1);
             this.panel11.Controls.Add(this.label4);
             this.panel11.Controls.Add(this.shapeContainer2);
-            this.panel11.Controls.Add(this.textBox3);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 60);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(586, 392);
             this.panel11.TabIndex = 17;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vevoBindingSource, "SZULETESNAP", true));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 270);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2012, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(111, 20);
+            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.Value = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+            // 
+            // vevoBindingSource
+            // 
+            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
             // 
             // textBox10
             // 
@@ -212,10 +228,6 @@
             this.textBox10.Size = new System.Drawing.Size(100, 20);
             this.textBox10.TabIndex = 7;
             this.textBox10.Click += new System.EventHandler(this.txt_to_keyboard_Click);
-            // 
-            // vevoBindingSource
-            // 
-            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
             // 
             // comboBox2
             // 
@@ -532,18 +544,6 @@
             // dynComboBindingSource
             // 
             this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vevoBindingSource, "SZULETESNAP", true));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 270);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2012, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(111, 20);
-            this.dateTimePicker1.TabIndex = 15;
-            this.dateTimePicker1.Value = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
             // 
             // frmPartnerInsert
             // 

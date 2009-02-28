@@ -52,13 +52,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnPartnerek = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnLevelek = new System.Windows.Forms.Button();
+            this.btnReceptek = new System.Windows.Forms.Button();
+            this.btnFoglalas = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnKilep = new System.Windows.Forms.Button();
+            this.btnKijelent = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -193,13 +193,13 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnPartnerek);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnLevelek);
+            this.panel1.Controls.Add(this.btnReceptek);
+            this.panel1.Controls.Add(this.btnFoglalas);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnKilep);
+            this.panel1.Controls.Add(this.btnKijelent);
+            this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 470);
@@ -307,44 +307,47 @@
             this.textBox1.TabIndex = 8;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
-            // button5
+            // btnLevelek
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(319, 14);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 75);
-            this.button5.TabIndex = 7;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnLevelek.BackColor = System.Drawing.Color.Transparent;
+            this.btnLevelek.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLevelek.BackgroundImage")));
+            this.btnLevelek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLevelek.FlatAppearance.BorderSize = 0;
+            this.btnLevelek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLevelek.Location = new System.Drawing.Point(319, 14);
+            this.btnLevelek.Name = "btnLevelek";
+            this.btnLevelek.Size = new System.Drawing.Size(70, 75);
+            this.btnLevelek.TabIndex = 7;
+            this.btnLevelek.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnReceptek
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(420, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 75);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnReceptek.BackColor = System.Drawing.Color.Transparent;
+            this.btnReceptek.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReceptek.BackgroundImage")));
+            this.btnReceptek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReceptek.FlatAppearance.BorderSize = 0;
+            this.btnReceptek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceptek.Location = new System.Drawing.Point(420, 14);
+            this.btnReceptek.Name = "btnReceptek";
+            this.btnReceptek.Size = new System.Drawing.Size(70, 75);
+            this.btnReceptek.TabIndex = 7;
+            this.btnReceptek.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnFoglalas
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(505, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 75);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnFoglalas.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnFoglalas.BackColor = System.Drawing.Color.Transparent;
+            this.btnFoglalas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFoglalas.BackgroundImage")));
+            this.btnFoglalas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFoglalas.FlatAppearance.BorderSize = 0;
+            this.btnFoglalas.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnFoglalas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoglalas.Location = new System.Drawing.Point(505, 14);
+            this.btnFoglalas.Name = "btnFoglalas";
+            this.btnFoglalas.Size = new System.Drawing.Size(70, 75);
+            this.btnFoglalas.TabIndex = 7;
+            this.btnFoglalas.UseVisualStyleBackColor = false;
+            this.btnFoglalas.CheckedChanged += new System.EventHandler(this.btnFoglalas_CheckedChanged);
             // 
             // dateTimePicker1
             // 
@@ -355,51 +358,51 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(174, 20);
             this.dateTimePicker1.TabIndex = 6;
             // 
-            // button4
+            // btnKilep
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(1000, 14);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 75);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnKilep.BackColor = System.Drawing.Color.Transparent;
+            this.btnKilep.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKilep.BackgroundImage")));
+            this.btnKilep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKilep.FlatAppearance.BorderSize = 0;
+            this.btnKilep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKilep.Location = new System.Drawing.Point(1000, 14);
+            this.btnKilep.Name = "btnKilep";
+            this.btnKilep.Size = new System.Drawing.Size(70, 75);
+            this.btnKilep.TabIndex = 4;
+            this.btnKilep.UseVisualStyleBackColor = false;
+            this.btnKilep.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button6
+            // btnKijelent
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(838, 14);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 75);
-            this.button6.TabIndex = 1;
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnKijelent.BackColor = System.Drawing.Color.Transparent;
+            this.btnKijelent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKijelent.BackgroundImage")));
+            this.btnKijelent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKijelent.FlatAppearance.BorderSize = 0;
+            this.btnKijelent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKijelent.Location = new System.Drawing.Point(838, 14);
+            this.btnKijelent.Name = "btnKijelent";
+            this.btnKijelent.Size = new System.Drawing.Size(70, 75);
+            this.btnKijelent.TabIndex = 1;
+            this.btnKijelent.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnKijelent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnKijelent.UseVisualStyleBackColor = false;
+            this.btnKijelent.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button2
+            // btnAdmin
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(924, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 75);
-            this.button2.TabIndex = 1;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
+            this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Location = new System.Drawing.Point(924, 14);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(70, 75);
+            this.btnAdmin.TabIndex = 1;
+            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -441,18 +444,18 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Timer tmrTime;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdmin;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button lblTime;
 
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnKilep;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnlHelyek;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton btnFoglalas;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPartnerek;
         private System.Windows.Forms.Label label3;
@@ -460,12 +463,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReceptek;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLevelek;
         public System.Windows.Forms.ImageList btmImgList;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnKijelent;
         private System.Windows.Forms.Label label8;
         
     }

@@ -39,8 +39,8 @@ namespace e_Cafe.Torzsek
             this.aFANEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aFAERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aFABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetAFA = new e_Cafe.ECAFEDataSetAFA();
-            this.aFATableAdapter = new e_Cafe.ECAFEDataSetAFATableAdapters.AFATableAdapter();
+            this.eCAFEDataSetAFA = new e_Cafe.SQL.ECAFEDataSetAFA();
+            this.aFATableAdapter = new e_Cafe.SQL.ECAFEDataSetAFATableAdapters.AFATableAdapter();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).BeginInit();
@@ -140,9 +140,9 @@ namespace e_Cafe.Torzsek
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ECAFEDataSetAFA eCAFEDataSetAFA;
+        private e_Cafe.SQL.ECAFEDataSetAFA eCAFEDataSetAFA;
         private System.Windows.Forms.BindingSource aFABindingSource;
-        private ECAFEDataSetAFATableAdapters.AFATableAdapter aFATableAdapter;
+        private e_Cafe.SQL.ECAFEDataSetAFATableAdapters.AFATableAdapter aFATableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn aFAKODDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aFANEVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aFAERTEKDataGridViewTextBoxColumn;

@@ -114,16 +114,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminTools.cs">
+    <Compile Include="Admin\AdminTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminTools.Designer.cs">
+    <Compile Include="Admin\AdminTools.Designer.cs">
       <DependentUpon>AdminTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bevetelezes.cs">
+    <Compile Include="dsFOGLALAS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrontOffice\frmFoglalas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bevetelezes.Designer.cs">
+    <Compile Include="FrontOffice\frmFoglalas.Designer.cs">
+      <DependentUpon>frmFoglalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet\Bevetelezes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\Bevetelezes.Designer.cs">
       <DependentUpon>Bevetelezes.cs</DependentUpon>
     </Compile>
     <Compile Include="CikkSelector.cs">
@@ -151,58 +162,58 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReceptText.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ECAFEDataSet.cs">
+    <Compile Include="SQL\ECAFEDataSet.cs">
       <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ECAFEDataSet.Designer.cs">
+    <Compile Include="SQL\ECAFEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ECAFEDataSetAFA.cs">
+    <Compile Include="SQL\ECAFEDataSetAFA.cs">
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ECAFEDataSetAFA.Designer.cs">
+    <Compile Include="SQL\ECAFEDataSetAFA.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ECAFEDataSetBEVETELEZES.cs">
+    <Compile Include="SQL\ECAFEDataSetBEVETELEZES.cs">
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ECAFEDataSetBEVETELEZES.Designer.cs">
+    <Compile Include="SQL\ECAFEDataSetBEVETELEZES.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ECAFEDataSetCIKK.cs">
+    <Compile Include="SQL\ECAFEDataSetCIKK.cs">
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ECAFEDataSetCIKK.Designer.cs">
+    <Compile Include="SQL\ECAFEDataSetCIKK.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ECAFEDataSetHELY.Designer.cs">
+    <Compile Include="SQL\ECAFEDataSetHELY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ECAFEDataSetMEGYS1.Designer.cs">
+    <Compile Include="SQL\ECAFEDataSetMEGYS1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetMEGYS1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ECAFEDataSetOTHER_FILTER.Designer.cs">
+    <Compile Include="SQL\ECAFEDataSetOTHER_FILTER.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ECAFEDataSetRAKTAR.Designer.cs">
+    <Compile Include="SQL\ECAFEDataSetRAKTAR.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
@@ -357,10 +368,10 @@
     <Compile Include="Torzsek\Cikkek.Designer.cs">
       <DependentUpon>Cikkek.cs</DependentUpon>
     </Compile>
-    <Compile Include="AsztalSetup.cs">
+    <Compile Include="Admin\AsztalSetup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AsztalSetup.Designer.cs">
+    <Compile Include="Admin\AsztalSetup.Designer.cs">
       <DependentUpon>AsztalSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ChooseKeszletek.cs">
@@ -383,11 +394,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminTools.resx">
+    <EmbeddedResource Include="Admin\AdminTools.resx">
       <DependentUpon>AdminTools.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bevetelezes.resx">
+    <EmbeddedResource Include="FrontOffice\frmFoglalas.resx">
+      <DependentUpon>frmFoglalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\Bevetelezes.resx">
       <DependentUpon>Bevetelezes.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -485,7 +499,7 @@
       <DependentUpon>Asztalok.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AsztalSetup.resx">
+    <EmbeddedResource Include="Admin\AsztalSetup.resx">
       <DependentUpon>AsztalSetup.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -566,70 +580,70 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="ECAFEDataSet.xsc">
+    <None Include="SQL\ECAFEDataSet.xsc">
       <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSet.xsd">
+    <None Include="SQL\ECAFEDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ECAFEDataSet.xss">
+    <None Include="SQL\ECAFEDataSet.xss">
       <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetAFA.xsc">
+    <None Include="SQL\ECAFEDataSetAFA.xsc">
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetAFA.xsd">
+    <None Include="SQL\ECAFEDataSetAFA.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetAFA.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ECAFEDataSetAFA.xss">
+    <None Include="SQL\ECAFEDataSetAFA.xss">
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetCIKK.xsc">
+    <None Include="SQL\ECAFEDataSetCIKK.xsc">
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetCIKK.xsd">
+    <None Include="SQL\ECAFEDataSetCIKK.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetCIKK.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ECAFEDataSetCIKK.xss">
+    <None Include="SQL\ECAFEDataSetCIKK.xss">
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetHELY.xsc">
+    <None Include="SQL\ECAFEDataSetHELY.xsc">
       <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetHELY.xsd">
+    <None Include="SQL\ECAFEDataSetHELY.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetHELY.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ECAFEDataSetHELY.xss">
+    <None Include="SQL\ECAFEDataSetHELY.xss">
       <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetOTHER_FILTER.xsc">
+    <None Include="SQL\ECAFEDataSetOTHER_FILTER.xsc">
       <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetOTHER_FILTER.xsd">
+    <None Include="SQL\ECAFEDataSetOTHER_FILTER.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetOTHER_FILTER.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ECAFEDataSetOTHER_FILTER.xss">
+    <None Include="SQL\ECAFEDataSetOTHER_FILTER.xss">
       <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetRAKTAR.xsc">
+    <None Include="SQL\ECAFEDataSetRAKTAR.xsc">
       <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetRAKTAR.xsd">
+    <None Include="SQL\ECAFEDataSetRAKTAR.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetRAKTAR.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ECAFEDataSetRAKTAR.xss">
+    <None Include="SQL\ECAFEDataSetRAKTAR.xss">
       <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
     </None>
     <None Include="e_Cafe_TemporaryKey.pfx" />
@@ -682,6 +696,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="dsFOGLALAS.xsc">
+      <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
+    </None>
+    <None Include="dsFOGLALAS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFOGLALAS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsFOGLALAS.xss">
+      <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
+    </None>
     <None Include="ReceptMentes.xsc">
       <DependentUpon>ReceptMentes.xsd</DependentUpon>
     </None>
@@ -715,26 +740,26 @@
     <None Include="SQL\dsReceptText.xss">
       <DependentUpon>dsReceptText.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetBEVETELEZES.xsc">
+    <None Include="SQL\ECAFEDataSetBEVETELEZES.xsc">
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetBEVETELEZES.xsd">
+    <None Include="SQL\ECAFEDataSetBEVETELEZES.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetBEVETELEZES.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ECAFEDataSetBEVETELEZES.xss">
+    <None Include="SQL\ECAFEDataSetBEVETELEZES.xss">
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetMEGYS1.xsc">
+    <None Include="SQL\ECAFEDataSetMEGYS1.xsc">
       <DependentUpon>ECAFEDataSetMEGYS1.xsd</DependentUpon>
     </None>
-    <None Include="ECAFEDataSetMEGYS1.xsd">
+    <None Include="SQL\ECAFEDataSetMEGYS1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetMEGYS1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ECAFEDataSetMEGYS1.xss">
+    <None Include="SQL\ECAFEDataSetMEGYS1.xss">
       <DependentUpon>ECAFEDataSetMEGYS1.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.CikkKeszlet.datasource" />
