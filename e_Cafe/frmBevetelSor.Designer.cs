@@ -43,12 +43,12 @@
             this.lblPenz = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbRaktar = new System.Windows.Forms.ComboBox();
-            this.eCAFEDataSetRAKTAR = new e_Cafe.ECAFEDataSetRAKTAR();
             this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSetRAKTAR = new e_Cafe.ECAFEDataSetRAKTAR();
             this.rAKTARTableAdapter = new e_Cafe.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCikk
@@ -185,15 +185,15 @@
             this.cmbRaktar.TabIndex = 5;
             this.cmbRaktar.ValueMember = "RAKTAR_ID";
             // 
-            // eCAFEDataSetRAKTAR
-            // 
-            this.eCAFEDataSetRAKTAR.DataSetName = "ECAFEDataSetRAKTAR";
-            this.eCAFEDataSetRAKTAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // rAKTARBindingSource
             // 
             this.rAKTARBindingSource.DataMember = "RAKTAR";
             this.rAKTARBindingSource.DataSource = this.eCAFEDataSetRAKTAR;
+            // 
+            // eCAFEDataSetRAKTAR
+            // 
+            this.eCAFEDataSetRAKTAR.DataSetName = "ECAFEDataSetRAKTAR";
+            this.eCAFEDataSetRAKTAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rAKTARTableAdapter
             // 
@@ -233,10 +233,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCikk);
             this.Name = "frmBevetelSor";
-            this.Text = "frmBevetelSor";
+            this.ShowInTaskbar = false;
+            this.Text = "Bevételezés tétel hozzáadaása";
             this.Load += new System.EventHandler(this.frmBevetelSor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
