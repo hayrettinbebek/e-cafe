@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace e_Cafe {
+namespace e_Cafe.SQL {
     
     
     /// <summary>
@@ -21,16 +21,16 @@ namespace e_Cafe {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ECAFEDataSetHELY")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ECAFEDataSetAFA")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ECAFEDataSetHELY : global::System.Data.DataSet {
+    public partial class ECAFEDataSetAFA : global::System.Data.DataSet {
         
-        private HELYDataTable tableHELY;
+        private AFADataTable tableAFA;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public ECAFEDataSetHELY() {
+        public ECAFEDataSetAFA() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -40,7 +40,7 @@ namespace e_Cafe {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected ECAFEDataSetHELY(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ECAFEDataSetAFA(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -53,8 +53,8 @@ namespace e_Cafe {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["HELY"] != null)) {
-                    base.Tables.Add(new HELYDataTable(ds.Tables["HELY"]));
+                if ((ds.Tables["AFA"] != null)) {
+                    base.Tables.Add(new AFADataTable(ds.Tables["AFA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -77,9 +77,9 @@ namespace e_Cafe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public HELYDataTable HELY {
+        public AFADataTable AFA {
             get {
-                return this.tableHELY;
+                return this.tableAFA;
             }
         }
         
@@ -120,7 +120,7 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override global::System.Data.DataSet Clone() {
-            ECAFEDataSetHELY cln = ((ECAFEDataSetHELY)(base.Clone()));
+            ECAFEDataSetAFA cln = ((ECAFEDataSetAFA)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -142,8 +142,8 @@ namespace e_Cafe {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["HELY"] != null)) {
-                    base.Tables.Add(new HELYDataTable(ds.Tables["HELY"]));
+                if ((ds.Tables["AFA"] != null)) {
+                    base.Tables.Add(new AFADataTable(ds.Tables["AFA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -175,27 +175,27 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         internal void InitVars(bool initTable) {
-            this.tableHELY = ((HELYDataTable)(base.Tables["HELY"]));
+            this.tableAFA = ((AFADataTable)(base.Tables["AFA"]));
             if ((initTable == true)) {
-                if ((this.tableHELY != null)) {
-                    this.tableHELY.InitVars();
+                if ((this.tableAFA != null)) {
+                    this.tableAFA.InitVars();
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitClass() {
-            this.DataSetName = "ECAFEDataSetHELY";
+            this.DataSetName = "ECAFEDataSetAFA";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ECAFEDataSetHELY.xsd";
+            this.Namespace = "http://tempuri.org/ECAFEDataSetAFA.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableHELY = new HELYDataTable();
-            base.Tables.Add(this.tableHELY);
+            this.tableAFA = new AFADataTable();
+            base.Tables.Add(this.tableAFA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeHELY() {
+        private bool ShouldSerializeAFA() {
             return false;
         }
         
@@ -208,7 +208,7 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ECAFEDataSetHELY ds = new ECAFEDataSetHELY();
+            ECAFEDataSetAFA ds = new ECAFEDataSetAFA();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -252,7 +252,7 @@ namespace e_Cafe {
             return type;
         }
         
-        public delegate void HELYRowChangeEventHandler(object sender, HELYRowChangeEvent e);
+        public delegate void AFARowChangeEventHandler(object sender, AFARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -260,24 +260,24 @@ namespace e_Cafe {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class HELYDataTable : global::System.Data.TypedTableBase<HELYRow> {
+        public partial class AFADataTable : global::System.Data.TypedTableBase<AFARow> {
             
-            private global::System.Data.DataColumn columnHELY_ID;
+            private global::System.Data.DataColumn columnAFA_KOD;
             
-            private global::System.Data.DataColumn columnHELY_NEV;
+            private global::System.Data.DataColumn columnAFA_NEV;
             
-            private global::System.Data.DataColumn columnHELY_VAN_DESIGN;
+            private global::System.Data.DataColumn columnAFA_ERTEK;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public HELYDataTable() {
-                this.TableName = "HELY";
+            public AFADataTable() {
+                this.TableName = "AFA";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal HELYDataTable(global::System.Data.DataTable table) {
+            internal AFADataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -293,29 +293,29 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected HELYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AFADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn HELY_IDColumn {
+            public global::System.Data.DataColumn AFA_KODColumn {
                 get {
-                    return this.columnHELY_ID;
+                    return this.columnAFA_KOD;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn HELY_NEVColumn {
+            public global::System.Data.DataColumn AFA_NEVColumn {
                 get {
-                    return this.columnHELY_NEV;
+                    return this.columnAFA_NEV;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn HELY_VAN_DESIGNColumn {
+            public global::System.Data.DataColumn AFA_ERTEKColumn {
                 get {
-                    return this.columnHELY_VAN_DESIGN;
+                    return this.columnAFA_ERTEK;
                 }
             }
             
@@ -328,131 +328,132 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public HELYRow this[int index] {
+            public AFARow this[int index] {
                 get {
-                    return ((HELYRow)(this.Rows[index]));
+                    return ((AFARow)(this.Rows[index]));
                 }
             }
             
-            public event HELYRowChangeEventHandler HELYRowChanging;
+            public event AFARowChangeEventHandler AFARowChanging;
             
-            public event HELYRowChangeEventHandler HELYRowChanged;
+            public event AFARowChangeEventHandler AFARowChanged;
             
-            public event HELYRowChangeEventHandler HELYRowDeleting;
+            public event AFARowChangeEventHandler AFARowDeleting;
             
-            public event HELYRowChangeEventHandler HELYRowDeleted;
+            public event AFARowChangeEventHandler AFARowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddHELYRow(HELYRow row) {
+            public void AddAFARow(AFARow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public HELYRow AddHELYRow(string HELY_NEV, int HELY_VAN_DESIGN) {
-                HELYRow rowHELYRow = ((HELYRow)(this.NewRow()));
+            public AFARow AddAFARow(string AFA_KOD, string AFA_NEV, double AFA_ERTEK) {
+                AFARow rowAFARow = ((AFARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        HELY_NEV,
-                        HELY_VAN_DESIGN};
-                rowHELYRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowHELYRow);
-                return rowHELYRow;
+                        AFA_KOD,
+                        AFA_NEV,
+                        AFA_ERTEK};
+                rowAFARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAFARow);
+                return rowAFARow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public HELYRow FindByHELY_ID(int HELY_ID) {
-                return ((HELYRow)(this.Rows.Find(new object[] {
-                            HELY_ID})));
+            public AFARow FindByAFA_KOD(string AFA_KOD) {
+                return ((AFARow)(this.Rows.Find(new object[] {
+                            AFA_KOD})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public override global::System.Data.DataTable Clone() {
-                HELYDataTable cln = ((HELYDataTable)(base.Clone()));
+                AFADataTable cln = ((AFADataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new HELYDataTable();
+                return new AFADataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
-                this.columnHELY_ID = base.Columns["HELY_ID"];
-                this.columnHELY_NEV = base.Columns["HELY_NEV"];
-                this.columnHELY_VAN_DESIGN = base.Columns["HELY_VAN_DESIGN"];
+                this.columnAFA_KOD = base.Columns["AFA_KOD"];
+                this.columnAFA_NEV = base.Columns["AFA_NEV"];
+                this.columnAFA_ERTEK = base.Columns["AFA_ERTEK"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnHELY_ID = new global::System.Data.DataColumn("HELY_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHELY_ID);
-                this.columnHELY_NEV = new global::System.Data.DataColumn("HELY_NEV", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHELY_NEV);
-                this.columnHELY_VAN_DESIGN = new global::System.Data.DataColumn("HELY_VAN_DESIGN", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHELY_VAN_DESIGN);
+                this.columnAFA_KOD = new global::System.Data.DataColumn("AFA_KOD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAFA_KOD);
+                this.columnAFA_NEV = new global::System.Data.DataColumn("AFA_NEV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAFA_NEV);
+                this.columnAFA_ERTEK = new global::System.Data.DataColumn("AFA_ERTEK", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAFA_ERTEK);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnHELY_ID}, true));
-                this.columnHELY_ID.AutoIncrement = true;
-                this.columnHELY_ID.AutoIncrementSeed = -1;
-                this.columnHELY_ID.AutoIncrementStep = -1;
-                this.columnHELY_ID.AllowDBNull = false;
-                this.columnHELY_ID.ReadOnly = true;
-                this.columnHELY_ID.Unique = true;
-                this.columnHELY_NEV.MaxLength = 50;
-                this.columnHELY_VAN_DESIGN.AllowDBNull = false;
+                                this.columnAFA_KOD}, true));
+                this.columnAFA_KOD.AllowDBNull = false;
+                this.columnAFA_KOD.Unique = true;
+                this.columnAFA_KOD.Caption = "Áfa kód";
+                this.columnAFA_KOD.MaxLength = 2;
+                this.columnAFA_NEV.AllowDBNull = false;
+                this.columnAFA_NEV.Caption = "Megnevezés";
+                this.columnAFA_NEV.MaxLength = 100;
+                this.columnAFA_ERTEK.AllowDBNull = false;
+                this.columnAFA_ERTEK.Caption = "Áfa %";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public HELYRow NewHELYRow() {
-                return ((HELYRow)(this.NewRow()));
+            public AFARow NewAFARow() {
+                return ((AFARow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new HELYRow(builder);
+                return new AFARow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Type GetRowType() {
-                return typeof(HELYRow);
+                return typeof(AFARow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.HELYRowChanged != null)) {
-                    this.HELYRowChanged(this, new HELYRowChangeEvent(((HELYRow)(e.Row)), e.Action));
+                if ((this.AFARowChanged != null)) {
+                    this.AFARowChanged(this, new AFARowChangeEvent(((AFARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.HELYRowChanging != null)) {
-                    this.HELYRowChanging(this, new HELYRowChangeEvent(((HELYRow)(e.Row)), e.Action));
+                if ((this.AFARowChanging != null)) {
+                    this.AFARowChanging(this, new AFARowChangeEvent(((AFARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.HELYRowDeleted != null)) {
-                    this.HELYRowDeleted(this, new HELYRowChangeEvent(((HELYRow)(e.Row)), e.Action));
+                if ((this.AFARowDeleted != null)) {
+                    this.AFARowDeleted(this, new AFARowChangeEvent(((AFARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.HELYRowDeleting != null)) {
-                    this.HELYRowDeleting(this, new HELYRowChangeEvent(((HELYRow)(e.Row)), e.Action));
+                if ((this.AFARowDeleting != null)) {
+                    this.AFARowDeleting(this, new AFARowChangeEvent(((AFARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveHELYRow(HELYRow row) {
+            public void RemoveAFARow(AFARow row) {
                 this.Rows.Remove(row);
             }
             
@@ -460,7 +461,7 @@ namespace e_Cafe {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ECAFEDataSetHELY ds = new ECAFEDataSetHELY();
+                ECAFEDataSetAFA ds = new ECAFEDataSetAFA();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -478,7 +479,7 @@ namespace e_Cafe {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "HELYDataTable";
+                attribute2.FixedValue = "AFADataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -523,59 +524,44 @@ namespace e_Cafe {
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class HELYRow : global::System.Data.DataRow {
+        public partial class AFARow : global::System.Data.DataRow {
             
-            private HELYDataTable tableHELY;
+            private AFADataTable tableAFA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal HELYRow(global::System.Data.DataRowBuilder rb) : 
+            internal AFARow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableHELY = ((HELYDataTable)(this.Table));
+                this.tableAFA = ((AFADataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int HELY_ID {
+            public string AFA_KOD {
                 get {
-                    return ((int)(this[this.tableHELY.HELY_IDColumn]));
+                    return ((string)(this[this.tableAFA.AFA_KODColumn]));
                 }
                 set {
-                    this[this.tableHELY.HELY_IDColumn] = value;
+                    this[this.tableAFA.AFA_KODColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string HELY_NEV {
+            public string AFA_NEV {
                 get {
-                    try {
-                        return ((string)(this[this.tableHELY.HELY_NEVColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HELY_NEV\' in table \'HELY\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableAFA.AFA_NEVColumn]));
                 }
                 set {
-                    this[this.tableHELY.HELY_NEVColumn] = value;
+                    this[this.tableAFA.AFA_NEVColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int HELY_VAN_DESIGN {
+            public double AFA_ERTEK {
                 get {
-                    return ((int)(this[this.tableHELY.HELY_VAN_DESIGNColumn]));
+                    return ((double)(this[this.tableAFA.AFA_ERTEKColumn]));
                 }
                 set {
-                    this[this.tableHELY.HELY_VAN_DESIGNColumn] = value;
+                    this[this.tableAFA.AFA_ERTEKColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsHELY_NEVNull() {
-                return this.IsNull(this.tableHELY.HELY_NEVColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetHELY_NEVNull() {
-                this[this.tableHELY.HELY_NEVColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -583,20 +569,20 @@ namespace e_Cafe {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class HELYRowChangeEvent : global::System.EventArgs {
+        public class AFARowChangeEvent : global::System.EventArgs {
             
-            private HELYRow eventRow;
+            private AFARow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public HELYRowChangeEvent(HELYRow row, global::System.Data.DataRowAction action) {
+            public AFARowChangeEvent(AFARow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public HELYRow Row {
+            public AFARow Row {
                 get {
                     return this.eventRow;
                 }
@@ -611,7 +597,7 @@ namespace e_Cafe {
         }
     }
 }
-namespace e_Cafe.ECAFEDataSetHELYTableAdapters {
+namespace e_Cafe.SQL.ECAFEDataSetAFATableAdapters {
     
     
     /// <summary>
@@ -624,7 +610,7 @@ namespace e_Cafe.ECAFEDataSetHELYTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class HELYTableAdapter : global::System.ComponentModel.Component {
+    public partial class AFATableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -637,7 +623,7 @@ namespace e_Cafe.ECAFEDataSetHELYTableAdapters {
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public HELYTableAdapter() {
+        public AFATableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -728,41 +714,39 @@ namespace e_Cafe.ECAFEDataSetHELYTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "HELY";
-            tableMapping.ColumnMappings.Add("HELY_ID", "HELY_ID");
-            tableMapping.ColumnMappings.Add("HELY_NEV", "HELY_NEV");
-            tableMapping.ColumnMappings.Add("HELY_VAN_DESIGN", "HELY_VAN_DESIGN");
+            tableMapping.DataSetTable = "AFA";
+            tableMapping.ColumnMappings.Add("AFA_KOD", "AFA_KOD");
+            tableMapping.ColumnMappings.Add("AFA_NEV", "AFA_NEV");
+            tableMapping.ColumnMappings.Add("AFA_ERTEK", "AFA_ERTEK");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[HELY] WHERE (([HELY_ID] = @Original_HELY_ID) AND ((@IsNull_HEL" +
-                "Y_NEV = 1 AND [HELY_NEV] IS NULL) OR ([HELY_NEV] = @Original_HELY_NEV)) AND ([HE" +
-                "LY_VAN_DESIGN] = @Original_HELY_VAN_DESIGN))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[AFA] WHERE (([AFA_KOD] = @Original_AFA_KOD) AND ([AFA_NEV] = @" +
+                "Original_AFA_NEV) AND ([AFA_ERTEK] = @Original_AFA_ERTEK))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HELY_NEV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_VAN_DESIGN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_VAN_DESIGN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AFA_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_KOD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AFA_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AFA_ERTEK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_ERTEK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[HELY] ([HELY_NEV], [HELY_VAN_DESIGN]) VALUES (@HELY_NEV, @HELY" +
-                "_VAN_DESIGN);\r\nSELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_I" +
-                "D = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AFA] ([AFA_KOD], [AFA_NEV], [AFA_ERTEK]) VALUES (@AFA_KOD, @AF" +
+                "A_NEV, @AFA_ERTEK);\r\nSELECT AFA_KOD, AFA_NEV, AFA_ERTEK FROM AFA WHERE (AFA_KOD " +
+                "= @AFA_KOD)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_VAN_DESIGN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_VAN_DESIGN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFA_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_KOD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFA_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFA_ERTEK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_ERTEK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[HELY] SET [HELY_NEV] = @HELY_NEV, [HELY_VAN_DESIGN] = @HELY_VAN_DESIGN WHERE (([HELY_ID] = @Original_HELY_ID) AND ((@IsNull_HELY_NEV = 1 AND [HELY_NEV] IS NULL) OR ([HELY_NEV] = @Original_HELY_NEV)) AND ([HELY_VAN_DESIGN] = @Original_HELY_VAN_DESIGN));
-SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AFA] SET [AFA_KOD] = @AFA_KOD, [AFA_NEV] = @AFA_NEV, [AFA_ERTEK] = @AFA_ERTEK WHERE (([AFA_KOD] = @Original_AFA_KOD) AND ([AFA_NEV] = @Original_AFA_NEV) AND ([AFA_ERTEK] = @Original_AFA_ERTEK));
+SELECT AFA_KOD, AFA_NEV, AFA_ERTEK FROM AFA WHERE (AFA_KOD = @AFA_KOD)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_VAN_DESIGN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_VAN_DESIGN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HELY_NEV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_VAN_DESIGN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_VAN_DESIGN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFA_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_KOD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFA_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFA_ERTEK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_ERTEK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AFA_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_KOD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AFA_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AFA_ERTEK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_ERTEK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -776,14 +760,14 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM dbo.HELY";
+            this._commandCollection[0].CommandText = "SELECT AFA_KOD, AFA_NEV, AFA_ERTEK FROM dbo.AFA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ECAFEDataSetHELY.HELYDataTable dataTable) {
+        public virtual int Fill(ECAFEDataSetAFA.AFADataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -795,23 +779,23 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ECAFEDataSetHELY.HELYDataTable GetData() {
+        public virtual ECAFEDataSetAFA.AFADataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ECAFEDataSetHELY.HELYDataTable dataTable = new ECAFEDataSetHELY.HELYDataTable();
+            ECAFEDataSetAFA.AFADataTable dataTable = new ECAFEDataSetAFA.AFADataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ECAFEDataSetHELY.HELYDataTable dataTable) {
+        public virtual int Update(ECAFEDataSetAFA.AFADataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ECAFEDataSetHELY dataSet) {
-            return this.Adapter.Update(dataSet, "HELY");
+        public virtual int Update(ECAFEDataSetAFA dataSet) {
+            return this.Adapter.Update(dataSet, "AFA");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -830,17 +814,20 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_HELY_ID));
-            if ((Original_HELY_NEV == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+        public virtual int Delete(string Original_AFA_KOD, string Original_AFA_NEV, double Original_AFA_ERTEK) {
+            if ((Original_AFA_KOD == null)) {
+                throw new global::System.ArgumentNullException("Original_AFA_KOD");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_HELY_NEV));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_AFA_KOD));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_HELY_VAN_DESIGN));
+            if ((Original_AFA_NEV == null)) {
+                throw new global::System.ArgumentNullException("Original_AFA_NEV");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_AFA_NEV));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_AFA_ERTEK));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -860,14 +847,20 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string HELY_NEV, int HELY_VAN_DESIGN) {
-            if ((HELY_NEV == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(string AFA_KOD, string AFA_NEV, double AFA_ERTEK) {
+            if ((AFA_KOD == null)) {
+                throw new global::System.ArgumentNullException("AFA_KOD");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(HELY_NEV));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(AFA_KOD));
             }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(HELY_VAN_DESIGN));
+            if ((AFA_NEV == null)) {
+                throw new global::System.ArgumentNullException("AFA_NEV");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(AFA_NEV));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(AFA_ERTEK));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -887,25 +880,33 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string HELY_NEV, int HELY_VAN_DESIGN, int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN, int HELY_ID) {
-            if ((HELY_NEV == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Update(string AFA_KOD, string AFA_NEV, double AFA_ERTEK, string Original_AFA_KOD, string Original_AFA_NEV, double Original_AFA_ERTEK) {
+            if ((AFA_KOD == null)) {
+                throw new global::System.ArgumentNullException("AFA_KOD");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(HELY_NEV));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(AFA_KOD));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(HELY_VAN_DESIGN));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_HELY_ID));
-            if ((Original_HELY_NEV == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            if ((AFA_NEV == null)) {
+                throw new global::System.ArgumentNullException("AFA_NEV");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_HELY_NEV));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(AFA_NEV));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_HELY_VAN_DESIGN));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(HELY_ID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(AFA_ERTEK));
+            if ((Original_AFA_KOD == null)) {
+                throw new global::System.ArgumentNullException("Original_AFA_KOD");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_AFA_KOD));
+            }
+            if ((Original_AFA_NEV == null)) {
+                throw new global::System.ArgumentNullException("Original_AFA_NEV");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_AFA_NEV));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Original_AFA_ERTEK));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -925,8 +926,8 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string HELY_NEV, int HELY_VAN_DESIGN, int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN) {
-            return this.Update(HELY_NEV, HELY_VAN_DESIGN, Original_HELY_ID, Original_HELY_NEV, Original_HELY_VAN_DESIGN, Original_HELY_ID);
+        public virtual int Update(string AFA_NEV, double AFA_ERTEK, string Original_AFA_KOD, string Original_AFA_NEV, double Original_AFA_ERTEK) {
+            return this.Update(Original_AFA_KOD, AFA_NEV, AFA_ERTEK, Original_AFA_KOD, Original_AFA_NEV, Original_AFA_ERTEK);
         }
     }
     
@@ -943,7 +944,7 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         
         private UpdateOrderOption _updateOrder;
         
-        private HELYTableAdapter _hELYTableAdapter;
+        private AFATableAdapter _aFATableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -963,12 +964,12 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
             "", "System.Drawing.Design.UITypeEditor")]
-        public HELYTableAdapter HELYTableAdapter {
+        public AFATableAdapter AFATableAdapter {
             get {
-                return this._hELYTableAdapter;
+                return this._aFATableAdapter;
             }
             set {
-                this._hELYTableAdapter = value;
+                this._aFATableAdapter = value;
             }
         }
         
@@ -989,9 +990,9 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._hELYTableAdapter != null) 
-                            && (this._hELYTableAdapter.Connection != null))) {
-                    return this._hELYTableAdapter.Connection;
+                if (((this._aFATableAdapter != null) 
+                            && (this._aFATableAdapter.Connection != null))) {
+                    return this._aFATableAdapter.Connection;
                 }
                 return null;
             }
@@ -1005,7 +1006,7 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._hELYTableAdapter != null)) {
+                if ((this._aFATableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1016,14 +1017,14 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         ///Update rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateUpdatedRows(ECAFEDataSetHELY dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ECAFEDataSetAFA dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._hELYTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.HELY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._aFATableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.AFA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._hELYTableAdapter.Update(updatedRows));
+                    result = (result + this._aFATableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1034,13 +1035,13 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         ///Insert rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateInsertedRows(ECAFEDataSetHELY dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ECAFEDataSetAFA dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._hELYTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.HELY.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._aFATableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.AFA.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._hELYTableAdapter.Update(addedRows));
+                    result = (result + this._aFATableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1051,13 +1052,13 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         ///Delete rows in bottom-up order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateDeletedRows(ECAFEDataSetHELY dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ECAFEDataSetAFA dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._hELYTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.HELY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._aFATableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.AFA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._hELYTableAdapter.Update(deletedRows));
+                    result = (result + this._aFATableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1091,15 +1092,15 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         ///Update all changes to the dataset.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public virtual int UpdateAll(ECAFEDataSetHELY dataSet) {
+        public virtual int UpdateAll(ECAFEDataSetAFA dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._hELYTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._hELYTableAdapter.Connection) == false))) {
+            if (((this._aFATableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._aFATableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1135,13 +1136,13 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._hELYTableAdapter != null)) {
-                    revertConnections.Add(this._hELYTableAdapter, this._hELYTableAdapter.Connection);
-                    this._hELYTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._hELYTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._hELYTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._hELYTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._hELYTableAdapter.Adapter);
+                if ((this._aFATableAdapter != null)) {
+                    revertConnections.Add(this._aFATableAdapter, this._aFATableAdapter.Connection);
+                    this._aFATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._aFATableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._aFATableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._aFATableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._aFATableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1202,9 +1203,9 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._hELYTableAdapter != null)) {
-                    this._hELYTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._hELYTableAdapter]));
-                    this._hELYTableAdapter.Transaction = null;
+                if ((this._aFATableAdapter != null)) {
+                    this._aFATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._aFATableAdapter]));
+                    this._aFATableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

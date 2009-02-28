@@ -1,11 +1,12 @@
-﻿namespace e_Cafe {
+﻿namespace e_Cafe.SQL
+{
     
     
     public partial class ECAFEDataSetAFA {
     }
 }
 
-namespace e_Cafe.ECAFEDataSetAFATableAdapters
+namespace e_Cafe.SQL.ECAFEDataSetAFATableAdapters
 {
     
     
