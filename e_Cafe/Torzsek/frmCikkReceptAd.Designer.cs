@@ -38,8 +38,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.receptMentes = new e_Cafe.ReceptMentes();
-            this.rECEPTTableAdapter = new e_Cafe.ReceptMentesTableAdapters.RECEPTTableAdapter();
+            this.receptMentes = new e_Cafe.SQL.ReceptMentes();
+            this.rECEPTTableAdapter = new e_Cafe.SQL.ReceptMentesTableAdapters.RECEPTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.rECEPTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receptMentes)).BeginInit();
             this.SuspendLayout();
@@ -174,8 +174,8 @@
         private System.Windows.Forms.Button btnCikk;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private ReceptMentes receptMentes;
+        private e_Cafe.SQL.ReceptMentes receptMentes;
         private System.Windows.Forms.BindingSource rECEPTBindingSource;
-        private e_Cafe.ReceptMentesTableAdapters.RECEPTTableAdapter rECEPTTableAdapter;
+        private e_Cafe.SQL.ReceptMentesTableAdapters.RECEPTTableAdapter rECEPTTableAdapter;
     }
 }

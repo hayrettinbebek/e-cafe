@@ -120,7 +120,7 @@
     <Compile Include="Admin\AdminTools.Designer.cs">
       <DependentUpon>AdminTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="dsFOGLALAS.Designer.cs">
+    <Compile Include="SQL\dsFOGLALAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
@@ -143,7 +143,7 @@
     <Compile Include="CikkSelector.Designer.cs">
       <DependentUpon>CikkSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReceptMentes.Designer.cs">
+    <Compile Include="SQL\ReceptMentes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReceptMentes.xsd</DependentUpon>
@@ -696,26 +696,26 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsFOGLALAS.xsc">
+    <None Include="SQL\dsFOGLALAS.xsc">
       <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
     </None>
-    <None Include="dsFOGLALAS.xsd">
+    <None Include="SQL\dsFOGLALAS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsFOGLALAS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsFOGLALAS.xss">
+    <None Include="SQL\dsFOGLALAS.xss">
       <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
     </None>
-    <None Include="ReceptMentes.xsc">
+    <None Include="SQL\ReceptMentes.xsc">
       <DependentUpon>ReceptMentes.xsd</DependentUpon>
     </None>
-    <None Include="ReceptMentes.xsd">
+    <None Include="SQL\ReceptMentes.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ReceptMentes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ReceptMentes.xss">
+    <None Include="SQL\ReceptMentes.xss">
       <DependentUpon>ReceptMentes.xsd</DependentUpon>
     </None>
     <None Include="SQL\dsReceptCikkek.xsc">

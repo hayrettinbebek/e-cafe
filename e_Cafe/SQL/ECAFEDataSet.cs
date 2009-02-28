@@ -1,6 +1,6 @@
 ﻿
 
-namespace e_Cafe
+namespace e_Cafe.SQL
 {
     
     
@@ -8,7 +8,8 @@ namespace e_Cafe
     }
 }
 
-namespace e_Cafe.ECAFEDataSetTableAdapters {
+namespace e_Cafe.SQL.ECAFEDataSetTableAdapters
+{
     
     
     public partial class CIKKCSOPORTTableAdapter {

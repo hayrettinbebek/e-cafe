@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace e_Cafe {
+namespace e_Cafe.SQL {
     
     
     /// <summary>
@@ -21,16 +21,16 @@ namespace e_Cafe {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ReceptMentes")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsFOGLALAS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ReceptMentes : global::System.Data.DataSet {
+    public partial class dsFOGLALAS : global::System.Data.DataSet {
         
-        private RECEPTDataTable tableRECEPT;
+        private FOGLALASDataTable tableFOGLALAS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public ReceptMentes() {
+        public dsFOGLALAS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -40,7 +40,7 @@ namespace e_Cafe {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected ReceptMentes(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsFOGLALAS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -53,8 +53,8 @@ namespace e_Cafe {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["RECEPT"] != null)) {
-                    base.Tables.Add(new RECEPTDataTable(ds.Tables["RECEPT"]));
+                if ((ds.Tables["FOGLALAS"] != null)) {
+                    base.Tables.Add(new FOGLALASDataTable(ds.Tables["FOGLALAS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -77,9 +77,9 @@ namespace e_Cafe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public RECEPTDataTable RECEPT {
+        public FOGLALASDataTable FOGLALAS {
             get {
-                return this.tableRECEPT;
+                return this.tableFOGLALAS;
             }
         }
         
@@ -120,7 +120,7 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override global::System.Data.DataSet Clone() {
-            ReceptMentes cln = ((ReceptMentes)(base.Clone()));
+            dsFOGLALAS cln = ((dsFOGLALAS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -142,8 +142,8 @@ namespace e_Cafe {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["RECEPT"] != null)) {
-                    base.Tables.Add(new RECEPTDataTable(ds.Tables["RECEPT"]));
+                if ((ds.Tables["FOGLALAS"] != null)) {
+                    base.Tables.Add(new FOGLALASDataTable(ds.Tables["FOGLALAS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -175,27 +175,27 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         internal void InitVars(bool initTable) {
-            this.tableRECEPT = ((RECEPTDataTable)(base.Tables["RECEPT"]));
+            this.tableFOGLALAS = ((FOGLALASDataTable)(base.Tables["FOGLALAS"]));
             if ((initTable == true)) {
-                if ((this.tableRECEPT != null)) {
-                    this.tableRECEPT.InitVars();
+                if ((this.tableFOGLALAS != null)) {
+                    this.tableFOGLALAS.InitVars();
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitClass() {
-            this.DataSetName = "ReceptMentes";
+            this.DataSetName = "dsFOGLALAS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ReceptMentes.xsd";
+            this.Namespace = "http://tempuri.org/dsFOGLALAS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableRECEPT = new RECEPTDataTable();
-            base.Tables.Add(this.tableRECEPT);
+            this.tableFOGLALAS = new FOGLALASDataTable();
+            base.Tables.Add(this.tableFOGLALAS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeRECEPT() {
+        private bool ShouldSerializeFOGLALAS() {
             return false;
         }
         
@@ -208,7 +208,7 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ReceptMentes ds = new ReceptMentes();
+            dsFOGLALAS ds = new dsFOGLALAS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -252,7 +252,7 @@ namespace e_Cafe {
             return type;
         }
         
-        public delegate void RECEPTRowChangeEventHandler(object sender, RECEPTRowChangeEvent e);
+        public delegate void FOGLALASRowChangeEventHandler(object sender, FOGLALASRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -260,24 +260,34 @@ namespace e_Cafe {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class RECEPTDataTable : global::System.Data.TypedTableBase<RECEPTRow> {
+        public partial class FOGLALASDataTable : global::System.Data.TypedTableBase<FOGLALASRow> {
             
-            private global::System.Data.DataColumn columnOSSZ_CIKK_ID;
+            private global::System.Data.DataColumn columnFOGLALAS_ID;
             
-            private global::System.Data.DataColumn columnOSSZ_CIKK_TARTOZEK_ID;
+            private global::System.Data.DataColumn columnASZTAL_ID;
             
-            private global::System.Data.DataColumn columnTARTOZEK_MENNY;
+            private global::System.Data.DataColumn columnFOGLAL_FROM;
+            
+            private global::System.Data.DataColumn columnFOGLAL_TO;
+            
+            private global::System.Data.DataColumn columnPARTNER_ID;
+            
+            private global::System.Data.DataColumn columnMEGJEGYZES;
+            
+            private global::System.Data.DataColumn columnNEV;
+            
+            private global::System.Data.DataColumn columnTELEFON;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public RECEPTDataTable() {
-                this.TableName = "RECEPT";
+            public FOGLALASDataTable() {
+                this.TableName = "FOGLALAS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal RECEPTDataTable(global::System.Data.DataTable table) {
+            internal FOGLALASDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -293,29 +303,64 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected RECEPTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FOGLALASDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn OSSZ_CIKK_IDColumn {
+            public global::System.Data.DataColumn FOGLALAS_IDColumn {
                 get {
-                    return this.columnOSSZ_CIKK_ID;
+                    return this.columnFOGLALAS_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn OSSZ_CIKK_TARTOZEK_IDColumn {
+            public global::System.Data.DataColumn ASZTAL_IDColumn {
                 get {
-                    return this.columnOSSZ_CIKK_TARTOZEK_ID;
+                    return this.columnASZTAL_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn TARTOZEK_MENNYColumn {
+            public global::System.Data.DataColumn FOGLAL_FROMColumn {
                 get {
-                    return this.columnTARTOZEK_MENNY;
+                    return this.columnFOGLAL_FROM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn FOGLAL_TOColumn {
+                get {
+                    return this.columnFOGLAL_TO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PARTNER_IDColumn {
+                get {
+                    return this.columnPARTNER_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MEGJEGYZESColumn {
+                get {
+                    return this.columnMEGJEGYZES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn NEVColumn {
+                get {
+                    return this.columnNEV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn TELEFONColumn {
+                get {
+                    return this.columnTELEFON;
                 }
             }
             
@@ -328,115 +373,149 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public RECEPTRow this[int index] {
+            public FOGLALASRow this[int index] {
                 get {
-                    return ((RECEPTRow)(this.Rows[index]));
+                    return ((FOGLALASRow)(this.Rows[index]));
                 }
             }
             
-            public event RECEPTRowChangeEventHandler RECEPTRowChanging;
+            public event FOGLALASRowChangeEventHandler FOGLALASRowChanging;
             
-            public event RECEPTRowChangeEventHandler RECEPTRowChanged;
+            public event FOGLALASRowChangeEventHandler FOGLALASRowChanged;
             
-            public event RECEPTRowChangeEventHandler RECEPTRowDeleting;
+            public event FOGLALASRowChangeEventHandler FOGLALASRowDeleting;
             
-            public event RECEPTRowChangeEventHandler RECEPTRowDeleted;
+            public event FOGLALASRowChangeEventHandler FOGLALASRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddRECEPTRow(RECEPTRow row) {
+            public void AddFOGLALASRow(FOGLALASRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public RECEPTRow AddRECEPTRow(int OSSZ_CIKK_ID, int OSSZ_CIKK_TARTOZEK_ID, decimal TARTOZEK_MENNY) {
-                RECEPTRow rowRECEPTRow = ((RECEPTRow)(this.NewRow()));
+            public FOGLALASRow AddFOGLALASRow(int FOGLALAS_ID, int ASZTAL_ID, System.DateTime FOGLAL_FROM, System.DateTime FOGLAL_TO, int PARTNER_ID, string MEGJEGYZES, string NEV, string TELEFON) {
+                FOGLALASRow rowFOGLALASRow = ((FOGLALASRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        OSSZ_CIKK_ID,
-                        OSSZ_CIKK_TARTOZEK_ID,
-                        TARTOZEK_MENNY};
-                rowRECEPTRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRECEPTRow);
-                return rowRECEPTRow;
+                        FOGLALAS_ID,
+                        ASZTAL_ID,
+                        FOGLAL_FROM,
+                        FOGLAL_TO,
+                        PARTNER_ID,
+                        MEGJEGYZES,
+                        NEV,
+                        TELEFON};
+                rowFOGLALASRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFOGLALASRow);
+                return rowFOGLALASRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public FOGLALASRow FindByFOGLALAS_ID(int FOGLALAS_ID) {
+                return ((FOGLALASRow)(this.Rows.Find(new object[] {
+                            FOGLALAS_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public override global::System.Data.DataTable Clone() {
-                RECEPTDataTable cln = ((RECEPTDataTable)(base.Clone()));
+                FOGLALASDataTable cln = ((FOGLALASDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new RECEPTDataTable();
+                return new FOGLALASDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
-                this.columnOSSZ_CIKK_ID = base.Columns["OSSZ_CIKK_ID"];
-                this.columnOSSZ_CIKK_TARTOZEK_ID = base.Columns["OSSZ_CIKK_TARTOZEK_ID"];
-                this.columnTARTOZEK_MENNY = base.Columns["TARTOZEK_MENNY"];
+                this.columnFOGLALAS_ID = base.Columns["FOGLALAS_ID"];
+                this.columnASZTAL_ID = base.Columns["ASZTAL_ID"];
+                this.columnFOGLAL_FROM = base.Columns["FOGLAL_FROM"];
+                this.columnFOGLAL_TO = base.Columns["FOGLAL_TO"];
+                this.columnPARTNER_ID = base.Columns["PARTNER_ID"];
+                this.columnMEGJEGYZES = base.Columns["MEGJEGYZES"];
+                this.columnNEV = base.Columns["NEV"];
+                this.columnTELEFON = base.Columns["TELEFON"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnOSSZ_CIKK_ID = new global::System.Data.DataColumn("OSSZ_CIKK_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOSSZ_CIKK_ID);
-                this.columnOSSZ_CIKK_TARTOZEK_ID = new global::System.Data.DataColumn("OSSZ_CIKK_TARTOZEK_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOSSZ_CIKK_TARTOZEK_ID);
-                this.columnTARTOZEK_MENNY = new global::System.Data.DataColumn("TARTOZEK_MENNY", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTARTOZEK_MENNY);
+                this.columnFOGLALAS_ID = new global::System.Data.DataColumn("FOGLALAS_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFOGLALAS_ID);
+                this.columnASZTAL_ID = new global::System.Data.DataColumn("ASZTAL_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASZTAL_ID);
+                this.columnFOGLAL_FROM = new global::System.Data.DataColumn("FOGLAL_FROM", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFOGLAL_FROM);
+                this.columnFOGLAL_TO = new global::System.Data.DataColumn("FOGLAL_TO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFOGLAL_TO);
+                this.columnPARTNER_ID = new global::System.Data.DataColumn("PARTNER_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPARTNER_ID);
+                this.columnMEGJEGYZES = new global::System.Data.DataColumn("MEGJEGYZES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMEGJEGYZES);
+                this.columnNEV = new global::System.Data.DataColumn("NEV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNEV);
+                this.columnTELEFON = new global::System.Data.DataColumn("TELEFON", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTELEFON);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnFOGLALAS_ID}, true));
+                this.columnFOGLALAS_ID.AllowDBNull = false;
+                this.columnFOGLALAS_ID.Unique = true;
+                this.columnASZTAL_ID.AllowDBNull = false;
+                this.columnMEGJEGYZES.MaxLength = 200;
+                this.columnNEV.MaxLength = 50;
+                this.columnTELEFON.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public RECEPTRow NewRECEPTRow() {
-                return ((RECEPTRow)(this.NewRow()));
+            public FOGLALASRow NewFOGLALASRow() {
+                return ((FOGLALASRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new RECEPTRow(builder);
+                return new FOGLALASRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Type GetRowType() {
-                return typeof(RECEPTRow);
+                return typeof(FOGLALASRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.RECEPTRowChanged != null)) {
-                    this.RECEPTRowChanged(this, new RECEPTRowChangeEvent(((RECEPTRow)(e.Row)), e.Action));
+                if ((this.FOGLALASRowChanged != null)) {
+                    this.FOGLALASRowChanged(this, new FOGLALASRowChangeEvent(((FOGLALASRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.RECEPTRowChanging != null)) {
-                    this.RECEPTRowChanging(this, new RECEPTRowChangeEvent(((RECEPTRow)(e.Row)), e.Action));
+                if ((this.FOGLALASRowChanging != null)) {
+                    this.FOGLALASRowChanging(this, new FOGLALASRowChangeEvent(((FOGLALASRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.RECEPTRowDeleted != null)) {
-                    this.RECEPTRowDeleted(this, new RECEPTRowChangeEvent(((RECEPTRow)(e.Row)), e.Action));
+                if ((this.FOGLALASRowDeleted != null)) {
+                    this.FOGLALASRowDeleted(this, new FOGLALASRowChangeEvent(((FOGLALASRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.RECEPTRowDeleting != null)) {
-                    this.RECEPTRowDeleting(this, new RECEPTRowChangeEvent(((RECEPTRow)(e.Row)), e.Action));
+                if ((this.FOGLALASRowDeleting != null)) {
+                    this.FOGLALASRowDeleting(this, new FOGLALASRowChangeEvent(((FOGLALASRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveRECEPTRow(RECEPTRow row) {
+            public void RemoveFOGLALASRow(FOGLALASRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -444,7 +523,7 @@ namespace e_Cafe {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ReceptMentes ds = new ReceptMentes();
+                dsFOGLALAS ds = new dsFOGLALAS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -462,7 +541,7 @@ namespace e_Cafe {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "RECEPTDataTable";
+                attribute2.FixedValue = "FOGLALASDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -507,89 +586,184 @@ namespace e_Cafe {
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class RECEPTRow : global::System.Data.DataRow {
+        public partial class FOGLALASRow : global::System.Data.DataRow {
             
-            private RECEPTDataTable tableRECEPT;
+            private FOGLALASDataTable tableFOGLALAS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal RECEPTRow(global::System.Data.DataRowBuilder rb) : 
+            internal FOGLALASRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableRECEPT = ((RECEPTDataTable)(this.Table));
+                this.tableFOGLALAS = ((FOGLALASDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int OSSZ_CIKK_ID {
+            public int FOGLALAS_ID {
+                get {
+                    return ((int)(this[this.tableFOGLALAS.FOGLALAS_IDColumn]));
+                }
+                set {
+                    this[this.tableFOGLALAS.FOGLALAS_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int ASZTAL_ID {
+                get {
+                    return ((int)(this[this.tableFOGLALAS.ASZTAL_IDColumn]));
+                }
+                set {
+                    this[this.tableFOGLALAS.ASZTAL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime FOGLAL_FROM {
                 get {
                     try {
-                        return ((int)(this[this.tableRECEPT.OSSZ_CIKK_IDColumn]));
+                        return ((global::System.DateTime)(this[this.tableFOGLALAS.FOGLAL_FROMColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OSSZ_CIKK_ID\' in table \'RECEPT\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FOGLAL_FROM\' in table \'FOGLALAS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRECEPT.OSSZ_CIKK_IDColumn] = value;
+                    this[this.tableFOGLALAS.FOGLAL_FROMColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int OSSZ_CIKK_TARTOZEK_ID {
+            public System.DateTime FOGLAL_TO {
                 get {
                     try {
-                        return ((int)(this[this.tableRECEPT.OSSZ_CIKK_TARTOZEK_IDColumn]));
+                        return ((global::System.DateTime)(this[this.tableFOGLALAS.FOGLAL_TOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OSSZ_CIKK_TARTOZEK_ID\' in table \'RECEPT\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FOGLAL_TO\' in table \'FOGLALAS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRECEPT.OSSZ_CIKK_TARTOZEK_IDColumn] = value;
+                    this[this.tableFOGLALAS.FOGLAL_TOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public decimal TARTOZEK_MENNY {
+            public int PARTNER_ID {
                 get {
                     try {
-                        return ((decimal)(this[this.tableRECEPT.TARTOZEK_MENNYColumn]));
+                        return ((int)(this[this.tableFOGLALAS.PARTNER_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TARTOZEK_MENNY\' in table \'RECEPT\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PARTNER_ID\' in table \'FOGLALAS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRECEPT.TARTOZEK_MENNYColumn] = value;
+                    this[this.tableFOGLALAS.PARTNER_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsOSSZ_CIKK_IDNull() {
-                return this.IsNull(this.tableRECEPT.OSSZ_CIKK_IDColumn);
+            public string MEGJEGYZES {
+                get {
+                    try {
+                        return ((string)(this[this.tableFOGLALAS.MEGJEGYZESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MEGJEGYZES\' in table \'FOGLALAS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFOGLALAS.MEGJEGYZESColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetOSSZ_CIKK_IDNull() {
-                this[this.tableRECEPT.OSSZ_CIKK_IDColumn] = global::System.Convert.DBNull;
+            public string NEV {
+                get {
+                    try {
+                        return ((string)(this[this.tableFOGLALAS.NEVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NEV\' in table \'FOGLALAS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFOGLALAS.NEVColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsOSSZ_CIKK_TARTOZEK_IDNull() {
-                return this.IsNull(this.tableRECEPT.OSSZ_CIKK_TARTOZEK_IDColumn);
+            public string TELEFON {
+                get {
+                    try {
+                        return ((string)(this[this.tableFOGLALAS.TELEFONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TELEFON\' in table \'FOGLALAS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFOGLALAS.TELEFONColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetOSSZ_CIKK_TARTOZEK_IDNull() {
-                this[this.tableRECEPT.OSSZ_CIKK_TARTOZEK_IDColumn] = global::System.Convert.DBNull;
+            public bool IsFOGLAL_FROMNull() {
+                return this.IsNull(this.tableFOGLALAS.FOGLAL_FROMColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsTARTOZEK_MENNYNull() {
-                return this.IsNull(this.tableRECEPT.TARTOZEK_MENNYColumn);
+            public void SetFOGLAL_FROMNull() {
+                this[this.tableFOGLALAS.FOGLAL_FROMColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetTARTOZEK_MENNYNull() {
-                this[this.tableRECEPT.TARTOZEK_MENNYColumn] = global::System.Convert.DBNull;
+            public bool IsFOGLAL_TONull() {
+                return this.IsNull(this.tableFOGLALAS.FOGLAL_TOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetFOGLAL_TONull() {
+                this[this.tableFOGLALAS.FOGLAL_TOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPARTNER_IDNull() {
+                return this.IsNull(this.tableFOGLALAS.PARTNER_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPARTNER_IDNull() {
+                this[this.tableFOGLALAS.PARTNER_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsMEGJEGYZESNull() {
+                return this.IsNull(this.tableFOGLALAS.MEGJEGYZESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetMEGJEGYZESNull() {
+                this[this.tableFOGLALAS.MEGJEGYZESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsNEVNull() {
+                return this.IsNull(this.tableFOGLALAS.NEVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetNEVNull() {
+                this[this.tableFOGLALAS.NEVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsTELEFONNull() {
+                return this.IsNull(this.tableFOGLALAS.TELEFONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetTELEFONNull() {
+                this[this.tableFOGLALAS.TELEFONColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -597,20 +771,20 @@ namespace e_Cafe {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class RECEPTRowChangeEvent : global::System.EventArgs {
+        public class FOGLALASRowChangeEvent : global::System.EventArgs {
             
-            private RECEPTRow eventRow;
+            private FOGLALASRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public RECEPTRowChangeEvent(RECEPTRow row, global::System.Data.DataRowAction action) {
+            public FOGLALASRowChangeEvent(FOGLALASRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public RECEPTRow Row {
+            public FOGLALASRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -625,7 +799,7 @@ namespace e_Cafe {
         }
     }
 }
-namespace e_Cafe.ReceptMentesTableAdapters {
+namespace e_Cafe.SQL.dsFOGLALASTableAdapters {
     
     
     /// <summary>
@@ -638,7 +812,7 @@ namespace e_Cafe.ReceptMentesTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class RECEPTTableAdapter : global::System.ComponentModel.Component {
+    public partial class FOGLALASTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -651,7 +825,7 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public RECEPTTableAdapter() {
+        public FOGLALASTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -742,26 +916,60 @@ namespace e_Cafe.ReceptMentesTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "RECEPT";
-            tableMapping.ColumnMappings.Add("OSSZ_CIKK_ID", "OSSZ_CIKK_ID");
-            tableMapping.ColumnMappings.Add("OSSZ_CIKK_TARTOZEK_ID", "OSSZ_CIKK_TARTOZEK_ID");
-            tableMapping.ColumnMappings.Add("TARTOZEK_MENNY", "TARTOZEK_MENNY");
+            tableMapping.DataSetTable = "FOGLALAS";
+            tableMapping.ColumnMappings.Add("FOGLALAS_ID", "FOGLALAS_ID");
+            tableMapping.ColumnMappings.Add("ASZTAL_ID", "ASZTAL_ID");
+            tableMapping.ColumnMappings.Add("FOGLAL_FROM", "FOGLAL_FROM");
+            tableMapping.ColumnMappings.Add("FOGLAL_TO", "FOGLAL_TO");
+            tableMapping.ColumnMappings.Add("PARTNER_ID", "PARTNER_ID");
+            tableMapping.ColumnMappings.Add("MEGJEGYZES", "MEGJEGYZES");
+            tableMapping.ColumnMappings.Add("NEV", "NEV");
+            tableMapping.ColumnMappings.Add("TELEFON", "TELEFON");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM RECEPT\r\nWHERE     (OSSZ_CIKK_ID = @p_cikk_id) AND (OSSZ_CIKK_TARTOZEK" +
-                "_ID = @p_load_cikk_id)";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM FOGLALAS\r\nWHERE     (FOGLALAS_ID = @Original_FOGLALAS_ID)";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p_cikk_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p_load_cikk_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_TARTOZEK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FOGLALAS_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLALAS_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [RECEPT] ([OSSZ_CIKK_ID], [OSSZ_CIKK_TARTOZEK_ID], [TARTOZEK_MENNY]) " +
-                "VALUES (@OSSZ_CIKK_ID, @OSSZ_CIKK_TARTOZEK_ID, @TARTOZEK_MENNY)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [FOGLALAS] ([ASZTAL_ID], [FOGLAL_FROM], [FOGLAL_TO], [PARTNER_ID], [MEGJEGYZES], [NEV], [TELEFON]) VALUES (@ASZTAL_ID, @FOGLAL_FROM, @FOGLAL_TO, @PARTNER_ID, @MEGJEGYZES, @NEV, @TELEFON);
+SELECT ASZTAL_ID, FOGLAL_FROM, FOGLAL_TO, PARTNER_ID, MEGJEGYZES, NEV, TELEFON, FOGLALAS_ID FROM FOGLALAS WHERE (FOGLALAS_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSSZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OSSZ_CIKK_TARTOZEK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_TARTOZEK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TARTOZEK_MENNY", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TARTOZEK_MENNY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASZTAL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASZTAL_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FOGLAL_FROM", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLAL_FROM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FOGLAL_TO", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLAL_TO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGJEGYZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TELEFON", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TELEFON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [FOGLALAS] SET [ASZTAL_ID] = @ASZTAL_ID, [FOGLAL_FROM] = @FOGLAL_FROM, [FOGLAL_TO] = @FOGLAL_TO, [PARTNER_ID] = @PARTNER_ID, [MEGJEGYZES] = @MEGJEGYZES, [NEV] = @NEV, [TELEFON] = @TELEFON WHERE (([ASZTAL_ID] = @Original_ASZTAL_ID) AND ((@IsNull_FOGLAL_FROM = 1 AND [FOGLAL_FROM] IS NULL) OR ([FOGLAL_FROM] = @Original_FOGLAL_FROM)) AND ((@IsNull_FOGLAL_TO = 1 AND [FOGLAL_TO] IS NULL) OR ([FOGLAL_TO] = @Original_FOGLAL_TO)) AND ((@IsNull_PARTNER_ID = 1 AND [PARTNER_ID] IS NULL) OR ([PARTNER_ID] = @Original_PARTNER_ID)) AND ((@IsNull_MEGJEGYZES = 1 AND [MEGJEGYZES] IS NULL) OR ([MEGJEGYZES] = @Original_MEGJEGYZES)) AND ((@IsNull_NEV = 1 AND [NEV] IS NULL) OR ([NEV] = @Original_NEV)) AND ((@IsNull_TELEFON = 1 AND [TELEFON] IS NULL) OR ([TELEFON] = @Original_TELEFON)) AND ([FOGLALAS_ID] = @Original_FOGLALAS_ID));
+SELECT ASZTAL_ID, FOGLAL_FROM, FOGLAL_TO, PARTNER_ID, MEGJEGYZES, NEV, TELEFON, FOGLALAS_ID FROM FOGLALAS WHERE (FOGLALAS_ID = @FOGLALAS_ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASZTAL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASZTAL_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FOGLAL_FROM", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLAL_FROM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FOGLAL_TO", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLAL_TO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGJEGYZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TELEFON", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TELEFON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASZTAL_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASZTAL_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FOGLAL_FROM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLAL_FROM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FOGLAL_FROM", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLAL_FROM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FOGLAL_TO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLAL_TO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FOGLAL_TO", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLAL_TO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MEGJEGYZES", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MEGJEGYZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGJEGYZES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NEV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NEV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TELEFON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TELEFON", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TELEFON", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TELEFON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FOGLALAS_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLALAS_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FOGLALAS_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FOGLALAS_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -775,31 +983,19 @@ namespace e_Cafe.ReceptMentesTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT     OSSZ_CIKK_ID, OSSZ_CIKK_TARTOZEK_ID, TARTOZEK_MENNY\r\nFROM         RECE" +
-                "PT\r\nWHERE     (OSSZ_CIKK_ID = @p_cikk_id) AND (OSSZ_CIKK_TARTOZEK_ID = @akt_cikk" +
-                ")";
+            this._commandCollection[0].CommandText = "SELECT     ASZTAL_ID, FOGLAL_FROM, FOGLAL_TO, PARTNER_ID, MEGJEGYZES, NEV, TELEFO" +
+                "N, FOGLALAS_ID\r\nFROM         FOGLALAS\r\nWHERE     (ASZTAL_ID = @asztal_id) AND (F" +
+                "OGLAL_TO > GETDATE())";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p_cikk_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@akt_cikk", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_TARTOZEK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@asztal_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ASZTAL_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ReceptMentes.RECEPTDataTable dataTable, global::System.Nullable<int> p_cikk_id, global::System.Nullable<int> akt_cikk) {
+        public virtual int Fill(dsFOGLALAS.FOGLALASDataTable dataTable, int asztal_id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((p_cikk_id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(p_cikk_id.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((akt_cikk.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(akt_cikk.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(asztal_id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -810,35 +1006,24 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ReceptMentes.RECEPTDataTable GetData(global::System.Nullable<int> p_cikk_id, global::System.Nullable<int> akt_cikk) {
+        public virtual dsFOGLALAS.FOGLALASDataTable GetData(int asztal_id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((p_cikk_id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(p_cikk_id.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((akt_cikk.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(akt_cikk.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            ReceptMentes.RECEPTDataTable dataTable = new ReceptMentes.RECEPTDataTable();
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(asztal_id));
+            dsFOGLALAS.FOGLALASDataTable dataTable = new dsFOGLALAS.FOGLALASDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ReceptMentes.RECEPTDataTable dataTable) {
+        public virtual int Update(dsFOGLALAS.FOGLALASDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ReceptMentes dataSet) {
-            return this.Adapter.Update(dataSet, "RECEPT");
+        public virtual int Update(dsFOGLALAS dataSet) {
+            return this.Adapter.Update(dataSet, "FOGLALAS");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -857,19 +1042,8 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> p_cikk_id, global::System.Nullable<int> p_load_cikk_id) {
-            if ((p_cikk_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p_cikk_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((p_load_cikk_id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(p_load_cikk_id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
+        public virtual int Delete(int Original_FOGLALAS_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_FOGLALAS_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -889,24 +1063,43 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> OSSZ_CIKK_ID, global::System.Nullable<int> OSSZ_CIKK_TARTOZEK_ID, global::System.Nullable<decimal> TARTOZEK_MENNY) {
-            if ((OSSZ_CIKK_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(OSSZ_CIKK_ID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((OSSZ_CIKK_TARTOZEK_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(OSSZ_CIKK_TARTOZEK_ID.Value));
+        public virtual int Insert(int ASZTAL_ID, global::System.Nullable<global::System.DateTime> FOGLAL_FROM, global::System.Nullable<global::System.DateTime> FOGLAL_TO, global::System.Nullable<int> PARTNER_ID, string MEGJEGYZES, string NEV, string TELEFON) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ASZTAL_ID));
+            if ((FOGLAL_FROM.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(FOGLAL_FROM.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((TARTOZEK_MENNY.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(TARTOZEK_MENNY.Value));
+            if ((FOGLAL_TO.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(FOGLAL_TO.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((PARTNER_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(PARTNER_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((MEGJEGYZES == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(MEGJEGYZES));
+            }
+            if ((NEV == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(NEV));
+            }
+            if ((TELEFON == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(TELEFON));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -923,6 +1116,137 @@ namespace e_Cafe.ReceptMentesTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    int ASZTAL_ID, 
+                    global::System.Nullable<global::System.DateTime> FOGLAL_FROM, 
+                    global::System.Nullable<global::System.DateTime> FOGLAL_TO, 
+                    global::System.Nullable<int> PARTNER_ID, 
+                    string MEGJEGYZES, 
+                    string NEV, 
+                    string TELEFON, 
+                    int Original_ASZTAL_ID, 
+                    global::System.Nullable<global::System.DateTime> Original_FOGLAL_FROM, 
+                    global::System.Nullable<global::System.DateTime> Original_FOGLAL_TO, 
+                    global::System.Nullable<int> Original_PARTNER_ID, 
+                    string Original_MEGJEGYZES, 
+                    string Original_NEV, 
+                    string Original_TELEFON, 
+                    int Original_FOGLALAS_ID, 
+                    int FOGLALAS_ID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ASZTAL_ID));
+            if ((FOGLAL_FROM.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(FOGLAL_FROM.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((FOGLAL_TO.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(FOGLAL_TO.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((PARTNER_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(PARTNER_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((MEGJEGYZES == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(MEGJEGYZES));
+            }
+            if ((NEV == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(NEV));
+            }
+            if ((TELEFON == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(TELEFON));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ASZTAL_ID));
+            if ((Original_FOGLAL_FROM.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_FOGLAL_FROM.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_FOGLAL_TO.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_FOGLAL_TO.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PARTNER_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_PARTNER_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_MEGJEGYZES == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_MEGJEGYZES));
+            }
+            if ((Original_NEV == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_NEV));
+            }
+            if ((Original_TELEFON == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_TELEFON));
+            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_FOGLALAS_ID));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(FOGLALAS_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int ASZTAL_ID, global::System.Nullable<global::System.DateTime> FOGLAL_FROM, global::System.Nullable<global::System.DateTime> FOGLAL_TO, global::System.Nullable<int> PARTNER_ID, string MEGJEGYZES, string NEV, string TELEFON, int Original_ASZTAL_ID, global::System.Nullable<global::System.DateTime> Original_FOGLAL_FROM, global::System.Nullable<global::System.DateTime> Original_FOGLAL_TO, global::System.Nullable<int> Original_PARTNER_ID, string Original_MEGJEGYZES, string Original_NEV, string Original_TELEFON, int Original_FOGLALAS_ID) {
+            return this.Update(ASZTAL_ID, FOGLAL_FROM, FOGLAL_TO, PARTNER_ID, MEGJEGYZES, NEV, TELEFON, Original_ASZTAL_ID, Original_FOGLAL_FROM, Original_FOGLAL_TO, Original_PARTNER_ID, Original_MEGJEGYZES, Original_NEV, Original_TELEFON, Original_FOGLALAS_ID, Original_FOGLALAS_ID);
+        }
     }
     
     /// <summary>
@@ -938,7 +1262,7 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private RECEPTTableAdapter _rECEPTTableAdapter;
+        private FOGLALASTableAdapter _fOGLALASTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -958,12 +1282,12 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
             "", "System.Drawing.Design.UITypeEditor")]
-        public RECEPTTableAdapter RECEPTTableAdapter {
+        public FOGLALASTableAdapter FOGLALASTableAdapter {
             get {
-                return this._rECEPTTableAdapter;
+                return this._fOGLALASTableAdapter;
             }
             set {
-                this._rECEPTTableAdapter = value;
+                this._fOGLALASTableAdapter = value;
             }
         }
         
@@ -984,9 +1308,9 @@ namespace e_Cafe.ReceptMentesTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._rECEPTTableAdapter != null) 
-                            && (this._rECEPTTableAdapter.Connection != null))) {
-                    return this._rECEPTTableAdapter.Connection;
+                if (((this._fOGLALASTableAdapter != null) 
+                            && (this._fOGLALASTableAdapter.Connection != null))) {
+                    return this._fOGLALASTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1000,7 +1324,7 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._rECEPTTableAdapter != null)) {
+                if ((this._fOGLALASTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1011,14 +1335,14 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         ///Update rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateUpdatedRows(ReceptMentes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dsFOGLALAS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._rECEPTTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.RECEPT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._fOGLALASTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.FOGLALAS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._rECEPTTableAdapter.Update(updatedRows));
+                    result = (result + this._fOGLALASTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1029,13 +1353,13 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         ///Insert rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateInsertedRows(ReceptMentes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dsFOGLALAS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._rECEPTTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.RECEPT.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._fOGLALASTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.FOGLALAS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._rECEPTTableAdapter.Update(addedRows));
+                    result = (result + this._fOGLALASTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1046,13 +1370,13 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         ///Delete rows in bottom-up order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateDeletedRows(ReceptMentes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dsFOGLALAS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._rECEPTTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.RECEPT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._fOGLALASTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.FOGLALAS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._rECEPTTableAdapter.Update(deletedRows));
+                    result = (result + this._fOGLALASTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1086,15 +1410,15 @@ namespace e_Cafe.ReceptMentesTableAdapters {
         ///Update all changes to the dataset.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public virtual int UpdateAll(ReceptMentes dataSet) {
+        public virtual int UpdateAll(dsFOGLALAS dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._rECEPTTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._rECEPTTableAdapter.Connection) == false))) {
+            if (((this._fOGLALASTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._fOGLALASTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1130,13 +1454,13 @@ namespace e_Cafe.ReceptMentesTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._rECEPTTableAdapter != null)) {
-                    revertConnections.Add(this._rECEPTTableAdapter, this._rECEPTTableAdapter.Connection);
-                    this._rECEPTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._rECEPTTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._rECEPTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._rECEPTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._rECEPTTableAdapter.Adapter);
+                if ((this._fOGLALASTableAdapter != null)) {
+                    revertConnections.Add(this._fOGLALASTableAdapter, this._fOGLALASTableAdapter.Connection);
+                    this._fOGLALASTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._fOGLALASTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._fOGLALASTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._fOGLALASTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._fOGLALASTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1197,9 +1521,9 @@ namespace e_Cafe.ReceptMentesTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._rECEPTTableAdapter != null)) {
-                    this._rECEPTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rECEPTTableAdapter]));
-                    this._rECEPTTableAdapter.Transaction = null;
+                if ((this._fOGLALASTableAdapter != null)) {
+                    this._fOGLALASTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fOGLALASTableAdapter]));
+                    this._fOGLALASTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace e_Cafe {
+namespace e_Cafe.SQL {
     
     
     /// <summary>
@@ -21,16 +21,16 @@ namespace e_Cafe {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ECAFEDataSetOTHER_FILTER")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ECAFEDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ECAFEDataSetOTHER_FILTER : global::System.Data.DataSet {
+    public partial class ECAFEDataSet : global::System.Data.DataSet {
         
-        private CIKCSOP_OTHER_FILTERDataTable tableCIKCSOP_OTHER_FILTER;
+        private CIKKCSOPORTDataTable tableCIKKCSOPORT;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public ECAFEDataSetOTHER_FILTER() {
+        public ECAFEDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -40,7 +40,7 @@ namespace e_Cafe {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected ECAFEDataSetOTHER_FILTER(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ECAFEDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -53,8 +53,8 @@ namespace e_Cafe {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["CIKCSOP_OTHER_FILTER"] != null)) {
-                    base.Tables.Add(new CIKCSOP_OTHER_FILTERDataTable(ds.Tables["CIKCSOP_OTHER_FILTER"]));
+                if ((ds.Tables["CIKKCSOPORT"] != null)) {
+                    base.Tables.Add(new CIKKCSOPORTDataTable(ds.Tables["CIKKCSOPORT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -77,9 +77,9 @@ namespace e_Cafe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CIKCSOP_OTHER_FILTERDataTable CIKCSOP_OTHER_FILTER {
+        public CIKKCSOPORTDataTable CIKKCSOPORT {
             get {
-                return this.tableCIKCSOP_OTHER_FILTER;
+                return this.tableCIKKCSOPORT;
             }
         }
         
@@ -120,7 +120,7 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override global::System.Data.DataSet Clone() {
-            ECAFEDataSetOTHER_FILTER cln = ((ECAFEDataSetOTHER_FILTER)(base.Clone()));
+            ECAFEDataSet cln = ((ECAFEDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -142,8 +142,8 @@ namespace e_Cafe {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["CIKCSOP_OTHER_FILTER"] != null)) {
-                    base.Tables.Add(new CIKCSOP_OTHER_FILTERDataTable(ds.Tables["CIKCSOP_OTHER_FILTER"]));
+                if ((ds.Tables["CIKKCSOPORT"] != null)) {
+                    base.Tables.Add(new CIKKCSOPORTDataTable(ds.Tables["CIKKCSOPORT"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -175,27 +175,27 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         internal void InitVars(bool initTable) {
-            this.tableCIKCSOP_OTHER_FILTER = ((CIKCSOP_OTHER_FILTERDataTable)(base.Tables["CIKCSOP_OTHER_FILTER"]));
+            this.tableCIKKCSOPORT = ((CIKKCSOPORTDataTable)(base.Tables["CIKKCSOPORT"]));
             if ((initTable == true)) {
-                if ((this.tableCIKCSOP_OTHER_FILTER != null)) {
-                    this.tableCIKCSOP_OTHER_FILTER.InitVars();
+                if ((this.tableCIKKCSOPORT != null)) {
+                    this.tableCIKKCSOPORT.InitVars();
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitClass() {
-            this.DataSetName = "ECAFEDataSetOTHER_FILTER";
+            this.DataSetName = "ECAFEDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ECAFEDataSetOTHER_FILTER.xsd";
+            this.Namespace = "http://tempuri.org/ECAFEDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCIKCSOP_OTHER_FILTER = new CIKCSOP_OTHER_FILTERDataTable();
-            base.Tables.Add(this.tableCIKCSOP_OTHER_FILTER);
+            this.tableCIKKCSOPORT = new CIKKCSOPORTDataTable();
+            base.Tables.Add(this.tableCIKKCSOPORT);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializeCIKCSOP_OTHER_FILTER() {
+        private bool ShouldSerializeCIKKCSOPORT() {
             return false;
         }
         
@@ -208,7 +208,7 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ECAFEDataSetOTHER_FILTER ds = new ECAFEDataSetOTHER_FILTER();
+            ECAFEDataSet ds = new ECAFEDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -252,7 +252,7 @@ namespace e_Cafe {
             return type;
         }
         
-        public delegate void CIKCSOP_OTHER_FILTERRowChangeEventHandler(object sender, CIKCSOP_OTHER_FILTERRowChangeEvent e);
+        public delegate void CIKKCSOPORTRowChangeEventHandler(object sender, CIKKCSOPORTRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -260,24 +260,24 @@ namespace e_Cafe {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CIKCSOP_OTHER_FILTERDataTable : global::System.Data.TypedTableBase<CIKCSOP_OTHER_FILTERRow> {
-            
-            private global::System.Data.DataColumn columnOTHER_FILTER_ID;
-            
-            private global::System.Data.DataColumn columnOTHER_NAME;
+        public partial class CIKKCSOPORTDataTable : global::System.Data.TypedTableBase<CIKKCSOPORTRow> {
             
             private global::System.Data.DataColumn columnCIKKCSOPORT_ID;
             
+            private global::System.Data.DataColumn columnCIKKCSOPORT_NEV;
+            
+            private global::System.Data.DataColumn columnAFA_KOD;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CIKCSOP_OTHER_FILTERDataTable() {
-                this.TableName = "CIKCSOP_OTHER_FILTER";
+            public CIKKCSOPORTDataTable() {
+                this.TableName = "CIKKCSOPORT";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal CIKCSOP_OTHER_FILTERDataTable(global::System.Data.DataTable table) {
+            internal CIKKCSOPORTDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -293,29 +293,29 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected CIKCSOP_OTHER_FILTERDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CIKKCSOPORTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn OTHER_FILTER_IDColumn {
-                get {
-                    return this.columnOTHER_FILTER_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn OTHER_NAMEColumn {
-                get {
-                    return this.columnOTHER_NAME;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public global::System.Data.DataColumn CIKKCSOPORT_IDColumn {
                 get {
                     return this.columnCIKKCSOPORT_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CIKKCSOPORT_NEVColumn {
+                get {
+                    return this.columnCIKKCSOPORT_NEV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn AFA_KODColumn {
+                get {
+                    return this.columnAFA_KOD;
                 }
             }
             
@@ -328,116 +328,125 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CIKCSOP_OTHER_FILTERRow this[int index] {
+            public CIKKCSOPORTRow this[int index] {
                 get {
-                    return ((CIKCSOP_OTHER_FILTERRow)(this.Rows[index]));
+                    return ((CIKKCSOPORTRow)(this.Rows[index]));
                 }
             }
             
-            public event CIKCSOP_OTHER_FILTERRowChangeEventHandler CIKCSOP_OTHER_FILTERRowChanging;
+            public event CIKKCSOPORTRowChangeEventHandler CIKKCSOPORTRowChanging;
             
-            public event CIKCSOP_OTHER_FILTERRowChangeEventHandler CIKCSOP_OTHER_FILTERRowChanged;
+            public event CIKKCSOPORTRowChangeEventHandler CIKKCSOPORTRowChanged;
             
-            public event CIKCSOP_OTHER_FILTERRowChangeEventHandler CIKCSOP_OTHER_FILTERRowDeleting;
+            public event CIKKCSOPORTRowChangeEventHandler CIKKCSOPORTRowDeleting;
             
-            public event CIKCSOP_OTHER_FILTERRowChangeEventHandler CIKCSOP_OTHER_FILTERRowDeleted;
+            public event CIKKCSOPORTRowChangeEventHandler CIKKCSOPORTRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddCIKCSOP_OTHER_FILTERRow(CIKCSOP_OTHER_FILTERRow row) {
+            public void AddCIKKCSOPORTRow(CIKKCSOPORTRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CIKCSOP_OTHER_FILTERRow AddCIKCSOP_OTHER_FILTERRow(int OTHER_FILTER_ID, string OTHER_NAME, int CIKKCSOPORT_ID) {
-                CIKCSOP_OTHER_FILTERRow rowCIKCSOP_OTHER_FILTERRow = ((CIKCSOP_OTHER_FILTERRow)(this.NewRow()));
+            public CIKKCSOPORTRow AddCIKKCSOPORTRow(string CIKKCSOPORT_NEV, string AFA_KOD) {
+                CIKKCSOPORTRow rowCIKKCSOPORTRow = ((CIKKCSOPORTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        OTHER_FILTER_ID,
-                        OTHER_NAME,
-                        CIKKCSOPORT_ID};
-                rowCIKCSOP_OTHER_FILTERRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCIKCSOP_OTHER_FILTERRow);
-                return rowCIKCSOP_OTHER_FILTERRow;
+                        null,
+                        CIKKCSOPORT_NEV,
+                        AFA_KOD};
+                rowCIKKCSOPORTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCIKKCSOPORTRow);
+                return rowCIKKCSOPORTRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public override global::System.Data.DataTable Clone() {
-                CIKCSOP_OTHER_FILTERDataTable cln = ((CIKCSOP_OTHER_FILTERDataTable)(base.Clone()));
+                CIKKCSOPORTDataTable cln = ((CIKKCSOPORTDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CIKCSOP_OTHER_FILTERDataTable();
+                return new CIKKCSOPORTDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
-                this.columnOTHER_FILTER_ID = base.Columns["OTHER_FILTER_ID"];
-                this.columnOTHER_NAME = base.Columns["OTHER_NAME"];
                 this.columnCIKKCSOPORT_ID = base.Columns["CIKKCSOPORT_ID"];
+                this.columnCIKKCSOPORT_NEV = base.Columns["CIKKCSOPORT_NEV"];
+                this.columnAFA_KOD = base.Columns["AFA_KOD"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnOTHER_FILTER_ID = new global::System.Data.DataColumn("OTHER_FILTER_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOTHER_FILTER_ID);
-                this.columnOTHER_NAME = new global::System.Data.DataColumn("OTHER_NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOTHER_NAME);
                 this.columnCIKKCSOPORT_ID = new global::System.Data.DataColumn("CIKKCSOPORT_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCIKKCSOPORT_ID);
-                this.columnOTHER_NAME.MaxLength = 50;
+                this.columnCIKKCSOPORT_NEV = new global::System.Data.DataColumn("CIKKCSOPORT_NEV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCIKKCSOPORT_NEV);
+                this.columnAFA_KOD = new global::System.Data.DataColumn("AFA_KOD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAFA_KOD);
+                this.columnCIKKCSOPORT_ID.AutoIncrement = true;
+                this.columnCIKKCSOPORT_ID.AutoIncrementSeed = -1;
+                this.columnCIKKCSOPORT_ID.AutoIncrementStep = -1;
+                this.columnCIKKCSOPORT_ID.AllowDBNull = false;
+                this.columnCIKKCSOPORT_ID.ReadOnly = true;
+                this.columnCIKKCSOPORT_ID.Caption = "Cikkcsoport kód";
+                this.columnCIKKCSOPORT_NEV.Caption = "Cikkcsoport neve";
+                this.columnCIKKCSOPORT_NEV.MaxLength = 50;
+                this.columnAFA_KOD.Caption = "Áfa kódja";
+                this.columnAFA_KOD.MaxLength = 2;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CIKCSOP_OTHER_FILTERRow NewCIKCSOP_OTHER_FILTERRow() {
-                return ((CIKCSOP_OTHER_FILTERRow)(this.NewRow()));
+            public CIKKCSOPORTRow NewCIKKCSOPORTRow() {
+                return ((CIKKCSOPORTRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CIKCSOP_OTHER_FILTERRow(builder);
+                return new CIKKCSOPORTRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Type GetRowType() {
-                return typeof(CIKCSOP_OTHER_FILTERRow);
+                return typeof(CIKKCSOPORTRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CIKCSOP_OTHER_FILTERRowChanged != null)) {
-                    this.CIKCSOP_OTHER_FILTERRowChanged(this, new CIKCSOP_OTHER_FILTERRowChangeEvent(((CIKCSOP_OTHER_FILTERRow)(e.Row)), e.Action));
+                if ((this.CIKKCSOPORTRowChanged != null)) {
+                    this.CIKKCSOPORTRowChanged(this, new CIKKCSOPORTRowChangeEvent(((CIKKCSOPORTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CIKCSOP_OTHER_FILTERRowChanging != null)) {
-                    this.CIKCSOP_OTHER_FILTERRowChanging(this, new CIKCSOP_OTHER_FILTERRowChangeEvent(((CIKCSOP_OTHER_FILTERRow)(e.Row)), e.Action));
+                if ((this.CIKKCSOPORTRowChanging != null)) {
+                    this.CIKKCSOPORTRowChanging(this, new CIKKCSOPORTRowChangeEvent(((CIKKCSOPORTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CIKCSOP_OTHER_FILTERRowDeleted != null)) {
-                    this.CIKCSOP_OTHER_FILTERRowDeleted(this, new CIKCSOP_OTHER_FILTERRowChangeEvent(((CIKCSOP_OTHER_FILTERRow)(e.Row)), e.Action));
+                if ((this.CIKKCSOPORTRowDeleted != null)) {
+                    this.CIKKCSOPORTRowDeleted(this, new CIKKCSOPORTRowChangeEvent(((CIKKCSOPORTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CIKCSOP_OTHER_FILTERRowDeleting != null)) {
-                    this.CIKCSOP_OTHER_FILTERRowDeleting(this, new CIKCSOP_OTHER_FILTERRowChangeEvent(((CIKCSOP_OTHER_FILTERRow)(e.Row)), e.Action));
+                if ((this.CIKKCSOPORTRowDeleting != null)) {
+                    this.CIKKCSOPORTRowDeleting(this, new CIKKCSOPORTRowChangeEvent(((CIKKCSOPORTRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemoveCIKCSOP_OTHER_FILTERRow(CIKCSOP_OTHER_FILTERRow row) {
+            public void RemoveCIKKCSOPORTRow(CIKKCSOPORTRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -445,7 +454,7 @@ namespace e_Cafe {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ECAFEDataSetOTHER_FILTER ds = new ECAFEDataSetOTHER_FILTER();
+                ECAFEDataSet ds = new ECAFEDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -463,7 +472,7 @@ namespace e_Cafe {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CIKCSOP_OTHER_FILTERDataTable";
+                attribute2.FixedValue = "CIKKCSOPORTDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -508,90 +517,74 @@ namespace e_Cafe {
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class CIKCSOP_OTHER_FILTERRow : global::System.Data.DataRow {
+        public partial class CIKKCSOPORTRow : global::System.Data.DataRow {
             
-            private CIKCSOP_OTHER_FILTERDataTable tableCIKCSOP_OTHER_FILTER;
+            private CIKKCSOPORTDataTable tableCIKKCSOPORT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal CIKCSOP_OTHER_FILTERRow(global::System.Data.DataRowBuilder rb) : 
+            internal CIKKCSOPORTRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCIKCSOP_OTHER_FILTER = ((CIKCSOP_OTHER_FILTERDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int OTHER_FILTER_ID {
-                get {
-                    try {
-                        return ((int)(this[this.tableCIKCSOP_OTHER_FILTER.OTHER_FILTER_IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OTHER_FILTER_ID\' in table \'CIKCSOP_OTHER_FILTER\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableCIKCSOP_OTHER_FILTER.OTHER_FILTER_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string OTHER_NAME {
-                get {
-                    try {
-                        return ((string)(this[this.tableCIKCSOP_OTHER_FILTER.OTHER_NAMEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OTHER_NAME\' in table \'CIKCSOP_OTHER_FILTER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCIKCSOP_OTHER_FILTER.OTHER_NAMEColumn] = value;
-                }
+                this.tableCIKKCSOPORT = ((CIKKCSOPORTDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public int CIKKCSOPORT_ID {
                 get {
+                    return ((int)(this[this.tableCIKKCSOPORT.CIKKCSOPORT_IDColumn]));
+                }
+                set {
+                    this[this.tableCIKKCSOPORT.CIKKCSOPORT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string CIKKCSOPORT_NEV {
+                get {
                     try {
-                        return ((int)(this[this.tableCIKCSOP_OTHER_FILTER.CIKKCSOPORT_IDColumn]));
+                        return ((string)(this[this.tableCIKKCSOPORT.CIKKCSOPORT_NEVColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CIKKCSOPORT_ID\' in table \'CIKCSOP_OTHER_FILTER\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CIKKCSOPORT_NEV\' in table \'CIKKCSOPORT\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCIKCSOP_OTHER_FILTER.CIKKCSOPORT_IDColumn] = value;
+                    this[this.tableCIKKCSOPORT.CIKKCSOPORT_NEVColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsOTHER_FILTER_IDNull() {
-                return this.IsNull(this.tableCIKCSOP_OTHER_FILTER.OTHER_FILTER_IDColumn);
+            public string AFA_KOD {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKKCSOPORT.AFA_KODColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AFA_KOD\' in table \'CIKKCSOPORT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKKCSOPORT.AFA_KODColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetOTHER_FILTER_IDNull() {
-                this[this.tableCIKCSOP_OTHER_FILTER.OTHER_FILTER_IDColumn] = global::System.Convert.DBNull;
+            public bool IsCIKKCSOPORT_NEVNull() {
+                return this.IsNull(this.tableCIKKCSOPORT.CIKKCSOPORT_NEVColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsOTHER_NAMENull() {
-                return this.IsNull(this.tableCIKCSOP_OTHER_FILTER.OTHER_NAMEColumn);
+            public void SetCIKKCSOPORT_NEVNull() {
+                this[this.tableCIKKCSOPORT.CIKKCSOPORT_NEVColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetOTHER_NAMENull() {
-                this[this.tableCIKCSOP_OTHER_FILTER.OTHER_NAMEColumn] = global::System.Convert.DBNull;
+            public bool IsAFA_KODNull() {
+                return this.IsNull(this.tableCIKKCSOPORT.AFA_KODColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsCIKKCSOPORT_IDNull() {
-                return this.IsNull(this.tableCIKCSOP_OTHER_FILTER.CIKKCSOPORT_IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetCIKKCSOPORT_IDNull() {
-                this[this.tableCIKCSOP_OTHER_FILTER.CIKKCSOPORT_IDColumn] = global::System.Convert.DBNull;
+            public void SetAFA_KODNull() {
+                this[this.tableCIKKCSOPORT.AFA_KODColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -599,20 +592,20 @@ namespace e_Cafe {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class CIKCSOP_OTHER_FILTERRowChangeEvent : global::System.EventArgs {
+        public class CIKKCSOPORTRowChangeEvent : global::System.EventArgs {
             
-            private CIKCSOP_OTHER_FILTERRow eventRow;
+            private CIKKCSOPORTRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CIKCSOP_OTHER_FILTERRowChangeEvent(CIKCSOP_OTHER_FILTERRow row, global::System.Data.DataRowAction action) {
+            public CIKKCSOPORTRowChangeEvent(CIKKCSOPORTRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CIKCSOP_OTHER_FILTERRow Row {
+            public CIKKCSOPORTRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -627,7 +620,7 @@ namespace e_Cafe {
         }
     }
 }
-namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
+namespace e_Cafe.SQL.ECAFEDataSetTableAdapters {
     
     
     /// <summary>
@@ -640,7 +633,7 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class CIKCSOP_OTHER_FILTERTableAdapter : global::System.ComponentModel.Component {
+    public partial class CIKKCSOPORTTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -653,7 +646,7 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CIKCSOP_OTHER_FILTERTableAdapter() {
+        public CIKKCSOPORTTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -744,19 +737,26 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "CIKCSOP_OTHER_FILTER";
-            tableMapping.ColumnMappings.Add("OTHER_FILTER_ID", "OTHER_FILTER_ID");
-            tableMapping.ColumnMappings.Add("OTHER_NAME", "OTHER_NAME");
+            tableMapping.DataSetTable = "CIKKCSOPORT";
             tableMapping.ColumnMappings.Add("CIKKCSOPORT_ID", "CIKKCSOPORT_ID");
+            tableMapping.ColumnMappings.Add("CIKKCSOPORT_NEV", "CIKKCSOPORT_NEV");
+            tableMapping.ColumnMappings.Add("AFA_KOD", "AFA_KOD");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CIKCSOP_OTHER_FILTER] ([OTHER_FILTER_ID], [OTHER_NAME], [CIKKC" +
-                "SOPORT_ID]) VALUES (@OTHER_FILTER_ID, @OTHER_NAME, @CIKKCSOPORT_ID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CIKKCSOPORT] ([CIKKCSOPORT_NEV], [AFA_KOD]) VALUES (@CIKKCSOPO" +
+                "RT_NEV, @AFA_KOD)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OTHER_FILTER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_FILTER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OTHER_NAME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKKCSOPORT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKKCSOPORT_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFA_KOD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_KOD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE    CIKKCSOPORT\r\nSET              CIKKCSOPORT_NEV = @NEV, AFA_KOD = @AFA\r\nW" +
+                "HERE     (CIKKCSOPORT_ID = @ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NEV", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFA", global::System.Data.SqlDbType.VarChar, 2, global::System.Data.ParameterDirection.Input, 0, 0, "AFA_KOD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -770,14 +770,14 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT OTHER_FILTER_ID, OTHER_NAME, CIKKCSOPORT_ID FROM dbo.CIKCSOP_OTHER_FILTER";
+            this._commandCollection[0].CommandText = "SELECT CIKKCSOPORT_ID, CIKKCSOPORT_NEV, AFA_KOD FROM dbo.CIKKCSOPORT";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable dataTable) {
+        public virtual int Fill(ECAFEDataSet.CIKKCSOPORTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -789,23 +789,23 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable GetData() {
+        public virtual ECAFEDataSet.CIKKCSOPORTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable dataTable = new ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable();
+            ECAFEDataSet.CIKKCSOPORTDataTable dataTable = new ECAFEDataSet.CIKKCSOPORTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable dataTable) {
+        public virtual int Update(ECAFEDataSet.CIKKCSOPORTDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ECAFEDataSetOTHER_FILTER dataSet) {
-            return this.Adapter.Update(dataSet, "CIKCSOP_OTHER_FILTER");
+        public virtual int Update(ECAFEDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "CIKKCSOPORT");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -824,24 +824,18 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> OTHER_FILTER_ID, string OTHER_NAME, global::System.Nullable<int> CIKKCSOPORT_ID) {
-            if ((OTHER_FILTER_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(OTHER_FILTER_ID.Value));
-            }
-            else {
+        public virtual int Insert(string CIKKCSOPORT_NEV, string AFA_KOD) {
+            if ((CIKKCSOPORT_NEV == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((OTHER_NAME == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(CIKKCSOPORT_NEV));
+            }
+            if ((AFA_KOD == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(OTHER_NAME));
-            }
-            if ((CIKKCSOPORT_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(CIKKCSOPORT_ID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(AFA_KOD));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -855,6 +849,39 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string NEV, string AFA, int ID) {
+            if ((NEV == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NEV));
+            }
+            if ((AFA == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(AFA));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
         }
@@ -873,7 +900,7 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private CIKCSOP_OTHER_FILTERTableAdapter _cIKCSOP_OTHER_FILTERTableAdapter;
+        private CIKKCSOPORTTableAdapter _cIKKCSOPORTTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -893,12 +920,12 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
             "", "System.Drawing.Design.UITypeEditor")]
-        public CIKCSOP_OTHER_FILTERTableAdapter CIKCSOP_OTHER_FILTERTableAdapter {
+        public CIKKCSOPORTTableAdapter CIKKCSOPORTTableAdapter {
             get {
-                return this._cIKCSOP_OTHER_FILTERTableAdapter;
+                return this._cIKKCSOPORTTableAdapter;
             }
             set {
-                this._cIKCSOP_OTHER_FILTERTableAdapter = value;
+                this._cIKKCSOPORTTableAdapter = value;
             }
         }
         
@@ -919,9 +946,9 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._cIKCSOP_OTHER_FILTERTableAdapter != null) 
-                            && (this._cIKCSOP_OTHER_FILTERTableAdapter.Connection != null))) {
-                    return this._cIKCSOP_OTHER_FILTERTableAdapter.Connection;
+                if (((this._cIKKCSOPORTTableAdapter != null) 
+                            && (this._cIKKCSOPORTTableAdapter.Connection != null))) {
+                    return this._cIKKCSOPORTTableAdapter.Connection;
                 }
                 return null;
             }
@@ -935,7 +962,7 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._cIKCSOP_OTHER_FILTERTableAdapter != null)) {
+                if ((this._cIKKCSOPORTTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -946,14 +973,14 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         ///Update rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateUpdatedRows(ECAFEDataSetOTHER_FILTER dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ECAFEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._cIKCSOP_OTHER_FILTERTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CIKCSOP_OTHER_FILTER.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cIKKCSOPORTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CIKKCSOPORT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cIKCSOP_OTHER_FILTERTableAdapter.Update(updatedRows));
+                    result = (result + this._cIKKCSOPORTTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -964,13 +991,13 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         ///Insert rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateInsertedRows(ECAFEDataSetOTHER_FILTER dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ECAFEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._cIKCSOP_OTHER_FILTERTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CIKCSOP_OTHER_FILTER.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cIKKCSOPORTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CIKKCSOPORT.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cIKCSOP_OTHER_FILTERTableAdapter.Update(addedRows));
+                    result = (result + this._cIKKCSOPORTTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -981,13 +1008,13 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         ///Delete rows in bottom-up order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateDeletedRows(ECAFEDataSetOTHER_FILTER dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ECAFEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._cIKCSOP_OTHER_FILTERTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CIKCSOP_OTHER_FILTER.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cIKKCSOPORTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CIKKCSOPORT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cIKCSOP_OTHER_FILTERTableAdapter.Update(deletedRows));
+                    result = (result + this._cIKKCSOPORTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1021,15 +1048,15 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
         ///Update all changes to the dataset.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public virtual int UpdateAll(ECAFEDataSetOTHER_FILTER dataSet) {
+        public virtual int UpdateAll(ECAFEDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._cIKCSOP_OTHER_FILTERTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._cIKCSOP_OTHER_FILTERTableAdapter.Connection) == false))) {
+            if (((this._cIKKCSOPORTTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._cIKKCSOPORTTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1065,13 +1092,13 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._cIKCSOP_OTHER_FILTERTableAdapter != null)) {
-                    revertConnections.Add(this._cIKCSOP_OTHER_FILTERTableAdapter, this._cIKCSOP_OTHER_FILTERTableAdapter.Connection);
-                    this._cIKCSOP_OTHER_FILTERTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._cIKCSOP_OTHER_FILTERTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._cIKCSOP_OTHER_FILTERTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._cIKCSOP_OTHER_FILTERTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._cIKCSOP_OTHER_FILTERTableAdapter.Adapter);
+                if ((this._cIKKCSOPORTTableAdapter != null)) {
+                    revertConnections.Add(this._cIKKCSOPORTTableAdapter, this._cIKKCSOPORTTableAdapter.Connection);
+                    this._cIKKCSOPORTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._cIKKCSOPORTTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._cIKKCSOPORTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._cIKKCSOPORTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._cIKKCSOPORTTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1132,9 +1159,9 @@ namespace e_Cafe.ECAFEDataSetOTHER_FILTERTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._cIKCSOP_OTHER_FILTERTableAdapter != null)) {
-                    this._cIKCSOP_OTHER_FILTERTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cIKCSOP_OTHER_FILTERTableAdapter]));
-                    this._cIKCSOP_OTHER_FILTERTableAdapter.Transaction = null;
+                if ((this._cIKKCSOPORTTableAdapter != null)) {
+                    this._cIKKCSOPORTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cIKKCSOPORTTableAdapter]));
+                    this._cIKKCSOPORTTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
