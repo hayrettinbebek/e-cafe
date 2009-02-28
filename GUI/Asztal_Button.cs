@@ -12,7 +12,7 @@
         Selected = 1, // az éppen kiválasztottat mutatja
         Free = 0, //szabad nincs hozzá foglalás és rendelés
         used = 3, // ülnek ott és van rendelésük
-        reserved = 4 // foglalás vn az asztalra
+        reserved = 2 // foglalás vn az asztalra
     }
 
     public class Asztal_Button : System.Windows.Forms.ButtonBase
@@ -150,6 +150,7 @@
             if (ImageList != null)
             {
                 if (aObj.fRENDELES_ID != -1) { ImageIndex = (int)Asztal_colors.Selected; }
+                else if (aObj.lFOGLALASOK.Count > 0) { ImageIndex = (int)Asztal_colors.reserved; }
                 else if (_Free == 1)
                 {
                     ImageIndex = (int)Asztal_colors.Free;

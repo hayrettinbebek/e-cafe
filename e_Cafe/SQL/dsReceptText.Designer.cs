@@ -715,13 +715,11 @@ namespace e_Cafe.SQL.dsReceptTextTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE    CIKK\r\nSET              RECEPT_TEXT = @RECEPT_TEXT\r\nWHERE     (CIKK_ID =" +
-                " @Original_CIKK_ID); \r\nSELECT RECEPT_TEXT, CIKK_ID FROM CIKK WHERE (CIKK_ID = @C" +
-                "IKK_ID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [CIKK] SET [RECEPT_TEXT] = @RECEPT_TEXT WHERE (([CIKK_ID] = @Original_CIKK" +
+                "_ID))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEPT_TEXT", global::System.Data.SqlDbType.Text, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "RECEPT_TEXT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKK_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEPT_TEXT", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEPT_TEXT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -814,7 +812,7 @@ namespace e_Cafe.SQL.dsReceptTextTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string RECEPT_TEXT, int Original_CIKK_ID, int CIKK_ID) {
+        public virtual int Update(string RECEPT_TEXT, int Original_CIKK_ID) {
             if ((RECEPT_TEXT == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -822,7 +820,6 @@ namespace e_Cafe.SQL.dsReceptTextTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(RECEPT_TEXT));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_CIKK_ID));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(CIKK_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

@@ -336,7 +336,7 @@ namespace GUI
 
     }
 
-    public class UserButton : System.Windows.Forms.Button
+    public class UserButton : System.Windows.Forms.RadioButton
     {
         int rg;
         int hdl;
@@ -359,7 +359,15 @@ namespace GUI
         private Label lNAME;
         private Label lNAME2;
 
-
+        public ImageList fIL
+        {
+            get { return (ImageList); }
+            set
+            {
+                ImageList = value;
+                BackgroundImage = ImageList.Images[0];
+            }
+        }
 
         public _User fUser
         {
@@ -379,13 +387,20 @@ namespace GUI
             this.OnClick(e);
         }
 
+        protected override void OnCheckedChanged(EventArgs e)
+        {
+            base.OnCheckedChanged(e);
 
+            if (Checked) { BackgroundImage = ImageList.Images[1]; }
+            else { BackgroundImage = ImageList.Images[0];}
+
+        }
 
 
         public UserButton()
         {
-            Width = 150;
-            Height = 75;
+            Width = 165;
+            Height = 60;
             // Get the dimension of the client rectangle 
             Rectangle rect = this.ClientRectangle;
             // Invoke the unmanaged DLL function here to create the RoundRectangleRegion
@@ -394,29 +409,47 @@ namespace GUI
             hdl = this.Handle.ToInt32();
             // Set the Window Region to a a Rectangle with rounded corners
             SetWindowRgn(hdl, rg, 1);
+            Appearance = Appearance.Button;
             FlatAppearance.BorderSize = 0;
-            FlatStyle = FlatStyle.Flat;
+            FlatAppearance.MouseDownBackColor = Color.Transparent;
+            FlatAppearance.MouseOverBackColor = Color.Transparent;
+            FlatAppearance.CheckedBackColor = Color.Transparent;
 
-            BackColor = Color.Gray;
+
+
+            FlatStyle = FlatStyle.Flat;
+            
+            BackColor = Color.Transparent;
 
             lNAME = new Label();
-            lNAME.Width = 50;
+            lNAME.Width = 95;
             lNAME.Height = 20;
             lNAME.BackColor = Color.Transparent;
-            lNAME.Location = new Point(90, 25);
+            lNAME.Location = new Point(60, 15);
             lNAME.Font = f1;
+            lNAME.ForeColor = Color.White;
             lNAME.Click += this.OnLabelClick;
             this.Controls.Add(lNAME);
 
 
             lNAME2 = new Label();
-            lNAME2.Width = 50;
+            lNAME2.Width = 95;
             lNAME2.Height = 20;
             lNAME2.BackColor = Color.Transparent;
-            lNAME2.Location = new Point(91, 45);
+            lNAME2.Location = new Point(60, 35);
             lNAME2.Font = f1;
+
+            lNAME2.ForeColor = Color.White;
             lNAME2.Click += this.OnLabelClick;
             this.Controls.Add(lNAME2);
+
+            Panel p = new Panel();
+            p.Location = new Point(14, 8);
+            p.Width = 37;
+            p.Height = 37;
+
+            this.Controls.Add(p);
+
 
         }
 

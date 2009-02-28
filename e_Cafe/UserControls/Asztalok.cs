@@ -114,6 +114,7 @@ namespace e_Cafe
 
             ilTmp.Images.Add(Image.FromFile(tmpPath + iAsztalType.ToString() + "\\" + iRotate.ToString() + "\\01_off.png"));
             ilTmp.Images.Add(Image.FromFile(tmpPath + iAsztalType.ToString() + "\\" + iRotate.ToString() + "\\02_on.png"));
+            ilTmp.Images.Add(Image.FromFile(tmpPath + iAsztalType.ToString() + "\\" + iRotate.ToString() + "\\03_res.png"));
 
             return (ilTmp);
 

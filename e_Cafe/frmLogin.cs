@@ -37,7 +37,7 @@ namespace e_Cafe
         private void keyb_Click(object sender, EventArgs e)
         {
             txtPw.Focus();
-            SendKeys.Send(((Button)sender).Text);
+            SendKeys.Send((string)((Button)sender).Tag);
         }
 
         private void User_Click(object sender, EventArgs e)
@@ -57,7 +57,8 @@ namespace e_Cafe
             UserButton ub = new UserButton();
             ub.fUser = nu;
             ub.Click += User_Click;
-
+            ub.fIL = ilLogin;
+            ub.Checked = true;
 
             flpUser.Controls.Add(ub);
 
@@ -68,7 +69,8 @@ namespace e_Cafe
                 UserButton ub2 = new UserButton();
                 ub2.fUser = u;
                 ub2.Click += User_Click;
-
+                ub2.fIL = ilLogin;
+                
                 flpUser.Controls.Add(ub2);
    
             }

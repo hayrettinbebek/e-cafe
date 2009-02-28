@@ -14,7 +14,7 @@ using GUI.billentyu;
 using System.IO;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
-
+using e_Cafe.FrontOffice;
 using NSpring.Logging;
 
 
@@ -32,6 +32,7 @@ namespace e_Cafe
         private static int C_HELYEK_WIDTH = 120;
         private static int C_HELYEK_HEIGHT = 60;
 
+        
 
         public string DebugMessage
         {
@@ -261,54 +262,87 @@ namespace e_Cafe
         public void Asztal_click(object sender, EventArgs e)
         {
 
-                Asztal_Button tmp_a = (Asztal_Button)sender;
-
-            DEFS.log(Level.Debug, "Asztal Klikk: id:"+tmp_a.aObj.fASZTAL_ID.ToString()+" rendeles:"+tmp_a.aObj.fRENDELES_ID.ToString());
+            Asztal_Button tmp_a = (Asztal_Button)sender;
 
 
+
+            if (btnFoglalas.Checked)
+            {
+                // Foglalás 
+                if (tmp_a.aObj.fRENDELES_ID > 0)
+                {
+                    DEFS.SendInfoMessage("Információ! : Az asztal jelenleg foglalt!");
+                }
+                else
+                {
+                    frmFoglalas fg = new frmFoglalas();
+                    fg.aFoglal = tmp_a.aObj;
+
+                    fg.ShowDialog();
+
+
+                }
+                btnFoglalas.Checked = false;
+
+            }
+            else
+            {
+                
                 tmp_a.Text = tmp_a.ClickTime.ToString();
-            if (tmp_a.ClickTime >300) {
-                a.aList.SelectAsztal(tmp_a.Asztal_id);
-                tmp_a.vSelected = true;
+                if (tmp_a.ClickTime > 300)
+                {
+                    #region Asztal info
 
-                DebugMessage = tmp_a.Asztal_id.ToString() + tmp_a.vSelected.ToString();
+                    #endregion
+                }
+                else
+                {
+                    #region Rendelés
+                    DEFS.log(Level.Debug, "Asztal Klikk: id:" + tmp_a.aObj.fASZTAL_ID.ToString() + " rendeles:" + tmp_a.aObj.fRENDELES_ID.ToString());
+                    a.aList.SelectAsztal(tmp_a.Asztal_id);
+                    tmp_a.vSelected = true;
 
-                MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id), blObj);
-                mr.ShowDialog();
-                a.RefreshAsztalok(true);
+                    DebugMessage = tmp_a.Asztal_id.ToString() + tmp_a.vSelected.ToString();
 
-                // Választó lista megjelenítése
-                /*
-                                if (!a.aList.isUsed(tmp_a.Asztal_id))
-                                {
+                    MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id), blObj);
+                    mr.ShowDialog();
+                    a.RefreshAsztalok(true);
 
-                    
-                                    // ha szükség van előválaztóra!!
-                                    TableActionSelect preAsk = new TableActionSelect("Asztal " + a.aList.GetItem(tmp_a.Asztal_id).fASZTAL_SZAM.ToString() + ": Válasszon feladatok!");
-                                    preAsk.ShowDialog();
-                                    if (preAsk.DialogResult == DialogResult.OK)
+                    // Választó lista megjelenítése
+                    /*
+                                    if (!a.aList.isUsed(tmp_a.Asztal_id))
                                     {
-                                        if (preAsk.pChoice == "R")
+
+                    
+                                        // ha szükség van előválaztóra!!
+                                        TableActionSelect preAsk = new TableActionSelect("Asztal " + a.aList.GetItem(tmp_a.Asztal_id).fASZTAL_SZAM.ToString() + ": Válasszon feladatok!");
+                                        preAsk.ShowDialog();
+                                        if (preAsk.DialogResult == DialogResult.OK)
                                         {
-                                            panel3.Controls.Clear();
-                                            CikkValaszt cv = new CikkValaszt(panel3, blObj);
-                                            panel3.Controls.Add(cv);
-                                            cv.Dock = DockStyle.Fill;
-                                            cv.InitCikkValaszt();
+                                            if (preAsk.pChoice == "R")
+                                            {
+                                                panel3.Controls.Clear();
+                                                CikkValaszt cv = new CikkValaszt(panel3, blObj);
+                                                panel3.Controls.Add(cv);
+                                                cv.Dock = DockStyle.Fill;
+                                                cv.InitCikkValaszt();
                             
+                                            }
                                         }
-                                    }
                     
 
 
-                                }
-                                else 
-                                { // A rendelések panel aktivizálása
-                                    nr1.rtHeader.Text = tmp_a.Asztal_id.ToString() + ". asztal rendelései:";
+                                    }
+                                    else 
+                                    { // A rendelések panel aktivizálása
+                                        nr1.rtHeader.Text = tmp_a.Asztal_id.ToString() + ". asztal rendelései:";
 
 
-                                }
-                */
+                                    }
+                    */
+                    #endregion
+                }
+                
             }
             tlpButtons.BringToFront();
             tlpButtons.Invalidate();
@@ -371,6 +405,11 @@ namespace e_Cafe
         }
 
         private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFoglalas_CheckedChanged(object sender, EventArgs e)
         {
 
         }

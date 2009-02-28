@@ -19,6 +19,18 @@ namespace BusinessLogic
         public int fASZTAL_ROTATE;
         public int fRENDELES_ID;
 
+        #region Foglalások
+
+        public List<Foglalas> lFOGLALASOK
+        {
+            get { return(getFoglalasok()); }
+        }
+        #endregion
+
+
+
+
+
 
         public Asztal()
         {
@@ -49,19 +61,49 @@ namespace BusinessLogic
 
             return ((fASZTAL_ID % 2) == 0);
         }
+
+
+        private List<Foglalas> getFoglalasok()
+        {
+            List<Foglalas> tmpl = new List<Foglalas>();
+
+
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT FOGLAL_FROM ,FOGLAL_TO, NEV ,TELEFON FROM FOGLALAS WHERE ASZTAL_ID =" + fASZTAL_ID.ToString();
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                Foglalas t = new Foglalas((DateTime)rdr["FOGLAL_FROM"], (DateTime)rdr["FOGLAL_TO"], (string)rdr["NEV"], (string)rdr["TELEFON"]);
+               
+                tmpl.Add(t);
+            }
+            rdr.Close();
+            sc.Close();
+
+            return (tmpl);
+        }
+
     }
 
     public class Asztal_List
     {
-        private SqlConnection sc;
+        
 
         public List<Asztal> lASZTAL = new List<Asztal>();
         
         
         public Asztal_List(int aHelyId)
         {
-            
-            sc = new SqlConnection(DEFS.ConSTR);
+
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
             SqlCommand cmd = new SqlCommand();
 
@@ -150,7 +192,7 @@ namespace BusinessLogic
         }
         private bool SetAsztalPos(int iASZTAL_ID, int iPos_x, int iPos_y)
         {
-            sc = new SqlConnection(DEFS.ConSTR);
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sc;
@@ -167,15 +209,17 @@ namespace BusinessLogic
             try
             {
                 cmd.ExecuteNonQuery();
+                sc.Close();
                 return true;
             }
             catch (Exception e)
             {
-                
+                sc.Close();
                 //string s = "Hiba az asztal pozició mentése közben!";
                 return false;
+                
             }
-            sc.Close();
+            
 
 
         }
@@ -188,6 +232,30 @@ namespace BusinessLogic
         }
 
     }
+
+
+    #region Foglalás
+    public class Foglalas
+    {
+        public DateTime METTOL;
+        public DateTime MEDDIG;
+        public string NEV;
+        public string TELEFON;
+
+       
+
+        public Foglalas(DateTime pMETTOL, DateTime pMEDDIG, string pNEV, string pTELEFON)
+        {
+
+            METTOL = pMETTOL;
+            MEDDIG = pMEDDIG;
+            NEV = pNEV;
+            TELEFON = pTELEFON;
+        }
+    }
+
+    #endregion
+
 
     #region Helyek
     public class Hely
