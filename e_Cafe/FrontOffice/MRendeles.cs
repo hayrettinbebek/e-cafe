@@ -205,6 +205,7 @@ namespace e_Cafe
                 CikkButton cb = new CikkButton();
                 cb.fCIKK = lButtons[i];
                 cb.Click += onCikkClick;
+                cb.CIml = ilCikkek;
                 flpCikkek.Controls.Add(cb);
 
             }
@@ -254,11 +255,6 @@ namespace e_Cafe
 
         #endregion
 
-        private void dataRepeater1_ItemTemplate_Click(object sender, EventArgs e)
-        {
-            
-            MessageBox.Show("fuck");
-        }
 
         #region Rendelés tábla
 
@@ -328,31 +324,64 @@ namespace e_Cafe
 
         }
 
-        #endregion
-
-
-
         private void tblRendeles_CellClick(object sender, XPTable.Events.CellMouseEventArgs e)
         {
-            if (tblRendeles.TableModel.Selections.IsRowSelected(e.Row)) {
+            if (tblRendeles.TableModel.Selections.IsRowSelected(e.Row))
+            {
                 tblRendeles.TableModel.Selections.RemoveCell(e.Row, 0);
-            } else {
-            tblRendeles.TableModel.Selections.AddCell(e.Row, 0);
             }
+            else
+            {
+                tblRendeles.TableModel.Selections.AddCell(e.Row, 0);
+            }
+        }
+
+
+        #endregion
+
+        #region Rendelés tábla kezelése
+        private double selectionFizetendo()
+        {
+            double rTmp = 0;
+
+            foreach (var r in tblRendeles.SelectedItems)
+            {
+                rTmp += ((eCell)r.Cells[0]).rSor._db * ((eCell)r.Cells[0]).rSor._Ertek;
+            }
+            return (rTmp);
+
         }
 
         private void btnDOWN_Click(object sender, EventArgs e)
         {
-            if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Min(_AktRendeles._ScrollPos + 1, _AktRendeles.lRendelesSor.Count-9); }
+            if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Min(_AktRendeles._ScrollPos + 1, _AktRendeles.lRendelesSor.Count - 9); }
             initRendelTablaNoDraw();
         }
 
         private void btnUP_Click(object sender, EventArgs e)
         {
-            if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Max(_AktRendeles._ScrollPos-1,0); }
+            if (_AktRendeles.lRendelesSor.Count > 9) { _AktRendeles._ScrollPos = Math.Max(_AktRendeles._ScrollPos - 1, 0); }
             initRendelTablaNoDraw();
         }
+        
+        //összeset kijelöl
+        private void button8_Click(object sender, EventArgs e)
+        {
+            tblRendeles.TableModel.Selections.Clear();
 
+            for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
+            {
+
+                tblRendeles.TableModel.Selections.AddCell(i, 0);
+            }
+
+        }
+
+        #endregion
+
+
+
+      
         private void btnSave_Click(object sender, EventArgs e)
         {
 
@@ -403,19 +432,55 @@ namespace e_Cafe
             initRendelTablaNoDraw();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnHitel_Click(object sender, EventArgs e)
         {
-            tblRendeles.TableModel.Selections.Clear();
+            if (tblRendeles.SelectedItems.Length == 0)
+            {
+                for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
+                {
 
-            for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
+                    tblRendeles.TableModel.Selections.AddCell(i, 0);
+                }
+            }
+
+            MMPartnerek mp = new MMPartnerek();
+            mp.SelectMode = true;
+            mp.neededHitel = selectionFizetendo();
+
+            mp.ShowDialog();
+            if (mp.DialogResult == DialogResult.OK)
             {
 
+                foreach (var r in tblRendeles.SelectedItems)
+                {
+                    SetHitel(mp.SelectedPartner.PARTNER_ID,((eCell)r.Cells[0]).rSor._SOR_ID);
+                }
+                
 
-                tblRendeles.TableModel.Selections.AddCell(i, 0);
             }
-            
-        }
 
+
+
+        }
+        private void SetHitel(int partner_id, int sor_id)
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmdHitelToPartner = new SqlCommand("sp_addRendeles_to_Hitel", c);
+            cmdHitelToPartner.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdHitelToPartner.Parameters.Add("@p_partner_id", SqlDbType.Int);
+            cmdHitelToPartner.Parameters["@p_partner_id"].Direction = ParameterDirection.Input;
+            cmdHitelToPartner.Parameters["@p_partner_id"].Value = partner_id;
+
+            cmdHitelToPartner.Parameters.Add("@rendel_sor_id", SqlDbType.Int);
+            cmdHitelToPartner.Parameters["@rendel_sor_id"].Direction = ParameterDirection.Input;
+            cmdHitelToPartner.Parameters["@rendel_sor_id"].Value = sor_id;
+            
+
+            c.Open();
+            cmdHitelToPartner.ExecuteNonQuery();
+            c.Close();
+        }
 
 
 

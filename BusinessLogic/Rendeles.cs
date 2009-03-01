@@ -135,7 +135,7 @@ namespace BusinessLogic
 
             cmd.CommandText = "SELECT c.MEGNEVEZES,sum(s.DB) as DB, sum(s.ERTEK) as ERTEK FROM RENDELES_SOR s " +
                                 " inner join CIKK c on s.CIKK_Id = c.CIKK_ID " +
-                                " WHERE DELETED = 0 AND RENDELES_ID =" + this.fRENDELES_ID.ToString() +" " +
+                                " WHERE DELETED = 0 AND isnull(FIZETVE,0) = 0 AND RENDELES_ID =" + this.fRENDELES_ID.ToString() +" " +
                                 " group by c.MEGNEVEZES" ;
             SqlDataReader rdr = cmd.ExecuteReader();
 
@@ -203,7 +203,7 @@ namespace BusinessLogic
 
                 cmd.CommandType = CommandType.Text;
 
-                cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE DELETED = 0 AND RENDELES_ID =" + pRendeles_id.ToString();
+                cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE DELETED = 0 AND isnull(FIZETVE,0) = 0 AND RENDELES_ID =" + pRendeles_id.ToString();
 
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read())
@@ -345,7 +345,7 @@ namespace BusinessLogic
 
     public class RendelesSor
     {
-        private int _SOR_ID;
+        public int _SOR_ID;
         public Cikk _Cikk;
         public double _db;
         public double _Ertek;
@@ -418,6 +418,8 @@ namespace BusinessLogic
 
         public void SaveSor(int pRendelesId)
         {
+
+            int new_p_id = _SOR_ID;
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
 
@@ -445,7 +447,9 @@ namespace BusinessLogic
                                             ",@DB " +
                                             ",@DATUM " +
                                             ",@RAKTAR_ID " +
-                                            ",@ERTEK)";
+                                            ",@ERTEK) SET @newid = SCOPE_IDENTITY()";
+                        cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
+                        cmd.Parameters["newid"].Direction = ParameterDirection.Output;
 
                         break;
                     }
@@ -485,6 +489,13 @@ namespace BusinessLogic
             {
                 DEFS.SendSaveErrMessage("Hiba a rendelés sorok mentése közben!" + _SOR_ID.ToString() + e.Message + "\n" + e.StackTrace) ;
             }
+
+            if (_SOR_ID == -1)
+            {
+                new_p_id = (int)cmd.Parameters["newid"].Value;
+                _SOR_ID = new_p_id;
+            }
+
             c.Close();
 
 

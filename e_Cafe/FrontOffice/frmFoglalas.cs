@@ -29,6 +29,9 @@ namespace e_Cafe.FrontOffice
             // TODO: This line of code loads data into the 'dsFOGLALAS.FOGLALAS' table. You can move, or remove it, as needed.
             this.fOGLALASTableAdapter.Fill(this.dsFOGLALAS.FOGLALAS,aFoglal.fASZTAL_ID);
             lblAsztal.Text = aFoglal.fASZTAL_SZAM + " " + "\n" + "ASZTAL";
+
+            
+
         }
 
         private void txtTolM_TextChanged(object sender, EventArgs e)
@@ -116,5 +119,32 @@ namespace e_Cafe.FrontOffice
 
             }
         }
+
+        private void frmFoglalas_LocationChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripHour_Click(object sender, EventArgs e)
+        {
+            cmHourSelector.SourceControl.Text = ((ToolStripMenuItem)sender).Text;
+        }
+
+        private void txtTolH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTolH_Click(object sender, EventArgs e)
+        {
+            cmHourSelector.Show(txtTolH, new Point(10, 10));
+        }
+
+        private void txtIgH_Click(object sender, EventArgs e)
+        {
+            cmHourSelector.Show(txtIgH, new Point(10, 10));
+        }
+
+
     }
 }

@@ -112,7 +112,7 @@ namespace BusinessLogic
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "SELECT a.ASZTAL_ID, a.ASZTAL_SZAM, a.ASZTAL_TIPUS_ID, a.ASZTAL_POS_X, a.ASZTAL_POS_Y, " +
-                    " a.ASZTAL_ROTATE, isnull((select max(RENDELES_ID) from RENDELES_FEJ where ASZTAL_ID = a.ASZTAL_ID),-1) as RENDELES_ID " +
+                    " a.ASZTAL_ROTATE, isnull((select max(RENDELES_ID) from RENDELES_FEJ f where f.ASZTAL_ID = a.ASZTAL_ID and isnull(f.FIZETVE,0) = 0 and isnull(AKTIV,1) = 1 ),-1) as RENDELES_ID  " +
                     " FROM ASZTAL a WHERE a.HELY_ID =" + aHelyId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();

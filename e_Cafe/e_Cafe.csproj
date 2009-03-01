@@ -120,6 +120,12 @@
     <Compile Include="Admin\AdminTools.Designer.cs">
       <DependentUpon>AdminTools.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontOffice\frmPartnerValaszt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\frmPartnerValaszt.Designer.cs">
+      <DependentUpon>frmPartnerValaszt.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL\dsFOGLALAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -230,22 +236,22 @@
     <Compile Include="frmBevetelSor.Designer.cs">
       <DependentUpon>frmBevetelSor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FrontOffice\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="FrontOffice\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPartnerInsert.cs">
+    <Compile Include="FrontOffice\frmPartnerInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPartnerInsert.Designer.cs">
+    <Compile Include="FrontOffice\frmPartnerInsert.Designer.cs">
       <DependentUpon>frmPartnerInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShadowLayer.cs">
+    <Compile Include="FrontOffice\frmShadowLayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShadowLayer.Designer.cs">
+    <Compile Include="FrontOffice\frmShadowLayer.Designer.cs">
       <DependentUpon>frmShadowLayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Keszlet\frmAtvezetes.cs">
@@ -254,10 +260,10 @@
     <Compile Include="Keszlet\frmAtvezetes.Designer.cs">
       <DependentUpon>frmAtvezetes.cs</DependentUpon>
     </Compile>
-    <Compile Include="MMPartnerek.cs">
+    <Compile Include="FrontOffice\MMPartnerek.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MMPartnerek.Designer.cs">
+    <Compile Include="FrontOffice\MMPartnerek.Designer.cs">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
     </Compile>
     <Compile Include="PartnerSelector.cs">
@@ -290,10 +296,10 @@
     <Compile Include="Torzsek\frmCikkcsoport.Designer.cs">
       <DependentUpon>frmCikkcsoport.cs</DependentUpon>
     </Compile>
-    <Compile Include="MRendeles.cs">
+    <Compile Include="FrontOffice\MRendeles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MRendeles.Designer.cs">
+    <Compile Include="FrontOffice\MRendeles.Designer.cs">
       <DependentUpon>MRendeles.cs</DependentUpon>
     </Compile>
     <Compile Include="OtherImages.Designer.cs">
@@ -401,6 +407,9 @@
     <EmbeddedResource Include="FrontOffice\frmFoglalas.resx">
       <DependentUpon>frmFoglalas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrontOffice\frmPartnerValaszt.resx">
+      <DependentUpon>frmPartnerValaszt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\Bevetelezes.resx">
       <DependentUpon>Bevetelezes.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -416,21 +425,21 @@
       <DependentUpon>frmBevetelSor.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="FrontOffice\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPartnerInsert.resx">
+    <EmbeddedResource Include="FrontOffice\frmPartnerInsert.resx">
       <DependentUpon>frmPartnerInsert.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShadowLayer.resx">
+    <EmbeddedResource Include="FrontOffice\frmShadowLayer.resx">
       <DependentUpon>frmShadowLayer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmAtvezetes.resx">
       <DependentUpon>frmAtvezetes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MMPartnerek.resx">
+    <EmbeddedResource Include="FrontOffice\MMPartnerek.resx">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -454,7 +463,7 @@
       <DependentUpon>frmCikkcsoport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MRendeles.resx">
+    <EmbeddedResource Include="FrontOffice\MRendeles.resx">
       <DependentUpon>MRendeles.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -806,6 +815,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pipaon.png" />
+    <None Include="SQL\update_007.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -39,8 +39,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.vevoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.NemSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,7 +68,6 @@
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -173,6 +174,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.textBox3);
             this.panel11.Controls.Add(this.dateTimePicker1);
             this.panel11.Controls.Add(this.textBox10);
@@ -204,6 +206,33 @@
             this.panel11.TabIndex = 17;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "HITEL_SZABAD", true));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.Location = new System.Drawing.Point(407, 349);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 15);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "label12";
+            // 
+            // vevoBindingSource
+            // 
+            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "P_NEV3", true));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox3.Location = new System.Drawing.Point(78, 73);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(313, 25);
+            this.textBox3.TabIndex = 3;
+            this.textBox3.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.textBox3.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vevoBindingSource, "SZULETESNAP", true));
@@ -215,10 +244,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(111, 20);
             this.dateTimePicker1.TabIndex = 15;
             this.dateTimePicker1.Value = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
-            // 
-            // vevoBindingSource
-            // 
-            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
             // 
             // textBox10
             // 
@@ -461,18 +486,6 @@
             this.lineShape1.Y1 = 115;
             this.lineShape1.Y2 = 381;
             // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "P_NEV3", true));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(78, 73);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(313, 25);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Click += new System.EventHandler(this.txt_to_keyboard_Click);
-            this.textBox3.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
-            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
@@ -625,6 +638,7 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label12;
 
     }
 }

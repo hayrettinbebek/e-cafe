@@ -95,7 +95,7 @@ namespace e_Cafe
             int db_ver = DEFS.GetDBVER();
             MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 5)
+            if (db_ver < 7)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)

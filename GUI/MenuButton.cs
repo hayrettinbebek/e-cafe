@@ -142,11 +142,26 @@ namespace GUI
         Font f1 = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
         Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 
-        private Label lKeszlet;
+       // private Label lKeszlet;
         private Label lKeszletOther;
         private Label lMegnevezes;
         private Label lKiszereles;
         private Label lAr;
+
+        public ImageList CIml
+        {
+            get { return (ImageList); }
+            set
+            {
+                ImageList = value;
+
+                BackgroundImage = ImageList.Images[0];
+                BackgroundImageLayout = ImageLayout.Stretch;
+
+
+            }
+
+        }
 
 
         public Cikk fCIKK
@@ -157,9 +172,9 @@ namespace GUI
                 _Cikk = value;
                 lMegnevezes.Text = value.MEGNEVEZES;
                 lKiszereles.Text = value.KISZ_MEGN;
-                lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
+               // lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
                 lKeszletOther.Text = value.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
-                lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
+                //lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
                 lAr.Text = value.ELADASI_AR.ToString("0.00", CultureInfo.InvariantCulture);
 
                 
@@ -170,10 +185,10 @@ namespace GUI
         {
             lMegnevezes.Text = _Cikk.MEGNEVEZES;
             lKiszereles.Text = _Cikk.KISZ_MEGN;
-            lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
+            //lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
             lKeszletOther.Text = _Cikk.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
-            lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
-            lAr.Text = "250 .-";
+            //lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
+            lAr.Text = _Cikk.ELADASI_AR.ToString("0.00", CultureInfo.InvariantCulture);
         }
 
         protected void OnLabelClick(object sender, EventArgs e)
@@ -196,23 +211,24 @@ namespace GUI
 			hdl = this.Handle.ToInt32() ;
 			// Set the Window Region to a a Rectangle with rounded corners
 			SetWindowRgn( hdl , rg , 1 ) ;
+            
             FlatAppearance.BorderSize = 0;
             FlatStyle = FlatStyle.Flat;
 
             BackColor = Color.Gray;
 
-            lKeszlet = new Label();
-            lKeszlet.Width = 50;
-            lKeszlet.Height = 20;
-            lKeszlet.BackColor = Color.DarkRed;
-            lKeszlet.Location = new Point(40, 0);
-            lKeszlet.Click += this.OnLabelClick;
-            this.Controls.Add(lKeszlet);
+            //lKeszlet = new Label();
+            //lKeszlet.Width = 50;
+            //lKeszlet.Height = 20;
+            //lKeszlet.BackColor = Color.DarkRed;
+            //lKeszlet.Location = new Point(40, 0);
+            //lKeszlet.Click += this.OnLabelClick;
+            //this.Controls.Add(lKeszlet);
 
             lKeszletOther = new Label();
             lKeszletOther.Width = 50;
             lKeszletOther.Height = 20;
-            lKeszletOther.BackColor = Color.DarkGreen;
+            lKeszletOther.BackColor = Color.Transparent;
             lKeszletOther.Location = new Point(90, 0);
             lKeszletOther.Click += this.OnLabelClick;
             this.Controls.Add(lKeszletOther);
