@@ -305,6 +305,7 @@
             this.btnLevelek.Size = new System.Drawing.Size(70, 75);
             this.btnLevelek.TabIndex = 7;
             this.btnLevelek.UseVisualStyleBackColor = false;
+            this.btnLevelek.Click += new System.EventHandler(this.btnLevelek_Click);
             // 
             // btnReceptek
             // 

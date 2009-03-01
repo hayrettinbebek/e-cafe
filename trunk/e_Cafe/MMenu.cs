@@ -34,10 +34,7 @@ namespace e_Cafe
 
         
 
-        public string DebugMessage
-        {
-            set { label1.Text = value; }
-        }
+
 
 
         public MMenu()
@@ -95,7 +92,7 @@ namespace e_Cafe
             int db_ver = DEFS.GetDBVER();
             MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 7)
+            if (db_ver < 9)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -110,6 +107,9 @@ namespace e_Cafe
                     if (db_ver < 4) { updateDB(new FileInfo(tmpp + @"\SQL\update_004.sql")); }
                     if (db_ver < 5) { updateDB(new FileInfo(tmpp + @"\SQL\update_005.sql")); }
                     if (db_ver < 6) { updateDB(new FileInfo(tmpp + @"\SQL\update_006.sql")); }
+                    if (db_ver < 7) { updateDB(new FileInfo(tmpp + @"\SQL\update_007.sql")); }
+                    if (db_ver < 8) { updateDB(new FileInfo(tmpp + @"\SQL\update_008.sql")); }
+                    if (db_ver < 9) { updateDB(new FileInfo(tmpp + @"\SQL\update_009.sql")); }
                     updateDB(new FileInfo(tmpp + @"\SQL\END.sql"));
                     DEFS.SendInfoMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
                                 "\n" + "(Adminisztrátor:Support:Logok beküldése)");
@@ -309,8 +309,7 @@ namespace e_Cafe
                         a.aList.SelectAsztal(tmp_a.Asztal_id);
                         tmp_a.vSelected = true;
 
-                        DebugMessage = tmp_a.Asztal_id.ToString() + tmp_a.vSelected.ToString();
-
+                   
                         MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id), blObj);
                         mr.ShowDialog();
                         a.RefreshAsztalok(true);
@@ -401,7 +400,7 @@ namespace e_Cafe
         {
             TouchKeyboard tk = new TouchKeyboard();
             tk.ShowDialog();
-            textBox1.Text = tk.txtRet.Text;
+            
         }
 
         private void btnPartnerek_Click(object sender, EventArgs e)
@@ -410,6 +409,12 @@ namespace e_Cafe
             
             f.ShowDialog();
 
+        }
+
+        private void btnLevelek_Click(object sender, EventArgs e)
+        {
+            frmUzenetek fu = new frmUzenetek();
+            fu.ShowDialog();
         }
 
 
