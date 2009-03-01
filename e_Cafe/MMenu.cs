@@ -109,7 +109,7 @@ namespace e_Cafe
                     if (db_ver < 3) { updateDB(new FileInfo(tmpp + @"\SQL\update_003.sql")); }
                     if (db_ver < 4) { updateDB(new FileInfo(tmpp + @"\SQL\update_004.sql")); }
                     if (db_ver < 5) { updateDB(new FileInfo(tmpp + @"\SQL\update_005.sql")); }
-
+                    if (db_ver < 6) { updateDB(new FileInfo(tmpp + @"\SQL\update_006.sql")); }
                     updateDB(new FileInfo(tmpp + @"\SQL\END.sql"));
                     DEFS.SendInfoMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
                                 "\n" + "(Adminisztrátor:Support:Logok beküldése)");
