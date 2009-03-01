@@ -126,6 +126,12 @@
     <Compile Include="FrontOffice\frmPartnerValaszt.Designer.cs">
       <DependentUpon>frmPartnerValaszt.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontOffice\frmReporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\frmReporting.Designer.cs">
+      <DependentUpon>frmReporting.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL\dsFOGLALAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -409,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmPartnerValaszt.resx">
       <DependentUpon>frmPartnerValaszt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontOffice\frmReporting.resx">
+      <DependentUpon>frmReporting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\Bevetelezes.resx">
       <DependentUpon>Bevetelezes.cs</DependentUpon>
@@ -815,6 +824,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pipaon.png" />
+    <None Include="SQL\update_009.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\update_008.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SQL\update_007.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

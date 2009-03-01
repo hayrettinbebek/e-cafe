@@ -12,7 +12,13 @@ using NSpring.Logging.EventFormatters;
 
 namespace BusinessLogic
 {
-
+    public enum Fizmond : int
+    {
+        Keszpenz = 1, 
+        Bankkartya = 2, 
+        Utalvany = 3, 
+        egyeb = 4 
+    }
     
     public abstract class DEFS
     {

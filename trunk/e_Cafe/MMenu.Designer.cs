@@ -51,15 +51,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPartnerek = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnLevelek = new System.Windows.Forms.Button();
             this.btnReceptek = new System.Windows.Forms.Button();
             this.btnFoglalas = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnKilep = new System.Windows.Forms.Button();
             this.btnKijelent = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -192,15 +189,12 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnPartnerek);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.btnLevelek);
             this.panel1.Controls.Add(this.btnReceptek);
             this.panel1.Controls.Add(this.btnFoglalas);
-            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.btnKilep);
             this.panel1.Controls.Add(this.btnKijelent);
             this.panel1.Controls.Add(this.btnAdmin);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 470);
             this.panel1.Name = "panel1";
@@ -299,14 +293,6 @@
             this.btnPartnerek.UseVisualStyleBackColor = false;
             this.btnPartnerek.Click += new System.EventHandler(this.btnPartnerek_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            // 
             // btnLevelek
             // 
             this.btnLevelek.BackColor = System.Drawing.Color.Transparent;
@@ -347,16 +333,6 @@
             this.btnFoglalas.Size = new System.Drawing.Size(70, 75);
             this.btnFoglalas.TabIndex = 7;
             this.btnFoglalas.UseVisualStyleBackColor = false;
-            
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "h:mm:ss";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 41);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(174, 20);
-            this.dateTimePicker1.TabIndex = 6;
             // 
             // btnKilep
             // 
@@ -386,7 +362,6 @@
             this.btnKijelent.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnKijelent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnKijelent.UseVisualStyleBackColor = false;
-            
             // 
             // btnAdmin
             // 
@@ -403,15 +378,6 @@
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
             // 
             // MMenu
             // 
@@ -445,7 +411,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Timer tmrTime;
         private System.Windows.Forms.Button btnAdmin;
-        public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button lblTime;
 
@@ -454,9 +419,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel pnlHelyek;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton btnFoglalas;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPartnerek;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

@@ -78,5 +78,11 @@ namespace e_Cafe
         {
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
+        }
     }
 }

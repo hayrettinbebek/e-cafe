@@ -75,6 +75,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
             this.pnlKeyb.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -174,6 +176,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.label13);
             this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.textBox3);
             this.panel11.Controls.Add(this.dateTimePicker1);
@@ -211,7 +214,7 @@
             this.label12.AutoSize = true;
             this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "HITEL_SZABAD", true));
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.Location = new System.Drawing.Point(407, 349);
+            this.label12.Location = new System.Drawing.Point(405, 349);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 15);
             this.label12.TabIndex = 16;
@@ -514,6 +517,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.Controls.Add(this.button12);
             this.panel9.Controls.Add(this.textBox4);
             this.panel9.Controls.Add(this.label2);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -557,6 +561,29 @@
             // dynComboBindingSource
             // 
             this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(348, 351);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Egyenleg";
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(549, 7);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(31, 32);
+            this.button12.TabIndex = 6;
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // frmPartnerInsert
             // 
@@ -639,6 +666,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button12;
 
     }
 }

@@ -501,7 +501,7 @@ BEGIN
 
 	if ((@new_Fizetve = 1) and (@old_Fizetve = 0)) begin
 	
-		if not exists(SELECT '' FROM RENDELES_SOR s inner join inserted i on s.RENDELES_ID = i.RENDELES_ID where isnull(s.DELETED,0) = 0 and isnull(s.FIZETVE,0) = 0) begin
+		if not exists(SELECT '' FROM RENDELES_SOR s inner join inserted i on s.RENDELES_ID = i.RENDELES_ID and s.sor_id <> i.sor_id  where isnull(s.DELETED,0) = 0 and isnull(s.FIZETVE,0) = 0) begin
 
 			update RENDELES_FEJ SET FIZETVE = 1 FROM RENDELES_FEJ f inner join inserted i on f.RENDELES_ID = i.RENDELES_ID
 
@@ -515,6 +515,9 @@ BEGIN
 	left join rendeles_sor s on f.rendeles_id = s.rendeles_id and isnull(s.DELETED,0) = 0
 	where s.sor_id is null
 
+	update KESZLET_SOR SET MOZGAS_TIPUS = 'EK'
+	from KESZLET_SOR s
+	inner join inserted r on s.rendeles_id = r.sor_id and isnull(r.CANCELED,0) = 1
 
 END
 
@@ -644,3 +647,98 @@ BEGIN
 		
 
 END
+
+GO
+-- =============================================
+-- Author:		László Ernõ
+-- Create date: 2009.03.01
+-- Description:	Sorszámok osztása
+-- =============================================
+CREATE PROCEDURE SP_GET_SORSZAM
+	-- Add the parameters for the stored procedure here
+	@TYPE varchar(10),
+	@SZAM int output
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	
+	SELECT @SZAM = COUNTER+1 from _SORSZAM s WHERE s.TYPE = @TYPE
+	
+	UPDATE _SORSZAM  SET COUNTER = @SZAM WHERE [TYPE] = @TYPE
+
+END
+
+GO
+
+-- =============================================
+-- Author:		László Ernõ
+-- Create date: 2009.03.01
+-- Description:	Számla készítés
+-- =============================================
+CREATE PROCEDURE sp_create_szamla_fej
+	-- Add the parameters for the stored procedure here
+	@p_partner_id int,
+	@p_rendeles_id int,
+	@p_fizmod int,
+	@o_szamla_id int output
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	declare @i_srsz int
+
+	exec SP_GET_SORSZAM 'SZLA',@i_srsz output
+
+	declare @a_ev int,
+			@a_ho int,
+			@a_nap int
+
+	execute getnyitottNap @a_ev out, @a_ho out, @a_nap out
+
+ INSERT INTO SZAMLA_FEJ (SZAMLA_SORSZAM, PARTNER_ID, RENDELES_ID, 
+						OSSZESEN_NETTO, OSSZESEN_BRUTTO, OSSZESEN_AFA, KEDVEZMENY, 
+						FIZETETT_OSSZEG, FIZETESI_MOD, SZAMLA_DATUMA, EV, HO, NAP)
+     VALUES
+           (@i_srsz, @p_partner_id, @p_rendeles_id, 
+						0, 0, 0, 0, 
+						0, @p_fizmod, getdate(), @a_ev, @a_ho, @a_nap)   
+
+
+SET @o_szamla_id = SCOPE_IDENTITY()
+
+END
+GO
+
+-- =============================================
+-- Author:		László Ernõ
+-- Create date: 2009.03.01
+-- Description:	Számla tételek beszúrása
+-- =============================================
+CREATE PROCEDURE sp_add_szamla_tetel
+	-- Add the parameters for the stored procedure here
+	@p_szamla_fej_id int,
+	@p_rendeles_sor_id int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	INSERT INTO SZAMLA_TETEL
+			   (RENDELES_SOR_ID, CIKK_ID, MENNYISEG, EGYSEGAR, NETTO, AFA, 
+				BRUTTO, AFA_KOD, MEGJEGYZES, CIKK_MEGNEVEZES, SZAMLA_FEJ_ID)
+		 SELECT s.SOR_ID, s.CIKK_ID, s.DB, s.ERTEK, s.DB*s.ERTEK, s.DB*s.ERTEK*(a.AFA_ERTEK/100), 
+				s.DB*s.ERTEK*(1+ (a.AFA_ERTEK/100)), cs.AFA_KOD, '', c.MEGNEVEZES, @p_szamla_fej_id
+		FROM RENDELES_SOR s
+			inner join CIKK c on s.CIKK_ID = c.CIKK_ID
+			inner join CIKKCSOPORT cs on c.CIKKCSOPORT_ID = cs.CIKKCSOPORT_ID
+			inner join AFA a on cs.AFA_KOD = a.AFA_KOD
+		where s.SOR_ID = @p_rendeles_sor_id
+
+	UPDATE RENDELES_SOR SET FIZETVE = 1 WHERE SOR_ID =@p_rendeles_sor_id
+END
+GO

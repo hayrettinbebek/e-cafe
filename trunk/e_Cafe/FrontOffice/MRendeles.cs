@@ -14,7 +14,7 @@ using System.Data.SqlClient;
 using XPTable;
 using XPTable.Models;
 using XPTable.Renderers;
-
+using e_Cafe.FrontOffice;
 using NSpring.Logging;
 
 namespace e_Cafe
@@ -455,13 +455,16 @@ namespace e_Cafe
                 {
                     SetHitel(mp.SelectedPartner.PARTNER_ID,((eCell)r.Cells[0]).rSor._SOR_ID);
                 }
+                DEFS.DebugLog("Rendelés hitellel fizetve");
                 
 
             }
+            this.Close();
 
 
 
         }
+
         private void SetHitel(int partner_id, int sor_id)
         {
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
@@ -482,8 +485,144 @@ namespace e_Cafe
             c.Close();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tblRendeles.SelectedItems.Length == 0)
+            {
+                for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
+                {
 
+                    tblRendeles.TableModel.Selections.AddCell(i, 0);
+                }
+            }
+            foreach (var r in tblRendeles.SelectedItems)
+            {
+                ((eCell)r.Cells[0]).rSor.StornoSor();
+            }
+            _AktRendeles.SaveRendeles();
+            _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
 
+            initRendelTabla();
+            DEFS.DebugLog("Rendelés sztornózva");
+            this.Close();
+        }
+
+        #region Számlázás
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Fizetes((int)Fizmond.Keszpenz);
+        }
+
+        private void Fizetes(int fizmod)
+        {
+            int szamla_fej_id = -1;
+            if (tblRendeles.SelectedItems.Length == 0)
+            {
+                for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
+                {
+
+                    tblRendeles.TableModel.Selections.AddCell(i, 0);
+                }
+            }
+
+            MMPartnerek mp = new MMPartnerek();
+            mp.SelectMode = true;
+            mp.neededHitel = 0;
+
+            mp.ShowDialog();
+            if (mp.DialogResult == DialogResult.OK)
+            {
+                // KP-s fizetés
+                szamla_fej_id = GenerateSzamlaFej(mp.SelectedPartner.PARTNER_ID, _AktRendeles.fRENDELES_ID, fizmod);
+                if (szamla_fej_id != -1)
+                {
+                    foreach (var r in tblRendeles.SelectedItems)
+                    {
+                        AddSzlaTetel(szamla_fej_id, ((eCell)r.Cells[0]).rSor._SOR_ID);
+                    }
+                    DEFS.DebugLog("Rendelés fizetve");
+
+                }
+            }
+            frmReporting rep = new frmReporting();
+            rep.ShowDialog();
+
+            
+
+        }
+
+        private int GenerateSzamlaFej(int partner_id, int rendeles_id, int p_fizmod)
+        {
+           
+	        int retval = -1;
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmdGenSzlaFej = new SqlCommand("sp_create_szamla_fej", c);
+            cmdGenSzlaFej.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdGenSzlaFej.Parameters.Add("@p_partner_id", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@p_partner_id"].Direction = ParameterDirection.Input;
+            cmdGenSzlaFej.Parameters["@p_partner_id"].Value = partner_id;
+
+            cmdGenSzlaFej.Parameters.Add("@p_rendeles_id", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@p_rendeles_id"].Direction = ParameterDirection.Input;
+            cmdGenSzlaFej.Parameters["@p_rendeles_id"].Value = rendeles_id;
+
+            cmdGenSzlaFej.Parameters.Add("@p_fizmod", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@p_fizmod"].Direction = ParameterDirection.Input;
+            cmdGenSzlaFej.Parameters["@p_fizmod"].Value = p_fizmod;
+
+            cmdGenSzlaFej.Parameters.Add("@o_szamla_id", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@o_szamla_id"].Direction = ParameterDirection.Output;
+            
+
+            c.Open();
+            cmdGenSzlaFej.ExecuteNonQuery();
+
+            retval = (int)cmdGenSzlaFej.Parameters["@o_szamla_id"].Value;
+
+            c.Close();
+
+            return (retval);
+        }
+
+        private void AddSzlaTetel(int szla_fej_id, int sor_id)
+        {
+
+           
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmdAddSzlaTetel = new SqlCommand("sp_add_szamla_tetel", c);
+            cmdAddSzlaTetel.CommandType = System.Data.CommandType.StoredProcedure;
+
+           
+            cmdAddSzlaTetel.Parameters.Add("@p_szamla_fej_id", SqlDbType.Int);
+            cmdAddSzlaTetel.Parameters["@p_szamla_fej_id"].Direction = ParameterDirection.Input;
+            cmdAddSzlaTetel.Parameters["@p_szamla_fej_id"].Value = szla_fej_id;
+
+            cmdAddSzlaTetel.Parameters.Add("@p_rendeles_sor_id", SqlDbType.Int);
+            cmdAddSzlaTetel.Parameters["@p_rendeles_sor_id"].Direction = ParameterDirection.Input;
+            cmdAddSzlaTetel.Parameters["@p_rendeles_sor_id"].Value = sor_id;
+
+ 
+            c.Open();
+            cmdAddSzlaTetel.ExecuteNonQuery();
+
+        
+
+            c.Close();
+
+           
+        }
+
+        
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Fizetes((int)Fizmond.Utalvany);
+        }
+
+        #endregion
 
 
 
