@@ -347,7 +347,7 @@
             this.btnFoglalas.Size = new System.Drawing.Size(70, 75);
             this.btnFoglalas.TabIndex = 7;
             this.btnFoglalas.UseVisualStyleBackColor = false;
-            this.btnFoglalas.CheckedChanged += new System.EventHandler(this.btnFoglalas_CheckedChanged);
+            
             // 
             // dateTimePicker1
             // 
@@ -386,7 +386,7 @@
             this.btnKijelent.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnKijelent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnKijelent.UseVisualStyleBackColor = false;
-            this.btnKijelent.Click += new System.EventHandler(this.button6_Click);
+            
             // 
             // btnAdmin
             // 

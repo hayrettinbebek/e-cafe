@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ECAFEDataSetCIKK" targetNamespace="http://tempuri.org/ECAFEDataSetCIKK.xsd" xmlns:mstns="http://tempuri.org/ECAFEDataSetCIKK.xsd" xmlns="http://tempuri.org/ECAFEDataSetCIKK.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ECAFEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ECAFEConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.e_Cafe.Properties.Settings.GlobalReference.Default.ECAFEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CIKKTableAdapter" GeneratorDataComponentClassName="CIKKTableAdapter" Name="CIKK" UserDataComponentName="CIKKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ECAFEConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select CIKK_ID, MEGNEVEZES,ERTEKESITES_TIPUSA,	
+	case when CIKK_TIPUS= 1 then 'Összetett' else 'Normál' end as CIKK_TIPUS,
+	cs.CIKKCSOPORT_NEV as CIKKCSOPORT,
+    case when ERTEKESITES_TIPUSA= 'D' then 'Darab' else 'Folyó' end as ERT_TIPUS,
+	m.MEGYS_MEGNEVEZES,
+	o.OTHER_NAME as ALCSOPORT,
+r.RAKTAR_KOD, 
+SZJ_SZAM, 
+CIKKSZAM, 
+EAN_KOD, 
+MINIMUM_KESZLET, 
+OPTIMALIS_KESZLET, 
+ELADASI_AR, 
+HELYETTES_TERMEK, MAX_KEDVEZMENY_SZ, MAX_KEDVEZM_FT, MEGJEGYZES, 
+AKTIV, GYORSKOD 
+from cikk c
+left join cikkcsoport cs on c.cikkcsoport_id = cs.cikkcsoport_id
+left join MEGYS m on c.MEGYS_ID = m.MEGYS_ID
+left join CIKCSOP_OTHER_FILTER o on c.OTHER_FILTER_ID = o.OTHER_FILTER_ID
+left join RAKTaR r on c.DEFAULT_RAKTAR = r.RAKTAR_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MEGNEVEZES" DataSetColumn="MEGNEVEZES" />
+              <Mapping SourceColumn="SZJ_SZAM" DataSetColumn="SZJ_SZAM" />
+              <Mapping SourceColumn="CIKKSZAM" DataSetColumn="CIKKSZAM" />
+              <Mapping SourceColumn="EAN_KOD" DataSetColumn="EAN_KOD" />
+              <Mapping SourceColumn="MINIMUM_KESZLET" DataSetColumn="MINIMUM_KESZLET" />
+              <Mapping SourceColumn="OPTIMALIS_KESZLET" DataSetColumn="OPTIMALIS_KESZLET" />
+              <Mapping SourceColumn="ELADASI_AR" DataSetColumn="ELADASI_AR" />
+              <Mapping SourceColumn="HELYETTES_TERMEK" DataSetColumn="HELYETTES_TERMEK" />
+              <Mapping SourceColumn="MAX_KEDVEZMENY_SZ" DataSetColumn="MAX_KEDVEZMENY_SZ" />
+              <Mapping SourceColumn="MAX_KEDVEZM_FT" DataSetColumn="MAX_KEDVEZM_FT" />
+              <Mapping SourceColumn="MEGJEGYZES" DataSetColumn="MEGJEGYZES" />
+              <Mapping SourceColumn="AKTIV" DataSetColumn="AKTIV" />
+              <Mapping SourceColumn="CIKK_TIPUS" DataSetColumn="CIKK_TIPUS" />
+              <Mapping SourceColumn="CIKKCSOPORT" DataSetColumn="CIKKCSOPORT" />
+              <Mapping SourceColumn="ERT_TIPUS" DataSetColumn="ERT_TIPUS" />
+              <Mapping SourceColumn="MEGYS_MEGNEVEZES" DataSetColumn="MEGYS_MEGNEVEZES" />
+              <Mapping SourceColumn="ALCSOPORT" DataSetColumn="ALCSOPORT" />
+              <Mapping SourceColumn="RAKTAR_KOD" DataSetColumn="RAKTAR_KOD" />
+              <Mapping SourceColumn="GYORSKOD" DataSetColumn="GYORSKOD" />
+              <Mapping SourceColumn="CIKK_ID" DataSetColumn="CIKK_ID" />
+              <Mapping SourceColumn="ERTEKESITES_TIPUSA" DataSetColumn="ERTEKESITES_TIPUSA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LIT_KISZTableAdapter" GeneratorDataComponentClassName="LIT_KISZTableAdapter" Name="LIT_KISZ" UserDataComponentName="LIT_KISZTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ECAFEConnectionString (Settings)" DbObjectName="ECAFE.dbo.LIT_KISZ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [LIT_KISZ] WHERE (([LIT_KISZ_ID] = @Original_LIT_KISZ_ID) AND ((@IsNull_LIT_KISZ_CIKK_ID = 1 AND [LIT_KISZ_CIKK_ID] IS NULL) OR ([LIT_KISZ_CIKK_ID] = @Original_LIT_KISZ_CIKK_ID)) AND ((@IsNull_LIT_KISZ_NEV = 1 AND [LIT_KISZ_NEV] IS NULL) OR ([LIT_KISZ_NEV] = @Original_LIT_KISZ_NEV)) AND ((@IsNull_LIT_KISZ_MENNY = 1 AND [LIT_KISZ_MENNY] IS NULL) OR ([LIT_KISZ_MENNY] = @Original_LIT_KISZ_MENNY)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LIT_KISZ_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LIT_KISZ_CIKK_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_CIKK_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LIT_KISZ_CIKK_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_CIKK_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LIT_KISZ_NEV" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_NEV" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_LIT_KISZ_NEV" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="LIT_KISZ_NEV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LIT_KISZ_MENNY" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_MENNY" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_LIT_KISZ_MENNY" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="LIT_KISZ_MENNY" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [LIT_KISZ] ([LIT_KISZ_CIKK_ID], [LIT_KISZ_NEV], [LIT_KISZ_MENNY]) VALUES (@LIT_KISZ_CIKK_ID, @LIT_KISZ_NEV, @LIT_KISZ_MENNY);
+SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ WHERE (LIT_KISZ_ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LIT_KISZ_CIKK_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_CIKK_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@LIT_KISZ_NEV" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="LIT_KISZ_NEV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@LIT_KISZ_MENNY" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="LIT_KISZ_MENNY" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY
+FROM         LIT_KISZ
+WHERE     (LIT_KISZ_CIKK_ID = @CIKK)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="CIKK" ColumnName="LIT_KISZ_CIKK_ID" DataSourceName="ECAFE.dbo.LIT_KISZ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CIKK" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="LIT_KISZ_CIKK_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [LIT_KISZ] SET [LIT_KISZ_CIKK_ID] = @LIT_KISZ_CIKK_ID, [LIT_KISZ_NEV] = @LIT_KISZ_NEV, [LIT_KISZ_MENNY] = @LIT_KISZ_MENNY WHERE (([LIT_KISZ_ID] = @Original_LIT_KISZ_ID) AND ((@IsNull_LIT_KISZ_CIKK_ID = 1 AND [LIT_KISZ_CIKK_ID] IS NULL) OR ([LIT_KISZ_CIKK_ID] = @Original_LIT_KISZ_CIKK_ID)) AND ((@IsNull_LIT_KISZ_NEV = 1 AND [LIT_KISZ_NEV] IS NULL) OR ([LIT_KISZ_NEV] = @Original_LIT_KISZ_NEV)) AND ((@IsNull_LIT_KISZ_MENNY = 1 AND [LIT_KISZ_MENNY] IS NULL) OR ([LIT_KISZ_MENNY] = @Original_LIT_KISZ_MENNY)));
+SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ WHERE (LIT_KISZ_ID = @LIT_KISZ_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LIT_KISZ_CIKK_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_CIKK_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@LIT_KISZ_NEV" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="LIT_KISZ_NEV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@LIT_KISZ_MENNY" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="LIT_KISZ_MENNY" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LIT_KISZ_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LIT_KISZ_CIKK_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_CIKK_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LIT_KISZ_CIKK_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_CIKK_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LIT_KISZ_NEV" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_NEV" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_LIT_KISZ_NEV" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="LIT_KISZ_NEV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LIT_KISZ_MENNY" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LIT_KISZ_MENNY" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_LIT_KISZ_MENNY" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="LIT_KISZ_MENNY" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="LIT_KISZ_ID" ColumnName="LIT_KISZ_ID" DataSourceName="ECAFE.dbo.LIT_KISZ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@LIT_KISZ_ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="LIT_KISZ_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LIT_KISZ_ID" DataSetColumn="LIT_KISZ_ID" />
+              <Mapping SourceColumn="LIT_KISZ_CIKK_ID" DataSetColumn="LIT_KISZ_CIKK_ID" />
+              <Mapping SourceColumn="LIT_KISZ_NEV" DataSetColumn="LIT_KISZ_NEV" />
+              <Mapping SourceColumn="LIT_KISZ_MENNY" DataSetColumn="LIT_KISZ_MENNY" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ECAFEDataSetCIKK" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ECAFEDataSetCIKK" msprop:Generator_DataSetName="ECAFEDataSetCIKK" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CIKK" msprop:Generator_UserTableName="CIKK" msprop:Generator_RowDeletedName="CIKKRowDeleted" msprop:Generator_RowChangedName="CIKKRowChanged" msprop:Generator_RowClassName="CIKKRow" msprop:Generator_RowChangingName="CIKKRowChanging" msprop:Generator_RowEvArgName="CIKKRowChangeEvent" msprop:Generator_RowEvHandlerName="CIKKRowChangeEventHandler" msprop:Generator_TableClassName="CIKKDataTable" msprop:Generator_TableVarName="tableCIKK" msprop:Generator_RowDeletingName="CIKKRowDeleting" msprop:Generator_TablePropName="CIKK">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MEGNEVEZES" msprop:Generator_UserColumnName="MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGNEVEZESColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SZJ_SZAM" msprop:Generator_UserColumnName="SZJ_SZAM" msprop:Generator_ColumnPropNameInRow="SZJ_SZAM" msprop:Generator_ColumnVarNameInTable="columnSZJ_SZAM" msprop:Generator_ColumnPropNameInTable="SZJ_SZAMColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CIKKSZAM" msprop:Generator_UserColumnName="CIKKSZAM" msprop:Generator_ColumnPropNameInRow="CIKKSZAM" msprop:Generator_ColumnVarNameInTable="columnCIKKSZAM" msprop:Generator_ColumnPropNameInTable="CIKKSZAMColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EAN_KOD" msprop:Generator_UserColumnName="EAN_KOD" msprop:Generator_ColumnPropNameInRow="EAN_KOD" msprop:Generator_ColumnVarNameInTable="columnEAN_KOD" msprop:Generator_ColumnPropNameInTable="EAN_KODColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="28" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MINIMUM_KESZLET" msprop:Generator_UserColumnName="MINIMUM_KESZLET" msprop:Generator_ColumnPropNameInRow="MINIMUM_KESZLET" msprop:Generator_ColumnVarNameInTable="columnMINIMUM_KESZLET" msprop:Generator_ColumnPropNameInTable="MINIMUM_KESZLETColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="OPTIMALIS_KESZLET" msprop:Generator_UserColumnName="OPTIMALIS_KESZLET" msprop:Generator_ColumnPropNameInRow="OPTIMALIS_KESZLET" msprop:Generator_ColumnVarNameInTable="columnOPTIMALIS_KESZLET" msprop:Generator_ColumnPropNameInTable="OPTIMALIS_KESZLETColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="ELADASI_AR" msprop:Generator_UserColumnName="ELADASI_AR" msprop:Generator_ColumnPropNameInRow="ELADASI_AR" msprop:Generator_ColumnVarNameInTable="columnELADASI_AR" msprop:Generator_ColumnPropNameInTable="ELADASI_ARColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="HELYETTES_TERMEK" msprop:Generator_UserColumnName="HELYETTES_TERMEK" msprop:Generator_ColumnPropNameInRow="HELYETTES_TERMEK" msprop:Generator_ColumnVarNameInTable="columnHELYETTES_TERMEK" msprop:Generator_ColumnPropNameInTable="HELYETTES_TERMEKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MAX_KEDVEZMENY_SZ" msprop:Generator_UserColumnName="MAX_KEDVEZMENY_SZ" msprop:Generator_ColumnPropNameInRow="MAX_KEDVEZMENY_SZ" msprop:Generator_ColumnVarNameInTable="columnMAX_KEDVEZMENY_SZ" msprop:Generator_ColumnPropNameInTable="MAX_KEDVEZMENY_SZColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MAX_KEDVEZM_FT" msprop:Generator_UserColumnName="MAX_KEDVEZM_FT" msprop:Generator_ColumnPropNameInRow="MAX_KEDVEZM_FT" msprop:Generator_ColumnVarNameInTable="columnMAX_KEDVEZM_FT" msprop:Generator_ColumnPropNameInTable="MAX_KEDVEZM_FTColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MEGJEGYZES" msprop:Generator_UserColumnName="MEGJEGYZES" msprop:Generator_ColumnPropNameInRow="MEGJEGYZES" msprop:Generator_ColumnVarNameInTable="columnMEGJEGYZES" msprop:Generator_ColumnPropNameInTable="MEGJEGYZESColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AKTIV" msprop:Generator_UserColumnName="AKTIV" msprop:Generator_ColumnVarNameInTable="columnAKTIV" msprop:Generator_ColumnPropNameInRow="AKTIV" msprop:Generator_ColumnPropNameInTable="AKTIVColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CIKK_TIPUS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="CIKK_TIPUS" msprop:Generator_ColumnVarNameInTable="columnCIKK_TIPUS" msprop:Generator_ColumnPropNameInRow="CIKK_TIPUS" msprop:Generator_ColumnPropNameInTable="CIKK_TIPUSColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CIKKCSOPORT" msprop:Generator_UserColumnName="CIKKCSOPORT" msprop:Generator_ColumnVarNameInTable="columnCIKKCSOPORT" msprop:Generator_ColumnPropNameInRow="CIKKCSOPORT" msprop:Generator_ColumnPropNameInTable="CIKKCSOPORTColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ERT_TIPUS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ERT_TIPUS" msprop:Generator_ColumnVarNameInTable="columnERT_TIPUS" msprop:Generator_ColumnPropNameInRow="ERT_TIPUS" msprop:Generator_ColumnPropNameInTable="ERT_TIPUSColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEGYS_MEGNEVEZES" msprop:Generator_UserColumnName="MEGYS_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGYS_MEGNEVEZESColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALCSOPORT" msprop:Generator_UserColumnName="ALCSOPORT" msprop:Generator_ColumnVarNameInTable="columnALCSOPORT" msprop:Generator_ColumnPropNameInRow="ALCSOPORT" msprop:Generator_ColumnPropNameInTable="ALCSOPORTColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RAKTAR_KOD" msprop:Generator_UserColumnName="RAKTAR_KOD" msprop:Generator_ColumnVarNameInTable="columnRAKTAR_KOD" msprop:Generator_ColumnPropNameInRow="RAKTAR_KOD" msprop:Generator_ColumnPropNameInTable="RAKTAR_KODColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GYORSKOD" msprop:Generator_UserColumnName="GYORSKOD" msprop:Generator_ColumnVarNameInTable="columnGYORSKOD" msprop:Generator_ColumnPropNameInRow="GYORSKOD" msprop:Generator_ColumnPropNameInTable="GYORSKODColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CIKK_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="CIKK_ID" msprop:Generator_ColumnPropNameInRow="CIKK_ID" msprop:Generator_ColumnVarNameInTable="columnCIKK_ID" msprop:Generator_ColumnPropNameInTable="CIKK_IDColumn" type="xs:int" />
+              <xs:element name="ERTEKESITES_TIPUSA" msprop:Generator_UserColumnName="ERTEKESITES_TIPUSA" msprop:Generator_ColumnPropNameInRow="ERTEKESITES_TIPUSA" msprop:Generator_ColumnVarNameInTable="columnERTEKESITES_TIPUSA" msprop:Generator_ColumnPropNameInTable="ERTEKESITES_TIPUSAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LIT_KISZ" msprop:Generator_UserTableName="LIT_KISZ" msprop:Generator_RowDeletedName="LIT_KISZRowDeleted" msprop:Generator_RowChangedName="LIT_KISZRowChanged" msprop:Generator_RowClassName="LIT_KISZRow" msprop:Generator_RowChangingName="LIT_KISZRowChanging" msprop:Generator_RowEvArgName="LIT_KISZRowChangeEvent" msprop:Generator_RowEvHandlerName="LIT_KISZRowChangeEventHandler" msprop:Generator_TableClassName="LIT_KISZDataTable" msprop:Generator_TableVarName="tableLIT_KISZ" msprop:Generator_RowDeletingName="LIT_KISZRowDeleting" msprop:Generator_TablePropName="LIT_KISZ">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LIT_KISZ_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="LIT_KISZ_ID" msprop:Generator_ColumnPropNameInRow="LIT_KISZ_ID" msprop:Generator_ColumnVarNameInTable="columnLIT_KISZ_ID" msprop:Generator_ColumnPropNameInTable="LIT_KISZ_IDColumn" type="xs:int" />
+              <xs:element name="LIT_KISZ_CIKK_ID" msprop:Generator_UserColumnName="LIT_KISZ_CIKK_ID" msprop:Generator_ColumnPropNameInRow="LIT_KISZ_CIKK_ID" msprop:Generator_ColumnVarNameInTable="columnLIT_KISZ_CIKK_ID" msprop:Generator_ColumnPropNameInTable="LIT_KISZ_CIKK_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="LIT_KISZ_NEV" msprop:Generator_UserColumnName="LIT_KISZ_NEV" msprop:Generator_ColumnPropNameInRow="LIT_KISZ_NEV" msprop:Generator_ColumnVarNameInTable="columnLIT_KISZ_NEV" msprop:Generator_ColumnPropNameInTable="LIT_KISZ_NEVColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LIT_KISZ_MENNY" msprop:Generator_UserColumnName="LIT_KISZ_MENNY" msprop:Generator_ColumnPropNameInRow="LIT_KISZ_MENNY" msprop:Generator_ColumnVarNameInTable="columnLIT_KISZ_MENNY" msprop:Generator_ColumnPropNameInTable="LIT_KISZ_MENNYColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CIKK" />
+      <xs:field xpath="mstns:CIKK_ID" />
+    </xs:unique>
+    <xs:unique name="LIT_KISZ_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LIT_KISZ" />
+      <xs:field xpath="mstns:LIT_KISZ_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
