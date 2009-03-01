@@ -75,14 +75,29 @@ namespace e_Cafe.FrontOffice
 
         private void button2_Click(object sender, EventArgs e)
         {
+            bool ok = true;
+            if (txtTolH.Text == "") { ok = false; }
+            if (txtTolM.Text == "") { ok = false; }
+            if (txtIgH.Text == "") { ok = false; }
+            if (txtIgM.Text == "") { ok = false; }
+            if (txtMegj.Text == "") { ok = false; }
+            if (txtNev.Text == "") { ok = false; }
+            if (txtTel.Text == "") { ok = false; }
 
 
+            if (ok)
+            {
+                fOGLALASTableAdapter.Insert(aFoglal.fASZTAL_ID,
+                                            new DateTime(mcDatum.SelectionStart.Year, mcDatum.SelectionStart.Month, mcDatum.SelectionStart.Day, Convert.ToInt16(txtTolH.Text), Convert.ToInt16(txtTolM.Text), 0),
+                                            new DateTime(mcDatum.SelectionStart.Year, mcDatum.SelectionStart.Month, mcDatum.SelectionStart.Day, Convert.ToInt16(txtIgH.Text), Convert.ToInt16(txtIgM.Text), 0),
+                                            -1,
+                                            txtMegj.Text, txtNev.Text, txtTel.Text);
+            }
+            else
+            {
+                DEFS.SendInfoMessage("Hiányosan kitöltött foglalás!");
 
-            fOGLALASTableAdapter.Insert(aFoglal.fASZTAL_ID,
-                                        new DateTime(mcDatum.SelectionStart.Year, mcDatum.SelectionStart.Month, mcDatum.SelectionStart.Day, Convert.ToInt16(txtTolH.Text), Convert.ToInt16(txtTolM.Text), 0),
-                                        new DateTime(mcDatum.SelectionStart.Year, mcDatum.SelectionStart.Month, mcDatum.SelectionStart.Day, Convert.ToInt16(txtIgH.Text), Convert.ToInt16(txtIgM.Text), 0),
-                                        -1,
-                                        txtMegj.Text, txtNev.Text, txtTel.Text);
+            }
             this.Close();
         }
 

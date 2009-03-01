@@ -253,6 +253,7 @@
             this.flpCikkek.Name = "flpCikkek";
             this.flpCikkek.Size = new System.Drawing.Size(505, 580);
             this.flpCikkek.TabIndex = 2;
+            this.flpCikkek.Visible = false;
             // 
             // panel1
             // 
@@ -271,6 +272,7 @@
             this.pnlOldalsav.Name = "pnlOldalsav";
             this.pnlOldalsav.Size = new System.Drawing.Size(25, 36);
             this.pnlOldalsav.TabIndex = 0;
+            this.pnlOldalsav.Visible = false;
             // 
             // pnlOtherFilter
             // 
@@ -280,6 +282,7 @@
             this.pnlOtherFilter.Name = "pnlOtherFilter";
             this.pnlOtherFilter.Size = new System.Drawing.Size(530, 50);
             this.pnlOtherFilter.TabIndex = 0;
+            this.pnlOtherFilter.Visible = false;
             // 
             // timer1
             // 
