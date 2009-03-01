@@ -58,6 +58,7 @@
     <Compile Include="DEFS.cs" />
     <Compile Include="EmailSending.cs" />
     <Compile Include="IEnumerableExtensions.cs" />
+    <Compile Include="Level.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="P2Type.cs" />
     <Compile Include="Partner.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Raktar.cs" />
     <Compile Include="Rendeles.cs" />
     <Compile Include="StringEnum.cs" />
+    <Compile Include="Win32.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

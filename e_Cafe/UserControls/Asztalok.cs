@@ -131,13 +131,12 @@ namespace e_Cafe
                     tmp_m.Location = new Point(tmp_m.Location.X + (e.X), tmp_m.Location.Y + (e.Y));
                     aList.lASZTAL[aList.GetItemIndex(tmp_m.Asztal_id)].fASZTAL_POS_X = tmp_m.Location.X;
                     aList.lASZTAL[aList.GetItemIndex(tmp_m.Asztal_id)].fASZTAL_POS_Y = tmp_m.Location.Y;
-
-
-                    mm.DebugMessage = tmp_m.Asztal_id.ToString() + tmp_m.Location.ToString() + " egér:" + e.X.ToString() + "y:" + e.Y.ToString();
                 }
                 catch { }
             }
         }
+
+
         private void Asztalok_MouseDown(object sender, MouseEventArgs e)
         {
             AsztalInfo ai = new AsztalInfo();

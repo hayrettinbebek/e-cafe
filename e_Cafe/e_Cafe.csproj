@@ -132,6 +132,12 @@
     <Compile Include="FrontOffice\frmReporting.Designer.cs">
       <DependentUpon>frmReporting.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontOffice\frmUzenetek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\frmUzenetek.Designer.cs">
+      <DependentUpon>frmUzenetek.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL\dsFOGLALAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -418,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmReporting.resx">
       <DependentUpon>frmReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontOffice\frmUzenetek.resx">
+      <DependentUpon>frmUzenetek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\Bevetelezes.resx">
       <DependentUpon>Bevetelezes.cs</DependentUpon>

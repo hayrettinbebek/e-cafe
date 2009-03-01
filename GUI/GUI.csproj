@@ -120,6 +120,12 @@
     <Compile Include="TableActionSelect.Designer.cs">
       <DependentUpon>TableActionSelect.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucMemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMemo.Designer.cs">
+      <DependentUpon>ucMemo.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="TableActionSelect.resx">
       <DependentUpon>TableActionSelect.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMemo.resx">
+      <DependentUpon>ucMemo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
