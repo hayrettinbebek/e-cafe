@@ -36,15 +36,19 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlRendeles = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.rbOsszetett = new System.Windows.Forms.RadioButton();
             this.rbReszletes = new System.Windows.Forms.RadioButton();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUP = new System.Windows.Forms.Button();
+            this.btnDOWN = new System.Windows.Forms.Button();
             this.tblRendeles = new XPTable.Models.Table();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpCikkek = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOldalsav = new System.Windows.Forms.Panel();
             this.pnlOtherFilter = new System.Windows.Forms.Panel();
+            this.ilCikkek = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.checkBoxColumn1 = new XPTable.Models.CheckBoxColumn();
             this.numberColumn1 = new XPTable.Models.NumberColumn();
@@ -53,8 +57,6 @@
             this.dateTimeColumn1 = new XPTable.Models.DateTimeColumn();
             this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.ilUpDown = new System.Windows.Forms.ImageList(this.components);
-            this.btnUP = new System.Windows.Forms.Button();
-            this.btnDOWN = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -69,9 +71,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnPartnerek = new System.Windows.Forms.Button();
+            this.btnHitel = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
@@ -144,6 +145,17 @@
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button8.Location = new System.Drawing.Point(15, 8);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(60, 36);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "mind";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // rbOsszetett
             // 
             this.rbOsszetett.Appearance = System.Windows.Forms.Appearance.Button;
@@ -188,6 +200,34 @@
             this.btnDelete.Text = "Töröl";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUP
+            // 
+            this.btnUP.BackColor = System.Drawing.Color.Transparent;
+            this.btnUP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUP.BackgroundImage")));
+            this.btnUP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUP.FlatAppearance.BorderSize = 0;
+            this.btnUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUP.Location = new System.Drawing.Point(159, 521);
+            this.btnUP.Name = "btnUP";
+            this.btnUP.Size = new System.Drawing.Size(145, 44);
+            this.btnUP.TabIndex = 4;
+            this.btnUP.UseVisualStyleBackColor = false;
+            this.btnUP.Click += new System.EventHandler(this.btnUP_Click);
+            // 
+            // btnDOWN
+            // 
+            this.btnDOWN.BackColor = System.Drawing.Color.Transparent;
+            this.btnDOWN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDOWN.BackgroundImage")));
+            this.btnDOWN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDOWN.FlatAppearance.BorderSize = 0;
+            this.btnDOWN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDOWN.Location = new System.Drawing.Point(10, 521);
+            this.btnDOWN.Name = "btnDOWN";
+            this.btnDOWN.Size = new System.Drawing.Size(145, 44);
+            this.btnDOWN.TabIndex = 3;
+            this.btnDOWN.UseVisualStyleBackColor = false;
+            this.btnDOWN.Click += new System.EventHandler(this.btnDOWN_Click);
             // 
             // tblRendeles
             // 
@@ -256,6 +296,13 @@
             this.pnlOtherFilter.TabIndex = 0;
             this.pnlOtherFilter.Visible = false;
             // 
+            // ilCikkek
+            // 
+            this.ilCikkek.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilCikkek.ImageStream")));
+            this.ilCikkek.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilCikkek.Images.SetKeyName(0, "zoldon.png");
+            this.ilCikkek.Images.SetKeyName(1, "piroson.png");
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -275,34 +322,6 @@
             this.ilUpDown.ImageSize = new System.Drawing.Size(16, 16);
             this.ilUpDown.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // btnUP
-            // 
-            this.btnUP.BackColor = System.Drawing.Color.Transparent;
-            this.btnUP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUP.BackgroundImage")));
-            this.btnUP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUP.FlatAppearance.BorderSize = 0;
-            this.btnUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUP.Location = new System.Drawing.Point(159, 521);
-            this.btnUP.Name = "btnUP";
-            this.btnUP.Size = new System.Drawing.Size(145, 44);
-            this.btnUP.TabIndex = 4;
-            this.btnUP.UseVisualStyleBackColor = false;
-            this.btnUP.Click += new System.EventHandler(this.btnUP_Click);
-            // 
-            // btnDOWN
-            // 
-            this.btnDOWN.BackColor = System.Drawing.Color.Transparent;
-            this.btnDOWN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDOWN.BackgroundImage")));
-            this.btnDOWN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDOWN.FlatAppearance.BorderSize = 0;
-            this.btnDOWN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDOWN.Location = new System.Drawing.Point(10, 521);
-            this.btnDOWN.Name = "btnDOWN";
-            this.btnDOWN.Size = new System.Drawing.Size(145, 44);
-            this.btnDOWN.TabIndex = 3;
-            this.btnDOWN.UseVisualStyleBackColor = false;
-            this.btnDOWN.Click += new System.EventHandler(this.btnDOWN_Click);
-            // 
             // panel4
             // 
             this.panel4.BackgroundImage = global::e_Cafe.Properties.Resources.also;
@@ -319,7 +338,7 @@
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.btnPartnerek);
+            this.panel4.Controls.Add(this.btnHitel);
             this.panel4.Controls.Add(this.button4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 630);
@@ -489,19 +508,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnPartnerek
+            // btnHitel
             // 
-            this.btnPartnerek.BackColor = System.Drawing.Color.Transparent;
-            this.btnPartnerek.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPartnerek.BackgroundImage")));
-            this.btnPartnerek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPartnerek.FlatAppearance.BorderSize = 0;
-            this.btnPartnerek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPartnerek.Location = new System.Drawing.Point(736, 6);
-            this.btnPartnerek.Name = "btnPartnerek";
-            this.btnPartnerek.Size = new System.Drawing.Size(70, 75);
-            this.btnPartnerek.TabIndex = 10;
-            this.btnPartnerek.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnPartnerek.UseVisualStyleBackColor = false;
+            this.btnHitel.BackColor = System.Drawing.Color.Transparent;
+            this.btnHitel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHitel.BackgroundImage")));
+            this.btnHitel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHitel.FlatAppearance.BorderSize = 0;
+            this.btnHitel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHitel.Location = new System.Drawing.Point(736, 6);
+            this.btnHitel.Name = "btnHitel";
+            this.btnHitel.Size = new System.Drawing.Size(70, 75);
+            this.btnHitel.TabIndex = 10;
+            this.btnHitel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnHitel.UseVisualStyleBackColor = false;
+            this.btnHitel.Click += new System.EventHandler(this.btnHitel_Click);
             // 
             // button4
             // 
@@ -518,17 +538,6 @@
             this.button4.TabIndex = 0;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button8.Location = new System.Drawing.Point(15, 8);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(60, 36);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "mind";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // MRendeles
             // 
@@ -584,7 +593,7 @@
         public System.Windows.Forms.ImageList btmImgList;
         private System.Windows.Forms.RadioButton rbOsszetett;
         private System.Windows.Forms.RadioButton rbReszletes;
-        private System.Windows.Forms.Button btnPartnerek;
+        private System.Windows.Forms.Button btnHitel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -600,5 +609,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList ilUpDown;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ImageList ilCikkek;
     }
 }

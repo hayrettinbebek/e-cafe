@@ -15,6 +15,10 @@ namespace e_Cafe
 {
     public partial class MMPartnerek : Form
     {
+        public bool SelectMode = false;
+        public double neededHitel = 0;
+        public Partner SelectedPartner;
+
         public MMPartnerek()
         {
             InitializeComponent();
@@ -70,10 +74,26 @@ namespace e_Cafe
         }
         private void ShowPartner(object sender, EventArgs e)
         {
-            frmShadowLayer p = new frmShadowLayer();
-            p.param = ((PartnerButton)sender).fPARTNER.PARTNER_ID;
-            p.ShowDialog();
-
+            if (SelectMode)
+            {
+                SelectedPartner = ((PartnerButton)sender).fPARTNER;
+                if (SelectedPartner.HITEL_SZABAD > neededHitel)
+                {
+                    DEFS.DebugLog("Partnernak van hitelkerete:" + SelectedPartner.PARTNER_ID.ToString());
+                    DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    DEFS.SendInfoMessage("A kiválasztott partnernak nincs elegendő hitelkerete");
+                }
+            }
+            else
+            {
+                frmShadowLayer p = new frmShadowLayer();
+                p.param = ((PartnerButton)sender).fPARTNER.PARTNER_ID;
+                p.ShowDialog();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,6 +104,27 @@ namespace e_Cafe
 
         }
 
+        private void MMPartnerek_Load(object sender, EventArgs e)
+        {
 
+
+            //btnKivalaszt.Visible = SelectMode;
+
+
+        }
+
+
+
+        private void btnKivalaszt_Click(object sender, EventArgs e)
+        {
+            if (SelectedPartner != null)
+            {
+                if (SelectedPartner.HITEL_SZABAD > 0)
+                {
+                    DEFS.SendInfoMessage("kiválasztott ID:" + SelectedPartner.PARTNER_ID.ToString());
+                    this.Close();
+                }
+            }
+        }
     }
 }

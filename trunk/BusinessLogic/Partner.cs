@@ -435,9 +435,10 @@ namespace BusinessLogic
             _nevn_nap = 0;
             _hitel = 0;
             _szuldat = DateTime.MinValue;
+            Uj = -1;
             while (rdr.Read())
             {
-
+                Uj = 0;
                 if (!DBNull.Value.Equals(rdr["NEM"])) { _nem = (string)rdr["NEM"]; }
                 else { _nem = ""; }
 
@@ -651,6 +652,40 @@ namespace BusinessLogic
         }
         #endregion
 
+        #region HITEL_SZABAD
+        
+        public double HITEL_SZABAD
+        {
+            get
+            {
+                
+                    double tmpRet = 0;
+                    SqlConnection c = new SqlConnection(DEFS.ConSTR);
+                    c.Open();
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd.Connection = c;
+
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.CommandText = "select isnull(v.HITEL_CREDIT,0)-isnull((select sum(r.db*r.ERTEK) as FELHASZNALT from hitel_sor s " +
+                                        " inner join rendeles_sor r on s.rendeles_sor_id = r.sor_id " +
+                                        " where s.FIZETVE = 0 and s.partner_id = v.partner_id),0) as SZABAD from partner_vevo v " +
+                                        " where v.partner_id = " + PARTNER_ID.ToString();
+
+                    SqlDataReader rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        tmpRet = (double)rdr["SZABAD"];
+                    }
+
+                    return (tmpRet);
+                
+            }
+            
+        }
+        #endregion
+
         public List<Partner_tel> lTelefon= new List<Partner_tel>();
         public List<Partner_cim> lCimek = new List<Partner_cim>();
         public List<Partner_bsz> lBankszamlak = new List<Partner_bsz>();
@@ -737,6 +772,8 @@ namespace BusinessLogic
 
             c.Close();
         }
+
+
 
         protected virtual bool checkKitoltes(out string s)
         {

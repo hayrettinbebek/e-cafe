@@ -453,7 +453,7 @@ GO
 -- =============================================
 CREATE TRIGGER [dbo].[tr_RendelSor_Keszletupdate] 
    ON  [dbo].[RENDELES_SOR]
-   AFTER  INSERT,UPDATE
+   AFTER  UPDATE
 AS 
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -461,45 +461,18 @@ BEGIN
 	SET NOCOUNT ON;
     -- Insert statements for trigger here
 
-	declare @EV int, @HO int, @NAP int, @DELETE int
+	declare @EV int, @HO int, @NAP int, @new_DELETE int, @old_DELETE int, @old_Fizetve int, @new_Fizetve int
 
-	select @DELETE = DELETED from inserted
+	select @new_DELETE = DELETED, @new_Fizetve = FIZETVE from inserted
+	select @old_DELETE = DELETED, @old_Fizetve = FIZETVE from deleted 
 
 	exec getNyitottNap @EV out, @HO out, @NAP out
 
 
-	if not(@DELETE = 1) begin
-	-- készlet csökkenést kell beszúrni
-		INSERT INTO KESZLET_SOR
-			   (EV ,HO ,NAP
-			   ,RAKTAR_ID,CIKK_ID ,DATUM
-			   ,RENDELES_ID ,BIZONYLAT_ID
-			   ,MENNYISEG ,IRANY ,EGYSEGAR
-			   ,NETTO_ERTEK
-			   ,AFA_ERTEK
-			   ,AFA_KOD
-			   ,BRUTTO_ERTEK
-			   ,MOZGAS_TIPUS
-				,KESZLET_EGYS_AR)
-		 SELECT @EV,@HO,@NAP,
-				i.RAKTAR_ID, i.CIKK_ID, DATUM,
-				SOR_ID,RENDELES_ID,
-				DB,-1,ERTEK,
-				DB*ERTEK,
-				ERTEK*(a.AFA_ERTEK/100),
-				cs.AFA_KOD,
-				ERTEK*(1+(a.AFA_ERTEK/100)),
-				'F',
-				dbo.fn_get_Atlagar(i.CIKK_ID,i.RAKTAR_ID, @EV, @HO, @NAP)
-		FROM INSERTED i 
-		inner join CIKK c on i.CIKK_ID = c.CIKK_ID
-		inner join CIKKCSOPORT cs on c.CIKKCSOPORT_ID = cs.CIKKCSOPORT_ID
-		inner join AFA a on cs.AFA_KOD = a.AFA_KOD
+	if ((@new_DELETE = 1) and (@old_DELETE = 0)) begin
 	
-	end
-	else begin
-	-- törölt rendelés sor, ami kivét stornója
-		INSERT INTO KESZLET_SOR
+	-- storno
+	INSERT INTO KESZLET_SOR
 			   (EV ,HO ,NAP
 			   ,RAKTAR_ID,CIKK_ID ,DATUM
 			   ,RENDELES_ID ,BIZONYLAT_ID
@@ -523,8 +496,25 @@ BEGIN
 		FROM INSERTED i 
 		inner join CIKK c on i.CIKK_ID = c.CIKK_ID
 		inner join CIKKCSOPORT cs on c.CIKKCSOPORT_ID = cs.CIKKCSOPORT_ID
-		inner join AFA a on cs.AFA_KOD = a.AFA_KOD
+		inner join AFA a on cs.AFA_KOD = a.AFA_KOD			
 	end
+
+	if ((@new_Fizetve = 1) and (@old_Fizetve = 0)) begin
+	
+		if not exists(SELECT '' FROM RENDELES_SOR s inner join inserted i on s.RENDELES_ID = i.RENDELES_ID where isnull(s.DELETED,0) = 0 and isnull(s.FIZETVE,0) = 0) begin
+
+			update RENDELES_FEJ SET FIZETVE = 1 FROM RENDELES_FEJ f inner join inserted i on f.RENDELES_ID = i.RENDELES_ID
+
+		end
+	
+
+	end
+	
+	update RENDELES_FEJ SET AKTIV = 0
+	from rendeles_fej f
+	left join rendeles_sor s on f.rendeles_id = s.rendeles_id and isnull(s.DELETED,0) = 0
+	where s.sor_id is null
+
 
 END
 
@@ -585,5 +575,72 @@ END
 
 GO
 
+-- =============================================
+-- Author:		László Ernõ
+-- Create date: 2009.03.01
+-- Description:	Hitelre könyveli a rendelés sorokat
+-- =============================================
+CREATE PROCEDURE sp_addRendeles_to_Hitel 
+	-- Add the parameters for the stored procedure here
+	@p_partner_id int,
+	@rendel_sor_id int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	INSERT INTO HITEL_SOR (PARTNER_ID,RENDELES_SOR_ID,FIZETVE)
+	VALUES (@p_partner_id,@rendel_sor_id,0)
+
+	update RENDELES_SOR  SET FIZETVE = 1 WHERE SOR_ID = @rendel_sor_id
 
 
+END
+GO
+
+
+CREATE TRIGGER [dbo].[tr_RendelSor_KeszletInsert] 
+   ON  [dbo].[RENDELES_SOR]
+   AFTER  INSERT
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+    -- Insert statements for trigger here
+
+	declare @EV int, @HO int, @NAP int, @DELETE int
+
+	select @DELETE = DELETED from inserted
+
+	exec getNyitottNap @EV out, @HO out, @NAP out
+
+    INSERT INTO KESZLET_SOR
+			   (EV ,HO ,NAP
+			   ,RAKTAR_ID,CIKK_ID ,DATUM
+			   ,RENDELES_ID ,BIZONYLAT_ID
+			   ,MENNYISEG ,IRANY ,EGYSEGAR
+			   ,NETTO_ERTEK
+			   ,AFA_ERTEK
+			   ,AFA_KOD
+			   ,BRUTTO_ERTEK
+			   ,MOZGAS_TIPUS
+				,KESZLET_EGYS_AR)
+		 SELECT @EV,@HO,@NAP,
+				i.RAKTAR_ID, i.CIKK_ID, DATUM,
+				SOR_ID,RENDELES_ID,
+				DB,-1,ERTEK,
+				DB*ERTEK,
+				ERTEK*(a.AFA_ERTEK/100),
+				cs.AFA_KOD,
+				ERTEK*(1+(a.AFA_ERTEK/100)),
+				'F',
+				dbo.fn_get_Atlagar(i.CIKK_ID,i.RAKTAR_ID, @EV, @HO, @NAP)
+		FROM INSERTED i 
+		inner join CIKK c on i.CIKK_ID = c.CIKK_ID
+		inner join CIKKCSOPORT cs on c.CIKKCSOPORT_ID = cs.CIKKCSOPORT_ID
+		inner join AFA a on cs.AFA_KOD = a.AFA_KOD	
+		
+
+END
