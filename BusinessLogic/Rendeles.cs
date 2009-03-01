@@ -528,6 +528,33 @@ namespace BusinessLogic
 
         }
 
+        public void StornoSor()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+
+            cmd.CommandText = "UPDATE RENDELES_SOR SET CANCELED = 1, FIZETVE = 1 WHERE SOR_ID =" + _SOR_ID.ToString();
+
+
+
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                DEFS.SendSaveErrMessage("Hiba a rendelés sorok sztornózása közben!" + _SOR_ID.ToString() + e.Message + "\n" + e.StackTrace);
+            }
+            c.Close();
+
+        }
+
     }
 
 }

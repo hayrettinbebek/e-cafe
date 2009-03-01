@@ -76,9 +76,27 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SP_KE
 DROP PROCEDURE [dbo].[SP_KESZLET_ATVEZET]
 
 GO
-/****** Object:  StoredProcedure [dbo].[SP_KESZLET_ATVEZET]    Script Date: 02/23/2009 21:40:06 ******/
+/****** Object:  StoredProcedure [dbo].[sp_addRendeles_to_Hitel]    Script Date: 02/23/2009 21:40:06 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_addRendeles_to_Hitel]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[sp_addRendeles_to_Hitel]
+
+GO
+
+
+/****** Object:  StoredProcedure [dbo].[SP_GET_SORSZAM]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SP_GET_SORSZAM]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[SP_GET_SORSZAM]
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[sp_create_szamla_fej]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_create_szamla_fej]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_create_szamla_fej]
+
+GO
+/****** Object:  StoredProcedure [dbo].[sp_add_szamla_tetel]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_szamla_tetel]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_add_szamla_tetel]
 
 GO
 

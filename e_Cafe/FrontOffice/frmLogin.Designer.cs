@@ -51,11 +51,12 @@
             // 
             // txtPw
             // 
-            this.txtPw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPw.Location = new System.Drawing.Point(499, 221);
+            this.txtPw.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtPw.Location = new System.Drawing.Point(499, 227);
             this.txtPw.Name = "txtPw";
             this.txtPw.PasswordChar = '*';
-            this.txtPw.Size = new System.Drawing.Size(98, 20);
+            this.txtPw.Size = new System.Drawing.Size(98, 22);
             this.txtPw.TabIndex = 0;
             // 
             // button1
