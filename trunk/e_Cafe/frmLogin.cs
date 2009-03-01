@@ -14,7 +14,7 @@ namespace e_Cafe
 {
     public partial class frmLogin : Form
     {
-        public string _usr;
+        public string _usr = "";
         public string _pw;
 
         private UserLista ul;
@@ -28,10 +28,12 @@ namespace e_Cafe
 
         private void button11_Click(object sender, EventArgs e)
         {
-            
-            _pw = txtPw.Text;
-            DialogResult = DialogResult.OK;
-            Close();
+            if (_usr != "")
+            {
+                _pw = txtPw.Text;
+                DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
         private void keyb_Click(object sender, EventArgs e)

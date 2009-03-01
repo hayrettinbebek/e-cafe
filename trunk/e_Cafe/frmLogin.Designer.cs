@@ -54,6 +54,7 @@
             this.txtPw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPw.Location = new System.Drawing.Point(499, 221);
             this.txtPw.Name = "txtPw";
+            this.txtPw.PasswordChar = '*';
             this.txtPw.Size = new System.Drawing.Size(98, 20);
             this.txtPw.TabIndex = 0;
             // 

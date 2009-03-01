@@ -39,7 +39,7 @@ namespace e_Cafe
             InitializeComponent();
             _SelAsztal = iAsztal;
             _bl = iConn;
-            label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
+            //label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
             _InactivityCounter = 0;
             _AktRendeles = new Rendeles(_SelAsztal.fASZTAL_ID, _SelAsztal.fRENDELES_ID);
 
@@ -401,6 +401,19 @@ namespace e_Cafe
         private void rbReszletes_CheckedChanged(object sender, EventArgs e)
         {
             initRendelTablaNoDraw();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            tblRendeles.TableModel.Selections.Clear();
+
+            for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
+            {
+
+
+                tblRendeles.TableModel.Selections.AddCell(i, 0);
+            }
+            
         }
 
 
