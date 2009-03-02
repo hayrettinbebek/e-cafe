@@ -66,6 +66,7 @@
     <Compile Include="Raktar.cs" />
     <Compile Include="Rendeles.cs" />
     <Compile Include="StringEnum.cs" />
+    <Compile Include="Syspar.cs" />
     <Compile Include="Win32.cs" />
   </ItemGroup>
   <ItemGroup>
