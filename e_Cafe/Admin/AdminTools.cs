@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using BusinessLogic;
 using e_Cafe.Torzsek;
 using e_Cafe.Keszlet;
+using e_Cafe.Admin;
 
 namespace e_Cafe
 {
@@ -213,6 +214,13 @@ namespace e_Cafe
         private void készletÁtvezetésToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAtvezetes fa = new frmAtvezetes();
+            fa.MdiParent = this;
+            fa.Show();
+        }
+
+        private void rendszerparaméterekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSyspar fa = new frmSyspar();
             fa.MdiParent = this;
             fa.Show();
         }

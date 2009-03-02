@@ -150,7 +150,7 @@
             if (ImageList != null)
             {
                 if (aObj.fRENDELES_ID != -1) { ImageIndex = (int)Asztal_colors.Selected; }
-                else if (aObj.lFOGLALASOK.Count > 0) { ImageIndex = (int)Asztal_colors.reserved; }
+                else if (aObj.lFOGLALAS_PARAM_IDON_BELUL.Count > 0) { ImageIndex = (int)Asztal_colors.reserved; }
                 else if (_Free == 1)
                 {
                     ImageIndex = (int)Asztal_colors.Free;

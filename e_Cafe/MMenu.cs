@@ -41,6 +41,7 @@ namespace e_Cafe
         {
             DEFS.createLogger();
             DEFS.ConSTR = e_Cafe.Properties.Settings.Default.ECAFEConnectionString; // e_Cafe.Properties.Settings.Default.cnSTR;
+            DEFS.R_SYSPAR = new SysParList();
             InitializeComponent();
             try
             {
@@ -90,9 +91,10 @@ namespace e_Cafe
             
 
             int db_ver = DEFS.GetDBVER();
-            MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
+            DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
+            //MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 9)
+            if (db_ver < 10)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -110,6 +112,8 @@ namespace e_Cafe
                     if (db_ver < 7) { updateDB(new FileInfo(tmpp + @"\SQL\update_007.sql")); }
                     if (db_ver < 8) { updateDB(new FileInfo(tmpp + @"\SQL\update_008.sql")); }
                     if (db_ver < 9) { updateDB(new FileInfo(tmpp + @"\SQL\update_009.sql")); }
+                    if (db_ver < 10) { updateDB(new FileInfo(tmpp + @"\SQL\update_010.sql")); }
+
                     updateDB(new FileInfo(tmpp + @"\SQL\END.sql"));
                     DEFS.SendInfoMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
                                 "\n" + "(Adminisztrátor:Support:Logok beküldése)");
@@ -271,7 +275,11 @@ namespace e_Cafe
                 // Foglalás 
                 if (tmp_a.aObj.fRENDELES_ID > 0)
                 {
-                    DEFS.SendInfoMessage("Információ! : Az asztal jelenleg foglalt!");
+                    DEFS.DebugLog("Információ! : Az asztal jelenleg foglalt!");
+                    frmFoglalas fg = new frmFoglalas();
+                    fg.aFoglal = tmp_a.aObj;
+
+                    fg.ShowDialog();
                 }
                 else
                 {
@@ -301,7 +309,7 @@ namespace e_Cafe
                     #region Rendelés
                     if (tmp_a.aObj.lFOGLALASOK.Count > 0)
                     {
-                        DEFS.SendInfoMessage("Információ! : Az asztalra foglalás van!");
+                        DEFS.SendInfoMessage("Információ! : Az asztalra foglalás van!" + "\n" + "Szeretné feloldani?");
                     }
                     else
                     {

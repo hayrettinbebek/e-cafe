@@ -90,11 +90,13 @@ namespace e_Cafe.FrontOffice
 
             if (ok)
             {
+                
                 fOGLALASTableAdapter.Insert(aFoglal.fASZTAL_ID,
                                             new DateTime(mcDatum.SelectionStart.Year, mcDatum.SelectionStart.Month, mcDatum.SelectionStart.Day, Convert.ToInt16(txtTolH.Text), Convert.ToInt16(txtTolM.Text), 0),
                                             new DateTime(mcDatum.SelectionStart.Year, mcDatum.SelectionStart.Month, mcDatum.SelectionStart.Day, Convert.ToInt16(txtIgH.Text), Convert.ToInt16(txtIgM.Text), 0),
                                             -1,
                                             txtMegj.Text, txtNev.Text, txtTel.Text);
+                DEFS.DebugLog(aFoglal.fASZTAL_ID.ToString() + ":Asztal foglalás sikeres");
             }
             else
             {

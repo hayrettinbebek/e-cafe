@@ -28,6 +28,7 @@ namespace BusinessLogic
 
         public static _User LogInUser;
 
+        public static SysParList R_SYSPAR;
 
         public static void LoadNyitottNap()
         {
