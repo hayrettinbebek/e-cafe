@@ -39,8 +39,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.txtNormalCimPartnerId = new System.Windows.Forms.TextBox();
+            this.partnercimBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.vevoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -55,10 +60,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -71,23 +77,31 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label13 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.partnercimBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txtNormalCimPartnerId2 = new System.Windows.Forms.TextBox();
             this.pnlKeyb.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vevoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NemSource)).BeginInit();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlKeyb
@@ -103,7 +117,6 @@
             // 
             // keyb21
             // 
-            this.keyb21.BackColor = System.Drawing.Color.Transparent;
             this.keyb21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("keyb21.BackgroundImage")));
             this.keyb21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.keyb21.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -129,7 +142,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 510);
+            this.panel2.Size = new System.Drawing.Size(197, 510);
             this.panel2.TabIndex = 1;
             // 
             // panel5
@@ -144,9 +157,9 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(789, 0);
+            this.panel6.Location = new System.Drawing.Point(810, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(227, 510);
+            this.panel6.Size = new System.Drawing.Size(206, 510);
             this.panel6.TabIndex = 1;
             // 
             // panel1
@@ -154,9 +167,9 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(203, 0);
+            this.panel1.Location = new System.Drawing.Point(197, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(586, 510);
+            this.panel1.Size = new System.Drawing.Size(613, 510);
             this.panel1.TabIndex = 2;
             // 
             // panel4
@@ -170,12 +183,16 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(586, 496);
+            this.panel4.Size = new System.Drawing.Size(613, 496);
             this.panel4.TabIndex = 1;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.txtNormalCimPartnerId2);
+            this.panel11.Controls.Add(this.txtNormalCimPartnerId);
+            this.panel11.Controls.Add(this.textBox7);
+            this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.label13);
             this.panel11.Controls.Add(this.label12);
             this.panel11.Controls.Add(this.textBox3);
@@ -191,11 +208,9 @@
             this.panel11.Controls.Add(this.textBox1);
             this.panel11.Controls.Add(this.textBox2);
             this.panel11.Controls.Add(this.label6);
-            this.panel11.Controls.Add(this.textBox7);
             this.panel11.Controls.Add(this.label10);
             this.panel11.Controls.Add(this.label9);
             this.panel11.Controls.Add(this.panel7);
-            this.panel11.Controls.Add(this.textBox6);
             this.panel11.Controls.Add(this.textBox9);
             this.panel11.Controls.Add(this.textBox5);
             this.panel11.Controls.Add(this.label5);
@@ -205,9 +220,64 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 60);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(586, 392);
+            this.panel11.Size = new System.Drawing.Size(613, 392);
             this.panel11.TabIndex = 17;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // txtNormalCimPartnerId
+            // 
+            this.txtNormalCimPartnerId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNormalCimPartnerId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource, "PARTNER_ID", true));
+            this.txtNormalCimPartnerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtNormalCimPartnerId.Location = new System.Drawing.Point(9, 132);
+            this.txtNormalCimPartnerId.Name = "txtNormalCimPartnerId";
+            this.txtNormalCimPartnerId.Size = new System.Drawing.Size(67, 19);
+            this.txtNormalCimPartnerId.TabIndex = 6;
+            this.txtNormalCimPartnerId.Visible = false;
+            this.txtNormalCimPartnerId.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.txtNormalCimPartnerId.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
+            // 
+            // partnercimBindingSource
+            // 
+            this.partnercimBindingSource.DataSource = typeof(BusinessLogic.Partner_cim);
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "SZEMELYI", true));
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox7.Location = new System.Drawing.Point(105, 250);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(120, 19);
+            this.textBox7.TabIndex = 9;
+            this.textBox7.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.textBox7.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
+            // 
+            // vevoBindingSource
+            // 
+            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(480, 347);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 20);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Részletező";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(348, 351);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Egyenleg";
             // 
             // label12
             // 
@@ -219,10 +289,6 @@
             this.label12.Size = new System.Drawing.Size(55, 15);
             this.label12.TabIndex = 16;
             this.label12.Text = "label12";
-            // 
-            // vevoBindingSource
-            // 
-            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
             // 
             // textBox3
             // 
@@ -240,7 +306,7 @@
             // 
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vevoBindingSource, "SZULETESNAP", true));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 270);
+            this.dateTimePicker1.Location = new System.Drawing.Point(105, 270);
             this.dateTimePicker1.MaxDate = new System.DateTime(2012, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -254,7 +320,7 @@
             this.textBox10.Location = new System.Drawing.Point(405, 326);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 7;
+            this.textBox10.TabIndex = 14;
             this.textBox10.Click += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
             // comboBox2
@@ -267,7 +333,7 @@
             this.comboBox2.Location = new System.Drawing.Point(405, 299);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(73, 21);
-            this.comboBox2.TabIndex = 9;
+            this.comboBox2.TabIndex = 13;
             this.comboBox2.ValueMember = "VALUE_MEMBER";
             // 
             // NemSource
@@ -276,9 +342,12 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.textBox14);
+            this.panel8.Controls.Add(this.textBox12);
+            this.panel8.Controls.Add(this.textBox13);
             this.panel8.Location = new System.Drawing.Point(405, 112);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(163, 98);
+            this.panel8.Size = new System.Drawing.Size(202, 111);
             this.panel8.TabIndex = 11;
             // 
             // label3
@@ -293,11 +362,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(371, 329);
+            this.label7.Location = new System.Drawing.Point(347, 329);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 13);
+            this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Hitel";
+            this.label7.Text = "Hitelkeret";
             // 
             // label11
             // 
@@ -358,18 +427,6 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Bankszámlaszám";
             // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "BANK_SZLA", true));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox7.Location = new System.Drawing.Point(105, 324);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(201, 19);
-            this.textBox7.TabIndex = 8;
-            this.textBox7.Click += new System.EventHandler(this.txt_to_keyboard_Click);
-            this.textBox7.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -390,19 +447,48 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.textBox11);
+            this.panel7.Controls.Add(this.textBox8);
+            this.panel7.Controls.Add(this.textBox6);
             this.panel7.Location = new System.Drawing.Point(105, 112);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(210, 67);
+            this.panel7.Size = new System.Drawing.Size(210, 76);
             this.panel7.TabIndex = 11;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource, "CIM", true));
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox11.Location = new System.Drawing.Point(3, 29);
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(198, 38);
+            this.textBox11.TabIndex = 6;
+            this.textBox11.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.textBox11.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
+            // 
+            // textBox8
+            // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource, "VAROS", true));
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox8.Location = new System.Drawing.Point(76, 4);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(125, 19);
+            this.textBox8.TabIndex = 5;
+            this.textBox8.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.textBox8.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "SZEMELYI", true));
-            this.textBox6.Location = new System.Drawing.Point(105, 250);
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource, "IRSZ", true));
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox6.Location = new System.Drawing.Point(3, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(120, 13);
-            this.textBox6.TabIndex = 6;
+            this.textBox6.Size = new System.Drawing.Size(67, 19);
+            this.textBox6.TabIndex = 4;
             this.textBox6.Click += new System.EventHandler(this.txt_to_keyboard_Click);
             this.textBox6.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
@@ -414,7 +500,7 @@
             this.textBox9.Location = new System.Drawing.Point(105, 218);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(201, 19);
-            this.textBox9.TabIndex = 5;
+            this.textBox9.TabIndex = 8;
             this.textBox9.Click += new System.EventHandler(this.txt_to_keyboard_Click);
             this.textBox9.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
@@ -426,7 +512,7 @@
             this.textBox5.Location = new System.Drawing.Point(105, 194);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(201, 19);
-            this.textBox5.TabIndex = 4;
+            this.textBox5.TabIndex = 7;
             this.textBox5.Click += new System.EventHandler(this.txt_to_keyboard_Click);
             this.textBox5.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
@@ -465,7 +551,7 @@
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(586, 392);
+            this.shapeContainer2.Size = new System.Drawing.Size(613, 392);
             this.shapeContainer2.TabIndex = 12;
             this.shapeContainer2.TabStop = false;
             // 
@@ -497,7 +583,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel10.Location = new System.Drawing.Point(0, 452);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(586, 44);
+            this.panel10.Size = new System.Drawing.Size(613, 44);
             this.panel10.TabIndex = 16;
             // 
             // checkBox1
@@ -523,8 +609,22 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(586, 60);
+            this.panel9.Size = new System.Drawing.Size(613, 60);
             this.panel9.TabIndex = 15;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(549, 7);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(31, 32);
+            this.button12.TabIndex = 6;
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // textBox4
             // 
@@ -555,35 +655,67 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 496);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(586, 14);
+            this.panel3.Size = new System.Drawing.Size(613, 14);
             this.panel3.TabIndex = 0;
             // 
             // dynComboBindingSource
             // 
             this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
             // 
-            // label13
+            // textBox12
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(348, 351);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 13);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Egyenleg";
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource1, "IRSZ", true));
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox12.Location = new System.Drawing.Point(6, 4);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(49, 19);
+            this.textBox12.TabIndex = 10;
+            this.textBox12.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.textBox12.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
-            // button12
+            // textBox13
             // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(549, 7);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(31, 32);
-            this.button12.TabIndex = 6;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource1, "VAROS", true));
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox13.Location = new System.Drawing.Point(61, 4);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(125, 19);
+            this.textBox13.TabIndex = 11;
+            this.textBox13.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.textBox13.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
+            // 
+            // textBox14
+            // 
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource1, "CIM", true));
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox14.Location = new System.Drawing.Point(6, 29);
+            this.textBox14.Multiline = true;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(180, 66);
+            this.textBox14.TabIndex = 12;
+            this.textBox14.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.textBox14.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
+            // 
+            // partnercimBindingSource1
+            // 
+            this.partnercimBindingSource1.DataSource = typeof(BusinessLogic.Partner_cim);
+            // 
+            // txtNormalCimPartnerId2
+            // 
+            this.txtNormalCimPartnerId2.AcceptsReturn = true;
+            this.txtNormalCimPartnerId2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNormalCimPartnerId2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource1, "PARTNER_ID", true));
+            this.txtNormalCimPartnerId2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtNormalCimPartnerId2.Location = new System.Drawing.Point(9, 157);
+            this.txtNormalCimPartnerId2.Name = "txtNormalCimPartnerId2";
+            this.txtNormalCimPartnerId2.Size = new System.Drawing.Size(67, 19);
+            this.txtNormalCimPartnerId2.TabIndex = 6;
+            this.txtNormalCimPartnerId2.Visible = false;
+            this.txtNormalCimPartnerId2.Click += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.txtNormalCimPartnerId2.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
             // frmPartnerInsert
             // 
@@ -607,14 +739,20 @@
             this.panel4.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vevoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NemSource)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -625,7 +763,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private GUI.billentyu.keyb2 keyb21;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
@@ -655,7 +792,6 @@
         private System.Windows.Forms.TextBox textBox9;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label11;
@@ -668,6 +804,18 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button2;
+        private GUI.billentyu.keyb2 keyb21;
+        private System.Windows.Forms.BindingSource partnercimBindingSource;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtNormalCimPartnerId;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.BindingSource partnercimBindingSource1;
+        private System.Windows.Forms.TextBox txtNormalCimPartnerId2;
 
     }
 }

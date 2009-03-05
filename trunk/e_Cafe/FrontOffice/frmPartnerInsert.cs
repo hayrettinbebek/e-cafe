@@ -16,16 +16,46 @@ namespace e_Cafe
 {
     public partial class frmPartnerInsert : Form
     {
+        int partner_id = -1;
+        Vevo v;
+
         public frmPartnerInsert(int pId)
         {
+            partner_id = pId;
             InitializeComponent();
             if (pId == -1)
             {
                 vevoBindingSource.Add(new Vevo());
+                
             }
             else
             {
-                vevoBindingSource.Add(new Vevo(pId,new SqlConnection(DEFS.ConSTR)));
+                v = new Vevo(pId,new SqlConnection(DEFS.ConSTR));
+               
+                vevoBindingSource.Add(v);
+                if (v.PartnerNormalCim().Count > 0)
+                {
+                    partnercimBindingSource.Add(v.PartnerNormalCim()[0]);
+                }
+                else
+                {
+                    Partner_cim pc = new Partner_cim(pId);
+                    pc.CIM_TIPUS = 1;
+                    v.lCimek.Add(pc);
+                    partnercimBindingSource.Add(pc);
+                }
+                if (v.PartnerSzallCim().Count > 0)
+                {
+                    partnercimBindingSource1.Add(v.PartnerSzallCim()[0]);
+                }
+                else
+                {
+                    Partner_cim pc2 = new Partner_cim(pId);
+                    pc2.CIM_TIPUS = 2;
+                    v.lCimek.Add(pc2);
+                    partnercimBindingSource1.Add(pc2);
+                }
+                
             }
 
             dynComboBindingSource.Add(new DynCombo("Vevő", "V"));
@@ -40,11 +70,15 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             bool ok = true;
             bool ok2;
             foreach (var k in vevoBindingSource.List)
             {
                 
+                partner_id = ((Vevo)k).Save(out ok2);
+                txtNormalCimPartnerId.Text = partner_id.ToString();
+                txtNormalCimPartnerId2.Text = partner_id.ToString();
                 ((Vevo)k).Save(out ok2);
                 ok = ok && ok2;
             }
@@ -83,6 +117,11 @@ namespace e_Cafe
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

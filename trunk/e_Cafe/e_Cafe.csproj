@@ -126,7 +126,7 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
-    <Compile Include="dsSYSPAR.Designer.cs">
+    <Compile Include="SQL\dsSYSPAR.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSYSPAR.xsd</DependentUpon>
@@ -599,9 +599,6 @@
     <Compile Include="UserControls\MMenuButton.Designer.cs">
       <DependentUpon>MMenuButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UsrClock.xaml.cs">
-      <DependentUpon>UsrClock.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
@@ -612,12 +609,6 @@
       <Project>{7A9003C7-484C-4510-BE0F-128F219A812B}</Project>
       <Name>GUI</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="UserControls\UsrClock.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -846,15 +837,16 @@
     <None Include="Resources\d.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsSYSPAR.xsc">
+    <None Include="Properties\DataSources\BusinessLogic.Partner_cim1.datasource" />
+    <None Include="SQL\dsSYSPAR.xsc">
       <DependentUpon>dsSYSPAR.xsd</DependentUpon>
     </None>
-    <None Include="dsSYSPAR.xsd">
+    <None Include="SQL\dsSYSPAR.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsSYSPAR.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsSYSPAR.xss">
+    <None Include="SQL\dsSYSPAR.xss">
       <DependentUpon>dsSYSPAR.xsd</DependentUpon>
     </None>
     <None Include="Resources\pipaon.png" />

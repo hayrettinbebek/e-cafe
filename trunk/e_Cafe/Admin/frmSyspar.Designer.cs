@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSyspar));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dsSYSPAR = new e_Cafe.dsSYSPAR();
+            this.dsSYSPAR = new e_Cafe.SQL.dsSYSPAR();
             this.sYSPARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sYSPARTableAdapter = new e_Cafe.dsSYSPARTableAdapters.SYSPARTableAdapter();
+            this.sYSPARTableAdapter = new e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -157,9 +157,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private dsSYSPAR dsSYSPAR;
+        private e_Cafe.SQL.dsSYSPAR dsSYSPAR;
         private System.Windows.Forms.BindingSource sYSPARBindingSource;
-        private e_Cafe.dsSYSPARTableAdapters.SYSPARTableAdapter sYSPARTableAdapter;
+        private e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter sYSPARTableAdapter;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pARAMNAMEDataGridViewTextBoxColumn;
