@@ -69,7 +69,6 @@
             this.aSZTALIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARTNERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.keyb21 = new GUI.billentyu.keyb2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.txtMegj = new System.Windows.Forms.TextBox();
@@ -88,6 +87,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.keyb21 = new GUI.billentyu.keyb2();
             this.panel3.SuspendLayout();
             this.ctMinSelector.SuspendLayout();
             this.cmHourSelector.SuspendLayout();
@@ -430,17 +430,6 @@
             this.clDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clDelete.Width = 20;
             // 
-            // keyb21
-            // 
-            this.keyb21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.keyb21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("keyb21.BackgroundImage")));
-            this.keyb21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.keyb21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.keyb21.Location = new System.Drawing.Point(0, 0);
-            this.keyb21.Name = "keyb21";
-            this.keyb21.Size = new System.Drawing.Size(619, 266);
-            this.keyb21.TabIndex = 0;
-            // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
@@ -644,6 +633,16 @@
             this.shapeContainer1.TabIndex = 4;
             this.shapeContainer1.TabStop = false;
             // 
+            // keyb21
+            // 
+            this.keyb21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("keyb21.BackgroundImage")));
+            this.keyb21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.keyb21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.keyb21.Location = new System.Drawing.Point(0, 0);
+            this.keyb21.Name = "keyb21";
+            this.keyb21.Size = new System.Drawing.Size(619, 266);
+            this.keyb21.TabIndex = 0;
+            // 
             // frmFoglalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,7 +683,6 @@
         private System.Windows.Forms.Label lblAsztal;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private GUI.billentyu.keyb2 keyb21;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -735,6 +733,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem20;
+        private GUI.billentyu.keyb2 keyb21;
 
     }
 }

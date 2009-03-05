@@ -41,7 +41,7 @@ namespace e_Cafe
         {
             DEFS.createLogger();
             DEFS.ConSTR = e_Cafe.Properties.Settings.Default.ECAFEConnectionString; // e_Cafe.Properties.Settings.Default.cnSTR;
-            DEFS.R_SYSPAR = new SysParList();
+            
             InitializeComponent();
             try
             {
@@ -55,7 +55,7 @@ namespace e_Cafe
 
             DEFS.log(Level.Info, "Sikeres inicializálás");
             RefreshDatabase();
-
+            DEFS.R_SYSPAR = new SysParList();
             if (!Login()) { Application.Exit(); }
 
         }

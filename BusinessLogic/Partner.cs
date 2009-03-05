@@ -398,7 +398,33 @@ namespace BusinessLogic
         }
         #endregion
 
+        public List<Partner_cim> PartnerNormalCim()
+        {
+            List<Partner_cim> iTmpRet = new List<Partner_cim>();
 
+            var ret_cikk =
+                from c in lCimek
+                where c.CIM_TIPUS == 1
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
+
+        public List<Partner_cim> PartnerSzallCim()
+        {
+            List<Partner_cim> iTmpRet = new List<Partner_cim>();
+
+            var ret_cikk =
+                from c in lCimek
+                where c.CIM_TIPUS == 2
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
 
         public Vevo()
             : base()
@@ -1241,7 +1267,7 @@ namespace BusinessLogic
         {
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
-
+            
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = c;
             cmd.CommandType = CommandType.Text;
@@ -1264,7 +1290,9 @@ namespace BusinessLogic
                                            ",@CIM_TIPUS " +
                                            ",@IRSZ " +
                                            ",@VAROS " +
-                                           ",@CIM)";
+                                           ",@CIM) SET @newid = SCOPE_IDENTITY()" ;
+                            cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
+                            cmd.Parameters["newid"].Direction = ParameterDirection.Output;
 
                         break;
                     }
@@ -1289,22 +1317,26 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("IRSZ", SqlDbType.VarChar));
             cmd.Parameters.Add(new SqlParameter("VAROS", SqlDbType.VarChar));
             cmd.Parameters.Add(new SqlParameter("CIM", SqlDbType.VarChar));
-
+            if (_cim == null) { _cim = ""; }
+            if (_varos == null) { _varos = ""; }
+            if (_irsz == null) { _irsz = ""; }
 
             cmd.Parameters["CIM_TIPUS"].Value = _cim_tipus;
             cmd.Parameters["PARTNER_ID"].Value = _partner_id;
             cmd.Parameters["IRSZ"].Value = _irsz;
             cmd.Parameters["VAROS"].Value = _varos;
+            
             cmd.Parameters["CIM"].Value = _cim;
 
             //try
             //{
             cmd.ExecuteNonQuery();
-            //}
-            //catch (Exception e)
-            //{
-            //    string s = "Hiba a rendelés sorok mentése közben!" + _BEVETEL_FEJ_ID.ToString()+ e.Data;
-            //}
+
+            if (_cim_id == -1)
+                {
+                    _cim_id = (int)cmd.Parameters["newid"].Value;
+                    
+                }
 
             c.Close();
         }

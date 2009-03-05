@@ -93,7 +93,6 @@
     <Compile Include="Class1.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Clock.cs" />
     <Compile Include="MenuButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -170,12 +169,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="notepad_T.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="themes\generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
