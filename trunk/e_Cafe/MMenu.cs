@@ -318,7 +318,7 @@ namespace e_Cafe
                         tmp_a.vSelected = true;
 
                    
-                        MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id), blObj);
+                        MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id));
                         mr.ShowDialog();
                         a.RefreshAsztalok(true);
 
@@ -423,6 +423,12 @@ namespace e_Cafe
         {
             frmUzenetek fu = new frmUzenetek();
             fu.ShowDialog();
+        }
+
+        private void btnReceptek_Click(object sender, EventArgs e)
+        {
+            MRendeles mr = new MRendeles(true);
+            mr.ShowDialog();
         }
 
 

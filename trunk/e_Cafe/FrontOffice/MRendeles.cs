@@ -22,7 +22,7 @@ namespace e_Cafe
     public partial class MRendeles : Form
     {
         Asztal _SelAsztal;
-        TBLObj _bl;
+        bool _isOsszetettCikViewer;
         int _InactivityCounter;
         ResourceManager myResources;
         Object LastCikkcsopMenu;
@@ -30,21 +30,37 @@ namespace e_Cafe
         Rendeles _AktRendeles;
 
         #region Constructor
-        public MRendeles(Asztal iAsztal, TBLObj iConn)
+        public MRendeles(Asztal iAsztal)
         {
             System.Reflection.Assembly myAssembly;
             myAssembly = this.GetType().Assembly;
             myResources = new ResourceManager("e_Cafe.OtherImages", myAssembly);
-
+            _isOsszetettCikViewer = false;
             InitializeComponent();
             _SelAsztal = iAsztal;
-            _bl = iConn;
+            
             //label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
             _InactivityCounter = 0;
             _AktRendeles = new Rendeles(_SelAsztal.fASZTAL_ID, _SelAsztal.fRENDELES_ID);
 
             InitMenuButtons();
             initRendelTabla();
+        }
+
+        public MRendeles(bool OsszCikk)
+        {
+            System.Reflection.Assembly myAssembly;
+            myAssembly = this.GetType().Assembly;
+            myResources = new ResourceManager("e_Cafe.OtherImages", myAssembly);
+
+            InitializeComponent();
+            _isOsszetettCikViewer = OsszCikk;
+            //label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
+            _InactivityCounter = 0;
+            pnlRendeles.Visible = false;
+            pnlAlsoGombok.Visible=false;
+            InitMenuButtons();
+
         }
 
         #endregion
@@ -187,7 +203,7 @@ namespace e_Cafe
         private void loadCikkek(int pCikkcsoport, int pAlcsoportId)
         {
             flpCikkek.Controls.Clear();
-            Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
+            Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
             List<Cikk> lButtons = new List<Cikk>();
             DEFS.log(Level.Debug, "LoadCikkek() "+ pAlcsoportId.ToString() + " Cikkcsoport: " + pCikkcsoport.ToString());
 
@@ -204,6 +220,10 @@ namespace e_Cafe
             {
                 CikkButton cb = new CikkButton();
                 cb.fCIKK = lButtons[i];
+                if (_isOsszetettCikViewer && !(lButtons[i].OSSZETETT))
+                {
+                    cb.Enabled = false;
+                }
                 cb.Click += onCikkClick;
                 cb.CIml = ilCikkek;
                 flpCikkek.Controls.Add(cb);
@@ -218,39 +238,46 @@ namespace e_Cafe
 
         private void onCikkClick(object sender, EventArgs e)
         {
-            if ((((CikkButton)sender).fCIKK.fKESZLET == 0) && (((CikkButton)sender).fCIKK.fKESZLET < ((CikkButton)sender).fCIKK.KISZ_MENNY))
+            if (_isOsszetettCikViewer)
             {
-                if (((CikkButton)sender).fCIKK.fKESZLET_ALL >= ((CikkButton)sender).fCIKK.KISZ_MENNY)
-                {
-                    // nincs az alapértelmezett raktárban
-                    ChooseKeszletek frm = new ChooseKeszletek(((CikkButton)sender).fCIKK.lKESZLET);
-                    frm.ShowDialog(this);
-
-                    if (frm.DialogResult == DialogResult.OK)
-                    {
-
-                        _AktRendeles.addTetel(((CikkButton)sender).fCIKK,frm.retRaktID);
-                        _AktRendeles.SaveRendeles();
-                        initRendelTabla();
-                    }
-
-
-
-                }
-                else MessageBox.Show("Nincs elegendő készlet!!");
+                frmOsszCikkView fo = new frmOsszCikkView(((CikkButton)sender).fCIKK.CIKK_ID);
+                fo.ShowDialog();
             }
             else
             {
+                if ((((CikkButton)sender).fCIKK.fKESZLET == 0) && (((CikkButton)sender).fCIKK.fKESZLET < ((CikkButton)sender).fCIKK.KISZ_MENNY))
+                {
+                    if (((CikkButton)sender).fCIKK.fKESZLET_ALL >= ((CikkButton)sender).fCIKK.KISZ_MENNY)
+                    {
+                        // nincs az alapértelmezett raktárban
+                        ChooseKeszletek frm = new ChooseKeszletek(((CikkButton)sender).fCIKK.lKESZLET);
+                        frm.ShowDialog(this);
 
-                _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
-                _AktRendeles.SaveRendeles();
-                ((CikkButton)sender).fCIKK.getKeszlet();
-                ((CikkButton)sender).re_SetCikk();
-                ((CikkButton)sender).Refresh();
-                initRendelTablaNoDraw();
+                        if (frm.DialogResult == DialogResult.OK)
+                        {
 
+                            _AktRendeles.addTetel(((CikkButton)sender).fCIKK, frm.retRaktID);
+                            _AktRendeles.SaveRendeles();
+                            initRendelTabla();
+                        }
+
+
+
+                    }
+                    else MessageBox.Show("Nincs elegendő készlet!!");
+                }
+                else
+                {
+
+                    _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
+                    _AktRendeles.SaveRendeles();
+                    ((CikkButton)sender).fCIKK.getKeszlet();
+                    ((CikkButton)sender).re_SetCikk();
+                    ((CikkButton)sender).Refresh();
+                    initRendelTablaNoDraw();
+
+                }
             }
-            
         }
 
         #endregion
@@ -432,6 +459,7 @@ namespace e_Cafe
             initRendelTablaNoDraw();
         }
 
+        #region Hitel
         private void btnHitel_Click(object sender, EventArgs e)
         {
             if (tblRendeles.SelectedItems.Length == 0)
@@ -484,7 +512,9 @@ namespace e_Cafe
             cmdHitelToPartner.ExecuteNonQuery();
             c.Close();
         }
+        #endregion
 
+        #region Stornózás
         private void button2_Click(object sender, EventArgs e)
         {
             if (tblRendeles.SelectedItems.Length == 0)
@@ -506,6 +536,8 @@ namespace e_Cafe
             DEFS.DebugLog("Rendelés sztornózva");
             this.Close();
         }
+
+        #endregion
 
         #region Számlázás
         private void button3_Click(object sender, EventArgs e)
