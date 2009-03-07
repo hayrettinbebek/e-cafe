@@ -266,6 +266,12 @@ namespace e_Cafe.SQL {
             
             private global::System.Data.DataColumn columnCIKK_ID;
             
+            private global::System.Data.DataColumn columnRECEPT_MODSZER;
+            
+            private global::System.Data.DataColumn columnRECEPT_ALK_TART;
+            
+            private global::System.Data.DataColumn columnRECEPT_POHAR;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public CIKKDataTable() {
                 this.TableName = "CIKK";
@@ -311,6 +317,27 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn RECEPT_MODSZERColumn {
+                get {
+                    return this.columnRECEPT_MODSZER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn RECEPT_ALK_TARTColumn {
+                get {
+                    return this.columnRECEPT_ALK_TART;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn RECEPT_POHARColumn {
+                get {
+                    return this.columnRECEPT_POHAR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -339,11 +366,14 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public CIKKRow AddCIKKRow(string RECEPT_TEXT) {
+            public CIKKRow AddCIKKRow(string RECEPT_TEXT, string RECEPT_MODSZER, string RECEPT_ALK_TART, string RECEPT_POHAR) {
                 CIKKRow rowCIKKRow = ((CIKKRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RECEPT_TEXT,
-                        null};
+                        null,
+                        RECEPT_MODSZER,
+                        RECEPT_ALK_TART,
+                        RECEPT_POHAR};
                 rowCIKKRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCIKKRow);
                 return rowCIKKRow;
@@ -371,6 +401,9 @@ namespace e_Cafe.SQL {
             internal void InitVars() {
                 this.columnRECEPT_TEXT = base.Columns["RECEPT_TEXT"];
                 this.columnCIKK_ID = base.Columns["CIKK_ID"];
+                this.columnRECEPT_MODSZER = base.Columns["RECEPT_MODSZER"];
+                this.columnRECEPT_ALK_TART = base.Columns["RECEPT_ALK_TART"];
+                this.columnRECEPT_POHAR = base.Columns["RECEPT_POHAR"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -379,6 +412,12 @@ namespace e_Cafe.SQL {
                 base.Columns.Add(this.columnRECEPT_TEXT);
                 this.columnCIKK_ID = new global::System.Data.DataColumn("CIKK_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCIKK_ID);
+                this.columnRECEPT_MODSZER = new global::System.Data.DataColumn("RECEPT_MODSZER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEPT_MODSZER);
+                this.columnRECEPT_ALK_TART = new global::System.Data.DataColumn("RECEPT_ALK_TART", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEPT_ALK_TART);
+                this.columnRECEPT_POHAR = new global::System.Data.DataColumn("RECEPT_POHAR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEPT_POHAR);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCIKK_ID}, true));
                 this.columnRECEPT_TEXT.MaxLength = 2147483647;
@@ -388,6 +427,9 @@ namespace e_Cafe.SQL {
                 this.columnCIKK_ID.AllowDBNull = false;
                 this.columnCIKK_ID.ReadOnly = true;
                 this.columnCIKK_ID.Unique = true;
+                this.columnRECEPT_MODSZER.MaxLength = 100;
+                this.columnRECEPT_ALK_TART.MaxLength = 100;
+                this.columnRECEPT_POHAR.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -545,6 +587,51 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string RECEPT_MODSZER {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.RECEPT_MODSZERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEPT_MODSZER\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.RECEPT_MODSZERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string RECEPT_ALK_TART {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.RECEPT_ALK_TARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEPT_ALK_TART\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.RECEPT_ALK_TARTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string RECEPT_POHAR {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.RECEPT_POHARColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RECEPT_POHAR\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.RECEPT_POHARColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsRECEPT_TEXTNull() {
                 return this.IsNull(this.tableCIKK.RECEPT_TEXTColumn);
             }
@@ -552,6 +639,36 @@ namespace e_Cafe.SQL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetRECEPT_TEXTNull() {
                 this[this.tableCIKK.RECEPT_TEXTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsRECEPT_MODSZERNull() {
+                return this.IsNull(this.tableCIKK.RECEPT_MODSZERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetRECEPT_MODSZERNull() {
+                this[this.tableCIKK.RECEPT_MODSZERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsRECEPT_ALK_TARTNull() {
+                return this.IsNull(this.tableCIKK.RECEPT_ALK_TARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetRECEPT_ALK_TARTNull() {
+                this[this.tableCIKK.RECEPT_ALK_TARTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsRECEPT_POHARNull() {
+                return this.IsNull(this.tableCIKK.RECEPT_POHARColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetRECEPT_POHARNull() {
+                this[this.tableCIKK.RECEPT_POHARColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -707,19 +824,21 @@ namespace e_Cafe.SQL.dsReceptTextTableAdapters {
             tableMapping.DataSetTable = "CIKK";
             tableMapping.ColumnMappings.Add("RECEPT_TEXT", "RECEPT_TEXT");
             tableMapping.ColumnMappings.Add("CIKK_ID", "CIKK_ID");
+            tableMapping.ColumnMappings.Add("RECEPT_MODSZER", "RECEPT_MODSZER");
+            tableMapping.ColumnMappings.Add("RECEPT_ALK_TART", "RECEPT_ALK_TART");
+            tableMapping.ColumnMappings.Add("RECEPT_POHAR", "RECEPT_POHAR");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [CIKK] WHERE (([CIKK_ID] = @Original_CIKK_ID))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [CIKK] SET [RECEPT_TEXT] = @RECEPT_TEXT WHERE (([CIKK_ID] = @Original_CIKK" +
-                "_ID))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE    CIKK\r\nSET              RECEPT_TEXT = @RECEPT_TEXT, RECEPT_MODSZER = @RE" +
+                "CEPT_MODSZER, RECEPT_ALK_TART = @RECEPT_ALK_TART, \r\n                      RECEPT" +
+                "_POHAR = @RECEPT_POHAR\r\nWHERE     (CIKK_ID = @Original_CIKK_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEPT_TEXT", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEPT_TEXT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEPT_TEXT", global::System.Data.SqlDbType.Text, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "RECEPT_TEXT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEPT_MODSZER", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "RECEPT_MODSZER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEPT_ALK_TART", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "RECEPT_ALK_TART", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEPT_POHAR", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "RECEPT_POHAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CIKK_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -733,8 +852,8 @@ namespace e_Cafe.SQL.dsReceptTextTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT     RECEPT_TEXT, CIKK_ID\r\nFROM         CIKK\r\nWHERE     (CIKK_ID = @pCikk_i" +
-                "d)";
+            this._commandCollection[0].CommandText = "SELECT     RECEPT_TEXT, CIKK_ID, RECEPT_MODSZER, RECEPT_ALK_TART, RECEPT_POHAR\r\nF" +
+                "ROM         CIKK\r\nWHERE     (CIKK_ID = @pCikk_id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pCikk_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -790,36 +909,33 @@ namespace e_Cafe.SQL.dsReceptTextTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CIKK_ID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CIKK_ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string RECEPT_TEXT, int Original_CIKK_ID) {
+        public virtual int Update(string RECEPT_TEXT, string RECEPT_MODSZER, string RECEPT_ALK_TART, string RECEPT_POHAR, int Original_CIKK_ID) {
             if ((RECEPT_TEXT == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(RECEPT_TEXT));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_CIKK_ID));
+            if ((RECEPT_MODSZER == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(RECEPT_MODSZER));
+            }
+            if ((RECEPT_ALK_TART == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(RECEPT_ALK_TART));
+            }
+            if ((RECEPT_POHAR == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(RECEPT_POHAR));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_CIKK_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

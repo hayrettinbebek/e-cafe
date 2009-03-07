@@ -16,6 +16,7 @@ namespace BusinessLogic
     public abstract class DEFS
     {
         public static string ConSTR = "X";//@"server=ERNIE-HOME\SQLEXPRESS;database=ECAFE;uid=sa;password=x";
+        public static string DefProgramLocation = "X";
         public static Color Asztal_hatter = Color.FromArgb(102, 102, 102); //System.Drawing.Color.Gray;
         public static Color Selected_Color = Color.FromArgb(102, 102, 102); //System.Drawing.Color.DarkGray; 
         public static Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));

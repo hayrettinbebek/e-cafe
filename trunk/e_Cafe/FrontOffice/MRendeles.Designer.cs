@@ -74,12 +74,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnHitel = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlFunctions = new System.Windows.Forms.Panel();
             this.pnlButtons.SuspendLayout();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlAlsoGombok.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.pnlFunctions.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlButtons
@@ -334,22 +338,8 @@
             // pnlAlsoGombok
             // 
             this.pnlAlsoGombok.BackgroundImage = global::e_Cafe.Properties.Resources.also;
-            this.pnlAlsoGombok.Controls.Add(this.label8);
-            this.pnlAlsoGombok.Controls.Add(this.label7);
-            this.pnlAlsoGombok.Controls.Add(this.label6);
-            this.pnlAlsoGombok.Controls.Add(this.label5);
-            this.pnlAlsoGombok.Controls.Add(this.label3);
-            this.pnlAlsoGombok.Controls.Add(this.label2);
-            this.pnlAlsoGombok.Controls.Add(this.label1);
-            this.pnlAlsoGombok.Controls.Add(this.label4);
-            this.pnlAlsoGombok.Controls.Add(this.button7);
-            this.pnlAlsoGombok.Controls.Add(this.button6);
-            this.pnlAlsoGombok.Controls.Add(this.button5);
-            this.pnlAlsoGombok.Controls.Add(this.button3);
-            this.pnlAlsoGombok.Controls.Add(this.button2);
-            this.pnlAlsoGombok.Controls.Add(this.button1);
-            this.pnlAlsoGombok.Controls.Add(this.btnHitel);
-            this.pnlAlsoGombok.Controls.Add(this.button4);
+            this.pnlAlsoGombok.Controls.Add(this.pnlFunctions);
+            this.pnlAlsoGombok.Controls.Add(this.panel4);
             this.pnlAlsoGombok.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlAlsoGombok.Location = new System.Drawing.Point(0, 630);
             this.pnlAlsoGombok.Name = "pnlAlsoGombok";
@@ -361,7 +351,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(159, 82);
+            this.label8.Location = new System.Drawing.Point(198, 79);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 20);
             this.label8.TabIndex = 11;
@@ -372,7 +362,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(231, 82);
+            this.label7.Location = new System.Drawing.Point(270, 82);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 11;
@@ -383,7 +373,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(329, 82);
+            this.label6.Location = new System.Drawing.Point(353, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 11;
@@ -394,7 +384,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(403, 82);
+            this.label5.Location = new System.Drawing.Point(427, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 11;
@@ -405,7 +395,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(562, 84);
+            this.label3.Location = new System.Drawing.Point(535, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 11;
@@ -416,7 +406,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(653, 84);
+            this.label2.Location = new System.Drawing.Point(626, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 11;
@@ -427,7 +417,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(873, 81);
+            this.label1.Location = new System.Drawing.Point(15, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 11;
@@ -438,7 +428,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(732, 82);
+            this.label4.Location = new System.Drawing.Point(705, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 11;
@@ -451,7 +441,7 @@
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(153, 6);
+            this.button7.Location = new System.Drawing.Point(192, 6);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(70, 75);
             this.button7.TabIndex = 10;
@@ -465,7 +455,7 @@
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(229, 6);
+            this.button6.Location = new System.Drawing.Point(268, 6);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(70, 75);
             this.button6.TabIndex = 10;
@@ -480,7 +470,7 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(320, 6);
+            this.button5.Location = new System.Drawing.Point(344, 6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(70, 75);
             this.button5.TabIndex = 10;
@@ -494,7 +484,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(396, 6);
+            this.button3.Location = new System.Drawing.Point(420, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 75);
             this.button3.TabIndex = 10;
@@ -509,7 +499,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(555, 6);
+            this.button2.Location = new System.Drawing.Point(528, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 75);
             this.button2.TabIndex = 10;
@@ -524,7 +514,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(642, 6);
+            this.button1.Location = new System.Drawing.Point(615, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 75);
             this.button1.TabIndex = 10;
@@ -539,7 +529,7 @@
             this.btnHitel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHitel.FlatAppearance.BorderSize = 0;
             this.btnHitel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHitel.Location = new System.Drawing.Point(736, 6);
+            this.btnHitel.Location = new System.Drawing.Point(709, 6);
             this.btnHitel.Name = "btnHitel";
             this.btnHitel.Size = new System.Drawing.Size(70, 75);
             this.btnHitel.TabIndex = 10;
@@ -555,13 +545,47 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ImageKey = "aktiv_T.bmp";
-            this.button4.Location = new System.Drawing.Point(877, 6);
+            this.button4.Location = new System.Drawing.Point(19, 6);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 75);
             this.button4.TabIndex = 0;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(843, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(173, 111);
+            this.panel4.TabIndex = 12;
+            // 
+            // pnlFunctions
+            // 
+            this.pnlFunctions.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFunctions.Controls.Add(this.button7);
+            this.pnlFunctions.Controls.Add(this.button6);
+            this.pnlFunctions.Controls.Add(this.label3);
+            this.pnlFunctions.Controls.Add(this.label6);
+            this.pnlFunctions.Controls.Add(this.label2);
+            this.pnlFunctions.Controls.Add(this.label8);
+            this.pnlFunctions.Controls.Add(this.label4);
+            this.pnlFunctions.Controls.Add(this.label5);
+            this.pnlFunctions.Controls.Add(this.button2);
+            this.pnlFunctions.Controls.Add(this.button1);
+            this.pnlFunctions.Controls.Add(this.label7);
+            this.pnlFunctions.Controls.Add(this.btnHitel);
+            this.pnlFunctions.Controls.Add(this.button5);
+            this.pnlFunctions.Controls.Add(this.button3);
+            this.pnlFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFunctions.Location = new System.Drawing.Point(0, 0);
+            this.pnlFunctions.Name = "pnlFunctions";
+            this.pnlFunctions.Size = new System.Drawing.Size(843, 111);
+            this.pnlFunctions.TabIndex = 13;
             // 
             // MRendeles
             // 
@@ -584,7 +608,10 @@
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnlAlsoGombok.ResumeLayout(false);
-            this.pnlAlsoGombok.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.pnlFunctions.ResumeLayout(false);
+            this.pnlFunctions.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -635,5 +662,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ImageList ilCikkek;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlFunctions;
+        private System.Windows.Forms.Panel panel4;
     }
 }

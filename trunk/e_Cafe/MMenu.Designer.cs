@@ -57,6 +57,7 @@
             this.btnKilep = new System.Windows.Forms.Button();
             this.btnKijelent = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.ilLogin = new System.Windows.Forms.ImageList(this.components);
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -364,6 +365,7 @@
             this.btnKijelent.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnKijelent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnKijelent.UseVisualStyleBackColor = false;
+            this.btnKijelent.Click += new System.EventHandler(this.btnKijelent_Click);
             // 
             // btnAdmin
             // 
@@ -380,6 +382,13 @@
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ilLogin
+            // 
+            this.ilLogin.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLogin.ImageStream")));
+            this.ilLogin.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilLogin.Images.SetKeyName(0, "off.png");
+            this.ilLogin.Images.SetKeyName(1, "on.png");
             // 
             // MMenu
             // 
@@ -435,6 +444,7 @@
         public System.Windows.Forms.ImageList btmImgList;
         private System.Windows.Forms.Button btnKijelent;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ImageList ilLogin;
         
     }
 }

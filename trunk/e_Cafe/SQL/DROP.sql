@@ -100,3 +100,11 @@ DROP PROCEDURE [dbo].[sp_add_szamla_tetel]
 
 GO
 
+/****** Object:  StoredProcedure [dbo].[sp_repair_Tables]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_repair_Tables]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_repair_Tables]
+
+GO
+
+
+

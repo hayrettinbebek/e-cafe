@@ -203,7 +203,7 @@ namespace BusinessLogic
 
                 cmd.CommandType = CommandType.Text;
 
-                cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE DELETED = 0 AND isnull(FIZETVE,0) = 0 AND RENDELES_ID =" + pRendeles_id.ToString();
+                cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND RENDELES_ID =" + pRendeles_id.ToString();
 
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read())
@@ -253,11 +253,19 @@ namespace BusinessLogic
                                         "(ASZTAL_ID "+
                                         ",DATUM " +
                                         ",PARTNER_ID " +
+                                        ",USER_ID " +
+                                        ",EV " +
+                                        ",HO " +
+                                        ",NAP " +
                                         ",FIZETVE) " +
                                     "VALUES " +
                                         "(@ASZTAL_ID  " +
                                         ",@DATUM  " +
                                         ",@PARTNER_ID " +
+                                        ",@USER_ID " +
+                                        ",@EV " +
+                                        ",@HO " +
+                                        ",@NAP " +
                                         ",@FIZETVE)";
 
                     break;}
@@ -265,6 +273,10 @@ namespace BusinessLogic
                     cmd.CommandText = "UPDATE RENDELES_FEJ SET ASZTAL_ID = @ASZTAL_ID, " +
                                                    " DATUM = @DATUM, " +
                                                    " PARTNER_ID = @PARTNER_ID, "+
+                                                   " USER_ID = @USER_ID, "+
+                                                   " EV = @EV, "+
+                                                   " HO = @HO, "+
+                                                   " NAP = @NAP, "+
                                                    " FIZETVE = @FIZETVE "+
                                        "WHERE RENDELES_ID = @RENDELES_ID";
                     cmd.Parameters.Add(new SqlParameter("RENDELES_ID", SqlDbType.Int));
@@ -278,11 +290,21 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("PARTNER_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("FIZETVE", SqlDbType.Int));
 
+            cmd.Parameters.Add(new SqlParameter("USER_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("HO", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("NAP", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("EV", SqlDbType.Int));
+
 
             cmd.Parameters["ASZTAL_ID"].Value = fASZTAL_ID;
             cmd.Parameters["DATUM"].Value = fDATUM;
             cmd.Parameters["PARTNER_ID"].Value = fPARTNER_ID;
             cmd.Parameters["FIZETVE"].Value = 0;
+
+            cmd.Parameters["USER_ID"].Value = DEFS.LogInUser.USER_ID;
+            cmd.Parameters["HO"].Value = DEFS.NyitNap_HO;
+            cmd.Parameters["NAP"].Value = DEFS.NyitNap_NAP;
+            cmd.Parameters["EV"].Value = DEFS.NyitNap_EV;
             
             
             cmd.ExecuteNonQuery();
@@ -326,8 +348,8 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            
-            cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE DELETED = 0 AND RENDELES_ID =" + pRendeles_id.ToString();
+
+            cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0  AND RENDELES_ID =" + pRendeles_id.ToString();
             SqlDataReader rdr = cmd.ExecuteReader();
             
             while (rdr.Read())
@@ -397,7 +419,7 @@ namespace BusinessLogic
 
             cmd2.CommandType = CommandType.Text;
 
-            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(RAKTAR_ID,-1) as RAKTAR_ID FROM RENDELES_SOR WHERE DELETED = 0 AND SOR_ID =" + pRendelesSorID.ToString();
+            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(RAKTAR_ID,-1) as RAKTAR_ID FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
             
             SqlDataReader rdr2 = cmd2.ExecuteReader();
 
@@ -440,6 +462,7 @@ namespace BusinessLogic
                                             ",DB " +
                                             ",DATUM "+
                                             ",RAKTAR_ID " +
+                                            ",MODIFIED_USER " +
                                             ",ERTEK) " +
                                         "VALUES " +
                                             "(@RENDELES_ID " +
@@ -447,6 +470,7 @@ namespace BusinessLogic
                                             ",@DB " +
                                             ",@DATUM " +
                                             ",@RAKTAR_ID " +
+                                            ",@MODIFIED_USER " +
                                             ",@ERTEK) SET @newid = SCOPE_IDENTITY()";
                         cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
                         cmd.Parameters["newid"].Direction = ParameterDirection.Output;
@@ -460,6 +484,7 @@ namespace BusinessLogic
                                                        " DB = @DB, " +
                                                        " DATUM = @DATUM, " +
                                                        " RAKTAR_ID = @RAKTAR_ID, " +
+                                                       " MODIFIED_USER = @MODIFIED_USER, " +
                                                        " ERTEK = @ERTEK " +
                                            "WHERE SOR_ID = @SOR_ID";
                         cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
@@ -473,12 +498,14 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("DB", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
 
             cmd.Parameters["RENDELES_ID"].Value = pRendelesId;
             cmd.Parameters["CIKK_ID"].Value = _Cikk.CIKK_ID;
             cmd.Parameters["DB"].Value = _db;
             cmd.Parameters["DATUM"].Value = _datum;
             cmd.Parameters["RAKTAR_ID"].Value = _RaktarId;
+            cmd.Parameters["MODIFIED_USER"].Value = DEFS.LogInUser.USER_ID;
             cmd.Parameters["ERTEK"].Value = _Ertek;
 
             try
