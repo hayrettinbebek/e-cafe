@@ -77,7 +77,7 @@ namespace e_Cafe
             if (SelectMode)
             {
                 SelectedPartner = ((PartnerButton)sender).fPARTNER;
-                if (SelectedPartner.HITEL_SZABAD > neededHitel)
+                if (SelectedPartner.HITEL_SZABAD >= neededHitel)
                 {
                     DEFS.DebugLog("Partnernak van hitelkerete:" + SelectedPartner.PARTNER_ID.ToString());
                     DialogResult = DialogResult.OK;
@@ -119,7 +119,7 @@ namespace e_Cafe
         {
             if (SelectedPartner != null)
             {
-                if (SelectedPartner.HITEL_SZABAD > 0)
+                if (SelectedPartner.HITEL_SZABAD >= 0)
                 {
                     DEFS.SendInfoMessage("kiválasztott ID:" + SelectedPartner.PARTNER_ID.ToString());
                     this.Close();

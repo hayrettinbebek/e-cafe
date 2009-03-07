@@ -56,6 +56,23 @@
     </DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\10.5.3700.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.ReportSource\10.5.3700.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.Shared\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -82,10 +99,13 @@
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -125,6 +145,23 @@
     </Compile>
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsSZAMLAZAS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrontOffice\frmOsszCikkView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\frmOsszCikkView.Designer.cs">
+      <DependentUpon>frmOsszCikkView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Blokk.cs">
+      <DependentUpon>Blokk.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="SQL\dsSYSPAR.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -179,7 +216,6 @@
     </Compile>
     <Compile Include="SQL\dsReceptCikkek.cs">
       <DependentUpon>dsReceptCikkek.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQL\dsReceptCikkek.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -433,6 +469,9 @@
     <EmbeddedResource Include="FrontOffice\frmFoglalas.resx">
       <DependentUpon>frmFoglalas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrontOffice\frmOsszCikkView.resx">
+      <DependentUpon>frmOsszCikkView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmPartnerValaszt.resx">
       <DependentUpon>frmPartnerValaszt.cs</DependentUpon>
     </EmbeddedResource>
@@ -478,6 +517,10 @@
     <EmbeddedResource Include="PartnerSelector.resx">
       <DependentUpon>PartnerSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Blokk.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Blokk.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmAFA.resx">
       <DependentUpon>frmAFA.cs</DependentUpon>
@@ -837,7 +880,21 @@
     <None Include="Resources\d.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="dsSZAMLAZAS.xsc">
+      <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
+    </None>
+    <None Include="dsSZAMLAZAS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSZAMLAZAS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsSZAMLAZAS.xss">
+      <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\BusinessLogic.Partner_cim1.datasource" />
+    <None Include="SQL\update_011.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SQL\dsSYSPAR.xsc">
       <DependentUpon>dsSYSPAR.xsd</DependentUpon>
     </None>
@@ -862,6 +919,9 @@
     <None Include="SQL\update_007.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

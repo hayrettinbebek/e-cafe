@@ -57,7 +57,7 @@
             this.dateTimeColumn1 = new XPTable.Models.DateTimeColumn();
             this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.ilUpDown = new System.Windows.Forms.ImageList(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlAlsoGombok = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnlAlsoGombok.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlButtons
@@ -331,30 +331,30 @@
             this.ilUpDown.ImageSize = new System.Drawing.Size(16, 16);
             this.ilUpDown.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // panel4
+            // pnlAlsoGombok
             // 
-            this.panel4.BackgroundImage = global::e_Cafe.Properties.Resources.also;
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.btnHitel);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 630);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1016, 111);
-            this.panel4.TabIndex = 1;
+            this.pnlAlsoGombok.BackgroundImage = global::e_Cafe.Properties.Resources.also;
+            this.pnlAlsoGombok.Controls.Add(this.label8);
+            this.pnlAlsoGombok.Controls.Add(this.label7);
+            this.pnlAlsoGombok.Controls.Add(this.label6);
+            this.pnlAlsoGombok.Controls.Add(this.label5);
+            this.pnlAlsoGombok.Controls.Add(this.label3);
+            this.pnlAlsoGombok.Controls.Add(this.label2);
+            this.pnlAlsoGombok.Controls.Add(this.label1);
+            this.pnlAlsoGombok.Controls.Add(this.label4);
+            this.pnlAlsoGombok.Controls.Add(this.button7);
+            this.pnlAlsoGombok.Controls.Add(this.button6);
+            this.pnlAlsoGombok.Controls.Add(this.button5);
+            this.pnlAlsoGombok.Controls.Add(this.button3);
+            this.pnlAlsoGombok.Controls.Add(this.button2);
+            this.pnlAlsoGombok.Controls.Add(this.button1);
+            this.pnlAlsoGombok.Controls.Add(this.btnHitel);
+            this.pnlAlsoGombok.Controls.Add(this.button4);
+            this.pnlAlsoGombok.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlAlsoGombok.Location = new System.Drawing.Point(0, 630);
+            this.pnlAlsoGombok.Name = "pnlAlsoGombok";
+            this.pnlAlsoGombok.Size = new System.Drawing.Size(1016, 111);
+            this.pnlAlsoGombok.TabIndex = 1;
             // 
             // label8
             // 
@@ -572,7 +572,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.pnlRendeles);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnlAlsoGombok);
             this.Name = "MRendeles";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -583,8 +583,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pnlAlsoGombok.ResumeLayout(false);
+            this.pnlAlsoGombok.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -594,7 +594,7 @@
         private System.Windows.Forms.Panel pnlButtons;
         private System.Windows.Forms.Panel pnlRendeles;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlAlsoGombok;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel pnlButtonPlace;

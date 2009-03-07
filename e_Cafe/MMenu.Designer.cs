@@ -319,6 +319,7 @@
             this.btnReceptek.Size = new System.Drawing.Size(70, 75);
             this.btnReceptek.TabIndex = 7;
             this.btnReceptek.UseVisualStyleBackColor = false;
+            this.btnReceptek.Click += new System.EventHandler(this.btnReceptek_Click);
             // 
             // btnFoglalas
             // 
