@@ -134,7 +134,8 @@ namespace e_Cafe.Torzsek
 
         private void button1_Click(object sender, EventArgs e)
         {
-            taRecept.Update(dsReceptText.CIKK);
+            //taRecept.Update(dsReceptText.CIKK);
+            taRecept.Update(rtfReceptLeiras.Text, txtRecMod.Text, txtRecAlk.Text, txtRecPoh.Text, (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
 
         }
 

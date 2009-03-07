@@ -41,6 +41,7 @@ namespace e_Cafe
         {
             DEFS.createLogger();
             DEFS.ConSTR = e_Cafe.Properties.Settings.Default.ECAFEConnectionString; // e_Cafe.Properties.Settings.Default.cnSTR;
+            DEFS.DefProgramLocation = AppDomain.CurrentDomain.BaseDirectory;
             
             InitializeComponent();
             try
@@ -87,34 +88,34 @@ namespace e_Cafe
 
         private void RefreshDatabase()
         {
-            string tmpp = AppDomain.CurrentDomain.BaseDirectory;
-            
 
             int db_ver = DEFS.GetDBVER();
             DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
             //MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 10)
+            if (db_ver < 11)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
 
-                    updateDB(new FileInfo(tmpp + @"\SQL\DROP.sql"));
+                    updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\DROP.sql"));
                     DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
 
-                    if (db_ver < 1) { updateDB(new FileInfo(tmpp + @"\SQL\update_001.sql")); }
-                    if (db_ver < 2) { updateDB(new FileInfo(tmpp + @"\SQL\update_002.sql")); }
-                    if (db_ver < 3) { updateDB(new FileInfo(tmpp + @"\SQL\update_003.sql")); }
-                    if (db_ver < 4) { updateDB(new FileInfo(tmpp + @"\SQL\update_004.sql")); }
-                    if (db_ver < 5) { updateDB(new FileInfo(tmpp + @"\SQL\update_005.sql")); }
-                    if (db_ver < 6) { updateDB(new FileInfo(tmpp + @"\SQL\update_006.sql")); }
-                    if (db_ver < 7) { updateDB(new FileInfo(tmpp + @"\SQL\update_007.sql")); }
-                    if (db_ver < 8) { updateDB(new FileInfo(tmpp + @"\SQL\update_008.sql")); }
-                    if (db_ver < 9) { updateDB(new FileInfo(tmpp + @"\SQL\update_009.sql")); }
-                    if (db_ver < 10) { updateDB(new FileInfo(tmpp + @"\SQL\update_010.sql")); }
+                    if (db_ver < 1) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_001.sql")); }
+                    if (db_ver < 2) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_002.sql")); }
+                    if (db_ver < 3) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_003.sql")); }
+                    if (db_ver < 4) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_004.sql")); }
+                    if (db_ver < 5) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_005.sql")); }
+                    if (db_ver < 6) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_006.sql")); }
+                    if (db_ver < 7) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_007.sql")); }
+                    if (db_ver < 8) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_008.sql")); }
+                    if (db_ver < 9) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_009.sql")); }
+                    if (db_ver < 10) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_010.sql")); }
+                    if (db_ver < 11) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_011.sql")); }
 
-                    updateDB(new FileInfo(tmpp + @"\SQL\END.sql"));
+
+                    updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
                     DEFS.SendInfoMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
                                 "\n" + "(Adminisztrátor:Support:Logok beküldése)");
                 }
@@ -163,7 +164,8 @@ namespace e_Cafe
                     {
                         if ((fl._usr == "x") && (fl._pw == "11"))
                         {
-                            DEFS.SendInfoMessage("Sikertelen belépés de tudod a titkos kódot :)!");
+                            DEFS.DebugLog("Sikertelen belépés de tudod a titkos kódot :)!");
+                            SetUserSettings(fl.selUser);
                             r = true;
                             break;
                         }
@@ -174,7 +176,8 @@ namespace e_Cafe
                     }
                     else
                     {
-                        DEFS.LogInUser = new _User(l._USR_ID);
+                        SetUserSettings(fl.selUser);
+                        
                         r = true;
                         break;
 
@@ -185,6 +188,25 @@ namespace e_Cafe
 
             return (r);
 
+        }
+
+        private void SetUserSettings(_User u)
+        {
+
+            UserButton ub = new UserButton();
+            ub.fUser = u;
+            ub.fIL = ilLogin;
+            ub.Checked = true;
+            ub.Dock = DockStyle.Fill;
+            panel7.Controls.Add(ub);
+
+        }
+
+        private void Logout()
+        {
+            DEFS.LogInUser = null;
+            panel7.Controls.Clear();
+            
         }
 
         private void initHelyek()
@@ -321,7 +343,7 @@ namespace e_Cafe
                         MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id));
                         mr.ShowDialog();
                         a.RefreshAsztalok(true);
-
+                        #region előválasztó
                         // Választó lista megjelenítése
                         /*
                                         if (!a.aList.isUsed(tmp_a.Asztal_id))
@@ -354,6 +376,7 @@ namespace e_Cafe
 
                                         }
                         */
+                        #endregion
                     }
                     #endregion
                 }
@@ -397,7 +420,8 @@ namespace e_Cafe
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            tlpButtons.Invalidate();
+            frmReporting r = new frmReporting();
+            r.ShowDialog();
 
 
         }
@@ -429,6 +453,12 @@ namespace e_Cafe
         {
             MRendeles mr = new MRendeles(true);
             mr.ShowDialog();
+        }
+
+        private void btnKijelent_Click(object sender, EventArgs e)
+        {
+            Logout();
+            Login();
         }
 
 

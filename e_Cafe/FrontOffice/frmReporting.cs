@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
+using BusinessLogic;
+
 namespace e_Cafe.FrontOffice
 {
     public partial class frmReporting : Form
@@ -35,7 +37,15 @@ namespace e_Cafe.FrontOffice
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Blokk1.FileName = DEFS.DefProgramLocation + @"\Reports\Blokk.rpt";
             Blokk1.SetDataSource(dsSZAMLAZAS);
+            //oRpt.Load(DEFS.DefProgramLocation + @"\Reports\Blokk.rpt");
+            //oRpt.SetDataSource(ds);
+            //oRpt.SetDatabaseLogon();
+            Blokk1.SetParameterValue("@szla_id", txtId.Text);
+            crystalReportViewer1.ReportSource = Blokk1;
+            //oRpt.PrintToPrinter(1, false, 1, 99);
+            //oRpt.Close();
         }
 
         private void Blokk2_InitReport(object sender, EventArgs e)

@@ -58,7 +58,7 @@ namespace e_Cafe
             //label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
             _InactivityCounter = 0;
             pnlRendeles.Visible = false;
-            pnlAlsoGombok.Visible=false;
+            pnlFunctions.Visible=false;
             InitMenuButtons();
 
         }
@@ -603,6 +603,11 @@ namespace e_Cafe
             cmdGenSzlaFej.Parameters.Add("@p_fizmod", SqlDbType.Int);
             cmdGenSzlaFej.Parameters["@p_fizmod"].Direction = ParameterDirection.Input;
             cmdGenSzlaFej.Parameters["@p_fizmod"].Value = p_fizmod;
+
+            cmdGenSzlaFej.Parameters.Add("@user_id", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@user_id"].Direction = ParameterDirection.Input;
+            cmdGenSzlaFej.Parameters["@user_id"].Value = DEFS.LogInUser.USER_ID;
+            
 
             cmdGenSzlaFej.Parameters.Add("@o_szamla_id", SqlDbType.Int);
             cmdGenSzlaFej.Parameters["@o_szamla_id"].Direction = ParameterDirection.Output;

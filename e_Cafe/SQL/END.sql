@@ -682,6 +682,7 @@ CREATE PROCEDURE sp_create_szamla_fej
 	@p_partner_id int,
 	@p_rendeles_id int,
 	@p_fizmod int,
+	@user_id int,
 	@o_szamla_id int output
 AS
 BEGIN
@@ -701,11 +702,11 @@ BEGIN
 
  INSERT INTO SZAMLA_FEJ (SZAMLA_SORSZAM, PARTNER_ID, RENDELES_ID, 
 						OSSZESEN_NETTO, OSSZESEN_BRUTTO, OSSZESEN_AFA, KEDVEZMENY, 
-						FIZETETT_OSSZEG, FIZETESI_MOD, SZAMLA_DATUMA, EV, HO, NAP)
+						FIZETETT_OSSZEG, FIZETESI_MOD, SZAMLA_DATUMA, EV, HO, NAP, USER_ID)
      VALUES
            (@i_srsz, @p_partner_id, @p_rendeles_id, 
 						0, 0, 0, 0, 
-						0, @p_fizmod, getdate(), @a_ev, @a_ho, @a_nap)   
+						0, @p_fizmod, getdate(), @a_ev, @a_ho, @a_nap, @user_id)   
 
 
 SET @o_szamla_id = SCOPE_IDENTITY()
@@ -742,3 +743,31 @@ BEGIN
 	UPDATE RENDELES_SOR SET FIZETVE = 1 WHERE SOR_ID =@p_rendeles_sor_id
 END
 GO
+
+-- =============================================
+-- Author:		László Ernõ
+-- Create date: 2009.03.07
+-- Description:	Aztalok foglaltságának javítása
+-- =============================================
+CREATE PROCEDURE sp_repair_Tables
+	
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    	update RENDELES_FEJ SET  AKTIV = 0
+	from rendeles_fej f
+	left join rendeles_sor s on f.rendeles_id = s.rendeles_id and isnull(s.DELETED,0) = 1 
+	where s.sor_id is null
+
+	update RENDELES_FEJ SET FIZETVE = 1, AKTIV = 0
+	from rendeles_fej f
+	left join rendeles_sor s on f.rendeles_id = s.rendeles_id and isnull(s.DELETED,0) = 1 and isnull(s.FIZETVE,0) = 1
+	where s.sor_id is null
+
+
+END
+GO
+

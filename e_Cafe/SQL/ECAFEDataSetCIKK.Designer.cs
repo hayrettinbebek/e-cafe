@@ -336,6 +336,8 @@ namespace e_Cafe.SQL {
             
             private global::System.Data.DataColumn columnERTEKESITES_TIPUSA;
             
+            private global::System.Data.DataColumn columnSPEC_ZARAS;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public CIKKDataTable() {
                 this.TableName = "CIKK";
@@ -514,6 +516,13 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SPEC_ZARASColumn {
+                get {
+                    return this.columnSPEC_ZARAS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -562,7 +571,8 @@ namespace e_Cafe.SQL {
                         string ALCSOPORT, 
                         string RAKTAR_KOD, 
                         string GYORSKOD, 
-                        string ERTEKESITES_TIPUSA) {
+                        string ERTEKESITES_TIPUSA, 
+                        int SPEC_ZARAS) {
                 CIKKRow rowCIKKRow = ((CIKKRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MEGNEVEZES,
@@ -585,7 +595,8 @@ namespace e_Cafe.SQL {
                         RAKTAR_KOD,
                         GYORSKOD,
                         null,
-                        ERTEKESITES_TIPUSA};
+                        ERTEKESITES_TIPUSA,
+                        SPEC_ZARAS};
                 rowCIKKRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCIKKRow);
                 return rowCIKKRow;
@@ -632,6 +643,7 @@ namespace e_Cafe.SQL {
                 this.columnGYORSKOD = base.Columns["GYORSKOD"];
                 this.columnCIKK_ID = base.Columns["CIKK_ID"];
                 this.columnERTEKESITES_TIPUSA = base.Columns["ERTEKESITES_TIPUSA"];
+                this.columnSPEC_ZARAS = base.Columns["SPEC_ZARAS"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -678,6 +690,8 @@ namespace e_Cafe.SQL {
                 base.Columns.Add(this.columnCIKK_ID);
                 this.columnERTEKESITES_TIPUSA = new global::System.Data.DataColumn("ERTEKESITES_TIPUSA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnERTEKESITES_TIPUSA);
+                this.columnSPEC_ZARAS = new global::System.Data.DataColumn("SPEC_ZARAS", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSPEC_ZARAS);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCIKK_ID}, true));
                 this.columnMEGNEVEZES.AllowDBNull = false;
@@ -1416,6 +1430,21 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int SPEC_ZARAS {
+                get {
+                    try {
+                        return ((int)(this[this.tableCIKK.SPEC_ZARASColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SPEC_ZARAS\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.SPEC_ZARASColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsSZJ_SZAMNull() {
                 return this.IsNull(this.tableCIKK.SZJ_SZAMColumn);
             }
@@ -1603,6 +1632,16 @@ namespace e_Cafe.SQL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetERTEKESITES_TIPUSANull() {
                 this[this.tableCIKK.ERTEKESITES_TIPUSAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsSPEC_ZARASNull() {
+                return this.IsNull(this.tableCIKK.SPEC_ZARASColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSPEC_ZARASNull() {
+                this[this.tableCIKK.SPEC_ZARASColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1908,6 +1947,7 @@ namespace e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters {
             tableMapping.ColumnMappings.Add("GYORSKOD", "GYORSKOD");
             tableMapping.ColumnMappings.Add("CIKK_ID", "CIKK_ID");
             tableMapping.ColumnMappings.Add("ERTEKESITES_TIPUSA", "ERTEKESITES_TIPUSA");
+            tableMapping.ColumnMappings.Add("SPEC_ZARAS", "SPEC_ZARAS");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1936,7 +1976,7 @@ MINIMUM_KESZLET,
 OPTIMALIS_KESZLET, 
 ELADASI_AR, 
 HELYETTES_TERMEK, MAX_KEDVEZMENY_SZ, MAX_KEDVEZM_FT, MEGJEGYZES, 
-AKTIV, GYORSKOD 
+AKTIV, GYORSKOD, SPEC_ZARAS
 from cikk c
 left join cikkcsoport cs on c.cikkcsoport_id = cs.cikkcsoport_id
 left join MEGYS m on c.MEGYS_ID = m.MEGYS_ID

@@ -16,6 +16,7 @@ namespace e_Cafe
     {
         public string _usr = "";
         public string _pw;
+        public _User selUser;
 
         private UserLista ul;
 
@@ -31,6 +32,7 @@ namespace e_Cafe
             if (_usr != "")
             {
                 _pw = txtPw.Text;
+                
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -45,6 +47,7 @@ namespace e_Cafe
         private void User_Click(object sender, EventArgs e)
         {
             _usr = ((UserButton)sender).fUser.LOGIN_NAME;
+            selUser = ((UserButton)sender).fUser;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -55,6 +58,7 @@ namespace e_Cafe
             #region DebugUser
             _User nu = new _User();
             nu.NAME = "Administrator";
+            nu.USER_ID = -666;
             nu.LOGIN_NAME = "x";
             UserButton ub = new UserButton();
             ub.fUser = nu;
