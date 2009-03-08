@@ -921,6 +921,12 @@
       <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.Partner_cim1.datasource" />
+    <None Include="SQL\update_014.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\update_013.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SQL\update_012.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

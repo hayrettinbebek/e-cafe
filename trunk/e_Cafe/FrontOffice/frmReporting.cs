@@ -13,6 +13,8 @@ namespace e_Cafe.FrontOffice
 {
     public partial class frmReporting : Form
     {
+        public int Szla_id;
+
         public frmReporting()
         {
             InitializeComponent();
@@ -42,7 +44,7 @@ namespace e_Cafe.FrontOffice
             //oRpt.Load(DEFS.DefProgramLocation + @"\Reports\Blokk.rpt");
             //oRpt.SetDataSource(ds);
             //oRpt.SetDatabaseLogon();
-            Blokk1.SetParameterValue("@szla_id", txtId.Text);
+            Blokk1.SetParameterValue("@szla_id", Szla_id);
             crystalReportViewer1.ReportSource = Blokk1;
             //oRpt.PrintToPrinter(1, false, 1, 99);
             //oRpt.Close();

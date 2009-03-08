@@ -20,5 +20,10 @@ namespace e_Cafe.FrontOffice
         {
             this.Close();
         }
+
+        private void ucMemo1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -573,12 +573,13 @@ namespace e_Cafe
                         AddSzlaTetel(szamla_fej_id, ((eCell)r.Cells[0]).rSor._SOR_ID);
                     }
                     DEFS.DebugLog("Rendelés fizetve");
-
                 }
             }
             frmReporting rep = new frmReporting();
+            rep.Szla_id = szamla_fej_id;
             rep.ShowDialog();
 
+            this.Close();
             
 
         }
