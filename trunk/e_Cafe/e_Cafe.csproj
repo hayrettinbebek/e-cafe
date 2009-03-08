@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -98,6 +98,7 @@
     <Reference Include="Microsoft.VisualBasic">
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -479,21 +480,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmSyspar.resx">
       <DependentUpon>frmSyspar.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmFoglalas.resx">
       <DependentUpon>frmFoglalas.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmOsszCikkView.resx">
       <DependentUpon>frmOsszCikkView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmPartnerValaszt.resx">
       <DependentUpon>frmPartnerValaszt.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmReporting.resx">
       <DependentUpon>frmReporting.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmUzenetek.resx">
       <DependentUpon>frmUzenetek.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\Bevetelezes.resx">
       <DependentUpon>Bevetelezes.cs</DependentUpon>
@@ -505,6 +512,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAsztalSelect.resx">
       <DependentUpon>frmAsztalSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBevetelSor.resx">
       <DependentUpon>frmBevetelSor.cs</DependentUpon>
@@ -512,6 +520,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmPartnerInsert.resx">
       <DependentUpon>frmPartnerInsert.cs</DependentUpon>
@@ -523,6 +532,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmAtvezetes.resx">
       <DependentUpon>frmAtvezetes.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\MMPartnerek.resx">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
@@ -564,6 +574,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmCikkReceptAd.resx">
       <DependentUpon>frmCikkReceptAd.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmHelyek.resx">
       <DependentUpon>frmHelyek.cs</DependentUpon>
@@ -583,12 +594,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmUjCikk.resx">
       <DependentUpon>frmUjCikk.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmUjUser.resx">
       <DependentUpon>frmUjUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AsztalInfo.resx">
       <DependentUpon>AsztalInfo.cs</DependentUpon>
