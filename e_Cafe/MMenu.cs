@@ -192,7 +192,7 @@ namespace e_Cafe
 
         private void SetUserSettings(_User u)
         {
-
+            DEFS.LogInUser = u;
             UserButton ub = new UserButton();
             ub.fUser = u;
             ub.fIL = ilLogin;
