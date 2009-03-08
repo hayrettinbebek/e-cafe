@@ -498,7 +498,7 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("DB", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
-            cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("MODIFIED_USER", SqlDbType.Int));
 
             cmd.Parameters["RENDELES_ID"].Value = pRendelesId;
             cmd.Parameters["CIKK_ID"].Value = _Cikk.CIKK_ID;

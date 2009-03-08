@@ -106,5 +106,15 @@ DROP PROCEDURE [dbo].[sp_repair_Tables]
 
 GO
 
+/****** Object:  StoredProcedure [dbo].[sp_login]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_login]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_login]
 
+GO
+
+/****** Object:  StoredProcedure [dbo].[sp_logout]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_logout]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_logout]
+
+GO
 

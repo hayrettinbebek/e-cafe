@@ -31,6 +31,43 @@ namespace BusinessLogic
 
         public static SysParList R_SYSPAR;
 
+        public static void UserLogout(int _u_id)
+        {
+            SqlConnection c = new SqlConnection(ConSTR);
+            SqlCommand cmdNyitNap = new SqlCommand("sp_logout", c);
+            cmdNyitNap.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdNyitNap.Parameters.Add("@user_id", SqlDbType.Int);
+            cmdNyitNap.Parameters["@user_id"].Direction = ParameterDirection.Input;
+            cmdNyitNap.Parameters["@user_id"].Value = _u_id;
+           
+            c.Open();
+            cmdNyitNap.ExecuteNonQuery();
+           
+            c.Close();
+
+
+        }
+
+        public static void UserLogin(int _u_id)
+        {
+            SqlConnection c = new SqlConnection(ConSTR);
+            SqlCommand cmdNyitNap = new SqlCommand("sp_login", c);
+            cmdNyitNap.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdNyitNap.Parameters.Add("@user_id", SqlDbType.Int);
+            cmdNyitNap.Parameters["@user_id"].Direction = ParameterDirection.Input;
+            cmdNyitNap.Parameters["@user_id"].Value = _u_id;
+
+            c.Open();
+            cmdNyitNap.ExecuteNonQuery();
+
+            c.Close();
+
+
+        }
+
+
         public static void LoadNyitottNap()
         {
             SqlConnection c = new SqlConnection(ConSTR);

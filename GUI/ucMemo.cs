@@ -16,9 +16,50 @@ namespace GUI
 
     public partial class ucMemo : UserControl
     {
+        private bool _moove = false;
+
+        public Uzenet _u;
+
         public ucMemo()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mark as read!");
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_moove)
+            {
+                try
+                {
+                    this.Location = new Point(this.Location.X + (e.X), this.Location.Y + (e.Y));
+                    //tmp_m = (Asztal_Button)sender;
+                    //tmp_m.Location = new Point(tmp_m.Location.X + (e.X), tmp_m.Location.Y + (e.Y));
+                    //aList.lASZTAL[aList.GetItemIndex(tmp_m.Asztal_id)].fASZTAL_POS_X = tmp_m.Location.X;
+                    //aList.lASZTAL[aList.GetItemIndex(tmp_m.Asztal_id)].fASZTAL_POS_Y = tmp_m.Location.Y;
+                }
+                catch { }
+            }
+        }
+
+        private void button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            _moove = true;
+        }
+
+        private void button2_MouseUp(object sender, MouseEventArgs e)
+        {
+            _moove = false;
         }
     }
 

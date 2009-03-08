@@ -53,10 +53,11 @@
             this.ucMemo1.BackColor = System.Drawing.Color.Transparent;
             this.ucMemo1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucMemo1.BackgroundImage")));
             this.ucMemo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucMemo1.Location = new System.Drawing.Point(68, 55);
+            this.ucMemo1.Location = new System.Drawing.Point(238, 48);
             this.ucMemo1.Name = "ucMemo1";
             this.ucMemo1.Size = new System.Drawing.Size(227, 259);
             this.ucMemo1.TabIndex = 3;
+            this.ucMemo1.Load += new System.EventHandler(this.ucMemo1_Load);
             // 
             // frmUzenetek
             // 
