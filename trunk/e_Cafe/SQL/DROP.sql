@@ -41,6 +41,12 @@ GO
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_get_Atlagar]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
 DROP FUNCTION [dbo].[fn_get_Atlagar]
 
+GO
+
+/****** Object:  StoredProcedure [dbo].[sp_Do_Keszlet_vezetes]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_Do_Keszlet_vezetes]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_Do_Keszlet_vezetes]
+
 
 GO
 /****** Object:  Trigger [tr_BevSor_insert_update_keszlet]    Script Date: 02/20/2009 23:54:30 ******/

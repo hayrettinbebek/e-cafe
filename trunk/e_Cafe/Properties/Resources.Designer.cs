@@ -80,5 +80,12 @@ namespace e_Cafe.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        public static System.Drawing.Bitmap zoldon {
+            get {
+                object obj = ResourceManager.GetObject("zoldon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
