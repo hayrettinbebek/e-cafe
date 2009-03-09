@@ -93,7 +93,7 @@ namespace e_Cafe
             DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
             //MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 14)
+            if (db_ver < 15)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -340,7 +340,7 @@ namespace e_Cafe
                 {
 
                     #region Rendelés
-                    if (tmp_a.aObj.lFOGLALASOK.Count > 0)
+                    if (tmp_a.aObj.lFOGLALAS_PARAM_IDON_BELUL.Count > 0)
                     {
                         DEFS.SendInfoMessage("Információ! : Az asztalra foglalás van!" + "\n" + "Szeretné feloldani?");
                     }

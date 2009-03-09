@@ -179,12 +179,12 @@ namespace e_Cafe
                 }
                 tlpOTFButtons.Refresh();
             }
-            else { pnlOtherFilter.Visible = false; pnlOldalsav.Visible = false; }
+            else { pnlOtherFilter.Visible = false;/* pnlOldalsav.Visible = false;*/ }
 
             if (pnlOtherFilter.Visible)
             {
-                pnlOldalsav.Visible = true;
-                pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
+                //pnlOldalsav.Visible = true;
+                //pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
             }
             ((CikkcsopButton)sender).Refresh();
             loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1);
@@ -225,7 +225,10 @@ namespace e_Cafe
                     cb.Enabled = false;
                 }
                 cb.Click += onCikkClick;
-                cb.CIml = ilCikkek;
+                cb.BackgroundImage = global::e_Cafe.Properties.Resources.zoldon;
+                cb.BackgroundImageLayout = ImageLayout.Stretch;
+                cb.BackColor = Color.Transparent;
+                //cb.CIml = ilCikkek;
                 flpCikkek.Controls.Add(cb);
 
             }
