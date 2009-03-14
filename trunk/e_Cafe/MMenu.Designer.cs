@@ -34,9 +34,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Button();
-            this.btmImgList = new System.Windows.Forms.ImageList(this.components);
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
+            this.ilLogin = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlHelyek = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -57,7 +57,6 @@
             this.btnKilep = new System.Windows.Forms.Button();
             this.btnKijelent = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
-            this.ilLogin = new System.Windows.Forms.ImageList(this.components);
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -105,13 +104,6 @@
             this.lblTime.UseVisualStyleBackColor = true;
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
-            // btmImgList
-            // 
-            this.btmImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("btmImgList.ImageStream")));
-            this.btmImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.btmImgList.Images.SetKeyName(0, "off.png");
-            this.btmImgList.Images.SetKeyName(1, "aktiv.png");
-            // 
             // tmrTime
             // 
             this.tmrTime.Enabled = true;
@@ -126,10 +118,17 @@
             this.panel6.Size = new System.Drawing.Size(782, 20);
             this.panel6.TabIndex = 0;
             // 
+            // ilLogin
+            // 
+            this.ilLogin.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLogin.ImageStream")));
+            this.ilLogin.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilLogin.Images.SetKeyName(0, "off.png");
+            this.ilLogin.Images.SetKeyName(1, "on.png");
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.BackgroundImage = global::e_Cafe.Properties.Resources.oldal;
+            this.panel2.BackgroundImage = global::e_Cafe.Properties.Resources.oldal1;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.pnlHelyek);
             this.panel2.Controls.Add(this.panel9);
@@ -207,7 +206,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(315, 87);
+            this.label7.Location = new System.Drawing.Point(91, 90);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 20);
             this.label7.TabIndex = 10;
@@ -218,7 +217,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(413, 87);
+            this.label6.Location = new System.Drawing.Point(189, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 10;
@@ -229,7 +228,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(501, 87);
+            this.label5.Location = new System.Drawing.Point(277, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 10;
@@ -240,7 +239,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(625, 87);
+            this.label4.Location = new System.Drawing.Point(401, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 10;
@@ -251,7 +250,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(825, 90);
+            this.label8.Location = new System.Drawing.Point(601, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 17);
             this.label8.TabIndex = 10;
@@ -262,7 +261,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(935, 91);
+            this.label3.Location = new System.Drawing.Point(711, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 10;
@@ -273,7 +272,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(1003, 92);
+            this.label2.Location = new System.Drawing.Point(779, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 10;
@@ -286,7 +285,7 @@
             this.btnPartnerek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPartnerek.FlatAppearance.BorderSize = 0;
             this.btnPartnerek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPartnerek.Location = new System.Drawing.Point(629, 14);
+            this.btnPartnerek.Location = new System.Drawing.Point(405, 17);
             this.btnPartnerek.Name = "btnPartnerek";
             this.btnPartnerek.Size = new System.Drawing.Size(70, 75);
             this.btnPartnerek.TabIndex = 9;
@@ -301,7 +300,7 @@
             this.btnLevelek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLevelek.FlatAppearance.BorderSize = 0;
             this.btnLevelek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLevelek.Location = new System.Drawing.Point(319, 14);
+            this.btnLevelek.Location = new System.Drawing.Point(95, 17);
             this.btnLevelek.Name = "btnLevelek";
             this.btnLevelek.Size = new System.Drawing.Size(70, 75);
             this.btnLevelek.TabIndex = 7;
@@ -315,7 +314,7 @@
             this.btnReceptek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReceptek.FlatAppearance.BorderSize = 0;
             this.btnReceptek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReceptek.Location = new System.Drawing.Point(420, 14);
+            this.btnReceptek.Location = new System.Drawing.Point(196, 17);
             this.btnReceptek.Name = "btnReceptek";
             this.btnReceptek.Size = new System.Drawing.Size(70, 75);
             this.btnReceptek.TabIndex = 7;
@@ -331,7 +330,7 @@
             this.btnFoglalas.FlatAppearance.BorderSize = 0;
             this.btnFoglalas.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnFoglalas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoglalas.Location = new System.Drawing.Point(505, 14);
+            this.btnFoglalas.Location = new System.Drawing.Point(281, 17);
             this.btnFoglalas.Name = "btnFoglalas";
             this.btnFoglalas.Size = new System.Drawing.Size(70, 75);
             this.btnFoglalas.TabIndex = 7;
@@ -344,7 +343,7 @@
             this.btnKilep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKilep.FlatAppearance.BorderSize = 0;
             this.btnKilep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKilep.Location = new System.Drawing.Point(1000, 14);
+            this.btnKilep.Location = new System.Drawing.Point(776, 17);
             this.btnKilep.Name = "btnKilep";
             this.btnKilep.Size = new System.Drawing.Size(70, 75);
             this.btnKilep.TabIndex = 4;
@@ -358,7 +357,7 @@
             this.btnKijelent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKijelent.FlatAppearance.BorderSize = 0;
             this.btnKijelent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKijelent.Location = new System.Drawing.Point(838, 14);
+            this.btnKijelent.Location = new System.Drawing.Point(614, 17);
             this.btnKijelent.Name = "btnKijelent";
             this.btnKijelent.Size = new System.Drawing.Size(70, 75);
             this.btnKijelent.TabIndex = 1;
@@ -374,7 +373,7 @@
             this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdmin.FlatAppearance.BorderSize = 0;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Location = new System.Drawing.Point(924, 14);
+            this.btnAdmin.Location = new System.Drawing.Point(700, 17);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(70, 75);
             this.btnAdmin.TabIndex = 1;
@@ -382,13 +381,6 @@
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // ilLogin
-            // 
-            this.ilLogin.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLogin.ImageStream")));
-            this.ilLogin.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilLogin.Images.SetKeyName(0, "off.png");
-            this.ilLogin.Images.SetKeyName(1, "on.png");
             // 
             // MMenu
             // 
@@ -441,7 +433,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnLevelek;
-        public System.Windows.Forms.ImageList btmImgList;
         private System.Windows.Forms.Button btnKijelent;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ImageList ilLogin;

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using BusinessLogic;
 using System.Runtime.InteropServices ;
 
+
 namespace GUI
 {
 
@@ -30,12 +31,21 @@ namespace GUI
             FlatAppearance.BorderSize = 0;
             ImageAlign = ContentAlignment.BottomRight;
             BackColor = Color.Transparent;
+            BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
         }
 
         protected override void OnCheckedChanged(EventArgs e)
         {
-            if (ImageIndex == 1) { ImageIndex = 0; }
-            else ImageIndex = 1;
+            if (this.Checked)
+            {
+                //ImageIndex = 0;
+                BackgroundImage = global::GUI.Properties.Resources.on_menubtn;
+            }
+            else
+            {
+                //ImageIndex = 1;
+                BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
+            }
             //base.OnCheckedChanged(e);
 
         }
@@ -371,19 +381,10 @@ namespace GUI
         Font f1 = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
         Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 
-        private Image lImage;
+        private PictureBox lImage;
         private Label lNAME;
         private Label lNAME2;
 
-        public ImageList fIL
-        {
-            get { return (ImageList); }
-            set
-            {
-                ImageList = value;
-                BackgroundImage = ImageList.Images[0];
-            }
-        }
 
         public _User fUser
         {
@@ -407,16 +408,16 @@ namespace GUI
         {
             base.OnCheckedChanged(e);
 
-            if (Checked) { BackgroundImage = ImageList.Images[1]; }
-            else { BackgroundImage = ImageList.Images[0];}
+            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.on_user; }
+            else { BackgroundImage = global::GUI.Properties.Resources.off_user; }
 
         }
 
 
         public UserButton()
         {
-            Width = 165;
-            Height = 60;
+            Width = 130;
+            Height = 65;
             // Get the dimension of the client rectangle 
             Rectangle rect = this.ClientRectangle;
             // Invoke the unmanaged DLL function here to create the RoundRectangleRegion
@@ -438,7 +439,7 @@ namespace GUI
             BackColor = Color.Transparent;
 
             lNAME = new Label();
-            lNAME.Width = 95;
+            lNAME.Width = 65;
             lNAME.Height = 20;
             lNAME.BackColor = Color.Transparent;
             lNAME.Location = new Point(60, 15);
@@ -449,7 +450,7 @@ namespace GUI
 
 
             lNAME2 = new Label();
-            lNAME2.Width = 95;
+            lNAME2.Width = 65;
             lNAME2.Height = 20;
             lNAME2.BackColor = Color.Transparent;
             lNAME2.Location = new Point(60, 35);
@@ -459,12 +460,14 @@ namespace GUI
             lNAME2.Click += this.OnLabelClick;
             this.Controls.Add(lNAME2);
 
-            Panel p = new Panel();
-            p.Location = new Point(14, 8);
-            p.Width = 37;
-            p.Height = 37;
+            lImage = new PictureBox();
+            lImage.Width = 39;
+            lImage.Height = 39;
+            lImage.Location = new Point(15, 16);
+            lImage.Click += this.OnLabelClick;
 
-            this.Controls.Add(p);
+            this.Controls.Add(lImage);
+
 
 
         }

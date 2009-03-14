@@ -203,7 +203,8 @@ namespace e_Cafe
             DEFS.LogInUser = u;
             UserButton ub = new UserButton();
             ub.fUser = u;
-            ub.fIL = ilLogin;
+            ub.BackgroundImage = global::GUI.Properties.Resources.off_user;
+            ub.BackgroundImageLayout = ImageLayout.Stretch;
             ub.Checked = true;
             ub.Dock = DockStyle.Fill;
             panel7.Controls.Add(ub);
@@ -220,6 +221,7 @@ namespace e_Cafe
 
         #endregion
 
+        #region Helyek kezelése
         private void initHelyek()
         {
             Helyek cl = new Helyek();
@@ -253,7 +255,7 @@ namespace e_Cafe
                 bt.Location = new Point(0, 0);
                 bt.Width = C_HELYEK_WIDTH;
                 bt.Height = C_HELYEK_HEIGHT;
-                bt.BackgroundImage = btmImgList.Images[0];
+                bt.BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
                 bt.BackgroundImageLayout = ImageLayout.Stretch;
                 
                 bt.Dock = DockStyle.Fill;
@@ -281,9 +283,9 @@ namespace e_Cafe
         {
             if (((HelyButton)sender).Checked)
             {
-                ((HelyButton)sender).BackgroundImage = btmImgList.Images[1];
+                ((HelyButton)sender).BackgroundImage = global::GUI.Properties.Resources.on_menubtn;
             }
-            else { ((HelyButton)sender).BackgroundImage = btmImgList.Images[0]; }
+            else { ((HelyButton)sender).BackgroundImage = global::GUI.Properties.Resources.off_menuBtn; }
         }
 
         private void HelyMenuClick(object sender, EventArgs e)
@@ -292,9 +294,10 @@ namespace e_Cafe
             
                 //this.Controls.SetChildIndex(tlpButtons, 0);
             tlpButtons.Invalidate();
-            
+
         }
 
+        #endregion
 
         public void Asztal_click(object sender, EventArgs e)
         {

@@ -18,17 +18,36 @@ namespace e_Cafe
 
             Application.ThreadException += new ThreadExceptionEventHandler(Form1_UIThreadException);
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+            Application.ApplicationExit += new EventHandler(OnApplicationExit);
+
 
             // Add the event handler for handling non-UI thread exceptions to the event. 
             AppDomain.CurrentDomain.UnhandledException +=
                 new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
-
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MMenu());
 
+
+
         }
+
+        private static void OnApplicationExit(object sender, EventArgs e)
+        {
+            // When the application is exiting, write the application data to the
+            // user file and close it.
+            
+
+            try
+            {
+                // Ignore any errors that might occur while closing the file handle.
+                DEFS.UserLogout(DEFS.LogInUser.USER_ID);
+            }
+            catch { }
+        }
+
 
         private static void Form1_UIThreadException(object sender, ThreadExceptionEventArgs t)
         {
@@ -61,8 +80,8 @@ namespace e_Cafe
             try
             {
                 Exception ex = (Exception)e.ExceptionObject;
-                string errorMsg = "An application error occurred. Please contact the adminstrator " +
-                    "with the following information:\n\n";
+                string errorMsg = "Alkalmazás hiba, kérem indítsa újra az alkalmazást vagy forduljon a Support-hoz " +
+                    "a következő adatokkal:\n\n";
 
                 // Since we can't prevent the app from terminating, log this to the event log.
                 DEFS.ExLog(errorMsg + ex.Message + "\n\nStack Trace:\n" + ex.StackTrace);

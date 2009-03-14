@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7A9003C7-484C-4510-BE0F-128F219A812B}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -75,12 +75,6 @@
     <Compile Include="billentyu\keyb2.Designer.cs">
       <DependentUpon>keyb2.cs</DependentUpon>
     </Compile>
-    <Compile Include="billentyu\keyboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="billentyu\keyboard.Designer.cs">
-      <DependentUpon>keyboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="billentyu\TouchKeyboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,12 +89,6 @@
     </Compile>
     <Compile Include="MenuButton.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Notepad_Rendeles.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Notepad_Rendeles.Designer.cs">
-      <DependentUpon>Notepad_Rendeles.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -137,20 +125,12 @@
       <DependentUpon>keyb2.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="billentyu\keyboard.resx">
-      <DependentUpon>keyboard.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="billentyu\TouchKeyboard.resx">
       <DependentUpon>TouchKeyboard.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notepad_Rendeles.resx">
-      <DependentUpon>Notepad_Rendeles.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -857,6 +837,12 @@
     <Content Include="asztal\pult\pult_off.png" />
     <Content Include="asztal\pult\pult_on.png" />
     <Content Include="asztal\pult\pult_over.png" />
+    <None Include="Resources\piroson.png" />
+    <None Include="Resources\zoldon.png" />
+    <None Include="Resources\on.png" />
+    <None Include="Resources\off.png" />
+    <None Include="Resources\aktiv_T.bmp" />
+    <None Include="Resources\off_T.bmp" />
     <None Include="billentyu\backspace_T.bmp" />
     <None Include="billentyu\enter_T.bmp" />
     <None Include="billentyu\space_T.bmp" />

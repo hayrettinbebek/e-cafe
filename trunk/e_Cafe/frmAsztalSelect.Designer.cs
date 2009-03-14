@@ -43,7 +43,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.BackgroundImage = global::e_Cafe.Properties.Resources.oldal;
+            this.panel2.BackgroundImage = global::e_Cafe.Properties.Resources.oldal1;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.pnlHelyek);
             this.panel2.Controls.Add(this.panel9);
