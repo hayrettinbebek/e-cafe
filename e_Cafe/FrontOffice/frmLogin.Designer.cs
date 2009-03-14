@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.txtPw = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,15 +44,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flpUser = new System.Windows.Forms.FlowLayoutPanel();
             this.button12 = new System.Windows.Forms.Button();
-            this.ilLogin = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPw
             // 
             this.txtPw.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPw.Location = new System.Drawing.Point(499, 227);
+            this.txtPw.Location = new System.Drawing.Point(499, 192);
             this.txtPw.Name = "txtPw";
             this.txtPw.PasswordChar = '*';
             this.txtPw.Size = new System.Drawing.Size(98, 22);
@@ -279,6 +278,8 @@
             this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Location = new System.Drawing.Point(686, 12);
             this.button12.Name = "button12";
@@ -286,13 +287,6 @@
             this.button12.TabIndex = 2;
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // ilLogin
-            // 
-            this.ilLogin.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLogin.ImageStream")));
-            this.ilLogin.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilLogin.Images.SetKeyName(0, "off.png");
-            this.ilLogin.Images.SetKeyName(1, "on.png");
             // 
             // panel1
             // 
@@ -302,6 +296,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(140, 174);
             this.panel1.TabIndex = 5;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Location = new System.Drawing.Point(484, 226);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(80, 40);
+            this.button13.TabIndex = 1;
+            this.button13.Tag = "7";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // frmLogin
             // 
@@ -322,6 +334,7 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
@@ -354,7 +367,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flpUser;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.ImageList ilLogin;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button13;
     }
 }
