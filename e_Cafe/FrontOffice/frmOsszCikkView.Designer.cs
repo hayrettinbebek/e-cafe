@@ -43,12 +43,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReceptText)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cIKKBindingSource, "RECEPT_TEXT", true));
             this.richTextBox1.Location = new System.Drawing.Point(133, 292);
             this.richTextBox1.Name = "richTextBox1";
@@ -122,6 +125,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cIKKBindingSource, "RECEPT_POHAR", true));
             this.textBox1.Location = new System.Drawing.Point(133, 187);
             this.textBox1.Name = "textBox1";
@@ -140,6 +144,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cIKKBindingSource, "RECEPT_MODSZER", true));
             this.textBox2.Location = new System.Drawing.Point(133, 218);
             this.textBox2.Name = "textBox2";
@@ -148,11 +153,33 @@
             // 
             // textBox3
             // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cIKKBindingSource, "RECEPT_ALK_TART", true));
             this.textBox3.Location = new System.Drawing.Point(133, 250);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(228, 20);
             this.textBox3.TabIndex = 3;
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape2});
+            this.shapeContainer2.Size = new System.Drawing.Size(612, 555);
+            this.shapeContainer2.TabIndex = 4;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.Color.Gray;
+            this.lineShape2.BorderWidth = 2;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 119;
+            this.lineShape2.X2 = 119;
+            this.lineShape2.Y1 = 175;
+            this.lineShape2.Y2 = 485;
             // 
             // frmOsszCikkView
             // 
@@ -169,7 +196,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.shapeContainer1);
+            this.Controls.Add(this.shapeContainer2);
             this.DoubleBuffered = true;
             this.Name = "frmOsszCikkView";
             this.Text = "frmOsszCikkView";
@@ -195,5 +222,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
     }
 }

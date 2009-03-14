@@ -22,7 +22,7 @@ namespace GUI.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace GUI.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GUI.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace GUI.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -60,44 +60,72 @@ namespace GUI.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap backspace_T {
+        public static System.Drawing.Bitmap backspace_T {
             get {
                 object obj = ResourceManager.GetObject("backspace_T", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap bill {
-            get {
-                object obj = ResourceManager.GetObject("bill", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap button {
+        public static System.Drawing.Bitmap button {
             get {
                 object obj = ResourceManager.GetObject("button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap enter_T {
+        public static System.Drawing.Bitmap enter_T {
             get {
                 object obj = ResourceManager.GetObject("enter_T", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap notepad_T {
+        public static System.Drawing.Bitmap off_menuBtn {
             get {
-                object obj = ResourceManager.GetObject("notepad_T", resourceCulture);
+                object obj = ResourceManager.GetObject("off_menuBtn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap space_T {
+        public static System.Drawing.Bitmap off_user {
+            get {
+                object obj = ResourceManager.GetObject("off_user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap on_menubtn {
+            get {
+                object obj = ResourceManager.GetObject("on_menubtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap on_user {
+            get {
+                object obj = ResourceManager.GetObject("on_user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap piroson {
+            get {
+                object obj = ResourceManager.GetObject("piroson", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap space_T {
             get {
                 object obj = ResourceManager.GetObject("space_T", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap zoldon {
+            get {
+                object obj = ResourceManager.GetObject("zoldon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

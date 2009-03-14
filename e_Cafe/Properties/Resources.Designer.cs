@@ -67,23 +67,9 @@ namespace e_Cafe.Properties {
             }
         }
         
-        public static System.Drawing.Bitmap off_T {
+        public static System.Drawing.Bitmap oldal1 {
             get {
-                object obj = ResourceManager.GetObject("off_T", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        public static System.Drawing.Bitmap oldal {
-            get {
-                object obj = ResourceManager.GetObject("oldal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        public static System.Drawing.Bitmap zoldon {
-            get {
-                object obj = ResourceManager.GetObject("zoldon", resourceCulture);
+                object obj = ResourceManager.GetObject("oldal1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
