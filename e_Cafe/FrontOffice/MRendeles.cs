@@ -133,8 +133,10 @@ namespace e_Cafe
 
                 bt.BackColor = Color.Transparent;
                 bt.Click += CikkcsopMenuClick;
-                bt.ImageList = btmImgList;
-                bt.ImageIndex = 0;
+                //bt.ImageList = btmImgList;
+
+                bt.BackgroundImageLayout = ImageLayout.Stretch;
+                //bt.ImageIndex = 0;
                 tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 70));
                 tlpButtons.Controls.Add(bt);
                 //bt.Invalidate();
@@ -225,7 +227,14 @@ namespace e_Cafe
                     cb.Enabled = false;
                 }
                 cb.Click += onCikkClick;
-                cb.BackgroundImage = global::e_Cafe.Properties.Resources.zoldon;
+                if (lButtons[i].fKESZLET_ALL <= lButtons[i].OPTIMALIS_KESZLET)
+                {
+                    cb.BackgroundImage = global::GUI.Properties.Resources.piroson;
+                }
+                else
+                {
+                    cb.BackgroundImage = global::GUI.Properties.Resources.zoldon;
+                }
                 cb.BackgroundImageLayout = ImageLayout.Stretch;
                 cb.BackColor = Color.Transparent;
                 //cb.CIml = ilCikkek;

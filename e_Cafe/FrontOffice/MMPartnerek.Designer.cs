@@ -105,7 +105,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::e_Cafe.Properties.Resources.oldal;
+            this.panel4.BackgroundImage = global::e_Cafe.Properties.Resources.oldal1;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Controls.Add(this.tableLayoutPanel1);
             this.panel4.Controls.Add(this.panel6);
@@ -138,7 +138,7 @@
             // checkBox2
             // 
             this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.BackgroundImage = global::e_Cafe.Properties.Resources.off_T;
+            this.checkBox2.BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
             this.checkBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox2.FlatAppearance.BorderSize = 0;
@@ -158,7 +158,7 @@
             // checkBox1
             // 
             this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox1.BackgroundImage = global::e_Cafe.Properties.Resources.off_T;
+            this.checkBox1.BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
             this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox1.FlatAppearance.BorderSize = 0;
@@ -178,7 +178,7 @@
             // checkBox3
             // 
             this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox3.BackgroundImage = global::e_Cafe.Properties.Resources.off_T;
+            this.checkBox3.BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
             this.checkBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox3.FlatAppearance.BorderSize = 0;
