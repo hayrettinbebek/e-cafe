@@ -63,7 +63,9 @@ namespace e_Cafe
             UserButton ub = new UserButton();
             ub.fUser = nu;
             ub.Click += User_Click;
-            ub.fIL = ilLogin;
+            ub.BackgroundImage = global::GUI.Properties.Resources.off_user;
+            ub.BackgroundImageLayout = ImageLayout.Stretch;
+
             ub.Checked = true;
 
             flpUser.Controls.Add(ub);
@@ -75,7 +77,9 @@ namespace e_Cafe
                 UserButton ub2 = new UserButton();
                 ub2.fUser = u;
                 ub2.Click += User_Click;
-                ub2.fIL = ilLogin;
+                ub2.BackgroundImage = global::GUI.Properties.Resources.off_user;
+                ub2.BackgroundImageLayout = ImageLayout.Stretch;
+
                 
                 flpUser.Controls.Add(ub2);
    
@@ -85,6 +89,12 @@ namespace e_Cafe
         private void button12_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            txtPw.Focus();
+            SendKeys.Send("{BACKSPACE}");
         }
     }
 }
