@@ -27,6 +27,8 @@ namespace e_Cafe
         ResourceManager myResources;
         Object LastCikkcsopMenu;
 
+       
+
         Rendeles _AktRendeles;
 
         #region Constructor
@@ -45,6 +47,7 @@ namespace e_Cafe
 
             InitMenuButtons();
             initRendelTabla();
+            
         }
 
         public MRendeles(bool OsszCikk)
@@ -137,7 +140,7 @@ namespace e_Cafe
 
                 bt.BackgroundImageLayout = ImageLayout.Stretch;
                 //bt.ImageIndex = 0;
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 70));
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 50));
                 tlpButtons.Controls.Add(bt);
                 //bt.Invalidate();
             }
@@ -147,6 +150,7 @@ namespace e_Cafe
 
         private void CikkcsopMenuClick(object sender, EventArgs e)
         {
+            
             resetCounter();
             bool Call;
             LastCikkcsopMenu = sender;
@@ -191,6 +195,7 @@ namespace e_Cafe
             ((CikkcsopButton)sender).Refresh();
             loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1);
             //if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
+            
         }
 
         private void AlcsopMenuClick(object sender, EventArgs e)
