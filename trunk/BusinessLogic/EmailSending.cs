@@ -12,7 +12,7 @@ namespace BusinessLogic
     public class EmailSending
     {
 
-        const string fromPassword = "za12sb";
+        const string fromPassword = "F7bs7Bvk";
         const string subject = "Subject";
         
         
@@ -23,7 +23,7 @@ namespace BusinessLogic
 
         public void send_mail(Exception x)
         {
-            MailAddress fromAddress = new MailAddress("laszlo.erno@gmail.com", "NOTRIX - E_cAfe");
+            MailAddress fromAddress = new MailAddress("allin.cafe.admin@gmail.com", "NOTRIX - E_cAfe");
             MailAddress toAddress = new MailAddress("laszlo.erno@gmail.com", "Administrator");
             SmtpClient smtp = new SmtpClient
             {
@@ -47,7 +47,7 @@ namespace BusinessLogic
 
         public void send_mail(string msg)
         {
-            MailAddress fromAddress = new MailAddress("laszlo.erno@gmail.com", "NOTRIX - E_cAfe");
+            MailAddress fromAddress = new MailAddress("allin.cafe.admin@gmail.com", "NOTRIX - E_cAfe");
             MailAddress toAddress = new MailAddress("laszlo.erno@gmail.com", "Administrator");
             SmtpClient smtp = new SmtpClient
             {
@@ -70,7 +70,7 @@ namespace BusinessLogic
 
         public void sendLogs(string[] files)
         {
-            MailAddress fromAddress = new MailAddress("laszlo.erno@gmail.com", "NOTRIX - E_cAfe");
+            MailAddress fromAddress = new MailAddress("allin.cafe.admin@gmail.com", "NOTRIX - E_Cafe");
             MailAddress toAddress = new MailAddress("laszlo.erno@gmail.com", "Administrator");
             SmtpClient smtp = new SmtpClient
             {

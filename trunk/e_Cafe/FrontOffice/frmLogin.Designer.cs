@@ -276,14 +276,14 @@
             // 
             this.button12.BackColor = System.Drawing.Color.Transparent;
             this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(686, 12);
+            this.button12.Location = new System.Drawing.Point(681, 7);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(31, 32);
+            this.button12.Size = new System.Drawing.Size(39, 45);
             this.button12.TabIndex = 2;
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
