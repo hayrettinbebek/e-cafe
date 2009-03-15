@@ -577,19 +577,30 @@ namespace e_Cafe
             if (mp.DialogResult == DialogResult.OK)
             {
                 // KP-s fizetés
-                szamla_fej_id = GenerateSzamlaFej(mp.SelectedPartner.PARTNER_ID, _AktRendeles.fRENDELES_ID, fizmod);
+                if (mp.SelectedPartner == null)
+                {
+                    szamla_fej_id = GenerateSzamlaFej(-99, _AktRendeles.fRENDELES_ID, fizmod);
+                }
+                else
+                {
+                    szamla_fej_id = GenerateSzamlaFej(mp.SelectedPartner.PARTNER_ID, _AktRendeles.fRENDELES_ID, fizmod);
+                }
                 if (szamla_fej_id != -1)
                 {
                     foreach (var r in tblRendeles.SelectedItems)
                     {
                         AddSzlaTetel(szamla_fej_id, ((eCell)r.Cells[0]).rSor._SOR_ID);
                     }
+
+                    frmReporting rep = new frmReporting();
+                    rep.Szla_id = szamla_fej_id;
+                    rep.ShowDialog();
+
                     DEFS.DebugLog("Rendelés fizetve");
+
                 }
             }
-            frmReporting rep = new frmReporting();
-            rep.Szla_id = szamla_fej_id;
-            rep.ShowDialog();
+
 
             this.Close();
             

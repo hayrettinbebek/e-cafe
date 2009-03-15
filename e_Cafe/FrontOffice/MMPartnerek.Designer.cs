@@ -44,6 +44,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnPartnerNelkul = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -225,6 +226,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::e_Cafe.Properties.Resources.also;
+            this.panel1.Controls.Add(this.btnPartnerNelkul);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 514);
@@ -235,7 +237,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(789, 15);
+            this.button2.Location = new System.Drawing.Point(706, 17);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 75);
             this.button2.TabIndex = 2;
@@ -243,6 +245,18 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnPartnerNelkul
+            // 
+            this.btnPartnerNelkul.BackColor = System.Drawing.Color.Silver;
+            this.btnPartnerNelkul.Location = new System.Drawing.Point(302, 17);
+            this.btnPartnerNelkul.Name = "btnPartnerNelkul";
+            this.btnPartnerNelkul.Size = new System.Drawing.Size(131, 75);
+            this.btnPartnerNelkul.TabIndex = 2;
+            this.btnPartnerNelkul.Text = "Partner nélküli";
+            this.btnPartnerNelkul.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnPartnerNelkul.UseVisualStyleBackColor = false;
+            this.btnPartnerNelkul.Click += new System.EventHandler(this.btnPartnerNelkul_Click);
             // 
             // MMPartnerek
             // 
@@ -285,5 +299,6 @@
         private System.Windows.Forms.RadioButton checkBox1;
         private System.Windows.Forms.RadioButton checkBox3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPartnerNelkul;
     }
 }

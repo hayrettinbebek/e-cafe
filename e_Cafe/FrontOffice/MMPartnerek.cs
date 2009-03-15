@@ -26,6 +26,7 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
@@ -115,8 +116,8 @@ namespace e_Cafe
         private void MMPartnerek_Load(object sender, EventArgs e)
         {
 
-
-            //btnKivalaszt.Visible = SelectMode;
+             
+            btnPartnerNelkul.Visible = SelectMode;
 
 
         }
@@ -133,6 +134,12 @@ namespace e_Cafe
                     this.Close();
                 }
             }
+        }
+
+        private void btnPartnerNelkul_Click(object sender, EventArgs e)
+        {
+            SelectedPartner = null;
+            DialogResult = DialogResult.OK;
         }
     }
 }
