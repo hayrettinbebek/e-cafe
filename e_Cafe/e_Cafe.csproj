@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -105,7 +105,6 @@
     <Reference Include="Microsoft.VisualBasic">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -771,7 +770,6 @@
     <None Include="Properties\DataSources\BusinessLogic.Partner_tel.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Raktar.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Szallito.datasource" />
-    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
@@ -875,11 +873,9 @@
     <None Include="Properties\DataSources\BusinessLogic.CikkKeszlet.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Partner.datasource" />
     <None Include="Properties\DataSources\BusinessLogic._User.datasource" />
-    <None Include="Resources\off_T.bmp" />
     <None Include="Properties\DataSources\BusinessLogic.DynCombo.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Vevo.datasource" />
     <None Include="Resources\also.PNG" />
-    <None Include="Resources\oldal.PNG" />
     <None Include="Resources\hatter.png" />
     <None Include="SQL\DROP.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -907,9 +903,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\OK_I.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQL\dsSZAMLAZAS.xsc">
@@ -947,7 +940,6 @@
     <None Include="SQL\dsSYSPAR.xss">
       <DependentUpon>dsSYSPAR.xsd</DependentUpon>
     </None>
-    <None Include="Resources\pipaon.png" />
     <None Include="SQL\update_010.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -965,199 +957,14 @@
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CikkZold.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zoldon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\oldal1.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\aktiv_T.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\off_T1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\aktiv_T1.bmp" />
     <None Include="SQL\update_015.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\z.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\a.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\a2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\b.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bckspc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\c.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\d.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\e.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\e2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\enter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\enter-42.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\f.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\felk.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\g.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\h.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hosszi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hosszo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hosszo2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hosszu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hosszu2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\i.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\j.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\k.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kerdo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kettpont.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kukkac.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\l.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\m.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\n.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\o.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\o2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\p.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\per.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pont.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\q.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\r.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\spc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\t.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tab.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\u.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\u2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\v.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vesszo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\w.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\y.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hatter.bmp" />
     <None Include="SQL\update_016.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
