@@ -35,6 +35,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.grpKiszerelesek = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnKiszerelések = new System.Windows.Forms.Button();
@@ -69,10 +70,14 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.tpRecept = new System.Windows.Forms.TabPage();
             this.grpRecept = new System.Windows.Forms.GroupBox();
+            this.txtRecAlk = new System.Windows.Forms.TextBox();
+            this.txtRecPoh = new System.Windows.Forms.TextBox();
+            this.txtRecMod = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
-            this.bsReceptCikkek = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptCikkek = new e_Cafe.SQL.dsReceptCikkek();
             this.button4 = new System.Windows.Forms.Button();
             this.btnReceptCikkModosit = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -85,13 +90,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CIKK_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ERTEKESITES_TIPUSA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taReceptCikkek = new e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
-            this.txtRecMod = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtRecPoh = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtRecAlk = new System.Windows.Forms.TextBox();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gYORSKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,17 +116,19 @@
             this.lITKISZNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lITKISZMENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lITKISZBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bsRecept = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReceptText = new e_Cafe.SQL.dsReceptText();
+            this.bsReceptCikkek = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReceptCikkek = new e_Cafe.SQL.dsReceptCikkek();
+            this.taReceptCikkek = new e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
             this.cIKKTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
             this.lIT_KISZTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.taRecept = new e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter();
             this.rAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kESZLETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kESZLETERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aTLAGARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cikkKeszletBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bsRecept = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptText = new e_Cafe.SQL.dsReceptText();
-            this.taRecept = new e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -141,16 +141,16 @@
             this.grpRecept.SuspendLayout();
             this.dataRepeater1.ItemTemplate.SuspendLayout();
             this.dataRepeater1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsReceptCikkek)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetCIKK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lITKISZBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRecept)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReceptText)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsReceptCikkek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -225,6 +225,20 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Alap adatok";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.cIKKBindingSource, "SPEC_ZARAS", true));
+            this.checkBox1.FlatAppearance.BorderSize = 0;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Location = new System.Drawing.Point(16, 116);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(139, 17);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.Text = "Megkülönböztetett zárás";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // grpKiszerelesek
             // 
@@ -611,6 +625,60 @@
             this.grpRecept.TabStop = false;
             this.grpRecept.Text = "Recept";
             // 
+            // txtRecAlk
+            // 
+            this.txtRecAlk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRecAlk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRecept, "RECEPT_ALK_TART", true));
+            this.txtRecAlk.Location = new System.Drawing.Point(103, 108);
+            this.txtRecAlk.Name = "txtRecAlk";
+            this.txtRecAlk.Size = new System.Drawing.Size(197, 20);
+            this.txtRecAlk.TabIndex = 22;
+            // 
+            // txtRecPoh
+            // 
+            this.txtRecPoh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRecPoh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRecept, "RECEPT_POHAR", true));
+            this.txtRecPoh.Location = new System.Drawing.Point(103, 83);
+            this.txtRecPoh.Name = "txtRecPoh";
+            this.txtRecPoh.Size = new System.Drawing.Size(197, 20);
+            this.txtRecPoh.TabIndex = 22;
+            // 
+            // txtRecMod
+            // 
+            this.txtRecMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRecMod.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRecept, "RECEPT_MODSZER", true));
+            this.txtRecMod.Location = new System.Drawing.Point(8, 57);
+            this.txtRecMod.Name = "txtRecMod";
+            this.txtRecMod.Size = new System.Drawing.Size(292, 20);
+            this.txtRecMod.TabIndex = 22;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(5, 108);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(82, 13);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Alkohol tartalom";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(5, 83);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(35, 13);
+            this.label19.TabIndex = 21;
+            this.label19.Text = "Pohár";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(5, 41);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(47, 13);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Módszer";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -637,16 +705,6 @@
             this.dataRepeater1.Size = new System.Drawing.Size(518, 244);
             this.dataRepeater1.TabIndex = 20;
             this.dataRepeater1.Text = "dataRepeater1";
-            // 
-            // bsReceptCikkek
-            // 
-            this.bsReceptCikkek.DataMember = "RECEPT";
-            this.bsReceptCikkek.DataSource = this.dsReceptCikkek;
-            // 
-            // dsReceptCikkek
-            // 
-            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
-            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button4
             // 
@@ -675,6 +733,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsReceptCikkek, "MEGYS_MEGNEVEZES", true));
             this.label16.Location = new System.Drawing.Point(99, 20);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(124, 13);
@@ -800,64 +859,6 @@
             this.ERTEKESITES_TIPUSA.Name = "ERTEKESITES_TIPUSA";
             this.ERTEKESITES_TIPUSA.ReadOnly = true;
             this.ERTEKESITES_TIPUSA.Visible = false;
-            // 
-            // taReceptCikkek
-            // 
-            this.taReceptCikkek.ClearBeforeFill = true;
-            // 
-            // txtRecMod
-            // 
-            this.txtRecMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRecMod.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRecept, "RECEPT_MODSZER", true));
-            this.txtRecMod.Location = new System.Drawing.Point(8, 57);
-            this.txtRecMod.Name = "txtRecMod";
-            this.txtRecMod.Size = new System.Drawing.Size(292, 20);
-            this.txtRecMod.TabIndex = 22;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(5, 41);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(47, 13);
-            this.label18.TabIndex = 21;
-            this.label18.Text = "Módszer";
-            // 
-            // txtRecPoh
-            // 
-            this.txtRecPoh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRecPoh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRecept, "RECEPT_POHAR", true));
-            this.txtRecPoh.Location = new System.Drawing.Point(103, 83);
-            this.txtRecPoh.Name = "txtRecPoh";
-            this.txtRecPoh.Size = new System.Drawing.Size(197, 20);
-            this.txtRecPoh.TabIndex = 22;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(5, 83);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 13);
-            this.label19.TabIndex = 21;
-            this.label19.Text = "Pohár";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(5, 108);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(82, 13);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "Alkohol tartalom";
-            // 
-            // txtRecAlk
-            // 
-            this.txtRecAlk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRecAlk.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRecept, "RECEPT_ALK_TART", true));
-            this.txtRecAlk.Location = new System.Drawing.Point(103, 108);
-            this.txtRecAlk.Name = "txtRecAlk";
-            this.txtRecAlk.Size = new System.Drawing.Size(197, 20);
-            this.txtRecAlk.TabIndex = 22;
             // 
             // mEGNEVEZESDataGridViewTextBoxColumn
             // 
@@ -1055,6 +1056,31 @@
             this.lITKISZBindingSource.DataSource = this.eCAFEDataSetCIKK;
             this.lITKISZBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.lITKISZBindingSource_AddingNew);
             // 
+            // bsRecept
+            // 
+            this.bsRecept.AllowNew = false;
+            this.bsRecept.DataMember = "CIKK";
+            this.bsRecept.DataSource = this.dsReceptText;
+            // 
+            // dsReceptText
+            // 
+            this.dsReceptText.DataSetName = "dsReceptText";
+            this.dsReceptText.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bsReceptCikkek
+            // 
+            this.bsReceptCikkek.DataMember = "RECEPT";
+            this.bsReceptCikkek.DataSource = this.dsReceptCikkek;
+            // 
+            // dsReceptCikkek
+            // 
+            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
+            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // taReceptCikkek
+            // 
+            this.taReceptCikkek.ClearBeforeFill = true;
+            // 
             // cIKKTableAdapter
             // 
             this.cIKKTableAdapter.ClearBeforeFill = true;
@@ -1063,19 +1089,9 @@
             // 
             this.lIT_KISZTableAdapter.ClearBeforeFill = true;
             // 
-            // checkBox1
+            // taRecept
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.cIKKBindingSource, "SPEC_ZARAS", true));
-            this.checkBox1.FlatAppearance.BorderSize = 0;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(16, 116);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(139, 17);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.Text = "Megkülönböztetett zárás";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.taRecept.ClearBeforeFill = true;
             // 
             // rAKTARDataGridViewTextBoxColumn
             // 
@@ -1113,21 +1129,6 @@
             // 
             this.cikkKeszletBindingSource.DataSource = typeof(BusinessLogic.CikkKeszlet);
             // 
-            // bsRecept
-            // 
-            this.bsRecept.AllowNew = false;
-            this.bsRecept.DataMember = "CIKK";
-            this.bsRecept.DataSource = this.dsReceptText;
-            // 
-            // dsReceptText
-            // 
-            this.dsReceptText.DataSetName = "dsReceptText";
-            this.dsReceptText.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // taRecept
-            // 
-            this.taRecept.ClearBeforeFill = true;
-            // 
             // frmCikk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1156,16 +1157,16 @@
             this.dataRepeater1.ItemTemplate.ResumeLayout(false);
             this.dataRepeater1.ItemTemplate.PerformLayout();
             this.dataRepeater1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bsReceptCikkek)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetCIKK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lITKISZBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRecept)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReceptText)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsReceptCikkek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

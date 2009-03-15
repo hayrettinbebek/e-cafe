@@ -417,7 +417,7 @@ namespace GUI
         public UserButton()
         {
             Width = 130;
-            Height = 65;
+            Height = 55;
             // Get the dimension of the client rectangle 
             Rectangle rect = this.ClientRectangle;
             // Invoke the unmanaged DLL function here to create the RoundRectangleRegion
@@ -431,8 +431,8 @@ namespace GUI
             FlatAppearance.MouseDownBackColor = Color.Transparent;
             FlatAppearance.MouseOverBackColor = Color.Transparent;
             FlatAppearance.CheckedBackColor = Color.Transparent;
-
-
+            FlatAppearance.BorderColor = Color.Gray;
+            FlatAppearance.BorderSize = 2;
 
             FlatStyle = FlatStyle.Flat;
             
