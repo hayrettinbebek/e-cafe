@@ -31,20 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporting));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sZAMLATETELBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsSZAMLAZAS = new e_Cafe.dsSZAMLAZAS();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.sZAMLAFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sZAMLA_FEJTableAdapter = new e_Cafe.dsSZAMLAZASTableAdapters.SZAMLA_FEJTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
-            this.sZAMLA_TETELTableAdapter = new e_Cafe.dsSZAMLAZASTableAdapters.SZAMLA_TETELTableAdapter();
-            this.Blokk1 = new e_Cafe.Reports.Blokk();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.dsRepSzamla = new e_Cafe.SQL.dsRepSzamla();
+            this.bLOKKTETELBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bLOKK_TETELTableAdapter = new e_Cafe.SQL.dsRepSzamlaTableAdapters.BLOKK_TETELTableAdapter();
+            this.Blokk1 = new e_Cafe.Reports.Blokk();
+            this.sZAMLAFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sZAMLA_FEJTableAdapter = new e_Cafe.SQL.dsRepSzamlaTableAdapters.SZAMLA_FEJTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sZAMLATETELBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSZAMLAZAS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRepSzamla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bLOKKTETELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sZAMLAFEJBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,16 +58,6 @@
             this.panel1.Size = new System.Drawing.Size(438, 529);
             this.panel1.TabIndex = 3;
             // 
-            // sZAMLATETELBindingSource
-            // 
-            this.sZAMLATETELBindingSource.DataMember = "SZAMLA_TETEL";
-            this.sZAMLATETELBindingSource.DataSource = this.dsSZAMLAZAS;
-            // 
-            // dsSZAMLAZAS
-            // 
-            this.dsSZAMLAZAS.DataSetName = "dsSZAMLAZAS";
-            this.dsSZAMLAZAS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // crystalReportViewer1
             // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
@@ -76,8 +66,10 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.SelectionFormula = "";
             this.crystalReportViewer1.Size = new System.Drawing.Size(438, 529);
             this.crystalReportViewer1.TabIndex = 3;
+            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
             // label4
             // 
@@ -95,24 +87,17 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(475, 6);
+            this.button1.Location = new System.Drawing.Point(474, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 34);
+            this.button1.Size = new System.Drawing.Size(40, 42);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // sZAMLAFEJBindingSource
-            // 
-            this.sZAMLAFEJBindingSource.DataMember = "SZAMLA_FEJ";
-            this.sZAMLAFEJBindingSource.DataSource = this.dsSZAMLAZAS;
-            // 
-            // sZAMLA_FEJTableAdapter
-            // 
-            this.sZAMLA_FEJTableAdapter.ClearBeforeFill = true;
             // 
             // button2
             // 
@@ -124,20 +109,40 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // sZAMLA_TETELTableAdapter
-            // 
-            this.sZAMLA_TETELTableAdapter.ClearBeforeFill = true;
-            // 
-            // Blokk1
-            // 
-            this.Blokk1.InitReport += new System.EventHandler(this.Blokk1_InitReport);
-            // 
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(36, 14);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 6;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
+            // 
+            // dsRepSzamla
+            // 
+            this.dsRepSzamla.DataSetName = "dsRepSzamla";
+            this.dsRepSzamla.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bLOKKTETELBindingSource
+            // 
+            this.bLOKKTETELBindingSource.DataMember = "BLOKK_TETEL";
+            this.bLOKKTETELBindingSource.DataSource = this.dsRepSzamla;
+            // 
+            // bLOKK_TETELTableAdapter
+            // 
+            this.bLOKK_TETELTableAdapter.ClearBeforeFill = true;
+            // 
+            // Blokk1
+            // 
+            this.Blokk1.InitReport += new System.EventHandler(this.Blokk1_InitReport);
+            // 
+            // sZAMLAFEJBindingSource
+            // 
+            this.sZAMLAFEJBindingSource.DataMember = "SZAMLA_FEJ";
+            this.sZAMLAFEJBindingSource.DataSource = this.dsRepSzamla;
+            // 
+            // sZAMLA_FEJTableAdapter
+            // 
+            this.sZAMLA_FEJTableAdapter.ClearBeforeFill = true;
             // 
             // frmReporting
             // 
@@ -158,8 +163,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmReporting_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sZAMLATETELBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSZAMLAZAS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRepSzamla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bLOKKTETELBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sZAMLAFEJBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,12 +178,12 @@
         private System.Windows.Forms.Button button1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private Reports.Blokk Blokk1;
-        private dsSZAMLAZAS dsSZAMLAZAS;
-        private System.Windows.Forms.BindingSource sZAMLAFEJBindingSource;
-        private e_Cafe.dsSZAMLAZASTableAdapters.SZAMLA_FEJTableAdapter sZAMLA_FEJTableAdapter;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.BindingSource sZAMLATETELBindingSource;
-        private e_Cafe.dsSZAMLAZASTableAdapters.SZAMLA_TETELTableAdapter sZAMLA_TETELTableAdapter;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.BindingSource bLOKKTETELBindingSource;
+        private e_Cafe.SQL.dsRepSzamla dsRepSzamla;
+        private e_Cafe.SQL.dsRepSzamlaTableAdapters.BLOKK_TETELTableAdapter bLOKK_TETELTableAdapter;
+        private System.Windows.Forms.BindingSource sZAMLAFEJBindingSource;
+        private e_Cafe.SQL.dsRepSzamlaTableAdapters.SZAMLA_FEJTableAdapter sZAMLA_FEJTableAdapter;
     }
 }

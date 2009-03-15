@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOsszCikkView));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cIKKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReceptText = new e_Cafe.SQL.dsReceptText();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,31 +43,29 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.button12 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cIKKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptText = new e_Cafe.SQL.dsReceptText();
             this.cIKKTableAdapter = new e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCikkNeve = new System.Windows.Forms.Label();
             this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dsReceptCikkek = new e_Cafe.SQL.dsReceptCikkek();
-            this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rECEPTTableAdapter = new e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
-            this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReceptCikkek = new e_Cafe.SQL.dsReceptCikkek();
+            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.rECEPTTableAdapter = new e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReceptText)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.dataRepeater1.ItemTemplate.SuspendLayout();
             this.dataRepeater1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rECEPTBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rECEPTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -77,6 +77,17 @@
             this.richTextBox1.Size = new System.Drawing.Size(209, 177);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            // 
+            // cIKKBindingSource
+            // 
+            this.cIKKBindingSource.AllowNew = false;
+            this.cIKKBindingSource.DataMember = "CIKK";
+            this.cIKKBindingSource.DataSource = this.dsReceptText;
+            // 
+            // dsReceptText
+            // 
+            this.dsReceptText.DataSetName = "dsReceptText";
+            this.dsReceptText.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // shapeContainer1
             // 
@@ -176,6 +187,16 @@
             this.shapeContainer2.TabIndex = 4;
             this.shapeContainer2.TabStop = false;
             // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.Gray;
+            this.lineShape3.BorderWidth = 2;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 415;
+            this.lineShape3.X2 = 415;
+            this.lineShape3.Y1 = 178;
+            this.lineShape3.Y2 = 488;
+            // 
             // lineShape2
             // 
             this.lineShape2.BorderColor = System.Drawing.Color.Gray;
@@ -210,30 +231,9 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // cIKKBindingSource
-            // 
-            this.cIKKBindingSource.AllowNew = false;
-            this.cIKKBindingSource.DataMember = "CIKK";
-            this.cIKKBindingSource.DataSource = this.dsReceptText;
-            // 
-            // dsReceptText
-            // 
-            this.dsReceptText.DataSetName = "dsReceptText";
-            this.dsReceptText.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cIKKTableAdapter
             // 
             this.cIKKTableAdapter.ClearBeforeFill = true;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderColor = System.Drawing.Color.Gray;
-            this.lineShape3.BorderWidth = 2;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 415;
-            this.lineShape3.X2 = 415;
-            this.lineShape3.Y1 = 178;
-            this.lineShape3.Y2 = 488;
             // 
             // label5
             // 
@@ -260,6 +260,8 @@
             this.dataRepeater1.AllowUserToAddItems = false;
             this.dataRepeater1.AllowUserToDeleteItems = false;
             this.dataRepeater1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.dataRepeater1.BackgroundImage = global::e_Cafe.Properties.Resources.hatter;
+            this.dataRepeater1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dataRepeater1.Enabled = false;
             this.dataRepeater1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dataRepeater1.ItemHeaderVisible = false;
@@ -275,6 +277,19 @@
             this.dataRepeater1.TabIndex = 8;
             this.dataRepeater1.Text = "dataRepeater1";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackgroundImage = global::e_Cafe.Properties.Resources.hatter;
+            this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.flowLayoutPanel1.Controls.Add(this.label6);
+            this.flowLayoutPanel1.Controls.Add(this.label7);
+            this.flowLayoutPanel1.Controls.Add(this.label8);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 28);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -285,19 +300,15 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "label6";
             // 
-            // dsReceptCikkek
-            // 
-            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
-            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // rECEPTBindingSource
             // 
             this.rECEPTBindingSource.DataMember = "RECEPT";
             this.rECEPTBindingSource.DataSource = this.dsReceptCikkek;
             // 
-            // rECEPTTableAdapter
+            // dsReceptCikkek
             // 
-            this.rECEPTTableAdapter.ClearBeforeFill = true;
+            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
+            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label7
             // 
@@ -309,17 +320,6 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "label7";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label6);
-            this.flowLayoutPanel1.Controls.Add(this.label7);
-            this.flowLayoutPanel1.Controls.Add(this.label8);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 28);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -329,6 +329,10 @@
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 2;
             this.label8.Text = "label8";
+            // 
+            // rECEPTTableAdapter
+            // 
+            this.rECEPTTableAdapter.ClearBeforeFill = true;
             // 
             // frmOsszCikkView
             // 
@@ -356,15 +360,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOsszCikkView";
             this.ShowInTaskbar = false;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReceptText)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.dataRepeater1.ItemTemplate.ResumeLayout(false);
             this.dataRepeater1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rECEPTBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rECEPTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

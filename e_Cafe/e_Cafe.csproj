@@ -160,7 +160,12 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
-    <Compile Include="dsSZAMLAZAS.Designer.cs">
+    <Compile Include="SQL\dsRepSzamla.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRepSzamla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\dsSZAMLAZAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
@@ -896,15 +901,15 @@
     <None Include="Resources\OK_I.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsSZAMLAZAS.xsc">
+    <None Include="SQL\dsSZAMLAZAS.xsc">
       <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
     </None>
-    <None Include="dsSZAMLAZAS.xsd">
+    <None Include="SQL\dsSZAMLAZAS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsSZAMLAZAS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsSZAMLAZAS.xss">
+    <None Include="SQL\dsSZAMLAZAS.xss">
       <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.Partner_cim1.datasource" />
@@ -1139,6 +1144,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hatter.bmp" />
+    <None Include="SQL\dsRepSzamla.xsc">
+      <DependentUpon>dsRepSzamla.xsd</DependentUpon>
+    </None>
+    <None Include="SQL\dsRepSzamla.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRepSzamla.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SQL\dsRepSzamla.xss">
+      <DependentUpon>dsRepSzamla.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

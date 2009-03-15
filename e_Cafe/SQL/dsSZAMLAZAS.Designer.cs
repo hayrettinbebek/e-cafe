@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace e_Cafe {
+namespace e_Cafe.SQL {
     
     
     /// <summary>
@@ -1719,7 +1719,7 @@ namespace e_Cafe {
         }
     }
 }
-namespace e_Cafe.dsSZAMLAZASTableAdapters {
+namespace e_Cafe.SQL.dsSZAMLAZASTableAdapters {
     
     
     /// <summary>
