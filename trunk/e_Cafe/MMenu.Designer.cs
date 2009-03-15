@@ -284,6 +284,9 @@
             this.btnPartnerek.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPartnerek.BackgroundImage")));
             this.btnPartnerek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPartnerek.FlatAppearance.BorderSize = 0;
+            this.btnPartnerek.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnPartnerek.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPartnerek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPartnerek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPartnerek.Location = new System.Drawing.Point(405, 17);
             this.btnPartnerek.Name = "btnPartnerek";
@@ -299,6 +302,9 @@
             this.btnLevelek.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLevelek.BackgroundImage")));
             this.btnLevelek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLevelek.FlatAppearance.BorderSize = 0;
+            this.btnLevelek.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnLevelek.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLevelek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLevelek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLevelek.Location = new System.Drawing.Point(95, 17);
             this.btnLevelek.Name = "btnLevelek";
@@ -313,6 +319,9 @@
             this.btnReceptek.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReceptek.BackgroundImage")));
             this.btnReceptek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReceptek.FlatAppearance.BorderSize = 0;
+            this.btnReceptek.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnReceptek.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnReceptek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReceptek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReceptek.Location = new System.Drawing.Point(196, 17);
             this.btnReceptek.Name = "btnReceptek";
@@ -328,7 +337,9 @@
             this.btnFoglalas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFoglalas.BackgroundImage")));
             this.btnFoglalas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFoglalas.FlatAppearance.BorderSize = 0;
-            this.btnFoglalas.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnFoglalas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnFoglalas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFoglalas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFoglalas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFoglalas.Location = new System.Drawing.Point(281, 17);
             this.btnFoglalas.Name = "btnFoglalas";
@@ -342,6 +353,9 @@
             this.btnKilep.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKilep.BackgroundImage")));
             this.btnKilep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKilep.FlatAppearance.BorderSize = 0;
+            this.btnKilep.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnKilep.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnKilep.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKilep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKilep.Location = new System.Drawing.Point(776, 17);
             this.btnKilep.Name = "btnKilep";
@@ -356,6 +370,9 @@
             this.btnKijelent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKijelent.BackgroundImage")));
             this.btnKijelent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKijelent.FlatAppearance.BorderSize = 0;
+            this.btnKijelent.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnKijelent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnKijelent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKijelent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKijelent.Location = new System.Drawing.Point(614, 17);
             this.btnKijelent.Name = "btnKijelent";
@@ -372,6 +389,9 @@
             this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
             this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Location = new System.Drawing.Point(700, 17);
             this.btnAdmin.Name = "btnAdmin";

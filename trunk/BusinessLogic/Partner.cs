@@ -207,7 +207,36 @@ namespace BusinessLogic
 
     public class Vevo : Partner
     {
-        private int Uj;
+
+
+        private int Uj
+        {
+            get
+            {
+                int uje = -1;
+
+
+
+                SqlConnection c = new SqlConnection(DEFS.ConSTR);
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = c;
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "SELECT Count(*) as DB FROM PARTNER_VEVO WHERE PARTNER_ID = " + PARTNER_ID.ToString();
+                c.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    if ((int)rdr["DB"] > 0) { uje = 0; }
+                }
+
+                return (uje);
+            }
+
+        }
+
         #region NEM
         private string _nem;
         public string NEM
@@ -430,7 +459,7 @@ namespace BusinessLogic
             : base()
         {
             P_TIPUS = "V";
-            Uj = -1;
+            
 
         }
 
@@ -461,10 +490,10 @@ namespace BusinessLogic
             _nevn_nap = 0;
             _hitel = 0;
             _szuldat = DateTime.MinValue;
-            Uj = -1;
+            
             while (rdr.Read())
             {
-                Uj = 0;
+                
                 if (!DBNull.Value.Equals(rdr["NEM"])) { _nem = (string)rdr["NEM"]; }
                 else { _nem = ""; }
 

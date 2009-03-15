@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMPartnerek));
             this.panel7 = new System.Windows.Forms.Panel();
             this.flpPartner = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -138,11 +139,11 @@
             // checkBox2
             // 
             this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
+            this.checkBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBox2.BackgroundImage")));
             this.checkBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox2.FlatAppearance.BorderSize = 0;
-            this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBox2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.checkBox2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,11 +159,11 @@
             // checkBox1
             // 
             this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox1.BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
+            this.checkBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBox1.BackgroundImage")));
             this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox1.FlatAppearance.BorderSize = 0;
-            this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBox1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.checkBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,11 +179,11 @@
             // checkBox3
             // 
             this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox3.BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
+            this.checkBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBox3.BackgroundImage")));
             this.checkBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox3.FlatAppearance.BorderSize = 0;
-            this.checkBox3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.checkBox3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBox3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.checkBox3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

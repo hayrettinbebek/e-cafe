@@ -32,6 +32,14 @@ namespace e_Cafe
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             loadPartnerek(((ButtonBase)sender).Tag.ToString());
+            if (((RadioButton)sender).Checked)
+            {
+                ((RadioButton)sender).BackgroundImage = global::GUI.Properties.Resources.on_menubtn;
+            }
+            else
+            {
+                ((RadioButton)sender).BackgroundImage = global::GUI.Properties.Resources.off_menuBtn;
+            }
         }
 
         private void loadPartnerek(string pPartnerType)

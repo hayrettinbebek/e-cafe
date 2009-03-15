@@ -67,6 +67,13 @@ namespace e_Cafe.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap hatter {
+            get {
+                object obj = ResourceManager.GetObject("hatter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap oldal1 {
             get {
                 object obj = ResourceManager.GetObject("oldal1", resourceCulture);

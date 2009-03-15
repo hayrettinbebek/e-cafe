@@ -275,7 +275,7 @@ namespace GUI
        
     }
 
-    public class PartnerButton : System.Windows.Forms.Button
+    public class PartnerButton : System.Windows.Forms.RadioButton
     {
         int rg;
         int hdl;
@@ -318,7 +318,14 @@ namespace GUI
             this.OnClick(e);
         }
 
+        protected override void OnCheckedChanged(EventArgs e)
+        {
+            base.OnCheckedChanged(e);
 
+            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.on_user; }
+            else { BackgroundImage = global::GUI.Properties.Resources.off_user; }
+
+        }
 
 
         public PartnerButton()
@@ -333,10 +340,23 @@ namespace GUI
             hdl = this.Handle.ToInt32();
             // Set the Window Region to a a Rectangle with rounded corners
             SetWindowRgn(hdl, rg, 1);
+            Appearance = Appearance.Button;
             FlatAppearance.BorderSize = 0;
+            FlatAppearance.MouseDownBackColor = Color.Transparent;
+            FlatAppearance.MouseOverBackColor = Color.Transparent;
+            FlatAppearance.CheckedBackColor = Color.Transparent;
+            FlatAppearance.BorderColor = Color.Gray;
+            FlatAppearance.BorderSize = 2;
+
+
+
+            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.on_user; }
+            else { BackgroundImage = global::GUI.Properties.Resources.off_user; }
+            BackgroundImageLayout = ImageLayout.Stretch;
+
             FlatStyle = FlatStyle.Flat;
 
-            BackColor = Color.Gray;
+            BackColor = Color.Transparent;
 
             lNAME = new Label();
             lNAME.Width = 50;
@@ -435,7 +455,7 @@ namespace GUI
             FlatAppearance.BorderSize = 2;
 
             FlatStyle = FlatStyle.Flat;
-            
+
             BackColor = Color.Transparent;
 
             lNAME = new Label();

@@ -124,4 +124,7 @@
   <data name="oldal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\oldal1.PNG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hatter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hatter.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
