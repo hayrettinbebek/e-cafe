@@ -225,6 +225,15 @@ namespace e_Cafe
             fa.Show();
         }
 
+        private void mmNapiZaras_Click(object sender, EventArgs e)
+        {
+            frmNapiZaras nz = new frmNapiZaras();
+            nz.MdiParent = this;
+            nz.Show();
+        }
+
+
+
 
     }
 }

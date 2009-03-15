@@ -148,4 +148,10 @@
   <data name="zoldon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zoldon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ERROR_ICON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bezar1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OK_ICON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\kepek\OK_ICON.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
