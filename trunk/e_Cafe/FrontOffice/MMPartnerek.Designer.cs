@@ -43,10 +43,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnPartnerNelkul = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,29 +68,28 @@
             // 
             this.flpPartner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.flpPartner.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpPartner.Location = new System.Drawing.Point(0, 28);
+            this.flpPartner.Location = new System.Drawing.Point(0, 48);
             this.flpPartner.Name = "flpPartner";
-            this.flpPartner.Size = new System.Drawing.Size(614, 486);
+            this.flpPartner.Size = new System.Drawing.Size(614, 466);
             this.flpPartner.TabIndex = 0;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.panel9.Controls.Add(this.button1);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(614, 28);
+            this.panel9.Location = new System.Drawing.Point(614, 48);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(214, 486);
+            this.panel9.Size = new System.Drawing.Size(214, 466);
             this.panel9.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(37, 26);
+            this.button1.Location = new System.Drawing.Point(467, 17);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 75);
+            this.button1.Size = new System.Drawing.Size(83, 31);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Uj";
+            this.button1.Text = "+ Uj";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -98,10 +97,11 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.panel8.Controls.Add(this.button1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(828, 28);
+            this.panel8.Size = new System.Drawing.Size(828, 48);
             this.panel8.TabIndex = 1;
             // 
             // panel4
@@ -127,14 +127,14 @@
             this.tableLayoutPanel1.Controls.Add(this.checkBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBox3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 28);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 48);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(126, 486);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(126, 466);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // checkBox2
@@ -201,9 +201,9 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(147, 28);
+            this.panel6.Location = new System.Drawing.Point(147, 48);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(28, 486);
+            this.panel6.Size = new System.Drawing.Size(28, 466);
             this.panel6.TabIndex = 5;
             // 
             // panel5
@@ -211,7 +211,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(21, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(154, 28);
+            this.panel5.Size = new System.Drawing.Size(154, 48);
             this.panel5.TabIndex = 6;
             // 
             // panel2
@@ -234,18 +234,6 @@
             this.panel1.Size = new System.Drawing.Size(1003, 114);
             this.panel1.TabIndex = 0;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(706, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 75);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Kilépés";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // btnPartnerNelkul
             // 
             this.btnPartnerNelkul.BackColor = System.Drawing.Color.Silver;
@@ -257,6 +245,18 @@
             this.btnPartnerNelkul.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnPartnerNelkul.UseVisualStyleBackColor = false;
             this.btnPartnerNelkul.Click += new System.EventHandler(this.btnPartnerNelkul_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.Location = new System.Drawing.Point(895, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(83, 75);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Kilépés";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MMPartnerek
             // 
@@ -274,7 +274,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MMPartnerek_Load);
             this.panel7.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
