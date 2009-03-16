@@ -36,12 +36,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dsRepSzamla = new e_Cafe.SQL.dsRepSzamla();
             this.bLOKKTETELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bLOKK_TETELTableAdapter = new e_Cafe.SQL.dsRepSzamlaTableAdapters.BLOKK_TETELTableAdapter();
             this.Blokk1 = new e_Cafe.Reports.Blokk();
             this.sZAMLAFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sZAMLA_FEJTableAdapter = new e_Cafe.SQL.dsRepSzamlaTableAdapters.SZAMLA_FEJTableAdapter();
+            this.Blokk2 = new e_Cafe.Reports.Blokk();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsRepSzamla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLOKKTETELBindingSource)).BeginInit();
@@ -53,23 +56,22 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.crystalReportViewer1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.panel1.Location = new System.Drawing.Point(36, 38);
+            this.panel1.Location = new System.Drawing.Point(36, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(438, 529);
+            this.panel1.Size = new System.Drawing.Size(438, 491);
             this.panel1.TabIndex = 3;
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.DisplayGroupTree = false;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(438, 529);
+            this.crystalReportViewer1.ReportSource = this.Blokk1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(438, 491);
             this.crystalReportViewer1.TabIndex = 3;
-            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
             // label4
             // 
@@ -101,7 +103,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(348, 6);
+            this.button2.Location = new System.Drawing.Point(350, 9);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -116,6 +118,19 @@
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 6;
             this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(36, 49);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(438, 21);
+            this.progressBar1.TabIndex = 7;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // dsRepSzamla
             // 
@@ -133,6 +148,7 @@
             // 
             // Blokk1
             // 
+            this.Blokk1.FileName = "rassdk://D:\\MUNKA\\e_Cafe\\e_Cafe\\Reports\\Blokk.rpt";
             this.Blokk1.InitReport += new System.EventHandler(this.Blokk1_InitReport);
             // 
             // sZAMLAFEJBindingSource
@@ -152,6 +168,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(515, 613);
             this.ControlBox = false;
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -185,5 +202,8 @@
         private e_Cafe.SQL.dsRepSzamlaTableAdapters.BLOKK_TETELTableAdapter bLOKK_TETELTableAdapter;
         private System.Windows.Forms.BindingSource sZAMLAFEJBindingSource;
         private e_Cafe.SQL.dsRepSzamlaTableAdapters.SZAMLA_FEJTableAdapter sZAMLA_FEJTableAdapter;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
+        private e_Cafe.Reports.Blokk Blokk2;
     }
 }
