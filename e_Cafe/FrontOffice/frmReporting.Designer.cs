@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporting));
             this.panel1 = new System.Windows.Forms.Panel();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.Blokk1 = new e_Cafe.Reports.Blokk();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.dsRepSzamla = new e_Cafe.SQL.dsRepSzamla();
             this.bLOKKTETELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bLOKK_TETELTableAdapter = new e_Cafe.SQL.dsRepSzamlaTableAdapters.BLOKK_TETELTableAdapter();
-            this.Blokk1 = new e_Cafe.Reports.Blokk();
             this.sZAMLAFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sZAMLA_FEJTableAdapter = new e_Cafe.SQL.dsRepSzamlaTableAdapters.SZAMLA_FEJTableAdapter();
             this.Blokk2 = new e_Cafe.Reports.Blokk();
@@ -63,15 +63,18 @@
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.DisplayGroupTree = false;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.Blokk1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(438, 491);
             this.crystalReportViewer1.TabIndex = 3;
+            // 
+            // Blokk1
+            // 
+            this.Blokk1.InitReport += new System.EventHandler(this.Blokk1_InitReport);
             // 
             // label4
             // 
@@ -145,11 +148,6 @@
             // bLOKK_TETELTableAdapter
             // 
             this.bLOKK_TETELTableAdapter.ClearBeforeFill = true;
-            // 
-            // Blokk1
-            // 
-            this.Blokk1.FileName = "rassdk://D:\\MUNKA\\e_Cafe\\e_Cafe\\Reports\\Blokk.rpt";
-            this.Blokk1.InitReport += new System.EventHandler(this.Blokk1_InitReport);
             // 
             // sZAMLAFEJBindingSource
             // 
