@@ -117,6 +117,8 @@ namespace e_Cafe
                     if (db_ver < 13) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_013.sql")); }
                     if (db_ver < 14) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_014.sql")); }
                     if (db_ver < 15) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_015.sql")); }
+                    if (db_ver < 16) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_016.sql")); }
+
 
                     updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
                     DEFS.SendInfoMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
