@@ -69,11 +69,11 @@ namespace e_Cafe
 
         private bool SaveFej()
         {
-            if ((txtSzallitolevel.Text == "") || (txtSzamlaszam.Text == ""))
+            if ((txtSzallitolevel.Text == "") && (txtSzamlaszam.Text == ""))
             {
-                return false;
+                
                 DEFS.SendInfoMessage("Szállítólevél vagy számlaszám megadása kötelező!!");
-
+                return false;
             }
             else
             {

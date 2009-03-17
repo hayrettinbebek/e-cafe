@@ -17,15 +17,16 @@ namespace e_Cafe
     {
         public string p_nev;
         public int p_id;
+        Partner_list partnerList;
 
         public PartnerSelector()
         {
             InitializeComponent();
 
-            Partner_list p = new Partner_list(new SqlConnection(DEFS.ConSTR));
+            partnerList = new Partner_list(new SqlConnection(DEFS.ConSTR));
             partnerBindingSource.Clear();
 
-            foreach (var c in p.lSzallitok)
+            foreach (var c in partnerList.lSzallitok)
             {
                 partnerBindingSource.Add((Partner)c);
             }
@@ -33,6 +34,12 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SelectPartner();
+        }
+
+        private void SelectPartner()
+        {
+
             if (partnerBindingSource.Current != null)
             {
                 p_id = ((Partner)partnerBindingSource.Current).PARTNER_ID;
@@ -42,6 +49,20 @@ namespace e_Cafe
 
 
                 this.Close();
+            }
+        }
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            SelectPartner();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            partnerBindingSource.Clear();
+            
+            foreach (var c in partnerList.SzallitoFilterByName(textBox1.Text))
+            {
+                partnerBindingSource.Add((Partner)c);
             }
         }
     }

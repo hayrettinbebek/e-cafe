@@ -1021,7 +1021,33 @@ namespace BusinessLogic
             
         }
 
+        public List<Szallito> SzallitoFilterByName(string iPArtnerNev)
+        {
+            List<Szallito> iTmpRet = new List<Szallito>();
 
+            var ret_cikk =
+                from c in lSzallitok
+                where c.P_NEV.Contains(iPArtnerNev) 
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
+
+        public List<Vevo> VevoFilterByName(string iPArtnerNev)
+        {
+            List<Vevo> iTmpRet = new List<Vevo>();
+
+            var ret_cikk =
+                from c in lVevok
+                where c.P_NEV.Contains(iPArtnerNev)
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
     }
 
     public class Partner_tel

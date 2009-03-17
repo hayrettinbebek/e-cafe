@@ -93,7 +93,7 @@ namespace e_Cafe
             DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
             //MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 15)
+            if (db_ver < 16)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -435,7 +435,7 @@ namespace e_Cafe
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            frmReporting r = new frmReporting();
+            PartnerSelector r = new PartnerSelector();
             r.ShowDialog();
 
 
