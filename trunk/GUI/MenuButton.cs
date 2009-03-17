@@ -133,7 +133,7 @@ namespace GUI
         }
     }
 
-    public class CikkButton : System.Windows.Forms.Button
+    public class CikkButton : System.Windows.Forms.RadioButton
     {
         int rg;
         int hdl;
@@ -220,10 +220,16 @@ namespace GUI
 			// Get the handle to the window. 
 			hdl = this.Handle.ToInt32() ;
 			// Set the Window Region to a a Rectangle with rounded corners
-			SetWindowRgn( hdl , rg , 1 ) ;
+            SetWindowRgn(hdl, rg, 1);
+
+            Appearance = Appearance.Button;
+            FlatStyle = FlatStyle.Flat;
+            FlatAppearance.MouseOverBackColor = Color.Transparent;
+            FlatAppearance.MouseDownBackColor = Color.Transparent;
+            FlatAppearance.CheckedBackColor = Color.Transparent;
             
             FlatAppearance.BorderSize = 0;
-            FlatStyle = FlatStyle.Flat;
+            
 
             BackColor = Color.Gray;
 

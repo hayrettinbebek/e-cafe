@@ -32,6 +32,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aLAPRAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oSSZETETTDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -43,12 +45,13 @@
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 2);
+            this.textBox1.Location = new System.Drawing.Point(161, 19);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(226, 20);
             this.textBox1.TabIndex = 0;
@@ -56,7 +59,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(244, 2);
+            this.btnOK.Location = new System.Drawing.Point(521, 3);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(47, 19);
             this.btnOK.TabIndex = 1;
@@ -79,16 +82,39 @@
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn,
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.cikkBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 62);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(479, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(610, 233);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(22, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Cikk megnevezés";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(450, 53);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Kereső";
             // 
             // mEGNEVEZESDataGridViewTextBoxColumn
             // 
             this.mEGNEVEZESDataGridViewTextBoxColumn.DataPropertyName = "MEGNEVEZES";
             this.mEGNEVEZESDataGridViewTextBoxColumn.HeaderText = "Név";
             this.mEGNEVEZESDataGridViewTextBoxColumn.Name = "mEGNEVEZESDataGridViewTextBoxColumn";
+            this.mEGNEVEZESDataGridViewTextBoxColumn.Width = 200;
             // 
             // aLAPRAKTARDataGridViewTextBoxColumn
             // 
@@ -154,17 +180,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 276);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(627, 304);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "CikkSelector";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CikkSelector";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -183,5 +211,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn aLCSOPORTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIKKCSOPORTIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eRTEKESITESTIPUSADataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

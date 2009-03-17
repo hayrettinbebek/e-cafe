@@ -130,7 +130,7 @@ namespace e_Cafe.FrontOffice
             if (j == 100)
             {
                 timer1.Enabled = false;
-                this.Close();
+                //this.Close();
             }
             
             

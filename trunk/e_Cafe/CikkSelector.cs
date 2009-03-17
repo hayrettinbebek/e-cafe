@@ -21,13 +21,15 @@ namespace e_Cafe
         public string CIKK_NEV;
         public Cikk c;
 
+        private Cikk_list l;
+
         public CikkSelector()
         {
             InitializeComponent();
-            Cikk_list l = new Cikk_list(new SqlConnection(DEFS.ConSTR));
+            l = new Cikk_list(new SqlConnection(DEFS.ConSTR));
             cikkBindingSource.Clear();
 
-            foreach (var c in l.lCIKK)
+            foreach (var c in l.CikkFilter(""))
             {
                 cikkBindingSource.Add(c);
             }
@@ -35,12 +37,17 @@ namespace e_Cafe
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            SelectCikk();
+        }
+
+        private void SelectCikk()
+        {
             if (cikkBindingSource.Current != null)
             {
                 DEF_RAKT = ((Cikk)cikkBindingSource.Current).ALAP_RAKTAR;
                 CIKK_ID = ((Cikk)cikkBindingSource.Current).CIKK_ID;
                 CIKK_NEV = ((Cikk)cikkBindingSource.Current).MEGNEVEZES;
-                AFA_SZAZ= ((Cikk)cikkBindingSource.Current).getAfaSzaz();
+                AFA_SZAZ = ((Cikk)cikkBindingSource.Current).getAfaSzaz();
                 c = ((Cikk)cikkBindingSource.Current);
                 DialogResult = DialogResult.OK;
 
@@ -51,7 +58,18 @@ namespace e_Cafe
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            cikkBindingSource.Filter = "MEGNEVEZES like '%" + textBox1.Text + "'";
+            cikkBindingSource.Clear();
+
+            foreach (var c in l.CikkFilter(textBox1.Text))
+            {
+                cikkBindingSource.Add(c);
+            }
+
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            SelectCikk();
         }
 
 
