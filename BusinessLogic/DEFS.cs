@@ -67,6 +67,10 @@ namespace BusinessLogic
 
         }
 
+        #region könyvelési napokkal kapcsolatos lekérdezések
+        public static List<int> lEVEK = new List<int>();
+        public static List<int> lHONAPOK = new List<int>();
+        public static List<int> lNAPOK = new List<int>();
 
         public static void LoadNyitottNap()
         {
@@ -88,8 +92,51 @@ namespace BusinessLogic
             NyitNap_NAP = (int)cmdNyitNap.Parameters["@NAP"].Value;
             c.Close();
 
-            
+
         }
+
+        public static void LoadPossibleOpenDays()
+        {
+            SqlConnection c = new SqlConnection(ConSTR);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            
+            cmd.CommandText = "select distinct EV from nap_nyitas order by 1 asc";
+            c.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                lEVEK.Add((int)rdr["EV"]);
+            }
+            c.Close();
+            rdr.Dispose();
+            cmd.CommandText = "";
+            cmd.CommandText = "select distinct HO from nap_nyitas order by 1 asc";
+            c.Open();
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                lHONAPOK.Add((int)rdr["HO"]);
+            }
+            c.Close();
+            cmd.CommandText = "";
+            cmd.CommandText = "select distinct NAP from nap_nyitas order by 1 asc";
+            c.Open();
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                lNAPOK.Add((int)rdr["NAP"]);
+            }
+            c.Close();
+
+
+        }
+
+        #endregion
 
         public static int GetDBVER()
         {

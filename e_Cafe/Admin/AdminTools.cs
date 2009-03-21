@@ -232,6 +232,11 @@ namespace e_Cafe
             nz.Show();
         }
 
+        private void blokkokVisszakereséseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

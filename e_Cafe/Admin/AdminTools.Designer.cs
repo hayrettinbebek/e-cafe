@@ -66,6 +66,7 @@
             this.logokKüldéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbázisFrissítésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mmNapiZaras = new System.Windows.Forms.ToolStripMenuItem();
+            this.blokkokVisszakereséseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -319,6 +320,8 @@
             // 
             // riportokToolStripMenuItem
             // 
+            this.riportokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.blokkokVisszakereséseToolStripMenuItem});
             this.riportokToolStripMenuItem.Name = "riportokToolStripMenuItem";
             this.riportokToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.riportokToolStripMenuItem.Text = "Riportok";
@@ -352,6 +355,13 @@
             this.mmNapiZaras.Size = new System.Drawing.Size(103, 20);
             this.mmNapiZaras.Text = "!! NAPI ZÁRÁS !!";
             this.mmNapiZaras.Click += new System.EventHandler(this.mmNapiZaras_Click);
+            // 
+            // blokkokVisszakereséseToolStripMenuItem
+            // 
+            this.blokkokVisszakereséseToolStripMenuItem.Name = "blokkokVisszakereséseToolStripMenuItem";
+            this.blokkokVisszakereséseToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.blokkokVisszakereséseToolStripMenuItem.Text = "Blokkok visszakeresése";
+            this.blokkokVisszakereséseToolStripMenuItem.Click += new System.EventHandler(this.blokkokVisszakereséseToolStripMenuItem_Click);
             // 
             // AdminTools
             // 
@@ -412,6 +422,7 @@
         private System.Windows.Forms.ToolStripMenuItem mmNapiZaras;
         private System.Windows.Forms.ToolStripMenuItem napiZárásokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem régiZárásokÁttekintéseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blokkokVisszakereséseToolStripMenuItem;
     }
 }
 

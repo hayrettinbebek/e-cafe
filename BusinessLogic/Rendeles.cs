@@ -226,12 +226,12 @@ namespace BusinessLogic
         public void addTetel(Cikk pCikk)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk,pCikk.KISZ_MENNY,pCikk.ELADASI_AR,DateTime.Now));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, pCikk.KISZ_MENNY*pCikk.NETTO_AR, DateTime.Now));
         }
         public void addTetel(Cikk pCikk, int pRakt)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, pCikk.ELADASI_AR, DateTime.Now,pRakt));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, pCikk.KISZ_MENNY*pCikk.NETTO_AR, DateTime.Now, pRakt));
         }
 
         #endregion
@@ -371,6 +371,9 @@ namespace BusinessLogic
         public Cikk _Cikk;
         public double _db;
         public double _Ertek;
+        public double _Netto_Ertek;
+        public double _Afa_Ertek;
+
         public DateTime _datum;
         public int _RaktarId;
 
@@ -387,7 +390,7 @@ namespace BusinessLogic
             {
                 _db = pDb;
             }
-            _Ertek = pErtek;
+            _Netto_Ertek = pErtek;
             _SOR_ID = -1;
             _RaktarId = pCikk.ALAP_RAKTAR;
         }
@@ -405,7 +408,7 @@ namespace BusinessLogic
             {
                 _db = pDb;
             }
-            _Ertek = pErtek;
+            _Netto_Ertek = pErtek;
             _SOR_ID = -1;
             _RaktarId = pRaktar;
         }
@@ -419,7 +422,7 @@ namespace BusinessLogic
 
             cmd2.CommandType = CommandType.Text;
 
-            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(RAKTAR_ID,-1) as RAKTAR_ID FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
+            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
             
             SqlDataReader rdr2 = cmd2.ExecuteReader();
 
@@ -428,6 +431,8 @@ namespace BusinessLogic
                 _SOR_ID = (int)rdr2["SOR_ID"];
                 _datum = (DateTime)rdr2["DATUM"];
                 _Ertek = Convert.ToDouble(rdr2["ERTEK"].ToString());
+                _Netto_Ertek = Convert.ToDouble(rdr2["NETTO_ERTEK"].ToString());
+                _Afa_Ertek = Convert.ToDouble(rdr2["AFA_ERTEK"].ToString());
                 _db = (double)rdr2["DB"];
                 _RaktarId = (int)rdr2["RAKTAR_ID"];
                 _Cikk = new Cikk((int)rdr2["CIKK_ID"], new SqlConnection(DEFS.ConSTR));
@@ -463,7 +468,9 @@ namespace BusinessLogic
                                             ",DATUM "+
                                             ",RAKTAR_ID " +
                                             ",MODIFIED_USER " +
-                                            ",ERTEK) " +
+                                            ",AFA_ERTEK " +
+                                            ",ERTEK " +
+                                            ",NETTO_ERTEK) " +
                                         "VALUES " +
                                             "(@RENDELES_ID " +
                                             ",@CIKK_ID " +
@@ -471,7 +478,9 @@ namespace BusinessLogic
                                             ",@DATUM " +
                                             ",@RAKTAR_ID " +
                                             ",@MODIFIED_USER " +
-                                            ",@ERTEK) SET @newid = SCOPE_IDENTITY()";
+                                            ",@AFA_ERTEK " +
+                                            ",@ERTEK " +
+                                            ",@NETTO_ERTEK) SET @newid = SCOPE_IDENTITY()";
                         cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
                         cmd.Parameters["newid"].Direction = ParameterDirection.Output;
 
@@ -485,7 +494,7 @@ namespace BusinessLogic
                                                        " DATUM = @DATUM, " +
                                                        " RAKTAR_ID = @RAKTAR_ID, " +
                                                        " MODIFIED_USER = @MODIFIED_USER, " +
-                                                       " ERTEK = @ERTEK " +
+                                                       " NETTO_ERTEK = @NETTO_ERTEK " +
                                            "WHERE SOR_ID = @SOR_ID";
                         cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
                         cmd.Parameters["SOR_ID"].Value = _SOR_ID;
@@ -496,6 +505,8 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("DATUM", SqlDbType.DateTime));
             cmd.Parameters.Add(new SqlParameter("DB", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("NETTO_ERTEK", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("AFA_ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("MODIFIED_USER", SqlDbType.Int));
@@ -506,7 +517,9 @@ namespace BusinessLogic
             cmd.Parameters["DATUM"].Value = _datum;
             cmd.Parameters["RAKTAR_ID"].Value = _RaktarId;
             cmd.Parameters["MODIFIED_USER"].Value = DEFS.LogInUser.USER_ID;
-            cmd.Parameters["ERTEK"].Value = _Ertek;
+            cmd.Parameters["NETTO_ERTEK"].Value = _Netto_Ertek;
+            cmd.Parameters["ERTEK"].Value = _Netto_Ertek * (1+(_Cikk.AFA_SZAZ/100));
+            cmd.Parameters["AFA_ERTEK"].Value = _Netto_Ertek * (_Cikk.AFA_SZAZ / 100);
 
             try
             {
