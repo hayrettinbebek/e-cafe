@@ -56,6 +56,7 @@ namespace e_Cafe
 
             DEFS.log(Level.Info, "Sikeres inicializálás");
             RefreshDatabase();
+            DEFS.LoadPossibleOpenDays();
             DEFS.R_SYSPAR = new SysParList();
             if (!Login()) { Application.Exit(); }
 
@@ -93,7 +94,7 @@ namespace e_Cafe
             DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
             //MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 16)
+            if (db_ver < 18)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -118,7 +119,7 @@ namespace e_Cafe
                     if (db_ver < 14) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_014.sql")); }
                     if (db_ver < 15) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_015.sql")); }
                     if (db_ver < 16) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_016.sql")); }
-
+                    if (db_ver < 17) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_017.sql")); }
 
                     updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
                     DEFS.SendInfoMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +

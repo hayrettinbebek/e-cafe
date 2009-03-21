@@ -181,6 +181,27 @@ namespace BusinessLogic
         }
         #endregion
 
+        #region NETTO_AR
+        //megnevezés
+        private double fELADASI_AR_NETTO;
+        public double NETTO_AR
+        {
+            get { return (fELADASI_AR_NETTO); }
+            set { fELADASI_AR_NETTO = value; }
+        }
+        #endregion
+
+        #region AFA_SZAZ
+        //áfa százalék
+        private double fAFA_SZAZ;
+        public double AFA_SZAZ
+        {
+            get { return (fAFA_SZAZ); }
+            set { fAFA_SZAZ = value; }
+        }
+        #endregion
+
+
         #region SZJ
         //megnevezés
         private string fSZJ;
@@ -311,7 +332,9 @@ namespace BusinessLogic
             cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(CIKKSZAM,'') as CIKKSZAM, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
                             " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY, " +
                             " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
-                            " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID  " +
+                            " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
+                            " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ  " +
+                            
                             " FROM CIKK  c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE CIKK_ID =" + pCikkId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -335,6 +358,10 @@ namespace BusinessLogic
                 MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
                 OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
+                NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
+                AFA_SZAZ = (double)rdr["AFA_SZAZ"];
+                
+                
 
                 DEFS.log(Level.Debug, "CikK olvasása" + rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
                         rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + rdr["KISZ_NEV"] + "#" + rdr["KISZ_MENNY"] + "#" + "#" + "#" + "#");
@@ -358,8 +385,9 @@ namespace BusinessLogic
             cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(CIKKSZAM,'') as CIKKSZAM, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
                             " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS," +
                             " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , "+
-                            " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID  " +
-                            " FROM CIKK  WHERE CIKK_ID =" + pCikkId.ToString();
+                            " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
+                            " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ " +
+                            " FROM CIKK WHERE CIKK_ID =" + pCikkId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
@@ -380,6 +408,8 @@ namespace BusinessLogic
                 MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
                 OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
+                NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
+                AFA_SZAZ = (double)rdr["AFA_SZAZ"];
 
                 DEFS.log(Level.Debug, "CikK olvasása" + rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
                         rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + "#" + "#" + "#" + "#");

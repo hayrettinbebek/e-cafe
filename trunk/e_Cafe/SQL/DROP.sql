@@ -124,3 +124,11 @@ DROP PROCEDURE [dbo].[sp_logout]
 
 GO
 
+/****** Object:  UserDefinedFunction [dbo].[fn_get_AfaSzaz]    Script Date: 02/20/2009 23:40:05 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_get_AfaSzaz]') AND type in (N'FN', N'IF', N'TF', N'FS', N'FT'))
+DROP FUNCTION [dbo].[fn_get_AfaSzaz]
+
+GO
+
+
+
