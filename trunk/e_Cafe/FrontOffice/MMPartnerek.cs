@@ -130,7 +130,7 @@ namespace e_Cafe
             {
                 if (SelectedPartner.HITEL_SZABAD >= 0)
                 {
-                    DEFS.SendInfoMessage("kiválasztott ID:" + SelectedPartner.PARTNER_ID.ToString());
+                    DEFS.SendShortMessage("kiválasztott ID:" + SelectedPartner.PARTNER_ID.ToString(),500);
                     this.Close();
                 }
             }

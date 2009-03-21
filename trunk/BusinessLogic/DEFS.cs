@@ -234,8 +234,34 @@ namespace BusinessLogic
         {
             
             log(Level.Info, t);
-            MessageBox.Show(t);
+            frmInfoMessage1 fi = new frmInfoMessage1();
+            fi.lblMessage.Text = t;
+            fi.tmrTime.Enabled = false;
+            fi.ShowDialog();
+            
 
+        }
+
+        public static void SendShortMessage(string t, int seconds)
+        {
+
+            log(Level.Info, t);
+            frmInfoMessage1 fi = new frmInfoMessage1();
+            fi.lblMessage.Text = t;
+            fi.tmrTime.Interval = seconds;
+            fi.ShowDialog();
+
+
+        }
+
+        public static double getNetto(double BruttoSzam, double AfaSzaz)
+        {
+            return (BruttoSzam / (1 + (AfaSzaz / 100)));
+        }
+
+        public static double getBrutto(double NettoSzam, double AfaSzaz)
+        {
+            return (NettoSzam / (1 + (AfaSzaz / 100)));
         }
     }
 

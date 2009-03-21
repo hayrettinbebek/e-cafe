@@ -226,12 +226,12 @@ namespace BusinessLogic
         public void addTetel(Cikk pCikk)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, pCikk.KISZ_MENNY*pCikk.NETTO_AR, DateTime.Now));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round( pCikk.KISZ_MENNY*pCikk.NETTO_AR,2), DateTime.Now));
         }
         public void addTetel(Cikk pCikk, int pRakt)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, pCikk.KISZ_MENNY*pCikk.NETTO_AR, DateTime.Now, pRakt));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round(pCikk.KISZ_MENNY*pCikk.NETTO_AR,2), DateTime.Now, pRakt));
         }
 
         #endregion

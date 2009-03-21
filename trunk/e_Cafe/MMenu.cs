@@ -122,8 +122,8 @@ namespace e_Cafe
                     if (db_ver < 17) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_017.sql")); }
 
                     updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
-                    DEFS.SendInfoMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
-                                "\n" + "(Adminisztrátor:Support:Logok beküldése)");
+                    DEFS.SendShortMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
+                                "\n" + "(Adminisztrátor:Support:Logok beküldése)",2000);
                 }
             }
 

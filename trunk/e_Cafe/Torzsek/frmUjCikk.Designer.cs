@@ -44,6 +44,8 @@
             this.txtEAN = new System.Windows.Forms.TextBox();
             this.txtSZJ = new System.Windows.Forms.TextBox();
             this.cmbDefRakt = new System.Windows.Forms.ComboBox();
+            this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbOTF = new System.Windows.Forms.ComboBox();
             this.cIKCSOPOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -59,6 +61,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtEladAr = new System.Windows.Forms.TextBox();
             this.cmdMe = new System.Windows.Forms.ComboBox();
+            this.mEGYSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSetMEGYS = new e_Cafe.SQL.ECAFEDataSetMEGYS();
             this.label13 = new System.Windows.Forms.Label();
             this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
             this.cIKCSOP_OTHER_FILTERTableAdapter = new e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter();
@@ -68,22 +72,25 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.chkOsszetett = new System.Windows.Forms.CheckBox();
-            this.eCAFEDataSetMEGYS = new e_Cafe.SQL.ECAFEDataSetMEGYS();
-            this.mEGYSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mEGYSTableAdapter = new e_Cafe.SQL.ECAFEDataSetMEGYSTableAdapters.MEGYSTableAdapter();
-            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
-            this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rAKTARTableAdapter = new e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
+            this.aFABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aFATableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.AFATableAdapter();
+            this.txtEladArNet = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.netToBrut = new System.Windows.Forms.Button();
+            this.bruttoToNetto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetMEGYS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mEGYSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetMEGYS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -141,6 +148,7 @@
             this.cmdCikkcsop.Size = new System.Drawing.Size(123, 21);
             this.cmdCikkcsop.TabIndex = 15;
             this.cmdCikkcsop.ValueMember = "CIKKCSOPORT_ID";
+            this.cmdCikkcsop.SelectedIndexChanged += new System.EventHandler(this.cmdCikkcsop_SelectedIndexChanged);
             // 
             // cIKKCSOPORTBindingSource
             // 
@@ -215,6 +223,16 @@
             this.cmbDefRakt.TabIndex = 22;
             this.cmbDefRakt.ValueMember = "RAKTAR_ID";
             // 
+            // rAKTARBindingSource
+            // 
+            this.rAKTARBindingSource.DataMember = "RAKTAR";
+            this.rAKTARBindingSource.DataSource = this.eCAFEDataSetRAKTAR;
+            // 
+            // eCAFEDataSetRAKTAR
+            // 
+            this.eCAFEDataSetRAKTAR.DataSetName = "ECAFEDataSetRAKTAR";
+            this.eCAFEDataSetRAKTAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -257,7 +275,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 284);
+            this.label9.Location = new System.Drawing.Point(9, 310);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 28;
@@ -267,7 +285,7 @@
             // 
             this.txtMegjegyzes.AcceptsReturn = true;
             this.txtMegjegyzes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMegjegyzes.Location = new System.Drawing.Point(86, 279);
+            this.txtMegjegyzes.Location = new System.Drawing.Point(86, 305);
             this.txtMegjegyzes.Multiline = true;
             this.txtMegjegyzes.Name = "txtMegjegyzes";
             this.txtMegjegyzes.Size = new System.Drawing.Size(363, 54);
@@ -327,16 +345,16 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(12, 247);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 13);
+            this.label12.Size = new System.Drawing.Size(83, 13);
             this.label12.TabIndex = 31;
-            this.label12.Text = "Eladási ár";
+            this.label12.Text = "Eladási ár bruttó";
             // 
             // txtEladAr
             // 
             this.txtEladAr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEladAr.Location = new System.Drawing.Point(88, 244);
+            this.txtEladAr.Location = new System.Drawing.Point(101, 243);
             this.txtEladAr.Name = "txtEladAr";
-            this.txtEladAr.Size = new System.Drawing.Size(86, 20);
+            this.txtEladAr.Size = new System.Drawing.Size(60, 20);
             this.txtEladAr.TabIndex = 30;
             // 
             // cmdMe
@@ -349,6 +367,16 @@
             this.cmdMe.Size = new System.Drawing.Size(76, 21);
             this.cmdMe.TabIndex = 20;
             this.cmdMe.ValueMember = "MEGYS_ID";
+            // 
+            // mEGYSBindingSource
+            // 
+            this.mEGYSBindingSource.DataMember = "MEGYS";
+            this.mEGYSBindingSource.DataSource = this.eCAFEDataSetMEGYS;
+            // 
+            // eCAFEDataSetMEGYS
+            // 
+            this.eCAFEDataSetMEGYS.DataSetName = "ECAFEDataSetMEGYS";
+            this.eCAFEDataSetMEGYS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label13
             // 
@@ -395,7 +423,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(243, 339);
+            this.button3.Location = new System.Drawing.Point(243, 365);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 33;
@@ -407,7 +435,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(162, 339);
+            this.btnCancel.Location = new System.Drawing.Point(162, 365);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 32;
@@ -425,45 +453,78 @@
             this.chkOsszetett.Text = "Összetet cikk";
             this.chkOsszetett.UseVisualStyleBackColor = true;
             // 
-            // eCAFEDataSetMEGYS
-            // 
-            this.eCAFEDataSetMEGYS.DataSetName = "ECAFEDataSetMEGYS";
-            this.eCAFEDataSetMEGYS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mEGYSBindingSource
-            // 
-            this.mEGYSBindingSource.DataMember = "MEGYS";
-            this.mEGYSBindingSource.DataSource = this.eCAFEDataSetMEGYS;
-            // 
             // mEGYSTableAdapter
             // 
             this.mEGYSTableAdapter.ClearBeforeFill = true;
-            // 
-            // eCAFEDataSetRAKTAR
-            // 
-            this.eCAFEDataSetRAKTAR.DataSetName = "ECAFEDataSetRAKTAR";
-            this.eCAFEDataSetRAKTAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rAKTARBindingSource
-            // 
-            this.rAKTARBindingSource.DataMember = "RAKTAR";
-            this.rAKTARBindingSource.DataSource = this.eCAFEDataSetRAKTAR;
             // 
             // rAKTARTableAdapter
             // 
             this.rAKTARTableAdapter.ClearBeforeFill = true;
             // 
+            // aFABindingSource
+            // 
+            this.aFABindingSource.DataMember = "AFA";
+            this.aFABindingSource.DataSource = this.eCAFEDataSet;
+            // 
+            // aFATableAdapter
+            // 
+            this.aFATableAdapter.ClearBeforeFill = true;
+            // 
+            // txtEladArNet
+            // 
+            this.txtEladArNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEladArNet.Location = new System.Drawing.Point(101, 269);
+            this.txtEladArNet.Name = "txtEladArNet";
+            this.txtEladArNet.Size = new System.Drawing.Size(60, 20);
+            this.txtEladArNet.TabIndex = 30;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(12, 271);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(80, 13);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Eladási ár nettó";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // netToBrut
+            // 
+            this.netToBrut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.netToBrut.Location = new System.Drawing.Point(167, 269);
+            this.netToBrut.Name = "netToBrut";
+            this.netToBrut.Size = new System.Drawing.Size(33, 23);
+            this.netToBrut.TabIndex = 35;
+            this.netToBrut.Text = "->b";
+            this.netToBrut.UseVisualStyleBackColor = true;
+            this.netToBrut.Click += new System.EventHandler(this.netToBrut_Click);
+            // 
+            // bruttoToNetto
+            // 
+            this.bruttoToNetto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bruttoToNetto.Location = new System.Drawing.Point(167, 242);
+            this.bruttoToNetto.Name = "bruttoToNetto";
+            this.bruttoToNetto.Size = new System.Drawing.Size(33, 23);
+            this.bruttoToNetto.TabIndex = 35;
+            this.bruttoToNetto.Text = "->n";
+            this.bruttoToNetto.UseVisualStyleBackColor = true;
+            this.bruttoToNetto.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmUjCikk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 368);
+            this.ClientSize = new System.Drawing.Size(487, 440);
             this.ControlBox = false;
+            this.Controls.Add(this.bruttoToNetto);
+            this.Controls.Add(this.netToBrut);
             this.Controls.Add(this.chkOsszetett);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtEladArNet);
             this.Controls.Add(this.txtEladAr);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
@@ -491,15 +552,16 @@
             this.Load += new System.EventHandler(this.frmUjCikk_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetMEGYS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mEGYSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetMEGYS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,5 +614,11 @@
         private e_Cafe.SQL.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
         private System.Windows.Forms.BindingSource rAKTARBindingSource;
         private e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
+        private System.Windows.Forms.BindingSource aFABindingSource;
+        private e_Cafe.SQL.ECAFEDataSetTableAdapters.AFATableAdapter aFATableAdapter;
+        private System.Windows.Forms.TextBox txtEladArNet;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button netToBrut;
+        private System.Windows.Forms.Button bruttoToNetto;
     }
 }

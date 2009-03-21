@@ -97,7 +97,7 @@ namespace BusinessLogic
 
             if (Jo)
             {
-                DEFS.SendInfoMessage("Sikeres belépés:" + iUserName);
+                DEFS.SendShortMessage("Sikeres belépés:" + iUserName,1500);
             }
             else
             {

@@ -751,8 +751,8 @@ namespace e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CIKCSOP_OTHER_FILTER] ([OTHER_FILTER_ID], [OTHER_NAME], [CIKKC" +
-                "SOPORT_ID]) VALUES (@OTHER_FILTER_ID, @OTHER_NAME, @CIKKCSOPORT_ID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [CIKCSOP_OTHER_FILTER] ([OTHER_FILTER_ID], [OTHER_NAME], [CIKKCSOPORT" +
+                "_ID]) VALUES (@OTHER_FILTER_ID, @OTHER_NAME, @CIKKCSOPORT_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OTHER_FILTER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_FILTER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OTHER_NAME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OTHER_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -770,15 +770,23 @@ namespace e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT OTHER_FILTER_ID, OTHER_NAME, CIKKCSOPORT_ID FROM dbo.CIKCSOP_OTHER_FILTER";
+            this._commandCollection[0].CommandText = "SELECT     OTHER_FILTER_ID, OTHER_NAME, CIKKCSOPORT_ID\r\nFROM         CIKCSOP_OTHE" +
+                "R_FILTER\r\nWHERE     (CIKKCSOPORT_ID = @ccs_id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ccs_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable dataTable) {
+        public virtual int Fill(ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable dataTable, global::System.Nullable<int> ccs_id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ccs_id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ccs_id.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -789,8 +797,14 @@ namespace e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable GetData() {
+        public virtual ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable GetData(global::System.Nullable<int> ccs_id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ccs_id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ccs_id.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable dataTable = new ECAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTERDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

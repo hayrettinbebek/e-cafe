@@ -27,8 +27,8 @@ namespace e_Cafe
         ResourceManager myResources;
         Object LastCikkcsopMenu;
 
-       
 
+        Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
         Rendeles _AktRendeles;
 
         #region Constructor
@@ -210,7 +210,7 @@ namespace e_Cafe
         private void loadCikkek(int pCikkcsoport, int pAlcsoportId)
         {
             flpCikkek.Controls.Clear();
-            Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
+            //Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR),pCikkcsoport, true);
             List<Cikk> lButtons = new List<Cikk>();
             DEFS.log(Level.Debug, "LoadCikkek() "+ pAlcsoportId.ToString() + " Cikkcsoport: " + pCikkcsoport.ToString());
 
@@ -291,7 +291,7 @@ namespace e_Cafe
                     ((CikkButton)sender).fCIKK.getKeszlet();
                     ((CikkButton)sender).re_SetCikk();
                     ((CikkButton)sender).Refresh();
-                    initRendelTablaNoDraw();
+                    initRendelTabla();
 
                 }
             }
@@ -433,13 +433,14 @@ namespace e_Cafe
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            
             foreach (var s in tblRendeles.SelectedItems)
             {
                 ((eCell)s.Cells[0]).rSor.DeleteSor();
             }
             _AktRendeles.SaveRendeles();
             _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
-
+            lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
             initRendelTabla();
 
             
