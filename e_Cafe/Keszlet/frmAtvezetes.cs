@@ -127,7 +127,7 @@ namespace e_Cafe.Keszlet
 
             }
 
-            DEFS.SendInfoMessage("Átvezetés sikeres!");
+            DEFS.SendShortMessage("Átvezetés sikeres!",1000);
         }
 
         private void button3_Click(object sender, EventArgs e)

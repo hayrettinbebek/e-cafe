@@ -185,7 +185,7 @@ namespace GUI
                // lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
                 lKeszletOther.Text = value.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
                 //lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
-                lAr.Text = value.ELADASI_AR.ToString("0.00", CultureInfo.InvariantCulture);
+                lAr.Text = value.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
 
                 
             }
@@ -198,7 +198,7 @@ namespace GUI
             //lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
             lKeszletOther.Text = _Cikk.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
             //lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
-            lAr.Text = _Cikk.ELADASI_AR.ToString("0.00", CultureInfo.InvariantCulture);
+            lAr.Text = _Cikk.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
         }
 
         protected void OnLabelClick(object sender, EventArgs e)

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4423B230-FAEA-458A-94FC-F8D912C2709A}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -73,6 +73,12 @@
     <Compile Include="Cikk.cs" />
     <Compile Include="DEFS.cs" />
     <Compile Include="EmailSending.cs" />
+    <Compile Include="frmInfoMessage1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoMessage1.Designer.cs">
+      <DependentUpon>frmInfoMessage1.cs</DependentUpon>
+    </Compile>
     <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="NapZaras.cs" />
@@ -91,6 +97,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="nspring.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmInfoMessage1.resx">
+      <DependentUpon>frmInfoMessage1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

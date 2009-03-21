@@ -33,21 +33,22 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.eCAFEDataSetOTHER_FILTER = new e_Cafe.SQL.ECAFEDataSetOTHER_FILTER();
-            this.cIKCSOPOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cIKCSOP_OTHER_FILTERTableAdapter = new e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter();
-            this.eCAFEDataSet = new e_Cafe.SQL.ECAFEDataSet();
-            this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
             this.oTHERFILTERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSet = new e_Cafe.SQL.ECAFEDataSet();
             this.oTHERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cIKCSOPOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSetOTHER_FILTER = new e_Cafe.SQL.ECAFEDataSetOTHER_FILTER();
+            this.cIKCSOP_OTHER_FILTERTableAdapter = new e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter();
+            this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
+            this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -85,34 +86,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(402, 156);
             this.dataGridView1.TabIndex = 1;
             // 
-            // eCAFEDataSetOTHER_FILTER
-            // 
-            this.eCAFEDataSetOTHER_FILTER.DataSetName = "ECAFEDataSetOTHER_FILTER";
-            this.eCAFEDataSetOTHER_FILTER.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cIKCSOPOTHERFILTERBindingSource
-            // 
-            this.cIKCSOPOTHERFILTERBindingSource.DataMember = "CIKCSOP_OTHER_FILTER";
-            this.cIKCSOPOTHERFILTERBindingSource.DataSource = this.eCAFEDataSetOTHER_FILTER;
-            // 
-            // cIKCSOP_OTHER_FILTERTableAdapter
-            // 
-            this.cIKCSOP_OTHER_FILTERTableAdapter.ClearBeforeFill = true;
-            // 
-            // eCAFEDataSet
-            // 
-            this.eCAFEDataSet.DataSetName = "ECAFEDataSet";
-            this.eCAFEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cIKKCSOPORTBindingSource
-            // 
-            this.cIKKCSOPORTBindingSource.DataMember = "CIKKCSOPORT";
-            this.cIKKCSOPORTBindingSource.DataSource = this.eCAFEDataSet;
-            // 
-            // cIKKCSOPORTTableAdapter
-            // 
-            this.cIKKCSOPORTTableAdapter.ClearBeforeFill = true;
-            // 
             // oTHERFILTERIDDataGridViewTextBoxColumn
             // 
             this.oTHERFILTERIDDataGridViewTextBoxColumn.DataPropertyName = "OTHER_FILTER_ID";
@@ -132,6 +105,16 @@
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn.ValueMember = "CIKKCSOPORT_ID";
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Width = 140;
             // 
+            // cIKKCSOPORTBindingSource
+            // 
+            this.cIKKCSOPORTBindingSource.DataMember = "CIKKCSOPORT";
+            this.cIKKCSOPORTBindingSource.DataSource = this.eCAFEDataSet;
+            // 
+            // eCAFEDataSet
+            // 
+            this.eCAFEDataSet.DataSetName = "ECAFEDataSet";
+            this.eCAFEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // oTHERNAMEDataGridViewTextBoxColumn
             // 
             this.oTHERNAMEDataGridViewTextBoxColumn.DataPropertyName = "OTHER_NAME";
@@ -139,11 +122,42 @@
             this.oTHERNAMEDataGridViewTextBoxColumn.Name = "oTHERNAMEDataGridViewTextBoxColumn";
             this.oTHERNAMEDataGridViewTextBoxColumn.Width = 190;
             // 
+            // cIKCSOPOTHERFILTERBindingSource
+            // 
+            this.cIKCSOPOTHERFILTERBindingSource.DataMember = "CIKCSOP_OTHER_FILTER";
+            this.cIKCSOPOTHERFILTERBindingSource.DataSource = this.eCAFEDataSetOTHER_FILTER;
+            // 
+            // eCAFEDataSetOTHER_FILTER
+            // 
+            this.eCAFEDataSetOTHER_FILTER.DataSetName = "ECAFEDataSetOTHER_FILTER";
+            this.eCAFEDataSetOTHER_FILTER.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cIKCSOP_OTHER_FILTERTableAdapter
+            // 
+            this.cIKCSOP_OTHER_FILTERTableAdapter.ClearBeforeFill = true;
+            // 
+            // cIKKCSOPORTTableAdapter
+            // 
+            this.cIKKCSOPORTTableAdapter.ClearBeforeFill = true;
+            // 
+            // cmbFilter
+            // 
+            this.cmbFilter.DataSource = this.cIKKCSOPORTBindingSource;
+            this.cmbFilter.DisplayMember = "CIKKCSOPORT_NEV";
+            this.cmbFilter.FormattingEnabled = true;
+            this.cmbFilter.Location = new System.Drawing.Point(107, 0);
+            this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.Size = new System.Drawing.Size(121, 21);
+            this.cmbFilter.TabIndex = 2;
+            this.cmbFilter.ValueMember = "CIKKCSOPORT_ID";
+            this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // frmOtherFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 181);
+            this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmOtherFilter";
@@ -152,10 +166,10 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +189,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn oTHERFILTERIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn cIKKCSOPORTIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn oTHERNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cmbFilter;
     }
 }

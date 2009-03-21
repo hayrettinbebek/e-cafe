@@ -31,12 +31,13 @@ namespace e_Cafe
 
         private void frmUjCikk_Load(object sender, EventArgs e)
         {
+
             // TODO: This line of code loads data into the 'eCAFEDataSetRAKTAR.RAKTAR' table. You can move, or remove it, as needed.
             this.rAKTARTableAdapter.Fill(this.eCAFEDataSetRAKTAR.RAKTAR);
             // TODO: This line of code loads data into the 'eCAFEDataSetMEGYS.MEGYS' table. You can move, or remove it, as needed.
             this.mEGYSTableAdapter.Fill(this.eCAFEDataSetMEGYS.MEGYS);
             // TODO: This line of code loads data into the 'eCAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTER' table. You can move, or remove it, as needed.
-            this.cIKCSOP_OTHER_FILTERTableAdapter.Fill(this.eCAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTER);
+            
             // TODO: This line of code loads data into the 'eCAFEDataSet.CIKKCSOPORT' table. You can move, or remove it, as needed.
             this.cIKKCSOPORTTableAdapter.Fill(this.eCAFEDataSet.CIKKCSOPORT);
             dynComboBindingSource.Add(new DynCombo("Darab", "D"));
@@ -72,9 +73,14 @@ namespace e_Cafe
                     txtMinKeszl.Text = newCikk.MINIMUM_KESZLET.ToString();
                     txtOptKeszl.Text = newCikk.OPTIMALIS_KESZLET.ToString();
                     txtEladAr.Text = newCikk.ELADASI_AR.ToString();
+                    txtEladArNet.Text = newCikk.NETTO_AR.ToString();
                     txtMegjegyzes.Text = newCikk.MEGJEGYZES;
                 }
             }
+
+            this.cIKCSOP_OTHER_FILTERTableAdapter.Fill(this.eCAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTER, Convert.ToInt16(cmdCikkcsop.SelectedValue));
+
+            this.aFATableAdapter.Fill(this.eCAFEDataSet.AFA, ((SQL.ECAFEDataSet.CIKKCSOPORTRow)((DataRowView)cIKKCSOPORTBindingSource.Current).Row).AFA_KOD.ToString());
         }
 
         private void SaveCikk()
@@ -97,6 +103,8 @@ namespace e_Cafe
                     newCikk.MINIMUM_KESZLET = Convert.ToDouble(txtMinKeszl.Text);
                     newCikk.OPTIMALIS_KESZLET = Convert.ToDouble(txtOptKeszl.Text);
                     newCikk.ELADASI_AR = Convert.ToDouble(txtEladAr.Text);
+                    newCikk.NETTO_AR = Convert.ToDouble(txtEladArNet.Text);
+
                     newCikk.MEGJEGYZES = txtMegjegyzes.Text;
                 }
                 catch (Exception e)
@@ -164,6 +172,12 @@ namespace e_Cafe
                     DEFS.SendSaveErrMessage("Eladáis ár nem lehet üres!");
                 }
 
+                if (ETrim(txtEladArNet.Text) == "")
+                {
+                    r = false;
+                    DEFS.SendSaveErrMessage("Eladáis ár nem lehet üres!");
+                }
+
             }
             return (r);
         }
@@ -182,6 +196,29 @@ namespace e_Cafe
                 DialogResult = DialogResult.OK;
                 Close();
             }
+        }
+
+        private void cmdCikkcsop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.cIKCSOP_OTHER_FILTERTableAdapter.Fill(this.eCAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTER, Convert.ToInt16(cmdCikkcsop.SelectedValue));
+
+            this.aFATableAdapter.Fill(this.eCAFEDataSet.AFA, ((SQL.ECAFEDataSet.CIKKCSOPORTRow)((DataRowView)cIKKCSOPORTBindingSource.Current).Row).AFA_KOD.ToString());
+            
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtEladArNet.Text = DEFS.getNetto(Convert.ToDouble(txtEladAr.Text), (((SQL.ECAFEDataSet.AFARow)((DataRowView)aFABindingSource.Current).Row).AFA_ERTEK)).ToString();
+        }
+
+        private void netToBrut_Click(object sender, EventArgs e)
+        {
+            txtEladAr.Text = DEFS.getBrutto(Convert.ToDouble(txtEladArNet.Text), (((SQL.ECAFEDataSet.AFARow)((DataRowView)aFABindingSource.Current).Row).AFA_ERTEK)).ToString();
         }
     }
 }
