@@ -73,7 +73,7 @@ namespace e_Cafe
 
                 ab.ImageList = GetimageList(aList.lASZTAL[i].fASZTAL_TIPUS, aList.lASZTAL[i].fASZTAL_ROTATE);
                 ab.Location = new Point(aList.lASZTAL[i].fASZTAL_POS_X, aList.lASZTAL[i].fASZTAL_POS_Y);
-                //ab.Text = aList.lASZTAL[i].fASZTAL_SZAM + ". asztal";
+                ab.Text = aList.lASZTAL[i].fASZTAL_SZAM;// +". asztal";
                 ab.aObj = aList.lASZTAL[i];
                 ab.Size = new System.Drawing.Size(300, 123);
                 if (fm != null)
@@ -86,13 +86,22 @@ namespace e_Cafe
                 }
                 ab.vSelected = aList.lASZTAL[i].vSelected;
                 ab.Invalidate();
-                if (_isAdmin) { ab.MouseMove += this.Asztalok_MouseMove; }
+                if (_isAdmin)
+                {
+                    ab.MouseMove += this.Asztalok_MouseMove;
+                    ab.Click += this.Asztal_Click;
+                }
                 if (!_isAdmin) { ab.MouseDown += this.Asztalok_MouseDown; }
                 this.Controls.Add(ab);
             }
 
         }
 
+
+        private void Asztal_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void reInit()
         {
