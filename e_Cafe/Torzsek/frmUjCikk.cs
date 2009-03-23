@@ -75,6 +75,8 @@ namespace e_Cafe
                     txtEladAr.Text = newCikk.ELADASI_AR.ToString();
                     txtEladArNet.Text = newCikk.NETTO_AR.ToString();
                     txtMegjegyzes.Text = newCikk.MEGJEGYZES;
+                    chkMegKulZaras.Checked = newCikk.MEGKULONB_ZARAS;
+                    chkAutoRendGen.Checked = newCikk.AUTO_MEGRENDELO;
                 }
             }
 
@@ -100,12 +102,27 @@ namespace e_Cafe
                     newCikk.ALAP_RAKTAR = Convert.ToInt16(cmbDefRakt.SelectedValue);
                     newCikk.ERTEKESITES_TIPUSA = cmbErtTip.SelectedValue.ToString();
                     newCikk.MEGYS_ID = Convert.ToString(cmdMe.SelectedValue);
-                    newCikk.MINIMUM_KESZLET = Convert.ToDouble(txtMinKeszl.Text);
-                    newCikk.OPTIMALIS_KESZLET = Convert.ToDouble(txtOptKeszl.Text);
+                    if (txtMinKeszl.Text == "")
+                    {
+                        newCikk.MINIMUM_KESZLET = 0;
+                    }
+                    else
+                    {
+                        newCikk.MINIMUM_KESZLET = Convert.ToDouble(txtMinKeszl.Text);
+                    }
+                    if (txtOptKeszl.Text == "")
+                    {
+                        newCikk.OPTIMALIS_KESZLET = 0;
+                    }
+                    else
+                    {
+                        newCikk.OPTIMALIS_KESZLET = Convert.ToDouble(txtOptKeszl.Text);
+                    }
                     newCikk.ELADASI_AR = Convert.ToDouble(txtEladAr.Text);
                     newCikk.NETTO_AR = Convert.ToDouble(txtEladArNet.Text);
-
+                    newCikk.MEGKULONB_ZARAS = chkMegKulZaras.Checked;
                     newCikk.MEGJEGYZES = txtMegjegyzes.Text;
+                    newCikk.AUTO_MEGRENDELO = chkAutoRendGen.Checked;
                 }
                 catch (Exception e)
                 {

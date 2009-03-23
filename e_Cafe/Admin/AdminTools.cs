@@ -103,6 +103,7 @@ namespace e_Cafe
         private void cikkekToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCikk ck = new frmCikk();
+            ck.recept = 0;
             ck.MdiParent = this;
             ck.Show();
         }
@@ -235,6 +236,14 @@ namespace e_Cafe
         private void blokkokVisszakereséseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void receptekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCikk ck = new frmCikk();
+            ck.recept = 1;
+            ck.MdiParent = this;
+            ck.Show();
         }
 
 

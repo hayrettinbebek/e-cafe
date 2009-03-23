@@ -47,7 +47,7 @@ namespace BusinessLogic
         #endregion
         
         #region CIKK_TIPUS
-        private int fCIKK_TIPUS;
+        public int fCIKK_TIPUS;
         public bool OSSZETETT
         {
             get { return (fCIKK_TIPUS == 1); }
@@ -56,6 +56,33 @@ namespace BusinessLogic
             }
         }
         #endregion
+
+        #region MEGKULONB_ZARAS
+        private int fMEGKULONB_ZARAS;
+        public bool MEGKULONB_ZARAS
+        {
+            get { return (fMEGKULONB_ZARAS == 1); }
+            set
+            {
+                if (value) { fMEGKULONB_ZARAS = 1; }
+                else { fMEGKULONB_ZARAS = 0; }
+            }
+        }
+        #endregion
+
+        #region AUTO_MEGRENDELO
+        private int fAUTO_MEGRENDELO;
+        public bool AUTO_MEGRENDELO
+        {
+            get { return (fAUTO_MEGRENDELO == 1); }
+            set
+            {
+                if (value) { fAUTO_MEGRENDELO = 1; }
+                else { fAUTO_MEGRENDELO = 0; }
+            }
+        }
+        #endregion
+        
 
         #region készlet
         public List<CikkKeszlet> lKESZLET = new List<CikkKeszlet>();
@@ -185,7 +212,8 @@ namespace BusinessLogic
         //megnevezés
         public double ELADASI_AR_VALOS
         {
-            get { return (ELADASI_AR * KISZ_MENNY); }
+            //get { return (ELADASI_AR * KISZ_MENNY); }
+            get { return (ELADASI_AR ); }
            
         }
         #endregion
@@ -207,6 +235,15 @@ namespace BusinessLogic
         {
             get { return (fAFA_SZAZ); }
             set { fAFA_SZAZ = value; }
+        }
+        #endregion
+
+        #region BESZERZESI_AR
+        //megnevezés
+        public string BESZERZESI_AR
+        {
+            get { return (getBeszAr(CIKK_ID)); }
+           
         }
         #endregion
 
@@ -239,13 +276,16 @@ namespace BusinessLogic
         }
         #endregion
 
-        //megnevezés
+        #region ERTEKESITES_TIPUSA
         private string fERT_TIP;
         public string ERTEKESITES_TIPUSA
         {
             get { return (fERT_TIP); }
             set { fERT_TIP = value; }
         }
+        #endregion
+
+
 
         public Cikk(int pCIKK_ID,
                     string pMEGNEVEZES,
@@ -395,7 +435,8 @@ namespace BusinessLogic
                             " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS," +
                             " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , "+
                             " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
-                            " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ " +
+                            " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ, " +
+                            " isnull(SPEC_ZARAS,0) as SPEC_ZARAS, isnull(AUTO_MEGRENDELO,0) as AUTO_MEGRENDELO " +
                             " FROM CIKK WHERE CIKK_ID =" + pCikkId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -419,6 +460,8 @@ namespace BusinessLogic
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
                 NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
+                fMEGKULONB_ZARAS = (int)rdr["SPEC_ZARAS"];
+                fAUTO_MEGRENDELO = (int)rdr["AUTO_MEGRENDELO"];
 
                 DEFS.log(Level.Debug, "CikK olvasása" + rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
                         rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + "#" + "#" + "#" + "#");
@@ -466,6 +509,8 @@ namespace BusinessLogic
                                             ",MEGYS_ID " +
                                             ",ELADASI_AR_NETTO " +
                                             ",DEFAULT_RAKTAR " +
+                                            ",SPEC_ZARAS "+
+                                            ",AUTO_MEGRENDELO "+
                                             //",ERTEKESITES_TIPUSA " +
                                             " ) " +
                                         "VALUES " +
@@ -484,7 +529,9 @@ namespace BusinessLogic
                                             ",@MEGJEGYZES " +
                                             ",@MEGYS_ID " +
                                             ",@ELADASI_AR_NETTO " +
-                                            ",@DEFAULT_RAKTAR) SET @newid = SCOPE_IDENTITY()";
+                                            ",@DEFAULT_RAKTAR " +
+                                            ",@SPEC_ZARAS " +
+                                            ",@AUTO_MEGRENDELO) SET @newid = SCOPE_IDENTITY()";
                         cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
                         cmd.Parameters["newid"].Direction = ParameterDirection.Output;
                         break;
@@ -507,6 +554,8 @@ namespace BusinessLogic
                                                        " MEGJEGYZES = @MEGJEGYZES, " +
                                                        " MEGYS_ID = @MEGYS_ID, " +
                                                        " ELADASI_AR_NETTO = @ELADASI_AR_NETTO " +
+                                                       " SPEC_ZARAS = @SPEC_ZARAS " +
+                                                       " AUTO_MEGRENDELO = @AUTO_MEGRENDELO " +
 
                                            "WHERE CIKK_ID = @CIKK_ID";
                         cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
@@ -530,8 +579,10 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("ELADASI_AR_NETTO", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("MEGJEGYZES", SqlDbType.VarChar));
             cmd.Parameters.Add(new SqlParameter("MEGYS_ID", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("SPEC_ZARAS", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("AUTO_MEGRENDELO", SqlDbType.Int));
 
-            
+                        
             cmd.Parameters["MEGNEVEZES"].Value = MEGNEVEZES;
             cmd.Parameters["CIKK_TIPUS"].Value = fCIKK_TIPUS;
             cmd.Parameters["CIKKCSOPORT_ID"].Value = CIKKCSOPORT_ID;
@@ -548,6 +599,8 @@ namespace BusinessLogic
             cmd.Parameters["ELADASI_AR_NETTO"].Value = NETTO_AR;
             cmd.Parameters["MEGJEGYZES"].Value = MEGJEGYZES;
             cmd.Parameters["MEGYS_ID"].Value = MEGYS_ID;
+            cmd.Parameters["SPEC_ZARAS"].Value = fMEGKULONB_ZARAS;
+            cmd.Parameters["AUTO_MEGRENDELO"].Value = fAUTO_MEGRENDELO;
 
             DEFS.log(Level.Debug, @"Cikk instert / update" + cmd.CommandText);
             try
@@ -576,9 +629,35 @@ namespace BusinessLogic
             c.Close();
         }
 
+        public static string getBeszAr(int pCikk) 
+        {
+            string ret;
+            double net = 0;
+            double br = 0;
+            
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+            SqlCommand gk = new SqlCommand("select TOP 1 NETTO_ERTEK / MENNY as NETTO_AR, " +
+                                           " BRUTTO_ERTEK / MENNY as BRUTTO_AR " +
+                                           " from bevetel_sor " +
+                                           " where CIKK_ID = "+pCikk.ToString()+" order by SOR_ID DESC " , c);
+            gk.CommandType = CommandType.Text;
+            SqlDataReader rdr = gk.ExecuteReader();
+            while (rdr.Read())
+            {
+                net = (double)rdr["NETTO_AR"];
+                br = (double)rdr["BRUTTO_AR"];
+                
+            }
 
+            c.Close();
+            ret = br.ToString("#.00") + " / " + net.ToString("#.00");
+            return (ret);
+
+        }
     }
     
+
    
     public class CikkKeszlet
     {
@@ -704,8 +783,12 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, " +
-                                " isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY " +
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(CIKKSZAM,'') as CIKKSZAM, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
+                                        " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY, " +
+                                        " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
+                                        " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
+                                        " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ,  " +
+                                        " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR " +
                                 " FROM CIKK c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id";
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -716,13 +799,37 @@ namespace BusinessLogic
 
                 try
                 {
-                    Cikk t = new Cikk((int)rdr["CIKK_ID"], new SqlConnection(DEFS.ConSTR));
+                    Cikk t = new Cikk((int)rdr["CIKK_ID"] , (string)rdr["MEGNEVEZES"],(int)rdr["CIKK_TIPUS"],(int)rdr["CIKKCSOPORT_ID"]);
 
-                    t.ALCSOPORT = (int)rdr["OTHER_FILTER_ID"];
-                    t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
-                    t.ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
-                    t.KISZ_MEGN = (string)rdr["KISZ_NEV"];
-                    t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+                        t.CIKK_ID = (int)rdr["CIKK_ID"];
+                        t.MEGNEVEZES = (string)rdr["MEGNEVEZES"];
+                        t.fCIKK_TIPUS = (int)rdr["CIKK_TIPUS"];
+                        t.CIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
+                        t.ALCSOPORT = (int)rdr["OTHER_FILTER_ID"];
+                        t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                        t.MEGYS_ID = (string)rdr["MEGYS_ID"];
+                        t.ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
+                        t.CIKKSZAM = (string)rdr["CIKKSZAM"];
+                        t.GYORSKOD = (string)rdr["GYORSKOD"];
+                        t.EAN = (string)rdr["EAN_KOD"];
+                        t.SZJ = (string)rdr["SZJ_SZAM"];
+                        t.MEGJEGYZES = (string)rdr["MEGJEGYZES"];
+                        t.KISZ_MEGN = (string)rdr["KISZ_NEV"];
+                        t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+                        t.MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
+                        t.OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
+                        if ((double)rdr["ELADASI_AR"] == 0)
+                        {
+                            t.ELADASI_AR = (double)rdr["KISZ_ELADASI_AR"];
+                            t.NETTO_AR = DEFS.getNetto((double)rdr["KISZ_ELADASI_AR"], (double)rdr["AFA_SZAZ"]);
+                        }
+                        else
+                        {
+                            t.ELADASI_AR = (double)rdr["ELADASI_AR"];
+                            t.NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
+                        }
+                        
+                        t.AFA_SZAZ = (double)rdr["AFA_SZAZ"];
                     t.getKeszlet();
                     lCIKK.Add(t);
                 }

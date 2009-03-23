@@ -19,6 +19,7 @@ namespace e_Cafe.Torzsek
         private Cikk_list cikkList = null;
 
         private Cikk aktCikk = null;
+        public int recept = 0;
 
         public frmCikk()
         {
@@ -30,7 +31,7 @@ namespace e_Cafe.Torzsek
             
 
             // TODO: This line of code loads data into the 'eCAFEDataSetCIKK.CIKK' table. You can move, or remove it, as needed.
-            this.cIKKTableAdapter.Fill(this.eCAFEDataSetCIKK.CIKK);
+            this.cIKKTableAdapter.Fill(this.eCAFEDataSetCIKK.CIKK, recept);
 
             cikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
 
@@ -54,22 +55,24 @@ namespace e_Cafe.Torzsek
             if (cIKKBindingSource.Current != null)
             {
                 grpKiszerelesek.Visible = (string)((DataRowView)cIKKBindingSource.Current)["ERTEKESITES_TIPUSA"] == "L";
+                grpEladAr.Visible = (string)((DataRowView)cIKKBindingSource.Current)["ERTEKESITES_TIPUSA"] == "L";
 
-                
 
                 if (cikkList != null)
                 {
                     aktCikk = cikkList.CikkByID((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
-
-                    tpRecept.Visible = aktCikk.OSSZETETT;
-
-                    cikkKeszletBindingSource.Clear();
-                    foreach (var k in aktCikk.lKESZLET)
+                    if (aktCikk != null)
                     {
-                        cikkKeszletBindingSource.Add(k);
+                        tpRecept.Visible = aktCikk.OSSZETETT;
+
+                        cikkKeszletBindingSource.Clear();
+                        foreach (var k in aktCikk.lKESZLET)
+                        {
+                            cikkKeszletBindingSource.Add(k);
+                        }
                     }
                 }
-
+                txtBeszAR.Text =  Cikk.getBeszAr((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
 
                 lIT_KISZTableAdapter.Fill(eCAFEDataSetCIKK.LIT_KISZ, (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
                 taRecept.Fill(dsReceptText.CIKK, (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
@@ -80,7 +83,7 @@ namespace e_Cafe.Torzsek
 
         private void lITKISZBindingSource_AddingNew(object sender, AddingNewEventArgs e)
         {
-            e.NewObject = eCAFEDataSetCIKK.LIT_KISZ.AddLIT_KISZRow((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], "", 0);
+            e.NewObject = eCAFEDataSetCIKK.LIT_KISZ.AddLIT_KISZRow((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], "", 0, 0);
            
            
         }
