@@ -340,6 +340,8 @@ namespace e_Cafe.SQL {
             
             private global::System.Data.DataColumn columnELADASI_AR_NETTO;
             
+            private global::System.Data.DataColumn columnExpr1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public CIKKDataTable() {
                 this.TableName = "CIKK";
@@ -532,6 +534,13 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn Expr1Column {
+                get {
+                    return this.columnExpr1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -582,7 +591,8 @@ namespace e_Cafe.SQL {
                         string GYORSKOD, 
                         string ERTEKESITES_TIPUSA, 
                         int SPEC_ZARAS, 
-                        double ELADASI_AR_NETTO) {
+                        double ELADASI_AR_NETTO, 
+                        int Expr1) {
                 CIKKRow rowCIKKRow = ((CIKKRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MEGNEVEZES,
@@ -607,7 +617,8 @@ namespace e_Cafe.SQL {
                         null,
                         ERTEKESITES_TIPUSA,
                         SPEC_ZARAS,
-                        ELADASI_AR_NETTO};
+                        ELADASI_AR_NETTO,
+                        Expr1};
                 rowCIKKRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCIKKRow);
                 return rowCIKKRow;
@@ -656,6 +667,7 @@ namespace e_Cafe.SQL {
                 this.columnERTEKESITES_TIPUSA = base.Columns["ERTEKESITES_TIPUSA"];
                 this.columnSPEC_ZARAS = base.Columns["SPEC_ZARAS"];
                 this.columnELADASI_AR_NETTO = base.Columns["ELADASI_AR_NETTO"];
+                this.columnExpr1 = base.Columns["Expr1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -706,6 +718,8 @@ namespace e_Cafe.SQL {
                 base.Columns.Add(this.columnSPEC_ZARAS);
                 this.columnELADASI_AR_NETTO = new global::System.Data.DataColumn("ELADASI_AR_NETTO", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnELADASI_AR_NETTO);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCIKK_ID}, true));
                 this.columnMEGNEVEZES.AllowDBNull = false;
@@ -730,6 +744,7 @@ namespace e_Cafe.SQL {
                 this.columnCIKK_ID.ReadOnly = true;
                 this.columnCIKK_ID.Unique = true;
                 this.columnERTEKESITES_TIPUSA.MaxLength = 1;
+                this.columnExpr1.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -863,6 +878,8 @@ namespace e_Cafe.SQL {
             
             private global::System.Data.DataColumn columnLIT_KISZ_MENNY;
             
+            private global::System.Data.DataColumn columnLIT_KISZ_AR;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public LIT_KISZDataTable() {
                 this.TableName = "LIT_KISZ";
@@ -922,6 +939,13 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LIT_KISZ_ARColumn {
+                get {
+                    return this.columnLIT_KISZ_AR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -950,13 +974,14 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public LIT_KISZRow AddLIT_KISZRow(int LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, double LIT_KISZ_MENNY) {
+            public LIT_KISZRow AddLIT_KISZRow(int LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, double LIT_KISZ_MENNY, double LIT_KISZ_AR) {
                 LIT_KISZRow rowLIT_KISZRow = ((LIT_KISZRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         LIT_KISZ_CIKK_ID,
                         LIT_KISZ_NEV,
-                        LIT_KISZ_MENNY};
+                        LIT_KISZ_MENNY,
+                        LIT_KISZ_AR};
                 rowLIT_KISZRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLIT_KISZRow);
                 return rowLIT_KISZRow;
@@ -986,6 +1011,7 @@ namespace e_Cafe.SQL {
                 this.columnLIT_KISZ_CIKK_ID = base.Columns["LIT_KISZ_CIKK_ID"];
                 this.columnLIT_KISZ_NEV = base.Columns["LIT_KISZ_NEV"];
                 this.columnLIT_KISZ_MENNY = base.Columns["LIT_KISZ_MENNY"];
+                this.columnLIT_KISZ_AR = base.Columns["LIT_KISZ_AR"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -998,6 +1024,8 @@ namespace e_Cafe.SQL {
                 base.Columns.Add(this.columnLIT_KISZ_NEV);
                 this.columnLIT_KISZ_MENNY = new global::System.Data.DataColumn("LIT_KISZ_MENNY", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLIT_KISZ_MENNY);
+                this.columnLIT_KISZ_AR = new global::System.Data.DataColumn("LIT_KISZ_AR", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLIT_KISZ_AR);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnLIT_KISZ_ID}, true));
                 this.columnLIT_KISZ_ID.AutoIncrement = true;
@@ -1474,6 +1502,16 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int Expr1 {
+                get {
+                    return ((int)(this[this.tableCIKK.Expr1Column]));
+                }
+                set {
+                    this[this.tableCIKK.Expr1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsSZJ_SZAMNull() {
                 return this.IsNull(this.tableCIKK.SZJ_SZAMColumn);
             }
@@ -1754,6 +1792,21 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public double LIT_KISZ_AR {
+                get {
+                    try {
+                        return ((double)(this[this.tableLIT_KISZ.LIT_KISZ_ARColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LIT_KISZ_AR\' in table \'LIT_KISZ\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLIT_KISZ.LIT_KISZ_ARColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsLIT_KISZ_CIKK_IDNull() {
                 return this.IsNull(this.tableLIT_KISZ.LIT_KISZ_CIKK_IDColumn);
             }
@@ -1781,6 +1834,16 @@ namespace e_Cafe.SQL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetLIT_KISZ_MENNYNull() {
                 this[this.tableLIT_KISZ.LIT_KISZ_MENNYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLIT_KISZ_ARNull() {
+                return this.IsNull(this.tableLIT_KISZ.LIT_KISZ_ARColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLIT_KISZ_ARNull() {
+                this[this.tableLIT_KISZ.LIT_KISZ_ARColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1988,6 +2051,7 @@ namespace e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters {
             tableMapping.ColumnMappings.Add("ERTEKESITES_TIPUSA", "ERTEKESITES_TIPUSA");
             tableMapping.ColumnMappings.Add("SPEC_ZARAS", "SPEC_ZARAS");
             tableMapping.ColumnMappings.Add("ELADASI_AR_NETTO", "ELADASI_AR_NETTO");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2002,34 +2066,27 @@ namespace e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"select CIKK_ID, MEGNEVEZES,ERTEKESITES_TIPUSA,	
-	case when CIKK_TIPUS= 1 then 'Összetett' else 'Normál' end as CIKK_TIPUS,
-	cs.CIKKCSOPORT_NEV as CIKKCSOPORT,
-    case when ERTEKESITES_TIPUSA= 'D' then 'Darab' else 'Folyó' end as ERT_TIPUS,
-	m.MEGYS_MEGNEVEZES,
-	o.OTHER_NAME as ALCSOPORT,
-r.RAKTAR_KOD, 
-SZJ_SZAM, 
-CIKKSZAM, 
-EAN_KOD, 
-MINIMUM_KESZLET, 
-OPTIMALIS_KESZLET, 
-ELADASI_AR, 
-HELYETTES_TERMEK, MAX_KEDVEZMENY_SZ, MAX_KEDVEZM_FT, MEGJEGYZES, 
-AKTIV, GYORSKOD, SPEC_ZARAS, ELADASI_AR_NETTO
-from cikk c
-left join cikkcsoport cs on c.cikkcsoport_id = cs.cikkcsoport_id
-left join MEGYS m on c.MEGYS_ID = m.MEGYS_ID
-left join CIKCSOP_OTHER_FILTER o on c.OTHER_FILTER_ID = o.OTHER_FILTER_ID
-left join RAKTaR r on c.DEFAULT_RAKTAR = r.RAKTAR_ID";
+            this._commandCollection[0].CommandText = @"SELECT        c.CIKK_ID, c.MEGNEVEZES, c.ERTEKESITES_TIPUSA, CASE WHEN CIKK_TIPUS = 1 THEN 'Összetett' ELSE 'Normál' END AS CIKK_TIPUS, 
+                         cs.CIKKCSOPORT_NEV AS CIKKCSOPORT, CASE WHEN ERTEKESITES_TIPUSA = 'D' THEN 'Darab' ELSE 'Folyó' END AS ERT_TIPUS, 
+                         m.MEGYS_MEGNEVEZES, o.OTHER_NAME AS ALCSOPORT, r.RAKTAR_KOD, c.SZJ_SZAM, c.CIKKSZAM, c.EAN_KOD, c.MINIMUM_KESZLET, 
+                         c.OPTIMALIS_KESZLET, c.ELADASI_AR, c.HELYETTES_TERMEK, c.MAX_KEDVEZMENY_SZ, c.MAX_KEDVEZM_FT, c.MEGJEGYZES, c.AKTIV, c.GYORSKOD, 
+                         c.SPEC_ZARAS, c.ELADASI_AR_NETTO, c.CIKK_TIPUS AS Expr1
+FROM            CIKK AS c LEFT OUTER JOIN
+                         CIKKCSOPORT AS cs ON c.CIKKCSOPORT_ID = cs.CIKKCSOPORT_ID LEFT OUTER JOIN
+                         MEGYS AS m ON c.MEGYS_ID = m.MEGYS_ID LEFT OUTER JOIN
+                         CIKCSOP_OTHER_FILTER AS o ON c.OTHER_FILTER_ID = o.OTHER_FILTER_ID LEFT OUTER JOIN
+                         RAKTAR AS r ON c.DEFAULT_RAKTAR = r.RAKTAR_ID
+WHERE        (c.CIKK_TIPUS = @tipus)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipus", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Expr1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ECAFEDataSetCIKK.CIKKDataTable dataTable) {
+        public virtual int Fill(ECAFEDataSetCIKK.CIKKDataTable dataTable, int tipus) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(tipus));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2040,8 +2097,9 @@ left join RAKTaR r on c.DEFAULT_RAKTAR = r.RAKTAR_ID";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ECAFEDataSetCIKK.CIKKDataTable GetData() {
+        public virtual ECAFEDataSetCIKK.CIKKDataTable GetData(int tipus) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(tipus));
             ECAFEDataSetCIKK.CIKKDataTable dataTable = new ECAFEDataSetCIKK.CIKKDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -2167,10 +2225,11 @@ left join RAKTaR r on c.DEFAULT_RAKTAR = r.RAKTAR_ID";
             tableMapping.ColumnMappings.Add("LIT_KISZ_CIKK_ID", "LIT_KISZ_CIKK_ID");
             tableMapping.ColumnMappings.Add("LIT_KISZ_NEV", "LIT_KISZ_NEV");
             tableMapping.ColumnMappings.Add("LIT_KISZ_MENNY", "LIT_KISZ_MENNY");
+            tableMapping.ColumnMappings.Add("LIT_KISZ_AR", "LIT_KISZ_AR");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [LIT_KISZ] WHERE (([LIT_KISZ_ID] = @Original_LIT_KISZ_ID) AND ((@IsNull_LIT_KISZ_CIKK_ID = 1 AND [LIT_KISZ_CIKK_ID] IS NULL) OR ([LIT_KISZ_CIKK_ID] = @Original_LIT_KISZ_CIKK_ID)) AND ((@IsNull_LIT_KISZ_NEV = 1 AND [LIT_KISZ_NEV] IS NULL) OR ([LIT_KISZ_NEV] = @Original_LIT_KISZ_NEV)) AND ((@IsNull_LIT_KISZ_MENNY = 1 AND [LIT_KISZ_MENNY] IS NULL) OR ([LIT_KISZ_MENNY] = @Original_LIT_KISZ_MENNY)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [LIT_KISZ] WHERE (([LIT_KISZ_ID] = @Original_LIT_KISZ_ID) AND ((@IsNull_LIT_KISZ_CIKK_ID = 1 AND [LIT_KISZ_CIKK_ID] IS NULL) OR ([LIT_KISZ_CIKK_ID] = @Original_LIT_KISZ_CIKK_ID)) AND ((@IsNull_LIT_KISZ_NEV = 1 AND [LIT_KISZ_NEV] IS NULL) OR ([LIT_KISZ_NEV] = @Original_LIT_KISZ_NEV)) AND ((@IsNull_LIT_KISZ_MENNY = 1 AND [LIT_KISZ_MENNY] IS NULL) OR ([LIT_KISZ_MENNY] = @Original_LIT_KISZ_MENNY)) AND ((@IsNull_LIT_KISZ_AR = 1 AND [LIT_KISZ_AR] IS NULL) OR ([LIT_KISZ_AR] = @Original_LIT_KISZ_AR)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -2179,22 +2238,26 @@ left join RAKTaR r on c.DEFAULT_RAKTAR = r.RAKTAR_ID";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_MENNY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_AR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_AR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_AR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_AR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [LIT_KISZ] ([LIT_KISZ_CIKK_ID], [LIT_KISZ_NEV], [LIT_KISZ_MENNY]) VALUES (@LIT_KISZ_CIKK_ID, @LIT_KISZ_NEV, @LIT_KISZ_MENNY);
-SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ WHERE (LIT_KISZ_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [LIT_KISZ] ([LIT_KISZ_CIKK_ID], [LIT_KISZ_NEV], [LIT_KISZ_MENNY], [LIT_KISZ_AR]) VALUES (@LIT_KISZ_CIKK_ID, @LIT_KISZ_NEV, @LIT_KISZ_MENNY, @LIT_KISZ_AR);
+SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY, LIT_KISZ_AR FROM LIT_KISZ WHERE (LIT_KISZ_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_AR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_AR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [LIT_KISZ] SET [LIT_KISZ_CIKK_ID] = @LIT_KISZ_CIKK_ID, [LIT_KISZ_NEV] = @LIT_KISZ_NEV, [LIT_KISZ_MENNY] = @LIT_KISZ_MENNY WHERE (([LIT_KISZ_ID] = @Original_LIT_KISZ_ID) AND ((@IsNull_LIT_KISZ_CIKK_ID = 1 AND [LIT_KISZ_CIKK_ID] IS NULL) OR ([LIT_KISZ_CIKK_ID] = @Original_LIT_KISZ_CIKK_ID)) AND ((@IsNull_LIT_KISZ_NEV = 1 AND [LIT_KISZ_NEV] IS NULL) OR ([LIT_KISZ_NEV] = @Original_LIT_KISZ_NEV)) AND ((@IsNull_LIT_KISZ_MENNY = 1 AND [LIT_KISZ_MENNY] IS NULL) OR ([LIT_KISZ_MENNY] = @Original_LIT_KISZ_MENNY)));
-SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ WHERE (LIT_KISZ_ID = @LIT_KISZ_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [LIT_KISZ] SET [LIT_KISZ_CIKK_ID] = @LIT_KISZ_CIKK_ID, [LIT_KISZ_NEV] = @LIT_KISZ_NEV, [LIT_KISZ_MENNY] = @LIT_KISZ_MENNY, [LIT_KISZ_AR] = @LIT_KISZ_AR WHERE (([LIT_KISZ_ID] = @Original_LIT_KISZ_ID) AND ((@IsNull_LIT_KISZ_CIKK_ID = 1 AND [LIT_KISZ_CIKK_ID] IS NULL) OR ([LIT_KISZ_CIKK_ID] = @Original_LIT_KISZ_CIKK_ID)) AND ((@IsNull_LIT_KISZ_NEV = 1 AND [LIT_KISZ_NEV] IS NULL) OR ([LIT_KISZ_NEV] = @Original_LIT_KISZ_NEV)) AND ((@IsNull_LIT_KISZ_MENNY = 1 AND [LIT_KISZ_MENNY] IS NULL) OR ([LIT_KISZ_MENNY] = @Original_LIT_KISZ_MENNY)) AND ((@IsNull_LIT_KISZ_AR = 1 AND [LIT_KISZ_AR] IS NULL) OR ([LIT_KISZ_AR] = @Original_LIT_KISZ_AR)));
+SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY, LIT_KISZ_AR FROM LIT_KISZ WHERE (LIT_KISZ_ID = @LIT_KISZ_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_AR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_AR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_CIKK_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2202,6 +2265,8 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_MENNY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_MENNY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_MENNY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LIT_KISZ_AR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_AR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LIT_KISZ_AR", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_AR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LIT_KISZ_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2216,8 +2281,8 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT     LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY\r\nFROM     " +
-                "    LIT_KISZ\r\nWHERE     (LIT_KISZ_CIKK_ID = @CIKK)";
+            this._commandCollection[0].CommandText = "SELECT        LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY, LIT_KI" +
+                "SZ_AR\r\nFROM            LIT_KISZ\r\nWHERE        (LIT_KISZ_CIKK_ID = @CIKK)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKK", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LIT_KISZ_CIKK_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -2284,7 +2349,7 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY) {
+        public virtual int Delete(int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY, global::System.Nullable<double> Original_LIT_KISZ_AR) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_LIT_KISZ_ID));
             if ((Original_LIT_KISZ_CIKK_ID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -2310,6 +2375,14 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
+            if ((Original_LIT_KISZ_AR.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((double)(Original_LIT_KISZ_AR.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2329,7 +2402,7 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY) {
+        public virtual int Insert(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY, global::System.Nullable<double> LIT_KISZ_AR) {
             if ((LIT_KISZ_CIKK_ID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(LIT_KISZ_CIKK_ID.Value));
             }
@@ -2347,6 +2420,12 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((LIT_KISZ_AR.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((double)(LIT_KISZ_AR.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2367,7 +2446,7 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY, int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY, int LIT_KISZ_ID) {
+        public virtual int Update(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY, global::System.Nullable<double> LIT_KISZ_AR, int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY, global::System.Nullable<double> Original_LIT_KISZ_AR, int LIT_KISZ_ID) {
             if ((LIT_KISZ_CIKK_ID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(LIT_KISZ_CIKK_ID.Value));
             }
@@ -2386,32 +2465,46 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_LIT_KISZ_ID));
-            if ((Original_LIT_KISZ_CIKK_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_LIT_KISZ_CIKK_ID.Value));
+            if ((LIT_KISZ_AR.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(LIT_KISZ_AR.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_LIT_KISZ_ID));
+            if ((Original_LIT_KISZ_CIKK_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_LIT_KISZ_CIKK_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((Original_LIT_KISZ_NEV == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_LIT_KISZ_NEV));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_LIT_KISZ_NEV));
             }
             if ((Original_LIT_KISZ_MENNY.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_LIT_KISZ_MENNY.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_LIT_KISZ_MENNY.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(LIT_KISZ_ID));
+            if ((Original_LIT_KISZ_AR.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(Original_LIT_KISZ_AR.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(LIT_KISZ_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2431,8 +2524,8 @@ SELECT LIT_KISZ_ID, LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY FROM LIT_KISZ
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY, int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY) {
-            return this.Update(LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY, Original_LIT_KISZ_ID, Original_LIT_KISZ_CIKK_ID, Original_LIT_KISZ_NEV, Original_LIT_KISZ_MENNY, Original_LIT_KISZ_ID);
+        public virtual int Update(global::System.Nullable<int> LIT_KISZ_CIKK_ID, string LIT_KISZ_NEV, global::System.Nullable<double> LIT_KISZ_MENNY, global::System.Nullable<double> LIT_KISZ_AR, int Original_LIT_KISZ_ID, global::System.Nullable<int> Original_LIT_KISZ_CIKK_ID, string Original_LIT_KISZ_NEV, global::System.Nullable<double> Original_LIT_KISZ_MENNY, global::System.Nullable<double> Original_LIT_KISZ_AR) {
+            return this.Update(LIT_KISZ_CIKK_ID, LIT_KISZ_NEV, LIT_KISZ_MENNY, LIT_KISZ_AR, Original_LIT_KISZ_ID, Original_LIT_KISZ_CIKK_ID, Original_LIT_KISZ_NEV, Original_LIT_KISZ_MENNY, Original_LIT_KISZ_AR, Original_LIT_KISZ_ID);
         }
     }
     

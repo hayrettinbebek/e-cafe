@@ -26,6 +26,7 @@ namespace e_Cafe
         public Asztal_List aList;
         MMenu mm;
         frmAsztalSelect fm;
+        AsztalSetup asz;
 
         public Asztalok(Control p,  int pHelyId)
         {
@@ -47,6 +48,7 @@ namespace e_Cafe
             _HelyId = pHelyId;
             _isAdmin = adminMode;
             if (!adminMode) {mm = (MMenu)Parent.Parent;}
+            if (adminMode) { asz = (AsztalSetup)Parent.Parent; }
 
         }
 
@@ -60,6 +62,7 @@ namespace e_Cafe
             _selectMode = select;
 
             if (_selectMode) { fm = (frmAsztalSelect)Parent.Parent; }
+            
 
         }
 
@@ -89,7 +92,10 @@ namespace e_Cafe
                 if (_isAdmin)
                 {
                     ab.MouseMove += this.Asztalok_MouseMove;
-                    ab.Click += this.Asztal_Click;
+                    if (asz != null)
+                    {
+                        ab.Click += asz.AsztalClick; ;
+                    }
                 }
                 if (!_isAdmin) { ab.MouseDown += this.Asztalok_MouseDown; }
                 this.Controls.Add(ab);

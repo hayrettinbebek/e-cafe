@@ -202,28 +202,34 @@ namespace BusinessLogic
             
             for (int i = 0; i < lASZTAL.Count; i++)
             {
-                SetAsztalPos(lASZTAL[i].fASZTAL_ID, lASZTAL[i].fASZTAL_POS_X, lASZTAL[i].fASZTAL_POS_Y);
+                SetAsztalPos(lASZTAL[i].fASZTAL_ID, lASZTAL[i].fASZTAL_POS_X, lASZTAL[i].fASZTAL_POS_Y, lASZTAL[i].fASZTAL_TIPUS, lASZTAL[i].fASZTAL_SZAM, lASZTAL[i].fASZTAL_ROTATE);
 
             }
 
 
         }
-        private bool SetAsztalPos(int iASZTAL_ID, int iPos_x, int iPos_y)
+        private bool SetAsztalPos(int iASZTAL_ID, int iPos_x, int iPos_y, int aTip, string aSzam, int aRot)
         {
             SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sc;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE ASZTAL SET ASZTAL_POS_X = @POS_X, ASZTAL_POS_Y = @POS_Y WHERE ASZTAL_ID = @ASZTAL_ID";
+            cmd.CommandText = "UPDATE ASZTAL SET ASZTAL_POS_X = @POS_X, ASZTAL_POS_Y = @POS_Y, ASZTAL_ROTATE = @ROT, ASZTAL_TIPUS_ID = @A_TIP, ASZTAL_SZAM = @ASZAM WHERE ASZTAL_ID = @ASZTAL_ID";
             cmd.Parameters.Add(new SqlParameter("POS_X", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("POS_Y", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("ASZTAL_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("ASZAM", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("A_TIP", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("ROT", SqlDbType.Int));
 
             cmd.Parameters["POS_X"].Value = iPos_x;
             cmd.Parameters["POS_Y"].Value = iPos_y;
             cmd.Parameters["ASZTAL_ID"].Value = iASZTAL_ID;
 
+            cmd.Parameters["ASZAM"].Value = aSzam;
+            cmd.Parameters["A_TIP"].Value = aTip;
+            cmd.Parameters["ROT"].Value = aRot;
             try
             {
                 cmd.ExecuteNonQuery();

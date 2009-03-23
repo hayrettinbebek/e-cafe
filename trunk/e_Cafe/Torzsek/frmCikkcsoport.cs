@@ -30,5 +30,10 @@ namespace e_Cafe
         {
             cIKKCSOPORTTableAdapter.Update(eCAFEDataSet);
         }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
