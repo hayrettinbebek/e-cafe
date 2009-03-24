@@ -124,7 +124,7 @@ namespace e_Cafe
                     if (db_ver < 19) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_019.sql")); }
                     updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
                     DEFS.SendShortMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
-                                "\n" + "(Adminisztrátor:Support:Logok beküldése)",2000);
+                                "\n" + "(Adminisztrátor:Support:Logok beküldése)",1800);
                 }
             }
 
@@ -151,7 +151,7 @@ namespace e_Cafe
             initHelyek();
             Invalidate();
 
-            MessageBox.Show("Nyitott nap:"+DEFS.NyitNap_EV.ToString() + DEFS.NyitNap_HO.ToString() + DEFS.NyitNap_NAP.ToString());
+            DEFS.SendShortMessage("Nyitott nap:" + DEFS.NyitNap_EV.ToString() + DEFS.NyitNap_HO.ToString() + DEFS.NyitNap_NAP.ToString(),1500);
         }
 
         #region Bejelentkezéssel kapcsolatos dolgok

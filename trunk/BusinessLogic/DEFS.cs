@@ -226,7 +226,12 @@ namespace BusinessLogic
         {
             string s = "Érvénytelen adatok a "+hol+ " mezőben !" + "\n" + "Oka:" + "\n";
             log(Level.Exception, s + t);
-            MessageBox.Show(s + t);
+
+            frmInfoMessage1 fi = new frmInfoMessage1();
+            fi.lblMessage.Text = s + t;
+            fi.tmrTime.Enabled = false;
+            fi.ShowDialog();
+            
 
         }
 
