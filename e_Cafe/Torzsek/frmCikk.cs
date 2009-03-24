@@ -32,6 +32,10 @@ namespace e_Cafe.Torzsek
 
             // TODO: This line of code loads data into the 'eCAFEDataSetCIKK.CIKK' table. You can move, or remove it, as needed.
             this.cIKKTableAdapter.Fill(this.eCAFEDataSetCIKK.CIKK, recept);
+            if (recept == 1)
+            {
+                tpRecept.Show();
+            }
 
             cikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
 

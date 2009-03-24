@@ -33,27 +33,27 @@ namespace e_Cafe
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCikkcsoport));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.aFABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSetAFA = new e_Cafe.SQL.ECAFEDataSetAFA();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.eCAFEDataSetAFABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aFATableAdapter = new e_Cafe.SQL.ECAFEDataSetAFATableAdapters.AFATableAdapter();
+            this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSet = new e_Cafe.SQL.ECAFEDataSet();
+            this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKCSOPORTNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aFAKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.aFABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetAFA = new e_Cafe.SQL.ECAFEDataSetAFA();
-            this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSet = new e_Cafe.SQL.ECAFEDataSet();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
-            this.eCAFEDataSetAFABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aFATableAdapter = new e_Cafe.SQL.ECAFEDataSetAFATableAdapters.AFATableAdapter();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -70,30 +70,7 @@ namespace e_Cafe
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(574, 238);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // cIKKCSOPORTIDDataGridViewTextBoxColumn
-            // 
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.DataPropertyName = "CIKKCSOPORT_ID";
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Name = "cIKKCSOPORTIDDataGridViewTextBoxColumn";
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cIKKCSOPORTNEVDataGridViewTextBoxColumn
-            // 
-            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.DataPropertyName = "CIKKCSOPORT_NEV";
-            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.HeaderText = "Megnevezés";
-            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.Name = "cIKKCSOPORTNEVDataGridViewTextBoxColumn";
-            // 
-            // aFAKODDataGridViewTextBoxColumn
-            // 
-            this.aFAKODDataGridViewTextBoxColumn.DataPropertyName = "AFA_KOD";
-            this.aFAKODDataGridViewTextBoxColumn.DataSource = this.aFABindingSource;
-            this.aFAKODDataGridViewTextBoxColumn.DisplayMember = "AFA_NEV";
-            this.aFAKODDataGridViewTextBoxColumn.HeaderText = "Áfa kód";
-            this.aFAKODDataGridViewTextBoxColumn.Name = "aFAKODDataGridViewTextBoxColumn";
-            this.aFAKODDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.aFAKODDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.aFAKODDataGridViewTextBoxColumn.ValueMember = "AFA_KOD";
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // aFABindingSource
             // 
@@ -104,16 +81,6 @@ namespace e_Cafe
             // 
             this.eCAFEDataSetAFA.DataSetName = "ECAFEDataSetAFA";
             this.eCAFEDataSetAFA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cIKKCSOPORTBindingSource
-            // 
-            this.cIKKCSOPORTBindingSource.DataMember = "CIKKCSOPORT";
-            this.cIKKCSOPORTBindingSource.DataSource = this.eCAFEDataSet;
-            // 
-            // eCAFEDataSet
-            // 
-            this.eCAFEDataSet.DataSetName = "ECAFEDataSet";
-            this.eCAFEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // toolStrip1
             // 
@@ -137,9 +104,17 @@ namespace e_Cafe
             this.toolStripButton1.Text = "Mentés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // cIKKCSOPORTTableAdapter
+            // toolStripSeparator1
             // 
-            this.cIKKCSOPORTTableAdapter.ClearBeforeFill = true;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(141, 22);
+            this.toolStripLabel1.Text = "törlés a \"delete\" gombbal";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // eCAFEDataSetAFABindingSource
             // 
@@ -150,17 +125,46 @@ namespace e_Cafe
             // 
             this.aFATableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripLabel1
+            // cIKKCSOPORTBindingSource
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(141, 22);
-            this.toolStripLabel1.Text = "törlés a \"delete\" gombbal";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
+            this.cIKKCSOPORTBindingSource.DataMember = "CIKKCSOPORT";
+            this.cIKKCSOPORTBindingSource.DataSource = this.eCAFEDataSet;
+            this.cIKKCSOPORTBindingSource.DataError += new System.Windows.Forms.BindingManagerDataErrorEventHandler(this.cIKKCSOPORTBindingSource_DataError);
             // 
-            // toolStripSeparator1
+            // eCAFEDataSet
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.eCAFEDataSet.DataSetName = "ECAFEDataSet";
+            this.eCAFEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cIKKCSOPORTTableAdapter
+            // 
+            this.cIKKCSOPORTTableAdapter.ClearBeforeFill = true;
+            // 
+            // cIKKCSOPORTIDDataGridViewTextBoxColumn
+            // 
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.DataPropertyName = "CIKKCSOPORT_ID";
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Name = "cIKKCSOPORTIDDataGridViewTextBoxColumn";
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cIKKCSOPORTNEVDataGridViewTextBoxColumn
+            // 
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.DataPropertyName = "CIKKCSOPORT_NEV";
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.HeaderText = "Megnevezés";
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.Name = "cIKKCSOPORTNEVDataGridViewTextBoxColumn";
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // aFAKODDataGridViewTextBoxColumn
+            // 
+            this.aFAKODDataGridViewTextBoxColumn.DataPropertyName = "AFA_KOD";
+            this.aFAKODDataGridViewTextBoxColumn.DataSource = this.aFABindingSource;
+            this.aFAKODDataGridViewTextBoxColumn.DisplayMember = "AFA_NEV";
+            this.aFAKODDataGridViewTextBoxColumn.HeaderText = "Áfa kód";
+            this.aFAKODDataGridViewTextBoxColumn.Name = "aFAKODDataGridViewTextBoxColumn";
+            this.aFAKODDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.aFAKODDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.aFAKODDataGridViewTextBoxColumn.ValueMember = "AFA_KOD";
             // 
             // frmCikkcsoport
             // 
@@ -176,11 +180,11 @@ namespace e_Cafe
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,10 +202,10 @@ namespace e_Cafe
         private System.Windows.Forms.BindingSource eCAFEDataSetAFABindingSource;
         private System.Windows.Forms.BindingSource aFABindingSource;
         private e_Cafe.SQL.ECAFEDataSetAFATableAdapters.AFATableAdapter aFATableAdapter;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIKKCSOPORTIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIKKCSOPORTNEVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn aFAKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

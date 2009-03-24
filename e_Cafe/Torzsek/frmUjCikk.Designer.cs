@@ -56,9 +56,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.chkMegKulZaras = new System.Windows.Forms.CheckBox();
+            this.chkAutoRendGen = new System.Windows.Forms.CheckBox();
             this.txtOptKeszl = new System.Windows.Forms.TextBox();
             this.txtMinKeszl = new System.Windows.Forms.TextBox();
+            this.chkMegKulZaras = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtEladAr = new System.Windows.Forms.TextBox();
             this.cmdMe = new System.Windows.Forms.ComboBox();
@@ -81,7 +82,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.netToBrut = new System.Windows.Forms.Button();
             this.bruttoToNetto = new System.Windows.Forms.Button();
-            this.chkAutoRendGen = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
@@ -327,6 +327,34 @@
             this.label11.TabIndex = 15;
             this.label11.Text = "Optimális készlet";
             // 
+            // chkAutoRendGen
+            // 
+            this.chkAutoRendGen.AutoSize = true;
+            this.chkAutoRendGen.Location = new System.Drawing.Point(11, 49);
+            this.chkAutoRendGen.Name = "chkAutoRendGen";
+            this.chkAutoRendGen.Size = new System.Drawing.Size(173, 17);
+            this.chkAutoRendGen.TabIndex = 34;
+            this.chkAutoRendGen.Text = "Automatikus rendelésgenerálás";
+            this.chkAutoRendGen.UseVisualStyleBackColor = true;
+            // 
+            // txtOptKeszl
+            // 
+            this.txtOptKeszl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOptKeszl.Location = new System.Drawing.Point(383, 51);
+            this.txtOptKeszl.Name = "txtOptKeszl";
+            this.txtOptKeszl.Size = new System.Drawing.Size(92, 20);
+            this.txtOptKeszl.TabIndex = 11;
+            this.txtOptKeszl.Text = "0";
+            // 
+            // txtMinKeszl
+            // 
+            this.txtMinKeszl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMinKeszl.Location = new System.Drawing.Point(383, 20);
+            this.txtMinKeszl.Name = "txtMinKeszl";
+            this.txtMinKeszl.Size = new System.Drawing.Size(92, 20);
+            this.txtMinKeszl.TabIndex = 11;
+            this.txtMinKeszl.Text = "0";
+            // 
             // chkMegKulZaras
             // 
             this.chkMegKulZaras.AutoSize = true;
@@ -336,22 +364,6 @@
             this.chkMegKulZaras.TabIndex = 34;
             this.chkMegKulZaras.Text = "Megkülönböztetett zárás";
             this.chkMegKulZaras.UseVisualStyleBackColor = true;
-            // 
-            // txtOptKeszl
-            // 
-            this.txtOptKeszl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtOptKeszl.Location = new System.Drawing.Point(383, 51);
-            this.txtOptKeszl.Name = "txtOptKeszl";
-            this.txtOptKeszl.Size = new System.Drawing.Size(92, 20);
-            this.txtOptKeszl.TabIndex = 11;
-            // 
-            // txtMinKeszl
-            // 
-            this.txtMinKeszl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMinKeszl.Location = new System.Drawing.Point(383, 20);
-            this.txtMinKeszl.Name = "txtMinKeszl";
-            this.txtMinKeszl.Size = new System.Drawing.Size(92, 20);
-            this.txtMinKeszl.TabIndex = 11;
             // 
             // label12
             // 
@@ -369,6 +381,7 @@
             this.txtEladAr.Name = "txtEladAr";
             this.txtEladAr.Size = new System.Drawing.Size(60, 20);
             this.txtEladAr.TabIndex = 30;
+            this.txtEladAr.Text = "0";
             // 
             // cmdMe
             // 
@@ -490,6 +503,7 @@
             this.txtEladArNet.Name = "txtEladArNet";
             this.txtEladArNet.Size = new System.Drawing.Size(60, 20);
             this.txtEladArNet.TabIndex = 30;
+            this.txtEladArNet.Text = "0";
             // 
             // label15
             // 
@@ -522,16 +536,6 @@
             this.bruttoToNetto.Text = "->n";
             this.bruttoToNetto.UseVisualStyleBackColor = true;
             this.bruttoToNetto.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // chkAutoRendGen
-            // 
-            this.chkAutoRendGen.AutoSize = true;
-            this.chkAutoRendGen.Location = new System.Drawing.Point(11, 49);
-            this.chkAutoRendGen.Name = "chkAutoRendGen";
-            this.chkAutoRendGen.Size = new System.Drawing.Size(173, 17);
-            this.chkAutoRendGen.TabIndex = 34;
-            this.chkAutoRendGen.Text = "Automatikus rendelésgenerálás";
-            this.chkAutoRendGen.UseVisualStyleBackColor = true;
             // 
             // frmUjCikk
             // 

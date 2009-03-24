@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BusinessLogic;
 
 
 namespace e_Cafe
@@ -34,6 +35,16 @@ namespace e_Cafe
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cIKKCSOPORTBindingSource_DataError(object sender, BindingManagerDataErrorEventArgs e)
+        {
+            MessageBox.Show(e.Exception.Message);
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            DEFS.SendValidatingMessage("Megnevezés vagy Áfa", "A mező értéke nem lehet üres"+e.Exception.Message);
         }
     }
 }
