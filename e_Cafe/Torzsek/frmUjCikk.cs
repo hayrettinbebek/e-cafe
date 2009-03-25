@@ -153,11 +153,11 @@ namespace e_Cafe
                     DEFS.SendSaveErrMessage("Megnevezés nem lehet üres!");
                 }
 
-                if (ETrim(txtGyorskod.Text) == "")
-                {
-                    r = false;
-                    DEFS.SendSaveErrMessage("Gyorskód nem lehet üres!");
-                }
+                //if (ETrim(txtGyorskod.Text) == "")
+                //{
+                //    r = false;
+                //    DEFS.SendSaveErrMessage("Gyorskód nem lehet üres!");
+                //}
 
                 if (cmdCikkcsop.SelectedValue == null)
                 {
@@ -183,17 +183,17 @@ namespace e_Cafe
                     DEFS.SendSaveErrMessage("Mennyiségi egység nem lehet üres!");
                 }
 
-                if (ETrim(txtEladAr.Text) == "")
-                {
-                    r = false;
-                    DEFS.SendSaveErrMessage("Eladáis ár nem lehet üres!");
-                }
+                //if (ETrim(txtEladAr.Text) == "")
+                //{
+                //    r = false;
+                //    DEFS.SendSaveErrMessage("Eladáis ár nem lehet üres!");
+                //}
 
-                if (ETrim(txtEladArNet.Text) == "")
-                {
-                    r = false;
-                    DEFS.SendSaveErrMessage("Eladáis ár nem lehet üres!");
-                }
+                //if (ETrim(txtEladArNet.Text) == "")
+                //{
+                //    r = false;
+                //    DEFS.SendSaveErrMessage("Eladáis ár nem lehet üres!");
+                //}
 
             }
             return (r);
