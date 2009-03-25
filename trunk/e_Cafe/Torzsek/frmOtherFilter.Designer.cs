@@ -43,12 +43,16 @@
             this.cIKCSOP_OTHER_FILTERTableAdapter = new e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter();
             this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
             this.cmbFilter = new System.Windows.Forms.ComboBox();
+            this.cikkcsoportBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cIKKCSOPORTBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkcsoportBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -142,7 +146,7 @@
             // 
             // cmbFilter
             // 
-            this.cmbFilter.DataSource = this.cIKKCSOPORTBindingSource;
+            this.cmbFilter.DataSource = this.cIKKCSOPORTBindingSource2;
             this.cmbFilter.DisplayMember = "CIKKCSOPORT_NEV";
             this.cmbFilter.FormattingEnabled = true;
             this.cmbFilter.Location = new System.Drawing.Point(107, 0);
@@ -151,6 +155,15 @@
             this.cmbFilter.TabIndex = 2;
             this.cmbFilter.ValueMember = "CIKKCSOPORT_ID";
             this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // cikkcsoportBindingSource1
+            // 
+            this.cikkcsoportBindingSource1.DataSource = typeof(BusinessLogic.Cikkcsoport);
+            // 
+            // cIKKCSOPORTBindingSource2
+            // 
+            this.cIKKCSOPORTBindingSource2.DataMember = "CIKKCSOPORT";
+            this.cIKKCSOPORTBindingSource2.DataSource = this.eCAFEDataSet;
             // 
             // frmOtherFilter
             // 
@@ -170,6 +183,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkcsoportBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +205,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn cIKKCSOPORTIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn oTHERNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cmbFilter;
+        private System.Windows.Forms.BindingSource cikkcsoportBindingSource1;
+        private System.Windows.Forms.BindingSource cIKKCSOPORTBindingSource2;
     }
 }

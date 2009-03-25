@@ -553,8 +553,8 @@ namespace BusinessLogic
                                                        " ELADASI_AR = @ELADASI_AR, " +
                                                        " MEGJEGYZES = @MEGJEGYZES, " +
                                                        " MEGYS_ID = @MEGYS_ID, " +
-                                                       " ELADASI_AR_NETTO = @ELADASI_AR_NETTO " +
-                                                       " SPEC_ZARAS = @SPEC_ZARAS " +
+                                                       " ELADASI_AR_NETTO = @ELADASI_AR_NETTO, " +
+                                                       " SPEC_ZARAS = @SPEC_ZARAS, " +
                                                        " AUTO_MEGRENDELO = @AUTO_MEGRENDELO " +
 
                                            "WHERE CIKK_ID = @CIKK_ID";
