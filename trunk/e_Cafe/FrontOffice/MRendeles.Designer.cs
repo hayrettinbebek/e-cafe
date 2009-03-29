@@ -95,9 +95,9 @@
             this.pnlRendeles.Controls.Add(this.btnDOWN);
             this.pnlRendeles.Controls.Add(this.tblRendeles);
             this.pnlRendeles.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRendeles.Location = new System.Drawing.Point(667, 0);
+            this.pnlRendeles.Location = new System.Drawing.Point(695, 0);
             this.pnlRendeles.Name = "pnlRendeles";
-            this.pnlRendeles.Size = new System.Drawing.Size(313, 475);
+            this.pnlRendeles.Size = new System.Drawing.Size(313, 641);
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
             // 
@@ -175,6 +175,8 @@
             this.btnUP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUP.BackgroundImage")));
             this.btnUP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUP.FlatAppearance.BorderSize = 0;
+            this.btnUP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUP.Location = new System.Drawing.Point(159, 521);
             this.btnUP.Name = "btnUP";
@@ -189,6 +191,8 @@
             this.btnDOWN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDOWN.BackgroundImage")));
             this.btnDOWN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDOWN.FlatAppearance.BorderSize = 0;
+            this.btnDOWN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDOWN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDOWN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDOWN.Location = new System.Drawing.Point(10, 521);
             this.btnDOWN.Name = "btnDOWN";
@@ -224,7 +228,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(173, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(494, 475);
+            this.panel3.Size = new System.Drawing.Size(522, 641);
             this.panel3.TabIndex = 1;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
@@ -233,7 +237,7 @@
             this.flpCikkek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpCikkek.Location = new System.Drawing.Point(25, 50);
             this.flpCikkek.Name = "flpCikkek";
-            this.flpCikkek.Size = new System.Drawing.Size(469, 425);
+            this.flpCikkek.Size = new System.Drawing.Size(497, 591);
             this.flpCikkek.TabIndex = 2;
             // 
             // panel1
@@ -241,7 +245,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(25, 425);
+            this.panel1.Size = new System.Drawing.Size(25, 591);
             this.panel1.TabIndex = 1;
             // 
             // pnlOtherFilter
@@ -250,7 +254,7 @@
             this.pnlOtherFilter.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlOtherFilter.Location = new System.Drawing.Point(0, 0);
             this.pnlOtherFilter.Name = "pnlOtherFilter";
-            this.pnlOtherFilter.Size = new System.Drawing.Size(494, 50);
+            this.pnlOtherFilter.Size = new System.Drawing.Size(522, 50);
             this.pnlOtherFilter.TabIndex = 0;
             this.pnlOtherFilter.Visible = false;
             // 
@@ -285,7 +289,7 @@
             this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlButtons.Location = new System.Drawing.Point(0, 0);
             this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.Size = new System.Drawing.Size(173, 475);
+            this.pnlButtons.Size = new System.Drawing.Size(173, 641);
             this.pnlButtons.TabIndex = 0;
             this.pnlButtons.Click += new System.EventHandler(this.pnlButtons_Click);
             // 
@@ -295,7 +299,7 @@
             this.pnlButtonPlace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlButtonPlace.Location = new System.Drawing.Point(16, 60);
             this.pnlButtonPlace.Name = "pnlButtonPlace";
-            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 286);
+            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 452);
             this.pnlButtonPlace.TabIndex = 6;
             // 
             // panel5
@@ -304,14 +308,14 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 60);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 286);
+            this.panel5.Size = new System.Drawing.Size(16, 452);
             this.panel5.TabIndex = 7;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 346);
+            this.panel6.Location = new System.Drawing.Point(0, 512);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(173, 129);
             this.panel6.TabIndex = 7;
@@ -331,9 +335,9 @@
             this.pnlAlsoGombok.Controls.Add(this.pnlFunctions);
             this.pnlAlsoGombok.Controls.Add(this.panel4);
             this.pnlAlsoGombok.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAlsoGombok.Location = new System.Drawing.Point(0, 475);
+            this.pnlAlsoGombok.Location = new System.Drawing.Point(0, 641);
             this.pnlAlsoGombok.Name = "pnlAlsoGombok";
-            this.pnlAlsoGombok.Size = new System.Drawing.Size(980, 111);
+            this.pnlAlsoGombok.Size = new System.Drawing.Size(1008, 111);
             this.pnlAlsoGombok.TabIndex = 1;
             // 
             // pnlFunctions
@@ -356,7 +360,7 @@
             this.pnlFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFunctions.Location = new System.Drawing.Point(0, 0);
             this.pnlFunctions.Name = "pnlFunctions";
-            this.pnlFunctions.Size = new System.Drawing.Size(807, 111);
+            this.pnlFunctions.Size = new System.Drawing.Size(835, 111);
             this.pnlFunctions.TabIndex = 13;
             // 
             // button7
@@ -566,7 +570,7 @@
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(807, 0);
+            this.panel4.Location = new System.Drawing.Point(835, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(173, 111);
             this.panel4.TabIndex = 12;
@@ -605,7 +609,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 586);
+            this.ClientSize = new System.Drawing.Size(1008, 752);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlButtons);

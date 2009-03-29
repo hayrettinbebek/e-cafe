@@ -246,6 +246,11 @@ namespace e_Cafe
             ck.Show();
         }
 
+        private void partnerTörléseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

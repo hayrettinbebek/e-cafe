@@ -69,6 +69,8 @@
             this.logokKüldéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbázisFrissítésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mmNapiZaras = new System.Windows.Forms.ToolStripMenuItem();
+            this.partnerTörléseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.töröltPartnerVisszaállításaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -137,33 +139,33 @@
             // ciToolStripMenuItem
             // 
             this.ciToolStripMenuItem.Name = "ciToolStripMenuItem";
-            this.ciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ciToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.ciToolStripMenuItem.Text = "Cikkek";
             this.ciToolStripMenuItem.Click += new System.EventHandler(this.cikkekToolStripMenuItem_Click);
             // 
             // receptekToolStripMenuItem
             // 
             this.receptekToolStripMenuItem.Name = "receptekToolStripMenuItem";
-            this.receptekToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.receptekToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.receptekToolStripMenuItem.Text = "Receptek";
             this.receptekToolStripMenuItem.Click += new System.EventHandler(this.receptekToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(134, 6);
             // 
             // cikkcsoportToolStripMenuItem
             // 
             this.cikkcsoportToolStripMenuItem.Name = "cikkcsoportToolStripMenuItem";
-            this.cikkcsoportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cikkcsoportToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.cikkcsoportToolStripMenuItem.Text = "Cikkcsoport";
             this.cikkcsoportToolStripMenuItem.Click += new System.EventHandler(this.cikkcsoportToolStripMenuItem_Click);
             // 
             // alcsoportToolStripMenuItem1
             // 
             this.alcsoportToolStripMenuItem1.Name = "alcsoportToolStripMenuItem1";
-            this.alcsoportToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.alcsoportToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.alcsoportToolStripMenuItem1.Text = "Alcsoport";
             this.alcsoportToolStripMenuItem1.Click += new System.EventHandler(this.alcsoportToolStripMenuItem1_Click);
             // 
@@ -209,7 +211,9 @@
             // partnerekToolStripMenuItem
             // 
             this.partnerekToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mmSzallitok});
+            this.mmSzallitok,
+            this.partnerTörléseToolStripMenuItem,
+            this.töröltPartnerVisszaállításaToolStripMenuItem});
             this.partnerekToolStripMenuItem.Name = "partnerekToolStripMenuItem";
             this.partnerekToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.partnerekToolStripMenuItem.Text = "Partnerek";
@@ -217,7 +221,7 @@
             // mmSzallitok
             // 
             this.mmSzallitok.Name = "mmSzallitok";
-            this.mmSzallitok.Size = new System.Drawing.Size(117, 22);
+            this.mmSzallitok.Size = new System.Drawing.Size(216, 22);
             this.mmSzallitok.Text = "Szállítók";
             this.mmSzallitok.Click += new System.EventHandler(this.mmSzallitok_Click);
             // 
@@ -379,6 +383,19 @@
             this.mmNapiZaras.Text = "!! NAPI ZÁRÁS !!";
             this.mmNapiZaras.Click += new System.EventHandler(this.mmNapiZaras_Click);
             // 
+            // partnerTörléseToolStripMenuItem
+            // 
+            this.partnerTörléseToolStripMenuItem.Name = "partnerTörléseToolStripMenuItem";
+            this.partnerTörléseToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.partnerTörléseToolStripMenuItem.Text = "Partner törlése";
+            this.partnerTörléseToolStripMenuItem.Click += new System.EventHandler(this.partnerTörléseToolStripMenuItem_Click);
+            // 
+            // töröltPartnerVisszaállításaToolStripMenuItem
+            // 
+            this.töröltPartnerVisszaállításaToolStripMenuItem.Name = "töröltPartnerVisszaállításaToolStripMenuItem";
+            this.töröltPartnerVisszaállításaToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.töröltPartnerVisszaállításaToolStripMenuItem.Text = "Törölt partner visszaállítása";
+            // 
             // AdminTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,6 +458,8 @@
         private System.Windows.Forms.ToolStripMenuItem blokkokVisszakereséseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem receptekToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem partnerTörléseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem töröltPartnerVisszaállításaToolStripMenuItem;
     }
 }
 
