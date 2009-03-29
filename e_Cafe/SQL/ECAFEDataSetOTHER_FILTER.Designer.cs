@@ -266,6 +266,8 @@ namespace e_Cafe.SQL {
             
             private global::System.Data.DataColumn columnCIKKCSOPORT_ID;
             
+            private global::System.Data.DataColumn columnOTHER_FILTER_ID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public CIKCSOP_OTHER_FILTERDataTable() {
                 this.TableName = "CIKCSOP_OTHER_FILTER";
@@ -311,6 +313,13 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn OTHER_FILTER_IDColumn {
+                get {
+                    return this.columnOTHER_FILTER_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -343,7 +352,8 @@ namespace e_Cafe.SQL {
                 CIKCSOP_OTHER_FILTERRow rowCIKCSOP_OTHER_FILTERRow = ((CIKCSOP_OTHER_FILTERRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OTHER_NAME,
-                        CIKKCSOPORT_ID};
+                        CIKKCSOPORT_ID,
+                        null};
                 rowCIKCSOP_OTHER_FILTERRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCIKCSOP_OTHER_FILTERRow);
                 return rowCIKCSOP_OTHER_FILTERRow;
@@ -365,6 +375,7 @@ namespace e_Cafe.SQL {
             internal void InitVars() {
                 this.columnOTHER_NAME = base.Columns["OTHER_NAME"];
                 this.columnCIKKCSOPORT_ID = base.Columns["CIKKCSOPORT_ID"];
+                this.columnOTHER_FILTER_ID = base.Columns["OTHER_FILTER_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -373,7 +384,14 @@ namespace e_Cafe.SQL {
                 base.Columns.Add(this.columnOTHER_NAME);
                 this.columnCIKKCSOPORT_ID = new global::System.Data.DataColumn("CIKKCSOPORT_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCIKKCSOPORT_ID);
+                this.columnOTHER_FILTER_ID = new global::System.Data.DataColumn("OTHER_FILTER_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOTHER_FILTER_ID);
                 this.columnOTHER_NAME.MaxLength = 50;
+                this.columnOTHER_FILTER_ID.AutoIncrement = true;
+                this.columnOTHER_FILTER_ID.AutoIncrementSeed = -1;
+                this.columnOTHER_FILTER_ID.AutoIncrementStep = -1;
+                this.columnOTHER_FILTER_ID.AllowDBNull = false;
+                this.columnOTHER_FILTER_ID.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -532,6 +550,16 @@ namespace e_Cafe.SQL {
                 }
                 set {
                     this[this.tableCIKCSOP_OTHER_FILTER.CIKKCSOPORT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int OTHER_FILTER_ID {
+                get {
+                    return ((int)(this[this.tableCIKCSOP_OTHER_FILTER.OTHER_FILTER_IDColumn]));
+                }
+                set {
+                    this[this.tableCIKCSOP_OTHER_FILTER.OTHER_FILTER_IDColumn] = value;
                 }
             }
             
@@ -708,6 +736,7 @@ namespace e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters {
             tableMapping.DataSetTable = "CIKCSOP_OTHER_FILTER";
             tableMapping.ColumnMappings.Add("OTHER_NAME", "OTHER_NAME");
             tableMapping.ColumnMappings.Add("CIKKCSOPORT_ID", "CIKKCSOPORT_ID");
+            tableMapping.ColumnMappings.Add("OTHER_FILTER_ID", "OTHER_FILTER_ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -729,8 +758,8 @@ namespace e_Cafe.SQL.ECAFEDataSetOTHER_FILTERTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT     OTHER_NAME, CIKKCSOPORT_ID\r\nFROM         CIKCSOP_OTHER_FILTER\r\nWHERE  " +
-                "   (CIKKCSOPORT_ID = @ccs_id)";
+            this._commandCollection[0].CommandText = "SELECT     OTHER_NAME, CIKKCSOPORT_ID, OTHER_FILTER_ID\r\nFROM         CIKCSOP_OTHE" +
+                "R_FILTER\r\nWHERE     (CIKKCSOPORT_ID = @ccs_id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ccs_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

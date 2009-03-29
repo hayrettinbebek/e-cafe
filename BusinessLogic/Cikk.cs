@@ -385,6 +385,10 @@ namespace BusinessLogic
                             " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ  " +
                             
                             " FROM CIKK  c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE CIKK_ID =" + pCikkId.ToString();
+            //if (plit_kisz_id > 0)
+            //{
+            //    cmd.CommandText += " AND l.LIT_KISZ_ID = " + plit_kisz_id.ToString();
+            //}
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
@@ -404,8 +408,10 @@ namespace BusinessLogic
                 MEGJEGYZES = (string)rdr["MEGJEGYZES"];
                 KISZ_MEGN = (string)rdr["KISZ_NEV"];
                 KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+
                 MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
                 OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
+
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
                 NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
@@ -586,7 +592,14 @@ namespace BusinessLogic
             cmd.Parameters["MEGNEVEZES"].Value = MEGNEVEZES;
             cmd.Parameters["CIKK_TIPUS"].Value = fCIKK_TIPUS;
             cmd.Parameters["CIKKCSOPORT_ID"].Value = CIKKCSOPORT_ID;
-            cmd.Parameters["ERTEKESITES_TIPUSA"].Value = ERTEKESITES_TIPUSA;
+            if (ERTEKESITES_TIPUSA == "")
+            {
+                cmd.Parameters["ERTEKESITES_TIPUSA"].Value = "D";
+            }
+            else
+            {
+                cmd.Parameters["ERTEKESITES_TIPUSA"].Value = ERTEKESITES_TIPUSA;
+            }
             cmd.Parameters["OTHER_FILTER_ID"].Value = ALCSOPORT;
             cmd.Parameters["DEFAULT_RAKTAR"].Value = ALAP_RAKTAR;
             cmd.Parameters["CIKKSZAM"].Value = CIKKSZAM;
@@ -818,7 +831,8 @@ namespace BusinessLogic
                         t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
                         t.MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
                         t.OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
-                        if ((double)rdr["ELADASI_AR"] == 0)
+                        //if ((double)rdr["ELADASI_AR"] == 0)
+                        if ((string)rdr["ERT_TIPUS"] == "L")
                         {
                             t.ELADASI_AR = (double)rdr["KISZ_ELADASI_AR"];
                             t.NETTO_AR = DEFS.getNetto((double)rdr["KISZ_ELADASI_AR"], (double)rdr["AFA_SZAZ"]);

@@ -55,6 +55,8 @@ namespace e_Cafe
 
         private void FillForm()
         {
+            this.cIKCSOP_OTHER_FILTERTableAdapter.Fill(this.eCAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTER, Convert.ToInt16(cmdCikkcsop.SelectedValue));
+
             if (newCikk != null)
             {
                 if (newCikk.CIKK_ID != -1)
@@ -80,7 +82,6 @@ namespace e_Cafe
                 }
             }
 
-            this.cIKCSOP_OTHER_FILTERTableAdapter.Fill(this.eCAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTER, Convert.ToInt16(cmdCikkcsop.SelectedValue));
 
             this.aFATableAdapter.Fill(this.eCAFEDataSet.AFA, ((SQL.ECAFEDataSet.CIKKCSOPORTRow)((DataRowView)cIKKCSOPORTBindingSource.Current).Row).AFA_KOD.ToString());
         }

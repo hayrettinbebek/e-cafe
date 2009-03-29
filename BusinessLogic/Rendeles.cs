@@ -226,12 +226,12 @@ namespace BusinessLogic
         public void addTetel(Cikk pCikk)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round( pCikk.KISZ_MENNY*pCikk.NETTO_AR,2), DateTime.Now));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round( pCikk.NETTO_AR,2), DateTime.Now));
         }
         public void addTetel(Cikk pCikk, int pRakt)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round(pCikk.KISZ_MENNY*pCikk.NETTO_AR,2), DateTime.Now, pRakt));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round(pCikk.NETTO_AR,2), DateTime.Now, pRakt));
         }
 
         #endregion
@@ -518,8 +518,8 @@ namespace BusinessLogic
             cmd.Parameters["RAKTAR_ID"].Value = _RaktarId;
             cmd.Parameters["MODIFIED_USER"].Value = DEFS.LogInUser.USER_ID;
             cmd.Parameters["NETTO_ERTEK"].Value = _Netto_Ertek;
-            cmd.Parameters["ERTEK"].Value = _Netto_Ertek * (1+(_Cikk.AFA_SZAZ/100));
-            cmd.Parameters["AFA_ERTEK"].Value = _Netto_Ertek * (_Cikk.AFA_SZAZ / 100);
+            cmd.Parameters["ERTEK"].Value = Math.Round(_Netto_Ertek * (1+(_Cikk.AFA_SZAZ/100)),2);
+            cmd.Parameters["AFA_ERTEK"].Value = Math.Round(_Netto_Ertek * (_Cikk.AFA_SZAZ / 100), 2);
 
             try
             {
