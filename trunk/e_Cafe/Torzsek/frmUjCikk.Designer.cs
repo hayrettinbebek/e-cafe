@@ -82,6 +82,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.netToBrut = new System.Windows.Forms.Button();
             this.bruttoToNetto = new System.Windows.Forms.Button();
+            this.cIKKCSOPORTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSetOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cIKCSOPOTHERFILTERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
@@ -93,6 +96,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetMEGYS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHERFILTERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -246,7 +252,7 @@
             // 
             // cmbOTF
             // 
-            this.cmbOTF.DataSource = this.cIKCSOPOTHERFILTERBindingSource;
+            this.cmbOTF.DataSource = this.cIKCSOPOTHERFILTERBindingSource1;
             this.cmbOTF.DisplayMember = "OTHER_NAME";
             this.cmbOTF.FormattingEnabled = true;
             this.cmbOTF.Location = new System.Drawing.Point(86, 85);
@@ -537,6 +543,21 @@
             this.bruttoToNetto.UseVisualStyleBackColor = true;
             this.bruttoToNetto.Click += new System.EventHandler(this.button2_Click);
             // 
+            // cIKKCSOPORTBindingSource1
+            // 
+            this.cIKKCSOPORTBindingSource1.DataMember = "CIKKCSOPORT";
+            this.cIKKCSOPORTBindingSource1.DataSource = this.eCAFEDataSet;
+            // 
+            // eCAFEDataSetOTHERFILTERBindingSource
+            // 
+            this.eCAFEDataSetOTHERFILTERBindingSource.DataSource = this.eCAFEDataSetOTHER_FILTER;
+            this.eCAFEDataSetOTHERFILTERBindingSource.Position = 0;
+            // 
+            // cIKCSOPOTHERFILTERBindingSource1
+            // 
+            this.cIKCSOPOTHERFILTERBindingSource1.DataMember = "CIKCSOP_OTHER_FILTER";
+            this.cIKCSOPOTHERFILTERBindingSource1.DataSource = this.eCAFEDataSetOTHERFILTERBindingSource;
+            // 
             // frmUjCikk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,6 +612,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetMEGYS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHERFILTERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,5 +675,8 @@
         private System.Windows.Forms.Button bruttoToNetto;
         private System.Windows.Forms.CheckBox chkMegKulZaras;
         private System.Windows.Forms.CheckBox chkAutoRendGen;
+        private System.Windows.Forms.BindingSource cIKKCSOPORTBindingSource1;
+        private System.Windows.Forms.BindingSource eCAFEDataSetOTHERFILTERBindingSource;
+        private System.Windows.Forms.BindingSource cIKCSOPOTHERFILTERBindingSource1;
     }
 }
