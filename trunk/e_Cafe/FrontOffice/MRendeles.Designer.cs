@@ -330,7 +330,7 @@
             this.pnlButtonPlace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlButtonPlace.Location = new System.Drawing.Point(16, 60);
             this.pnlButtonPlace.Name = "pnlButtonPlace";
-            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 571);
+            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 568);
             this.pnlButtonPlace.TabIndex = 6;
             // 
             // panel5
@@ -339,16 +339,16 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 60);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 571);
+            this.panel5.Size = new System.Drawing.Size(16, 568);
             this.panel5.TabIndex = 7;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 631);
+            this.panel6.Location = new System.Drawing.Point(0, 628);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(173, 10);
+            this.panel6.Size = new System.Drawing.Size(173, 13);
             this.panel6.TabIndex = 7;
             // 
             // panel2
