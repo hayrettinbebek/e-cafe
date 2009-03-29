@@ -37,7 +37,7 @@ namespace BusinessLogic
         {
             get
             {
-                Megys_list ml = new Megys_list(new SqlConnection(DEFS.ConSTR));
+                Megys_list ml = new Megys_list();
                 
                 return (ml.MegysById(MEGYS_ID).NEV);
 
@@ -298,7 +298,7 @@ namespace BusinessLogic
                 fMEGNEVEZES = pMEGNEVEZES;
                 fCIKK_TIPUS = pCIKK_TIPUS;
                 fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
-                CIKK_KISZERELES = new CikkKiszerelesList(fCIKK_ID, new SqlConnection(DEFS.ConSTR));
+                CIKK_KISZERELES =  new CikkKiszerelesList();//fCIKK_ID, new SqlConnection(DEFS.ConSTR));
 
         }
 
@@ -340,7 +340,7 @@ namespace BusinessLogic
             while (rdr.Read())
             {
                 lKESZLET.Add(new CikkKeszlet((int)rdr["RAKTAR_ID"], (string)rdr["RAKTAR_NEV"], (double)rdr["KESZLET"], (double)rdr["KESZLET_ERTEK"], (double)rdr["ATLAGAR"]));
-                DEFS.log(Level.Debug, "Keszlet:" + "-->" + rdr["RAKTAR_ID"] + "-->" + rdr["RAKTAR_NEV"] + "-->" + rdr["KESZLET"] + "-->" + rdr["KESZLET_ERTEK"]);
+                
 
             }
             c.Close();
@@ -415,11 +415,6 @@ namespace BusinessLogic
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
                 NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
-                
-                
-
-                DEFS.log(Level.Debug, "CikK olvasása" + rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
-                        rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + rdr["KISZ_NEV"] + "#" + rdr["KISZ_MENNY"] + "#" + "#" + "#" + "#");
 
             }
             getKeszlet();
@@ -469,8 +464,6 @@ namespace BusinessLogic
                 fMEGKULONB_ZARAS = (int)rdr["SPEC_ZARAS"];
                 fAUTO_MEGRENDELO = (int)rdr["AUTO_MEGRENDELO"];
 
-                DEFS.log(Level.Debug, "CikK olvasása" + rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
-                        rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + "#" + "#" + "#" + "#");
 
             }
             getKeszlet();
@@ -763,8 +756,6 @@ namespace BusinessLogic
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                DEFS.log(Level.Debug, " Cikk betöltése --> " + rdr["CIKK_ID"]);
-
                 try
                 {
                     Cikk t = new Cikk((int)rdr["CIKK_ID"], true,new SqlConnection(DEFS.ConSTR));
@@ -802,17 +793,18 @@ namespace BusinessLogic
                                         " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                                         " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ,  " +
                                         " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR " +
-                                " FROM CIKK c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id";
+                                " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id";
 
             SqlDataReader rdr = cmd.ExecuteReader();
+
+            Cikk t;
+
             while (rdr.Read())
             {
-                DEFS.log(Level.Debug, rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
-                        rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + rdr["KISZ_NEV"] + "#" + rdr["KISZ_MENNY"] + "#" + "#" + "#" + "#");
-
+                
                 try
                 {
-                    Cikk t = new Cikk((int)rdr["CIKK_ID"] , (string)rdr["MEGNEVEZES"],(int)rdr["CIKK_TIPUS"],(int)rdr["CIKKCSOPORT_ID"]);
+                    t = new Cikk((int)rdr["CIKK_ID"] , (string)rdr["MEGNEVEZES"],(int)rdr["CIKK_TIPUS"],(int)rdr["CIKKCSOPORT_ID"]);
 
                         t.CIKK_ID = (int)rdr["CIKK_ID"];
                         t.MEGNEVEZES = (string)rdr["MEGNEVEZES"];
@@ -844,7 +836,39 @@ namespace BusinessLogic
                         }
                         
                         t.AFA_SZAZ = (double)rdr["AFA_SZAZ"];
-                    t.getKeszlet();
+                   // t.getKeszlet();
+                    lCIKK.Add(t);
+                    
+                }
+                catch (Exception e)
+                {
+                    DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                }
+
+            }
+            rdr.Close();
+            sc.Close();
+        }
+
+        public Cikk_list()
+        {
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, MEGYS_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK c WHERE CIKK_TIPUS = 0";
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                try
+                {
+                    Cikk t = new Cikk((int)rdr["CIKK_ID"], (string)rdr["MEGNEVEZES"], (int)rdr["CIKK_TIPUS"], (int)rdr["CIKKCSOPORT_ID"]);
+                    t.MEGYS_ID = (string)rdr["MEGYS_ID"];
+                    t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
                     lCIKK.Add(t);
                 }
                 catch (Exception e)
@@ -874,9 +898,6 @@ namespace BusinessLogic
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                DEFS.log(Level.Debug, rdr["CIKK_ID"] + "#" + rdr["MEGNEVEZES"] + "#" + rdr["CIKK_TIPUS"] + "#" + rdr["CIKKCSOPORT_ID"] + "#" +
-                        rdr["OTHER_FILTER_ID"] + "#" + rdr["DEFAULT_RAKTAR"] + "#" + rdr["ERT_TIPUS"] + "#" + rdr["KISZ_NEV"] + "#" + rdr["KISZ_MENNY"] + "#" + "#" + "#" + "#");
-
                 try
                 {
                     Cikk t = new Cikk((int)rdr["CIKK_ID"], new SqlConnection(DEFS.ConSTR));
@@ -1069,6 +1090,7 @@ namespace BusinessLogic
             catch (Exception e)
             {
                 DEFS.log(Level.Info,"Hiba a rendelés sorok mentése közben!" + fLIT_KISZ_ID.ToString() + "/n" + e.Message + "/n" + e.StackTrace);
+                c.Close();
                 
             }
             c.Close();
@@ -1109,6 +1131,9 @@ namespace BusinessLogic
             }
             rdr.Close();
             sc.Close();
+        }
+        public CikkKiszerelesList()
+        {
         }
 
     }
@@ -1259,7 +1284,7 @@ namespace BusinessLogic
                                   (string)rdr["CIKKCSOPORT_NEV"]);
                 t.AFA_KOD = (string)rdr["AFA_KOD"];
                 lCIKKCSOPORT.Add(t);
-                DEFS.log(Level.Debug, rdr["CIKKCSOPORT_ID"]+"-->"+rdr["CIKKCSOPORT_NEV"]+"-->"+rdr["AFA_KOD"]);
+                
 
             }
             rdr.Close();
@@ -1304,9 +1329,9 @@ namespace BusinessLogic
         public List<Megys> lMegys = new List<Megys>();
 
 
-        public Megys_list(SqlConnection sc)
+        public Megys_list()
         {
-
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -1324,7 +1349,7 @@ namespace BusinessLogic
                                   (string)rdr["MEGYS_MEGNEVEZES"]);
 
                 lMegys.Add(t);
-                DEFS.log(Level.Debug, rdr["MEGYS_ID"] + "-->" + rdr["MEGYS_MEGNEVEZES"]);
+                
 
             }
             rdr.Close();

@@ -122,15 +122,46 @@ namespace GUI
             FlatAppearance.CheckedBackColor = Color.Transparent;
             FlatAppearance.BorderSize = 0;
             ImageAlign = ContentAlignment.BottomRight;
+            BackgroundImage = global::GUI.Properties.Resources.al_off;
+            TextAlign = ContentAlignment.TopCenter;
+            BackgroundImageLayout = ImageLayout.Stretch;
             BackColor = Color.Transparent;
         }
+
+        public OtherFButton()
+        {
+            
+            Appearance = Appearance.Button;
+            FlatStyle = FlatStyle.Flat;
+            FlatAppearance.MouseOverBackColor = Color.Transparent;
+            FlatAppearance.MouseDownBackColor = Color.Transparent;
+            FlatAppearance.CheckedBackColor = Color.Transparent;
+            FlatAppearance.BorderSize = 0;
+            ImageAlign = ContentAlignment.BottomRight;
+            BackgroundImage = global::GUI.Properties.Resources.al_off;
+            TextAlign = ContentAlignment.TopCenter;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.Transparent;
+        }
+
         protected override void OnCheckedChanged(EventArgs e)
         {
-            if (ImageIndex == 1) { ImageIndex = 0; }
-            else ImageIndex = 1;
-            base.OnCheckedChanged(e);
+            if (this.Checked)
+            {
+                //ImageIndex = 0;
+                BackgroundImage = global::GUI.Properties.Resources.al_aktiv;
+            }
+            else
+            {
+                //ImageIndex = 1;
+                BackgroundImage = global::GUI.Properties.Resources.al_off;
+            }
+            //base.OnCheckedChanged(e);
 
         }
+           
+
+        
     }
 
     public class CikkButton : System.Windows.Forms.RadioButton

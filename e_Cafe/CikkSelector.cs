@@ -26,7 +26,7 @@ namespace e_Cafe
         public CikkSelector()
         {
             InitializeComponent();
-            l = new Cikk_list(new SqlConnection(DEFS.ConSTR));
+            l = new Cikk_list();
             cikkBindingSource.Clear();
 
             foreach (var c in l.CikkFilter(""))
@@ -50,8 +50,6 @@ namespace e_Cafe
                 AFA_SZAZ = ((Cikk)cikkBindingSource.Current).getAfaSzaz();
                 c = ((Cikk)cikkBindingSource.Current);
                 DialogResult = DialogResult.OK;
-
-
                 this.Close();
             }
         }

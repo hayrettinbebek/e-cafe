@@ -176,6 +176,6 @@
         private System.Windows.Forms.Button button3;
         private e_Cafe.SQL.ReceptMentes receptMentes;
         private System.Windows.Forms.BindingSource rECEPTBindingSource;
-        private e_Cafe.SQL.ReceptMentesTableAdapters.RECEPTTableAdapter rECEPTTableAdapter;
+        public e_Cafe.SQL.ReceptMentesTableAdapters.RECEPTTableAdapter rECEPTTableAdapter;
     }
 }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7A9003C7-484C-4510-BE0F-128F219A812B}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -863,6 +863,8 @@
     <Content Include="asztal\pult\pult_off.png" />
     <Content Include="asztal\pult\pult_on.png" />
     <Content Include="asztal\pult\pult_over.png" />
+    <None Include="Resources\al_aktiv.png" />
+    <None Include="Resources\al_off.png" />
     <None Include="Resources\bezar1.png" />
     <None Include="Resources\bezar.png" />
     <None Include="Resources\piroson.png" />
