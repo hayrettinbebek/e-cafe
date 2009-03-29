@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using GUI.billentyu;
 using BusinessLogic;
+using e_Cafe.FrontOffice;
 
 
 namespace e_Cafe
@@ -121,6 +122,9 @@ namespace e_Cafe
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            frmHitelReszletezo hr = new frmHitelReszletezo();
+            hr.pPartner = partner_id;
+            hr.ShowDialog();
 
         }
     }

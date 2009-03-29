@@ -184,7 +184,13 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
-    <Compile Include="dsPartnerek.Designer.cs">
+    <Compile Include="FrontOffice\frmHitelReszletezo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\frmHitelReszletezo.Designer.cs">
+      <DependentUpon>frmHitelReszletezo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\dsPartnerek.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPartnerek.xsd</DependentUpon>
@@ -524,6 +530,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmFoglalas.resx">
       <DependentUpon>frmFoglalas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontOffice\frmHitelReszletezo.resx">
+      <DependentUpon>frmHitelReszletezo.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmOsszCikkView.resx">
@@ -996,15 +1006,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsPartnerek.xsc">
+    <None Include="SQL\dsPartnerek.xsc">
       <DependentUpon>dsPartnerek.xsd</DependentUpon>
     </None>
-    <None Include="dsPartnerek.xsd">
+    <None Include="SQL\dsPartnerek.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsPartnerek.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsPartnerek.xss">
+    <None Include="SQL\dsPartnerek.xss">
       <DependentUpon>dsPartnerek.xsd</DependentUpon>
     </None>
     <None Include="SQL\update_020.sql">

@@ -31,12 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRendeles));
             this.pnlRendeles = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.rbOsszetett = new System.Windows.Forms.RadioButton();
             this.rbReszletes = new System.Windows.Forms.RadioButton();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUP = new System.Windows.Forms.Button();
-            this.btnDOWN = new System.Windows.Forms.Button();
             this.tblRendeles = new XPTable.Models.Table();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpCikkek = new System.Windows.Forms.FlowLayoutPanel();
@@ -55,6 +51,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUP = new System.Windows.Forms.Button();
+            this.btnDOWN = new System.Windows.Forms.Button();
             this.pnlAlsoGombok = new System.Windows.Forms.Panel();
             this.pnlFunctions = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -101,23 +101,6 @@
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(10, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(56, 57);
-            this.button8.TabIndex = 7;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // rbOsszetett
             // 
             this.rbOsszetett.Appearance = System.Windows.Forms.Appearance.Button;
@@ -151,55 +134,6 @@
             this.rbReszletes.Text = "Részletes";
             this.rbReszletes.UseVisualStyleBackColor = false;
             this.rbReszletes.CheckedChanged += new System.EventHandler(this.rbReszletes_CheckedChanged);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(62, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(57, 57);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUP
-            // 
-            this.btnUP.BackColor = System.Drawing.Color.Transparent;
-            this.btnUP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUP.BackgroundImage")));
-            this.btnUP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUP.FlatAppearance.BorderSize = 0;
-            this.btnUP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnUP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUP.Location = new System.Drawing.Point(159, 521);
-            this.btnUP.Name = "btnUP";
-            this.btnUP.Size = new System.Drawing.Size(145, 44);
-            this.btnUP.TabIndex = 4;
-            this.btnUP.UseVisualStyleBackColor = false;
-            this.btnUP.Click += new System.EventHandler(this.btnUP_Click);
-            // 
-            // btnDOWN
-            // 
-            this.btnDOWN.BackColor = System.Drawing.Color.Transparent;
-            this.btnDOWN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDOWN.BackgroundImage")));
-            this.btnDOWN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDOWN.FlatAppearance.BorderSize = 0;
-            this.btnDOWN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDOWN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDOWN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDOWN.Location = new System.Drawing.Point(10, 521);
-            this.btnDOWN.Name = "btnDOWN";
-            this.btnDOWN.Size = new System.Drawing.Size(145, 44);
-            this.btnDOWN.TabIndex = 3;
-            this.btnDOWN.UseVisualStyleBackColor = false;
-            this.btnDOWN.Click += new System.EventHandler(this.btnDOWN_Click);
             // 
             // tblRendeles
             // 
@@ -299,7 +233,7 @@
             this.pnlButtonPlace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlButtonPlace.Location = new System.Drawing.Point(16, 60);
             this.pnlButtonPlace.Name = "pnlButtonPlace";
-            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 452);
+            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 571);
             this.pnlButtonPlace.TabIndex = 6;
             // 
             // panel5
@@ -308,16 +242,16 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 60);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 452);
+            this.panel5.Size = new System.Drawing.Size(16, 571);
             this.panel5.TabIndex = 7;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 512);
+            this.panel6.Location = new System.Drawing.Point(0, 631);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(173, 129);
+            this.panel6.Size = new System.Drawing.Size(173, 10);
             this.panel6.TabIndex = 7;
             // 
             // panel2
@@ -328,6 +262,72 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(173, 60);
             this.panel2.TabIndex = 7;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(10, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(56, 57);
+            this.button8.TabIndex = 7;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Location = new System.Drawing.Point(62, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(57, 57);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUP
+            // 
+            this.btnUP.BackColor = System.Drawing.Color.Transparent;
+            this.btnUP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUP.BackgroundImage")));
+            this.btnUP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUP.FlatAppearance.BorderSize = 0;
+            this.btnUP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUP.Location = new System.Drawing.Point(159, 521);
+            this.btnUP.Name = "btnUP";
+            this.btnUP.Size = new System.Drawing.Size(145, 44);
+            this.btnUP.TabIndex = 4;
+            this.btnUP.UseVisualStyleBackColor = false;
+            this.btnUP.Click += new System.EventHandler(this.btnUP_Click);
+            // 
+            // btnDOWN
+            // 
+            this.btnDOWN.BackColor = System.Drawing.Color.Transparent;
+            this.btnDOWN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDOWN.BackgroundImage")));
+            this.btnDOWN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDOWN.FlatAppearance.BorderSize = 0;
+            this.btnDOWN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDOWN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDOWN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDOWN.Location = new System.Drawing.Point(10, 521);
+            this.btnDOWN.Name = "btnDOWN";
+            this.btnDOWN.Size = new System.Drawing.Size(145, 44);
+            this.btnDOWN.TabIndex = 3;
+            this.btnDOWN.UseVisualStyleBackColor = false;
+            this.btnDOWN.Click += new System.EventHandler(this.btnDOWN_Click);
             // 
             // pnlAlsoGombok
             // 

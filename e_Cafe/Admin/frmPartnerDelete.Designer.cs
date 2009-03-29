@@ -36,8 +36,8 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tsbAction = new System.Windows.Forms.ToolStripButton();
             this.pARTNERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsPartnerek = new e_Cafe.dsPartnerek();
-            this.pARTNERTableAdapter = new e_Cafe.dsPartnerekTableAdapters.PARTNERTableAdapter();
+            this.dsPartnerek = new e_Cafe.SQL.dsPartnerek();
+            this.pARTNERTableAdapter = new e_Cafe.SQL.dsPartnerekTableAdapters.PARTNERTableAdapter();
             this.pARTNERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -184,9 +184,9 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private dsPartnerek dsPartnerek;
+        private e_Cafe.SQL.dsPartnerek dsPartnerek;
         private System.Windows.Forms.BindingSource pARTNERBindingSource;
-        private e_Cafe.dsPartnerekTableAdapters.PARTNERTableAdapter pARTNERTableAdapter;
+        private e_Cafe.SQL.dsPartnerekTableAdapters.PARTNERTableAdapter pARTNERTableAdapter;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox tsNameFilter;
         private System.Windows.Forms.ToolStripButton tsbAction;
