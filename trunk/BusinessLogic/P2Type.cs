@@ -19,8 +19,16 @@ namespace BusinessLogic
         {
             rSor = r;
         }
+    }
 
+    public class HitelCell : XPTable.Models.Cell
+    {
+        public HitelSor hSor;
 
+        public HitelCell(HitelSor h)
+        {
+            hSor = h;
+        }
     }
 
     public class RaktCell : XPTable.Models.Cell

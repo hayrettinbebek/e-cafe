@@ -84,6 +84,7 @@
     <Compile Include="NapZaras.cs" />
     <Compile Include="P2Type.cs" />
     <Compile Include="Partner.cs" />
+    <Compile Include="PartnerHitel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raktar.cs" />
     <Compile Include="Rendeles.cs" />
