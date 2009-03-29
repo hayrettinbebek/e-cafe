@@ -981,7 +981,7 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT PARTNER_ID, isnull(P_TIPUS,'') as P_TIPUS FROM PARTNER";
+            cmd.CommandText = "SELECT PARTNER_ID, isnull(P_TIPUS,'') as P_TIPUS FROM PARTNER WHERE AKTIV = 1";
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
