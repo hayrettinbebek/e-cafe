@@ -16,7 +16,7 @@ namespace e_Cafe.Torzsek
 {
     public partial class frmCikk : Form
     {
-        private Cikk_list cikkList = null;
+        //private Cikk_list cikkList = null;
 
         private Cikk aktCikk = null;
         public int recept = 0;
@@ -37,7 +37,7 @@ namespace e_Cafe.Torzsek
                 tpRecept.Show();
             }
 
-            cikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
+            //cikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
 
             
         }
@@ -62,9 +62,10 @@ namespace e_Cafe.Torzsek
                 grpEladAr.Visible = (string)((DataRowView)cIKKBindingSource.Current)["ERTEKESITES_TIPUSA"] == "L";
 
 
-                if (cikkList != null)
-                {
-                    aktCikk = cikkList.CikkByID((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
+                //if (cikkList != null)
+                //{
+                    aktCikk = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"],true,new SqlConnection(DEFS.ConSTR));
+
                     if (aktCikk != null)
                     {
                         tpRecept.Visible = aktCikk.OSSZETETT;
@@ -75,7 +76,7 @@ namespace e_Cafe.Torzsek
                             cikkKeszletBindingSource.Add(k);
                         }
                     }
-                }
+                //}
                 txtBeszAR.Text =  Cikk.getBeszAr((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
 
                 lIT_KISZTableAdapter.Fill(eCAFEDataSetCIKK.LIT_KISZ, (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
@@ -191,6 +192,17 @@ namespace e_Cafe.Torzsek
         private void label21_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (cIKKBindingSource.Current != null)
+            {
+                frmCikkReceptAd fca = new frmCikkReceptAd();
+                fca.rECEPTTableAdapter.Delete((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], (int)((DataRowView)bsReceptCikkek.Current)["OSSZ_CIKK_TARTOZEK_ID"]);
+                fca.Dispose();
+                taReceptCikkek.Fill(dsReceptCikkek.RECEPT, (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
+            }
         }
 
 

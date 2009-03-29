@@ -22,6 +22,8 @@ namespace e_Cafe.Torzsek
 
         private Cikk ac;
 
+        private Megys_list ml = new Megys_list();
+
 
 
         public frmCikkReceptAd()
@@ -77,11 +79,9 @@ namespace e_Cafe.Torzsek
                 new_cikk_id = fc.CIKK_ID;
 
                 lblCikk.Text = fc.CIKK_NEV;
-                
-                lblMert.Text = fc.c.MEGYS_ID.ToString();
 
-                
-               
+                Megys m = ml.MegysById(fc.c.MEGYS_ID);
+                lblMert.Text = m.NEV;
 
             }
         }

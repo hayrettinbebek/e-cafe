@@ -270,6 +270,7 @@
     </Compile>
     <Compile Include="SQL\dsReceptCikkek.cs">
       <DependentUpon>dsReceptCikkek.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQL\dsReceptCikkek.Designer.cs">
       <AutoGen>True</AutoGen>

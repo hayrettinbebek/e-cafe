@@ -139,11 +139,13 @@ namespace e_Cafe
                 //bt.ImageList = btmImgList;
 
                 bt.BackgroundImageLayout = ImageLayout.Stretch;
+                
                 //bt.ImageIndex = 0;
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 50));
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 40));
                 tlpButtons.Controls.Add(bt);
                 //bt.Invalidate();
             }
+            tlpButtons.AutoScroll = true;
             tlpButtons.Refresh();
         }
 
@@ -165,6 +167,7 @@ namespace e_Cafe
 
                 pnlOtherFilter.Controls.Add(tlpOTFButtons);
                 tlpOTFButtons.Dock = DockStyle.Fill;
+                tlpOTFButtons.BringToFront();
                 tlpOTFButtons.GrowStyle = TableLayoutPanelGrowStyle.AddColumns;
 
                 tlpOTFButtons.ColumnCount = otf.lOTF.Count+1;
@@ -176,7 +179,7 @@ namespace e_Cafe
                     OtherFButton bt = new OtherFButton(otf.lOTF[i]);
                     bt.Location = new Point(0, 0);
                     bt.Text = otf.lOTF[i].ONEV;
-                    bt.TextAlign = ContentAlignment.BottomLeft;
+                    bt.TextAlign = ContentAlignment.TopCenter;
                     bt.Dock = DockStyle.Fill;
                     bt.Click += AlcsopMenuClick;
                     

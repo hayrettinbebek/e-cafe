@@ -813,6 +813,13 @@ namespace e_Cafe.SQL.dsReceptCikkekTableAdapters {
             tableMapping.ColumnMappings.Add("MEGNEVEZES", "MEGNEVEZES");
             tableMapping.ColumnMappings.Add("MEGYS_MEGNEVEZES", "MEGYS_MEGNEVEZES");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM RECEPT\r\nWHERE     (OSSZ_CIKK_ID = @cikk) AND (OSSZ_CIKK_TARTOZEK_ID =" +
+                " @alkoto)";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cikk", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@alkoto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_TARTOZEK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -869,6 +876,31 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsReceptCikkek.RECEPTDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsReceptCikkek dataSet) {
+            return this.Adapter.Update(dataSet, "RECEPT");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
     }
     
     /// <summary>
@@ -884,6 +916,8 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
         
         private UpdateOrderOption _updateOrder;
         
+        private RECEPTTableAdapter _rECEPTTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -895,6 +929,19 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+            "", "System.Drawing.Design.UITypeEditor")]
+        public RECEPTTableAdapter RECEPTTableAdapter {
+            get {
+                return this._rECEPTTableAdapter;
+            }
+            set {
+                this._rECEPTTableAdapter = value;
             }
         }
         
@@ -915,6 +962,10 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._rECEPTTableAdapter != null) 
+                            && (this._rECEPTTableAdapter.Connection != null))) {
+                    return this._rECEPTTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -927,6 +978,9 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._rECEPTTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -937,6 +991,15 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateUpdatedRows(dsReceptCikkek dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._rECEPTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.RECEPT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._rECEPTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -946,6 +1009,14 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateInsertedRows(dsReceptCikkek dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._rECEPTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.RECEPT.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._rECEPTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -955,6 +1026,14 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateDeletedRows(dsReceptCikkek dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._rECEPTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.RECEPT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rECEPTTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -992,6 +1071,11 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
+            if (((this._rECEPTTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._rECEPTTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -1024,6 +1108,15 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._rECEPTTableAdapter != null)) {
+                    revertConnections.Add(this._rECEPTTableAdapter, this._rECEPTTableAdapter.Connection);
+                    this._rECEPTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._rECEPTTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._rECEPTTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._rECEPTTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._rECEPTTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1081,6 +1174,10 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)";
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._rECEPTTableAdapter != null)) {
+                    this._rECEPTTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rECEPTTableAdapter]));
+                    this._rECEPTTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
