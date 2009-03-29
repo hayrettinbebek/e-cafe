@@ -869,7 +869,7 @@ namespace e_Cafe.dsPartnerekTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[PARTNER] WHERE (([PARTNER_ID] = @Original_PARTNER_ID) AND ((@IsNull_P_TIPUS = 1 AND [P_TIPUS] IS NULL) OR ([P_TIPUS] = @Original_P_TIPUS)) AND ((@IsNull_P_NEV = 1 AND [P_NEV] IS NULL) OR ([P_NEV] = @Original_P_NEV)) AND ((@IsNull_P_NEV2 = 1 AND [P_NEV2] IS NULL) OR ([P_NEV2] = @Original_P_NEV2)) AND ((@IsNull_P_NEV3 = 1 AND [P_NEV3] IS NULL) OR ([P_NEV3] = @Original_P_NEV3)) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [PARTNER] WHERE (([PARTNER_ID] = @Original_PARTNER_ID) AND ((@IsNull_P_TIPUS = 1 AND [P_TIPUS] IS NULL) OR ([P_TIPUS] = @Original_P_TIPUS)) AND ((@IsNull_P_NEV = 1 AND [P_NEV] IS NULL) OR ([P_NEV] = @Original_P_NEV)) AND ((@IsNull_P_NEV2 = 1 AND [P_NEV2] IS NULL) OR ([P_NEV2] = @Original_P_NEV2)) AND ((@IsNull_P_NEV3 = 1 AND [P_NEV3] IS NULL) OR ([P_NEV3] = @Original_P_NEV3)) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_TIPUS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -884,9 +884,9 @@ namespace e_Cafe.dsPartnerekTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[PARTNER] ([P_TIPUS], [P_NEV], [P_NEV2], [P_NEV3], [AKTIV]) VAL" +
-                "UES (@P_TIPUS, @P_NEV, @P_NEV2, @P_NEV3, @AKTIV);\r\nSELECT PARTNER_ID, P_TIPUS, P" +
-                "_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PARTNER_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [PARTNER] ([P_TIPUS], [P_NEV], [P_NEV2], [P_NEV3], [AKTIV]) VALUES (@" +
+                "P_TIPUS, @P_NEV, @P_NEV2, @P_NEV3, @AKTIV);\r\nSELECT PARTNER_ID, P_TIPUS, P_NEV, " +
+                "P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PARTNER_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_TIPUS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -895,7 +895,7 @@ namespace e_Cafe.dsPartnerekTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[PARTNER] SET [P_TIPUS] = @P_TIPUS, [P_NEV] = @P_NEV, [P_NEV2] = @P_NEV2, [P_NEV3] = @P_NEV3, [AKTIV] = @AKTIV WHERE (([PARTNER_ID] = @Original_PARTNER_ID) AND ((@IsNull_P_TIPUS = 1 AND [P_TIPUS] IS NULL) OR ([P_TIPUS] = @Original_P_TIPUS)) AND ((@IsNull_P_NEV = 1 AND [P_NEV] IS NULL) OR ([P_NEV] = @Original_P_NEV)) AND ((@IsNull_P_NEV2 = 1 AND [P_NEV2] IS NULL) OR ([P_NEV2] = @Original_P_NEV2)) AND ((@IsNull_P_NEV3 = 1 AND [P_NEV3] IS NULL) OR ([P_NEV3] = @Original_P_NEV3)) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [PARTNER] SET [P_TIPUS] = @P_TIPUS, [P_NEV] = @P_NEV, [P_NEV2] = @P_NEV2, [P_NEV3] = @P_NEV3, [AKTIV] = @AKTIV WHERE (([PARTNER_ID] = @Original_PARTNER_ID) AND ((@IsNull_P_TIPUS = 1 AND [P_TIPUS] IS NULL) OR ([P_TIPUS] = @Original_P_TIPUS)) AND ((@IsNull_P_NEV = 1 AND [P_NEV] IS NULL) OR ([P_NEV] = @Original_P_NEV)) AND ((@IsNull_P_NEV2 = 1 AND [P_NEV2] IS NULL) OR ([P_NEV2] = @Original_P_NEV2)) AND ((@IsNull_P_NEV3 = 1 AND [P_NEV3] IS NULL) OR ([P_NEV3] = @Original_P_NEV3)) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)));
 SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PARTNER_ID = @PARTNER_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_TIPUS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -928,15 +928,23 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM dbo.PARTNER";
+            this._commandCollection[0].CommandText = "SELECT        PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV\r\nFROM            " +
+                "PARTNER\r\nWHERE        (AKTIV = @aktiv)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@aktiv", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsPartnerek.PARTNERDataTable dataTable) {
+        public virtual int Fill(dsPartnerek.PARTNERDataTable dataTable, global::System.Nullable<int> aktiv) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((aktiv.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aktiv.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -947,8 +955,14 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsPartnerek.PARTNERDataTable GetData() {
+        public virtual dsPartnerek.PARTNERDataTable GetData(global::System.Nullable<int> aktiv) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((aktiv.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aktiv.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             dsPartnerek.PARTNERDataTable dataTable = new dsPartnerek.PARTNERDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

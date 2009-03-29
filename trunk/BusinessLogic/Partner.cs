@@ -236,6 +236,7 @@ namespace BusinessLogic
             }
 
         }
+        
 
         #region NEM
         private string _nem;

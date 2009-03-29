@@ -248,7 +248,18 @@ namespace e_Cafe
 
         private void partnerTörléseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmPartnerDelete pd = new frmPartnerDelete();
+            pd.del = 1;
+            pd.MdiParent = this;
+            pd.Show();
+        }
 
+        private void töröltPartnerVisszaállításaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPartnerDelete pd = new frmPartnerDelete();
+            pd.del = 0;
+            pd.MdiParent = this;
+            pd.Show();
         }
 
 
