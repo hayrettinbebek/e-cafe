@@ -26,7 +26,7 @@ namespace e_Cafe
         int _InactivityCounter;
         ResourceManager myResources;
         Object LastCikkcsopMenu;
-
+        TableLayoutPanel tlpButtons;
 
         Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
         Rendeles _AktRendeles;
@@ -118,7 +118,7 @@ namespace e_Cafe
         {
             Cikkcsoport_list cl = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
 
-            TableLayoutPanel tlpButtons = new TableLayoutPanel();
+            tlpButtons = new TableLayoutPanel();
             pnlButtonPlace.Controls.Add(tlpButtons);
             tlpButtons.Dock = DockStyle.Fill;
             tlpButtons.GrowStyle = TableLayoutPanelGrowStyle.AddRows;
@@ -141,7 +141,7 @@ namespace e_Cafe
                 bt.BackgroundImageLayout = ImageLayout.Stretch;
                 
                 //bt.ImageIndex = 0;
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 40));
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 90));
                 tlpButtons.Controls.Add(bt);
                 //bt.Invalidate();
             }
@@ -693,6 +693,12 @@ namespace e_Cafe
         }
 
         #endregion
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+            tlpButtons.AutoScrollPosition = new Point(900,60);
+        }
 
 
 
