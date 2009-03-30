@@ -28,8 +28,16 @@ namespace e_Cafe
         Object LastCikkcsopMenu;
         TableLayoutPanel tlpButtons;
 
+        private static int CCSOP_BTN_SIZE = 70;
+
+        Cikkcsoport_list cl = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
+
         Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
         Rendeles _AktRendeles;
+
+        int CikkCsopScrollPos = 0;
+        int MaxScroll = 0;
+        int needScroll = 0;
 
         #region Constructor
         public MRendeles(Asztal iAsztal)
@@ -45,8 +53,11 @@ namespace e_Cafe
             _InactivityCounter = 0;
             _AktRendeles = new Rendeles(_SelAsztal.fASZTAL_ID, _SelAsztal.fRENDELES_ID);
 
+
+
             InitMenuButtons();
             initRendelTabla();
+
             
         }
 
@@ -116,16 +127,19 @@ namespace e_Cafe
         #region Menü vezérélés
         private void InitMenuButtons()
         {
-            Cikkcsoport_list cl = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
+            
 
             tlpButtons = new TableLayoutPanel();
             pnlButtonPlace.Controls.Add(tlpButtons);
+            tlpButtons.BringToFront();
             tlpButtons.Dock = DockStyle.Fill;
             tlpButtons.GrowStyle = TableLayoutPanelGrowStyle.AddRows;
 
             tlpButtons.RowCount = cl.lCIKKCSOPORT.Count + 1;
 
-            for (int i = 0; i < (cl.lCIKKCSOPORT.Count); i++)
+
+
+            for (int i = CikkCsopScrollPos; i < (cl.lCIKKCSOPORT.Count); i++)
             {
 
                 CikkcsopButton bt = new CikkcsopButton(cl.lCIKKCSOPORT[i]);
@@ -141,11 +155,11 @@ namespace e_Cafe
                 bt.BackgroundImageLayout = ImageLayout.Stretch;
                 
                 //bt.ImageIndex = 0;
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, 90));
+                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, CCSOP_BTN_SIZE));
                 tlpButtons.Controls.Add(bt);
                 //bt.Invalidate();
             }
-            tlpButtons.AutoScroll = true;
+            //tlpButtons.AutoScroll = true;
             tlpButtons.Refresh();
         }
 
@@ -698,6 +712,35 @@ namespace e_Cafe
         {
 
             tlpButtons.AutoScrollPosition = new Point(900,60);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (needScroll < MaxScroll)
+            {
+                CikkCsopScrollPos--;
+            
+                CikkCsopScrollPos = Math.Max(CikkCsopScrollPos, 0);
+                InitMenuButtons();
+            }
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            if (needScroll < MaxScroll)
+            {
+                CikkCsopScrollPos++;
+
+                CikkCsopScrollPos = Math.Min(CikkCsopScrollPos, MaxScroll);
+
+                InitMenuButtons();
+            }
+        }
+
+        private void MRendeles_Load(object sender, EventArgs e)
+        {
+            MaxScroll = cl.lCIKKCSOPORT.Count;
+            needScroll = Convert.ToInt16(Math.Round((double)((pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE), 0));
         }
 
 
