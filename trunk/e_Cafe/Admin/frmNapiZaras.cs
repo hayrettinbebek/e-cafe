@@ -64,7 +64,7 @@ namespace e_Cafe.Admin
                 case 2:
                     {
                         #region nyitott rendelések ellenőrzése
-                        if (false)
+                        if (true)
                         {
                             pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
                         }
@@ -81,7 +81,7 @@ namespace e_Cafe.Admin
                 case 3:
                     {
                         #region tartozások ellenőrzése
-                        if (false)
+                        if (true)
                         {
                             pnlNyitTartozas.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
                         }
@@ -98,7 +98,7 @@ namespace e_Cafe.Admin
                 case 4:
                     {
                         #region negatív raktárkészlet
-                        if (false)
+                        if (true)
                         {
                             pnlNegRaktar.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
                         }
@@ -115,7 +115,7 @@ namespace e_Cafe.Admin
                 case 5:
                     {
                         #region adatbázis konzisztencia
-                        if (false)
+                        if (true)
                         {
                             pnlKonzisztencia.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
                         }
@@ -145,6 +145,12 @@ namespace e_Cafe.Admin
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            nz.CloseDay();
+            Application.Exit();
         }
     }
 }

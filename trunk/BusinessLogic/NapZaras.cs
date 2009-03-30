@@ -45,6 +45,19 @@ namespace BusinessLogic
 
         }
 
+        public void CloseDay()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmd = new SqlCommand();
 
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "UPDATE NAP_NYITAS SET LEZART = 1, ZARAS_DATUMA = getdate() where LEZART = 0";
+            c.Open();
+            cmd.ExecuteNonQuery();
+            c.Close();
+        }
     }
 }
