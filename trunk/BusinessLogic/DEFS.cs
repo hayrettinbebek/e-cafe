@@ -66,6 +66,76 @@ namespace BusinessLogic
 
 
         }
+        #region számlázás
+        public static int GenerateSzamlaFej(int partner_id, int rendeles_id, int p_fizmod)
+        {
+
+            int retval = -1;
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmdGenSzlaFej = new SqlCommand("sp_create_szamla_fej", c);
+            cmdGenSzlaFej.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdGenSzlaFej.Parameters.Add("@p_partner_id", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@p_partner_id"].Direction = ParameterDirection.Input;
+            cmdGenSzlaFej.Parameters["@p_partner_id"].Value = partner_id;
+
+            cmdGenSzlaFej.Parameters.Add("@p_rendeles_id", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@p_rendeles_id"].Direction = ParameterDirection.Input;
+            cmdGenSzlaFej.Parameters["@p_rendeles_id"].Value = rendeles_id;
+
+            cmdGenSzlaFej.Parameters.Add("@p_fizmod", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@p_fizmod"].Direction = ParameterDirection.Input;
+            cmdGenSzlaFej.Parameters["@p_fizmod"].Value = p_fizmod;
+
+            cmdGenSzlaFej.Parameters.Add("@user_id", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@user_id"].Direction = ParameterDirection.Input;
+            cmdGenSzlaFej.Parameters["@user_id"].Value = DEFS.LogInUser.USER_ID;
+
+
+            cmdGenSzlaFej.Parameters.Add("@o_szamla_id", SqlDbType.Int);
+            cmdGenSzlaFej.Parameters["@o_szamla_id"].Direction = ParameterDirection.Output;
+
+
+            c.Open();
+            cmdGenSzlaFej.ExecuteNonQuery();
+
+            retval = (int)cmdGenSzlaFej.Parameters["@o_szamla_id"].Value;
+
+            c.Close();
+
+            return (retval);
+        }
+
+        public static void AddSzlaTetel(int szla_fej_id, int sor_id)
+        {
+
+
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmdAddSzlaTetel = new SqlCommand("sp_add_szamla_tetel", c);
+            cmdAddSzlaTetel.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+            cmdAddSzlaTetel.Parameters.Add("@p_szamla_fej_id", SqlDbType.Int);
+            cmdAddSzlaTetel.Parameters["@p_szamla_fej_id"].Direction = ParameterDirection.Input;
+            cmdAddSzlaTetel.Parameters["@p_szamla_fej_id"].Value = szla_fej_id;
+
+            cmdAddSzlaTetel.Parameters.Add("@p_rendeles_sor_id", SqlDbType.Int);
+            cmdAddSzlaTetel.Parameters["@p_rendeles_sor_id"].Direction = ParameterDirection.Input;
+            cmdAddSzlaTetel.Parameters["@p_rendeles_sor_id"].Value = sor_id;
+
+
+            c.Open();
+            cmdAddSzlaTetel.ExecuteNonQuery();
+
+
+
+            c.Close();
+
+
+        }
+        #endregion
 
         #region könyvelési napokkal kapcsolatos lekérdezések
         public static List<int> lEVEK = new List<int>();

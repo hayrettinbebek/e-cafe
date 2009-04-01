@@ -39,5 +39,26 @@ namespace e_Cafe.FrontOffice
             tblHitelek.Font = DEFS.f2;
             tblHitelek.TableModel.RowHeight = 40;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            int szamla_fej_id = DEFS.GenerateSzamlaFej(pPartner, -101, (int)Fizmond.Keszpenz);
+            
+            if (szamla_fej_id != -1)
+            {
+                foreach (var r in tblHitelek.SelectedItems)
+                {
+                    DEFS.AddSzlaTetel(szamla_fej_id, ((HitelCell)r.Cells[0]).hSor._SOR_ID);
+                }
+
+                frmReporting rep = new frmReporting();
+                rep.Szla_id = szamla_fej_id;
+                rep.ShowDialog();
+
+                DEFS.DebugLog("Hitelek fizetve");
+
+            }
+        }
     }
 }
