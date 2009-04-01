@@ -48,8 +48,10 @@
             this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbOTF = new System.Windows.Forms.ComboBox();
-            this.cIKCSOPOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cIKCSOPOTHERFILTERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSetOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eCAFEDataSetOTHER_FILTER = new e_Cafe.SQL.ECAFEDataSetOTHER_FILTER();
+            this.cIKCSOPOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMegjegyzes = new System.Windows.Forms.TextBox();
@@ -83,22 +85,21 @@
             this.netToBrut = new System.Windows.Forms.Button();
             this.bruttoToNetto = new System.Windows.Forms.Button();
             this.cIKKCSOPORTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cIKCSOPOTHERFILTERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.chkVirtKeszl = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHERFILTERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mEGYSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetMEGYS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHERFILTERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -261,15 +262,25 @@
             this.cmbOTF.TabIndex = 20;
             this.cmbOTF.ValueMember = "OTHER_FILTER_ID";
             // 
-            // cIKCSOPOTHERFILTERBindingSource
+            // cIKCSOPOTHERFILTERBindingSource1
             // 
-            this.cIKCSOPOTHERFILTERBindingSource.DataMember = "CIKCSOP_OTHER_FILTER";
-            this.cIKCSOPOTHERFILTERBindingSource.DataSource = this.eCAFEDataSetOTHER_FILTER;
+            this.cIKCSOPOTHERFILTERBindingSource1.DataMember = "CIKCSOP_OTHER_FILTER";
+            this.cIKCSOPOTHERFILTERBindingSource1.DataSource = this.eCAFEDataSetOTHERFILTERBindingSource;
+            // 
+            // eCAFEDataSetOTHERFILTERBindingSource
+            // 
+            this.eCAFEDataSetOTHERFILTERBindingSource.DataSource = this.eCAFEDataSetOTHER_FILTER;
+            this.eCAFEDataSetOTHERFILTERBindingSource.Position = 0;
             // 
             // eCAFEDataSetOTHER_FILTER
             // 
             this.eCAFEDataSetOTHER_FILTER.DataSetName = "ECAFEDataSetOTHER_FILTER";
             this.eCAFEDataSetOTHER_FILTER.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cIKCSOPOTHERFILTERBindingSource
+            // 
+            this.cIKCSOPOTHERFILTERBindingSource.DataMember = "CIKCSOP_OTHER_FILTER";
+            this.cIKCSOPOTHERFILTERBindingSource.DataSource = this.eCAFEDataSetOTHER_FILTER;
             // 
             // label8
             // 
@@ -303,6 +314,7 @@
             // 
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.chkVirtKeszl);
             this.groupBox1.Controls.Add(this.chkAutoRendGen);
             this.groupBox1.Controls.Add(this.txtOptKeszl);
             this.groupBox1.Controls.Add(this.txtMinKeszl);
@@ -336,7 +348,7 @@
             // chkAutoRendGen
             // 
             this.chkAutoRendGen.AutoSize = true;
-            this.chkAutoRendGen.Location = new System.Drawing.Point(11, 49);
+            this.chkAutoRendGen.Location = new System.Drawing.Point(10, 49);
             this.chkAutoRendGen.Name = "chkAutoRendGen";
             this.chkAutoRendGen.Size = new System.Drawing.Size(173, 17);
             this.chkAutoRendGen.TabIndex = 34;
@@ -548,15 +560,15 @@
             this.cIKKCSOPORTBindingSource1.DataMember = "CIKKCSOPORT";
             this.cIKKCSOPORTBindingSource1.DataSource = this.eCAFEDataSet;
             // 
-            // eCAFEDataSetOTHERFILTERBindingSource
+            // chkVirtKeszl
             // 
-            this.eCAFEDataSetOTHERFILTERBindingSource.DataSource = this.eCAFEDataSetOTHER_FILTER;
-            this.eCAFEDataSetOTHERFILTERBindingSource.Position = 0;
-            // 
-            // cIKCSOPOTHERFILTERBindingSource1
-            // 
-            this.cIKCSOPOTHERFILTERBindingSource1.DataMember = "CIKCSOP_OTHER_FILTER";
-            this.cIKCSOPOTHERFILTERBindingSource1.DataSource = this.eCAFEDataSetOTHERFILTERBindingSource;
+            this.chkVirtKeszl.AutoSize = true;
+            this.chkVirtKeszl.Location = new System.Drawing.Point(10, 72);
+            this.chkVirtKeszl.Name = "chkVirtKeszl";
+            this.chkVirtKeszl.Size = new System.Drawing.Size(98, 17);
+            this.chkVirtKeszl.TabIndex = 34;
+            this.chkVirtKeszl.Text = "Virtuális készlet";
+            this.chkVirtKeszl.UseVisualStyleBackColor = true;
             // 
             // frmUjCikk
             // 
@@ -604,8 +616,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHERFILTERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHER_FILTER)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mEGYSBindingSource)).EndInit();
@@ -613,8 +627,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetOTHERFILTERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -678,5 +690,6 @@
         private System.Windows.Forms.BindingSource cIKKCSOPORTBindingSource1;
         private System.Windows.Forms.BindingSource eCAFEDataSetOTHERFILTERBindingSource;
         private System.Windows.Forms.BindingSource cIKCSOPOTHERFILTERBindingSource1;
+        private System.Windows.Forms.CheckBox chkVirtKeszl;
     }
 }

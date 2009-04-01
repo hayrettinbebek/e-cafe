@@ -104,6 +104,7 @@ namespace e_Cafe
         {
             frmCikk ck = new frmCikk();
             ck.recept = 0;
+            ck.aktiv = 1;
             ck.MdiParent = this;
             ck.Show();
         }
@@ -242,6 +243,7 @@ namespace e_Cafe
         {
             frmCikk ck = new frmCikk();
             ck.recept = 1;
+            ck.aktiv = 1;
             ck.MdiParent = this;
             ck.Show();
         }
@@ -260,6 +262,15 @@ namespace e_Cafe
             pd.del = 0;
             pd.MdiParent = this;
             pd.Show();
+        }
+
+        private void inaktívCikkekKezeléseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCikk ck = new frmCikk();
+            ck.recept = 0;
+            ck.aktiv = 0;
+            ck.MdiParent = this;
+            ck.Show();
         }
 
 

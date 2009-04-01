@@ -79,6 +79,8 @@ namespace e_Cafe
                     txtMegjegyzes.Text = newCikk.MEGJEGYZES;
                     chkMegKulZaras.Checked = newCikk.MEGKULONB_ZARAS;
                     chkAutoRendGen.Checked = newCikk.AUTO_MEGRENDELO;
+                    chkVirtKeszl.Checked = (newCikk.VIRTUALIS == 1);
+                    
                 }
             }
 
@@ -124,6 +126,15 @@ namespace e_Cafe
                     newCikk.MEGKULONB_ZARAS = chkMegKulZaras.Checked;
                     newCikk.MEGJEGYZES = txtMegjegyzes.Text;
                     newCikk.AUTO_MEGRENDELO = chkAutoRendGen.Checked;
+                    if (chkVirtKeszl.Checked)
+                    {
+                        newCikk.VIRTUALIS = 1;
+                    }
+
+                    else
+                    {
+                        newCikk.VIRTUALIS = 0;
+                    }
                 }
                 catch (Exception e)
                 {
