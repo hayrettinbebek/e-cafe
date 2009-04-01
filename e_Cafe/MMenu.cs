@@ -94,7 +94,7 @@ namespace e_Cafe
             DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
             //MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 20)
+            if (db_ver < 21)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -123,7 +123,7 @@ namespace e_Cafe
                     if (db_ver < 18) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_018.sql")); }
                     if (db_ver < 19) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_019.sql")); }
                     if (db_ver < 20) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_020.sql")); }
-
+                    if (db_ver < 21) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_021.sql")); }
 
                     updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
                     DEFS.SendShortMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +

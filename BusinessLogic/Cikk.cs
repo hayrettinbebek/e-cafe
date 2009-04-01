@@ -285,6 +285,23 @@ namespace BusinessLogic
         }
         #endregion
 
+        #region AKTIV
+        private int fAKTIV;
+        public int AKTIV
+        {
+            get { return (fAKTIV); }
+            set { fAKTIV = value; }
+        }
+        #endregion
+
+        #region VIRTUALIS
+        private int fVIRTUAL;
+        public int VIRTUALIS
+        {
+            get { return (fVIRTUAL); }
+            set { fVIRTUAL = value; }
+        }
+        #endregion
 
 
         public Cikk(int pCIKK_ID,
@@ -299,13 +316,16 @@ namespace BusinessLogic
                 fCIKK_TIPUS = pCIKK_TIPUS;
                 fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
                 CIKK_KISZERELES =  new CikkKiszerelesList();//fCIKK_ID, new SqlConnection(DEFS.ConSTR));
-
+                fAKTIV = 1; 
+                fVIRTUAL = 0;
         }
 
         public Cikk()
         {
 
-            fCIKK_ID = -1;
+            fCIKK_ID = -1; 
+            fAKTIV = 1;
+            fVIRTUAL = 0;
             
         }
 
@@ -382,7 +402,7 @@ namespace BusinessLogic
                             " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY, " +
                             " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
                             " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
-                            " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ  " +
+                            " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ, AKTIV, VIRTUAL  " +
                             
                             " FROM CIKK  c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE CIKK_ID =" + pCikkId.ToString();
             //if (plit_kisz_id > 0)
@@ -398,6 +418,9 @@ namespace BusinessLogic
                 fCIKK_TIPUS = (int)rdr["CIKK_TIPUS"];
                 fCIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
                 fOTHER_FILTER_ID = (int)rdr["OTHER_FILTER_ID"];
+
+                fAKTIV = (int)rdr["AKTIV"];
+
                 fDEFAULT_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
                 MEGYS_ID = (string)rdr["MEGYS_ID"];
                 ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
@@ -415,6 +438,7 @@ namespace BusinessLogic
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
                 NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
+                fVIRTUAL = (int)rdr["VIRTUAL"];
 
             }
             getKeszlet();
@@ -437,7 +461,7 @@ namespace BusinessLogic
                             " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , "+
                             " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                             " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ, " +
-                            " isnull(SPEC_ZARAS,0) as SPEC_ZARAS, isnull(AUTO_MEGRENDELO,0) as AUTO_MEGRENDELO " +
+                            " isnull(SPEC_ZARAS,0) as SPEC_ZARAS, isnull(AUTO_MEGRENDELO,0) as AUTO_MEGRENDELO, AKTIV, VIRTUAL " +
                             " FROM CIKK WHERE CIKK_ID =" + pCikkId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -463,7 +487,8 @@ namespace BusinessLogic
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
                 fMEGKULONB_ZARAS = (int)rdr["SPEC_ZARAS"];
                 fAUTO_MEGRENDELO = (int)rdr["AUTO_MEGRENDELO"];
-
+                fAKTIV = (int)rdr["AKTIV"];
+                fVIRTUAL = (int)rdr["VIRTUAL"];
 
             }
             getKeszlet();
@@ -510,7 +535,8 @@ namespace BusinessLogic
                                             ",DEFAULT_RAKTAR " +
                                             ",SPEC_ZARAS "+
                                             ",AUTO_MEGRENDELO "+
-                                            //",ERTEKESITES_TIPUSA " +
+                                            ",AKTIV " +
+                                            ",VIRTUAL " +
                                             " ) " +
                                         "VALUES " +
                                             "(@MEGNEVEZES " +
@@ -530,7 +556,9 @@ namespace BusinessLogic
                                             ",@ELADASI_AR_NETTO " +
                                             ",@DEFAULT_RAKTAR " +
                                             ",@SPEC_ZARAS " +
-                                            ",@AUTO_MEGRENDELO) SET @newid = SCOPE_IDENTITY()";
+                                            ",@AUTO_MEGRENDELO " + 
+                                            ",@AKTIV, " +
+                                            ",@VIRTUAL ) SET @newid = SCOPE_IDENTITY()";
                         cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
                         cmd.Parameters["newid"].Direction = ParameterDirection.Output;
                         break;
@@ -554,8 +582,10 @@ namespace BusinessLogic
                                                        " MEGYS_ID = @MEGYS_ID, " +
                                                        " ELADASI_AR_NETTO = @ELADASI_AR_NETTO, " +
                                                        " SPEC_ZARAS = @SPEC_ZARAS, " +
-                                                       " AUTO_MEGRENDELO = @AUTO_MEGRENDELO " +
-
+                                                       " AUTO_MEGRENDELO = @AUTO_MEGRENDELO, " +
+                                                       " AKTIV = @AKTIV, " +
+                                                       " VIRTUAL = @VIRTUAL " +
+                                                       
                                            "WHERE CIKK_ID = @CIKK_ID";
                         cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
                         cmd.Parameters["CIKK_ID"].Value = fCIKK_ID;
@@ -580,8 +610,10 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("MEGYS_ID", SqlDbType.VarChar));
             cmd.Parameters.Add(new SqlParameter("SPEC_ZARAS", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("AUTO_MEGRENDELO", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("AKTIV", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("VIRTUAL", SqlDbType.Int));
+            
 
-                        
             cmd.Parameters["MEGNEVEZES"].Value = MEGNEVEZES;
             cmd.Parameters["CIKK_TIPUS"].Value = fCIKK_TIPUS;
             cmd.Parameters["CIKKCSOPORT_ID"].Value = CIKKCSOPORT_ID;
@@ -607,7 +639,9 @@ namespace BusinessLogic
             cmd.Parameters["MEGYS_ID"].Value = MEGYS_ID;
             cmd.Parameters["SPEC_ZARAS"].Value = fMEGKULONB_ZARAS;
             cmd.Parameters["AUTO_MEGRENDELO"].Value = fAUTO_MEGRENDELO;
-
+            cmd.Parameters["AKTIV"].Value = AKTIV;
+            cmd.Parameters["VIRTUAL"].Value = VIRTUALIS;
+            
             DEFS.log(Level.Debug, @"Cikk instert / update" + cmd.CommandText);
             try
             {
@@ -793,7 +827,7 @@ namespace BusinessLogic
                                         " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                                         " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ,  " +
                                         " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR " +
-                                " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id";
+                                " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE AKTIV = 1";
 
             SqlDataReader rdr = cmd.ExecuteReader();
 
@@ -860,7 +894,7 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, MEGYS_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK c WHERE CIKK_TIPUS = 0";
+            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, MEGYS_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK c WHERE AKTIV = 1 and CIKK_TIPUS = 0";
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
@@ -893,7 +927,7 @@ namespace BusinessLogic
             cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, " +
                                 " isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY " +
                                 " FROM CIKK c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id "+
-                                " WHERE c.CIKKCSOPORT_ID = " + _CikkCsop;
+                                " WHERE AKTIV = 1 and c.CIKKCSOPORT_ID = " + _CikkCsop;
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())

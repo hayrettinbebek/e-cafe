@@ -40,7 +40,7 @@
     }
 }
 
-namespace e_Cafe.ECAFEDataSetCIKKTableAdapters
+namespace e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters
 {
     
     

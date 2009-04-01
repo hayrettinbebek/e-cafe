@@ -20,6 +20,7 @@ namespace e_Cafe.Torzsek
 
         private Cikk aktCikk = null;
         public int recept = 0;
+        public int aktiv = 1;
 
         public frmCikk()
         {
@@ -31,12 +32,13 @@ namespace e_Cafe.Torzsek
             
 
             // TODO: This line of code loads data into the 'eCAFEDataSetCIKK.CIKK' table. You can move, or remove it, as needed.
-            this.cIKKTableAdapter.Fill(this.eCAFEDataSetCIKK.CIKK, recept);
+            refreshDataset();
             if (recept == 1)
             {
                 tpRecept.Show();
             }
-
+            btnAktiv.Visible = (aktiv == 0);
+            btnDelete.Visible = (aktiv == 1);
             //cikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
 
             
@@ -122,6 +124,7 @@ namespace e_Cafe.Torzsek
 
             frmUjCikk fu = new frmUjCikk();
             fu.ShowDialog();
+            refreshDataset();
 
         }
 
@@ -132,7 +135,13 @@ namespace e_Cafe.Torzsek
                 frmUjCikk fu = new frmUjCikk();
                 fu.CikkID = (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"];
                 fu.ShowDialog();
+                refreshDataset();
             }
+        }
+
+        private void refreshDataset()
+        {
+            this.cIKKTableAdapter.Fill(this.eCAFEDataSetCIKK.CIKK, recept, aktiv);
         }
 
         private void btnKiszerelések_Click(object sender, EventArgs e)
@@ -202,6 +211,28 @@ namespace e_Cafe.Torzsek
                 fca.rECEPTTableAdapter.Delete((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], (int)((DataRowView)bsReceptCikkek.Current)["OSSZ_CIKK_TARTOZEK_ID"]);
                 fca.Dispose();
                 taReceptCikkek.Fill(dsReceptCikkek.RECEPT, (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (cIKKBindingSource.Current != null)
+            {
+                Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"],true, new SqlConnection(DEFS.ConSTR));
+                c.AKTIV = 0;
+                c.Save();
+                refreshDataset();
+            }
+        }
+
+        private void btnAktiv_Click(object sender, EventArgs e)
+        {
+            if (cIKKBindingSource.Current != null)
+            {
+                Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], true, new SqlConnection(DEFS.ConSTR));
+                c.AKTIV = 1;
+                c.Save();
+                refreshDataset();
             }
         }
 
