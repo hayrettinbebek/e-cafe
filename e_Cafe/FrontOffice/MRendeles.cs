@@ -602,17 +602,17 @@ namespace e_Cafe
                 // KP-s fizetés
                 if (mp.SelectedPartner == null)
                 {
-                    szamla_fej_id = GenerateSzamlaFej(-99, _AktRendeles.fRENDELES_ID, fizmod);
+                    szamla_fej_id = DEFS.GenerateSzamlaFej(-99, _AktRendeles.fRENDELES_ID, fizmod);
                 }
                 else
                 {
-                    szamla_fej_id = GenerateSzamlaFej(mp.SelectedPartner.PARTNER_ID, _AktRendeles.fRENDELES_ID, fizmod);
+                    szamla_fej_id = DEFS.GenerateSzamlaFej(mp.SelectedPartner.PARTNER_ID, _AktRendeles.fRENDELES_ID, fizmod);
                 }
                 if (szamla_fej_id != -1)
                 {
                     foreach (var r in tblRendeles.SelectedItems)
                     {
-                        AddSzlaTetel(szamla_fej_id, ((eCell)r.Cells[0]).rSor._SOR_ID);
+                        DEFS.AddSzlaTetel(szamla_fej_id, ((eCell)r.Cells[0]).rSor._SOR_ID);
                     }
 
                     frmReporting rep = new frmReporting();
@@ -630,74 +630,6 @@ namespace e_Cafe
 
         }
 
-        private int GenerateSzamlaFej(int partner_id, int rendeles_id, int p_fizmod)
-        {
-           
-	        int retval = -1;
-
-            SqlConnection c = new SqlConnection(DEFS.ConSTR);
-            SqlCommand cmdGenSzlaFej = new SqlCommand("sp_create_szamla_fej", c);
-            cmdGenSzlaFej.CommandType = System.Data.CommandType.StoredProcedure;
-
-            cmdGenSzlaFej.Parameters.Add("@p_partner_id", SqlDbType.Int);
-            cmdGenSzlaFej.Parameters["@p_partner_id"].Direction = ParameterDirection.Input;
-            cmdGenSzlaFej.Parameters["@p_partner_id"].Value = partner_id;
-
-            cmdGenSzlaFej.Parameters.Add("@p_rendeles_id", SqlDbType.Int);
-            cmdGenSzlaFej.Parameters["@p_rendeles_id"].Direction = ParameterDirection.Input;
-            cmdGenSzlaFej.Parameters["@p_rendeles_id"].Value = rendeles_id;
-
-            cmdGenSzlaFej.Parameters.Add("@p_fizmod", SqlDbType.Int);
-            cmdGenSzlaFej.Parameters["@p_fizmod"].Direction = ParameterDirection.Input;
-            cmdGenSzlaFej.Parameters["@p_fizmod"].Value = p_fizmod;
-
-            cmdGenSzlaFej.Parameters.Add("@user_id", SqlDbType.Int);
-            cmdGenSzlaFej.Parameters["@user_id"].Direction = ParameterDirection.Input;
-            cmdGenSzlaFej.Parameters["@user_id"].Value = DEFS.LogInUser.USER_ID;
-            
-
-            cmdGenSzlaFej.Parameters.Add("@o_szamla_id", SqlDbType.Int);
-            cmdGenSzlaFej.Parameters["@o_szamla_id"].Direction = ParameterDirection.Output;
-            
-
-            c.Open();
-            cmdGenSzlaFej.ExecuteNonQuery();
-
-            retval = (int)cmdGenSzlaFej.Parameters["@o_szamla_id"].Value;
-
-            c.Close();
-
-            return (retval);
-        }
-
-        private void AddSzlaTetel(int szla_fej_id, int sor_id)
-        {
-
-           
-
-            SqlConnection c = new SqlConnection(DEFS.ConSTR);
-            SqlCommand cmdAddSzlaTetel = new SqlCommand("sp_add_szamla_tetel", c);
-            cmdAddSzlaTetel.CommandType = System.Data.CommandType.StoredProcedure;
-
-           
-            cmdAddSzlaTetel.Parameters.Add("@p_szamla_fej_id", SqlDbType.Int);
-            cmdAddSzlaTetel.Parameters["@p_szamla_fej_id"].Direction = ParameterDirection.Input;
-            cmdAddSzlaTetel.Parameters["@p_szamla_fej_id"].Value = szla_fej_id;
-
-            cmdAddSzlaTetel.Parameters.Add("@p_rendeles_sor_id", SqlDbType.Int);
-            cmdAddSzlaTetel.Parameters["@p_rendeles_sor_id"].Direction = ParameterDirection.Input;
-            cmdAddSzlaTetel.Parameters["@p_rendeles_sor_id"].Value = sor_id;
-
- 
-            c.Open();
-            cmdAddSzlaTetel.ExecuteNonQuery();
-
-        
-
-            c.Close();
-
-           
-        }
 
         
 
@@ -741,6 +673,11 @@ namespace e_Cafe
         {
             MaxScroll = cl.lCIKKCSOPORT.Count;
             needScroll = Convert.ToInt16(Math.Round((double)((pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE), 0));
+        }
+
+        private void flpCikkek_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
 

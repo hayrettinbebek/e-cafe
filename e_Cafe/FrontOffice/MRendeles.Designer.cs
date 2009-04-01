@@ -56,6 +56,8 @@
             this.ilUpDown = new System.Windows.Forms.ImageList(this.components);
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.pnlButtonPlace = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -78,8 +80,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
@@ -249,6 +249,7 @@
             this.flpCikkek.Name = "flpCikkek";
             this.flpCikkek.Size = new System.Drawing.Size(497, 581);
             this.flpCikkek.TabIndex = 2;
+            this.flpCikkek.Paint += new System.Windows.Forms.PaintEventHandler(this.flpCikkek_Paint);
             // 
             // panel1
             // 
@@ -369,6 +370,40 @@
             this.pnlButtonPlace.Name = "pnlButtonPlace";
             this.pnlButtonPlace.Size = new System.Drawing.Size(157, 568);
             this.pnlButtonPlace.TabIndex = 6;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(0, 0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(157, 44);
+            this.button12.TabIndex = 8;
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(0, 524);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(157, 44);
+            this.button11.TabIndex = 8;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // panel5
             // 
@@ -672,40 +707,6 @@
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 524);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(157, 44);
-            this.button11.TabIndex = 8;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click_1);
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(0, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(157, 44);
-            this.button12.TabIndex = 8;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // MRendeles
             // 
