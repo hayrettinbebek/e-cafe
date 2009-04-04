@@ -39,6 +39,10 @@ namespace e_Cafe
         int MaxScroll = 0;
         int needScroll = 0;
 
+        int Cikkek_ScrollPos = 0;
+        int Cikkek_MaxScroll = 0;
+        int Cikkek_needScroll = 0;
+
         #region Constructor
         public MRendeles(Asztal iAsztal)
         {
@@ -240,7 +244,7 @@ namespace e_Cafe
                 lButtons = lCikkList.CikkListByAlcsoport(pCikkcsoport, pAlcsoportId);
             }
 
-            for (int i = 0; i < lButtons.Count; i++)
+            for (int i = Cikkek_ScrollPos; i < lButtons.Count; i++)
             {
                 CikkButton cb = new CikkButton();
                 cb.fCIKK = lButtons[i];
@@ -263,6 +267,12 @@ namespace e_Cafe
                 flpCikkek.Controls.Add(cb);
 
             }
+
+            Cikkek_MaxScroll = lButtons.Count;
+            
+            // lehetséges oszlopok * sorok
+            Cikkek_needScroll = ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width) * ((flpCikkek.Height - 10) / DEFS.CIKK_BTN_SIZE.Height);
+
 
         }
 
@@ -672,12 +682,42 @@ namespace e_Cafe
         private void MRendeles_Load(object sender, EventArgs e)
         {
             MaxScroll = cl.lCIKKCSOPORT.Count;
-            needScroll = Convert.ToInt16(Math.Round((double)((pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE), 0));
+            needScroll = (pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE; // Convert.ToInt16(Math.Round((double)((pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE), 0));
+
+
+
         }
 
         private void flpCikkek_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrevCikk_Click(object sender, EventArgs e)
+        {
+            if (Cikkek_needScroll < Cikkek_MaxScroll)
+            {
+                Cikkek_ScrollPos -= ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
+
+                Cikkek_ScrollPos = Math.Max(Cikkek_ScrollPos, 0);
+                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            }
+        }
+
+        private void btnNextCikk_Click(object sender, EventArgs e)
+        {
+            if (Cikkek_needScroll < Cikkek_MaxScroll)
+            {
+                Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
+
+                Cikkek_ScrollPos = Math.Min(Cikkek_ScrollPos, MaxScroll);
+                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            }
         }
 
 

@@ -242,8 +242,9 @@ namespace GUI
         
         public CikkButton()
         {
-            Width = 150;
-            Height = 75;
+            //Width = 350;
+            //Height = 175;
+            Size = DEFS.CIKK_BTN_SIZE;
             // Get the dimension of the client rectangle 
 			Rectangle rect = this.ClientRectangle  ;	
 			// Invoke the unmanaged DLL function here to create the RoundRectangleRegion
