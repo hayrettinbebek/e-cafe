@@ -80,6 +80,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnNextCikk = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnPrevCikk = new System.Windows.Forms.Button();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
@@ -91,6 +96,9 @@
             this.pnlAlsoGombok.SuspendLayout();
             this.pnlFunctions.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlRendeles
@@ -235,6 +243,7 @@
             this.panel3.Controls.Add(this.flpCikkek);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.pnlOtherFilter);
+            this.panel3.Controls.Add(this.panel9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(173, 0);
             this.panel3.Name = "panel3";
@@ -247,7 +256,7 @@
             this.flpCikkek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpCikkek.Location = new System.Drawing.Point(25, 60);
             this.flpCikkek.Name = "flpCikkek";
-            this.flpCikkek.Size = new System.Drawing.Size(497, 581);
+            this.flpCikkek.Size = new System.Drawing.Size(497, 521);
             this.flpCikkek.TabIndex = 2;
             this.flpCikkek.Paint += new System.Windows.Forms.PaintEventHandler(this.flpCikkek_Paint);
             // 
@@ -256,7 +265,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(25, 581);
+            this.panel1.Size = new System.Drawing.Size(25, 521);
             this.panel1.TabIndex = 1;
             // 
             // pnlOtherFilter
@@ -298,6 +307,7 @@
             this.button10.Size = new System.Drawing.Size(30, 60);
             this.button10.TabIndex = 5;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel7
             // 
@@ -708,6 +718,73 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 581);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(522, 60);
+            this.panel9.TabIndex = 3;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.Controls.Add(this.btnNextCikk);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(479, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(43, 60);
+            this.panel10.TabIndex = 1;
+            // 
+            // btnNextCikk
+            // 
+            this.btnNextCikk.BackColor = System.Drawing.Color.Transparent;
+            this.btnNextCikk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNextCikk.BackgroundImage")));
+            this.btnNextCikk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNextCikk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNextCikk.FlatAppearance.BorderSize = 0;
+            this.btnNextCikk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnNextCikk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNextCikk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNextCikk.Location = new System.Drawing.Point(0, 0);
+            this.btnNextCikk.Name = "btnNextCikk";
+            this.btnNextCikk.Size = new System.Drawing.Size(43, 60);
+            this.btnNextCikk.TabIndex = 5;
+            this.btnNextCikk.UseVisualStyleBackColor = false;
+            this.btnNextCikk.Click += new System.EventHandler(this.btnNextCikk_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.btnPrevCikk);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(38, 60);
+            this.panel11.TabIndex = 0;
+            // 
+            // btnPrevCikk
+            // 
+            this.btnPrevCikk.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrevCikk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrevCikk.BackgroundImage")));
+            this.btnPrevCikk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrevCikk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrevCikk.FlatAppearance.BorderSize = 0;
+            this.btnPrevCikk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPrevCikk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPrevCikk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevCikk.Location = new System.Drawing.Point(0, 0);
+            this.btnPrevCikk.Name = "btnPrevCikk";
+            this.btnPrevCikk.Size = new System.Drawing.Size(38, 60);
+            this.btnPrevCikk.TabIndex = 4;
+            this.btnPrevCikk.UseVisualStyleBackColor = false;
+            this.btnPrevCikk.Click += new System.EventHandler(this.btnPrevCikk_Click);
+            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -737,6 +814,9 @@
             this.pnlFunctions.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -793,5 +873,10 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button btnNextCikk;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnPrevCikk;
     }
 }

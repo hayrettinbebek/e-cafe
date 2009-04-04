@@ -20,7 +20,8 @@ namespace BusinessLogic
         public static Color Asztal_hatter = Color.FromArgb(102, 102, 102); //System.Drawing.Color.Gray;
         public static Color Selected_Color = Color.FromArgb(102, 102, 102); //System.Drawing.Color.DarkGray; 
         public static Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-
+        public static Size CIKK_BTN_SIZE = new Size(250, 175);
+        
         public static int NyitNap_EV;
         public static int NyitNap_HO;
         public static int NyitNap_NAP;
