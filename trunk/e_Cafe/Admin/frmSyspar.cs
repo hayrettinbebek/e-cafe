@@ -35,5 +35,10 @@ namespace e_Cafe.Admin
             sYSPARTableAdapter.Update(dsSYSPAR.SYSPAR);
             DEFS.R_SYSPAR = new SysParList();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

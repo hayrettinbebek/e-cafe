@@ -58,5 +58,13 @@ namespace e_Cafe.Torzsek
                 fu.ShowDialog();
             }
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            frmUserJogok uj = new frmUserJogok();
+            uj._UserId = ((_User)userBindingSource.Current).USER_ID;
+            uj.ShowDialog();
+
+        }
     }
 }
