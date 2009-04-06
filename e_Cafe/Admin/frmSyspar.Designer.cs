@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSyspar));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dsSYSPAR = new e_Cafe.SQL.dsSYSPAR();
-            this.sYSPARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sYSPARTableAdapter = new e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.pARAMNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARAMVALUESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARAMVALUEIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARAMVALUEFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sYSPARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSYSPAR = new e_Cafe.SQL.dsSYSPAR();
+            this.sYSPARTableAdapter = new e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,49 +62,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(757, 301);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dsSYSPAR
-            // 
-            this.dsSYSPAR.DataSetName = "dsSYSPAR";
-            this.dsSYSPAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sYSPARBindingSource
-            // 
-            this.sYSPARBindingSource.DataMember = "SYSPAR";
-            this.sYSPARBindingSource.DataSource = this.dsSYSPAR;
-            // 
-            // sYSPARTableAdapter
-            // 
-            this.sYSPARTableAdapter.ClearBeforeFill = true;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(757, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(60, 22);
-            this.toolStripButton1.Text = "Kilépés";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(62, 22);
-            this.toolStripButton2.Text = "Mentés";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // pARAMNAMEDataGridViewTextBoxColumn
             // 
@@ -132,6 +89,50 @@
             this.pARAMVALUEFDataGridViewTextBoxColumn.HeaderText = "Tizedes érték";
             this.pARAMVALUEFDataGridViewTextBoxColumn.Name = "pARAMVALUEFDataGridViewTextBoxColumn";
             // 
+            // sYSPARBindingSource
+            // 
+            this.sYSPARBindingSource.DataMember = "SYSPAR";
+            this.sYSPARBindingSource.DataSource = this.dsSYSPAR;
+            // 
+            // dsSYSPAR
+            // 
+            this.dsSYSPAR.DataSetName = "dsSYSPAR";
+            this.dsSYSPAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sYSPARTableAdapter
+            // 
+            this.sYSPARTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(757, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton1.Text = "Kilépés";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton2.Text = "Mentés";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // frmSyspar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,8 +146,8 @@
             this.Text = "Rendszerparaméterek";
             this.Load += new System.EventHandler(this.frmSyspar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

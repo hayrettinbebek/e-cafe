@@ -273,6 +273,13 @@ namespace e_Cafe
             ck.Show();
         }
 
+        private void jogosultságokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRights rg = new frmRights();
+            rg.MdiParent = this;
+            rg.Show();
+        }
+
 
 
 

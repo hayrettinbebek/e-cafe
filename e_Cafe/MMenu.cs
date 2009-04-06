@@ -58,7 +58,9 @@ namespace e_Cafe
             RefreshDatabase();
             DEFS.LoadPossibleOpenDays();
             DEFS.R_SYSPAR = new SysParList();
+            
             if (!Login()) { Application.Exit(); }
+            
 
         }
 
@@ -209,6 +211,7 @@ namespace e_Cafe
             
 
             DEFS.LogInUser = u;
+            DEFS.UserRights = new Rights(u.USER_ID);
             UserButton ub = new UserButton();
             ub.fUser = u;
             ub.BackgroundImage = global::GUI.Properties.Resources.off_user;

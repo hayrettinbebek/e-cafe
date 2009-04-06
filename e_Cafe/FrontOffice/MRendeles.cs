@@ -289,9 +289,9 @@ namespace e_Cafe
             }
             else
             {
-                if ((((CikkButton)sender).fCIKK.fKESZLET == 0) && (((CikkButton)sender).fCIKK.fKESZLET < ((CikkButton)sender).fCIKK.KISZ_MENNY))
+                if (((((CikkButton)sender).fCIKK.fKESZLET == 0) && (((CikkButton)sender).fCIKK.fKESZLET < ((CikkButton)sender).fCIKK.KISZ_MENNY)) || (DEFS.UserRights.HasRight("ALLOW_NEG_BOOK")))
                 {
-                    if (((CikkButton)sender).fCIKK.fKESZLET_ALL >= ((CikkButton)sender).fCIKK.KISZ_MENNY)
+                    if (((CikkButton)sender).fCIKK.fKESZLET_ALL >= ((CikkButton)sender).fCIKK.KISZ_MENNY) 
                     {
                         // nincs az alapértelmezett raktárban
                         ChooseKeszletek frm = new ChooseKeszletek(((CikkButton)sender).fCIKK.lKESZLET);
@@ -308,7 +308,21 @@ namespace e_Cafe
 
 
                     }
-                    else MessageBox.Show("Nincs elegendő készlet!!");
+                    else if (DEFS.UserRights.HasRight("ALLOW_NEG_BOOK"))
+                    {
+                        _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
+                        _AktRendeles.SaveRendeles();
+                        ((CikkButton)sender).fCIKK.getKeszlet();
+                        ((CikkButton)sender).re_SetCikk();
+                        ((CikkButton)sender).Refresh();
+                        initRendelTabla();
+                    }
+
+
+                    else
+                    {
+                        MessageBox.Show("Nincs elegendő készlet!!");
+                    }
                 }
                 else
                 {

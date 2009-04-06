@@ -177,11 +177,27 @@
     <Compile Include="Admin\frmPartnerDelete.Designer.cs">
       <DependentUpon>frmPartnerDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\frmRights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmRights.Designer.cs">
+      <DependentUpon>frmRights.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\frmSyspar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsJOG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsJOG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsUserJog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUserJog.xsd</DependentUpon>
     </Compile>
     <Compile Include="FrontOffice\frmHitelReszletezo.cs">
       <SubType>Form</SubType>
@@ -470,6 +486,12 @@
     <Compile Include="Torzsek\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Torzsek\frmUserJogok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torzsek\frmUserJogok.Designer.cs">
+      <DependentUpon>frmUserJogok.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AsztalInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -523,6 +545,9 @@
     <EmbeddedResource Include="Admin\frmPartnerDelete.resx">
       <DependentUpon>frmPartnerDelete.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmRights.resx">
+      <DependentUpon>frmRights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmSyspar.resx">
       <DependentUpon>frmSyspar.cs</DependentUpon>
@@ -653,6 +678,9 @@
     <EmbeddedResource Include="Torzsek\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torzsek\frmUserJogok.resx">
+      <DependentUpon>frmUserJogok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AsztalInfo.resx">
       <DependentUpon>AsztalInfo.cs</DependentUpon>
@@ -1045,6 +1073,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="dsJOG.xsc">
+      <DependentUpon>dsJOG.xsd</DependentUpon>
+    </None>
+    <None Include="dsJOG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsJOG.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsJOG.xss">
+      <DependentUpon>dsJOG.xsd</DependentUpon>
+    </None>
+    <None Include="dsUserJog.xsc">
+      <DependentUpon>dsUserJog.xsd</DependentUpon>
+    </None>
+    <None Include="dsUserJog.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUserJog.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsUserJog.xss">
+      <DependentUpon>dsUserJog.xsd</DependentUpon>
+    </None>
     <None Include="Resources\bezar1.png" />
     <None Include="SQL\update_021.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

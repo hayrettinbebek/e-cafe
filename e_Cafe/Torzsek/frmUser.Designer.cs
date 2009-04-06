@@ -44,6 +44,7 @@
             this.lOCKEDDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aKTIVDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
@@ -54,7 +55,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton3});
+            this.toolStripButton3,
+            this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(742, 25);
@@ -186,6 +188,15 @@
             // 
             this.userBindingSource.DataSource = typeof(BusinessLogic._User);
             // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton4.Text = "Jogok";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,5 +234,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn lOCKEDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lOCKEDDATEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn aKTIVDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
     }
 }
