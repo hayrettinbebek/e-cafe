@@ -28,7 +28,7 @@ namespace e_Cafe
         Object LastCikkcsopMenu;
         TableLayoutPanel tlpButtons;
 
-        private static int CCSOP_BTN_SIZE = 70;
+        private static int CCSOP_BTN_SIZE = 60;
 
         Cikkcsoport_list cl = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
 
@@ -42,6 +42,10 @@ namespace e_Cafe
         int Cikkek_ScrollPos = 0;
         int Cikkek_MaxScroll = 0;
         int Cikkek_needScroll = 0;
+
+        int AlCsopScrollPos = 0;
+        int Alcsop_MaxScroll = 0;
+        int Alcsop_needScroll = 0;
 
         #region Constructor
         public MRendeles(Asztal iAsztal)
@@ -176,6 +180,7 @@ namespace e_Cafe
             LastCikkcsopMenu = sender;
 
             OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.ID, new SqlConnection(DEFS.ConSTR));
+            Alcsop_MaxScroll = otf.lOTF.Count;
             if (otf.lOTF.Count > 0)
             {
                 pnlOtherFilter.Visible = true;
@@ -191,7 +196,7 @@ namespace e_Cafe
                 tlpOTFButtons.ColumnCount = otf.lOTF.Count+1;
                 tlpOTFButtons.RowCount = 1;
 
-                for (int i = 0; i < (otf.lOTF.Count); i++)
+                for (int i = AlCsopScrollPos; i < (otf.lOTF.Count); i++)
                 {
 
                     OtherFButton bt = new OtherFButton(otf.lOTF[i]);
@@ -216,6 +221,8 @@ namespace e_Cafe
             ((CikkcsopButton)sender).Refresh();
             loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1);
             //if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
+
+            Alcsop_needScroll = pnlOtherFilter.Width / 120;
             
         }
 
@@ -271,7 +278,7 @@ namespace e_Cafe
             Cikkek_MaxScroll = lButtons.Count;
             
             // lehetséges oszlopok * sorok
-            Cikkek_needScroll = ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width) * ((flpCikkek.Height - 10) / DEFS.CIKK_BTN_SIZE.Height);
+            Cikkek_needScroll = (flpCikkek.Width / (DEFS.CIKK_BTN_SIZE.Width+4)) * (flpCikkek.Height / (DEFS.CIKK_BTN_SIZE.Height+4));
 
 
         }
@@ -357,6 +364,7 @@ namespace e_Cafe
             tblRendeles.TableModel = _AktRendeles.getTableModel();
             tblRendeles.Font = DEFS.f2;
             tblRendeles.TableModel.RowHeight = 40;
+            RendelTableSelectionRefresh();
 
 
         }
@@ -375,6 +383,7 @@ namespace e_Cafe
             tblRendeles.TableModel = _AktRendeles.getTableModel();
             tblRendeles.Font = DEFS.f2;
             tblRendeles.TableModel.RowHeight = 40;
+            RendelTableSelectionRefresh();
         }
 
         private void initRendelTablaSumNoDraw()
@@ -393,20 +402,25 @@ namespace e_Cafe
             tblRendeles.TableModel.RowHeight = 40;
         }
 
-        private void tblRendeles_SelectionChanged(object sender, XPTable.Events.SelectionEventArgs e)
+        private void RendelTableSelectionRefresh()
         {
-
             for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
             {
-                tblRendeles.TableModel.Rows[i].Cells[0].Image = null;
+                tblRendeles.TableModel.Rows[i].Cells[0].Image = global::GUI.Properties.Resources.pipaoff;
             }
+
+
 
             foreach (var r in tblRendeles.SelectedItems)
             {
-                r.Cells[0].Image = (Image)myResources.GetObject("OK_ICON");
+                r.Cells[0].Image = global::GUI.Properties.Resources.pipaon;
             }
 
+        }
 
+        private void tblRendeles_SelectionChanged(object sender, XPTable.Events.SelectionEventArgs e)
+        {
+            RendelTableSelectionRefresh();
         }
 
         private void tblRendeles_CellClick(object sender, XPTable.Events.CellMouseEventArgs e)
@@ -709,7 +723,14 @@ namespace e_Cafe
 
         private void button10_Click(object sender, EventArgs e)
         {
+            if (Alcsop_needScroll  < Alcsop_MaxScroll)
+            {
+                AlCsopScrollPos++;
 
+                AlCsopScrollPos = Math.Min(AlCsopScrollPos, Alcsop_MaxScroll);
+
+                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            }
         }
 
         private void btnPrevCikk_Click(object sender, EventArgs e)
@@ -729,7 +750,18 @@ namespace e_Cafe
             {
                 Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
 
-                Cikkek_ScrollPos = Math.Min(Cikkek_ScrollPos, MaxScroll);
+                Cikkek_ScrollPos = Math.Min(Cikkek_ScrollPos, Cikkek_MaxScroll - Cikkek_needScroll);
+                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (Alcsop_needScroll < Alcsop_MaxScroll)
+            {
+                AlCsopScrollPos--;
+
+                AlCsopScrollPos = Math.Max(AlCsopScrollPos, 0);
                 if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
             }
         }

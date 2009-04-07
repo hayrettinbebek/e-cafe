@@ -235,6 +235,7 @@ namespace GUI
         protected void OnLabelClick(object sender, EventArgs e)
         {
             this.OnClick(e);
+            
         }
 
 
@@ -261,6 +262,7 @@ namespace GUI
             FlatAppearance.CheckedBackColor = Color.Transparent;
             
             FlatAppearance.BorderSize = 0;
+            
             
 
             BackColor = Color.Gray;
@@ -307,6 +309,8 @@ namespace GUI
             lAr.Font = f1;
             lAr.Click += this.OnLabelClick;
             this.Controls.Add(lAr);
+
+            
       
         }
 

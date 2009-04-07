@@ -66,6 +66,8 @@
             this.tblHitelek.Size = new System.Drawing.Size(545, 292);
             this.tblHitelek.TabIndex = 8;
             this.tblHitelek.Text = "table1";
+            this.tblHitelek.CellClick += new XPTable.Events.CellMouseEventHandler(this.tblHitelek_CellClick);
+            this.tblHitelek.SelectionChanged += new XPTable.Events.SelectionEventHandler(this.tblHitelek_SelectionChanged);
             // 
             // button3
             // 

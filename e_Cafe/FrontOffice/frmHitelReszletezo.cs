@@ -60,5 +60,32 @@ namespace e_Cafe.FrontOffice
 
             }
         }
+
+        private void tblHitelek_CellClick(object sender, XPTable.Events.CellMouseEventArgs e)
+        {
+            if (tblHitelek.TableModel.Selections.IsRowSelected(e.Row))
+            {
+                tblHitelek.TableModel.Selections.RemoveCell(e.Row, 0);
+            }
+            else
+            {
+                tblHitelek.TableModel.Selections.AddCell(e.Row, 0);
+            }
+        }
+
+        private void tblHitelek_SelectionChanged(object sender, XPTable.Events.SelectionEventArgs e)
+        {
+            for (int i = 0; i < tblHitelek.TableModel.Rows.Count; i++)
+            {
+                tblHitelek.TableModel.Rows[i].Cells[0].Image = global::GUI.Properties.Resources.pipaoff;
+            }
+
+
+
+            foreach (var r in tblHitelek.SelectedItems)
+            {
+                r.Cells[0].Image = global::GUI.Properties.Resources.pipaon;
+            }
+        }
     }
 }

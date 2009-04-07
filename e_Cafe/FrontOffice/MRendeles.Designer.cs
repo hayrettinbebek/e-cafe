@@ -43,9 +43,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOtherFilter = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnAlcsopNext = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnAlcsopPrev = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnNextCikk = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnPrevCikk = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.checkBoxColumn1 = new XPTable.Models.CheckBoxColumn();
             this.numberColumn1 = new XPTable.Models.NumberColumn();
@@ -59,7 +64,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlAlsoGombok = new System.Windows.Forms.Panel();
             this.pnlFunctions = new System.Windows.Forms.Panel();
@@ -80,25 +84,20 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnNextCikk = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnPrevCikk = new System.Windows.Forms.Button();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnlOtherFilter.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             this.pnlButtonPlace.SuspendLayout();
             this.pnlAlsoGombok.SuspendLayout();
             this.pnlFunctions.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlRendeles
@@ -285,55 +284,123 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.button10);
+            this.panel8.Controls.Add(this.btnAlcsopNext);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(492, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(30, 60);
             this.panel8.TabIndex = 1;
             // 
-            // button10
+            // btnAlcsopNext
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(30, 60);
-            this.button10.TabIndex = 5;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.btnAlcsopNext.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlcsopNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlcsopNext.BackgroundImage")));
+            this.btnAlcsopNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAlcsopNext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAlcsopNext.FlatAppearance.BorderSize = 0;
+            this.btnAlcsopNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAlcsopNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAlcsopNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlcsopNext.Location = new System.Drawing.Point(0, 0);
+            this.btnAlcsopNext.Name = "btnAlcsopNext";
+            this.btnAlcsopNext.Size = new System.Drawing.Size(30, 60);
+            this.btnAlcsopNext.TabIndex = 5;
+            this.btnAlcsopNext.UseVisualStyleBackColor = false;
+            this.btnAlcsopNext.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.button9);
+            this.panel7.Controls.Add(this.btnAlcsopPrev);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(25, 60);
             this.panel7.TabIndex = 0;
             // 
-            // button9
+            // btnAlcsopPrev
             // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(25, 60);
-            this.button9.TabIndex = 4;
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnAlcsopPrev.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlcsopPrev.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlcsopPrev.BackgroundImage")));
+            this.btnAlcsopPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAlcsopPrev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAlcsopPrev.FlatAppearance.BorderSize = 0;
+            this.btnAlcsopPrev.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAlcsopPrev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAlcsopPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlcsopPrev.Location = new System.Drawing.Point(0, 0);
+            this.btnAlcsopPrev.Name = "btnAlcsopPrev";
+            this.btnAlcsopPrev.Size = new System.Drawing.Size(25, 60);
+            this.btnAlcsopPrev.TabIndex = 4;
+            this.btnAlcsopPrev.UseVisualStyleBackColor = false;
+            this.btnAlcsopPrev.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 581);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(522, 60);
+            this.panel9.TabIndex = 3;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.Controls.Add(this.btnNextCikk);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(479, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(43, 60);
+            this.panel10.TabIndex = 1;
+            // 
+            // btnNextCikk
+            // 
+            this.btnNextCikk.BackColor = System.Drawing.Color.Transparent;
+            this.btnNextCikk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNextCikk.BackgroundImage")));
+            this.btnNextCikk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNextCikk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNextCikk.FlatAppearance.BorderSize = 0;
+            this.btnNextCikk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnNextCikk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNextCikk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNextCikk.Location = new System.Drawing.Point(0, 0);
+            this.btnNextCikk.Name = "btnNextCikk";
+            this.btnNextCikk.Size = new System.Drawing.Size(43, 60);
+            this.btnNextCikk.TabIndex = 5;
+            this.btnNextCikk.UseVisualStyleBackColor = false;
+            this.btnNextCikk.Click += new System.EventHandler(this.btnNextCikk_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.btnPrevCikk);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(38, 60);
+            this.panel11.TabIndex = 0;
+            // 
+            // btnPrevCikk
+            // 
+            this.btnPrevCikk.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrevCikk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrevCikk.BackgroundImage")));
+            this.btnPrevCikk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrevCikk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrevCikk.FlatAppearance.BorderSize = 0;
+            this.btnPrevCikk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPrevCikk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPrevCikk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevCikk.Location = new System.Drawing.Point(0, 0);
+            this.btnPrevCikk.Name = "btnPrevCikk";
+            this.btnPrevCikk.Size = new System.Drawing.Size(38, 60);
+            this.btnPrevCikk.TabIndex = 4;
+            this.btnPrevCikk.UseVisualStyleBackColor = false;
+            this.btnPrevCikk.Click += new System.EventHandler(this.btnPrevCikk_Click);
             // 
             // timer1
             // 
@@ -361,7 +428,6 @@
             this.pnlButtons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlButtons.Controls.Add(this.pnlButtonPlace);
             this.pnlButtons.Controls.Add(this.panel5);
-            this.pnlButtons.Controls.Add(this.panel6);
             this.pnlButtons.Controls.Add(this.panel2);
             this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlButtons.Location = new System.Drawing.Point(0, 0);
@@ -378,7 +444,7 @@
             this.pnlButtonPlace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlButtonPlace.Location = new System.Drawing.Point(16, 60);
             this.pnlButtonPlace.Name = "pnlButtonPlace";
-            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 568);
+            this.pnlButtonPlace.Size = new System.Drawing.Size(157, 581);
             this.pnlButtonPlace.TabIndex = 6;
             // 
             // button12
@@ -408,7 +474,7 @@
             this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(0, 524);
+            this.button11.Location = new System.Drawing.Point(0, 537);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(157, 44);
             this.button11.TabIndex = 8;
@@ -421,17 +487,8 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 60);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(16, 568);
+            this.panel5.Size = new System.Drawing.Size(16, 581);
             this.panel5.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 628);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(173, 13);
-            this.panel6.TabIndex = 7;
             // 
             // panel2
             // 
@@ -718,73 +775,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 581);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(522, 60);
-            this.panel9.TabIndex = 3;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.Controls.Add(this.btnNextCikk);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(479, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(43, 60);
-            this.panel10.TabIndex = 1;
-            // 
-            // btnNextCikk
-            // 
-            this.btnNextCikk.BackColor = System.Drawing.Color.Transparent;
-            this.btnNextCikk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNextCikk.BackgroundImage")));
-            this.btnNextCikk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNextCikk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNextCikk.FlatAppearance.BorderSize = 0;
-            this.btnNextCikk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnNextCikk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnNextCikk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextCikk.Location = new System.Drawing.Point(0, 0);
-            this.btnNextCikk.Name = "btnNextCikk";
-            this.btnNextCikk.Size = new System.Drawing.Size(43, 60);
-            this.btnNextCikk.TabIndex = 5;
-            this.btnNextCikk.UseVisualStyleBackColor = false;
-            this.btnNextCikk.Click += new System.EventHandler(this.btnNextCikk_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Transparent;
-            this.panel11.Controls.Add(this.btnPrevCikk);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(38, 60);
-            this.panel11.TabIndex = 0;
-            // 
-            // btnPrevCikk
-            // 
-            this.btnPrevCikk.BackColor = System.Drawing.Color.Transparent;
-            this.btnPrevCikk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrevCikk.BackgroundImage")));
-            this.btnPrevCikk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPrevCikk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPrevCikk.FlatAppearance.BorderSize = 0;
-            this.btnPrevCikk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPrevCikk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPrevCikk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevCikk.Location = new System.Drawing.Point(0, 0);
-            this.btnPrevCikk.Name = "btnPrevCikk";
-            this.btnPrevCikk.Size = new System.Drawing.Size(38, 60);
-            this.btnPrevCikk.TabIndex = 4;
-            this.btnPrevCikk.UseVisualStyleBackColor = false;
-            this.btnPrevCikk.Click += new System.EventHandler(this.btnPrevCikk_Click);
-            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -807,6 +797,9 @@
             this.pnlOtherFilter.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.pnlButtons.ResumeLayout(false);
             this.pnlButtonPlace.ResumeLayout(false);
             this.pnlAlsoGombok.ResumeLayout(false);
@@ -814,9 +807,6 @@
             this.pnlFunctions.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -831,7 +821,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel pnlButtonPlace;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlOtherFilter;
         private System.Windows.Forms.Panel panel1;
@@ -869,8 +858,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnAlcsopPrev;
+        private System.Windows.Forms.Button btnAlcsopNext;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Panel panel9;
