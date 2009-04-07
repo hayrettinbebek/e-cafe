@@ -61,7 +61,7 @@ namespace e_Cafe.Torzsek
             if (cIKKBindingSource.Current != null)
             {
                 grpKiszerelesek.Visible = (string)((DataRowView)cIKKBindingSource.Current)["ERTEKESITES_TIPUSA"] == "L";
-                grpEladAr.Visible = (string)((DataRowView)cIKKBindingSource.Current)["ERTEKESITES_TIPUSA"] == "L";
+                //grpEladAr.Visible = (string)((DataRowView)cIKKBindingSource.Current)["ERTEKESITES_TIPUSA"] == "L";
 
 
                 //if (cikkList != null)

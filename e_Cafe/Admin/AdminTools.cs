@@ -237,6 +237,9 @@ namespace e_Cafe
         private void blokkokVisszakereséseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            frmKimentBlokkok nz = new frmKimentBlokkok();
+            nz.MdiParent = this;
+            nz.Show();
         }
 
         private void receptekToolStripMenuItem_Click(object sender, EventArgs e)
