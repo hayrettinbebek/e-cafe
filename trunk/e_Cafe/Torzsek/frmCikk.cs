@@ -236,6 +236,18 @@ namespace e_Cafe.Torzsek
             }
         }
 
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterMegnevezes_TextChanged(object sender, EventArgs e)
+        {
+            cIKKBindingSource.Filter = "MEGNEVEZES like '" + filterMegnevezes.Text + "%'";
+            
+        }
+
 
     }
 }
+

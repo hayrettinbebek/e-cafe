@@ -1099,6 +1099,9 @@
       <DependentUpon>dsUserJog.xsd</DependentUpon>
     </None>
     <None Include="Resources\bezar1.png" />
+    <None Include="SQL\update_022.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SQL\update_021.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
