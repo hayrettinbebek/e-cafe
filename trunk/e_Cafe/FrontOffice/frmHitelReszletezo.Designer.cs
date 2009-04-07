@@ -54,7 +54,6 @@
             // 
             // tblHitelek
             // 
-            this.tblHitelek.AllowSelection = false;
             this.tblHitelek.FullRowSelect = true;
             this.tblHitelek.Location = new System.Drawing.Point(12, 43);
             this.tblHitelek.MultiSelect = true;

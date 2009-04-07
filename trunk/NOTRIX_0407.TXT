@@ -1,0 +1,36 @@
+ - Cikk keresés oszlopok fölé mezõ abban gépelve keres
+ - uj mezõ: cikknél legyen rövid név (
+ - Cikknél pl TEJ felhozza 3x
+ - lapozo nem megy ??? (cikknél - távoli asztalon)
+ - blokk legyen paraméterezhetõ, fejléc (logo, szövegek)
+ - alsó szövegblokk átírható a blokkon
+ - Partner hitel rendezése : összes, soronként (zöld) --> Ugyanugy mint a rendelésfelvitelnél, hogy akár összesítve is láthassa. --> ezt fizeti.
+
+ - cikkeknél min készlet alatt ZÖLD ha 0- akkor piro normál esetben nincs semmi.
+ - ha nincs készleten (a default helyen - def rakt) az értékesítésnél akkor ne csak annyit hozzon át amennyi az eladáshoz kell hanem megadható legyen a mennyisége. ( pl 1 liter, üveg stb -- >kiszerelések kibõvítése)
+
+
+ - Összesített lista : - bevétel
+			- hitelre
+			- hitelrõl ->bevétel
+			- megkülönböztetett zárás
+			- tételek száma			
+
+	Végösszesen és cikkcsoportonként összesen
+
+
+
+ - nap zárásoknál a köztes napokat vegye fel mint nyitott és lezárt nap.
+ - figyelmeztessen belépésnél, ha a nyitott nap régebben nyitva van mint a mai nap figyelmeztesen.
+ - kijelentkezés a felhasználó gombra kattintva: ott csak vált de ne léptessük ki! kilépnie magának kell.
+
+ - Rendelés felvitel során automatikusan hozzon fen ún. kiemelt/preferált termékeket. ugyanez cikkcsoportra is. (TOP 20 és preferált termék) checkboxokkal jelölve a terméknél
+
+ - asztaloknál jelölve, hogy aktív/inaktív vagy nem.
+ - asztaloknál legyen név(szám) vagy se
+
+Éles induláshoz:
+
+ 1. Fenti hibák!
+ 2. Riportok
+ 3. Leltár funkciók bekacspolása!

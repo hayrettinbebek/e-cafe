@@ -214,7 +214,7 @@ namespace GUI
                 lMegnevezes.Text = value.MEGNEVEZES;
                 lKiszereles.Text = value.KISZ_MEGN;
                // lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
-                lKeszletOther.Text = value.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
+                lKeszletOther.Text = (value.fKESZLET_ALL / value.KISZ_MENNY ).ToString("0.00", CultureInfo.InvariantCulture);
                 //lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
                 lAr.Text = value.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
 
@@ -227,7 +227,7 @@ namespace GUI
             lMegnevezes.Text = _Cikk.MEGNEVEZES;
             lKiszereles.Text = _Cikk.KISZ_MEGN;
             //lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
-            lKeszletOther.Text = _Cikk.fKESZLET_ALL.ToString("0.00", CultureInfo.InvariantCulture);
+            lKeszletOther.Text = (_Cikk.fKESZLET_ALL / _Cikk.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
             //lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
             lAr.Text = _Cikk.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
         }

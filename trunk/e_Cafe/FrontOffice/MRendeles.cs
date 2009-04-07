@@ -253,13 +253,13 @@ namespace e_Cafe
                     cb.Enabled = false;
                 }
                 cb.Click += onCikkClick;
-                if (lButtons[i].fKESZLET_ALL <= lButtons[i].OPTIMALIS_KESZLET)
-                {
-                    cb.BackgroundImage = global::GUI.Properties.Resources.piroson;
-                }
-                else
+                if (lButtons[i].fKESZLET_ALL <= lButtons[i].MINIMUM_KESZLET)
                 {
                     cb.BackgroundImage = global::GUI.Properties.Resources.zoldon;
+                }
+                else // ha nincs készlete csak akkor piros! normál pedig egyéb estebn
+                {
+                    cb.BackgroundImage = global::GUI.Properties.Resources.piroson;
                 }
                 cb.BackgroundImageLayout = ImageLayout.Stretch;
                 cb.BackColor = Color.Transparent;
@@ -615,23 +615,23 @@ namespace e_Cafe
                     tblRendeles.TableModel.Selections.AddCell(i, 0);
                 }
             }
+            // PArtner választás nem szükséges csak HITELNÉL
+            //MMPartnerek mp = new MMPartnerek();
+            //mp.SelectMode = true;
+            //mp.neededHitel = 0;
 
-            MMPartnerek mp = new MMPartnerek();
-            mp.SelectMode = true;
-            mp.neededHitel = 0;
-
-            mp.ShowDialog();
-            if (mp.DialogResult == DialogResult.OK)
-            {
+            ////mp.ShowDialog();
+            //if (mp.DialogResult == DialogResult.OK)
+            //{
                 // KP-s fizetés
-                if (mp.SelectedPartner == null)
-                {
+                //if (mp.SelectedPartner == null)
+                //{
                     szamla_fej_id = DEFS.GenerateSzamlaFej(-99, _AktRendeles.fRENDELES_ID, fizmod);
-                }
-                else
-                {
-                    szamla_fej_id = DEFS.GenerateSzamlaFej(mp.SelectedPartner.PARTNER_ID, _AktRendeles.fRENDELES_ID, fizmod);
-                }
+                //}
+                //else
+                //{
+                //    szamla_fej_id = DEFS.GenerateSzamlaFej(mp.SelectedPartner.PARTNER_ID, _AktRendeles.fRENDELES_ID, fizmod);
+                //}
                 if (szamla_fej_id != -1)
                 {
                     foreach (var r in tblRendeles.SelectedItems)
@@ -646,7 +646,7 @@ namespace e_Cafe
                     DEFS.DebugLog("Rendelés fizetve");
 
                 }
-            }
+            //}
 
 
             this.Close();
