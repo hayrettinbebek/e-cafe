@@ -870,7 +870,7 @@ namespace BusinessLogic
                         }
                         
                         t.AFA_SZAZ = (double)rdr["AFA_SZAZ"];
-                   // t.getKeszlet();
+                    t.getKeszlet();
                     lCIKK.Add(t);
                     
                 }

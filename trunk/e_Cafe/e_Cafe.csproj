@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -109,7 +109,6 @@
     <Reference Include="Microsoft.VisualBasic">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -190,12 +189,12 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
-    <Compile Include="dsJOG.Designer.cs">
+    <Compile Include="SQL\dsJOG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsJOG.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsUserJog.Designer.cs">
+    <Compile Include="SQL\dsUserJog.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUserJog.xsd</DependentUpon>
@@ -1076,26 +1075,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsJOG.xsc">
+    <None Include="SQL\dsJOG.xsc">
       <DependentUpon>dsJOG.xsd</DependentUpon>
     </None>
-    <None Include="dsJOG.xsd">
+    <None Include="SQL\dsJOG.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsJOG.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsJOG.xss">
+    <None Include="SQL\dsJOG.xss">
       <DependentUpon>dsJOG.xsd</DependentUpon>
     </None>
-    <None Include="dsUserJog.xsc">
+    <None Include="SQL\dsUserJog.xsc">
       <DependentUpon>dsUserJog.xsd</DependentUpon>
     </None>
-    <None Include="dsUserJog.xsd">
+    <None Include="SQL\dsUserJog.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsUserJog.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsUserJog.xss">
+    <None Include="SQL\dsUserJog.xss">
       <DependentUpon>dsUserJog.xsd</DependentUpon>
     </None>
     <None Include="Resources\bezar1.png" />

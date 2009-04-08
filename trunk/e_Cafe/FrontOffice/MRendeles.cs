@@ -260,16 +260,7 @@ namespace e_Cafe
                     cb.Enabled = false;
                 }
                 cb.Click += onCikkClick;
-                if (lButtons[i].fKESZLET_ALL <= lButtons[i].MINIMUM_KESZLET)
-                {
-                    cb.BackgroundImage = global::GUI.Properties.Resources.zoldon;
-                }
-                else // ha nincs készlete csak akkor piros! normál pedig egyéb estebn
-                {
-                    cb.BackgroundImage = global::GUI.Properties.Resources.piroson;
-                }
-                cb.BackgroundImageLayout = ImageLayout.Stretch;
-                cb.BackColor = Color.Transparent;
+
                 //cb.CIml = ilCikkek;
                 flpCikkek.Controls.Add(cb);
 

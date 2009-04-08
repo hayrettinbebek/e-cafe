@@ -189,20 +189,20 @@ namespace GUI
         private Label lKiszereles;
         private Label lAr;
 
-        public ImageList CIml
-        {
-            get { return (ImageList); }
-            set
-            {
-                ImageList = value;
+        //public ImageList CIml
+        //{
+        //    get { return (ImageList); }
+        //    set
+        //    {
+        //        ImageList = value;
 
-                BackgroundImage = ImageList.Images[0];
-                BackgroundImageLayout = ImageLayout.Stretch;
+        //        BackgroundImage = ImageList.Images[0];
+        //        BackgroundImageLayout = ImageLayout.Stretch;
 
 
-            }
+        //    }
 
-        }
+        //}
 
 
         public Cikk fCIKK
@@ -218,6 +218,21 @@ namespace GUI
                 //lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
                 lAr.Text = value.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
 
+                if (_Cikk.fKESZLET_ALL == 0)// ha nincs készlete csak akkor piros! normál pedig egyéb estebn
+                {
+                    BackgroundImage = global::GUI.Properties.Resources.piroson;
+                }
+                else if (_Cikk.fKESZLET_ALL <= _Cikk.MINIMUM_KESZLET)
+                {
+                    BackgroundImage = global::GUI.Properties.Resources.zoldon;
+                }
+                else 
+                {
+                    BackgroundImage = null;
+                }
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackColor = Color.Transparent;
+
                 
             }
         }
@@ -230,6 +245,20 @@ namespace GUI
             lKeszletOther.Text = (_Cikk.fKESZLET_ALL / _Cikk.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
             //lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
             lAr.Text = _Cikk.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
+            if (_Cikk.fKESZLET_ALL == 0)// ha nincs készlete csak akkor piros! normál pedig egyéb estebn
+            {
+                BackgroundImage = global::GUI.Properties.Resources.piroson;
+            }
+            else if (_Cikk.fKESZLET_ALL <= _Cikk.MINIMUM_KESZLET)
+            {
+                BackgroundImage = global::GUI.Properties.Resources.zoldon;
+            }
+            else
+            {
+                BackgroundImage = null;
+            }
+            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.Transparent;
         }
 
         protected void OnLabelClick(object sender, EventArgs e)

@@ -6,7 +6,7 @@ X - lapozo nem megy ??? (cikknél - távoli asztalon)
  - alsó szövegblokk átírható a blokkon
  - Partner hitel rendezése : összes, soronként (zöld) --> Ugyanugy mint a rendelésfelvitelnél, hogy akár összesítve is láthassa. --> ezt fizeti.
 
- - cikkeknél min készlet alatt ZÖLD ha 0- akkor piro normál esetben nincs semmi.
+X - cikkeknél min készlet alatt ZÖLD ha 0- akkor piro normál esetben nincs semmi.
  - ha nincs készleten (a default helyen - def rakt) az értékesítésnél akkor ne csak annyit hozzon át amennyi az eladáshoz kell hanem megadható legyen a mennyisége. ( pl 1 liter, üveg stb -- >kiszerelések kibõvítése)
 
 
