@@ -68,31 +68,52 @@ FROM         SZAMLA_FEJ</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="_CEGTableAdapter" GeneratorDataComponentClassName="_CEGTableAdapter" Name="_CEG" UserDataComponentName="_CEGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ECAFEConnectionString (Settings)" DbObjectName="ECAFE_0407.dbo._CEG" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     _CEG.*
+FROM         _CEG</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CEG_ID" DataSetColumn="CEG_ID" />
+              <Mapping SourceColumn="CEG_NEV" DataSetColumn="CEG_NEV" />
+              <Mapping SourceColumn="CEG_CIM" DataSetColumn="CEG_CIM" />
+              <Mapping SourceColumn="BLOKK_FOOTER" DataSetColumn="BLOKK_FOOTER" />
+              <Mapping SourceColumn="BLOKK_FOOTER2" DataSetColumn="BLOKK_FOOTER2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsRepSzamla" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsRepSzamla" msprop:Generator_UserDSName="dsRepSzamla" msprop:EnableTableAdapterManager="true">
+  <xs:element name="dsRepSzamla" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsRepSzamla" msprop:Generator_DataSetName="dsRepSzamla" msprop:EnableTableAdapterManager="true">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BLOKK_TETEL" msprop:Generator_UserTableName="BLOKK_TETEL" msprop:Generator_RowDeletedName="BLOKK_TETELRowDeleted" msprop:Generator_TableClassName="BLOKK_TETELDataTable" msprop:Generator_RowChangedName="BLOKK_TETELRowChanged" msprop:Generator_RowClassName="BLOKK_TETELRow" msprop:Generator_RowChangingName="BLOKK_TETELRowChanging" msprop:Generator_RowEvArgName="BLOKK_TETELRowChangeEvent" msprop:Generator_RowEvHandlerName="BLOKK_TETELRowChangeEventHandler" msprop:Generator_TablePropName="BLOKK_TETEL" msprop:Generator_TableVarName="tableBLOKK_TETEL" msprop:Generator_RowDeletingName="BLOKK_TETELRowDeleting">
+        <xs:element name="BLOKK_TETEL" msprop:Generator_UserTableName="BLOKK_TETEL" msprop:Generator_RowDeletedName="BLOKK_TETELRowDeleted" msprop:Generator_RowChangedName="BLOKK_TETELRowChanged" msprop:Generator_RowClassName="BLOKK_TETELRow" msprop:Generator_RowChangingName="BLOKK_TETELRowChanging" msprop:Generator_RowEvArgName="BLOKK_TETELRowChangeEvent" msprop:Generator_RowEvHandlerName="BLOKK_TETELRowChangeEventHandler" msprop:Generator_TableClassName="BLOKK_TETELDataTable" msprop:Generator_TableVarName="tableBLOKK_TETEL" msprop:Generator_RowDeletingName="BLOKK_TETELRowDeleting" msprop:Generator_TablePropName="BLOKK_TETEL">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MENNYISEG" msprop:Generator_UserColumnName="MENNYISEG" msprop:Generator_ColumnPropNameInRow="MENNYISEG" msprop:Generator_ColumnVarNameInTable="columnMENNYISEG" msprop:Generator_ColumnPropNameInTable="MENNYISEGColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="EGYSEGAR" msprop:Generator_UserColumnName="EGYSEGAR" msprop:Generator_ColumnPropNameInRow="EGYSEGAR" msprop:Generator_ColumnVarNameInTable="columnEGYSEGAR" msprop:Generator_ColumnPropNameInTable="EGYSEGARColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="NETTO" msprop:Generator_UserColumnName="NETTO" msprop:Generator_ColumnPropNameInRow="NETTO" msprop:Generator_ColumnVarNameInTable="columnNETTO" msprop:Generator_ColumnPropNameInTable="NETTOColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="AFA" msprop:Generator_UserColumnName="AFA" msprop:Generator_ColumnPropNameInRow="AFA" msprop:Generator_ColumnVarNameInTable="columnAFA" msprop:Generator_ColumnPropNameInTable="AFAColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="BRUTTO" msprop:Generator_UserColumnName="BRUTTO" msprop:Generator_ColumnPropNameInRow="BRUTTO" msprop:Generator_ColumnVarNameInTable="columnBRUTTO" msprop:Generator_ColumnPropNameInTable="BRUTTOColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="CIKK_MEGNEVEZES" msprop:Generator_UserColumnName="CIKK_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="CIKK_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnCIKK_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="CIKK_MEGNEVEZESColumn" minOccurs="0">
+              <xs:element name="MENNYISEG" msprop:Generator_UserColumnName="MENNYISEG" msprop:Generator_ColumnVarNameInTable="columnMENNYISEG" msprop:Generator_ColumnPropNameInRow="MENNYISEG" msprop:Generator_ColumnPropNameInTable="MENNYISEGColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="EGYSEGAR" msprop:Generator_UserColumnName="EGYSEGAR" msprop:Generator_ColumnVarNameInTable="columnEGYSEGAR" msprop:Generator_ColumnPropNameInRow="EGYSEGAR" msprop:Generator_ColumnPropNameInTable="EGYSEGARColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="NETTO" msprop:Generator_UserColumnName="NETTO" msprop:Generator_ColumnVarNameInTable="columnNETTO" msprop:Generator_ColumnPropNameInRow="NETTO" msprop:Generator_ColumnPropNameInTable="NETTOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="AFA" msprop:Generator_UserColumnName="AFA" msprop:Generator_ColumnVarNameInTable="columnAFA" msprop:Generator_ColumnPropNameInRow="AFA" msprop:Generator_ColumnPropNameInTable="AFAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="BRUTTO" msprop:Generator_UserColumnName="BRUTTO" msprop:Generator_ColumnVarNameInTable="columnBRUTTO" msprop:Generator_ColumnPropNameInRow="BRUTTO" msprop:Generator_ColumnPropNameInTable="BRUTTOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="CIKK_MEGNEVEZES" msprop:Generator_UserColumnName="CIKK_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnCIKK_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="CIKK_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="CIKK_MEGNEVEZESColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SZAMLA_FEJ_ID" msprop:Generator_UserColumnName="SZAMLA_FEJ_ID" msprop:Generator_ColumnPropNameInRow="SZAMLA_FEJ_ID" msprop:Generator_ColumnVarNameInTable="columnSZAMLA_FEJ_ID" msprop:Generator_ColumnPropNameInTable="SZAMLA_FEJ_IDColumn" type="xs:int" />
-              <xs:element name="MEGYS_MEGNEVEZES" msprop:Generator_UserColumnName="MEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGYS_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGYS_MEGNEVEZESColumn" minOccurs="0">
+              <xs:element name="SZAMLA_FEJ_ID" msprop:Generator_UserColumnName="SZAMLA_FEJ_ID" msprop:Generator_ColumnVarNameInTable="columnSZAMLA_FEJ_ID" msprop:Generator_ColumnPropNameInRow="SZAMLA_FEJ_ID" msprop:Generator_ColumnPropNameInTable="SZAMLA_FEJ_IDColumn" type="xs:int" />
+              <xs:element name="MEGYS_MEGNEVEZES" msprop:Generator_UserColumnName="MEGYS_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGYS_MEGNEVEZESColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -102,30 +123,65 @@ FROM         SZAMLA_FEJ</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SZAMLA_FEJ" msprop:Generator_UserTableName="SZAMLA_FEJ" msprop:Generator_RowDeletedName="SZAMLA_FEJRowDeleted" msprop:Generator_TableClassName="SZAMLA_FEJDataTable" msprop:Generator_RowChangedName="SZAMLA_FEJRowChanged" msprop:Generator_RowClassName="SZAMLA_FEJRow" msprop:Generator_RowChangingName="SZAMLA_FEJRowChanging" msprop:Generator_RowEvArgName="SZAMLA_FEJRowChangeEvent" msprop:Generator_RowEvHandlerName="SZAMLA_FEJRowChangeEventHandler" msprop:Generator_TablePropName="SZAMLA_FEJ" msprop:Generator_TableVarName="tableSZAMLA_FEJ" msprop:Generator_RowDeletingName="SZAMLA_FEJRowDeleting">
+        <xs:element name="SZAMLA_FEJ" msprop:Generator_UserTableName="SZAMLA_FEJ" msprop:Generator_RowDeletedName="SZAMLA_FEJRowDeleted" msprop:Generator_RowChangedName="SZAMLA_FEJRowChanged" msprop:Generator_RowClassName="SZAMLA_FEJRow" msprop:Generator_RowChangingName="SZAMLA_FEJRowChanging" msprop:Generator_RowEvArgName="SZAMLA_FEJRowChangeEvent" msprop:Generator_RowEvHandlerName="SZAMLA_FEJRowChangeEventHandler" msprop:Generator_TableClassName="SZAMLA_FEJDataTable" msprop:Generator_TableVarName="tableSZAMLA_FEJ" msprop:Generator_RowDeletingName="SZAMLA_FEJRowDeleting" msprop:Generator_TablePropName="SZAMLA_FEJ">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="SZAMLA_FEJ_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="SZAMLA_FEJ_ID" msprop:Generator_ColumnPropNameInRow="SZAMLA_FEJ_ID" msprop:Generator_ColumnVarNameInTable="columnSZAMLA_FEJ_ID" msprop:Generator_ColumnPropNameInTable="SZAMLA_FEJ_IDColumn" type="xs:int" />
-              <xs:element name="SZAMLA_SORSZAM" msprop:Generator_UserColumnName="SZAMLA_SORSZAM" msprop:Generator_ColumnPropNameInRow="SZAMLA_SORSZAM" msprop:Generator_ColumnVarNameInTable="columnSZAMLA_SORSZAM" msprop:Generator_ColumnPropNameInTable="SZAMLA_SORSZAMColumn" minOccurs="0">
+              <xs:element name="SZAMLA_FEJ_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="SZAMLA_FEJ_ID" msprop:Generator_ColumnVarNameInTable="columnSZAMLA_FEJ_ID" msprop:Generator_ColumnPropNameInRow="SZAMLA_FEJ_ID" msprop:Generator_ColumnPropNameInTable="SZAMLA_FEJ_IDColumn" type="xs:int" />
+              <xs:element name="SZAMLA_SORSZAM" msprop:Generator_UserColumnName="SZAMLA_SORSZAM" msprop:Generator_ColumnVarNameInTable="columnSZAMLA_SORSZAM" msprop:Generator_ColumnPropNameInRow="SZAMLA_SORSZAM" msprop:Generator_ColumnPropNameInTable="SZAMLA_SORSZAMColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PARTNER_ID" msprop:Generator_UserColumnName="PARTNER_ID" msprop:Generator_ColumnPropNameInRow="PARTNER_ID" msprop:Generator_ColumnVarNameInTable="columnPARTNER_ID" msprop:Generator_ColumnPropNameInTable="PARTNER_IDColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="RENDELES_ID" msprop:Generator_UserColumnName="RENDELES_ID" msprop:Generator_ColumnPropNameInRow="RENDELES_ID" msprop:Generator_ColumnVarNameInTable="columnRENDELES_ID" msprop:Generator_ColumnPropNameInTable="RENDELES_IDColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="OSSZESEN_NETTO" msprop:Generator_UserColumnName="OSSZESEN_NETTO" msprop:Generator_ColumnPropNameInRow="OSSZESEN_NETTO" msprop:Generator_ColumnVarNameInTable="columnOSSZESEN_NETTO" msprop:Generator_ColumnPropNameInTable="OSSZESEN_NETTOColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="OSSZESEN_BRUTTO" msprop:Generator_UserColumnName="OSSZESEN_BRUTTO" msprop:Generator_ColumnPropNameInRow="OSSZESEN_BRUTTO" msprop:Generator_ColumnVarNameInTable="columnOSSZESEN_BRUTTO" msprop:Generator_ColumnPropNameInTable="OSSZESEN_BRUTTOColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="OSSZESEN_AFA" msprop:Generator_UserColumnName="OSSZESEN_AFA" msprop:Generator_ColumnPropNameInRow="OSSZESEN_AFA" msprop:Generator_ColumnVarNameInTable="columnOSSZESEN_AFA" msprop:Generator_ColumnPropNameInTable="OSSZESEN_AFAColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="KEDVEZMENY" msprop:Generator_UserColumnName="KEDVEZMENY" msprop:Generator_ColumnPropNameInRow="KEDVEZMENY" msprop:Generator_ColumnVarNameInTable="columnKEDVEZMENY" msprop:Generator_ColumnPropNameInTable="KEDVEZMENYColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="FIZETETT_OSSZEG" msprop:Generator_UserColumnName="FIZETETT_OSSZEG" msprop:Generator_ColumnPropNameInRow="FIZETETT_OSSZEG" msprop:Generator_ColumnVarNameInTable="columnFIZETETT_OSSZEG" msprop:Generator_ColumnPropNameInTable="FIZETETT_OSSZEGColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="FIZETESI_MOD" msprop:Generator_UserColumnName="FIZETESI_MOD" msprop:Generator_ColumnPropNameInRow="FIZETESI_MOD" msprop:Generator_ColumnVarNameInTable="columnFIZETESI_MOD" msprop:Generator_ColumnPropNameInTable="FIZETESI_MODColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="SZAMLA_DATUMA" msprop:Generator_UserColumnName="SZAMLA_DATUMA" msprop:Generator_ColumnPropNameInRow="SZAMLA_DATUMA" msprop:Generator_ColumnVarNameInTable="columnSZAMLA_DATUMA" msprop:Generator_ColumnPropNameInTable="SZAMLA_DATUMAColumn" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="EV" msprop:Generator_UserColumnName="EV" msprop:Generator_ColumnPropNameInRow="EV" msprop:Generator_ColumnVarNameInTable="columnEV" msprop:Generator_ColumnPropNameInTable="EVColumn" type="xs:int" />
-              <xs:element name="HO" msprop:Generator_UserColumnName="HO" msprop:Generator_ColumnPropNameInRow="HO" msprop:Generator_ColumnVarNameInTable="columnHO" msprop:Generator_ColumnPropNameInTable="HOColumn" type="xs:int" />
-              <xs:element name="NAP" msprop:Generator_UserColumnName="NAP" msprop:Generator_ColumnPropNameInRow="NAP" msprop:Generator_ColumnVarNameInTable="columnNAP" msprop:Generator_ColumnPropNameInTable="NAPColumn" type="xs:int" />
-              <xs:element name="USER_ID" msprop:Generator_UserColumnName="USER_ID" msprop:Generator_ColumnPropNameInRow="USER_ID" msprop:Generator_ColumnVarNameInTable="columnUSER_ID" msprop:Generator_ColumnPropNameInTable="USER_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PARTNER_ID" msprop:Generator_UserColumnName="PARTNER_ID" msprop:Generator_ColumnVarNameInTable="columnPARTNER_ID" msprop:Generator_ColumnPropNameInRow="PARTNER_ID" msprop:Generator_ColumnPropNameInTable="PARTNER_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="RENDELES_ID" msprop:Generator_UserColumnName="RENDELES_ID" msprop:Generator_ColumnVarNameInTable="columnRENDELES_ID" msprop:Generator_ColumnPropNameInRow="RENDELES_ID" msprop:Generator_ColumnPropNameInTable="RENDELES_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OSSZESEN_NETTO" msprop:Generator_UserColumnName="OSSZESEN_NETTO" msprop:Generator_ColumnVarNameInTable="columnOSSZESEN_NETTO" msprop:Generator_ColumnPropNameInRow="OSSZESEN_NETTO" msprop:Generator_ColumnPropNameInTable="OSSZESEN_NETTOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="OSSZESEN_BRUTTO" msprop:Generator_UserColumnName="OSSZESEN_BRUTTO" msprop:Generator_ColumnVarNameInTable="columnOSSZESEN_BRUTTO" msprop:Generator_ColumnPropNameInRow="OSSZESEN_BRUTTO" msprop:Generator_ColumnPropNameInTable="OSSZESEN_BRUTTOColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="OSSZESEN_AFA" msprop:Generator_UserColumnName="OSSZESEN_AFA" msprop:Generator_ColumnVarNameInTable="columnOSSZESEN_AFA" msprop:Generator_ColumnPropNameInRow="OSSZESEN_AFA" msprop:Generator_ColumnPropNameInTable="OSSZESEN_AFAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="KEDVEZMENY" msprop:Generator_UserColumnName="KEDVEZMENY" msprop:Generator_ColumnVarNameInTable="columnKEDVEZMENY" msprop:Generator_ColumnPropNameInRow="KEDVEZMENY" msprop:Generator_ColumnPropNameInTable="KEDVEZMENYColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FIZETETT_OSSZEG" msprop:Generator_UserColumnName="FIZETETT_OSSZEG" msprop:Generator_ColumnVarNameInTable="columnFIZETETT_OSSZEG" msprop:Generator_ColumnPropNameInRow="FIZETETT_OSSZEG" msprop:Generator_ColumnPropNameInTable="FIZETETT_OSSZEGColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="FIZETESI_MOD" msprop:Generator_UserColumnName="FIZETESI_MOD" msprop:Generator_ColumnVarNameInTable="columnFIZETESI_MOD" msprop:Generator_ColumnPropNameInRow="FIZETESI_MOD" msprop:Generator_ColumnPropNameInTable="FIZETESI_MODColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SZAMLA_DATUMA" msprop:Generator_UserColumnName="SZAMLA_DATUMA" msprop:Generator_ColumnVarNameInTable="columnSZAMLA_DATUMA" msprop:Generator_ColumnPropNameInRow="SZAMLA_DATUMA" msprop:Generator_ColumnPropNameInTable="SZAMLA_DATUMAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EV" msprop:Generator_UserColumnName="EV" msprop:Generator_ColumnVarNameInTable="columnEV" msprop:Generator_ColumnPropNameInRow="EV" msprop:Generator_ColumnPropNameInTable="EVColumn" type="xs:int" />
+              <xs:element name="HO" msprop:Generator_UserColumnName="HO" msprop:Generator_ColumnVarNameInTable="columnHO" msprop:Generator_ColumnPropNameInRow="HO" msprop:Generator_ColumnPropNameInTable="HOColumn" type="xs:int" />
+              <xs:element name="NAP" msprop:Generator_UserColumnName="NAP" msprop:Generator_ColumnVarNameInTable="columnNAP" msprop:Generator_ColumnPropNameInRow="NAP" msprop:Generator_ColumnPropNameInTable="NAPColumn" type="xs:int" />
+              <xs:element name="USER_ID" msprop:Generator_UserColumnName="USER_ID" msprop:Generator_ColumnVarNameInTable="columnUSER_ID" msprop:Generator_ColumnPropNameInRow="USER_ID" msprop:Generator_ColumnPropNameInTable="USER_IDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="_CEG" msprop:Generator_UserTableName="_CEG" msprop:Generator_RowDeletedName="_CEGRowDeleted" msprop:Generator_TableClassName="_CEGDataTable" msprop:Generator_RowChangedName="_CEGRowChanged" msprop:Generator_RowClassName="_CEGRow" msprop:Generator_RowChangingName="_CEGRowChanging" msprop:Generator_RowEvArgName="_CEGRowChangeEvent" msprop:Generator_RowEvHandlerName="_CEGRowChangeEventHandler" msprop:Generator_TablePropName="_CEG" msprop:Generator_TableVarName="table_CEG" msprop:Generator_RowDeletingName="_CEGRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CEG_ID" msprop:Generator_UserColumnName="CEG_ID" msprop:Generator_ColumnPropNameInRow="CEG_ID" msprop:Generator_ColumnVarNameInTable="columnCEG_ID" msprop:Generator_ColumnPropNameInTable="CEG_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CEG_NEV" msprop:Generator_UserColumnName="CEG_NEV" msprop:Generator_ColumnPropNameInRow="CEG_NEV" msprop:Generator_ColumnVarNameInTable="columnCEG_NEV" msprop:Generator_ColumnPropNameInTable="CEG_NEVColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CEG_CIM" msprop:Generator_UserColumnName="CEG_CIM" msprop:Generator_ColumnPropNameInRow="CEG_CIM" msprop:Generator_ColumnVarNameInTable="columnCEG_CIM" msprop:Generator_ColumnPropNameInTable="CEG_CIMColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BLOKK_FOOTER" msprop:Generator_UserColumnName="BLOKK_FOOTER" msprop:Generator_ColumnPropNameInRow="BLOKK_FOOTER" msprop:Generator_ColumnVarNameInTable="columnBLOKK_FOOTER" msprop:Generator_ColumnPropNameInTable="BLOKK_FOOTERColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BLOKK_FOOTER2" msprop:Generator_UserColumnName="BLOKK_FOOTER2" msprop:Generator_ColumnPropNameInRow="BLOKK_FOOTER2" msprop:Generator_ColumnVarNameInTable="columnBLOKK_FOOTER2" msprop:Generator_ColumnPropNameInTable="BLOKK_FOOTER2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

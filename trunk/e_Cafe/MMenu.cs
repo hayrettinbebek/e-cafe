@@ -446,8 +446,9 @@ namespace e_Cafe
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            PartnerSelector r = new PartnerSelector();
-            r.ShowDialog();
+            frmReporting rep = new frmReporting();
+            
+            rep.ShowDialog();
 
 
         }
