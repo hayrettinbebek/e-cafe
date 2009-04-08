@@ -7,7 +7,7 @@ X - lapozo nem megy ??? (cikknél - távoli asztalon)
  - Partner hitel rendezése : összes, soronként (zöld) --> Ugyanugy mint a rendelésfelvitelnél, hogy akár összesítve is láthassa. --> ezt fizeti.
 
 X - cikkeknél min készlet alatt ZÖLD ha 0- akkor piro normál esetben nincs semmi.
- - ha nincs készleten (a default helyen - def rakt) az értékesítésnél akkor ne csak annyit hozzon át amennyi az eladáshoz kell hanem megadható legyen a mennyisége. ( pl 1 liter, üveg stb -- >kiszerelések kibõvítése)
+X - ha nincs készleten (a default helyen - def rakt) az értékesítésnél akkor ne csak annyit hozzon át amennyi az eladáshoz kell hanem megadható legyen a mennyisége. ( pl 1 liter, üveg stb -- >kiszerelések kibõvítése)
 
 
  - Összesített lista : - bevétel
@@ -26,8 +26,8 @@ X - cikkeknél min készlet alatt ZÖLD ha 0- akkor piro normál esetben nincs semmi
 
  - Rendelés felvitel során automatikusan hozzon fen ún. kiemelt/preferált termékeket. ugyanez cikkcsoportra is. (TOP 20 és preferált termék) checkboxokkal jelölve a terméknél
 
- - asztaloknál jelölve, hogy aktív/inaktív vagy nem.
- - asztaloknál legyen név(szám) vagy se
+X - asztaloknál jelölve, hogy aktív/inaktív vagy nem.
+X - asztaloknál legyen név(szám) vagy se
 
 Éles induláshoz:
 

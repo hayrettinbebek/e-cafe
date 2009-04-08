@@ -76,16 +76,23 @@ namespace e_Cafe
 
                 ab.ImageList = GetimageList(aList.lASZTAL[i].fASZTAL_TIPUS, aList.lASZTAL[i].fASZTAL_ROTATE);
                 ab.Location = new Point(aList.lASZTAL[i].fASZTAL_POS_X, aList.lASZTAL[i].fASZTAL_POS_Y);
-                ab.Text = aList.lASZTAL[i].fASZTAL_SZAM;// +". asztal";
+
+                if (aList.lASZTAL[i].fNAME_VISIBLE == 1)
+                {
+                    ab.Text = aList.lASZTAL[i].fASZTAL_SZAM;// +". asztal";
+                }
                 ab.aObj = aList.lASZTAL[i];
                 ab.Size = new System.Drawing.Size(300, 123);
-                if (fm != null)
+                if (aList.lASZTAL[i].fUSEABLE == 1)
                 {
-                    if (_selectMode) { ab.Click += fm.Asztal_click; }// .Asztalok_Click;
-                }
-                if (mm != null)
-                {
-                    if (!_isAdmin) { ab.Click += mm.Asztal_click; }// .Asztalok_Click;
+                    if (fm != null)
+                    {
+                        if (_selectMode) { ab.Click += fm.Asztal_click; }// .Asztalok_Click;
+                    }
+                    if (mm != null)
+                    {
+                        if (!_isAdmin) { ab.Click += mm.Asztal_click; }// .Asztalok_Click;
+                    }
                 }
                 ab.vSelected = aList.lASZTAL[i].vSelected;
                 ab.Invalidate();
@@ -98,6 +105,7 @@ namespace e_Cafe
                     }
                 }
                 if (!_isAdmin) { ab.MouseDown += this.Asztalok_MouseDown; }
+                
                 this.Controls.Add(ab);
             }
 

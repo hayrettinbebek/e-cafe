@@ -341,6 +341,39 @@ namespace BusinessLogic
         {
             return (NettoSzam / (1 + (AfaSzaz / 100)));
         }
+
+        public static void doKeszletAtvezet(int fromRakt, int toRakt, int CikkID, double mennyiseg)
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmdKeszlAtvezet = new SqlCommand("SP_KESZLET_ATVEZET", c);
+
+            cmdKeszlAtvezet.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+
+
+            cmdKeszlAtvezet.Parameters.Add("@from_raktar", SqlDbType.Int);
+            cmdKeszlAtvezet.Parameters["@from_raktar"].Direction = ParameterDirection.Input;
+            cmdKeszlAtvezet.Parameters["@from_raktar"].Value = fromRakt;
+            cmdKeszlAtvezet.Parameters.Add("@to_raktar", SqlDbType.Int);
+            cmdKeszlAtvezet.Parameters["@to_raktar"].Direction = ParameterDirection.Input;
+            cmdKeszlAtvezet.Parameters["@to_raktar"].Value = toRakt;
+            cmdKeszlAtvezet.Parameters.Add("@cikk_id", SqlDbType.Int);
+            cmdKeszlAtvezet.Parameters["@cikk_id"].Direction = ParameterDirection.Input;
+            cmdKeszlAtvezet.Parameters["@cikk_id"].Value = CikkID;
+            cmdKeszlAtvezet.Parameters.Add("@menny", SqlDbType.Float);
+            cmdKeszlAtvezet.Parameters["@menny"].Direction = ParameterDirection.Input;
+            cmdKeszlAtvezet.Parameters["@menny"].Value = mennyiseg;
+            c.Open();
+            cmdKeszlAtvezet.ExecuteNonQuery();
+
+
+            c.Close();
+
+
+
+        }
+
     }
 
     public enum Fizmond : int

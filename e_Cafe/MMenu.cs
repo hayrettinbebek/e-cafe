@@ -32,11 +32,6 @@ namespace e_Cafe
         private static int C_HELYEK_WIDTH = 120;
         private static int C_HELYEK_HEIGHT = 60;
 
-        
-
-
-
-
         public MMenu()
         {
             DEFS.createLogger();
@@ -60,7 +55,6 @@ namespace e_Cafe
             DEFS.R_SYSPAR = new SysParList();
             
             if (!Login()) { Application.Exit(); }
-            
 
         }
 
@@ -75,7 +69,6 @@ namespace e_Cafe
                 Server server = new Server(new ServerConnection(conn));
 
                 server.ConnectionContext.ExecuteNonQuery(script);
-                
 
                 conn.Close();
             }
@@ -84,9 +77,7 @@ namespace e_Cafe
                 DEFS.log(Level.Exception, "Adatbázis update nem sikerült:" + file.ToString() + "\n" + "\n" + e.Message + "\n" + e.StackTrace);
 
             }
-            
-
-            
+ 
         }
 
         private void RefreshDatabase()
@@ -149,8 +140,6 @@ namespace e_Cafe
 
         private void MMenu_Load(object sender, EventArgs e)
         {
-            
-
             blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
             DEFS.LoadNyitottNap();
 
@@ -316,8 +305,6 @@ namespace e_Cafe
 
             Asztal_Button tmp_a = (Asztal_Button)sender;
 
-
-
             if (btnFoglalas.Checked)
             {
                 // Foglalás 
@@ -435,10 +422,6 @@ namespace e_Cafe
         }
 
 
-
-
-
-
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -450,16 +433,13 @@ namespace e_Cafe
             
             rep.ShowDialog();
 
-
         }
-
-
 
         private void textBox1_Click(object sender, EventArgs e)
         {
             TouchKeyboard tk = new TouchKeyboard();
             tk.ShowDialog();
-            
+ 
         }
 
         private void btnPartnerek_Click(object sender, EventArgs e)

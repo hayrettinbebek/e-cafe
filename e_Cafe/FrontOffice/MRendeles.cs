@@ -356,12 +356,16 @@ namespace e_Cafe
                     {
                         // nincs az alapértelmezett raktárban
                         ChooseKeszletek frm = new ChooseKeszletek(((CikkButton)sender).fCIKK.lKESZLET);
+                        frm.needMenny = ((CikkButton)sender).fCIKK.KISZ_MENNY;
                         frm.ShowDialog(this);
 
                         if (frm.DialogResult == DialogResult.OK)
                         {
+                            DEFS.doKeszletAtvezet(frm.retRaktID, ((CikkButton)sender).fCIKK.ALAP_RAKTAR, ((CikkButton)sender).fCIKK.CIKK_ID, frm.retMenny);
+                            ((CikkButton)sender).fCIKK.getKeszlet();
+                            ((CikkButton)sender).re_SetCikk();
 
-                            _AktRendeles.addTetel(((CikkButton)sender).fCIKK, frm.retRaktID);
+                            _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
                             _AktRendeles.SaveRendeles();
                             initRendelTabla();
                         }

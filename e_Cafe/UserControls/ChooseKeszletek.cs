@@ -23,6 +23,8 @@ namespace e_Cafe
         DateTime t1; DateTime t2;
 
         public int retRaktID;
+        public double retMenny;
+        public double needMenny;
 
 
         public ChooseKeszletek(List<CikkKeszlet> l)
@@ -54,6 +56,8 @@ namespace e_Cafe
             tblKeszletek.Font = DEFS.f2;
             tblKeszletek.TableModel.RowHeight = 40;
 
+            txtAthozMenny.Text = needMenny.ToString();
+
 
         }
 
@@ -73,39 +77,31 @@ namespace e_Cafe
         }
 
 
-
-        private void tblKeszletek_MouseUp(object sender, MouseEventArgs e)
-        {
-            t2 = DateTime.Now;
-            label1.Text = t2.ToString();
-            if ((t2 - t1).TotalMilliseconds > 1500)
-            {
-
-                foreach (var s in tblKeszletek.SelectedItems)
-                {
-                    retRaktID = ((RaktCell)s.Cells[0]).rK.fRAKTAR_ID;
-                }
-                if (retRaktID > 0)
-                {
-
-                    DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Abort;
             this.Close();
         }
 
-        private void tblKeszletek_MouseDown(object sender, MouseEventArgs e)
+        private void tblKeszletek_DoubleClick(object sender, EventArgs e)
         {
-            t1 = DateTime.Now;
-            label1.Text = t1.ToString();
- 
+            foreach (var s in tblKeszletek.SelectedItems)
+            {
+                retRaktID = ((RaktCell)s.Cells[0]).rK.fRAKTAR_ID;
+            }
+            if (retRaktID > 0)
+            {
+
+                //DialogResult = DialogResult.OK;
+                //this.Close();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            retMenny = Convert.ToDouble(txtAthozMenny.Text);
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
 
 
