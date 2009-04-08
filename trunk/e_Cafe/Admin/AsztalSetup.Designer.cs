@@ -38,10 +38,10 @@
             this.txtAsztalTipus = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbHelyek = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlAsztalHelyek = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrRot)).BeginInit();
             this.SuspendLayout();
@@ -69,9 +69,15 @@
             // nrRot
             // 
             this.nrRot.Location = new System.Drawing.Point(804, 34);
+            this.nrRot.Maximum = new decimal(new int[] {
+            270,
+            0,
+            0,
+            0});
             this.nrRot.Name = "nrRot";
             this.nrRot.Size = new System.Drawing.Size(65, 20);
             this.nrRot.TabIndex = 6;
+            this.nrRot.ValueChanged += new System.EventHandler(this.txtAsztal_TextChanged);
             // 
             // label4
             // 
@@ -116,6 +122,7 @@
             this.txtAsztalSzam.Name = "txtAsztalSzam";
             this.txtAsztalSzam.Size = new System.Drawing.Size(100, 20);
             this.txtAsztalSzam.TabIndex = 4;
+            this.txtAsztalSzam.TextChanged += new System.EventHandler(this.txtAsztal_TextChanged);
             // 
             // txtAsztalTipus
             // 
@@ -123,7 +130,7 @@
             this.txtAsztalTipus.Name = "txtAsztalTipus";
             this.txtAsztalTipus.Size = new System.Drawing.Size(100, 20);
             this.txtAsztalTipus.TabIndex = 4;
-            this.txtAsztalTipus.TextChanged += new System.EventHandler(this.txtAsztalTipus_TextChanged);
+            this.txtAsztalTipus.TextChanged += new System.EventHandler(this.txtAsztal_TextChanged);
             // 
             // label1
             // 
@@ -142,6 +149,17 @@
             this.cmbHelyek.Size = new System.Drawing.Size(199, 21);
             this.cmbHelyek.TabIndex = 2;
             this.cmbHelyek.SelectedIndexChanged += new System.EventHandler(this.cmbHelyek_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button3.Location = new System.Drawing.Point(141, 44);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(82, 20);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Töröl";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -172,17 +190,6 @@
             this.pnlAsztalHelyek.Name = "pnlAsztalHelyek";
             this.pnlAsztalHelyek.Size = new System.Drawing.Size(988, 510);
             this.pnlAsztalHelyek.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button3.Location = new System.Drawing.Point(141, 44);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 20);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Töröl";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // AsztalSetup
             // 

@@ -18,6 +18,8 @@ namespace BusinessLogic
         public bool vSelected;
         public int fASZTAL_ROTATE;
         public int fRENDELES_ID;
+        public int fNAME_VISIBLE;
+        public int fUSEABLE;
 
         #region Foglalások
 
@@ -46,10 +48,7 @@ namespace BusinessLogic
         #endregion
 
 
-
-
-
-
+        #region Constructor
         public Asztal()
         {
             fASZTAL_ID = -1;
@@ -72,6 +71,8 @@ namespace BusinessLogic
             vSelected = iSelected;
             fRENDELES_ID = -1;
         }
+
+        #endregion
 
         public bool isUsed()
         {
@@ -131,6 +132,7 @@ namespace BusinessLogic
 
             cmd.CommandText = "SELECT a.ASZTAL_ID, a.ASZTAL_SZAM, a.ASZTAL_TIPUS_ID, a.ASZTAL_POS_X, a.ASZTAL_POS_Y, " +
                     " a.ASZTAL_ROTATE, isnull((select max(RENDELES_ID) from RENDELES_FEJ f where f.ASZTAL_ID = a.ASZTAL_ID and isnull(f.FIZETVE,0) = 0 and isnull(AKTIV,1) = 1 ),-1) as RENDELES_ID  " +
+                    " isnull(USEABLE,1) as USEABLE, isnull(NAME_VISIBLE,1) as NAME_VISIBLE " +
                     " FROM ASZTAL a WHERE a.HELY_ID =" + aHelyId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -138,6 +140,8 @@ namespace BusinessLogic
             {
                 Asztal t = new Asztal((int)rdr["ASZTAL_ID"], rdr["ASZTAL_SZAM"].ToString(), (int)rdr["ASZTAL_TIPUS_ID"], (int)rdr["ASZTAL_POS_X"], (int)rdr["ASZTAL_POS_Y"], false, (int)rdr["ASZTAL_ROTATE"]);
                 t.fRENDELES_ID = (int)rdr["RENDELES_ID"];
+                t.fNAME_VISIBLE = (int)rdr["NAME_VISIBLE"];
+                t.fUSEABLE = (int)rdr["USEABLE"];
                 lASZTAL.Add(t);
             }
             rdr.Close();
@@ -197,31 +201,34 @@ namespace BusinessLogic
 
 
         }
+
         public void  SaveList()
         {
             
             for (int i = 0; i < lASZTAL.Count; i++)
             {
-                SetAsztalPos(lASZTAL[i].fASZTAL_ID, lASZTAL[i].fASZTAL_POS_X, lASZTAL[i].fASZTAL_POS_Y, lASZTAL[i].fASZTAL_TIPUS, lASZTAL[i].fASZTAL_SZAM, lASZTAL[i].fASZTAL_ROTATE);
+                SetAsztalPos(lASZTAL[i].fASZTAL_ID, lASZTAL[i].fASZTAL_POS_X, lASZTAL[i].fASZTAL_POS_Y, lASZTAL[i].fASZTAL_TIPUS, lASZTAL[i].fASZTAL_SZAM, lASZTAL[i].fASZTAL_ROTATE, lASZTAL[i].fUSEABLE, lASZTAL[i].fNAME_VISIBLE);
 
             }
 
 
         }
-        private bool SetAsztalPos(int iASZTAL_ID, int iPos_x, int iPos_y, int aTip, string aSzam, int aRot)
+        private bool SetAsztalPos(int iASZTAL_ID, int iPos_x, int iPos_y, int aTip, string aSzam, int aRot, int useable, int name_vis)
         {
             SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = sc;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE ASZTAL SET ASZTAL_POS_X = @POS_X, ASZTAL_POS_Y = @POS_Y, ASZTAL_ROTATE = @ROT, ASZTAL_TIPUS_ID = @A_TIP, ASZTAL_SZAM = @ASZAM WHERE ASZTAL_ID = @ASZTAL_ID";
+            cmd.CommandText = "UPDATE ASZTAL SET ASZTAL_POS_X = @POS_X, ASZTAL_POS_Y = @POS_Y, ASZTAL_ROTATE = @ROT, ASZTAL_TIPUS_ID = @A_TIP, ASZTAL_SZAM = @ASZAM, USEABLE = @USE, NAME_VISIBLE = @NAME_VIS WHERE ASZTAL_ID = @ASZTAL_ID";
             cmd.Parameters.Add(new SqlParameter("POS_X", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("POS_Y", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("ASZTAL_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("ASZAM", SqlDbType.VarChar));
             cmd.Parameters.Add(new SqlParameter("A_TIP", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("ROT", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("USE", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("NAME_VIS", SqlDbType.Int));
 
             cmd.Parameters["POS_X"].Value = iPos_x;
             cmd.Parameters["POS_Y"].Value = iPos_y;
@@ -230,6 +237,9 @@ namespace BusinessLogic
             cmd.Parameters["ASZAM"].Value = aSzam;
             cmd.Parameters["A_TIP"].Value = aTip;
             cmd.Parameters["ROT"].Value = aRot;
+            cmd.Parameters["USE"].Value = useable;
+            cmd.Parameters["NAME_VIS"].Value = name_vis;
+
             try
             {
                 cmd.ExecuteNonQuery();

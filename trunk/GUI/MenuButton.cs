@@ -386,8 +386,8 @@ namespace GUI
         {
             base.OnCheckedChanged(e);
 
-            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.on_user; }
-            else { BackgroundImage = global::GUI.Properties.Resources.off_user; }
+            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.Partner_on; }
+            else { BackgroundImage = global::GUI.Properties.Resources.partner_off; }
 
         }
 
@@ -395,7 +395,7 @@ namespace GUI
         public PartnerButton()
         {
             Width = 150;
-            Height = 75;
+            Height = 50;
             // Get the dimension of the client rectangle 
             Rectangle rect = this.ClientRectangle;
             // Invoke the unmanaged DLL function here to create the RoundRectangleRegion
@@ -414,8 +414,8 @@ namespace GUI
 
 
 
-            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.on_user; }
-            else { BackgroundImage = global::GUI.Properties.Resources.off_user; }
+            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.Partner_on; }
+            else { BackgroundImage = global::GUI.Properties.Resources.partner_off; }
             BackgroundImageLayout = ImageLayout.Stretch;
 
             FlatStyle = FlatStyle.Flat;
@@ -426,7 +426,7 @@ namespace GUI
             lNAME.Width = 50;
             lNAME.Height = 20;
             lNAME.BackColor = Color.Transparent;
-            lNAME.Location = new Point(90, 25);
+            lNAME.Location = new Point(45, 10);
             lNAME.Font = f1;
             lNAME.Click += this.OnLabelClick;
             this.Controls.Add(lNAME);
@@ -436,7 +436,7 @@ namespace GUI
             lNAME2.Width = 50;
             lNAME2.Height = 20;
             lNAME2.BackColor = Color.Transparent;
-            lNAME2.Location = new Point(91, 45);
+            lNAME2.Location = new Point(45, 30);
             lNAME2.Font = f1;
             lNAME2.Click += this.OnLabelClick;
             this.Controls.Add(lNAME2);
