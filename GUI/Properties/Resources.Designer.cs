@@ -137,6 +137,20 @@ namespace GUI.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap partner_off {
+            get {
+                object obj = ResourceManager.GetObject("partner_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap Partner_on {
+            get {
+                object obj = ResourceManager.GetObject("Partner_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap pipaoff {
             get {
                 object obj = ResourceManager.GetObject("pipaoff", resourceCulture);

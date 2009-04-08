@@ -34,6 +34,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.rbOsszesitett = new System.Windows.Forms.RadioButton();
+            this.rbReszletek = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.tblHitelek)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // 
             this.tblHitelek.AllowSelection = false;
             this.tblHitelek.FullRowSelect = true;
-            this.tblHitelek.Location = new System.Drawing.Point(12, 43);
+            this.tblHitelek.Location = new System.Drawing.Point(12, 79);
             this.tblHitelek.MultiSelect = true;
             this.tblHitelek.Name = "tblHitelek";
             this.tblHitelek.NoItemsText = "Nincs kiválasztott cikk";
@@ -65,7 +67,7 @@
             this.tblHitelek.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tblHitelek.SelectionForeColor = System.Drawing.Color.Black;
             this.tblHitelek.SelectionStyle = XPTable.Models.SelectionStyle.Grid;
-            this.tblHitelek.Size = new System.Drawing.Size(545, 292);
+            this.tblHitelek.Size = new System.Drawing.Size(545, 256);
             this.tblHitelek.TabIndex = 8;
             this.tblHitelek.Text = "table1";
             this.tblHitelek.CellClick += new XPTable.Events.CellMouseEventHandler(this.tblHitelek_CellClick);
@@ -117,6 +119,40 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // rbOsszesitett
+            // 
+            this.rbOsszesitett.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbOsszesitett.BackColor = System.Drawing.Color.Silver;
+            this.rbOsszesitett.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
+            this.rbOsszesitett.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.rbOsszesitett.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.rbOsszesitett.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbOsszesitett.Location = new System.Drawing.Point(175, 43);
+            this.rbOsszesitett.Name = "rbOsszesitett";
+            this.rbOsszesitett.Size = new System.Drawing.Size(130, 30);
+            this.rbOsszesitett.TabIndex = 15;
+            this.rbOsszesitett.Text = "Összesített";
+            this.rbOsszesitett.UseVisualStyleBackColor = false;
+            this.rbOsszesitett.CheckedChanged += new System.EventHandler(this.rbOsszesitett_CheckedChanged);
+            // 
+            // rbReszletek
+            // 
+            this.rbReszletek.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbReszletek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rbReszletek.Checked = true;
+            this.rbReszletek.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rbReszletek.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.rbReszletek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.rbReszletek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbReszletek.Location = new System.Drawing.Point(44, 43);
+            this.rbReszletek.Name = "rbReszletek";
+            this.rbReszletek.Size = new System.Drawing.Size(125, 30);
+            this.rbReszletek.TabIndex = 15;
+            this.rbReszletek.TabStop = true;
+            this.rbReszletek.Text = "Részletek";
+            this.rbReszletek.UseVisualStyleBackColor = false;
+            this.rbReszletek.CheckedChanged += new System.EventHandler(this.rbReszletek_CheckedChanged);
+            // 
             // frmHitelReszletezo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +161,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(704, 375);
             this.ControlBox = false;
+            this.Controls.Add(this.rbReszletek);
+            this.Controls.Add(this.rbOsszesitett);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -147,5 +185,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.RadioButton rbOsszesitett;
+        private System.Windows.Forms.RadioButton rbReszletek;
     }
 }

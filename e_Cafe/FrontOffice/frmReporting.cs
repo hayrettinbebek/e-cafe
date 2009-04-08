@@ -32,7 +32,7 @@ namespace e_Cafe.FrontOffice
         private void frmReporting_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dsRepSzamla._CEG' table. You can move, or remove it, as needed.
-            this._CEGTableAdapter.Fill(this.dsRepSzamla._CEG);
+            //this._CEGTableAdapter.Fill(this.dsRepSzamla._CEG);
             Blokk1.FileName = DEFS.DefProgramLocation + @"\Reports\Blokk.rpt";
             //bLOKK_TETELTableAdapter.Fill(dsRepSzamla.BLOKK_TETEL, Szla_id);
             //sZAMLA_FEJTableAdapter.Fill(dsRepSzamla.SZAMLA_FEJ);

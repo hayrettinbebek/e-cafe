@@ -863,6 +863,8 @@
     <Content Include="asztal\pult\pult_off.png" />
     <Content Include="asztal\pult\pult_on.png" />
     <Content Include="asztal\pult\pult_over.png" />
+    <None Include="Resources\partner_off.png" />
+    <None Include="Resources\Partner_on.png" />
     <None Include="Resources\pipaon.png" />
     <None Include="Resources\pipaoff.png" />
     <None Include="Resources\al_aktiv.png" />

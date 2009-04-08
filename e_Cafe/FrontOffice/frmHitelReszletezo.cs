@@ -19,6 +19,8 @@ namespace e_Cafe.FrontOffice
     {
         private PartnerHitel _aktPH;
         public int pPartner;
+        Size NOT_SELECTED_SIZE = new Size(125,30);
+        Size SELECTED_SIZE = new Size(130,40);
         public frmHitelReszletezo()
         {
             InitializeComponent();
@@ -38,6 +40,9 @@ namespace e_Cafe.FrontOffice
             tblHitelek.TableModel = _aktPH.getTableModel();
             tblHitelek.Font = DEFS.f2;
             tblHitelek.TableModel.RowHeight = 40;
+
+            rbReszletek.Checked = true;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -97,6 +102,18 @@ namespace e_Cafe.FrontOffice
 
                 tblHitelek.TableModel.Selections.AddCell(i, 0);
             }
+        }
+
+
+
+        private void rbOsszesitett_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rbReszletek_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
 
         

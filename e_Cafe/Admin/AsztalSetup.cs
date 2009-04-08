@@ -80,7 +80,7 @@ namespace e_Cafe
             lblAktAsztalId.Text = AktAsztal.fASZTAL_ID.ToString() ;
         }
 
-        private void txtAsztalTipus_TextChanged(object sender, EventArgs e)
+        private void txtAsztal_TextChanged(object sender, EventArgs e)
         {
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(txtAsztalTipus.Text);
