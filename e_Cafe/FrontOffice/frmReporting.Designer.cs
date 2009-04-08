@@ -45,10 +45,13 @@
             this.sZAMLAFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sZAMLA_FEJTableAdapter = new e_Cafe.SQL.dsRepSzamlaTableAdapters.SZAMLA_FEJTableAdapter();
             this.Blokk2 = new e_Cafe.Reports.Blokk();
+            this.cEGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CEGTableAdapter = new e_Cafe.SQL.dsRepSzamlaTableAdapters._CEGTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsRepSzamla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLOKKTETELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sZAMLAFEJBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cEGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,8 +72,10 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.SelectionFormula = "";
             this.crystalReportViewer1.Size = new System.Drawing.Size(438, 491);
             this.crystalReportViewer1.TabIndex = 3;
+            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
             // Blokk1
             // 
@@ -116,6 +121,7 @@
             // 
             // txtId
             // 
+            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cEGBindingSource, "CEG_NEV", true));
             this.txtId.Location = new System.Drawing.Point(36, 14);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
@@ -158,6 +164,15 @@
             // 
             this.sZAMLA_FEJTableAdapter.ClearBeforeFill = true;
             // 
+            // cEGBindingSource
+            // 
+            this.cEGBindingSource.DataMember = "_CEG";
+            this.cEGBindingSource.DataSource = this.dsRepSzamla;
+            // 
+            // _CEGTableAdapter
+            // 
+            this._CEGTableAdapter.ClearBeforeFill = true;
+            // 
             // frmReporting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsRepSzamla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLOKKTETELBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sZAMLAFEJBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cEGBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +219,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
         private e_Cafe.Reports.Blokk Blokk2;
+        private System.Windows.Forms.BindingSource cEGBindingSource;
+        private e_Cafe.SQL.dsRepSzamlaTableAdapters._CEGTableAdapter _CEGTableAdapter;
     }
 }

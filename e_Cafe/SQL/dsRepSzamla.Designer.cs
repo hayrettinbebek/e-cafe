@@ -29,6 +29,8 @@ namespace e_Cafe.SQL {
         
         private SZAMLA_FEJDataTable tableSZAMLA_FEJ;
         
+        private _CEGDataTable table_CEG;
+        
         private global::System.Data.DataRelation relationBLOKK_TETEL_SZAMLA_FEJ;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -63,6 +65,9 @@ namespace e_Cafe.SQL {
                 if ((ds.Tables["SZAMLA_FEJ"] != null)) {
                     base.Tables.Add(new SZAMLA_FEJDataTable(ds.Tables["SZAMLA_FEJ"]));
                 }
+                if ((ds.Tables["_CEG"] != null)) {
+                    base.Tables.Add(new _CEGDataTable(ds.Tables["_CEG"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -96,6 +101,15 @@ namespace e_Cafe.SQL {
         public SZAMLA_FEJDataTable SZAMLA_FEJ {
             get {
                 return this.tableSZAMLA_FEJ;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _CEGDataTable _CEG {
+            get {
+                return this.table_CEG;
             }
         }
         
@@ -164,6 +178,9 @@ namespace e_Cafe.SQL {
                 if ((ds.Tables["SZAMLA_FEJ"] != null)) {
                     base.Tables.Add(new SZAMLA_FEJDataTable(ds.Tables["SZAMLA_FEJ"]));
                 }
+                if ((ds.Tables["_CEG"] != null)) {
+                    base.Tables.Add(new _CEGDataTable(ds.Tables["_CEG"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -206,6 +223,12 @@ namespace e_Cafe.SQL {
                     this.tableSZAMLA_FEJ.InitVars();
                 }
             }
+            this.table_CEG = ((_CEGDataTable)(base.Tables["_CEG"]));
+            if ((initTable == true)) {
+                if ((this.table_CEG != null)) {
+                    this.table_CEG.InitVars();
+                }
+            }
             this.relationBLOKK_TETEL_SZAMLA_FEJ = this.Relations["BLOKK_TETEL_SZAMLA_FEJ"];
         }
         
@@ -220,6 +243,8 @@ namespace e_Cafe.SQL {
             base.Tables.Add(this.tableBLOKK_TETEL);
             this.tableSZAMLA_FEJ = new SZAMLA_FEJDataTable();
             base.Tables.Add(this.tableSZAMLA_FEJ);
+            this.table_CEG = new _CEGDataTable();
+            base.Tables.Add(this.table_CEG);
             this.relationBLOKK_TETEL_SZAMLA_FEJ = new global::System.Data.DataRelation("BLOKK_TETEL_SZAMLA_FEJ", new global::System.Data.DataColumn[] {
                         this.tableBLOKK_TETEL.SZAMLA_FEJ_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableSZAMLA_FEJ.SZAMLA_FEJ_IDColumn}, false);
@@ -233,6 +258,11 @@ namespace e_Cafe.SQL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private bool ShouldSerializeSZAMLA_FEJ() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerialize_CEG() {
             return false;
         }
         
@@ -292,6 +322,8 @@ namespace e_Cafe.SQL {
         public delegate void BLOKK_TETELRowChangeEventHandler(object sender, BLOKK_TETELRowChangeEvent e);
         
         public delegate void SZAMLA_FEJRowChangeEventHandler(object sender, SZAMLA_FEJRowChangeEvent e);
+        
+        public delegate void _CEGRowChangeEventHandler(object sender, _CEGRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1034,6 +1066,285 @@ namespace e_Cafe.SQL {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _CEGDataTable : global::System.Data.TypedTableBase<_CEGRow> {
+            
+            private global::System.Data.DataColumn columnCEG_ID;
+            
+            private global::System.Data.DataColumn columnCEG_NEV;
+            
+            private global::System.Data.DataColumn columnCEG_CIM;
+            
+            private global::System.Data.DataColumn columnBLOKK_FOOTER;
+            
+            private global::System.Data.DataColumn columnBLOKK_FOOTER2;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public _CEGDataTable() {
+                this.TableName = "_CEG";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal _CEGDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected _CEGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CEG_IDColumn {
+                get {
+                    return this.columnCEG_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CEG_NEVColumn {
+                get {
+                    return this.columnCEG_NEV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CEG_CIMColumn {
+                get {
+                    return this.columnCEG_CIM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BLOKK_FOOTERColumn {
+                get {
+                    return this.columnBLOKK_FOOTER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn BLOKK_FOOTER2Column {
+                get {
+                    return this.columnBLOKK_FOOTER2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public _CEGRow this[int index] {
+                get {
+                    return ((_CEGRow)(this.Rows[index]));
+                }
+            }
+            
+            public event _CEGRowChangeEventHandler _CEGRowChanging;
+            
+            public event _CEGRowChangeEventHandler _CEGRowChanged;
+            
+            public event _CEGRowChangeEventHandler _CEGRowDeleting;
+            
+            public event _CEGRowChangeEventHandler _CEGRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Add_CEGRow(_CEGRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public _CEGRow Add_CEGRow(int CEG_ID, string CEG_NEV, string CEG_CIM, string BLOKK_FOOTER, string BLOKK_FOOTER2) {
+                _CEGRow row_CEGRow = ((_CEGRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CEG_ID,
+                        CEG_NEV,
+                        CEG_CIM,
+                        BLOKK_FOOTER,
+                        BLOKK_FOOTER2};
+                row_CEGRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_CEGRow);
+                return row_CEGRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                _CEGDataTable cln = ((_CEGDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _CEGDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnCEG_ID = base.Columns["CEG_ID"];
+                this.columnCEG_NEV = base.Columns["CEG_NEV"];
+                this.columnCEG_CIM = base.Columns["CEG_CIM"];
+                this.columnBLOKK_FOOTER = base.Columns["BLOKK_FOOTER"];
+                this.columnBLOKK_FOOTER2 = base.Columns["BLOKK_FOOTER2"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnCEG_ID = new global::System.Data.DataColumn("CEG_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCEG_ID);
+                this.columnCEG_NEV = new global::System.Data.DataColumn("CEG_NEV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCEG_NEV);
+                this.columnCEG_CIM = new global::System.Data.DataColumn("CEG_CIM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCEG_CIM);
+                this.columnBLOKK_FOOTER = new global::System.Data.DataColumn("BLOKK_FOOTER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBLOKK_FOOTER);
+                this.columnBLOKK_FOOTER2 = new global::System.Data.DataColumn("BLOKK_FOOTER2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBLOKK_FOOTER2);
+                this.columnCEG_NEV.MaxLength = 100;
+                this.columnCEG_CIM.MaxLength = 100;
+                this.columnBLOKK_FOOTER.MaxLength = 100;
+                this.columnBLOKK_FOOTER2.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public _CEGRow New_CEGRow() {
+                return ((_CEGRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _CEGRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(_CEGRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._CEGRowChanged != null)) {
+                    this._CEGRowChanged(this, new _CEGRowChangeEvent(((_CEGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._CEGRowChanging != null)) {
+                    this._CEGRowChanging(this, new _CEGRowChangeEvent(((_CEGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._CEGRowDeleted != null)) {
+                    this._CEGRowDeleted(this, new _CEGRowChangeEvent(((_CEGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._CEGRowDeleting != null)) {
+                    this._CEGRowDeleting(this, new _CEGRowChangeEvent(((_CEGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Remove_CEGRow(_CEGRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsRepSzamla ds = new dsRepSzamla();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_CEGDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -1584,6 +1895,146 @@ namespace e_Cafe.SQL {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public partial class _CEGRow : global::System.Data.DataRow {
+            
+            private _CEGDataTable table_CEG;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal _CEGRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.table_CEG = ((_CEGDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int CEG_ID {
+                get {
+                    try {
+                        return ((int)(this[this.table_CEG.CEG_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CEG_ID\' in table \'_CEG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.table_CEG.CEG_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string CEG_NEV {
+                get {
+                    try {
+                        return ((string)(this[this.table_CEG.CEG_NEVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CEG_NEV\' in table \'_CEG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.table_CEG.CEG_NEVColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string CEG_CIM {
+                get {
+                    try {
+                        return ((string)(this[this.table_CEG.CEG_CIMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CEG_CIM\' in table \'_CEG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.table_CEG.CEG_CIMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BLOKK_FOOTER {
+                get {
+                    try {
+                        return ((string)(this[this.table_CEG.BLOKK_FOOTERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BLOKK_FOOTER\' in table \'_CEG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.table_CEG.BLOKK_FOOTERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string BLOKK_FOOTER2 {
+                get {
+                    try {
+                        return ((string)(this[this.table_CEG.BLOKK_FOOTER2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BLOKK_FOOTER2\' in table \'_CEG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.table_CEG.BLOKK_FOOTER2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCEG_IDNull() {
+                return this.IsNull(this.table_CEG.CEG_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCEG_IDNull() {
+                this[this.table_CEG.CEG_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCEG_NEVNull() {
+                return this.IsNull(this.table_CEG.CEG_NEVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCEG_NEVNull() {
+                this[this.table_CEG.CEG_NEVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCEG_CIMNull() {
+                return this.IsNull(this.table_CEG.CEG_CIMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCEG_CIMNull() {
+                this[this.table_CEG.CEG_CIMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsBLOKK_FOOTERNull() {
+                return this.IsNull(this.table_CEG.BLOKK_FOOTERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetBLOKK_FOOTERNull() {
+                this[this.table_CEG.BLOKK_FOOTERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsBLOKK_FOOTER2Null() {
+                return this.IsNull(this.table_CEG.BLOKK_FOOTER2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetBLOKK_FOOTER2Null() {
+                this[this.table_CEG.BLOKK_FOOTER2Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -1632,6 +2083,37 @@ namespace e_Cafe.SQL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public SZAMLA_FEJRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public class _CEGRowChangeEvent : global::System.EventArgs {
+            
+            private _CEGRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public _CEGRowChangeEvent(_CEGRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public _CEGRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1987,6 +2469,167 @@ WHERE     (SZAMLA_TETEL.SZAMLA_FEJ_ID = @szla_fej)";
         public virtual dsRepSzamla.SZAMLA_FEJDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             dsRepSzamla.SZAMLA_FEJDataTable dataTable = new dsRepSzamla.SZAMLA_FEJDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class _CEGTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public _CEGTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "_CEG";
+            tableMapping.ColumnMappings.Add("CEG_ID", "CEG_ID");
+            tableMapping.ColumnMappings.Add("CEG_NEV", "CEG_NEV");
+            tableMapping.ColumnMappings.Add("CEG_CIM", "CEG_CIM");
+            tableMapping.ColumnMappings.Add("BLOKK_FOOTER", "BLOKK_FOOTER");
+            tableMapping.ColumnMappings.Add("BLOKK_FOOTER2", "BLOKK_FOOTER2");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::e_Cafe.Properties.Settings.Default.ECAFEConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT     _CEG.*\r\nFROM         _CEG";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsRepSzamla._CEGDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsRepSzamla._CEGDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsRepSzamla._CEGDataTable dataTable = new dsRepSzamla._CEGDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
