@@ -58,6 +58,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.chkVirtKeszl = new System.Windows.Forms.CheckBox();
             this.chkAutoRendGen = new System.Windows.Forms.CheckBox();
             this.txtOptKeszl = new System.Windows.Forms.TextBox();
             this.txtMinKeszl = new System.Windows.Forms.TextBox();
@@ -85,7 +86,11 @@
             this.netToBrut = new System.Windows.Forms.Button();
             this.bruttoToNetto = new System.Windows.Forms.Button();
             this.cIKKCSOPORTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.chkVirtKeszl = new System.Windows.Forms.CheckBox();
+            this.txtROVID_NEV = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkTOPCikk = new System.Windows.Forms.CheckBox();
+            this.chkCikkcsopPrefer = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
@@ -100,12 +105,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 35);
+            this.label5.Location = new System.Drawing.Point(28, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 14;
@@ -114,7 +120,7 @@
             // txtCikkszam
             // 
             this.txtCikkszam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCikkszam.Location = new System.Drawing.Point(86, 32);
+            this.txtCikkszam.Location = new System.Drawing.Point(86, 61);
             this.txtCikkszam.Name = "txtCikkszam";
             this.txtCikkszam.Size = new System.Drawing.Size(123, 20);
             this.txtCikkszam.TabIndex = 13;
@@ -140,7 +146,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 61);
+            this.label2.Location = new System.Drawing.Point(17, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 16;
@@ -152,7 +158,7 @@
             this.cmdCikkcsop.DataSource = this.cIKKCSOPORTBindingSource;
             this.cmdCikkcsop.DisplayMember = "CIKKCSOPORT_NEV";
             this.cmdCikkcsop.FormattingEnabled = true;
-            this.cmdCikkcsop.Location = new System.Drawing.Point(86, 58);
+            this.cmdCikkcsop.Location = new System.Drawing.Point(86, 87);
             this.cmdCikkcsop.Name = "cmdCikkcsop";
             this.cmdCikkcsop.Size = new System.Drawing.Size(123, 21);
             this.cmdCikkcsop.TabIndex = 15;
@@ -172,7 +178,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(240, 36);
+            this.label3.Location = new System.Drawing.Point(240, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 18;
@@ -181,7 +187,7 @@
             // txtGyorskod
             // 
             this.txtGyorskod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGyorskod.Location = new System.Drawing.Point(298, 33);
+            this.txtGyorskod.Location = new System.Drawing.Point(298, 62);
             this.txtGyorskod.Name = "txtGyorskod";
             this.txtGyorskod.Size = new System.Drawing.Size(123, 20);
             this.txtGyorskod.TabIndex = 17;
@@ -189,7 +195,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(242, 91);
+            this.label7.Location = new System.Drawing.Point(242, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 26;
@@ -198,7 +204,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(239, 62);
+            this.label6.Location = new System.Drawing.Point(239, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 25;
@@ -207,7 +213,7 @@
             // txtEAN
             // 
             this.txtEAN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEAN.Location = new System.Drawing.Point(298, 88);
+            this.txtEAN.Location = new System.Drawing.Point(298, 117);
             this.txtEAN.Name = "txtEAN";
             this.txtEAN.Size = new System.Drawing.Size(151, 20);
             this.txtEAN.TabIndex = 23;
@@ -216,7 +222,7 @@
             // 
             this.txtSZJ.AcceptsReturn = true;
             this.txtSZJ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSZJ.Location = new System.Drawing.Point(298, 59);
+            this.txtSZJ.Location = new System.Drawing.Point(298, 88);
             this.txtSZJ.Name = "txtSZJ";
             this.txtSZJ.Size = new System.Drawing.Size(151, 20);
             this.txtSZJ.TabIndex = 24;
@@ -256,7 +262,7 @@
             this.cmbOTF.DataSource = this.cIKCSOPOTHERFILTERBindingSource1;
             this.cmbOTF.DisplayMember = "OTHER_NAME";
             this.cmbOTF.FormattingEnabled = true;
-            this.cmbOTF.Location = new System.Drawing.Point(86, 85);
+            this.cmbOTF.Location = new System.Drawing.Point(86, 114);
             this.cmbOTF.Name = "cmbOTF";
             this.cmbOTF.Size = new System.Drawing.Size(123, 21);
             this.cmbOTF.TabIndex = 20;
@@ -285,7 +291,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 88);
+            this.label8.Location = new System.Drawing.Point(29, 117);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 13);
             this.label8.TabIndex = 19;
@@ -320,9 +326,9 @@
             this.groupBox1.Controls.Add(this.txtMinKeszl);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cmbDefRakt);
-            this.groupBox1.Location = new System.Drawing.Point(10, 152);
+            this.groupBox1.Location = new System.Drawing.Point(4, 165);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(565, 101);
+            this.groupBox1.Size = new System.Drawing.Size(678, 74);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Készlet adatok";
@@ -339,11 +345,21 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(292, 53);
+            this.label11.Location = new System.Drawing.Point(481, 22);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 15;
             this.label11.Text = "Optimális készlet";
+            // 
+            // chkVirtKeszl
+            // 
+            this.chkVirtKeszl.AutoSize = true;
+            this.chkVirtKeszl.Location = new System.Drawing.Point(216, 49);
+            this.chkVirtKeszl.Name = "chkVirtKeszl";
+            this.chkVirtKeszl.Size = new System.Drawing.Size(98, 17);
+            this.chkVirtKeszl.TabIndex = 34;
+            this.chkVirtKeszl.Text = "Virtuális készlet";
+            this.chkVirtKeszl.UseVisualStyleBackColor = true;
             // 
             // chkAutoRendGen
             // 
@@ -358,7 +374,7 @@
             // txtOptKeszl
             // 
             this.txtOptKeszl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtOptKeszl.Location = new System.Drawing.Point(383, 51);
+            this.txtOptKeszl.Location = new System.Drawing.Point(572, 20);
             this.txtOptKeszl.Name = "txtOptKeszl";
             this.txtOptKeszl.Size = new System.Drawing.Size(92, 20);
             this.txtOptKeszl.TabIndex = 11;
@@ -376,7 +392,7 @@
             // chkMegKulZaras
             // 
             this.chkMegKulZaras.AutoSize = true;
-            this.chkMegKulZaras.Location = new System.Drawing.Point(298, 116);
+            this.chkMegKulZaras.Location = new System.Drawing.Point(298, 145);
             this.chkMegKulZaras.Name = "chkMegKulZaras";
             this.chkMegKulZaras.Size = new System.Drawing.Size(142, 17);
             this.chkMegKulZaras.TabIndex = 34;
@@ -406,7 +422,7 @@
             this.cmdMe.DataSource = this.mEGYSBindingSource;
             this.cmdMe.DisplayMember = "MEGYS_MEGNEVEZES";
             this.cmdMe.FormattingEnabled = true;
-            this.cmdMe.Location = new System.Drawing.Point(86, 112);
+            this.cmdMe.Location = new System.Drawing.Point(86, 141);
             this.cmdMe.Name = "cmdMe";
             this.cmdMe.Size = new System.Drawing.Size(76, 21);
             this.cmdMe.TabIndex = 20;
@@ -425,7 +441,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1, 115);
+            this.label13.Location = new System.Drawing.Point(1, 144);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 13);
             this.label13.TabIndex = 19;
@@ -560,22 +576,62 @@
             this.cIKKCSOPORTBindingSource1.DataMember = "CIKKCSOPORT";
             this.cIKKCSOPORTBindingSource1.DataSource = this.eCAFEDataSet;
             // 
-            // chkVirtKeszl
+            // txtROVID_NEV
             // 
-            this.chkVirtKeszl.AutoSize = true;
-            this.chkVirtKeszl.Location = new System.Drawing.Point(10, 72);
-            this.chkVirtKeszl.Name = "chkVirtKeszl";
-            this.chkVirtKeszl.Size = new System.Drawing.Size(98, 17);
-            this.chkVirtKeszl.TabIndex = 34;
-            this.chkVirtKeszl.Text = "Virtuális készlet";
-            this.chkVirtKeszl.UseVisualStyleBackColor = true;
+            this.txtROVID_NEV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtROVID_NEV.Location = new System.Drawing.Point(86, 32);
+            this.txtROVID_NEV.Name = "txtROVID_NEV";
+            this.txtROVID_NEV.Size = new System.Drawing.Size(123, 20);
+            this.txtROVID_NEV.TabIndex = 11;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(12, 39);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(56, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Tag = "";
+            this.label16.Text = "Rövid név";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.chkCikkcsopPrefer);
+            this.groupBox2.Controls.Add(this.chkTOPCikk);
+            this.groupBox2.Location = new System.Drawing.Point(468, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.TabIndex = 36;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Statisztika";
+            // 
+            // chkTOPCikk
+            // 
+            this.chkTOPCikk.AutoSize = true;
+            this.chkTOPCikk.Location = new System.Drawing.Point(20, 19);
+            this.chkTOPCikk.Name = "chkTOPCikk";
+            this.chkTOPCikk.Size = new System.Drawing.Size(98, 17);
+            this.chkTOPCikk.TabIndex = 34;
+            this.chkTOPCikk.Text = "TOP 30 termék";
+            this.chkTOPCikk.UseVisualStyleBackColor = true;
+            // 
+            // chkCikkcsopPrefer
+            // 
+            this.chkCikkcsopPrefer.AutoSize = true;
+            this.chkCikkcsopPrefer.Location = new System.Drawing.Point(20, 42);
+            this.chkCikkcsopPrefer.Name = "chkCikkcsopPrefer";
+            this.chkCikkcsopPrefer.Size = new System.Drawing.Size(153, 17);
+            this.chkCikkcsopPrefer.TabIndex = 34;
+            this.chkCikkcsopPrefer.Text = "Cikkcsoport kiemelt termék";
+            this.chkCikkcsopPrefer.UseVisualStyleBackColor = true;
             // 
             // frmUjCikk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 462);
+            this.ClientSize = new System.Drawing.Size(687, 462);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bruttoToNetto);
             this.Controls.Add(this.netToBrut);
             this.Controls.Add(this.chkMegKulZaras);
@@ -605,7 +661,9 @@
             this.Controls.Add(this.cmdCikkcsop);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCikkszam);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtROVID_NEV);
             this.Controls.Add(this.txtMegnevezes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmUjCikk";
@@ -627,6 +685,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -691,5 +751,10 @@
         private System.Windows.Forms.BindingSource eCAFEDataSetOTHERFILTERBindingSource;
         private System.Windows.Forms.BindingSource cIKCSOPOTHERFILTERBindingSource1;
         private System.Windows.Forms.CheckBox chkVirtKeszl;
+        private System.Windows.Forms.TextBox txtROVID_NEV;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox chkCikkcsopPrefer;
+        private System.Windows.Forms.CheckBox chkTOPCikk;
     }
 }

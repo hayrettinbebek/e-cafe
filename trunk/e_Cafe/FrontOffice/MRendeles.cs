@@ -121,15 +121,78 @@ namespace e_Cafe
 
         #region Gombok
 
+        #region Átvitel
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAsztalSelect fa = new frmAsztalSelect();
+            fa.ShowDialog();
+            if (fa.DialogResult == DialogResult.OK)
+            {
+                Rendeles nr = new Rendeles(fa.retA.fASZTAL_ID, fa.retA.fRENDELES_ID);
+                foreach (var s in tblRendeles.SelectedItems)
+                {
+                    nr.addTetel(((eCell)s.Cells[0]).rSor._Cikk);
+                    ((eCell)s.Cells[0]).rSor.DeleteSor();
+                }
+                nr.SaveRendeles();
+
+                _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
+
+                initRendelTabla();
+            }
+        }
+        #endregion
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (Alcsop_needScroll < Alcsop_MaxScroll)
+            {
+                AlCsopScrollPos++;
+
+                AlCsopScrollPos = Math.Min(AlCsopScrollPos, Alcsop_MaxScroll);
+
+                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            }
+        }
+
+        private void btnPrevCikk_Click(object sender, EventArgs e)
+        {
+            if (Cikkek_needScroll < Cikkek_MaxScroll)
+            {
+                Cikkek_ScrollPos -= ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
+
+                Cikkek_ScrollPos = Math.Max(Cikkek_ScrollPos, 0);
+                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            }
+        }
+
+        private void btnNextCikk_Click(object sender, EventArgs e)
+        {
+            if (Cikkek_needScroll < Cikkek_MaxScroll)
+            {
+                Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
+
+                Cikkek_ScrollPos = Math.Min(Cikkek_ScrollPos, Cikkek_MaxScroll - Cikkek_needScroll);
+                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (Alcsop_needScroll < Alcsop_MaxScroll)
+            {
+                AlCsopScrollPos--;
+
+                AlCsopScrollPos = Math.Max(AlCsopScrollPos, 0);
+                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
+            }
+        }
 
 
         #endregion 
-
-
 
 
         #region Menü vezérélés
@@ -466,7 +529,22 @@ namespace e_Cafe
             }
 
         }
+        // töröl
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
 
+            foreach (var s in tblRendeles.SelectedItems)
+            {
+                ((eCell)s.Cells[0]).rSor.DeleteSor();
+            }
+            _AktRendeles.SaveRendeles();
+            _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
+            lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
+            initRendelTabla();
+
+
+
+        }
         #endregion
 
 
@@ -477,41 +555,9 @@ namespace e_Cafe
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            
-            foreach (var s in tblRendeles.SelectedItems)
-            {
-                ((eCell)s.Cells[0]).rSor.DeleteSor();
-            }
-            _AktRendeles.SaveRendeles();
-            _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
-            lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
-            initRendelTabla();
+ 
 
-            
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmAsztalSelect fa = new frmAsztalSelect();
-            fa.ShowDialog();
-            if (fa.DialogResult == DialogResult.OK)
-            {
-                Rendeles nr = new Rendeles(fa.retA.fASZTAL_ID, fa.retA.fRENDELES_ID);
-                foreach (var s in tblRendeles.SelectedItems)
-                {
-                    nr.addTetel(((eCell)s.Cells[0]).rSor._Cikk);
-                    ((eCell)s.Cells[0]).rSor.DeleteSor();
-                }
-                nr.SaveRendeles();
-
-                _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
-
-                initRendelTabla();
-            }
-        }
+       
 
         private void rbOsszetett_CheckedChanged(object sender, EventArgs e)
         {
@@ -712,50 +758,6 @@ namespace e_Cafe
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            if (Alcsop_needScroll  < Alcsop_MaxScroll)
-            {
-                AlCsopScrollPos++;
-
-                AlCsopScrollPos = Math.Min(AlCsopScrollPos, Alcsop_MaxScroll);
-
-                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
-            }
-        }
-
-        private void btnPrevCikk_Click(object sender, EventArgs e)
-        {
-            if (Cikkek_needScroll < Cikkek_MaxScroll)
-            {
-                Cikkek_ScrollPos -= ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
-
-                Cikkek_ScrollPos = Math.Max(Cikkek_ScrollPos, 0);
-                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
-            }
-        }
-
-        private void btnNextCikk_Click(object sender, EventArgs e)
-        {
-            if (Cikkek_needScroll < Cikkek_MaxScroll)
-            {
-                Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
-
-                Cikkek_ScrollPos = Math.Min(Cikkek_ScrollPos, Cikkek_MaxScroll - Cikkek_needScroll);
-                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
-            }
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            if (Alcsop_needScroll < Alcsop_MaxScroll)
-            {
-                AlCsopScrollPos--;
-
-                AlCsopScrollPos = Math.Max(AlCsopScrollPos, 0);
-                if (LastCikkcsopMenu != null) { CikkcsopMenuClick(LastCikkcsopMenu, null); }
-            }
-        }
 
 
 

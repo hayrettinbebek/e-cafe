@@ -33,6 +33,7 @@
             this.tblHitelek = new XPTable.Models.Table();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblHitelek)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             // 
             // tblHitelek
             // 
+            this.tblHitelek.AllowSelection = false;
             this.tblHitelek.FullRowSelect = true;
             this.tblHitelek.Location = new System.Drawing.Point(12, 43);
             this.tblHitelek.MultiSelect = true;
@@ -79,7 +81,7 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(601, 229);
+            this.button3.Location = new System.Drawing.Point(588, 229);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 75);
             this.button3.TabIndex = 11;
@@ -92,11 +94,28 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(603, 307);
+            this.label1.Location = new System.Drawing.Point(590, 307);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Fizetés";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(563, 43);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(56, 57);
+            this.button8.TabIndex = 14;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // frmHitelReszletezo
             // 
@@ -106,6 +125,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(704, 375);
             this.ControlBox = false;
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tblHitelek);
@@ -126,5 +146,6 @@
         private XPTable.Models.Table tblHitelek;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button8;
     }
 }

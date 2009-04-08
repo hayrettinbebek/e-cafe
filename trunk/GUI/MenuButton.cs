@@ -204,48 +204,9 @@ namespace GUI
 
         //}
 
-
-        public Cikk fCIKK
+        private void SetBackColor()
         {
-            get { return (_Cikk); }
-            set
-            {
-                _Cikk = value;
-                lMegnevezes.Text = value.MEGNEVEZES;
-                lKiszereles.Text = value.KISZ_MEGN;
-               // lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
-                lKeszletOther.Text = (value.fKESZLET_ALL / value.KISZ_MENNY ).ToString("0.00", CultureInfo.InvariantCulture);
-                //lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
-                lAr.Text = value.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
-
-                if (_Cikk.fKESZLET_ALL == 0)// ha nincs készlete csak akkor piros! normál pedig egyéb estebn
-                {
-                    BackgroundImage = global::GUI.Properties.Resources.piroson;
-                }
-                else if (_Cikk.fKESZLET_ALL <= _Cikk.MINIMUM_KESZLET)
-                {
-                    BackgroundImage = global::GUI.Properties.Resources.zoldon;
-                }
-                else 
-                {
-                    BackgroundImage = null;
-                }
-                BackgroundImageLayout = ImageLayout.Stretch;
-                BackColor = Color.Transparent;
-
-                
-            }
-        }
-
-        public void re_SetCikk()
-        {
-            lMegnevezes.Text = _Cikk.MEGNEVEZES;
-            lKiszereles.Text = _Cikk.KISZ_MEGN;
-            //lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
-            lKeszletOther.Text = (_Cikk.fKESZLET_ALL / _Cikk.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
-            //lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
-            lAr.Text = _Cikk.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
-            if (_Cikk.fKESZLET_ALL == 0)// ha nincs készlete csak akkor piros! normál pedig egyéb estebn
+            if (_Cikk.fKESZLET_ALL <= 0)// ha nincs készlete csak akkor piros! normál pedig egyéb estebn
             {
                 BackgroundImage = global::GUI.Properties.Resources.piroson;
             }
@@ -259,6 +220,38 @@ namespace GUI
             }
             BackgroundImageLayout = ImageLayout.Stretch;
             BackColor = Color.Transparent;
+        }
+
+
+
+        public Cikk fCIKK
+        {
+            get { return (_Cikk); }
+            set
+            {
+                _Cikk = value;
+                lMegnevezes.Text = value.ROVID_NEV;
+                lKiszereles.Text = value.KISZ_MEGN;
+                // lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
+                lKeszletOther.Text = (value.fKESZLET_ALL / value.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
+                //lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
+                lAr.Text = value.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
+                SetBackColor();
+
+
+
+            }
+        }
+
+        public void re_SetCikk()
+        {
+            lMegnevezes.Text = _Cikk.ROVID_NEV;
+            lKiszereles.Text = _Cikk.KISZ_MEGN;
+            //lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
+            lKeszletOther.Text = (_Cikk.fKESZLET_ALL / _Cikk.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
+            //lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
+            lAr.Text = _Cikk.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
+            SetBackColor();
         }
 
         protected void OnLabelClick(object sender, EventArgs e)

@@ -80,6 +80,9 @@ namespace e_Cafe
                     chkMegKulZaras.Checked = newCikk.MEGKULONB_ZARAS;
                     chkAutoRendGen.Checked = newCikk.AUTO_MEGRENDELO;
                     chkVirtKeszl.Checked = (newCikk.VIRTUALIS == 1);
+                    txtROVID_NEV.Text = newCikk.ROVID_NEV;
+                    chkTOPCikk.Checked = newCikk.CIKK_TOP_LIST;
+                    chkCikkcsopPrefer.Checked = newCikk.CIKKCSOP_PREFER;
                     
                 }
             }
@@ -135,6 +138,11 @@ namespace e_Cafe
                     {
                         newCikk.VIRTUALIS = 0;
                     }
+                    newCikk.ROVID_NEV = txtROVID_NEV.Text;
+                    newCikk.CIKK_TOP_LIST = chkTOPCikk.Checked;
+                    newCikk.CIKKCSOP_PREFER =  chkCikkcsopPrefer.Checked;
+
+
                 }
                 catch (Exception e)
                 {
