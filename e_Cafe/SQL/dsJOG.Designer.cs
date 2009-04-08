@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace e_Cafe {
+namespace e_Cafe.SQL {
     
     
     /// <summary>
@@ -21,16 +21,16 @@ namespace e_Cafe {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsUserJog")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsJOG")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsUserJog : global::System.Data.DataSet {
+    public partial class dsJOG : global::System.Data.DataSet {
         
-        private _USER_JOGDataTable table_USER_JOG;
+        private _JOGDataTable table_JOG;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public dsUserJog() {
+        public dsJOG() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -40,7 +40,7 @@ namespace e_Cafe {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected dsUserJog(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsJOG(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -53,8 +53,8 @@ namespace e_Cafe {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["_USER_JOG"] != null)) {
-                    base.Tables.Add(new _USER_JOGDataTable(ds.Tables["_USER_JOG"]));
+                if ((ds.Tables["_JOG"] != null)) {
+                    base.Tables.Add(new _JOGDataTable(ds.Tables["_JOG"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -77,9 +77,9 @@ namespace e_Cafe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public _USER_JOGDataTable _USER_JOG {
+        public _JOGDataTable _JOG {
             get {
-                return this.table_USER_JOG;
+                return this.table_JOG;
             }
         }
         
@@ -120,7 +120,7 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override global::System.Data.DataSet Clone() {
-            dsUserJog cln = ((dsUserJog)(base.Clone()));
+            dsJOG cln = ((dsJOG)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -142,8 +142,8 @@ namespace e_Cafe {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["_USER_JOG"] != null)) {
-                    base.Tables.Add(new _USER_JOGDataTable(ds.Tables["_USER_JOG"]));
+                if ((ds.Tables["_JOG"] != null)) {
+                    base.Tables.Add(new _JOGDataTable(ds.Tables["_JOG"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -175,27 +175,27 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         internal void InitVars(bool initTable) {
-            this.table_USER_JOG = ((_USER_JOGDataTable)(base.Tables["_USER_JOG"]));
+            this.table_JOG = ((_JOGDataTable)(base.Tables["_JOG"]));
             if ((initTable == true)) {
-                if ((this.table_USER_JOG != null)) {
-                    this.table_USER_JOG.InitVars();
+                if ((this.table_JOG != null)) {
+                    this.table_JOG.InitVars();
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitClass() {
-            this.DataSetName = "dsUserJog";
+            this.DataSetName = "dsJOG";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsUserJog.xsd";
+            this.Namespace = "http://tempuri.org/dsJOG.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.table_USER_JOG = new _USER_JOGDataTable();
-            base.Tables.Add(this.table_USER_JOG);
+            this.table_JOG = new _JOGDataTable();
+            base.Tables.Add(this.table_JOG);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerialize_USER_JOG() {
+        private bool ShouldSerialize_JOG() {
             return false;
         }
         
@@ -208,7 +208,7 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsUserJog ds = new dsUserJog();
+            dsJOG ds = new dsJOG();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -252,7 +252,7 @@ namespace e_Cafe {
             return type;
         }
         
-        public delegate void _USER_JOGRowChangeEventHandler(object sender, _USER_JOGRowChangeEvent e);
+        public delegate void _JOGRowChangeEventHandler(object sender, _JOGRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -260,22 +260,22 @@ namespace e_Cafe {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class _USER_JOGDataTable : global::System.Data.TypedTableBase<_USER_JOGRow> {
+        public partial class _JOGDataTable : global::System.Data.TypedTableBase<_JOGRow> {
             
-            private global::System.Data.DataColumn column_USER_ID;
+            private global::System.Data.DataColumn columnJOG_ID;
             
-            private global::System.Data.DataColumn column_JOG_ID;
+            private global::System.Data.DataColumn columnJOG_NEV;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public _USER_JOGDataTable() {
-                this.TableName = "_USER_JOG";
+            public _JOGDataTable() {
+                this.TableName = "_JOG";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal _USER_JOGDataTable(global::System.Data.DataTable table) {
+            internal _JOGDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -291,22 +291,22 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected _USER_JOGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected _JOGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn _USER_IDColumn {
+            public global::System.Data.DataColumn JOG_IDColumn {
                 get {
-                    return this.column_USER_ID;
+                    return this.columnJOG_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn _JOG_IDColumn {
+            public global::System.Data.DataColumn JOG_NEVColumn {
                 get {
-                    return this.column_JOG_ID;
+                    return this.columnJOG_NEV;
                 }
             }
             
@@ -319,114 +319,124 @@ namespace e_Cafe {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public _USER_JOGRow this[int index] {
+            public _JOGRow this[int index] {
                 get {
-                    return ((_USER_JOGRow)(this.Rows[index]));
+                    return ((_JOGRow)(this.Rows[index]));
                 }
             }
             
-            public event _USER_JOGRowChangeEventHandler _USER_JOGRowChanging;
+            public event _JOGRowChangeEventHandler _JOGRowChanging;
             
-            public event _USER_JOGRowChangeEventHandler _USER_JOGRowChanged;
+            public event _JOGRowChangeEventHandler _JOGRowChanged;
             
-            public event _USER_JOGRowChangeEventHandler _USER_JOGRowDeleting;
+            public event _JOGRowChangeEventHandler _JOGRowDeleting;
             
-            public event _USER_JOGRowChangeEventHandler _USER_JOGRowDeleted;
+            public event _JOGRowChangeEventHandler _JOGRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void Add_USER_JOGRow(_USER_JOGRow row) {
+            public void Add_JOGRow(_JOGRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public _USER_JOGRow Add_USER_JOGRow(int _USER_ID, string _JOG_ID) {
-                _USER_JOGRow row_USER_JOGRow = ((_USER_JOGRow)(this.NewRow()));
+            public _JOGRow Add_JOGRow(string JOG_ID, string JOG_NEV) {
+                _JOGRow row_JOGRow = ((_JOGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        _USER_ID,
-                        _JOG_ID};
-                row_USER_JOGRow.ItemArray = columnValuesArray;
-                this.Rows.Add(row_USER_JOGRow);
-                return row_USER_JOGRow;
+                        JOG_ID,
+                        JOG_NEV};
+                row_JOGRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_JOGRow);
+                return row_JOGRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public _JOGRow FindByJOG_ID(string JOG_ID) {
+                return ((_JOGRow)(this.Rows.Find(new object[] {
+                            JOG_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public override global::System.Data.DataTable Clone() {
-                _USER_JOGDataTable cln = ((_USER_JOGDataTable)(base.Clone()));
+                _JOGDataTable cln = ((_JOGDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new _USER_JOGDataTable();
+                return new _JOGDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
-                this.column_USER_ID = base.Columns["_USER_ID"];
-                this.column_JOG_ID = base.Columns["_JOG_ID"];
+                this.columnJOG_ID = base.Columns["JOG_ID"];
+                this.columnJOG_NEV = base.Columns["JOG_NEV"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.column_USER_ID = new global::System.Data.DataColumn("_USER_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column_USER_ID);
-                this.column_JOG_ID = new global::System.Data.DataColumn("_JOG_ID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column_JOG_ID);
-                this.column_USER_ID.AllowDBNull = false;
-                this.column_JOG_ID.AllowDBNull = false;
-                this.column_JOG_ID.MaxLength = 20;
+                this.columnJOG_ID = new global::System.Data.DataColumn("JOG_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJOG_ID);
+                this.columnJOG_NEV = new global::System.Data.DataColumn("JOG_NEV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJOG_NEV);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnJOG_ID}, true));
+                this.columnJOG_ID.AllowDBNull = false;
+                this.columnJOG_ID.Unique = true;
+                this.columnJOG_ID.MaxLength = 20;
+                this.columnJOG_NEV.AllowDBNull = false;
+                this.columnJOG_NEV.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public _USER_JOGRow New_USER_JOGRow() {
-                return ((_USER_JOGRow)(this.NewRow()));
+            public _JOGRow New_JOGRow() {
+                return ((_JOGRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new _USER_JOGRow(builder);
+                return new _JOGRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Type GetRowType() {
-                return typeof(_USER_JOGRow);
+                return typeof(_JOGRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this._USER_JOGRowChanged != null)) {
-                    this._USER_JOGRowChanged(this, new _USER_JOGRowChangeEvent(((_USER_JOGRow)(e.Row)), e.Action));
+                if ((this._JOGRowChanged != null)) {
+                    this._JOGRowChanged(this, new _JOGRowChangeEvent(((_JOGRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this._USER_JOGRowChanging != null)) {
-                    this._USER_JOGRowChanging(this, new _USER_JOGRowChangeEvent(((_USER_JOGRow)(e.Row)), e.Action));
+                if ((this._JOGRowChanging != null)) {
+                    this._JOGRowChanging(this, new _JOGRowChangeEvent(((_JOGRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this._USER_JOGRowDeleted != null)) {
-                    this._USER_JOGRowDeleted(this, new _USER_JOGRowChangeEvent(((_USER_JOGRow)(e.Row)), e.Action));
+                if ((this._JOGRowDeleted != null)) {
+                    this._JOGRowDeleted(this, new _JOGRowChangeEvent(((_JOGRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this._USER_JOGRowDeleting != null)) {
-                    this._USER_JOGRowDeleting(this, new _USER_JOGRowChangeEvent(((_USER_JOGRow)(e.Row)), e.Action));
+                if ((this._JOGRowDeleting != null)) {
+                    this._JOGRowDeleting(this, new _JOGRowChangeEvent(((_JOGRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void Remove_USER_JOGRow(_USER_JOGRow row) {
+            public void Remove_JOGRow(_JOGRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -434,7 +444,7 @@ namespace e_Cafe {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsUserJog ds = new dsUserJog();
+                dsJOG ds = new dsJOG();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -452,7 +462,7 @@ namespace e_Cafe {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "_USER_JOGDataTable";
+                attribute2.FixedValue = "_JOGDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -497,33 +507,33 @@ namespace e_Cafe {
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class _USER_JOGRow : global::System.Data.DataRow {
+        public partial class _JOGRow : global::System.Data.DataRow {
             
-            private _USER_JOGDataTable table_USER_JOG;
+            private _JOGDataTable table_JOG;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal _USER_JOGRow(global::System.Data.DataRowBuilder rb) : 
+            internal _JOGRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.table_USER_JOG = ((_USER_JOGDataTable)(this.Table));
+                this.table_JOG = ((_JOGDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int _USER_ID {
+            public string JOG_ID {
                 get {
-                    return ((int)(this[this.table_USER_JOG._USER_IDColumn]));
+                    return ((string)(this[this.table_JOG.JOG_IDColumn]));
                 }
                 set {
-                    this[this.table_USER_JOG._USER_IDColumn] = value;
+                    this[this.table_JOG.JOG_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string _JOG_ID {
+            public string JOG_NEV {
                 get {
-                    return ((string)(this[this.table_USER_JOG._JOG_IDColumn]));
+                    return ((string)(this[this.table_JOG.JOG_NEVColumn]));
                 }
                 set {
-                    this[this.table_USER_JOG._JOG_IDColumn] = value;
+                    this[this.table_JOG.JOG_NEVColumn] = value;
                 }
             }
         }
@@ -532,20 +542,20 @@ namespace e_Cafe {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class _USER_JOGRowChangeEvent : global::System.EventArgs {
+        public class _JOGRowChangeEvent : global::System.EventArgs {
             
-            private _USER_JOGRow eventRow;
+            private _JOGRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public _USER_JOGRowChangeEvent(_USER_JOGRow row, global::System.Data.DataRowAction action) {
+            public _JOGRowChangeEvent(_JOGRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public _USER_JOGRow Row {
+            public _JOGRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -560,7 +570,7 @@ namespace e_Cafe {
         }
     }
 }
-namespace e_Cafe.dsUserJogTableAdapters {
+namespace e_Cafe.SQL.dsJOGTableAdapters {
     
     
     /// <summary>
@@ -573,7 +583,7 @@ namespace e_Cafe.dsUserJogTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class _USER_JOGTableAdapter : global::System.ComponentModel.Component {
+    public partial class _JOGTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -586,7 +596,7 @@ namespace e_Cafe.dsUserJogTableAdapters {
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public _USER_JOGTableAdapter() {
+        public _JOGTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -677,23 +687,34 @@ namespace e_Cafe.dsUserJogTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "_USER_JOG";
-            tableMapping.ColumnMappings.Add("_USER_ID", "_USER_ID");
-            tableMapping.ColumnMappings.Add("_JOG_ID", "_JOG_ID");
+            tableMapping.DataSetTable = "_JOG";
+            tableMapping.ColumnMappings.Add("JOG_ID", "JOG_ID");
+            tableMapping.ColumnMappings.Add("JOG_NEV", "JOG_NEV");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM _USER_JOG\r\nWHERE     (_USER_ID = @user) AND (_JOG_ID = @jog)";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[_JOG] WHERE (([JOG_ID] = @Original_JOG_ID) AND ([JOG_NEV] = @O" +
+                "riginal_JOG_NEV))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "_USER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@jog", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "_JOG_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_JOG_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JOG_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_JOG_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JOG_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[_USER_JOG] ([_USER_ID], [_JOG_ID]) VALUES (@_USER_ID, @_JOG_ID" +
-                ")";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[_JOG] ([JOG_ID], [JOG_NEV]) VALUES (@JOG_ID, @JOG_NEV);\r\nSELEC" +
+                "T JOG_ID, JOG_NEV FROM _JOG WHERE (JOG_ID = @JOG_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@_USER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "_USER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@_JOG_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "_JOG_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@JOG_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JOG_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@JOG_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JOG_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[_JOG] SET [JOG_ID] = @JOG_ID, [JOG_NEV] = @JOG_NEV WHERE (([JOG_ID]" +
+                " = @Original_JOG_ID) AND ([JOG_NEV] = @Original_JOG_NEV));\r\nSELECT JOG_ID, JOG_N" +
+                "EV FROM _JOG WHERE (JOG_ID = @JOG_ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@JOG_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JOG_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@JOG_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JOG_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_JOG_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JOG_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_JOG_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JOG_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -704,17 +725,23 @@ namespace e_Cafe.dsUserJogTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [_USER_ID], [_JOG_ID] FROM dbo.[_USER_JOG]";
+            this._commandCollection[0].CommandText = "SELECT JOG_ID, JOG_NEV FROM dbo.[_JOG]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT JOG_ID, JOG_NEV FROM dbo.[_JOG]\r\nwhere JOG_ID not in (select u._JOG_ID fro" +
+                "m _USER_JOG u WHERE u._USER_ID = @user)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsUserJog._USER_JOGDataTable dataTable) {
+        public virtual int Fill(dsJOG._JOGDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -726,23 +753,47 @@ namespace e_Cafe.dsUserJogTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsUserJog._USER_JOGDataTable GetData() {
+        public virtual dsJOG._JOGDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsUserJog._USER_JOGDataTable dataTable = new dsUserJog._USER_JOGDataTable();
+            dsJOG._JOGDataTable dataTable = new dsJOG._JOGDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsUserJog._USER_JOGDataTable dataTable) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByUser(dsJOG._JOGDataTable dataTable, int user) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(user));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsJOG._JOGDataTable GetDataByUser(int user) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(user));
+            dsJOG._JOGDataTable dataTable = new dsJOG._JOGDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsJOG._JOGDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsUserJog dataSet) {
-            return this.Adapter.Update(dataSet, "_USER_JOG");
+        public virtual int Update(dsJOG dataSet) {
+            return this.Adapter.Update(dataSet, "_JOG");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -761,13 +812,18 @@ namespace e_Cafe.dsUserJogTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int user, string jog) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(user));
-            if ((jog == null)) {
-                throw new global::System.ArgumentNullException("jog");
+        public virtual int Delete(string Original_JOG_ID, string Original_JOG_NEV) {
+            if ((Original_JOG_ID == null)) {
+                throw new global::System.ArgumentNullException("Original_JOG_ID");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(jog));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_JOG_ID));
+            }
+            if ((Original_JOG_NEV == null)) {
+                throw new global::System.ArgumentNullException("Original_JOG_NEV");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_JOG_NEV));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -788,13 +844,18 @@ namespace e_Cafe.dsUserJogTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int _USER_ID, string _JOG_ID) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(_USER_ID));
-            if ((_JOG_ID == null)) {
-                throw new global::System.ArgumentNullException("_JOG_ID");
+        public virtual int Insert(string JOG_ID, string JOG_NEV) {
+            if ((JOG_ID == null)) {
+                throw new global::System.ArgumentNullException("JOG_ID");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(_JOG_ID));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(JOG_ID));
+            }
+            if ((JOG_NEV == null)) {
+                throw new global::System.ArgumentNullException("JOG_NEV");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(JOG_NEV));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -811,6 +872,57 @@ namespace e_Cafe.dsUserJogTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string JOG_ID, string JOG_NEV, string Original_JOG_ID, string Original_JOG_NEV) {
+            if ((JOG_ID == null)) {
+                throw new global::System.ArgumentNullException("JOG_ID");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(JOG_ID));
+            }
+            if ((JOG_NEV == null)) {
+                throw new global::System.ArgumentNullException("JOG_NEV");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(JOG_NEV));
+            }
+            if ((Original_JOG_ID == null)) {
+                throw new global::System.ArgumentNullException("Original_JOG_ID");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_JOG_ID));
+            }
+            if ((Original_JOG_NEV == null)) {
+                throw new global::System.ArgumentNullException("Original_JOG_NEV");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_JOG_NEV));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string JOG_NEV, string Original_JOG_ID, string Original_JOG_NEV) {
+            return this.Update(Original_JOG_ID, JOG_NEV, Original_JOG_ID, Original_JOG_NEV);
+        }
     }
     
     /// <summary>
@@ -826,7 +938,7 @@ namespace e_Cafe.dsUserJogTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private _USER_JOGTableAdapter @__USER_JOGTableAdapter;
+        private _JOGTableAdapter @__JOGTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -846,12 +958,12 @@ namespace e_Cafe.dsUserJogTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
             "", "System.Drawing.Design.UITypeEditor")]
-        public _USER_JOGTableAdapter _USER_JOGTableAdapter {
+        public _JOGTableAdapter _JOGTableAdapter {
             get {
-                return this.@__USER_JOGTableAdapter;
+                return this.@__JOGTableAdapter;
             }
             set {
-                this.@__USER_JOGTableAdapter = value;
+                this.@__JOGTableAdapter = value;
             }
         }
         
@@ -872,9 +984,9 @@ namespace e_Cafe.dsUserJogTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this.@__USER_JOGTableAdapter != null) 
-                            && (this.@__USER_JOGTableAdapter.Connection != null))) {
-                    return this.@__USER_JOGTableAdapter.Connection;
+                if (((this.@__JOGTableAdapter != null) 
+                            && (this.@__JOGTableAdapter.Connection != null))) {
+                    return this.@__JOGTableAdapter.Connection;
                 }
                 return null;
             }
@@ -888,7 +1000,7 @@ namespace e_Cafe.dsUserJogTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this.@__USER_JOGTableAdapter != null)) {
+                if ((this.@__JOGTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -899,14 +1011,14 @@ namespace e_Cafe.dsUserJogTableAdapters {
         ///Update rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateUpdatedRows(dsUserJog dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dsJOG dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this.@__USER_JOGTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet._USER_JOG.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this.@__JOGTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet._JOG.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.@__USER_JOGTableAdapter.Update(updatedRows));
+                    result = (result + this.@__JOGTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -917,13 +1029,13 @@ namespace e_Cafe.dsUserJogTableAdapters {
         ///Insert rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateInsertedRows(dsUserJog dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dsJOG dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this.@__USER_JOGTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet._USER_JOG.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this.@__JOGTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet._JOG.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.@__USER_JOGTableAdapter.Update(addedRows));
+                    result = (result + this.@__JOGTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -934,13 +1046,13 @@ namespace e_Cafe.dsUserJogTableAdapters {
         ///Delete rows in bottom-up order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateDeletedRows(dsUserJog dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dsJOG dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this.@__USER_JOGTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet._USER_JOG.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this.@__JOGTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet._JOG.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.@__USER_JOGTableAdapter.Update(deletedRows));
+                    result = (result + this.@__JOGTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -974,15 +1086,15 @@ namespace e_Cafe.dsUserJogTableAdapters {
         ///Update all changes to the dataset.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public virtual int UpdateAll(dsUserJog dataSet) {
+        public virtual int UpdateAll(dsJOG dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this.@__USER_JOGTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this.@__USER_JOGTableAdapter.Connection) == false))) {
+            if (((this.@__JOGTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this.@__JOGTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1018,13 +1130,13 @@ namespace e_Cafe.dsUserJogTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this.@__USER_JOGTableAdapter != null)) {
-                    revertConnections.Add(this.@__USER_JOGTableAdapter, this.@__USER_JOGTableAdapter.Connection);
-                    this.@__USER_JOGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this.@__USER_JOGTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this.@__USER_JOGTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this.@__USER_JOGTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this.@__USER_JOGTableAdapter.Adapter);
+                if ((this.@__JOGTableAdapter != null)) {
+                    revertConnections.Add(this.@__JOGTableAdapter, this.@__JOGTableAdapter.Connection);
+                    this.@__JOGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this.@__JOGTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this.@__JOGTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this.@__JOGTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this.@__JOGTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1085,9 +1197,9 @@ namespace e_Cafe.dsUserJogTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this.@__USER_JOGTableAdapter != null)) {
-                    this.@__USER_JOGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this.@__USER_JOGTableAdapter]));
-                    this.@__USER_JOGTableAdapter.Transaction = null;
+                if ((this.@__JOGTableAdapter != null)) {
+                    this.@__JOGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this.@__JOGTableAdapter]));
+                    this.@__JOGTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

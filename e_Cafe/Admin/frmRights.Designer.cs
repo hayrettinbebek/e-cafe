@@ -34,9 +34,9 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dsJOG = new e_Cafe.dsJOG();
+            this.dsJOG = new e_Cafe.SQL.dsJOG();
             this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._JOGTableAdapter = new e_Cafe.dsJOGTableAdapters._JOGTableAdapter();
+            this._JOGTableAdapter = new e_Cafe.SQL.dsJOGTableAdapters._JOGTableAdapter();
             this.jOGIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jOGNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
@@ -141,9 +141,9 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private dsJOG dsJOG;
+        private e_Cafe.SQL.dsJOG dsJOG;
         private System.Windows.Forms.BindingSource jOGBindingSource;
-        private e_Cafe.dsJOGTableAdapters._JOGTableAdapter _JOGTableAdapter;
+        private e_Cafe.SQL.dsJOGTableAdapters._JOGTableAdapter _JOGTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn jOGIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jOGNEVDataGridViewTextBoxColumn;
     }
