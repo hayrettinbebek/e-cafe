@@ -303,31 +303,42 @@ namespace BusinessLogic
         }
         #endregion
 
-
-        public Cikk(int pCIKK_ID,
-                    string pMEGNEVEZES,
-                    int pCIKK_TIPUS,
-                    int pCIKKCSOPORT_ID
-                    )
+        #region CIKK_TOP_LIST
+        public int fCIKK_TOP_LIST;
+        public bool CIKK_TOP_LIST
         {
-
-                fCIKK_ID = pCIKK_ID;
-                fMEGNEVEZES = pMEGNEVEZES;
-                fCIKK_TIPUS = pCIKK_TIPUS;
-                fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
-                CIKK_KISZERELES =  new CikkKiszerelesList();//fCIKK_ID, new SqlConnection(DEFS.ConSTR));
-                fAKTIV = 1; 
-                fVIRTUAL = 0;
+            get { return (fCIKK_TOP_LIST == 1); }
+            set
+            {
+                if (value) { fCIKK_TOP_LIST = 1; }
+                else { fCIKK_TOP_LIST = 0; }
+            }
         }
+        #endregion
 
-        public Cikk()
+        #region CIKKCSOP_PREFER
+        public int fCIKKCSOP_PREFER;
+        public bool CIKKCSOP_PREFER
         {
-
-            fCIKK_ID = -1; 
-            fAKTIV = 1;
-            fVIRTUAL = 0;
-            
+            get { return (fCIKKCSOP_PREFER == 1); }
+            set
+            {
+                if (value) { fCIKKCSOP_PREFER = 1; }
+                else { fCIKKCSOP_PREFER = 0; }
+            }
         }
+        #endregion
+
+        #region ROVID_NEV
+        //megnevezés
+        private string fROVID_NEV;
+        public string ROVID_NEV
+        {
+            get { return (fROVID_NEV); }
+            set { fROVID_NEV = value; }
+        }
+        #endregion
+
 
         public void getKeszlet()
         {
@@ -389,6 +400,31 @@ namespace BusinessLogic
             return (ret);
         }
 
+
+        #region Constructor
+
+        public Cikk(int pCIKK_ID, string pMEGNEVEZES, int pCIKK_TIPUS, int pCIKKCSOPORT_ID)
+        {
+
+            fCIKK_ID = pCIKK_ID;
+            fMEGNEVEZES = pMEGNEVEZES;
+            fCIKK_TIPUS = pCIKK_TIPUS;
+            fCIKKCSOPORT_ID = pCIKKCSOPORT_ID;
+            CIKK_KISZERELES = new CikkKiszerelesList();//fCIKK_ID, new SqlConnection(DEFS.ConSTR));
+            fAKTIV = 1;
+            fVIRTUAL = 0;
+        }
+
+        public Cikk()
+        {
+
+            fCIKK_ID = -1;
+            fAKTIV = 1;
+            fVIRTUAL = 0;
+
+        }
+
+
         public Cikk(int pCikkId, SqlConnection c)
         {
             if (c.State == ConnectionState.Closed) { c.Open(); }
@@ -402,8 +438,9 @@ namespace BusinessLogic
                             " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY, " +
                             " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
                             " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
-                            " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ, AKTIV, VIRTUAL  " +
-                            
+                            " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ, AKTIV, VIRTUAL,  " +
+                            " isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER " +
+
                             " FROM CIKK  c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE CIKK_ID =" + pCikkId.ToString();
             //if (plit_kisz_id > 0)
             //{
@@ -439,12 +476,16 @@ namespace BusinessLogic
                 NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
                 fVIRTUAL = (int)rdr["VIRTUAL"];
+                fROVID_NEV = (string)rdr["ROVID_NEV"];
+                fCIKK_TOP_LIST = (int)rdr["CIKK_TOP_LIST"];
+                fCIKKCSOP_PREFER = (int)rdr["CIKKCSOP_PREFER"];
+
 
             }
             getKeszlet();
             CIKK_KISZERELES = new CikkKiszerelesList(fCIKK_ID, new SqlConnection(DEFS.ConSTR));
             c.Close();
-            
+
         }
 
         public Cikk(int pCikkId, bool ForEdit, SqlConnection c)
@@ -458,10 +499,11 @@ namespace BusinessLogic
 
             cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(CIKKSZAM,'') as CIKKSZAM, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," +
                             " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS," +
-                            " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , "+
+                            " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
                             " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                             " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ, " +
-                            " isnull(SPEC_ZARAS,0) as SPEC_ZARAS, isnull(AUTO_MEGRENDELO,0) as AUTO_MEGRENDELO, AKTIV, VIRTUAL " +
+                            " isnull(SPEC_ZARAS,0) as SPEC_ZARAS, isnull(AUTO_MEGRENDELO,0) as AUTO_MEGRENDELO, AKTIV, VIRTUAL, " +
+                            " isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER " +
                             " FROM CIKK WHERE CIKK_ID =" + pCikkId.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -489,6 +531,9 @@ namespace BusinessLogic
                 fAUTO_MEGRENDELO = (int)rdr["AUTO_MEGRENDELO"];
                 fAKTIV = (int)rdr["AKTIV"];
                 fVIRTUAL = (int)rdr["VIRTUAL"];
+                fROVID_NEV = (string)rdr["ROVID_NEV"];
+                fCIKK_TOP_LIST = (int)rdr["CIKK_TOP_LIST"];
+                fCIKKCSOP_PREFER = (int)rdr["CIKKCSOP_PREFER"];
 
             }
             getKeszlet();
@@ -497,6 +542,7 @@ namespace BusinessLogic
 
         }
 
+        #endregion
 
         public void Save()
         {
@@ -537,6 +583,9 @@ namespace BusinessLogic
                                             ",AUTO_MEGRENDELO "+
                                             ",AKTIV " +
                                             ",VIRTUAL " +
+                                            ",CIKK_ROVID_NEV " +
+                                            ",CIKK_TOP_LIST " +
+                                            ",CIKKCSOP_PREFER " +
                                             " ) " +
                                         "VALUES " +
                                             "(@MEGNEVEZES " +
@@ -558,7 +607,11 @@ namespace BusinessLogic
                                             ",@SPEC_ZARAS " +
                                             ",@AUTO_MEGRENDELO " + 
                                             ",@AKTIV, " +
-                                            ",@VIRTUAL ) SET @newid = SCOPE_IDENTITY()";
+                                            ",@VIRTUAL "+
+                                            ",@CIKK_ROVID_NEV " +
+                                            ",@CIKK_TOP_LIST " +
+                                            ",@CIKKCSOP_PREFER "+
+                                            " ) SET @newid = SCOPE_IDENTITY()";
                         cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
                         cmd.Parameters["newid"].Direction = ParameterDirection.Output;
                         break;
@@ -585,6 +638,11 @@ namespace BusinessLogic
                                                        " AUTO_MEGRENDELO = @AUTO_MEGRENDELO, " +
                                                        " AKTIV = @AKTIV, " +
                                                        " VIRTUAL = @VIRTUAL " +
+                                                       " CIKK_ROVID_NEV = @CIKK_ROVID_NEV " +
+                                                       " CIKK_TOP_LIST = @CIKK_TOP_LIST " +
+                                                       " CIKKCSOP_PREFER = @CIKKCSOP_PREFER " +
+
+                                                        
                                                        
                                            "WHERE CIKK_ID = @CIKK_ID";
                         cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
@@ -612,6 +670,9 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("AUTO_MEGRENDELO", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("AKTIV", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("VIRTUAL", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("CIKKCSOP_PREFER", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("CIKK_TOP_LIST", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("CIKK_ROVID_NEV", SqlDbType.VarChar));
             
 
             cmd.Parameters["MEGNEVEZES"].Value = MEGNEVEZES;
@@ -641,6 +702,9 @@ namespace BusinessLogic
             cmd.Parameters["AUTO_MEGRENDELO"].Value = fAUTO_MEGRENDELO;
             cmd.Parameters["AKTIV"].Value = AKTIV;
             cmd.Parameters["VIRTUAL"].Value = VIRTUALIS;
+            cmd.Parameters["CIKK_ROVID_NEV"].Value = ROVID_NEV;
+            cmd.Parameters["CIKK_TOP_LIST"].Value = fCIKK_TOP_LIST;
+            cmd.Parameters["CIKKCSOP_PREFER"].Value = fCIKKCSOP_PREFER;
             
             DEFS.log(Level.Debug, @"Cikk instert / update" + cmd.CommandText);
             try
@@ -696,8 +760,62 @@ namespace BusinessLogic
 
         }
     }
-    
 
+
+    public class CikkFilter
+    {
+        
+        public CikkFilter()
+        {
+            _nev = "";
+            _cikkcsop = "";
+        }
+        private string _nev = "";
+        private string _cikkcsop = "";
+
+        public string FILTER_NEV
+        {
+            get { return (_nev); }
+            set
+            {
+                _nev = value;
+                
+            }
+        }
+
+        public string FILTER_CIKKCSOP
+        {
+            get { return (_cikkcsop); }
+            set
+            {
+                _cikkcsop = value;
+                
+            }
+
+        }
+
+
+
+        public string  getResult()
+        {
+            
+            string res_str = "";
+            //if (_nev != "")
+            //{
+                res_str += "(MEGNEVEZES like '" + _nev + "%')";
+
+            //}
+            
+            
+            //if (_cikkcsop != "")
+            //{
+                res_str += " and ( CIKKCSOPORT  like '" + _cikkcsop + "%')";
+            //}
+
+            return (res_str);
+        }
+
+    }
    
     public class CikkKeszlet
     {
@@ -771,8 +889,8 @@ namespace BusinessLogic
     {
 
         public List<Cikk> lCIKK = new List<Cikk>();
-        
 
+        #region Constructor
         public Cikk_list(SqlConnection sc)
         {
             sc.Open();
@@ -826,7 +944,7 @@ namespace BusinessLogic
                                         " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
                                         " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                                         " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ,  " +
-                                        " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR " +
+                                        " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR, isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER " +
                                 " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE AKTIV = 1";
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -857,6 +975,9 @@ namespace BusinessLogic
                         t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
                         t.MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
                         t.OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
+                        t.ROVID_NEV = (string)rdr["ROVID_NEV"];
+                        t.CIKK_TOP_LIST = (int)rdr["CIKK_TOP_LIST"] == 1;
+                        t.CIKKCSOP_PREFER = (int)rdr["CIKKCSOP_PREFER"] == 1;
                         //if ((double)rdr["ELADASI_AR"] == 0)
                         if ((string)rdr["ERT_TIPUS"] == "L")
                         {
@@ -954,6 +1075,7 @@ namespace BusinessLogic
             sc.Close();
         }
 
+        #endregion
         public List<Cikk> CikkListByCsoport(int iCsoportId)
         {
             List<Cikk> iTmpRet = new List<Cikk>();

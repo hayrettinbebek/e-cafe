@@ -87,5 +87,18 @@ namespace e_Cafe.FrontOffice
                 r.Cells[0].Image = global::GUI.Properties.Resources.pipaon;
             }
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            tblHitelek.TableModel.Selections.Clear();
+
+            for (int i = 0; i < tblHitelek.TableModel.Rows.Count; i++)
+            {
+
+                tblHitelek.TableModel.Selections.AddCell(i, 0);
+            }
+        }
+
+        
     }
 }

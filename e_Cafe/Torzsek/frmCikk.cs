@@ -19,6 +19,7 @@ namespace e_Cafe.Torzsek
         //private Cikk_list cikkList = null;
 
         private Cikk aktCikk = null;
+        private CikkFilter aktCikkfilter = new CikkFilter();
         public int recept = 0;
         public int aktiv = 1;
 
@@ -40,6 +41,7 @@ namespace e_Cafe.Torzsek
             btnAktiv.Visible = (aktiv == 0);
             btnDelete.Visible = (aktiv == 1);
             //cikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
+
 
             
         }
@@ -243,8 +245,16 @@ namespace e_Cafe.Torzsek
 
         private void filterMegnevezes_TextChanged(object sender, EventArgs e)
         {
-            cIKKBindingSource.Filter = "MEGNEVEZES like '" + filterMegnevezes.Text + "%'";
+            //cIKKBindingSource.Filter = "MEGNEVEZES like '" + filterMegnevezes.Text + "%'";
+            aktCikkfilter.FILTER_NEV = filterMegnevezes.Text;
+            cIKKBindingSource.Filter = aktCikkfilter.getResult();
             
+        }
+
+        private void filterCikkcsop_TextChanged(object sender, EventArgs e)
+        {
+            aktCikkfilter.FILTER_CIKKCSOP = filterCikkcsop.Text;
+            cIKKBindingSource.Filter = aktCikkfilter.getResult();
         }
 
 
