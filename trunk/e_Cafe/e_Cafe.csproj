@@ -190,6 +190,7 @@
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\BlokkReport.cs" />
+    <Compile Include="Reports\doPrinting.cs" />
     <Compile Include="SQL\dsJOG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
