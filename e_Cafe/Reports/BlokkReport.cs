@@ -23,7 +23,7 @@ namespace e_Cafe.Reports
             TextStyle.ResetStyles();
             SectionBox box;
             LinearSections contents;
-            TextStyle.Normal.BackgroundBrush = Brushes.Beige;
+            //TextStyle.Normal.BackgroundBrush = Brushes.Beige;
             Szamla iSzamla = new Szamla(_SzamlaId);
             // Create a ReportBuilder object that assists with building a report
             ReportBuilder builder = new ReportBuilder(reportDocument);
@@ -40,10 +40,11 @@ namespace e_Cafe.Reports
 
 
 
-            builder.AddPageHeader("ALL-IN Cafe", String.Empty, DateTime.Now.ToLongTimeString());
+            builder.AddPageHeader("ALL-IN Cafe", String.Empty, iSzamla.SZAMLA_DATUMA.ToShortDateString() + " " + iSzamla.SZAMLA_DATUMA.ToLongTimeString());
+
             #region fejlec
             builder.StartLayeredLayout(false,false);
-            builder.AddText("This page uses a layered approach");
+            
             // Add various text sections in different headings
 
             box = new SectionBox();
@@ -53,10 +54,10 @@ namespace e_Cafe.Reports
             box.OffsetTop = 0;
 
             //box.Border.
-            box.Background = Brushes.Ivory;
+            //box.Background = Brushes.Ivory;
             contents = new LinearSections();
-            contents.AddSection(new SectionText("ALL-IN Cafe", TextStyle.Heading1));
-            contents.AddSection(new SectionText(@"2120 Dunakeszi Rév utca 1/B", TextStyle.Normal));
+            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_NEV"), TextStyle.Heading1));
+            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_CIM"), TextStyle.Normal));
             box.AddSection(contents);
             builder.AddSection(box);
 
@@ -82,25 +83,53 @@ namespace e_Cafe.Reports
             #endregion
 
             builder.AddText("Blokk sorszáma:", TextStyle.Normal);
+            builder.AddText(" ");
 
             #region sorok
             DataView dv = iSzamla.GetBlokkDataView();
+            builder.DefaultTablePen = null;
 
-            builder.AddTable(dv, true);
-            builder.AddAllColumns(30.0f, true, true);
+            builder.AddTable(dv, true,100);
+            
+            builder.Table.InnerPenHeaderBottom = reportDocument.NormalPen;
+            builder.Table.InnerPenRow = new Pen (Color.Gray, reportDocument.ThinPen.Width);
+            builder.Table.OuterPenBottom = new Pen (Color.Gray, reportDocument.ThinPen.Width);
+
+            builder.AddColumn(dv.Table.Columns[0],"Mennyiség",30,false,false,HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[1],"Termék",90,false,false,HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[2],"Összeg",40,false,false,HorizontalAlignment.Right);
+
+            //dt.Columns.Add(, typeof(int));
+            //dt.Columns.Add("Cikk", typeof(string));
+            //dt.Columns.Add("Összeg", typeof(double));
+
+
+           // builder.AddAllColumns(30.0f, true, true);
+            
             builder.CurrentSection.HorizontalAlignment = HorizontalAlignment.Left;
-            builder.CurrentSection.MarginRight = 0.1f;
-            builder.CurrentSection.MarginTop = 0.1f;
-            builder.CurrentSection.MarginLeft = 0.1f;
 
-            builder.CurrentSection.MarginBottom = 0.1f;
-
+            
             
             #endregion
 
+            #region végösszesen
+            DataView dv2 = iSzamla.GetBlokkOsszegDataView();
+            builder.DefaultTablePen = null;
+            builder.AddTable(dv2, true, 100);
+            
+            builder.AddColumn(dv2.Table.Columns[0], " ", 120, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv2.Table.Columns[1], " ", 40, false, false, HorizontalAlignment.Right);
 
 
+            #endregion
 
+            builder.AddText(" ");
+            for (int i = 0; i < 6; i++)
+            {
+                builder.AddText(DEFS.R_SYSPAR.GetStrValueFilterInt("BLOKK_LABLEC", i), TextStyle.Normal);
+            }
+            
+            
 
 
             builder.FinishLinearLayout();

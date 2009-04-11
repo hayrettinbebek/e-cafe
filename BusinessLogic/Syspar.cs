@@ -85,6 +85,19 @@ namespace BusinessLogic
 
             return (ret);
         }
+
+        public string GetStrValueFilterInt(string pParamName, int iFilter)
+        {
+            string ret = "";
+            var ret__Syspar =
+                from c in lSyspar
+                where (c.PARAM_NAME == pParamName && c.VALUE_I == iFilter)
+                select c;
+            ret__Syspar.Each(c => ret = c.VALUE_S);
+
+
+            return (ret);
+        }
     }
 
 }

@@ -60,16 +60,16 @@ namespace BusinessLogic
                 try
                 {
                     fFEJ_ID = (int)rdr["SZAMLA_FEJ_ID"];
-                    fSZAMLA_SORSZAM = (string)rdr["SZAMLA_FEJ_ID"];
-                    fPARTNER_ID = (int)rdr["SZAMLA_FEJ_ID"];
-                    fRENDELES_ID = (int)rdr["SZAMLA_FEJ_ID"];
-                    fKEDVEZMENY = (double)rdr["SZAMLA_FEJ_ID"];
-                    fFIZETESI_MOD = (int)rdr["SZAMLA_FEJ_ID"];
-                    fSZAMLA_DATUMA = (DateTime)rdr["SZAMLA_FEJ_ID"];
-                    fEV = (int)rdr["SZAMLA_FEJ_ID"];
-                    fHO = (int)rdr["SZAMLA_FEJ_ID"];
-                    fNAP = (int)rdr["SZAMLA_FEJ_ID"];
-                    fUSER_ID = (int)rdr["SZAMLA_FEJ_ID"];
+                    fSZAMLA_SORSZAM = (string)rdr["SZAMLA_SORSZAM"];
+                    fPARTNER_ID = (int)rdr["PARTNER_ID"];
+                    fRENDELES_ID = (int)rdr["RENDELES_ID"];
+                    fKEDVEZMENY = (double)rdr["KEDVEZMENY"];
+                    fFIZETESI_MOD = (int)rdr["FIZETESI_MOD"];
+                    fSZAMLA_DATUMA = (DateTime)rdr["SZAMLA_DATUMA"];
+                    fEV = (int)rdr["EV"];
+                    fHO = (int)rdr["HO"];
+                    fNAP = (int)rdr["NAP"];
+                    fUSER_ID = (int)rdr["USER_ID"];
 
                 }
                 catch (Exception e)
@@ -106,28 +106,72 @@ namespace BusinessLogic
         }
 
 
+
+
         public DataView GetBlokkDataView()
         {
+            
             DataTable dt = new DataTable("Blokk");
             dt.Columns.Add("Mennyiség", typeof(int));
-            dt.Columns.Add("Mértékegység", typeof(string));
             dt.Columns.Add("Cikk", typeof(string));
             dt.Columns.Add("Összeg", typeof(double));
 
+           
 
             var ret_cikk =
                 from c in lTETELEK
                 select c;
-            ret_cikk.Each(c => dt.Rows.Add(new Object[] { c.MENNYISEG,
-                                                        c.CIKK.MEGYS_MEGNEVEZES,
-                                                        c.CIKK_MEGNEVEZES,
-                                                        c.BRUTTO
-                                                        }));
+            ret_cikk.Each(c => dt.Rows.Add(AddTetelData(c)));
 
             DataView dv = dt.DefaultView;
 
             return dv;
 
+        }
+
+
+        public DataView GetBlokkOsszegDataView()
+        {
+
+            DataTable dt = new DataTable("BlokkOsszeg");
+            
+            dt.Columns.Add("Text", typeof(string));
+            dt.Columns.Add("Összeg", typeof(double));
+
+            double Osszeg = 0;
+            double afa = 0;
+
+
+            var ret_cikk =
+                from c in lTETELEK
+                select c;
+            ret_cikk.Each(c => { Osszeg += c.BRUTTO; afa += c.AFA; });
+            dt.Rows.Add(new Object[] { "Összesen:", Math.Round(Osszeg) });
+            dt.Rows.Add(new Object[] { "Áfa összesen:", Math.Round(afa) });
+           
+            DataView dv = dt.DefaultView;
+
+            return dv;
+
+        }
+
+        private Object[] AddTetelData(Szamla_tetel t)
+        {
+            int mennyiseg = 1;
+            string nev = "";
+
+            if (t.RENDELSOR._LitKiszId > 0)
+                {
+                    nev = t.RENDELSOR._Cikk.KISZ_MEGN +" " + t.RENDELSOR._Cikk.MEGNEVEZES;
+                }
+                else
+                {
+                    nev = t.RENDELSOR._Cikk.MEGNEVEZES;
+                }
+
+
+
+            return (new Object[] { mennyiseg, nev, t.RENDELSOR._Ertek });
         }
 
         #region PROPERTIES
@@ -244,6 +288,7 @@ namespace BusinessLogic
         private double fNETTO;
         private int fTETEL_ID;
         private string fCIKK_MEGNEVEZES;
+        private RendelesSor fRENDELSOR;
 
         public Szamla_tetel(int pSzla_Tetelid)
         {
@@ -278,7 +323,7 @@ namespace BusinessLogic
                 try
                 {
                     fTETEL_ID = (int)rdr["TETEL_ID"];
-                    fTETEL_ID = (int)rdr["RENDELES_SOR_ID"];
+                    fRENDELSOR = new RendelesSor((int)rdr["RENDELES_SOR_ID"],new SqlConnection(DEFS.ConSTR), true);
                     fCIKK = new Cikk((int)rdr["CIKK_ID"], true, new SqlConnection(DEFS.ConSTR));
                     fMENNYISEG = (double)rdr["MENNYISEG"];
                     fEGYSEGAR = (double)rdr["EGYSEGAR"];
@@ -311,6 +356,15 @@ namespace BusinessLogic
                 return (fCIKK);
             }
             
+        }
+
+        public RendelesSor RENDELSOR
+        {
+            get
+            {
+                return (fRENDELSOR);
+            }
+
         }
 
         public double MENNYISEG

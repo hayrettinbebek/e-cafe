@@ -219,7 +219,7 @@ namespace BusinessLogic
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR)));
+                    lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR), false));
 
                 }
                 rdr.Close();
@@ -365,7 +365,7 @@ namespace BusinessLogic
             
             while (rdr.Read())
             {
-                lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR)));
+                lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR),false));
 
             }
             rdr.Close();
@@ -427,7 +427,7 @@ namespace BusinessLogic
             _RaktarId = pRaktar;
         }
 
-        public RendelesSor(int pRendelesSorID, SqlConnection c)
+        public RendelesSor(int pRendelesSorID, SqlConnection c, bool pSzamla)
         {
             SqlCommand cmd2 = new SqlCommand();
             c.Open();
@@ -436,9 +436,15 @@ namespace BusinessLogic
 
             cmd2.CommandType = CommandType.Text;
 
-            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID " +
-                                " FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
-            
+            if (pSzamla)
+            {
+                cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID " +
+                                   " FROM RENDELES_SOR WHERE SOR_ID =" + pRendelesSorID.ToString();
+            } else
+            {
+                cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID " +
+                                    " FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
+            }
             SqlDataReader rdr2 = cmd2.ExecuteReader();
 
             while (rdr2.Read())

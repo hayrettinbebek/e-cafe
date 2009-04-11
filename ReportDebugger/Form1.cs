@@ -25,7 +25,7 @@ namespace ReportDebugger
         private void button1_Click(object sender, EventArgs e)
         {
             doPrinting dp = new doPrinting();
-            dp.setReportMaker(new BlokkReport(23));
+            dp.setReportMaker(new BlokkReport(26));
             dp.doPreview();
         }
 
@@ -36,6 +36,7 @@ namespace ReportDebugger
                 DEFS.createLogger();
                 DEFS.ConSTR = @"Data Source=ERNIE-HOME\SQLEXPRESS;Initial Catalog=ECAFE_0407;Persist Security Info=True;User ID=sa;Password=x";
                 DEFS.DefProgramLocation = AppDomain.CurrentDomain.BaseDirectory;
+                DEFS.R_SYSPAR = new SysParList();
             }
             catch (Exception z)
             {
