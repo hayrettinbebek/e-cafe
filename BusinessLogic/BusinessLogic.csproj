@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4423B230-FAEA-458A-94FC-F8D912C2709A}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -97,6 +97,7 @@
     <Compile Include="Rights.cs" />
     <Compile Include="StringEnum.cs" />
     <Compile Include="Syspar.cs" />
+    <Compile Include="Szamla.cs" />
     <Compile Include="Uzenet.cs" />
     <Compile Include="Win32.cs" />
   </ItemGroup>
@@ -115,6 +116,9 @@
       <DependentUpon>frmProgress.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BL_ClassDiagramm.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

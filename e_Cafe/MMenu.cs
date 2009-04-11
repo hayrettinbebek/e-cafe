@@ -16,6 +16,7 @@ using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using e_Cafe.FrontOffice;
 using NSpring.Logging;
+using e_Cafe.Reports;
 
 
 namespace e_Cafe
@@ -471,30 +472,11 @@ namespace e_Cafe
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            ReportPrinting.ReportDocument reportDocument1;
-            ReportPrinting.PrintControlToolBar printControlToolBar1 = new ReportPrinting.PrintControlToolBar() ;
-            reportDocument1 = new ReportPrinting.ReportDocument();
 
-            reportDocument1.Body = null;
-            reportDocument1.PageFooter = null;
-            reportDocument1.PageHeader = null;
+            doPrinting dp = new doPrinting();
+            dp.setReportMaker(new Reports.BlokkReport());
+            dp.doPreview();
 
-
-            // 
-            // printControlToolBar1
-            // 
-            printControlToolBar1.Dock = System.Windows.Forms.DockStyle.Top;
-            printControlToolBar1.Document = reportDocument1;
-            printControlToolBar1.Location = new System.Drawing.Point(0, 0);
-            printControlToolBar1.Name = "printControlToolBar1";
-            printControlToolBar1.Size = new System.Drawing.Size(368, 40);
-            printControlToolBar1.TabIndex = 2;
-            //printControlToolBar1.Load += new System.EventHandler(printControlToolBar1_Load);
-            //pintControlToolBar1.Printing += new System.EventHandler(printControlToolBar1_Printing);
-
-            reportDocument1.ReportMaker = new Reports.BlokkReport();
-
-            printControlToolBar1.Preview(null, null);
         }
 
 

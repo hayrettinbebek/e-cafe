@@ -374,6 +374,11 @@ namespace BusinessLogic
 
         }
 
+        public static int MMtoInch(int iMM)
+        {
+            return Convert.ToInt16(Math.Round(((iMM / 25.4) * 100)));
+        }
+
     }
 
     public enum Fizmond : int

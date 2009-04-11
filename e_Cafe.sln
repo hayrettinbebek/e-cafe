@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e_Cafe", "e_Cafe\e_Cafe.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportPrinting", "ReportPrinting\ReportPrinting.csproj", "{9330BA30-6B74-45C9-9788-3697F7731D32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportDebugger", "ReportDebugger\ReportDebugger.csproj", "{7E9C7AB4-E7CE-4AD8-B9F8-D2A56FEBD8FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,12 @@ Global
 		{9330BA30-6B74-45C9-9788-3697F7731D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9330BA30-6B74-45C9-9788-3697F7731D32}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9330BA30-6B74-45C9-9788-3697F7731D32}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E9C7AB4-E7CE-4AD8-B9F8-D2A56FEBD8FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9C7AB4-E7CE-4AD8-B9F8-D2A56FEBD8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9C7AB4-E7CE-4AD8-B9F8-D2A56FEBD8FB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E9C7AB4-E7CE-4AD8-B9F8-D2A56FEBD8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9C7AB4-E7CE-4AD8-B9F8-D2A56FEBD8FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9C7AB4-E7CE-4AD8-B9F8-D2A56FEBD8FB}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
