@@ -87,7 +87,7 @@ namespace e_Cafe
             DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
             //MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 22)
+            if (db_ver < 23)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -118,6 +118,7 @@ namespace e_Cafe
                     if (db_ver < 20) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_020.sql")); }
                     if (db_ver < 21) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_021.sql")); }
                     if (db_ver < 22) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_022.sql")); }
+                    if (db_ver < 23) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_023.sql")); }
 
                     updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
                     DEFS.SendShortMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +
@@ -467,6 +468,36 @@ namespace e_Cafe
             Logout();
             Login();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            ReportPrinting.ReportDocument reportDocument1;
+            ReportPrinting.PrintControlToolBar printControlToolBar1 = new ReportPrinting.PrintControlToolBar() ;
+            reportDocument1 = new ReportPrinting.ReportDocument();
+
+            reportDocument1.Body = null;
+            reportDocument1.PageFooter = null;
+            reportDocument1.PageHeader = null;
+
+
+            // 
+            // printControlToolBar1
+            // 
+            printControlToolBar1.Dock = System.Windows.Forms.DockStyle.Top;
+            printControlToolBar1.Document = reportDocument1;
+            printControlToolBar1.Location = new System.Drawing.Point(0, 0);
+            printControlToolBar1.Name = "printControlToolBar1";
+            printControlToolBar1.Size = new System.Drawing.Size(368, 40);
+            printControlToolBar1.TabIndex = 2;
+            //printControlToolBar1.Load += new System.EventHandler(printControlToolBar1_Load);
+            //pintControlToolBar1.Printing += new System.EventHandler(printControlToolBar1_Printing);
+
+            reportDocument1.ReportMaker = new Reports.BlokkReport();
+
+            printControlToolBar1.Preview(null, null);
+        }
+
+
 
 
 

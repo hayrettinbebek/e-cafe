@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -109,7 +109,6 @@
     <Reference Include="Microsoft.VisualBasic">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -190,6 +189,7 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\BlokkReport.cs" />
     <Compile Include="SQL\dsJOG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -757,6 +757,10 @@
     <ProjectReference Include="..\GUI\GUI.csproj">
       <Project>{7A9003C7-484C-4510-BE0F-128F219A812B}</Project>
       <Name>GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportPrinting\ReportPrinting.csproj">
+      <Project>{9330BA30-6B74-45C9-9788-3697F7731D32}</Project>
+      <Name>ReportPrinting</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
