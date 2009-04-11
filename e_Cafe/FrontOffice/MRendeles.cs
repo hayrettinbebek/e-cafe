@@ -10,7 +10,7 @@ using BusinessLogic;
 using GUI;
 using System.Resources;
 using System.Data.SqlClient;
-
+using e_Cafe.Reports;
 using XPTable;
 using XPTable.Models;
 using XPTable.Renderers;
@@ -694,9 +694,9 @@ namespace e_Cafe
                         DEFS.AddSzlaTetel(szamla_fej_id, ((eCell)r.Cells[0]).rSor._SOR_ID);
                     }
 
-                    frmReporting rep = new frmReporting();
-                    rep.Szla_id = szamla_fej_id;
-                    rep.ShowDialog();
+                    doPrinting dp = new doPrinting();
+                    dp.setReportMaker(new BlokkReport(szamla_fej_id));
+                    dp.doPreview();
 
                     DEFS.DebugLog("Rendelés fizetve");
 
