@@ -473,10 +473,6 @@ namespace e_Cafe
         private void button2_Click_1(object sender, EventArgs e)
         {
 
-            doPrinting dp = new doPrinting();
-            dp.setReportMaker(new Reports.BlokkReport());
-            dp.doPreview();
-
         }
 
 

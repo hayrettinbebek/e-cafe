@@ -34,6 +34,8 @@ namespace BusinessLogic
 
         public static Rights UserRights;
 
+        //public static Megys_list GlobalMegysList = new Megys_list();
+
         public static void UserLogout(int _u_id)
         {
             SqlConnection c = new SqlConnection(ConSTR);

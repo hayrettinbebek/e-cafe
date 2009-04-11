@@ -15,6 +15,7 @@ namespace BusinessLogic
         public String KISZ_MEGN;
         public double KISZ_MENNY;
 
+
         #region CIKK_ID
         private int fCIKK_ID;
         public int CIKK_ID
@@ -24,7 +25,15 @@ namespace BusinessLogic
         }
         #endregion
 
-        
+        #region LIT_KISZ_ID
+        private int fLIT_KISZ_ID;
+        public int LIT_KISZ_ID
+        {
+            get { return (fLIT_KISZ_ID); }
+            set { fLIT_KISZ_ID = value; }
+        }
+        #endregion
+
         #region MEGYS_ID
         private string fMEGYS_ID;
         public string MEGYS_ID
@@ -425,7 +434,7 @@ namespace BusinessLogic
         }
 
 
-        public Cikk(int pCikkId, SqlConnection c)
+        public Cikk(int pCikkId, SqlConnection c, int kisz_id)
         {
             if (c.State == ConnectionState.Closed) { c.Open(); }
             SqlCommand cmd = new SqlCommand();
@@ -439,9 +448,9 @@ namespace BusinessLogic
                             " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
                             " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                             " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ, AKTIV, VIRTUAL,  " +
-                            " isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER " +
+                            " isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER, isnull(LIT_KISZ_ID,-1) as LIT_KISZ_ID  " +
 
-                            " FROM CIKK  c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE CIKK_ID =" + pCikkId.ToString();
+                            " FROM CIKK  c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE CIKK_ID =" + pCikkId.ToString() + "  AND isnull(LIT_KISZ_ID,-1) = " + kisz_id.ToString();
             //if (plit_kisz_id > 0)
             //{
             //    cmd.CommandText += " AND l.LIT_KISZ_ID = " + plit_kisz_id.ToString();
@@ -471,7 +480,7 @@ namespace BusinessLogic
 
                 MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
                 OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
-
+                LIT_KISZ_ID = (int)rdr["LIT_KISZ_ID"];
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
                 NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
@@ -944,7 +953,7 @@ namespace BusinessLogic
                                         " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " +
                                         " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                                         " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ,  " +
-                                        " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR, isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER " +
+                                        " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR, isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER, isnull(LIT_KISZ_ID,-1) as LIT_KISZ_ID " +
                                 " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE AKTIV = 1";
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -973,6 +982,7 @@ namespace BusinessLogic
                         t.MEGJEGYZES = (string)rdr["MEGJEGYZES"];
                         t.KISZ_MEGN = (string)rdr["KISZ_NEV"];
                         t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+                        t.LIT_KISZ_ID = (int)rdr["LIT_KISZ_ID"];
                         t.MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
                         t.OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
                         t.ROVID_NEV = (string)rdr["ROVID_NEV"];
@@ -1046,7 +1056,7 @@ namespace BusinessLogic
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, " +
-                                " isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY " +
+                                " isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY, isnull(LIT_KISZ_ID,-1) as LIT_KISZ_ID  " +
                                 " FROM CIKK c left join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id "+
                                 " WHERE AKTIV = 1 and c.CIKKCSOPORT_ID = " + _CikkCsop;
 
@@ -1055,13 +1065,14 @@ namespace BusinessLogic
             {
                 try
                 {
-                    Cikk t = new Cikk((int)rdr["CIKK_ID"], new SqlConnection(DEFS.ConSTR));
+                    Cikk t = new Cikk((int)rdr["CIKK_ID"], new SqlConnection(DEFS.ConSTR), (int)rdr["LIT_KISZ_ID"]);
 
                     t.ALCSOPORT = (int)rdr["OTHER_FILTER_ID"];
                     t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
                     t.ERTEKESITES_TIPUSA = (string)rdr["ERT_TIPUS"];
                     t.KISZ_MEGN = (string)rdr["KISZ_NEV"];
                     t.KISZ_MENNY = (double)rdr["KISZ_MENNY"];
+                    t.LIT_KISZ_ID = (int)rdr["LIT_KISZ_ID"];
                     t.getKeszlet();
                     lCIKK.Add(t);
                 }
@@ -1453,6 +1464,7 @@ namespace BusinessLogic
     #endregion
 
     #region Mértékegységek
+
     public class Megys
     {
         private string _id;

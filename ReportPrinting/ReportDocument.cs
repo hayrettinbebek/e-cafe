@@ -9,7 +9,7 @@
 // page - but it uses PInvoke and some other logic that I don't COMPLETELY understand.
 // Seting this #define will bypass that logic and use the "normal" .Net method of
 // getting margins (that doesn't quite work on the page correctly).
-//#define BYPASS_PRINTABLE_AREA_LOGIC
+#define BYPASS_PRINTABLE_AREA_LOGIC
 
 using System;
 using System.Collections;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using System.Linq;
 using NSpring.Logging;
 
 namespace BusinessLogic
@@ -22,7 +23,7 @@ namespace BusinessLogic
         private int fUSER_ID;
     
         public List<Szamla_tetel> lTETELEK = new List<Szamla_tetel>();
-     
+
         public Szamla(int pSzlaid)
         {
             SqlConnection sc = new SqlConnection(DEFS.ConSTR);
@@ -77,29 +78,57 @@ namespace BusinessLogic
                 }
 
 
-
-                cmd.CommandType = CommandType.Text;
-
-                cmd.CommandText = "SELECT TETEL_ID FROM SZAMLA_TETEL WHERE SZAMLA_FEJ_ID = @fid";
-                cmd.Parameters.Add(new SqlParameter("fid", SqlDbType.Int));
-                cmd.Parameters["fid"].Value = pSzlaid;
-
-                rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    lTETELEK.Add(new Szamla_tetel((int)rdr["TETEL_ID"]));
-
-                }
-                rdr.Close();
-                
             }
             rdr.Close();
+
+            cmd.CommandText = "";
+            cmd.Parameters.Clear();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT TETEL_ID FROM SZAMLA_TETEL WHERE SZAMLA_FEJ_ID = @fid";
+            cmd.Parameters.Add(new SqlParameter("fid", SqlDbType.Int));
+            cmd.Parameters["fid"].Value = pSzlaid;
+
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                lTETELEK.Add(new Szamla_tetel((int)rdr["TETEL_ID"]));
+
+            }
+            rdr.Close();
+
+
+            rdr.Close();
             sc.Close();
-          
+
 
 
         }
 
+
+        public DataView GetBlokkDataView()
+        {
+            DataTable dt = new DataTable("Blokk");
+            dt.Columns.Add("Mennyiség", typeof(int));
+            dt.Columns.Add("Mértékegység", typeof(string));
+            dt.Columns.Add("Cikk", typeof(string));
+            dt.Columns.Add("Összeg", typeof(double));
+
+
+            var ret_cikk =
+                from c in lTETELEK
+                select c;
+            ret_cikk.Each(c => dt.Rows.Add(new Object[] { c.MENNYISEG,
+                                                        c.CIKK.MEGYS_MEGNEVEZES,
+                                                        c.CIKK_MEGNEVEZES,
+                                                        c.BRUTTO
+                                                        }));
+
+            DataView dv = dt.DefaultView;
+
+            return dv;
+
+        }
 
         #region PROPERTIES
         public int FEJ_ID
@@ -215,7 +244,7 @@ namespace BusinessLogic
         private double fNETTO;
         private int fTETEL_ID;
         private string fCIKK_MEGNEVEZES;
-    
+
         public Szamla_tetel(int pSzla_Tetelid)
         {
             SqlConnection sc = new SqlConnection(DEFS.ConSTR);
@@ -250,7 +279,7 @@ namespace BusinessLogic
                 {
                     fTETEL_ID = (int)rdr["TETEL_ID"];
                     fTETEL_ID = (int)rdr["RENDELES_SOR_ID"];
-                    fCIKK = new Cikk((int)rdr["CIKK_ID"], new SqlConnection(DEFS.ConSTR));
+                    fCIKK = new Cikk((int)rdr["CIKK_ID"], true, new SqlConnection(DEFS.ConSTR));
                     fMENNYISEG = (double)rdr["MENNYISEG"];
                     fEGYSEGAR = (double)rdr["EGYSEGAR"];
                     fNETTO = (double)rdr["NETTO"];
@@ -323,7 +352,7 @@ namespace BusinessLogic
         {
             get
             {
-                throw new System.NotImplementedException();
+                return (fBRUTTO);
             }
             
         }
@@ -332,7 +361,7 @@ namespace BusinessLogic
         {
             get
             {
-                throw new System.NotImplementedException();
+                return (fAFA_KOD);
             }
 
         }
@@ -372,6 +401,7 @@ namespace BusinessLogic
             }
 
         }
+
         #endregion
 
 
