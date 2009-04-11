@@ -46,7 +46,7 @@ namespace ReportPrinting
             float scale = reportDocument.GetScale();
             this.maxDetailRowHeight = 8f * scale;
             this.maxHeaderRowHeight = 8f * scale;
-            this.horizLineMargins = 0.1f * scale;
+            this.horizLineMargins = 0.01f * scale;
             this.headerFooterMargins = horizLineMargins * 2;
             this.defaultTablePen = reportDocument.ThinPen;
         }

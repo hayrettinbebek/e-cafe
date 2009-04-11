@@ -103,13 +103,22 @@ namespace BusinessLogic
         public TableModel getTableModel()
         {
             TableModel tmpMod = new TableModel( new Row[] {});
+            string tmpMegn = "";
             
             for (int i = _ScrollPos; i < lRendelesSor.Count; i++)
             {
-
+                if (lRendelesSor[i]._LitKiszId > 0)
+                {
+                    tmpMegn = lRendelesSor[i]._Cikk.KISZ_MEGN +" " + lRendelesSor[i]._Cikk.MEGNEVEZES;
+                }
+                else
+                {
+                    tmpMegn = lRendelesSor[i]._Cikk.MEGNEVEZES;
+                }
                 tmpMod.Rows.Add(new Row(new Cell[] {new eCell(lRendelesSor[i]),
-													new Cell(lRendelesSor[i]._db),
-													new Cell(lRendelesSor[i]._Cikk.MEGNEVEZES),
+													//new Cell(lRendelesSor[i]._db),
+                                                    new Cell(1),
+													new Cell(tmpMegn),
 													new Cell(lRendelesSor[i]._Ertek),
 													new Cell(lRendelesSor[i]._datum)}));
             }
@@ -133,10 +142,12 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT c.MEGNEVEZES,sum(s.DB) as DB, sum(s.ERTEK) as ERTEK FROM RENDELES_SOR s " +
+            cmd.CommandText = "SELECT case when isnull(l.LIT_KISZ_ID,-1) = -1 then c.MEGNEVEZES else l.LIT_KISZ_NEV + ' ' + c.MEGNEVEZES END as MEGNEVEZES "+
+                                " ,count(*) as DB, sum(s.ERTEK) as ERTEK FROM RENDELES_SOR s " +
                                 " inner join CIKK c on s.CIKK_Id = c.CIKK_ID " +
+                                " left join LIT_KISZ l on s.LIT_KISZ_ID = l.LIT_KISZ_ID " +
                                 " WHERE DELETED = 0 AND isnull(FIZETVE,0) = 0 AND RENDELES_ID =" + this.fRENDELES_ID.ToString() +" " +
-                                " group by c.MEGNEVEZES" ;
+                                " group by case when isnull(l.LIT_KISZ_ID,-1) = -1 then c.MEGNEVEZES else l.LIT_KISZ_NEV + ' ' + c.MEGNEVEZES END";
             SqlDataReader rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
@@ -226,12 +237,12 @@ namespace BusinessLogic
         public void addTetel(Cikk pCikk)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round( pCikk.NETTO_AR,2), DateTime.Now));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round( pCikk.NETTO_AR,2), DateTime.Now, pCikk.LIT_KISZ_ID));
         }
         public void addTetel(Cikk pCikk, int pRakt)
         {
 
-            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round(pCikk.NETTO_AR,2), DateTime.Now, pRakt));
+            lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round(pCikk.NETTO_AR, 2), DateTime.Now, pRakt, pCikk.LIT_KISZ_ID));
         }
 
         #endregion
@@ -376,12 +387,14 @@ namespace BusinessLogic
 
         public DateTime _datum;
         public int _RaktarId;
+        public int _LitKiszId;
 
-        public RendelesSor(Cikk pCikk, double pDb, double pErtek, DateTime pDatum)
+        public RendelesSor(Cikk pCikk, double pDb, double pErtek, DateTime pDatum, int litkisz)
         {
 
             _Cikk = pCikk;
             _datum = pDatum;
+            _LitKiszId = litkisz;
             if (pDb == 0)
             {
                 _db = 1;
@@ -395,11 +408,12 @@ namespace BusinessLogic
             _RaktarId = pCikk.ALAP_RAKTAR;
         }
 
-        public RendelesSor(Cikk pCikk, double pDb, double pErtek, DateTime pDatum, int pRaktar)
+        public RendelesSor(Cikk pCikk, double pDb, double pErtek, DateTime pDatum, int pRaktar, int litkisz)
         {
 
             _Cikk = pCikk;
             _datum = pDatum;
+            _LitKiszId = litkisz;
             if (pDb == 0)
             {
                 _db = 1;
@@ -417,12 +431,13 @@ namespace BusinessLogic
         {
             SqlCommand cmd2 = new SqlCommand();
             c.Open();
-
+            
             cmd2.Connection = c;
 
             cmd2.CommandType = CommandType.Text;
 
-            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
+            cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID " +
+                                " FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
             
             SqlDataReader rdr2 = cmd2.ExecuteReader();
 
@@ -435,7 +450,8 @@ namespace BusinessLogic
                 _Afa_Ertek = Convert.ToDouble(rdr2["AFA_ERTEK"].ToString());
                 _db = (double)rdr2["DB"];
                 _RaktarId = (int)rdr2["RAKTAR_ID"];
-                _Cikk = new Cikk((int)rdr2["CIKK_ID"], new SqlConnection(DEFS.ConSTR));
+                _LitKiszId = (int)rdr2["LIT_KISZ_ID"];
+                _Cikk = new Cikk((int)rdr2["CIKK_ID"], new SqlConnection(DEFS.ConSTR), (int)rdr2["LIT_KISZ_ID"]);
 
             }
             rdr2.Close();
@@ -470,7 +486,8 @@ namespace BusinessLogic
                                             ",MODIFIED_USER " +
                                             ",AFA_ERTEK " +
                                             ",ERTEK " +
-                                            ",NETTO_ERTEK) " +
+                                            ",NETTO_ERTEK " +
+                                            ",LIT_KISZ_ID) " +
                                         "VALUES " +
                                             "(@RENDELES_ID " +
                                             ",@CIKK_ID " +
@@ -480,7 +497,8 @@ namespace BusinessLogic
                                             ",@MODIFIED_USER " +
                                             ",@AFA_ERTEK " +
                                             ",@ERTEK " +
-                                            ",@NETTO_ERTEK) SET @newid = SCOPE_IDENTITY()";
+                                            ",@NETTO_ERTEK " +
+                                            ",@LIT_KISZ_ID) SET @newid = SCOPE_IDENTITY()";
                         cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
                         cmd.Parameters["newid"].Direction = ParameterDirection.Output;
 
@@ -494,7 +512,8 @@ namespace BusinessLogic
                                                        " DATUM = @DATUM, " +
                                                        " RAKTAR_ID = @RAKTAR_ID, " +
                                                        " MODIFIED_USER = @MODIFIED_USER, " +
-                                                       " NETTO_ERTEK = @NETTO_ERTEK " +
+                                                       " NETTO_ERTEK = @NETTO_ERTEK, " +
+                                                       " LIT_KISZ_ID = @LIT_KISZ_ID " +
                                            "WHERE SOR_ID = @SOR_ID";
                         cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
                         cmd.Parameters["SOR_ID"].Value = _SOR_ID;
@@ -510,6 +529,7 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("MODIFIED_USER", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("LIT_KISZ_ID", SqlDbType.Int));
 
             cmd.Parameters["RENDELES_ID"].Value = pRendelesId;
             cmd.Parameters["CIKK_ID"].Value = _Cikk.CIKK_ID;
@@ -520,7 +540,7 @@ namespace BusinessLogic
             cmd.Parameters["NETTO_ERTEK"].Value = _Netto_Ertek;
             cmd.Parameters["ERTEK"].Value = Math.Round(_Netto_Ertek * (1+(_Cikk.AFA_SZAZ/100)),2);
             cmd.Parameters["AFA_ERTEK"].Value = Math.Round(_Netto_Ertek * (_Cikk.AFA_SZAZ / 100), 2);
-
+            cmd.Parameters["LIT_KISZ_ID"].Value = _LitKiszId;
             try
             {
                 cmd.ExecuteNonQuery();

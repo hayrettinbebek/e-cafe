@@ -9,6 +9,12 @@ namespace e_Cafe.Reports
 {
     public class BlokkReport: IReportMaker
 	{
+        int _SzamlaId;
+
+        public BlokkReport(int SzamlaId)
+        {
+            _SzamlaId = SzamlaId;
+        }
 
 		public void MakeDocument(ReportDocument reportDocument)
         {
@@ -17,15 +23,18 @@ namespace e_Cafe.Reports
             TextStyle.ResetStyles();
             SectionBox box;
             LinearSections contents;
-
+            TextStyle.Normal.BackgroundBrush = Brushes.Beige;
+            Szamla iSzamla = new Szamla(_SzamlaId);
             // Create a ReportBuilder object that assists with building a report
             ReportBuilder builder = new ReportBuilder(reportDocument);
+            
             builder.CurrentDocument.DocumentUnit = GraphicsUnit.Millimeter;
             // Before adding sections, a layout must be started.  
             // We are using a linear layout - vertically, which means
             // each new section starts below the last one.
             builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(140), DEFS.MMtoInch(297));
-
+            builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(8), DEFS.MMtoInch(8), DEFS.MMtoInch(8), DEFS.MMtoInch(8));
+            builder.HorizLineMargins = 0.2f;
 
             builder.StartLinearLayout(Direction.Vertical);
 
@@ -42,6 +51,7 @@ namespace e_Cafe.Reports
             box.Height = 10;
             box.OffsetLeft = 0;
             box.OffsetTop = 0;
+
             //box.Border.
             box.Background = Brushes.Ivory;
             contents = new LinearSections();
@@ -74,15 +84,18 @@ namespace e_Cafe.Reports
             builder.AddText("Blokk sorszáma:", TextStyle.Normal);
 
             #region sorok
-            DataView dv = GetDataView();
+            DataView dv = iSzamla.GetBlokkDataView();
 
             builder.AddTable(dv, true);
-            builder.AddAllColumns(40.0f, true, true);
-            builder.CurrentSection.HorizontalAlignment = HorizontalAlignment.Center;
-            builder.CurrentSection.MarginRight = 1.0f;
-            builder.CurrentSection.MarginTop = 0.5f;
-            builder.CurrentSection.MarginBottom = 0.2f;
+            builder.AddAllColumns(30.0f, true, true);
+            builder.CurrentSection.HorizontalAlignment = HorizontalAlignment.Left;
+            builder.CurrentSection.MarginRight = 0.1f;
+            builder.CurrentSection.MarginTop = 0.1f;
+            builder.CurrentSection.MarginLeft = 0.1f;
 
+            builder.CurrentSection.MarginBottom = 0.1f;
+
+            
             #endregion
 
 
@@ -94,31 +107,7 @@ namespace e_Cafe.Reports
 
         }
 
-        public static DataView GetDataView()
-        {
-            DataTable dt = new DataTable("People");
-            dt.Columns.Add("FirstName", typeof(string));
-            dt.Columns.Add("LastName", typeof(string));
-            dt.Columns.Add("Birthdate", typeof(DateTime));
-
-            dt.Rows.Add(new Object[] { "Theodore", "Roosevelt", new DateTime(1858, 11, 27) });
-            dt.Rows.Add(new Object[] { "Winston ", "Churchill", new DateTime(1874, 11, 30) });
-            dt.Rows.Add(new Object[] { "Pablo", "Picasso", new DateTime(1881, 10, 25) });
-            dt.Rows.Add(new Object[] { "Charlie", "Chaplin", new DateTime(1889, 4, 16) });
-            dt.Rows.Add(new Object[] { "Steven", "Spielberg", new DateTime(1946, 12, 18) });
-            dt.Rows.Add(new Object[] { "Bart", "Simpson", new DateTime(1987, 4, 19) });
-            dt.Rows.Add(new Object[] { "Louis", "Armstrong", new DateTime(1901, 8, 4) });
-            dt.Rows.Add(new Object[] { "Igor", "Stravinski", new DateTime(1882, 6, 17) });
-            dt.Rows.Add(new Object[] { "Bill", "Gates", new DateTime(1955, 10, 28) });
-            dt.Rows.Add(new Object[] { "Albert", "Einstein", new DateTime(1879, 3, 14) });
-            dt.Rows.Add(new Object[] { "Marilyn", "Monroe", new DateTime(1927, 6, 1) });
-            dt.Rows.Add(new Object[] { "Mother", "Teresa", new DateTime(1910, 8, 27) });
-
-            DataView dv = dt.DefaultView;
-
-            return dv;
-
-        }
+        
 
 
     }
