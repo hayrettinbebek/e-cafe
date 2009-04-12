@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using e_Cafe.Reports;
 using XPTable;
 using XPTable.Models;
 using XPTable.Renderers;
@@ -57,9 +57,9 @@ namespace e_Cafe.FrontOffice
                     DEFS.AddSzlaTetel(szamla_fej_id, ((HitelCell)r.Cells[0]).hSor._SOR_ID);
                 }
 
-                frmReporting rep = new frmReporting();
-                rep.Szla_id = szamla_fej_id;
-                rep.ShowDialog();
+                doPrinting dp = new doPrinting();
+                dp.setReportMaker(new BlokkReport(szamla_fej_id));
+                dp.doPreview();
 
                 DEFS.DebugLog("Hitelek fizetve");
 

@@ -615,7 +615,7 @@ namespace BusinessLogic
                                             ",@DEFAULT_RAKTAR " +
                                             ",@SPEC_ZARAS " +
                                             ",@AUTO_MEGRENDELO " + 
-                                            ",@AKTIV, " +
+                                            ",@AKTIV " +
                                             ",@VIRTUAL "+
                                             ",@CIKK_ROVID_NEV " +
                                             ",@CIKK_TOP_LIST " +
@@ -646,9 +646,9 @@ namespace BusinessLogic
                                                        " SPEC_ZARAS = @SPEC_ZARAS, " +
                                                        " AUTO_MEGRENDELO = @AUTO_MEGRENDELO, " +
                                                        " AKTIV = @AKTIV, " +
-                                                       " VIRTUAL = @VIRTUAL " +
-                                                       " CIKK_ROVID_NEV = @CIKK_ROVID_NEV " +
-                                                       " CIKK_TOP_LIST = @CIKK_TOP_LIST " +
+                                                       " VIRTUAL = @VIRTUAL, " +
+                                                       " CIKK_ROVID_NEV = @CIKK_ROVID_NEV, " +
+                                                       " CIKK_TOP_LIST = @CIKK_TOP_LIST, " +
                                                        " CIKKCSOP_PREFER = @CIKKCSOP_PREFER " +
 
                                                         
@@ -690,6 +690,7 @@ namespace BusinessLogic
             if (ERTEKESITES_TIPUSA == "")
             {
                 cmd.Parameters["ERTEKESITES_TIPUSA"].Value = "D";
+                
             }
             else
             {
