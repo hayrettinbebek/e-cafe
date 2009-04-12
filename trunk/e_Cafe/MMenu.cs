@@ -433,9 +433,9 @@ namespace e_Cafe
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            frmReporting rep = new frmReporting();
+            //frmReporting rep = new frmReporting();
             
-            rep.ShowDialog();
+            //rep.ShowDialog();
 
         }
 
