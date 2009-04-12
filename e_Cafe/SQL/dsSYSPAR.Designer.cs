@@ -400,7 +400,7 @@ namespace e_Cafe.SQL {
                 this.columnPARAM_VALUE_F = new global::System.Data.DataColumn("PARAM_VALUE_F", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPARAM_VALUE_F);
                 this.columnPARAM_NAME.MaxLength = 20;
-                this.columnPARAM_VALUE_S.MaxLength = 50;
+                this.columnPARAM_VALUE_S.MaxLength = 2050;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
