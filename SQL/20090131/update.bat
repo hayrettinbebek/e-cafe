@@ -1,1 +1,0 @@
-sqlcmd -S "ERNIE-HOME\SQLEXPRESS" -U "sa" -P "x" -d "ECAFE" -i struct.sql -o output.log
