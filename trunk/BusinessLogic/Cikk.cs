@@ -1101,6 +1101,37 @@ namespace BusinessLogic
 
             return (iTmpRet);
         }
+
+        public List<Cikk> CikkListByTOP()
+        {
+            List<Cikk> iTmpRet = new List<Cikk>();
+
+            var ret_cikk =
+                from c in lCIKK
+                where c.CIKK_TOP_LIST == true
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
+
+
+        public List<Cikk> CikkListByCsoportTOP(int iCsoportId)
+        {
+            List<Cikk> iTmpRet = new List<Cikk>();
+
+            var ret_cikk =
+                from c in lCIKK
+                where (c.CIKKCSOPORT_ID == iCsoportId) && (c.CIKKCSOP_PREFER == true)
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
+
+        
         
         
         public List<Cikk> CikkFilter(string iCikkNev)

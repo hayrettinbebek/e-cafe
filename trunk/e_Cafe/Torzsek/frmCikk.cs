@@ -257,6 +257,11 @@ namespace e_Cafe.Torzsek
             cIKKBindingSource.Filter = aktCikkfilter.getResult();
         }
 
+        private void dataGridView2_CancelRowEdit(object sender, QuestionEventArgs e)
+        {
+            
+        }
+
 
     }
 }

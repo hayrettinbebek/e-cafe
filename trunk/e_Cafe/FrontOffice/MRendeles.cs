@@ -300,13 +300,30 @@ namespace e_Cafe
             List<Cikk> lButtons = new List<Cikk>();
             DEFS.log(Level.Debug, "LoadCikkek() "+ pAlcsoportId.ToString() + " Cikkcsoport: " + pCikkcsoport.ToString());
 
-            if (pAlcsoportId == -1)
+            if (pCikkcsoport == -1)
             {
-                lButtons = lCikkList.CikkListByCsoport(pCikkcsoport);
+
+                lButtons = lCikkList.CikkListByTOP();
             }
             else
             {
-                lButtons = lCikkList.CikkListByAlcsoport(pCikkcsoport, pAlcsoportId);
+
+                if (pAlcsoportId == -1)
+                {
+                    if (pnlOtherFilter.Visible == true)
+                    {
+                        lButtons = lCikkList.CikkListByCsoportTOP(pCikkcsoport);
+                    }
+                    else
+                    {
+                        lButtons = lCikkList.CikkListByCsoport(pCikkcsoport);
+                    }
+
+                }
+                else
+                {
+                    lButtons = lCikkList.CikkListByAlcsoport(pCikkcsoport, pAlcsoportId);
+                }
             }
 
             for (int i = Cikkek_ScrollPos; i < lButtons.Count; i++)
@@ -747,7 +764,7 @@ namespace e_Cafe
         {
             MaxScroll = cl.lCIKKCSOPORT.Count;
             needScroll = (pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE; // Convert.ToInt16(Math.Round((double)((pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE), 0));
-
+            loadCikkek(-1, -1);
 
 
         }

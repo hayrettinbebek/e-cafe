@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using System.Drawing;
 using BusinessLogic;
 
 namespace e_Cafe.Admin
@@ -38,6 +38,13 @@ namespace e_Cafe.Admin
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+
+            pbPreview.Image = Image.FromFile(openFileDialog1.FileName);
         }
     }
 
