@@ -1265,6 +1265,7 @@
             // 
             // lITKISZBindingSource
             // 
+            this.lITKISZBindingSource.AllowNew = true;
             this.lITKISZBindingSource.DataMember = "LIT_KISZ";
             this.lITKISZBindingSource.DataSource = this.eCAFEDataSetCIKK;
             this.lITKISZBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.lITKISZBindingSource_AddingNew);
