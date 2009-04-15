@@ -24,7 +24,7 @@ X - ha nincs készleten (a default helyen - def rakt) az értékesítésnél akkor ne 
  - figyelmeztessen belépésnél, ha a nyitott nap régebben nyitva van mint a mai nap figyelmeztesen.
  - kijelentkezés a felhasználó gombra kattintva: ott csak vált de ne léptessük ki! kilépnie magának kell.
 
- - Rendelés felvitel során automatikusan hozzon fen ún. kiemelt/preferált termékeket. ugyanez cikkcsoportra is. (TOP 20 és preferált termék) checkboxokkal jelölve a terméknél
+X - Rendelés felvitel során automatikusan hozzon fen ún. kiemelt/preferált termékeket. ugyanez cikkcsoportra is. (TOP 20 és preferált termék) checkboxokkal jelölve a terméknél
 
 X - asztaloknál jelölve, hogy aktív/inaktív vagy nem.
 X - asztaloknál legyen név(szám) vagy se
