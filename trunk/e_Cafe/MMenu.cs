@@ -201,6 +201,7 @@ namespace e_Cafe
             DEFS.UserRights = new Rights(u.USER_ID);
             UserButton ub = new UserButton();
             ub.fUser = u;
+            ub.Click += UserChange;
             ub.BackgroundImage = global::GUI.Properties.Resources.off_user;
             ub.BackgroundImageLayout = ImageLayout.Stretch;
             ub.Checked = true;
@@ -215,6 +216,11 @@ namespace e_Cafe
             DEFS.LogInUser = null;
             panel7.Controls.Clear();
 
+        }
+
+        public void UserChange(object sender, EventArgs e)
+        {
+            MessageBox.Show("felhasznalo csere");
         }
 
         #endregion
