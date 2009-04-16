@@ -42,11 +42,11 @@ namespace e_Cafe
                 DEFS.log(Level.Exception, c.Message);
             }
             _Rendel = false;
-
+            DEFS.R_SYSPAR = new SysParList();
             DEFS.log(Level.Info, "Sikeres inicializálás");
             RefreshDatabase();
             DEFS.LoadPossibleOpenDays();
-            DEFS.R_SYSPAR = new SysParList();
+            
             
             if (!Login()) { Application.Exit(); }
 
@@ -139,7 +139,7 @@ namespace e_Cafe
         {
             blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
             DEFS.LoadNyitottNap();
-
+            DEFS.CheckOpenDay();
             initHelyek();
             Invalidate();
 

@@ -170,6 +170,18 @@ namespace BusinessLogic
 
         }
 
+        public static void CheckOpenDay()
+        {
+            if ((DateTime.Now - (new DateTime(NyitNap_EV, NyitNap_HO, NyitNap_NAP))).Days > 1)
+            {
+                DEFS.SendInfoMessage("A nyitott nap régebbi mint 1 napos! Kérem ellenőrizze a nap nyitásokat!");
+
+            }
+            
+
+
+        }
+
         public static void LoadPossibleOpenDays()
         {
             SqlConnection c = new SqlConnection(ConSTR);
