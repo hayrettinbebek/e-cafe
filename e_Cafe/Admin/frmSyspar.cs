@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Drawing;
 using BusinessLogic;
+using System.IO;
+using System.Data;
 
 namespace e_Cafe.Admin
 {
@@ -43,6 +45,16 @@ namespace e_Cafe.Admin
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
+
+            FileStream fs;
+            fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+            //bytearray to read the image
+            byte[] imgarr = new byte[fs.Length];
+            fs.Read(imgarr, 0, System.Convert.ToInt32(fs.Length));
+            fs.Close();
+
+            ((DataRowView)sYSPARBindingSource.Current)["PARAM_VALUE_IMAGE"] = imgarr;
+             
 
             pbPreview.Image = Image.FromFile(openFileDialog1.FileName);
         }

@@ -31,26 +31,27 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSyspar));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sYSPARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSYSPAR = new e_Cafe.SQL.dsSYSPAR();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pbPreview = new System.Windows.Forms.PictureBox();
+            this.sYSPARTableAdapter = new e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pARAMNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARAMVALUESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARAMVALUEIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARAMVALUEFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sYSPARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsSYSPAR = new e_Cafe.SQL.dsSYSPAR();
-            this.sYSPARTableAdapter = new e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PARAM_VALUE_IMAGE = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -61,13 +62,24 @@
             this.pARAMNAMEDataGridViewTextBoxColumn,
             this.pARAMVALUESDataGridViewTextBoxColumn,
             this.pARAMVALUEIDataGridViewTextBoxColumn,
-            this.pARAMVALUEFDataGridViewTextBoxColumn});
+            this.pARAMVALUEFDataGridViewTextBoxColumn,
+            this.PARAM_VALUE_IMAGE});
             this.dataGridView1.DataSource = this.sYSPARBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(595, 301);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // sYSPARBindingSource
+            // 
+            this.sYSPARBindingSource.DataMember = "SYSPAR";
+            this.sYSPARBindingSource.DataSource = this.dsSYSPAR;
+            // 
+            // dsSYSPAR
+            // 
+            this.dsSYSPAR.DataSetName = "dsSYSPAR";
+            this.dsSYSPAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // toolStrip1
             // 
@@ -109,6 +121,16 @@
             this.panel1.Size = new System.Drawing.Size(162, 301);
             this.panel1.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(46, 222);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pbPreview
             // 
             this.pbPreview.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.sYSPARBindingSource, "PARAM_VALUE_IMAGE", true));
@@ -117,6 +139,14 @@
             this.pbPreview.Size = new System.Drawing.Size(153, 186);
             this.pbPreview.TabIndex = 0;
             this.pbPreview.TabStop = false;
+            // 
+            // sYSPARTableAdapter
+            // 
+            this.sYSPARTableAdapter.ClearBeforeFill = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // pARAMNAMEDataGridViewTextBoxColumn
             // 
@@ -144,33 +174,12 @@
             this.pARAMVALUEFDataGridViewTextBoxColumn.HeaderText = "Tizedes érték";
             this.pARAMVALUEFDataGridViewTextBoxColumn.Name = "pARAMVALUEFDataGridViewTextBoxColumn";
             // 
-            // sYSPARBindingSource
+            // PARAM_VALUE_IMAGE
             // 
-            this.sYSPARBindingSource.DataMember = "SYSPAR";
-            this.sYSPARBindingSource.DataSource = this.dsSYSPAR;
-            // 
-            // dsSYSPAR
-            // 
-            this.dsSYSPAR.DataSetName = "dsSYSPAR";
-            this.dsSYSPAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sYSPARTableAdapter
-            // 
-            this.sYSPARTableAdapter.ClearBeforeFill = true;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(46, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.PARAM_VALUE_IMAGE.DataPropertyName = "PARAM_VALUE_IMAGE";
+            this.PARAM_VALUE_IMAGE.HeaderText = "PARAM_VALUE_IMAGE";
+            this.PARAM_VALUE_IMAGE.Name = "PARAM_VALUE_IMAGE";
+            this.PARAM_VALUE_IMAGE.Visible = false;
             // 
             // frmSyspar
             // 
@@ -186,12 +195,12 @@
             this.Text = "Rendszerparaméterek";
             this.Load += new System.EventHandler(this.frmSyspar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,14 +214,15 @@
         private e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter sYSPARTableAdapter;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pARAMNAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pARAMVALUESDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pARAMVALUEIDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pARAMVALUEFDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbPreview;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pARAMNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pARAMVALUESDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pARAMVALUEIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pARAMVALUEFDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn PARAM_VALUE_IMAGE;
     }
 }

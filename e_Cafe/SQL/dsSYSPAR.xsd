@@ -65,23 +65,23 @@ WHERE        (PARAM_NAME = @p_name) AND (PARAM_VALUE_I = @p_v_i)</CommandText>
         <xs:element name="SYSPAR" msprop:Generator_UserTableName="SYSPAR" msprop:Generator_RowDeletedName="SYSPARRowDeleted" msprop:Generator_RowChangedName="SYSPARRowChanged" msprop:Generator_RowClassName="SYSPARRow" msprop:Generator_RowChangingName="SYSPARRowChanging" msprop:Generator_RowEvArgName="SYSPARRowChangeEvent" msprop:Generator_RowEvHandlerName="SYSPARRowChangeEventHandler" msprop:Generator_TableClassName="SYSPARDataTable" msprop:Generator_TableVarName="tableSYSPAR" msprop:Generator_RowDeletingName="SYSPARRowDeleting" msprop:Generator_TablePropName="SYSPAR">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="PARAM_NAME" msprop:Generator_UserColumnName="PARAM_NAME" msprop:Generator_ColumnVarNameInTable="columnPARAM_NAME" msprop:Generator_ColumnPropNameInRow="PARAM_NAME" msprop:Generator_ColumnPropNameInTable="PARAM_NAMEColumn" minOccurs="0">
+              <xs:element name="PARAM_NAME" msprop:Generator_UserColumnName="PARAM_NAME" msprop:Generator_ColumnPropNameInRow="PARAM_NAME" msprop:Generator_ColumnVarNameInTable="columnPARAM_NAME" msprop:Generator_ColumnPropNameInTable="PARAM_NAMEColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PARAM_VALUE_S" msprop:Generator_UserColumnName="PARAM_VALUE_S" msprop:Generator_ColumnVarNameInTable="columnPARAM_VALUE_S" msprop:Generator_ColumnPropNameInRow="PARAM_VALUE_S" msprop:Generator_ColumnPropNameInTable="PARAM_VALUE_SColumn" minOccurs="0">
+              <xs:element name="PARAM_VALUE_S" msprop:Generator_UserColumnName="PARAM_VALUE_S" msprop:Generator_ColumnPropNameInRow="PARAM_VALUE_S" msprop:Generator_ColumnVarNameInTable="columnPARAM_VALUE_S" msprop:Generator_ColumnPropNameInTable="PARAM_VALUE_SColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2050" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PARAM_VALUE_I" msprop:Generator_UserColumnName="PARAM_VALUE_I" msprop:Generator_ColumnVarNameInTable="columnPARAM_VALUE_I" msprop:Generator_ColumnPropNameInRow="PARAM_VALUE_I" msprop:Generator_ColumnPropNameInTable="PARAM_VALUE_IColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="PARAM_VALUE_F" msprop:Generator_UserColumnName="PARAM_VALUE_F" msprop:Generator_ColumnVarNameInTable="columnPARAM_VALUE_F" msprop:Generator_ColumnPropNameInRow="PARAM_VALUE_F" msprop:Generator_ColumnPropNameInTable="PARAM_VALUE_FColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="PARAM_VALUE_IMAGE" msprop:Generator_UserColumnName="PARAM_VALUE_IMAGE" msprop:Generator_ColumnPropNameInRow="PARAM_VALUE_IMAGE" msprop:Generator_ColumnVarNameInTable="columnPARAM_VALUE_IMAGE" msprop:Generator_ColumnPropNameInTable="PARAM_VALUE_IMAGEColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="PARAM_VALUE_I" msprop:Generator_UserColumnName="PARAM_VALUE_I" msprop:Generator_ColumnPropNameInRow="PARAM_VALUE_I" msprop:Generator_ColumnVarNameInTable="columnPARAM_VALUE_I" msprop:Generator_ColumnPropNameInTable="PARAM_VALUE_IColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PARAM_VALUE_F" msprop:Generator_UserColumnName="PARAM_VALUE_F" msprop:Generator_ColumnPropNameInRow="PARAM_VALUE_F" msprop:Generator_ColumnVarNameInTable="columnPARAM_VALUE_F" msprop:Generator_ColumnPropNameInTable="PARAM_VALUE_FColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="PARAM_VALUE_IMAGE" msprop:Generator_UserColumnName="PARAM_VALUE_IMAGE" msprop:Generator_ColumnVarNameInTable="columnPARAM_VALUE_IMAGE" msprop:Generator_ColumnPropNameInRow="PARAM_VALUE_IMAGE" msprop:Generator_ColumnPropNameInTable="PARAM_VALUE_IMAGEColumn" type="xs:base64Binary" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

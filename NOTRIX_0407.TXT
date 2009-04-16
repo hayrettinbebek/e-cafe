@@ -2,8 +2,8 @@ X - Cikk keresés oszlopok fölé mezõ abban gépelve keres
 X - uj mezõ: cikknél legyen rövid név (
 X - Cikknél pl TEJ felhozza 3x
 X - lapozo nem megy ??? (cikknél - távoli asztalon)
- - blokk legyen paraméterezhetõ, fejléc (logo, szövegek)
- - alsó szövegblokk átírható a blokkon
+X - blokk legyen paraméterezhetõ, fejléc (logo, szövegek)
+X - alsó szövegblokk átírható a blokkon
  - Partner hitel rendezése : összes, soronként (zöld) --> Ugyanugy mint a rendelésfelvitelnél, hogy akár összesítve is láthassa. --> ezt fizeti.
 
 X - cikkeknél min készlet alatt ZÖLD ha 0- akkor piro normál esetben nincs semmi.
