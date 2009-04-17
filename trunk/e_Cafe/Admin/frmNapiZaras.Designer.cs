@@ -49,8 +49,13 @@
             this.pnlNegRaktar = new System.Windows.Forms.Panel();
             this.pnlKonzisztencia = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsOsszevontLista = new e_Cafe.dsOsszevontLista();
+            this._JOGTableAdapter = new e_Cafe.dsOsszevontListaTableAdapters._JOGTableAdapter();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsOsszevontLista)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -230,6 +235,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // jOGBindingSource
+            // 
+            this.jOGBindingSource.DataMember = "_JOG";
+            this.jOGBindingSource.DataSource = this.dsOsszevontLista;
+            // 
+            // dsOsszevontLista
+            // 
+            this.dsOsszevontLista.DataSetName = "dsOsszevontLista";
+            this.dsOsszevontLista.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // _JOGTableAdapter
+            // 
+            this._JOGTableAdapter.ClearBeforeFill = true;
+            // 
             // frmNapiZaras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +276,8 @@
             this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsOsszevontLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +305,10 @@
         private System.Windows.Forms.Panel pnlNegRaktar;
         private System.Windows.Forms.Panel pnlKonzisztencia;
         private System.Windows.Forms.Button button1;
+        private dsOsszevontLista dsOsszevontLista;
+        private System.Windows.Forms.BindingSource jOGBindingSource;
+        private e_Cafe.dsOsszevontListaTableAdapters._JOGTableAdapter _JOGTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jOGIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jOGNEVDataGridViewTextBoxColumn;
     }
 }

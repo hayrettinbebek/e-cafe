@@ -23,6 +23,8 @@ namespace e_Cafe.Admin
 
         private void frmNapiZaras_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsOsszevontLista._JOG' table. You can move, or remove it, as needed.
+            this._JOGTableAdapter.Fill(this.dsOsszevontLista._JOG);
 
         }
 
