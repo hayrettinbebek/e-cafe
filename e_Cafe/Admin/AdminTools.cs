@@ -283,6 +283,13 @@ namespace e_Cafe
             rg.Show();
         }
 
+        private void mmOsszevontLista_Click(object sender, EventArgs e)
+        {
+            frmOsszevontLista rg = new frmOsszevontLista();
+            rg.MdiParent = this;
+            rg.Show();
+        }
+
 
 
 

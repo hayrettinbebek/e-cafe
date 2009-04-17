@@ -154,6 +154,12 @@
     <Compile Include="Admin\frmNapiZaras.Designer.cs">
       <DependentUpon>frmNapiZaras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\frmOsszevontLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmOsszevontLista.Designer.cs">
+      <DependentUpon>frmOsszevontLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\frmPartnerDelete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,11 @@
     </Compile>
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsOsszevontLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\BlokkReport.cs" />
     <Compile Include="Reports\doPrinting.cs" />
@@ -512,6 +523,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmNapiZaras.resx">
       <DependentUpon>frmNapiZaras.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmOsszevontLista.resx">
+      <DependentUpon>frmOsszevontLista.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmPartnerDelete.resx">
@@ -1042,6 +1057,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="dsOsszevontLista.xsc">
+      <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
+    </None>
+    <None Include="dsOsszevontLista.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOsszevontLista.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsOsszevontLista.xss">
+      <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
+    </None>
     <None Include="SQL\update_025.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
