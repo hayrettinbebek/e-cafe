@@ -20,7 +20,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetZone>Custom</TargetZone>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-    <PublishWizardCompleted>true</PublishWizardCompleted>
     <PublishUrl>G:\WORK\E-Cafe_Google\ecafeinstaller\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -34,6 +33,7 @@
     <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -119,11 +119,6 @@
     <Reference Include="WindowsBase">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="WindowsFormsIntegration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\WindowsFormsIntegration\3.0.0.0__31bf3856ad364e35\WindowsFormsIntegration.dll</HintPath>
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
     <Reference Include="XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GUI\XPTable\XPTable.dll</HintPath>
@@ -178,6 +173,7 @@
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\BlokkReport.cs" />
+    <Compile Include="Reports\OsszesitoReport.cs" />
     <Compile Include="Reports\doPrinting.cs" />
     <Compile Include="SQL\dsJOG.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -823,6 +819,11 @@
     <None Include="Properties\DataSources\BusinessLogic.Szallito.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
