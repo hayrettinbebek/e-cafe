@@ -29,15 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHelyek));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.AKTIV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.hELYIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hELYNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hELYVANDESIGNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.hELYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eCAFEDataSetHELY = new e_Cafe.SQL.ECAFEDataSetHELY();
             this.hELYTableAdapter = new e_Cafe.SQL.ECAFEDataSetHELYTableAdapters.HELYTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chkInaktivak = new System.Windows.Forms.CheckBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hELYBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetHELY)).BeginInit();
             this.SuspendLayout();
@@ -49,12 +55,42 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hELYIDDataGridViewTextBoxColumn,
             this.hELYNEVDataGridViewTextBoxColumn,
-            this.hELYVANDESIGNDataGridViewTextBoxColumn});
+            this.hELYVANDESIGNDataGridViewTextBoxColumn,
+            this.AKTIV});
             this.dataGridView1.DataSource = this.hELYBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(438, 149);
+            this.dataGridView1.Size = new System.Drawing.Size(438, 178);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hELYBindingSource, "HELY_NEV", true));
+            this.textBox1.Location = new System.Drawing.Point(12, 171);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(123, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(438, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // AKTIV
+            // 
+            this.AKTIV.DataPropertyName = "AKTIV";
+            this.AKTIV.FalseValue = "0";
+            this.AKTIV.HeaderText = "Aktív";
+            this.AKTIV.Name = "AKTIV";
+            this.AKTIV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AKTIV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.AKTIV.TrueValue = "1";
             // 
             // hELYIDDataGridViewTextBoxColumn
             // 
@@ -94,26 +130,43 @@
             // 
             this.hELYTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
+            // chkInaktivak
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hELYBindingSource, "HELY_NEV", true));
-            this.textBox1.Location = new System.Drawing.Point(12, 171);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
-            this.textBox1.TabIndex = 1;
+            this.chkInaktivak.AutoSize = true;
+            this.chkInaktivak.BackColor = System.Drawing.Color.Transparent;
+            this.chkInaktivak.Location = new System.Drawing.Point(346, 2);
+            this.chkInaktivak.Name = "chkInaktivak";
+            this.chkInaktivak.Size = new System.Drawing.Size(82, 17);
+            this.chkInaktivak.TabIndex = 3;
+            this.chkInaktivak.Text = "Inaktívak is";
+            this.chkInaktivak.UseVisualStyleBackColor = false;
+            this.chkInaktivak.CheckedChanged += new System.EventHandler(this.chkInaktivak_CheckedChanged);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton1.Text = "Mentés";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frmHelyek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 203);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.chkInaktivak);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.toolStrip1);
             this.Name = "frmHelyek";
             this.Text = "frmHelyek";
             this.Load += new System.EventHandler(this.frmHelyek_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHelyek_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hELYBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetHELY)).EndInit();
             this.ResumeLayout(false);
@@ -127,9 +180,13 @@
         private e_Cafe.SQL.ECAFEDataSetHELY eCAFEDataSetHELY;
         private System.Windows.Forms.BindingSource hELYBindingSource;
         private e_Cafe.SQL.ECAFEDataSetHELYTableAdapters.HELYTableAdapter hELYTableAdapter;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hELYIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hELYNEVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn hELYVANDESIGNDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn AKTIV;
+        private System.Windows.Forms.CheckBox chkInaktivak;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

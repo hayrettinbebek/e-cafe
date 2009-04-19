@@ -332,9 +332,9 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "select h.HELY_ID, h.HELY_NEV, h.HELY_VAN_DESIGN from HELY h inner join ASZTAL a on h.HELY_ID = a.HELY_ID " +
+            cmd.CommandText = "select h.HELY_ID, h.HELY_NEV, h.HELY_VAN_DESIGN from HELY h inner join ASZTAL a on h.HELY_ID = a.HELY_ID WHERE h.AKTIV = 1" +
                                 " union " +
-                                " select h.HELY_ID, h.HELY_NEV, h.HELY_VAN_DESIGN from HELY h where h.HELY_VAN_DESIGN = 0";
+                                " select h.HELY_ID, h.HELY_NEV, h.HELY_VAN_DESIGN from HELY h where h.HELY_VAN_DESIGN = 0 and h.AKTIV = 1";
 
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())

@@ -33,6 +33,7 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
+            updateSettings();
             for (int i = 0; i < a.aList.lASZTAL.Count; i++)
             {
                 a.aList.SaveList();
@@ -76,18 +77,86 @@ namespace e_Cafe
             AktAsztal = ((GUI.Asztal_Button)sender).aObj;
             txtAsztalSzam.Text = ((GUI.Asztal_Button)sender).aObj.fASZTAL_SZAM;
             txtAsztalTipus.Text = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
-            nrRot.Value = ((GUI.Asztal_Button)sender).aObj.fASZTAL_ROTATE;
+
+            switch (((GUI.Asztal_Button)sender).aObj.fASZTAL_ROTATE)
+            {
+                case 0:
+                    {
+                        rb0.Checked = true;
+                        break;
+                    }
+
+                case 90:
+                    {
+                        rb90.Checked = true;
+                        break;
+                    }
+                case 180:
+                    {
+                        rb180.Checked = true;
+                        break;
+                    }
+                case 270:
+                    {
+                        rb270.Checked = true;
+                        break;
+                    }
+
+                default:
+                    break;
+            }
+
+
+            //nrRot.Value = ((GUI.Asztal_Button)sender).aObj.fASZTAL_ROTATE;
+
+
             lblAktAsztalId.Text = AktAsztal.fASZTAL_ID.ToString() ;
         }
 
         private void txtAsztal_TextChanged(object sender, EventArgs e)
         {
+            nrRot.Value = setRoatation();
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(txtAsztalTipus.Text);
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
 
             
         }
+
+        private void updateSettings()
+        {
+            nrRot.Value = setRoatation();
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(txtAsztalTipus.Text);
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
+        }
+
+        private int setRoatation()
+        {
+            int retval = 0;
+            if (rb0.Checked)
+            {
+                retval = 0;
+            }
+            if (rb90.Checked)
+            {
+                retval = 90;
+            }
+            if (rb180.Checked)
+            {
+                retval = 180;
+            }
+            if (rb270.Checked)
+            {
+                retval = 270;
+            }
+            return (retval);
+
+            
+        }
+
+       
+
 
         private void label4_Click(object sender, EventArgs e)
         {

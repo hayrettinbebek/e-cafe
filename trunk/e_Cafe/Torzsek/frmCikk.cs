@@ -267,6 +267,12 @@ namespace e_Cafe.Torzsek
             lITKISZBindingSource.AddNew();
         }
 
+        private void filterAlcsoport_TextChanged(object sender, EventArgs e)
+        {
+            aktCikkfilter.FILTER_ALCSOPORT = filterAlcsoport.Text;
+            cIKKBindingSource.Filter = aktCikkfilter.getResult();
+        }
+
 
     }
 }
