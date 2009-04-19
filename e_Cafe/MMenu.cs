@@ -16,11 +16,11 @@ namespace e_Cafe
 {
     public partial class MMenu : Form
     {
-        
+
         clFIELDINFO_LIST FieldInfo;
-        public static TBLObj blObj;
+        //public static TBLObj blObj;
         Asztalok a;
-        public  bool _Rendel;
+        public bool _Rendel;
         MainMenuBtn tlpButtons;
 
         private static int C_HELYEK_WIDTH = 120;
@@ -46,7 +46,10 @@ namespace e_Cafe
             DEFS.log(Level.Info, "Sikeres inicializálás");
             RefreshDatabase();
             DEFS.LoadPossibleOpenDays();
+            DEFS.LoadNyitottNap();
+            DEFS.SendShortMessage("Nyitott nap:" + DEFS.NyitNap_EV.ToString() + DEFS.NyitNap_HO.ToString() + DEFS.NyitNap_NAP.ToString(), 1000);
             
+
             
             if (!Login()) { Application.Exit(); }
 
@@ -138,13 +141,13 @@ namespace e_Cafe
 
         private void MMenu_Load(object sender, EventArgs e)
         {
-            blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
-            DEFS.LoadNyitottNap();
             DEFS.CheckOpenDay();
+            //blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
+
             initHelyek();
             Invalidate();
 
-            DEFS.SendShortMessage("Nyitott nap:" + DEFS.NyitNap_EV.ToString() + DEFS.NyitNap_HO.ToString() + DEFS.NyitNap_NAP.ToString(),1500);
+            
         }
 
         #region Bejelentkezéssel kapcsolatos dolgok
@@ -412,17 +415,9 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-                AdminTools adm = new AdminTools(blObj);
-                adm.ShowDialog();// = true;
-            //}
-            //catch (Exception c)
-            //{
-                //EmailSending x = new EmailSending();
-                //x.send_mail(c);
-            //}
-            //adm.Show();
+            AdminTools adm = new AdminTools();
+            adm.ShowDialog();// = true;
+
         }
 
 
@@ -433,9 +428,6 @@ namespace e_Cafe
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            //frmReporting rep = new frmReporting();
-            
-            //rep.ShowDialog();
 
         }
 
