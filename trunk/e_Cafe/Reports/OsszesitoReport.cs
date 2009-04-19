@@ -9,11 +9,15 @@ namespace e_Cafe.Reports
 {
     public class OsszesitoReport: IReportMaker
 	{
-        int _SzamlaId;
+        int _EV;
+        int _HO;
+        int _NAP;
 
-        public OsszesitoReport(int SzamlaId)
+        public OsszesitoReport(int pEV, int pHO, int pNAP)
         {
-            _SzamlaId = SzamlaId;
+            _EV = pEV;
+            _HO = pHO;
+            _NAP = pNAP;
         }
 
 		public void MakeDocument(ReportDocument reportDocument)
@@ -24,7 +28,9 @@ namespace e_Cafe.Reports
             SectionBox box;
             LinearSections contents;
             //TextStyle.Normal.BackgroundBrush = Brushes.Beige;
-            Szamla iSzamla = new Szamla(_SzamlaId);
+            
+            //Szamla iSzamla = new Szamla(_SzamlaId);
+
             // Create a ReportBuilder object that assists with building a report
             ReportBuilder builder = new ReportBuilder(reportDocument);
             
@@ -41,7 +47,7 @@ namespace e_Cafe.Reports
 
 
 
-            builder.AddPageHeader("ALL-IN Cafe", String.Empty, iSzamla.SZAMLA_DATUMA.ToShortDateString() + " " + iSzamla.SZAMLA_DATUMA.ToLongTimeString());
+            builder.AddPageHeader("ALL-IN Cafe", String.Empty, DateTime.Now.ToLongDateString());
 
             #region fejlec
             builder.StartLayeredLayout(false,false);
@@ -83,54 +89,64 @@ namespace e_Cafe.Reports
             builder.FinishLayeredLayout();
             #endregion
 
-            builder.AddText("Blokk sorszáma:", TextStyle.Normal);
             builder.AddText(" ");
+            builder.AddText(" ");
+            builder.AddText(" ");
+            builder.AddText("Napi összesített eladás statisztika");
 
-            #region sorok
-            DataView dv = iSzamla.GetBlokkDataView();
+            #region Összes eladás
+            DataView dv = ReportData.GetOsszesEladas(DEFS.NyitNap_EV,DEFS.NyitNap_HO,DEFS.NyitNap_NAP);
             builder.DefaultTablePen = null;
 
-            builder.AddTable(dv, true,100);
-            
+            builder.AddTable(dv, true, 100);
+
             builder.Table.InnerPenHeaderBottom = reportDocument.NormalPen;
-            builder.Table.InnerPenRow = new Pen (Color.Gray, reportDocument.ThinPen.Width);
-            builder.Table.OuterPenBottom = new Pen (Color.Gray, reportDocument.ThinPen.Width);
+            builder.Table.InnerPenRow = new Pen(Color.Gray, reportDocument.ThinPen.Width);
+            builder.Table.OuterPenBottom = new Pen(Color.Gray, reportDocument.ThinPen.Width);
+            // 210 széles lehet.
+            builder.AddColumn(dv.Table.Columns[0], "Összes eladás db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[1], "Összes eladás értéke", 40, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[2], "Hitelre írt db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[3], "Hitelre írás értéke", 40, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[4], "Kifizetett hitel db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[5], "Kifizetett hitelek értéke", 40, false, false, HorizontalAlignment.Right);
 
-            builder.AddColumn(dv.Table.Columns[0],"Mennyiség",30,false,false,HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[1],"Termék",90,false,false,HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[2],"Összeg",40,false,false,HorizontalAlignment.Right);
 
-            //dt.Columns.Add(, typeof(int));
-            //dt.Columns.Add("Cikk", typeof(string));
-            //dt.Columns.Add("Összeg", typeof(double));
-
-
-           // builder.AddAllColumns(30.0f, true, true);
-            
             builder.CurrentSection.HorizontalAlignment = HorizontalAlignment.Left;
 
-            
-            
-            #endregion
-
-            #region végösszesen
-            DataView dv2 = iSzamla.GetBlokkOsszegDataView();
-            builder.DefaultTablePen = null;
-            builder.AddTable(dv2, true, 100);
-            
-            builder.AddColumn(dv2.Table.Columns[0], " ", 120, false, false, HorizontalAlignment.Right);
-            builder.AddColumn(dv2.Table.Columns[1], " ", 40, false, false, HorizontalAlignment.Right);
-
-
             #endregion
 
             builder.AddText(" ");
-            for (int i = 0; i < 6; i++)
-            {
-                builder.AddText(DEFS.R_SYSPAR.GetStrValueFilterInt("BLOKK_LABLEC", i), TextStyle.Normal);
-            }
-            
-            
+            builder.AddText(" ");
+            builder.AddText(" ");
+            builder.AddText("Cikkcsoportonkénti összesített napi statisztika");
+
+            #region Cikkcsoportonkénti összesítő
+            dv = ReportData.GetCikkcsopOsszesEladas(DEFS.NyitNap_EV, DEFS.NyitNap_HO, DEFS.NyitNap_NAP);
+            builder.DefaultTablePen = null;
+
+            builder.AddTable(dv, true, 100);
+
+            builder.Table.InnerPenHeaderBottom = reportDocument.NormalPen;
+            builder.Table.InnerPenRow = new Pen(Color.Gray, reportDocument.ThinPen.Width);
+            builder.Table.OuterPenBottom = new Pen(Color.Gray, reportDocument.ThinPen.Width);
+            // 210 széles lehet.
+            builder.AddColumn(dv.Table.Columns[0], "Cikkcsoport", 30, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[1], "Összes eladás db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[2], "Összes eladás értéke", 30, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[3], "Hitelre írt db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[4], "Hitelre írás értéke", 30, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[5], "Kifizetett hitel db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[6], "Kifizetett hitelek értéke", 30, false, false, HorizontalAlignment.Right);
+
+
+            builder.CurrentSection.HorizontalAlignment = HorizontalAlignment.Left;
+
+
+            #endregion
+
+
+            builder.AddText(" ");
 
 
             builder.FinishLinearLayout();
