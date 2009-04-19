@@ -64,41 +64,7 @@ namespace e_Cafe.Admin
                     " ) as S " +
                     " group by CIKKCSOPORT_ID, MEGNEVEZES, SPEC_ZARAS ", c);
 
-            SqlDataAdapter adp = new SqlDataAdapter(cmd);
-
-            DataSet dset = new DataSet();
-
-            adp.Fill(dset);
-
-            if (c.State == ConnectionState.Open)
-            {
-                c.Close();
-            }
-
-
-            DataTable tbl1 = dset.Tables[0];
-
-            DataTable tbl2 = dset.Tables[1];
-
-            dataGridView1.DataSource = tbl2;
-            dataGridView1.Refresh();
-
-            int counter = 0;
-
-            // for each loop to group the records by categoryid
-            foreach (DataRow dr in tbl2.Rows)
-            {
-                DataView dv = tbl1.DefaultView;
-                dv.RowFilter = "categoryid=" + dr["categoryid"];
-
-                //DataGridView grd = (DataGridView)dataGridView1.Rows[counter].Cells[0].FindControl("GridView2");
-
-                //grd.DataSource = tbl1;
-                //grd.DataBind();
-
-                counter++;
-            }
-
+            
 
 
 

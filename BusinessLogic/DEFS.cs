@@ -28,7 +28,7 @@ namespace BusinessLogic
 
         private static Logger APP_LOG;
 
-        public static _User LogInUser;
+        
 
         public static SysParList R_SYSPAR;
 
@@ -36,6 +36,8 @@ namespace BusinessLogic
 
         //public static Megys_list GlobalMegysList = new Megys_list();
 
+        #region felhasználókezelés
+        public static _User LogInUser;
         public static void UserLogout(int _u_id)
         {
             SqlConnection c = new SqlConnection(ConSTR);
@@ -71,6 +73,8 @@ namespace BusinessLogic
 
 
         }
+        #endregion
+
 
         #region számlázás
         public static int GenerateSzamlaFej(int partner_id, int rendeles_id, int p_fizmod)
@@ -144,9 +148,8 @@ namespace BusinessLogic
         #endregion
 
         #region könyvelési napokkal kapcsolatos lekérdezések
-        public static List<int> lEVEK = new List<int>();
-        public static List<int> lHONAPOK = new List<int>();
-        public static List<int> lNAPOK = new List<int>();
+        public static List<OpenDay> lNYITOTT_NAPOK = new List<OpenDay>();
+
 
         public static void LoadNyitottNap()
         {
@@ -193,35 +196,14 @@ namespace BusinessLogic
             cmd.CommandType = CommandType.Text;
 
             
-            cmd.CommandText = "select distinct EV from nap_nyitas order by 1 asc";
+            cmd.CommandText = "select distinct EV, HO, NAP from nap_nyitas order by 1 asc";
             c.Open();
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                lEVEK.Add((int)rdr["EV"]);
+                lNYITOTT_NAPOK.Add( new OpenDay((int)rdr["EV"],(int)rdr["HO"],(int)rdr["NAP"])  );
             }
             c.Close();
-            rdr.Dispose();
-            cmd.CommandText = "";
-            cmd.CommandText = "select distinct HO from nap_nyitas order by 1 asc";
-            c.Open();
-            rdr = cmd.ExecuteReader();
-            while (rdr.Read())
-            {
-                lHONAPOK.Add((int)rdr["HO"]);
-            }
-            c.Close();
-            cmd.CommandText = "";
-            cmd.CommandText = "select distinct NAP from nap_nyitas order by 1 asc";
-            c.Open();
-            rdr = cmd.ExecuteReader();
-            while (rdr.Read())
-            {
-                lNAPOK.Add((int)rdr["NAP"]);
-            }
-            c.Close();
-
-
         }
 
         #endregion
@@ -247,6 +229,7 @@ namespace BusinessLogic
             return tmpret;
         }
 
+        #region Loggolás és hibakezelés
         public static void createLogger()
         {
             APP_LOG = Logger.CreateFileLogger(AppDomain.CurrentDomain.BaseDirectory + "\\log\\e_cafe_" + DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.Year + "_" +
@@ -346,7 +329,9 @@ namespace BusinessLogic
 
 
         }
+        #endregion
 
+        #region konvertálások
         public static double getNetto(double BruttoSzam, double AfaSzaz)
         {
             return (BruttoSzam / (1 + (AfaSzaz / 100)));
@@ -356,6 +341,13 @@ namespace BusinessLogic
         {
             return (NettoSzam / (1 + (AfaSzaz / 100)));
         }
+
+        public static int MMtoInch(int iMM)
+        {
+            return Convert.ToInt16(Math.Round(((iMM / 25.4) * 100)));
+        }
+
+        #endregion
 
         public static void doKeszletAtvezet(int fromRakt, int toRakt, int CikkID, double mennyiseg)
         {
@@ -389,10 +381,7 @@ namespace BusinessLogic
 
         }
 
-        public static int MMtoInch(int iMM)
-        {
-            return Convert.ToInt16(Math.Round(((iMM / 25.4) * 100)));
-        }
+
 
     }
 
@@ -451,6 +440,22 @@ namespace BusinessLogic
         {
             _disp = pDisp;
             _value = pValue;
+
+        }
+
+    }
+
+    public class OpenDay
+    {
+        public int EV;
+        public int HO;
+        public int NAP;
+
+        public OpenDay(int pEV, int pHO, int pNAP)
+        {
+            EV = pEV;
+            HO = pHO;
+            NAP = pNAP;
 
         }
 
