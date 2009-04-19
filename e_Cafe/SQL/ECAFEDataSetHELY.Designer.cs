@@ -268,6 +268,8 @@ namespace e_Cafe.SQL {
             
             private global::System.Data.DataColumn columnHELY_VAN_DESIGN;
             
+            private global::System.Data.DataColumn columnAKTIV;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public HELYDataTable() {
                 this.TableName = "HELY";
@@ -320,6 +322,13 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn AKTIVColumn {
+                get {
+                    return this.columnAKTIV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -348,12 +357,13 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public HELYRow AddHELYRow(string HELY_NEV, int HELY_VAN_DESIGN) {
+            public HELYRow AddHELYRow(string HELY_NEV, int HELY_VAN_DESIGN, int AKTIV) {
                 HELYRow rowHELYRow = ((HELYRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         HELY_NEV,
-                        HELY_VAN_DESIGN};
+                        HELY_VAN_DESIGN,
+                        AKTIV};
                 rowHELYRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHELYRow);
                 return rowHELYRow;
@@ -382,6 +392,7 @@ namespace e_Cafe.SQL {
                 this.columnHELY_ID = base.Columns["HELY_ID"];
                 this.columnHELY_NEV = base.Columns["HELY_NEV"];
                 this.columnHELY_VAN_DESIGN = base.Columns["HELY_VAN_DESIGN"];
+                this.columnAKTIV = base.Columns["AKTIV"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -392,6 +403,8 @@ namespace e_Cafe.SQL {
                 base.Columns.Add(this.columnHELY_NEV);
                 this.columnHELY_VAN_DESIGN = new global::System.Data.DataColumn("HELY_VAN_DESIGN", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHELY_VAN_DESIGN);
+                this.columnAKTIV = new global::System.Data.DataColumn("AKTIV", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAKTIV);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnHELY_ID}, true));
                 this.columnHELY_ID.AutoIncrement = true;
@@ -569,6 +582,21 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int AKTIV {
+                get {
+                    try {
+                        return ((int)(this[this.tableHELY.AKTIVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AKTIV\' in table \'HELY\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHELY.AKTIVColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsHELY_NEVNull() {
                 return this.IsNull(this.tableHELY.HELY_NEVColumn);
             }
@@ -576,6 +604,16 @@ namespace e_Cafe.SQL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetHELY_NEVNull() {
                 this[this.tableHELY.HELY_NEVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsAKTIVNull() {
+                return this.IsNull(this.tableHELY.AKTIVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetAKTIVNull() {
+                this[this.tableHELY.AKTIVColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -732,36 +770,41 @@ namespace e_Cafe.SQL.ECAFEDataSetHELYTableAdapters {
             tableMapping.ColumnMappings.Add("HELY_ID", "HELY_ID");
             tableMapping.ColumnMappings.Add("HELY_NEV", "HELY_NEV");
             tableMapping.ColumnMappings.Add("HELY_VAN_DESIGN", "HELY_VAN_DESIGN");
+            tableMapping.ColumnMappings.Add("AKTIV", "AKTIV");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[HELY] WHERE (([HELY_ID] = @Original_HELY_ID) AND ((@IsNull_HEL" +
-                "Y_NEV = 1 AND [HELY_NEV] IS NULL) OR ([HELY_NEV] = @Original_HELY_NEV)) AND ([HE" +
-                "LY_VAN_DESIGN] = @Original_HELY_VAN_DESIGN))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [HELY] WHERE (([HELY_ID] = @Original_HELY_ID) AND ((@IsNull_HELY_NEV = 1 AND [HELY_NEV] IS NULL) OR ([HELY_NEV] = @Original_HELY_NEV)) AND ([HELY_VAN_DESIGN] = @Original_HELY_VAN_DESIGN) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HELY_NEV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_VAN_DESIGN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_VAN_DESIGN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[HELY] ([HELY_NEV], [HELY_VAN_DESIGN]) VALUES (@HELY_NEV, @HELY" +
-                "_VAN_DESIGN);\r\nSELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_I" +
-                "D = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [HELY] ([HELY_NEV], [HELY_VAN_DESIGN], [AKTIV]) VALUES (@HELY_NEV, @H" +
+                "ELY_VAN_DESIGN, @AKTIV);\r\nSELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN, AKTIV FROM " +
+                "HELY WHERE (HELY_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_VAN_DESIGN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_VAN_DESIGN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[HELY] SET [HELY_NEV] = @HELY_NEV, [HELY_VAN_DESIGN] = @HELY_VAN_DESIGN WHERE (([HELY_ID] = @Original_HELY_ID) AND ((@IsNull_HELY_NEV = 1 AND [HELY_NEV] IS NULL) OR ([HELY_NEV] = @Original_HELY_NEV)) AND ([HELY_VAN_DESIGN] = @Original_HELY_VAN_DESIGN));
-SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [HELY] SET [HELY_NEV] = @HELY_NEV, [HELY_VAN_DESIGN] = @HELY_VAN_DESIGN, [AKTIV] = @AKTIV WHERE (([HELY_ID] = @Original_HELY_ID) AND ((@IsNull_HELY_NEV = 1 AND [HELY_NEV] IS NULL) OR ([HELY_NEV] = @Original_HELY_NEV)) AND ([HELY_VAN_DESIGN] = @Original_HELY_VAN_DESIGN) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)));
+SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN, AKTIV FROM HELY WHERE (HELY_ID = @HELY_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_VAN_DESIGN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_VAN_DESIGN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HELY_NEV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HELY_VAN_DESIGN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_VAN_DESIGN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HELY_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "HELY_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -773,11 +816,16 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM dbo.HELY";
+            this._commandCollection[0].CommandText = "SELECT     HELY_ID, HELY_NEV, HELY_VAN_DESIGN, AKTIV\r\nFROM         HELY";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT     HELY_ID, HELY_NEV, HELY_VAN_DESIGN, AKTIV\r\nFROM         HELY\r\nWHERE AK" +
+                "TIV = 1";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -797,6 +845,28 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ECAFEDataSetHELY.HELYDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ECAFEDataSetHELY.HELYDataTable dataTable = new ECAFEDataSetHELY.HELYDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillOnlyValid(ECAFEDataSetHELY.HELYDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ECAFEDataSetHELY.HELYDataTable GetDataBy() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             ECAFEDataSetHELY.HELYDataTable dataTable = new ECAFEDataSetHELY.HELYDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -830,7 +900,7 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN) {
+        public virtual int Delete(int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN, global::System.Nullable<int> Original_AKTIV) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_HELY_ID));
             if ((Original_HELY_NEV == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -841,6 +911,14 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_HELY_NEV));
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_HELY_VAN_DESIGN));
+            if ((Original_AKTIV.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_AKTIV.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -860,7 +938,7 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string HELY_NEV, int HELY_VAN_DESIGN) {
+        public virtual int Insert(string HELY_NEV, int HELY_VAN_DESIGN, global::System.Nullable<int> AKTIV) {
             if ((HELY_NEV == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -868,6 +946,12 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(HELY_NEV));
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(HELY_VAN_DESIGN));
+            if ((AKTIV.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(AKTIV.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -887,7 +971,7 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string HELY_NEV, int HELY_VAN_DESIGN, int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN, int HELY_ID) {
+        public virtual int Update(string HELY_NEV, int HELY_VAN_DESIGN, global::System.Nullable<int> AKTIV, int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN, global::System.Nullable<int> Original_AKTIV, int HELY_ID) {
             if ((HELY_NEV == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -895,17 +979,31 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(HELY_NEV));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(HELY_VAN_DESIGN));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_HELY_ID));
-            if ((Original_HELY_NEV == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            if ((AKTIV.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(AKTIV.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_HELY_NEV));
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_HELY_VAN_DESIGN));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(HELY_ID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_HELY_ID));
+            if ((Original_HELY_NEV == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_HELY_NEV));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_HELY_VAN_DESIGN));
+            if ((Original_AKTIV.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_AKTIV.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(HELY_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -925,8 +1023,8 @@ SELECT HELY_ID, HELY_NEV, HELY_VAN_DESIGN FROM HELY WHERE (HELY_ID = @HELY_ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string HELY_NEV, int HELY_VAN_DESIGN, int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN) {
-            return this.Update(HELY_NEV, HELY_VAN_DESIGN, Original_HELY_ID, Original_HELY_NEV, Original_HELY_VAN_DESIGN, Original_HELY_ID);
+        public virtual int Update(string HELY_NEV, int HELY_VAN_DESIGN, global::System.Nullable<int> AKTIV, int Original_HELY_ID, string Original_HELY_NEV, int Original_HELY_VAN_DESIGN, global::System.Nullable<int> Original_AKTIV) {
+            return this.Update(HELY_NEV, HELY_VAN_DESIGN, AKTIV, Original_HELY_ID, Original_HELY_NEV, Original_HELY_VAN_DESIGN, Original_AKTIV, Original_HELY_ID);
         }
     }
     

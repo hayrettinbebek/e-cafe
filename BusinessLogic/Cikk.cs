@@ -782,6 +782,7 @@ namespace BusinessLogic
         }
         private string _nev = "";
         private string _cikkcsop = "";
+        private string _alcsop = "";
 
         public string FILTER_NEV
         {
@@ -804,7 +805,16 @@ namespace BusinessLogic
 
         }
 
+        public string FILTER_ALCSOPORT
+        {
+            get { return (_alcsop); }
+            set
+            {
+                _alcsop = value;
 
+            }
+
+        }
 
         public string  getResult()
         {
@@ -821,7 +831,7 @@ namespace BusinessLogic
             //{
                 res_str += " and ( CIKKCSOPORT  like '" + _cikkcsop + "%')";
             //}
-
+                res_str += " and ( ALCSOPORT  like '" + _alcsop + "%')";
             return (res_str);
         }
 

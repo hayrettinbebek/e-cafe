@@ -37,6 +37,7 @@ namespace e_Cafe
         int Cikkek_ScrollPos = 0;
         int Cikkek_MaxScroll = 0;
         int Cikkek_needScroll = 0;
+        int Cikkek_MaxSpace = 0;
 
         int AlCsopScrollPos = 0;
         int Alcsop_MaxScroll = 0;
@@ -325,20 +326,22 @@ namespace e_Cafe
                     lButtons = lCikkList.CikkListByAlcsoport(pCikkcsoport, pAlcsoportId);
                 }
             }
-
+            int j = 0;
             for (int i = Cikkek_ScrollPos; i < lButtons.Count; i++)
             {
-                CikkButton cb = new CikkButton();
-                cb.fCIKK = lButtons[i];
-                if (_isOsszetettCikViewer && !(lButtons[i].OSSZETETT))
+                if (++j <= Cikkek_needScroll)
                 {
-                    cb.Enabled = false;
+                    CikkButton cb = new CikkButton();
+                    cb.fCIKK = lButtons[i];
+                    if (_isOsszetettCikViewer && !(lButtons[i].OSSZETETT))
+                    {
+                        cb.Enabled = false;
+                    }
+                    cb.Click += onCikkClick;
+
+                    //cb.CIml = ilCikkek;
+                    flpCikkek.Controls.Add(cb);
                 }
-                cb.Click += onCikkClick;
-
-                //cb.CIml = ilCikkek;
-                flpCikkek.Controls.Add(cb);
-
             }
 
             Cikkek_MaxScroll = lButtons.Count;
