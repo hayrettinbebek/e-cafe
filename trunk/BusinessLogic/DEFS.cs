@@ -71,6 +71,7 @@ namespace BusinessLogic
 
 
         }
+
         #region számlázás
         public static int GenerateSzamlaFej(int partner_id, int rendeles_id, int p_fizmod)
         {

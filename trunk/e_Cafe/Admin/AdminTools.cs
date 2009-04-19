@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
 using e_Cafe.Torzsek;
@@ -16,18 +10,18 @@ namespace e_Cafe
     public partial class AdminTools : Form
     {
         private int childFormNumber = 0;
-        TBLObj admBlObj;
+        //TBLObj admBlObj;
 
         public AdminTools()
         {
             InitializeComponent();
         }
 
-        public AdminTools(TBLObj bl)
-        {
-            InitializeComponent();
-            admBlObj = bl;
-        }
+        //public AdminTools(TBLObj bl)
+        //{
+        //    InitializeComponent();
+        //    //admBlObj = bl;
+        //}
 
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -111,7 +105,7 @@ namespace e_Cafe
 
         private void asztalokToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AsztalSetup ck = new AsztalSetup(admBlObj);
+            AsztalSetup ck = new AsztalSetup();
             ck.MdiParent = this;
             ck.Show();
         }
