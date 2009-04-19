@@ -34,14 +34,22 @@ namespace ReportDebugger
             try
             {
                 DEFS.createLogger();
-                DEFS.ConSTR = @"Data Source=ERNIE-HOME\SQLEXPRESS;Initial Catalog=ECAFE_0407;Persist Security Info=True;User ID=sa;Password=x";
+                DEFS.ConSTR = @"Data Source=ERNIE-NB\SQLEXPRESS;Initial Catalog=ECAFE_0407;Persist Security Info=True;User ID=sa;Password=x";
                 DEFS.DefProgramLocation = AppDomain.CurrentDomain.BaseDirectory;
                 DEFS.R_SYSPAR = new SysParList();
+                DEFS.LoadNyitottNap();
             }
             catch (Exception z)
             {
                 MessageBox.Show(z.InnerException.StackTrace);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            doPrinting dp = new doPrinting();
+            dp.setReportMaker(new OsszesitoReport(2009,3,20));
+            dp.doPreview();
         }
     }
 }
