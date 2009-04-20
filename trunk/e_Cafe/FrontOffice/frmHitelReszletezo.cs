@@ -55,6 +55,7 @@ namespace e_Cafe.FrontOffice
                 foreach (var r in tblHitelek.SelectedItems)
                 {
                     DEFS.AddSzlaTetel(szamla_fej_id, ((HitelCell)r.Cells[0]).hSor._SOR_ID);
+                    ((HitelCell)r.Cells[0]).hSor.SetFizetve();
                 }
 
                 doPrinting dp = new doPrinting();

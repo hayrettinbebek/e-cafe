@@ -142,6 +142,7 @@ namespace ReportPrinting
             if (!this.printInProgress)
             {
                 this.printPreviewDialog1.Document = this.document;
+                this.printPreviewDialog1.PrintPreviewControl.Zoom = 100 / 100f;
                 onPrinting();
                 this.printPreviewDialog1.ShowDialog ();
             }

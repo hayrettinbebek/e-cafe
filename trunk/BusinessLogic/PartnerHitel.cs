@@ -24,17 +24,17 @@ namespace BusinessLogic
             cmd2.Connection = c;
             cmd2.CommandType = CommandType.Text;
             cmd2.CommandText = "select s.DATUM,c.MEGNEVEZES, isnull(s.ERTEK,0) as OSSZEG, s.RENDELES_ID, " +
-                                " s.SOR_ID from hitel_sor h " +
+                                " s.SOR_ID, h.SOR_ID as HITEL_SOR_ID from hitel_sor h " +
                                 " inner join rendeles_sor s on h.rendeles_sor_id = s.sor_id " +
                                 " inner join cikk c on s.cikk_id = c.cikk_id " +
-                                " WHERE h.partner_id = " + pPArtnerId.ToString();
+                                " WHERE h.FIZETVE = 0 and h.partner_id = " + pPArtnerId.ToString();
             SqlDataReader rdr2 = cmd2.ExecuteReader();
             while (rdr2.Read())
             {
                 HitelSor hs = new HitelSor();
                 hs._SOR_ID = (int)rdr2["SOR_ID"];
                 hs._FEJ_ID = (int)rdr2["RENDELES_ID"];
-
+                hs._HITEL_SOR_ID = (int)rdr2["HITEL_SOR_ID"];
                 hs._datum = (DateTime)rdr2["DATUM"];
                 hs._Ertek = Convert.ToDouble(rdr2["OSSZEG"].ToString());
                 hs._CikkNev = (string)rdr2["MEGNEVEZES"];
@@ -105,11 +105,26 @@ namespace BusinessLogic
         public double _Ertek;
         public DateTime _datum;
         public string _CikkNev;
+        public int _HITEL_SOR_ID;
 
         public HitelSor()
         {
           
         }
+
+        public void SetFizetve()
+        {
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmd2 = new SqlCommand();
+            c.Open();
+            cmd2.Connection = c;
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "UPDATE hitel_sor SET FIZETVE = 1  WHERE SOR_ID = " + _HITEL_SOR_ID.ToString();
+            cmd2.ExecuteNonQuery();
+            c.Close();
+        }
+
 
     }
 

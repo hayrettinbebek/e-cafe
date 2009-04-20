@@ -45,6 +45,7 @@ namespace e_Cafe.Reports
         {
             //printControlToolBar1.
             printControlToolBar1.Preview(null, null);
+            
         }
 
 
