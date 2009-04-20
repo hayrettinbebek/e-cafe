@@ -350,6 +350,7 @@ namespace ReportPrinting
         public void Preview (object sender, System.EventArgs e)
         {
             this.printLogic1.Preview (sender, e);
+            
         }
 
         /// <summary>
