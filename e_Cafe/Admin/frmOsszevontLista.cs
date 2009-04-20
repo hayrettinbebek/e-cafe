@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
+using e_Cafe.Reports;
 
 namespace e_Cafe.Admin
 {
@@ -20,54 +21,48 @@ namespace e_Cafe.Admin
 
         private void frmOsszevontLista_Load(object sender, EventArgs e)
         {
-            SqlConnection c = new SqlConnection(DEFS.ConSTR);
-            SqlCommand cmd = new SqlCommand("select CIKKCSOPORT_ID, MEGNEVEZES, SPEC_ZARAS, " +
-                    " sum(ELADAS_DB) as ELADAS_DB," +
-                    " sum(ELADAS) as ELADAS, " +
-                    " sum(HITEL_DB) as HITEL_DB,  " +
-                    " sum(HITEL) as HITEL, " +
-                    " sum(HITEL_FIZETVE_DB) as HITEL_FIZETVE_DB, " +
-                    " sum(HITEL_FIZETVE) as HITEL_FIZETVE from ( " +
-                    " SELECT c.CIKKCSOPORT_ID, c.MEGNEVEZES, c.SPEC_ZARAS, " +
-                    " (select count(*)  from szamla_fej sf " +
-                        " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
-                        " where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id) as ELADAS_DB, " +
-                    " (select sum(st.BRUTTO)  from szamla_fej sf " +
-                        " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
-                        " where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id) as ELADAS, " +
-                    " (SELECT count(*) from RENDELES_SOR rs  " +
-                    " inner join HITEL_SOR hs on rs.sor_id = hs.rendeles_sor_id " +
-                    " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
-                    " where rs.cikk_id = c.cikk_id and rf.EV = f.EV and rf.HO = f.HO and rf.NAP = f.NAP  " +
-                    " and hs.FIZETVE = 0  " +
-                    " ) as HITEL_DB, " +
-                    " (SELECT sum(ERTEK) from RENDELES_SOR rs  " +
-                    " inner join HITEL_SOR hs on rs.sor_id = hs.rendeles_sor_id " +
-                    " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
-                    " where rs.cikk_id = c.cikk_id and rf.EV = f.EV and rf.HO = f.HO and rf.NAP = f.NAP " +
-                    " and hs.FIZETVE = 0  " +
-                    " ) as HITEL, " +
-                    " (SELECT count(*) from RENDELES_SOR rs  " +
-                    " inner join HITEL_SOR hs on rs.sor_id = hs.rendeles_sor_id " +
-                    " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
-                    " where rs.cikk_id = c.cikk_id and rf.EV = f.EV and rf.HO = f.HO and rf.NAP = f.NAP  " +
-                    " and hs.FIZETVE = 1  " +
-                    " ) as HITEL_FIZETVE_DB, " +
-                    " (SELECT sum(ERTEK) from RENDELES_SOR rs  " +
-                    " inner join HITEL_SOR hs on rs.sor_id = hs.rendeles_sor_id " +
-                    " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
-                    " where rs.cikk_id = c.cikk_id and rf.EV = f.EV and rf.HO = f.HO and rf.NAP = f.NAP " +
-                    " and hs.FIZETVE = 1 " +
-                    " ) as HITEL_FIZETVE " +
-                    " FROM CIKK c " +
-                    " inner join keszlet_fej f on c.cikk_id = f.cikk_id " +
-                    " ) as S " +
-                    " group by CIKKCSOPORT_ID, MEGNEVEZES, SPEC_ZARAS ", c);
-
+            for (int i = 0; i < DEFS.lNYITOTT_NAPOK.Count; i++)
+            {
+                openDayComboBindingSource.Add(new OpenDayCombo(DEFS.lNYITOTT_NAPOK[i].EV.ToString()+"."+DEFS.lNYITOTT_NAPOK[i].HO.ToString()+"."+DEFS.lNYITOTT_NAPOK[i].NAP.ToString(),
+                    DEFS.lNYITOTT_NAPOK[i].EV.ToString()+"."+DEFS.lNYITOTT_NAPOK[i].HO.ToString()+"."+DEFS.lNYITOTT_NAPOK[i].NAP.ToString(),
+                    new OpenDay(DEFS.lNYITOTT_NAPOK[i].EV,DEFS.lNYITOTT_NAPOK[i].HO,DEFS.lNYITOTT_NAPOK[i].NAP)));
+                
+            } 
             
 
 
+        }
 
+        private void listBox1_Click(object sender, EventArgs e)
+        {
+            doPrinting dp = new doPrinting();
+            dp.setReportMaker(new OsszesitoReport(((OpenDay)listBox1.SelectedValue).EV
+                                                    ,((OpenDay)listBox1.SelectedValue).HO,
+                                                    ((OpenDay)listBox1.SelectedValue).NAP));
+            dp.doPreview();
+
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            List<OpenDay> lTMP_NYITNAPOK = new List<OpenDay>();
+            openDayComboBindingSource.Clear();
+            var ret_cikk =
+                from c in DEFS.lNYITOTT_NAPOK
+                where ((txtEV.Text) == "" ||(c.EV == Convert.ToInt16(txtEV.Text)))
+                        && ((txtHO.Text) == "" || (c.HO == Convert.ToInt16(txtHO.Text)))
+                        && ((txtNAP.Text) == "" ||(c.NAP == Convert.ToInt16(txtNAP.Text)))
+                select c;
+            ret_cikk.Each(c => lTMP_NYITNAPOK.Add(c));
+
+            for (int i = 0; i < lTMP_NYITNAPOK.Count; i++)
+            {
+                openDayComboBindingSource.Add(new OpenDayCombo(lTMP_NYITNAPOK[i].EV.ToString()+"."+lTMP_NYITNAPOK[i].HO.ToString()+"."+lTMP_NYITNAPOK[i].NAP.ToString(),
+                    lTMP_NYITNAPOK[i].EV.ToString()+"."+lTMP_NYITNAPOK[i].HO.ToString()+"."+lTMP_NYITNAPOK[i].NAP.ToString(),
+                    new OpenDay(lTMP_NYITNAPOK[i].EV,lTMP_NYITNAPOK[i].HO,lTMP_NYITNAPOK[i].NAP)));
+                
+            }
         }
     }
 }

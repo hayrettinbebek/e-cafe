@@ -690,7 +690,6 @@ namespace BusinessLogic
             if (ERTEKESITES_TIPUSA == "")
             {
                 cmd.Parameters["ERTEKESITES_TIPUSA"].Value = "D";
-                
             }
             else
             {
@@ -831,7 +830,14 @@ namespace BusinessLogic
             //{
                 res_str += " and ( CIKKCSOPORT  like '" + _cikkcsop + "%')";
             //}
-                res_str += " and ( ALCSOPORT  like '" + _alcsop + "%')";
+                if (_alcsop == "")
+                {
+                    //res_str += " and ( ALCSOPORT  like '" + _alcsop + "%')";
+                }
+                else
+                {
+                    res_str += " and ( ALCSOPORT  like '" + _alcsop + "%')";
+                }
             return (res_str);
         }
 

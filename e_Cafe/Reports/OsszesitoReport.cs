@@ -144,7 +144,34 @@ namespace e_Cafe.Reports
 
 
             #endregion
+            builder.AddText(" ");
+            builder.AddText(" ");
+            builder.AddText(" ");
+            builder.AddText("Speciális zárás statisztika");
 
+            #region Speciális zárás összesítő
+            dv = ReportData.GetSpecZarasEladas(DEFS.NyitNap_EV, DEFS.NyitNap_HO, DEFS.NyitNap_NAP);
+            builder.DefaultTablePen = null;
+
+            builder.AddTable(dv, true, 100);
+
+            builder.Table.InnerPenHeaderBottom = reportDocument.NormalPen;
+            builder.Table.InnerPenRow = new Pen(Color.Gray, reportDocument.ThinPen.Width);
+            builder.Table.OuterPenBottom = new Pen(Color.Gray, reportDocument.ThinPen.Width);
+            // 210 széles lehet.
+            builder.AddColumn(dv.Table.Columns[0], "Cikkcsoport", 30, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[1], "Összes eladás db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[2], "Összes eladás értéke", 30, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[3], "Hitelre írt db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[4], "Hitelre írás értéke", 30, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[5], "Kifizetett hitel db", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[6], "Kifizetett hitelek értéke", 30, false, false, HorizontalAlignment.Right);
+
+
+            builder.CurrentSection.HorizontalAlignment = HorizontalAlignment.Left;
+
+
+            #endregion
 
             builder.AddText(" ");
 
