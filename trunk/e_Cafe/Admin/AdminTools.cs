@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using BusinessLogic;
-using e_Cafe.Torzsek;
-using e_Cafe.Keszlet;
 using e_Cafe.Admin;
+using e_Cafe.Keszlet;
+using e_Cafe.Torzsek;
 
 namespace e_Cafe
 {
