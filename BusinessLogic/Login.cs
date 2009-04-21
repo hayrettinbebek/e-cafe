@@ -292,35 +292,50 @@ namespace BusinessLogic
 
         public _User(int pU_ID)
         {
-            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
-            sc.Open();
-
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.Connection = sc;
-
-            cmd.CommandType = CommandType.Text;
-
-            cmd.CommandText = "SELECT USR_ID ,USR_NAME ,USR_LOGIN_NAME ,USR_PW ,USR_SUPERVISOR ,USR_LOCKED ,USR_LOCKED_DATE ,USR_AKTIV FROM _USER WHERE USR_ID ="+ pU_ID.ToString();
-      
-            SqlDataReader rdr = cmd.ExecuteReader();
-            while (rdr.Read())
+            if (pU_ID == -666)
             {
-                USER_ID = (int)rdr["USR_ID"];
-                NAME = (string)rdr["USR_NAME"];
-                LOGIN_NAME = (string)rdr["USR_LOGIN_NAME"];
-                PW = (string)rdr["USR_PW"];
-                _SUPER = (int)rdr["USR_SUPERVISOR"];
-                LOCKED = (string)rdr["USR_LOCKED"];
-                LOCKED_DATE = (DateTime)rdr["USR_LOCKED_DATE"];
-                _AKTIV = (int)rdr["USR_AKTIV"];
-                
+
+                USER_ID = -666;
+                NAME = "Admisztrátor";
+                LOGIN_NAME = "x";
+                PW = "11";
+                _SUPER = 1;
+                LOCKED = "0";
+                LOCKED_DATE = new DateTime();
+                _AKTIV = 1;
+            }
+            else
+            {
+                SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+                sc.Open();
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = sc;
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "SELECT USR_ID ,USR_NAME ,USR_LOGIN_NAME ,USR_PW ,USR_SUPERVISOR ,USR_LOCKED ,USR_LOCKED_DATE ,USR_AKTIV FROM _USER WHERE USR_ID =" + pU_ID.ToString();
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    USER_ID = (int)rdr["USR_ID"];
+                    NAME = (string)rdr["USR_NAME"];
+                    LOGIN_NAME = (string)rdr["USR_LOGIN_NAME"];
+                    PW = (string)rdr["USR_PW"];
+                    _SUPER = (int)rdr["USR_SUPERVISOR"];
+                    LOCKED = (string)rdr["USR_LOCKED"];
+                    LOCKED_DATE = (DateTime)rdr["USR_LOCKED_DATE"];
+                    _AKTIV = (int)rdr["USR_AKTIV"];
+
+
+                }
+                rdr.Close();
+
+                sc.Close();
 
             }
-            rdr.Close();
-
-            sc.Close();
-
         }
 
         public _User()
@@ -436,18 +451,65 @@ namespace BusinessLogic
             sc.Close();
         }
 
-        public _User RaktarByID(int puID)
+        public _User UserByID(int puID)
         {
             _User iTmpRet = null;
 
-            var ret_rakt =
+            var ret_usr =
                 from c in lUser
                 where c.USER_ID == puID
                 select c;
-            ret_rakt.Each(c => iTmpRet = c);
+            ret_usr.Each(c => iTmpRet = c);
 
 
             return (iTmpRet);
+        }
+    }
+
+    public class LoggedInUsers
+    {
+
+
+        public List<_User> lLoggedInUsers = new List<_User>();
+
+
+        public LoggedInUsers()
+        {
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "select _USER_ID,sum(INOUT) from _user_log "+
+                                " group by _USER_ID "+
+                                " having sum(INOUT) > 0";
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+
+                lLoggedInUsers.Add(new _User((int)rdr["_USER_ID"]));
+            }
+            rdr.Close();
+            sc.Close();
+        }
+
+        public bool IsLoggedIn(int puID)
+        {
+            _User iTmpRet = null;
+
+            var ret_usr =
+                from c in lLoggedInUsers
+                where c.USER_ID == puID
+                select c;
+            ret_usr.Each(c => iTmpRet = c);
+
+            
+            return (iTmpRet != null);
         }
     }
     #endregion

@@ -284,6 +284,24 @@ namespace e_Cafe
             rg.Show();
         }
 
+        private void cikkListaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DEFS.SendInfoMessage("Nincs adat");
+
+        }
+
+        private void beszerzésiListaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DEFS.SendInfoMessage("Nincs adat");
+
+        }
+
+        private void fogyóKészletekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DEFS.SendInfoMessage("Nincs adat");
+
+        }
+
 
 
 
