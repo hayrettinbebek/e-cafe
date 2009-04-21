@@ -38,14 +38,17 @@ namespace e_Cafe
         {
             // When the application is exiting, write the application data to the
             // user file and close it.
-            
 
-            try
+
+            LoggedInUsers l = new LoggedInUsers();
+            while (l.lLoggedInUsers.Count > 0)
             {
-                // Ignore any errors that might occur while closing the file handle.
-                DEFS.UserLogout(DEFS.LogInUser.USER_ID);
+                foreach (var u in l.lLoggedInUsers)
+                {
+                    DEFS.UserLogout(u.USER_ID);
+                }
+                l = new LoggedInUsers();
             }
-            catch { }
         }
 
 

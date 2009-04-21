@@ -51,7 +51,7 @@ namespace e_Cafe
             
 
             
-            if (!Login()) { Application.Exit(); }
+            if (!Login(0)) { Application.Exit(); }
 
         }
 
@@ -151,7 +151,7 @@ namespace e_Cafe
         }
 
         #region Bejelentkezéssel kapcsolatos dolgok
-        private bool Login()
+        private bool Login(int change)
         {
             bool r = false;
             ECafeLogin l = new ECafeLogin();
@@ -161,6 +161,7 @@ namespace e_Cafe
                 k++;
 
                 frmLogin fl = new frmLogin();
+                fl.changeUser = change;
                 fl.ShowDialog();
                 if (fl.DialogResult == DialogResult.OK)
                 {
@@ -169,7 +170,10 @@ namespace e_Cafe
                         if ((fl._usr == "x") && (fl._pw == "11"))
                         {
                             DEFS.DebugLog("Sikertelen belépés de tudod a titkos kódot :)!");
-                            DEFS.UserLogin(fl.selUser.USER_ID);
+                            if (fl.needLogin == 1)
+                            {
+                                DEFS.UserLogin(fl.selUser.USER_ID);
+                            }
                             SetUserSettings(fl.selUser);
 
                             r = true;
@@ -182,7 +186,10 @@ namespace e_Cafe
                     }
                     else
                     {
-                        DEFS.UserLogin(fl.selUser.USER_ID);
+                        if (fl.needLogin == 1)
+                        {
+                            DEFS.UserLogin(fl.selUser.USER_ID);
+                        }
                         SetUserSettings(fl.selUser);
                         
                         r = true;
@@ -199,8 +206,8 @@ namespace e_Cafe
 
         private void SetUserSettings(_User u)
         {
-            
 
+            panel7.Controls.Clear();
             DEFS.LogInUser = u;
             DEFS.UserRights = new Rights(u.USER_ID);
             UserButton ub = new UserButton();
@@ -214,6 +221,11 @@ namespace e_Cafe
 
         }
 
+        private void changeUser()
+        {
+            Login(1);
+        }
+
         private void Logout()
         {
             DEFS.UserLogout(DEFS.LogInUser.USER_ID);
@@ -224,7 +236,7 @@ namespace e_Cafe
 
         public void UserChange(object sender, EventArgs e)
         {
-            MessageBox.Show("felhasznalo csere");
+            Login(1);
         }
 
         #endregion
@@ -423,6 +435,7 @@ namespace e_Cafe
 
         private void button4_Click(object sender, EventArgs e)
         {
+
             Application.Exit();
         }
 
@@ -461,7 +474,7 @@ namespace e_Cafe
         private void btnKijelent_Click(object sender, EventArgs e)
         {
             Logout();
-            Login();
+            Login(1);
         }
 
         private void button2_Click_1(object sender, EventArgs e)
