@@ -59,7 +59,7 @@ namespace e_Cafe
 
 
 
-            InitMenuButtons();
+           
             initRendelTabla();
 
             
@@ -77,7 +77,7 @@ namespace e_Cafe
             _InactivityCounter = 0;
             pnlRendeles.Visible = false;
             pnlFunctions.Visible=false;
-            InitMenuButtons();
+            
 
         }
 
@@ -205,26 +205,29 @@ namespace e_Cafe
             tlpButtons.RowCount = cl.lCIKKCSOPORT.Count + 1;
 
 
-
+            int j = 0;
             for (int i = CikkCsopScrollPos; i < (cl.lCIKKCSOPORT.Count); i++)
             {
+                if (j < needScroll)
+                {
+                    CikkcsopButton bt = new CikkcsopButton(cl.lCIKKCSOPORT[i]);
+                    bt.Location = new Point(0, 0);
+                    bt.Text = cl.lCIKKCSOPORT[i].NEV;
+                    bt.TextAlign = ContentAlignment.BottomLeft;
+                    bt.Dock = DockStyle.Fill;
 
-                CikkcsopButton bt = new CikkcsopButton(cl.lCIKKCSOPORT[i]);
-                bt.Location = new Point(0, 0);
-                bt.Text = cl.lCIKKCSOPORT[i].NEV;
-                bt.TextAlign = ContentAlignment.BottomLeft;
-                bt.Dock = DockStyle.Fill;
+                    bt.BackColor = Color.Transparent;
+                    bt.Click += CikkcsopMenuClick;
+                    //bt.ImageList = btmImgList;
 
-                bt.BackColor = Color.Transparent;
-                bt.Click += CikkcsopMenuClick;
-                //bt.ImageList = btmImgList;
+                    bt.BackgroundImageLayout = ImageLayout.Stretch;
 
-                bt.BackgroundImageLayout = ImageLayout.Stretch;
-                
-                //bt.ImageIndex = 0;
-                tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, CCSOP_BTN_SIZE));
-                tlpButtons.Controls.Add(bt);
-                //bt.Invalidate();
+                    //bt.ImageIndex = 0;
+                    tlpButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(SizeType.Absolute, CCSOP_BTN_SIZE));
+                    tlpButtons.Controls.Add(bt);
+                    //bt.Invalidate();
+                }
+                j++;
             }
             //tlpButtons.AutoScroll = true;
             tlpButtons.Refresh();
@@ -767,6 +770,7 @@ namespace e_Cafe
         {
             MaxScroll = cl.lCIKKCSOPORT.Count;
             needScroll = (pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE; // Convert.ToInt16(Math.Round((double)((pnlButtonPlace.Height - 100) / CCSOP_BTN_SIZE), 0));
+            InitMenuButtons();
             loadCikkek(-1, -1);
 
 
