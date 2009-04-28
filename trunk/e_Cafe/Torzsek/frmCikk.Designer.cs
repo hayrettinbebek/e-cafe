@@ -77,13 +77,9 @@
             this.txtMegnevezes = new System.Windows.Forms.TextBox();
             this.tpKiszereles = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gvKeszletInfo = new GridExtensions.ExtendedDataGrid();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.rAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kESZLETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kESZLETERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aTLAGARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cikkKeszletBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -147,7 +143,14 @@
             this.filterAlcsoport = new System.Windows.Forms.ToolStripTextBox();
             this.cIKKTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
             this.lIT_KISZTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
-            this.gvKeszletInfo = new GridExtensions.ExtendedDataGrid();
+            this.rAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kESZLETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kESZLETERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aTLAGARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cikkKeszletBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsKeszletInfo = new e_Cafe.dsKeszletInfo();
+            this.kESZLETFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kESZLET_FEJTableAdapter = new e_Cafe.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -159,9 +162,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lITKISZBindingSource)).BeginInit();
             this.tpKiszereles.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvKeszletInfo)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             this.tpRecept.SuspendLayout();
             this.grpRecept.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsRecept)).BeginInit();
@@ -173,7 +176,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvKeszletInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsKeszletInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kESZLETFEJBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -671,10 +676,22 @@
             this.groupBox2.Controls.Add(this.gvKeszletInfo);
             this.groupBox2.Location = new System.Drawing.Point(402, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(333, 260);
+            this.groupBox2.Size = new System.Drawing.Size(501, 270);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Készlet történet információ";
+            // 
+            // gvKeszletInfo
+            // 
+            this.gvKeszletInfo.AutoCreateTableStyles = false;
+            this.gvKeszletInfo.DataMember = "";
+            this.gvKeszletInfo.DataSource = this.kESZLETFEJBindingSource;
+            this.gvKeszletInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvKeszletInfo.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.gvKeszletInfo.Location = new System.Drawing.Point(3, 16);
+            this.gvKeszletInfo.Name = "gvKeszletInfo";
+            this.gvKeszletInfo.Size = new System.Drawing.Size(495, 251);
+            this.gvKeszletInfo.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -713,43 +730,6 @@
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(382, 89);
             this.dataGridView3.TabIndex = 16;
-            // 
-            // rAKTARDataGridViewTextBoxColumn
-            // 
-            this.rAKTARDataGridViewTextBoxColumn.DataPropertyName = "RAKTAR";
-            this.rAKTARDataGridViewTextBoxColumn.HeaderText = "Raktár";
-            this.rAKTARDataGridViewTextBoxColumn.Name = "rAKTARDataGridViewTextBoxColumn";
-            this.rAKTARDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAKTARDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // kESZLETDataGridViewTextBoxColumn
-            // 
-            this.kESZLETDataGridViewTextBoxColumn.DataPropertyName = "KESZLET";
-            this.kESZLETDataGridViewTextBoxColumn.HeaderText = "Készlet";
-            this.kESZLETDataGridViewTextBoxColumn.Name = "kESZLETDataGridViewTextBoxColumn";
-            this.kESZLETDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kESZLETDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // kESZLETERTEKDataGridViewTextBoxColumn
-            // 
-            this.kESZLETERTEKDataGridViewTextBoxColumn.DataPropertyName = "KESZLET_ERTEK";
-            this.kESZLETERTEKDataGridViewTextBoxColumn.HeaderText = "Érték";
-            this.kESZLETERTEKDataGridViewTextBoxColumn.Name = "kESZLETERTEKDataGridViewTextBoxColumn";
-            this.kESZLETERTEKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kESZLETERTEKDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // aTLAGARDataGridViewTextBoxColumn
-            // 
-            this.aTLAGARDataGridViewTextBoxColumn.DataPropertyName = "ATLAGAR";
-            this.aTLAGARDataGridViewTextBoxColumn.HeaderText = "Átlagár";
-            this.aTLAGARDataGridViewTextBoxColumn.Name = "aTLAGARDataGridViewTextBoxColumn";
-            this.aTLAGARDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aTLAGARDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // cikkKeszletBindingSource
-            // 
-            this.cikkKeszletBindingSource.DataSource = typeof(BusinessLogic.CikkKeszlet);
-            this.cikkKeszletBindingSource.CurrentChanged += new System.EventHandler(this.cikkKeszletBindingSource_CurrentChanged);
             // 
             // label10
             // 
@@ -1323,15 +1303,56 @@
             // 
             this.lIT_KISZTableAdapter.ClearBeforeFill = true;
             // 
-            // gvKeszletInfo
+            // rAKTARDataGridViewTextBoxColumn
             // 
-            this.gvKeszletInfo.AutoCreateTableStyles = false;
-            this.gvKeszletInfo.DataMember = "";
-            this.gvKeszletInfo.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.gvKeszletInfo.Location = new System.Drawing.Point(28, 46);
-            this.gvKeszletInfo.Name = "gvKeszletInfo";
-            this.gvKeszletInfo.Size = new System.Drawing.Size(299, 189);
-            this.gvKeszletInfo.TabIndex = 0;
+            this.rAKTARDataGridViewTextBoxColumn.DataPropertyName = "RAKTAR";
+            this.rAKTARDataGridViewTextBoxColumn.HeaderText = "Raktár";
+            this.rAKTARDataGridViewTextBoxColumn.Name = "rAKTARDataGridViewTextBoxColumn";
+            this.rAKTARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAKTARDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // kESZLETDataGridViewTextBoxColumn
+            // 
+            this.kESZLETDataGridViewTextBoxColumn.DataPropertyName = "KESZLET";
+            this.kESZLETDataGridViewTextBoxColumn.HeaderText = "Készlet";
+            this.kESZLETDataGridViewTextBoxColumn.Name = "kESZLETDataGridViewTextBoxColumn";
+            this.kESZLETDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kESZLETDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // kESZLETERTEKDataGridViewTextBoxColumn
+            // 
+            this.kESZLETERTEKDataGridViewTextBoxColumn.DataPropertyName = "KESZLET_ERTEK";
+            this.kESZLETERTEKDataGridViewTextBoxColumn.HeaderText = "Érték";
+            this.kESZLETERTEKDataGridViewTextBoxColumn.Name = "kESZLETERTEKDataGridViewTextBoxColumn";
+            this.kESZLETERTEKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kESZLETERTEKDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // aTLAGARDataGridViewTextBoxColumn
+            // 
+            this.aTLAGARDataGridViewTextBoxColumn.DataPropertyName = "ATLAGAR";
+            this.aTLAGARDataGridViewTextBoxColumn.HeaderText = "Átlagár";
+            this.aTLAGARDataGridViewTextBoxColumn.Name = "aTLAGARDataGridViewTextBoxColumn";
+            this.aTLAGARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aTLAGARDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // cikkKeszletBindingSource
+            // 
+            this.cikkKeszletBindingSource.DataSource = typeof(BusinessLogic.CikkKeszlet);
+            this.cikkKeszletBindingSource.CurrentChanged += new System.EventHandler(this.cikkKeszletBindingSource_CurrentChanged);
+            // 
+            // dsKeszletInfo
+            // 
+            this.dsKeszletInfo.DataSetName = "dsKeszletInfo";
+            this.dsKeszletInfo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kESZLETFEJBindingSource
+            // 
+            this.kESZLETFEJBindingSource.DataMember = "KESZLET_FEJ";
+            this.kESZLETFEJBindingSource.DataSource = this.dsKeszletInfo;
+            // 
+            // kESZLET_FEJTableAdapter
+            // 
+            this.kESZLET_FEJTableAdapter.ClearBeforeFill = true;
             // 
             // frmCikk
             // 
@@ -1359,10 +1380,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lITKISZBindingSource)).EndInit();
             this.tpKiszereles.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gvKeszletInfo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
             this.tpRecept.ResumeLayout(false);
             this.grpRecept.ResumeLayout(false);
             this.grpRecept.PerformLayout();
@@ -1377,7 +1398,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvKeszletInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsKeszletInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kESZLETFEJBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1510,5 +1533,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         
         private GridExtensions.ExtendedDataGrid gvKeszletInfo;
+        private dsKeszletInfo dsKeszletInfo;
+        private System.Windows.Forms.BindingSource kESZLETFEJBindingSource;
+        private e_Cafe.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter kESZLET_FEJTableAdapter;
     }
 }
