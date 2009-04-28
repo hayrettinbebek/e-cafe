@@ -168,6 +168,11 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsKeszletInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsOsszevontLista.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1061,6 +1066,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="dsKeszletInfo.xsc">
+      <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
+    </None>
+    <None Include="dsKeszletInfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsKeszletInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsKeszletInfo.xss">
+      <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
+    </None>
     <None Include="dsOsszevontLista.xsc">
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
     </None>

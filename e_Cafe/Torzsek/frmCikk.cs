@@ -30,6 +30,8 @@ namespace e_Cafe.Torzsek
 
         private void frmCikk_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsKeszletInfo.KESZLET_FEJ' table. You can move, or remove it, as needed.
+           
             
 
             // TODO: This line of code loads data into the 'eCAFEDataSetCIKK.CIKK' table. You can move, or remove it, as needed.
@@ -279,9 +281,11 @@ namespace e_Cafe.Torzsek
             {
                 if (aktCikk != null)
                 {
-                    gvKeszletInfo.DataSource = KeszletInfo.CreateDataSet(((CikkKeszlet)cikkKeszletBindingSource.Current).RAKTAR_ID, aktCikk.CIKK_ID).Tables[0].DefaultView;
+                    this.kESZLET_FEJTableAdapter.Fill(this.dsKeszletInfo.KESZLET_FEJ, ((CikkKeszlet)cikkKeszletBindingSource.Current).RAKTAR_ID, aktCikk.CIKK_ID);
+                    //gvKeszletInfo.DataSource = KeszletInfo.CreateDataSet(((CikkKeszlet)cikkKeszletBindingSource.Current).RAKTAR_ID, aktCikk.CIKK_ID).Tables[0].DefaultView;
                 }
             }
+            //gvKeszletInfo.DataSource = null;
         }
 
 
