@@ -726,6 +726,10 @@
       <Project>{4423B230-FAEA-458A-94FC-F8D912C2709A}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GridExtensions\GridExtensions.csproj">
+      <Project>{E5247765-0134-4714-A110-64D571FBF636}</Project>
+      <Name>GridExtensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GUI\GUI.csproj">
       <Project>{7A9003C7-484C-4510-BE0F-128F219A812B}</Project>
       <Name>GUI</Name>

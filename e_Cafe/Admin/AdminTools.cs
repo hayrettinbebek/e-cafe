@@ -302,6 +302,11 @@ namespace e_Cafe
 
         }
 
+        private void készletkartonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

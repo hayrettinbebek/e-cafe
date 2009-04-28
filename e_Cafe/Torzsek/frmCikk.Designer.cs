@@ -76,6 +76,7 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.txtMegnevezes = new System.Windows.Forms.TextBox();
             this.tpKiszereles = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.rAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,18 +114,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.taReceptCikkek = new e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
-            this.taRecept = new e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.filterMegnevezes = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.filterCikkcsop = new System.Windows.Forms.ToolStripTextBox();
-            this.cIKKTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
-            this.lIT_KISZTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.filterAlcsoport = new System.Windows.Forms.ToolStripTextBox();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gYORSKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,6 +135,19 @@
             this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eRTTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGYSMEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taReceptCikkek = new e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
+            this.taRecept = new e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.filterMegnevezes = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.filterCikkcsop = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.filterAlcsoport = new System.Windows.Forms.ToolStripTextBox();
+            this.cIKKTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
+            this.lIT_KISZTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
+            this.gvKeszletInfo = new GridExtensions.ExtendedDataGrid();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -156,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lITKISZBindingSource)).BeginInit();
             this.tpKiszereles.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
@@ -170,6 +173,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvKeszletInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -190,7 +194,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(102, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(109, 22);
             this.toolStripButton2.Text = "Új cikk felvétele";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -199,7 +203,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(153, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(168, 22);
             this.toolStripButton1.Text = "Cikk adatainak módosítása";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
@@ -208,7 +212,7 @@
             this.btnDelete.Image = global::e_Cafe.Properties.Resources.ERROR_ICON;
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(56, 22);
+            this.btnDelete.Size = new System.Drawing.Size(59, 22);
             this.btnDelete.Text = "Törlés";
             this.btnDelete.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -217,7 +221,7 @@
             this.btnAktiv.Image = global::e_Cafe.OtherImages.OK_ICON;
             this.btnAktiv.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAktiv.Name = "btnAktiv";
-            this.btnAktiv.Size = new System.Drawing.Size(59, 22);
+            this.btnAktiv.Size = new System.Drawing.Size(63, 22);
             this.btnAktiv.Text = "Aktivál";
             this.btnAktiv.Click += new System.EventHandler(this.btnAktiv_Click);
             // 
@@ -652,6 +656,7 @@
             // 
             // tpKiszereles
             // 
+            this.tpKiszereles.Controls.Add(this.groupBox2);
             this.tpKiszereles.Controls.Add(this.groupBox1);
             this.tpKiszereles.Location = new System.Drawing.Point(4, 22);
             this.tpKiszereles.Name = "tpKiszereles";
@@ -660,6 +665,16 @@
             this.tpKiszereles.TabIndex = 1;
             this.tpKiszereles.Text = "Készlet";
             this.tpKiszereles.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.gvKeszletInfo);
+            this.groupBox2.Location = new System.Drawing.Point(402, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(333, 260);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
             // 
             // groupBox1
             // 
@@ -672,7 +687,7 @@
             this.groupBox1.Controls.Add(this.textBox10);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(594, 141);
+            this.groupBox1.Size = new System.Drawing.Size(388, 166);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Készlet adatok";
@@ -690,13 +705,13 @@
             this.aTLAGARDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.cikkKeszletBindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 49);
+            this.dataGridView3.Location = new System.Drawing.Point(3, 74);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 20;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(588, 89);
+            this.dataGridView3.Size = new System.Drawing.Size(382, 89);
             this.dataGridView3.TabIndex = 16;
             // 
             // rAKTARDataGridViewTextBoxColumn
@@ -734,11 +749,12 @@
             // cikkKeszletBindingSource
             // 
             this.cikkKeszletBindingSource.DataSource = typeof(BusinessLogic.CikkKeszlet);
+            this.cikkKeszletBindingSource.CurrentChanged += new System.EventHandler(this.cikkKeszletBindingSource_CurrentChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(220, 22);
+            this.label10.Location = new System.Drawing.Point(9, 50);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 13);
             this.label10.TabIndex = 13;
@@ -747,7 +763,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(380, 21);
+            this.label11.Location = new System.Drawing.Point(169, 49);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 15;
@@ -758,7 +774,7 @@
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(231)))));
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cIKKBindingSource, "OPTIMALIS_KESZLET", true));
-            this.textBox8.Location = new System.Drawing.Point(471, 19);
+            this.textBox8.Location = new System.Drawing.Point(260, 47);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(64, 20);
@@ -769,7 +785,7 @@
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(222)))), ((int)(((byte)(231)))));
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cIKKBindingSource, "MINIMUM_KESZLET", true));
-            this.textBox7.Location = new System.Drawing.Point(310, 19);
+            this.textBox7.Location = new System.Drawing.Point(99, 47);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(64, 20);
@@ -1067,81 +1083,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_RowValidating);
             // 
-            // taReceptCikkek
-            // 
-            this.taReceptCikkek.ClearBeforeFill = true;
-            // 
-            // taRecept
-            // 
-            this.taRecept.ClearBeforeFill = true;
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripLabel2,
-            this.filterMegnevezes,
-            this.toolStripLabel3,
-            this.filterCikkcsop,
-            this.toolStripLabel4,
-            this.filterAlcsoport});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 25);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(955, 25);
-            this.toolStrip2.TabIndex = 3;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(55, 22);
-            this.toolStripLabel1.Text = "Keresés:  ";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(71, 22);
-            this.toolStripLabel2.Text = "Megnevezés:";
-            // 
-            // filterMegnevezes
-            // 
-            this.filterMegnevezes.Name = "filterMegnevezes";
-            this.filterMegnevezes.Size = new System.Drawing.Size(100, 25);
-            this.filterMegnevezes.TextChanged += new System.EventHandler(this.filterMegnevezes_TextChanged);
-            // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(62, 22);
-            this.toolStripLabel3.Text = "Cikkcsoport";
-            // 
-            // filterCikkcsop
-            // 
-            this.filterCikkcsop.Name = "filterCikkcsop";
-            this.filterCikkcsop.Size = new System.Drawing.Size(100, 25);
-            this.filterCikkcsop.TextChanged += new System.EventHandler(this.filterCikkcsop_TextChanged);
-            // 
-            // cIKKTableAdapter
-            // 
-            this.cIKKTableAdapter.ClearBeforeFill = true;
-            // 
-            // lIT_KISZTableAdapter
-            // 
-            this.lIT_KISZTableAdapter.ClearBeforeFill = true;
-            // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(52, 22);
-            this.toolStripLabel4.Text = "Alcsoport";
-            // 
-            // filterAlcsoport
-            // 
-            this.filterAlcsoport.Name = "filterAlcsoport";
-            this.filterAlcsoport.Size = new System.Drawing.Size(100, 25);
-            this.filterAlcsoport.TextChanged += new System.EventHandler(this.filterAlcsoport_TextChanged);
-            // 
             // mEGNEVEZESDataGridViewTextBoxColumn
             // 
             this.mEGNEVEZESDataGridViewTextBoxColumn.DataPropertyName = "MEGNEVEZES";
@@ -1307,6 +1248,91 @@
             this.mEGYSMEGNEVEZESDataGridViewTextBoxColumn.ReadOnly = true;
             this.mEGYSMEGNEVEZESDataGridViewTextBoxColumn.Visible = false;
             // 
+            // taReceptCikkek
+            // 
+            this.taReceptCikkek.ClearBeforeFill = true;
+            // 
+            // taRecept
+            // 
+            this.taRecept.ClearBeforeFill = true;
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripLabel2,
+            this.filterMegnevezes,
+            this.toolStripLabel3,
+            this.filterCikkcsop,
+            this.toolStripLabel4,
+            this.filterAlcsoport});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 25);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(955, 25);
+            this.toolStrip2.TabIndex = 3;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(55, 22);
+            this.toolStripLabel1.Text = "Keresés:  ";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(75, 22);
+            this.toolStripLabel2.Text = "Megnevezés:";
+            // 
+            // filterMegnevezes
+            // 
+            this.filterMegnevezes.Name = "filterMegnevezes";
+            this.filterMegnevezes.Size = new System.Drawing.Size(100, 25);
+            this.filterMegnevezes.TextChanged += new System.EventHandler(this.filterMegnevezes_TextChanged);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(70, 22);
+            this.toolStripLabel3.Text = "Cikkcsoport";
+            // 
+            // filterCikkcsop
+            // 
+            this.filterCikkcsop.Name = "filterCikkcsop";
+            this.filterCikkcsop.Size = new System.Drawing.Size(100, 25);
+            this.filterCikkcsop.TextChanged += new System.EventHandler(this.filterCikkcsop_TextChanged);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(58, 22);
+            this.toolStripLabel4.Text = "Alcsoport";
+            // 
+            // filterAlcsoport
+            // 
+            this.filterAlcsoport.Name = "filterAlcsoport";
+            this.filterAlcsoport.Size = new System.Drawing.Size(100, 25);
+            this.filterAlcsoport.TextChanged += new System.EventHandler(this.filterAlcsoport_TextChanged);
+            // 
+            // cIKKTableAdapter
+            // 
+            this.cIKKTableAdapter.ClearBeforeFill = true;
+            // 
+            // lIT_KISZTableAdapter
+            // 
+            this.lIT_KISZTableAdapter.ClearBeforeFill = true;
+            // 
+            // gvKeszletInfo
+            // 
+            this.gvKeszletInfo.AutoCreateTableStyles = false;
+            this.gvKeszletInfo.DataMember = "";
+            this.gvKeszletInfo.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.gvKeszletInfo.Location = new System.Drawing.Point(28, 46);
+            this.gvKeszletInfo.Name = "gvKeszletInfo";
+            this.gvKeszletInfo.Size = new System.Drawing.Size(299, 189);
+            this.gvKeszletInfo.TabIndex = 0;
+            // 
             // frmCikk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1332,6 +1358,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lITKISZBindingSource)).EndInit();
             this.tpKiszereles.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -1350,6 +1377,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvKeszletInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1479,5 +1507,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGJEGYZESDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eRTTIPUSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGYSMEGNEVEZESDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox2;
+        
+        private GridExtensions.ExtendedDataGrid gvKeszletInfo;
     }
 }

@@ -273,6 +273,17 @@ namespace e_Cafe.Torzsek
             cIKKBindingSource.Filter = aktCikkfilter.getResult();
         }
 
+        private void cikkKeszletBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (cikkKeszletBindingSource.Current != null)
+            {
+                if (aktCikk != null)
+                {
+                    gvKeszletInfo.DataSource = KeszletInfo.CreateDataSet(((CikkKeszlet)cikkKeszletBindingSource.Current).RAKTAR_ID, aktCikk.CIKK_ID).Tables[0].DefaultView;
+                }
+            }
+        }
+
 
     }
 }
