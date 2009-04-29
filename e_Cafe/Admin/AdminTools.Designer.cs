@@ -337,6 +337,7 @@
             this.régiZárásokÁttekintéseToolStripMenuItem.Name = "régiZárásokÁttekintéseToolStripMenuItem";
             this.régiZárásokÁttekintéseToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.régiZárásokÁttekintéseToolStripMenuItem.Text = "Régi zárások áttekintése";
+            this.régiZárásokÁttekintéseToolStripMenuItem.Click += new System.EventHandler(this.régiZárásokÁttekintéseToolStripMenuItem_Click);
             // 
             // paraméterekToolStripMenuItem
             // 

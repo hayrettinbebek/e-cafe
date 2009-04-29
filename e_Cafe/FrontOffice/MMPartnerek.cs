@@ -43,6 +43,23 @@ namespace e_Cafe
             }
         }
 
+
+        private void SetUserSettings()
+        {
+
+            panel5.Controls.Clear();
+                       
+            UserButton ub = new UserButton();
+            ub.fUser = DEFS.LogInUser;
+            
+            ub.BackgroundImage = global::GUI.Properties.Resources.off_user;
+            ub.BackgroundImageLayout = ImageLayout.Stretch;
+            ub.Checked = true;
+            ub.Dock = DockStyle.Fill;
+            panel5.Controls.Add(ub);
+
+        }
+
         private void loadPartnerek(string pPartnerType)
         {
             flpPartner.Controls.Clear();
@@ -118,7 +135,7 @@ namespace e_Cafe
 
              
             btnPartnerNelkul.Visible = SelectMode;
-
+            SetUserSettings();
 
         }
 

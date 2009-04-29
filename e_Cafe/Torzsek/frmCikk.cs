@@ -324,6 +324,22 @@ namespace e_Cafe.Torzsek
             }
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (cikkKeszletBindingSource.Current != null)
+            {
+                frmSelejtez fa = new frmSelejtez(aktCikk.CIKK_ID, ((CikkKeszlet)cikkKeszletBindingSource.Current).RAKTAR_ID);
+
+                fa.ShowDialog();
+            }
+            else
+            {
+                frmSelejtez fa = new frmSelejtez();
+
+                fa.ShowDialog();
+            }
+        }
+
 
     }
 }

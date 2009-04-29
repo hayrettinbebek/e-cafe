@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCikk));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -178,6 +178,7 @@
             this.kESZLET_SORTableAdapter = new e_Cafe.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -793,16 +794,16 @@
             // KESZLET_NYITO
             // 
             this.KESZLET_NYITO.DataPropertyName = "KESZLET_NYITO";
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.KESZLET_NYITO.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.KESZLET_NYITO.DefaultCellStyle = dataGridViewCellStyle29;
             this.KESZLET_NYITO.HeaderText = "Napi nyitó készlet";
             this.KESZLET_NYITO.Name = "KESZLET_NYITO";
             // 
             // KESZLET_NAPI
             // 
             this.KESZLET_NAPI.DataPropertyName = "KESZLET_NAPI";
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.KESZLET_NAPI.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.KESZLET_NAPI.DefaultCellStyle = dataGridViewCellStyle30;
             this.KESZLET_NAPI.HeaderText = "Készlet változás";
             this.KESZLET_NAPI.Name = "KESZLET_NAPI";
             // 
@@ -896,8 +897,8 @@
             // BEVETEL
             // 
             this.BEVETEL.DataPropertyName = "BEVETEL";
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(230)))), ((int)(((byte)(196)))));
-            this.BEVETEL.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(230)))), ((int)(((byte)(196)))));
+            this.BEVETEL.DefaultCellStyle = dataGridViewCellStyle31;
             this.BEVETEL.HeaderText = "Készlet nökedés";
             this.BEVETEL.Name = "BEVETEL";
             this.BEVETEL.ReadOnly = true;
@@ -906,8 +907,8 @@
             // KIADAS
             // 
             this.KIADAS.DataPropertyName = "KIADAS";
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.KIADAS.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.KIADAS.DefaultCellStyle = dataGridViewCellStyle32;
             this.KIADAS.HeaderText = "Csökkenés";
             this.KIADAS.Name = "KIADAS";
             this.KIADAS.ReadOnly = true;
@@ -1586,6 +1587,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 16);
@@ -1602,6 +1604,16 @@
             this.button3.Text = "Átvezetés raktárak között";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(163, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(103, 23);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Selejtezés";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmCikk
             // 
@@ -1814,5 +1826,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KIADAS;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
     }
 }

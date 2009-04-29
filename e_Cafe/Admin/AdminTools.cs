@@ -314,6 +314,11 @@ namespace e_Cafe
             fa.Show();
         }
 
+        private void régiZárásokÁttekintéseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
