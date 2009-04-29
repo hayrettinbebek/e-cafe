@@ -38,10 +38,18 @@ namespace e_Cafe.Torzsek
 
             // TODO: This line of code loads data into the 'eCAFEDataSetCIKK.CIKK' table. You can move, or remove it, as needed.
             refreshDataset();
-            if (recept == 1)
+            if (recept != 1)
             {
-                tpRecept.Show();
+                //tpRecept.Show();
+                //tpRecept.Visible = true;
+                tabControl1.TabPages.Remove(tpRecept);
             }
+            //else
+            //{
+            //    tpRecept.Hide();
+            //    tpRecept.Visible = false;
+
+            //}
             btnAktiv.Visible = (aktiv == 0);
             btnDelete.Visible = (aktiv == 1);
             //cikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR));
@@ -77,7 +85,6 @@ namespace e_Cafe.Torzsek
                     if (aktCikk != null)
                     {
                         tpRecept.Visible = aktCikk.OSSZETETT;
-
                         cikkKeszletBindingSource.Clear();
                         foreach (var k in aktCikk.lKESZLET)
                         {
