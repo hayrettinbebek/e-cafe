@@ -79,6 +79,7 @@
             this.logokKüldéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbázisFrissítésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mmNapiZaras = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -234,6 +235,7 @@
             // 
             this.partnerekToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mmSzallitok,
+            this.toolStripSeparator3,
             this.partnerTörléseToolStripMenuItem,
             this.töröltPartnerVisszaállításaToolStripMenuItem});
             this.partnerekToolStripMenuItem.Name = "partnerekToolStripMenuItem";
@@ -470,6 +472,11 @@
             this.mmNapiZaras.Text = "!! NAPI ZÁRÁS !!";
             this.mmNapiZaras.Click += new System.EventHandler(this.mmNapiZaras_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(214, 6);
+            // 
             // AdminTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,6 +549,7 @@
         private System.Windows.Forms.ToolStripMenuItem cikkListaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem beszerzésiListaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fogyóKészletekToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 
