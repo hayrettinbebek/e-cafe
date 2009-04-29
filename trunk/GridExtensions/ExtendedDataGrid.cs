@@ -9,7 +9,7 @@ namespace GridExtensions
 	/// <summary>
 	/// From <see cref="DataGrid"/> deriven class which provides some extra functionalities.
 	/// </summary>
-	public class ExtendedDataGrid : DataGrid, IGridExtension
+	    public class ExtendedDataGrid : DataGrid, IGridExtension
 	{
 		#region Fields
 

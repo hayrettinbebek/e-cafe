@@ -307,6 +307,13 @@ namespace e_Cafe
 
         }
 
+        private void selejtezésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSelejtez fa = new frmSelejtez();
+            fa.MdiParent = this;
+            fa.Show();
+        }
+
 
 
 

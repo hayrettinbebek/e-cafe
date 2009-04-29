@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -86,7 +86,6 @@
     <Reference Include="Microsoft.VisualBasic">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -177,6 +176,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet\frmSelejtez.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmSelejtez.Designer.cs">
+      <DependentUpon>frmSelejtez.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\BlokkReport.cs" />
     <Compile Include="Reports\OsszesitoReport.cs" />
@@ -596,6 +601,9 @@
     <EmbeddedResource Include="FrontOffice\MMPartnerek.resx">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmSelejtez.resx">
+      <DependentUpon>frmSelejtez.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartnerSelector.resx">
       <DependentUpon>PartnerSelector.cs</DependentUpon>
@@ -1089,6 +1097,9 @@
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.OpenDayCombo.datasource" />
+    <None Include="SQL\update_027.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SQL\update_026.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
