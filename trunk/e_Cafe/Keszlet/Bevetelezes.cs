@@ -65,8 +65,19 @@ namespace e_Cafe
             this.bEVETEL_FEJTableAdapter.Fill(this.eCAFEDataSetBEVETELEZES.BEVETEL_FEJ);
 
             loadData();
+            toolStripCheckedBox1.MyCheckBox.CheckedChanged += feladottFilterChanged;
         }
-
+        private void feladottFilterChanged(object sender, EventArgs e)
+        {
+            if (toolStripCheckedBox1.MyCheckBox.Checked)
+            {
+                eCAFEDataSetBEVETELEZESBindingSource.Filter = "KONYVELT in (0)";
+            }
+            else
+            {
+                eCAFEDataSetBEVETELEZESBindingSource.Filter = "KONYVELT in (1,0)";
+            }
+        }
 
         private void bevetelfejBindingSource_DataSourceChanged(object sender, EventArgs e)
         {
