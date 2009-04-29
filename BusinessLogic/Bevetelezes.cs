@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BusinessLogic
 {
-#region Bevételezés fej adatok
+    #region Bevételezés fej adatok
     public class Bevetel_fej
     {
         #region Properties
@@ -352,7 +352,7 @@ namespace BusinessLogic
 
     }
 
-#endregion
+    #endregion
 
     public class BevetelSor
     {
@@ -574,7 +574,7 @@ namespace BusinessLogic
                 case -1:
                     {
                         //új rekord!!
-                        
+
 
                         cmd.CommandText = "INSERT INTO BEVETEL_SOR " +
                                                "(BEVETEL_FEJ_ID " +
@@ -605,7 +605,7 @@ namespace BusinessLogic
                     }
                 default:
                     {
-                        
+
                         cmd.CommandText = "UPDATE BEVETEL_SOR " +
                                            "SET BEVETEL_FEJ_ID = @BEVETEL_FEJ_ID " +
                                            "   ,CIKK_ID = @CIKK_ID " +
@@ -623,7 +623,7 @@ namespace BusinessLogic
                         break;
                     }
             }
-            
+
             cmd.Parameters.Add(new SqlParameter("BEVETEL_FEJ_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("MENNY", SqlDbType.Float));
@@ -631,9 +631,9 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("NETTO_ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("AFA_ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("BRUTTO_ERTEK", SqlDbType.Float));
-             cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
-             cmd.Parameters.Add(new SqlParameter("FELADVA", SqlDbType.Int));
-             cmd.Parameters.Add(new SqlParameter("MEGJEGYZES", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("FELADVA", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("MEGJEGYZES", SqlDbType.VarChar));
 
             cmd.Parameters["BEVETEL_FEJ_ID"].Value = _BEVETEL_FEJ_ID;
             cmd.Parameters["CIKK_ID"].Value = _CIKK_ID;
@@ -645,7 +645,7 @@ namespace BusinessLogic
             cmd.Parameters["RAKTAR_ID"].Value = RAKTAR_ID;
             cmd.Parameters["FELADVA"].Value = FELADVA;
             cmd.Parameters["MEGJEGYZES"].Value = MEGJEGYZES;
-            
+
             //try
             //{
             cmd.ExecuteNonQuery();
@@ -663,4 +663,70 @@ namespace BusinessLogic
         }
     }
 
+    public class SzallitoCikkek
+    {
+        public SzallitoCikkek(int cikk_id, double besz_ar)
+        {
+            _Cikk = new Cikk(cikk_id, true, new SqlConnection(DEFS.ConSTR));
+            _egys = besz_ar;
+            _raktar_id = _Cikk.ALAP_RAKTAR;
+        }
+
+        private Cikk _Cikk;
+        public Cikk P_CIKK
+        {
+            get { return (_Cikk); }
+            set {   _Cikk = value; }
+        }
+
+        public string P_CIKK_NEV
+        {
+            get
+            {
+                if (_Cikk != null)
+                {
+                    return (_Cikk.MEGNEVEZES);
+                }
+                else
+                {
+                    return ("");
+                }
+            }
+
+        }
+
+        private double _menny;
+        public double P_MENNYISEG
+        {
+            get { return (_menny); }
+            set { _menny = value; }
+        }
+
+        private double _egys;
+        public double P_EGYSEGAR
+        {
+            get { return (_egys); }
+            set { _egys = value; }
+        }
+
+        private int _raktar_id;
+        public int P_RAKTAR
+        {
+            get { return (_raktar_id); }
+            set { _raktar_id = value; }
+        }
+
+
+
+
+
+    }
+
+    
+
+    public abstract class TemporaryBevetelSorok
+    {
+        public static List<BevetelSor> BevetelSorok = new List<BevetelSor>();
+
+    }
 }

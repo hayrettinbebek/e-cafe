@@ -25,8 +25,7 @@ namespace e_Cafe
 
         private string ETrim(string t)
         {
-
-            return (Microsoft.VisualBasic.Strings.Trim(t));
+            return (t.Trim());
         }
 
         private void frmUjCikk_Load(object sender, EventArgs e)
