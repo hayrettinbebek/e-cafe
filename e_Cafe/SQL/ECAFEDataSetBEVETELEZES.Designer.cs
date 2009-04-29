@@ -319,6 +319,8 @@ namespace e_Cafe.SQL {
             
             private global::System.Data.DataColumn columnSZAMLA_OSSZ_BRUTTO;
             
+            private global::System.Data.DataColumn columnP_NEV;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public BEVETEL_FEJDataTable() {
                 this.TableName = "BEVETEL_FEJ";
@@ -413,6 +415,13 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn P_NEVColumn {
+                get {
+                    return this.columnP_NEV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -441,7 +450,7 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public BEVETEL_FEJRow AddBEVETEL_FEJRow(System.DateTime DATUM, int PARTNER_ID, string SZALLITOLEVEL_SZAM, string BIZONYLATSZAM, int KONYVELT, string SZAMLA_SZAM, double SZAMLA_OSSZESEN, double SZAMLA_OSSZ_BRUTTO) {
+            public BEVETEL_FEJRow AddBEVETEL_FEJRow(System.DateTime DATUM, int PARTNER_ID, string SZALLITOLEVEL_SZAM, string BIZONYLATSZAM, int KONYVELT, string SZAMLA_SZAM, double SZAMLA_OSSZESEN, double SZAMLA_OSSZ_BRUTTO, string P_NEV) {
                 BEVETEL_FEJRow rowBEVETEL_FEJRow = ((BEVETEL_FEJRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -452,7 +461,8 @@ namespace e_Cafe.SQL {
                         KONYVELT,
                         SZAMLA_SZAM,
                         SZAMLA_OSSZESEN,
-                        SZAMLA_OSSZ_BRUTTO};
+                        SZAMLA_OSSZ_BRUTTO,
+                        P_NEV};
                 rowBEVETEL_FEJRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBEVETEL_FEJRow);
                 return rowBEVETEL_FEJRow;
@@ -487,6 +497,7 @@ namespace e_Cafe.SQL {
                 this.columnSZAMLA_SZAM = base.Columns["SZAMLA_SZAM"];
                 this.columnSZAMLA_OSSZESEN = base.Columns["SZAMLA_OSSZESEN"];
                 this.columnSZAMLA_OSSZ_BRUTTO = base.Columns["SZAMLA_OSSZ_BRUTTO"];
+                this.columnP_NEV = base.Columns["P_NEV"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -509,6 +520,8 @@ namespace e_Cafe.SQL {
                 base.Columns.Add(this.columnSZAMLA_OSSZESEN);
                 this.columnSZAMLA_OSSZ_BRUTTO = new global::System.Data.DataColumn("SZAMLA_OSSZ_BRUTTO", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSZAMLA_OSSZ_BRUTTO);
+                this.columnP_NEV = new global::System.Data.DataColumn("P_NEV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnP_NEV);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBEVETEL_FEJ_ID}, true));
                 this.columnBEVETEL_FEJ_ID.AutoIncrement = true;
@@ -517,12 +530,12 @@ namespace e_Cafe.SQL {
                 this.columnBEVETEL_FEJ_ID.AllowDBNull = false;
                 this.columnBEVETEL_FEJ_ID.ReadOnly = true;
                 this.columnBEVETEL_FEJ_ID.Unique = true;
-                this.columnDATUM.AllowDBNull = false;
                 this.columnSZALLITOLEVEL_SZAM.MaxLength = 30;
                 this.columnBIZONYLATSZAM.MaxLength = 30;
                 this.columnKONYVELT.AllowDBNull = false;
                 this.columnKONYVELT.DefaultValue = ((int)(0));
                 this.columnSZAMLA_SZAM.MaxLength = 30;
+                this.columnP_NEV.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1077,7 +1090,12 @@ namespace e_Cafe.SQL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public System.DateTime DATUM {
                 get {
-                    return ((global::System.DateTime)(this[this.tableBEVETEL_FEJ.DATUMColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableBEVETEL_FEJ.DATUMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DATUM\' in table \'BEVETEL_FEJ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBEVETEL_FEJ.DATUMColumn] = value;
@@ -1185,6 +1203,31 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string P_NEV {
+                get {
+                    try {
+                        return ((string)(this[this.tableBEVETEL_FEJ.P_NEVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'P_NEV\' in table \'BEVETEL_FEJ\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBEVETEL_FEJ.P_NEVColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsDATUMNull() {
+                return this.IsNull(this.tableBEVETEL_FEJ.DATUMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetDATUMNull() {
+                this[this.tableBEVETEL_FEJ.DATUMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsPARTNER_IDNull() {
                 return this.IsNull(this.tableBEVETEL_FEJ.PARTNER_IDColumn);
             }
@@ -1242,6 +1285,16 @@ namespace e_Cafe.SQL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetSZAMLA_OSSZ_BRUTTONull() {
                 this[this.tableBEVETEL_FEJ.SZAMLA_OSSZ_BRUTTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsP_NEVNull() {
+                return this.IsNull(this.tableBEVETEL_FEJ.P_NEVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetP_NEVNull() {
+                this[this.tableBEVETEL_FEJ.P_NEVColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1615,87 +1668,8 @@ namespace e_Cafe.SQL.ECAFEDataSetBEVETELEZESTableAdapters {
             tableMapping.ColumnMappings.Add("SZAMLA_SZAM", "SZAMLA_SZAM");
             tableMapping.ColumnMappings.Add("SZAMLA_OSSZESEN", "SZAMLA_OSSZESEN");
             tableMapping.ColumnMappings.Add("SZAMLA_OSSZ_BRUTTO", "SZAMLA_OSSZ_BRUTTO");
+            tableMapping.ColumnMappings.Add("P_NEV", "P_NEV");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[BEVETEL_FEJ] WHERE (([BEVETEL_FEJ_ID] = @Original_BEVETEL_FEJ_ID) AND ((@IsNull_DATUM = 1 AND [DATUM] IS NULL) OR ([DATUM] = @Original_DATUM)) AND ((@IsNull_PARTNER_ID = 1 AND [PARTNER_ID] IS NULL) OR ([PARTNER_ID] = @Original_PARTNER_ID)) AND ((@IsNull_SZALLITOLEVEL_SZAM = 1 AND [SZALLITOLEVEL_SZAM] IS NULL) OR ([SZALLITOLEVEL_SZAM] = @Original_SZALLITOLEVEL_SZAM)) AND ((@IsNull_BIZONYLATSZAM = 1 AND [BIZONYLATSZAM] IS NULL) OR ([BIZONYLATSZAM] = @Original_BIZONYLATSZAM)) AND ([KONYVELT] = @Original_KONYVELT) AND ((@IsNull_SZAMLA_SZAM = 1 AND [SZAMLA_SZAM] IS NULL) OR ([SZAMLA_SZAM] = @Original_SZAMLA_SZAM)) AND ((@IsNull_SZAMLA_OSSZESEN = 1 AND [SZAMLA_OSSZESEN] IS NULL) OR ([SZAMLA_OSSZESEN] = @Original_SZAMLA_OSSZESEN)) AND ((@IsNull_SZAMLA_OSSZ_BRUTTO = 1 AND [SZAMLA_OSSZ_BRUTTO] IS NULL) OR ([SZAMLA_OSSZ_BRUTTO] = @Original_SZAMLA_OSSZ_BRUTTO)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BEVETEL_FEJ_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BEVETEL_FEJ_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DATUM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATUM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATUM", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATUM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZALLITOLEVEL_SZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZALLITOLEVEL_SZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZALLITOLEVEL_SZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZALLITOLEVEL_SZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BIZONYLATSZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BIZONYLATSZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BIZONYLATSZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BIZONYLATSZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KONYVELT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KONYVELT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZAMLA_SZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_SZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZAMLA_SZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_SZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZAMLA_OSSZESEN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZESEN", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZAMLA_OSSZESEN", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZESEN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZAMLA_OSSZ_BRUTTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZ_BRUTTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZAMLA_OSSZ_BRUTTO", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZ_BRUTTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[BEVETEL_FEJ] ([DATUM], [PARTNER_ID], [SZALLITOLEVEL_SZAM], [BIZONYLATSZAM], [KONYVELT], [SZAMLA_SZAM], [SZAMLA_OSSZESEN], [SZAMLA_OSSZ_BRUTTO]) VALUES (@DATUM, @PARTNER_ID, @SZALLITOLEVEL_SZAM, @BIZONYLATSZAM, @KONYVELT, @SZAMLA_SZAM, @SZAMLA_OSSZESEN, @SZAMLA_OSSZ_BRUTTO);
-SELECT BEVETEL_FEJ_ID, DATUM, PARTNER_ID, SZALLITOLEVEL_SZAM, BIZONYLATSZAM, KONYVELT, SZAMLA_SZAM, SZAMLA_OSSZESEN, SZAMLA_OSSZ_BRUTTO FROM BEVETEL_FEJ WHERE (BEVETEL_FEJ_ID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATUM", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATUM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZALLITOLEVEL_SZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZALLITOLEVEL_SZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BIZONYLATSZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BIZONYLATSZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KONYVELT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KONYVELT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZAMLA_SZAM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_SZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZAMLA_OSSZESEN", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZESEN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZAMLA_OSSZ_BRUTTO", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZ_BRUTTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE    BEVETEL_FEJ\r\nSET              DATUM = @DATUM, PARTNER_ID = @PARTNER_ID," +
-                " SZALLITOLEVEL_SZAM = @SZALLITOLEVEL_SZAM, BIZONYLATSZAM = @BIZONYLATSZAM, \r\n   " +
-                "                   KONYVELT = @KONYVELT, SZAMLA_SZAM = @SZAMLA_SZAM, SZAMLA_OSSZ" +
-                "ESEN = @SZAMLA_OSSZESEN, \r\n                      SZAMLA_OSSZ_BRUTTO = @SZAMLA_OS" +
-                "SZ_BRUTTO\r\nWHERE     (BEVETEL_FEJ_ID = @Original_BEVETEL_FEJ_ID) AND (@IsNull_DA" +
-                "TUM = 1 AND DATUM IS NULL OR\r\n                      DATUM = @Original_DATUM) AND" +
-                " (@IsNull_PARTNER_ID = 1 AND PARTNER_ID IS NULL OR\r\n                      PARTNE" +
-                "R_ID = @Original_PARTNER_ID) AND (@IsNull_SZALLITOLEVEL_SZAM = 1 AND SZALLITOLEV" +
-                "EL_SZAM IS NULL OR\r\n                      SZALLITOLEVEL_SZAM = @Original_SZALLIT" +
-                "OLEVEL_SZAM) AND (@IsNull_BIZONYLATSZAM = 1 AND BIZONYLATSZAM IS NULL OR\r\n      " +
-                "                BIZONYLATSZAM = @Original_BIZONYLATSZAM) AND (KONYVELT = @Origin" +
-                "al_KONYVELT) AND (@IsNull_SZAMLA_SZAM = 1 AND \r\n                      SZAMLA_SZA" +
-                "M IS NULL OR\r\n                      SZAMLA_SZAM = @Original_SZAMLA_SZAM) AND (@I" +
-                "sNull_SZAMLA_OSSZESEN = 1 AND SZAMLA_OSSZESEN IS NULL OR\r\n                      " +
-                "SZAMLA_OSSZESEN = @Original_SZAMLA_OSSZESEN) AND (@IsNull_SZAMLA_OSSZ_BRUTTO = 1" +
-                " AND SZAMLA_OSSZ_BRUTTO IS NULL OR\r\n                      SZAMLA_OSSZ_BRUTTO = @" +
-                "Original_SZAMLA_OSSZ_BRUTTO); \r\nSELECT BEVETEL_FEJ_ID, DATUM, PARTNER_ID, SZALLI" +
-                "TOLEVEL_SZAM, BIZONYLATSZAM, KONYVELT, SZAMLA_SZAM, SZAMLA_OSSZESEN, SZAMLA_OSSZ" +
-                "_BRUTTO FROM BEVETEL_FEJ WHERE (BEVETEL_FEJ_ID = @BEVETEL_FEJ_ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATUM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATUM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PARTNER_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZALLITOLEVEL_SZAM", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "SZALLITOLEVEL_SZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BIZONYLATSZAM", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "BIZONYLATSZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KONYVELT", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "KONYVELT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZAMLA_SZAM", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_SZAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZAMLA_OSSZESEN", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZESEN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SZAMLA_OSSZ_BRUTTO", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZ_BRUTTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BEVETEL_FEJ_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BEVETEL_FEJ_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DATUM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATUM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATUM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATUM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PARTNER_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZALLITOLEVEL_SZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZALLITOLEVEL_SZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZALLITOLEVEL_SZAM", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "SZALLITOLEVEL_SZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BIZONYLATSZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BIZONYLATSZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BIZONYLATSZAM", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "BIZONYLATSZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KONYVELT", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "KONYVELT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZAMLA_SZAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_SZAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZAMLA_SZAM", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_SZAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZAMLA_OSSZESEN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZESEN", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZAMLA_OSSZESEN", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZESEN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SZAMLA_OSSZ_BRUTTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZ_BRUTTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SZAMLA_OSSZ_BRUTTO", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "SZAMLA_OSSZ_BRUTTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BEVETEL_FEJ_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BEVETEL_FEJ_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1709,8 +1683,10 @@ SELECT BEVETEL_FEJ_ID, DATUM, PARTNER_ID, SZALLITOLEVEL_SZAM, BIZONYLATSZAM, KON
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT BEVETEL_FEJ_ID, DATUM, PARTNER_ID, SZALLITOLEVEL_SZAM, BIZONYLATSZAM, KONY" +
-                "VELT, SZAMLA_SZAM, SZAMLA_OSSZESEN, SZAMLA_OSSZ_BRUTTO FROM dbo.BEVETEL_FEJ";
+            this._commandCollection[0].CommandText = @"SELECT        f.BEVETEL_FEJ_ID, f.DATUM, f.PARTNER_ID, f.SZALLITOLEVEL_SZAM, f.BIZONYLATSZAM, f.KONYVELT, f.SZAMLA_SZAM, f.SZAMLA_OSSZESEN, 
+                         f.SZAMLA_OSSZ_BRUTTO, p.P_NEV
+FROM            BEVETEL_FEJ AS f INNER JOIN
+                         PARTNER AS p ON f.PARTNER_ID = p.PARTNER_ID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1734,290 +1710,6 @@ SELECT BEVETEL_FEJ_ID, DATUM, PARTNER_ID, SZALLITOLEVEL_SZAM, BIZONYLATSZAM, KON
             ECAFEDataSetBEVETELEZES.BEVETEL_FEJDataTable dataTable = new ECAFEDataSetBEVETELEZES.BEVETEL_FEJDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ECAFEDataSetBEVETELEZES.BEVETEL_FEJDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ECAFEDataSetBEVETELEZES dataSet) {
-            return this.Adapter.Update(dataSet, "BEVETEL_FEJ");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_BEVETEL_FEJ_ID, System.DateTime Original_DATUM, global::System.Nullable<int> Original_PARTNER_ID, string Original_SZALLITOLEVEL_SZAM, string Original_BIZONYLATSZAM, int Original_KONYVELT, string Original_SZAMLA_SZAM, global::System.Nullable<double> Original_SZAMLA_OSSZESEN, global::System.Nullable<double> Original_SZAMLA_OSSZ_BRUTTO) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_BEVETEL_FEJ_ID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DATUM));
-            if ((Original_PARTNER_ID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_PARTNER_ID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SZALLITOLEVEL_SZAM == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_SZALLITOLEVEL_SZAM));
-            }
-            if ((Original_BIZONYLATSZAM == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_BIZONYLATSZAM));
-            }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_KONYVELT));
-            if ((Original_SZAMLA_SZAM == null)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_SZAMLA_SZAM));
-            }
-            if ((Original_SZAMLA_OSSZESEN.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((double)(Original_SZAMLA_OSSZESEN.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SZAMLA_OSSZ_BRUTTO.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((double)(Original_SZAMLA_OSSZ_BRUTTO.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime DATUM, global::System.Nullable<int> PARTNER_ID, string SZALLITOLEVEL_SZAM, string BIZONYLATSZAM, int KONYVELT, string SZAMLA_SZAM, global::System.Nullable<double> SZAMLA_OSSZESEN, global::System.Nullable<double> SZAMLA_OSSZ_BRUTTO) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(DATUM));
-            if ((PARTNER_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(PARTNER_ID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((SZALLITOLEVEL_SZAM == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SZALLITOLEVEL_SZAM));
-            }
-            if ((BIZONYLATSZAM == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(BIZONYLATSZAM));
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(KONYVELT));
-            if ((SZAMLA_SZAM == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(SZAMLA_SZAM));
-            }
-            if ((SZAMLA_OSSZESEN.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((double)(SZAMLA_OSSZESEN.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((SZAMLA_OSSZ_BRUTTO.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((double)(SZAMLA_OSSZ_BRUTTO.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    System.DateTime DATUM, 
-                    global::System.Nullable<int> PARTNER_ID, 
-                    string SZALLITOLEVEL_SZAM, 
-                    string BIZONYLATSZAM, 
-                    int KONYVELT, 
-                    string SZAMLA_SZAM, 
-                    global::System.Nullable<double> SZAMLA_OSSZESEN, 
-                    global::System.Nullable<double> SZAMLA_OSSZ_BRUTTO, 
-                    int Original_BEVETEL_FEJ_ID, 
-                    System.DateTime Original_DATUM, 
-                    global::System.Nullable<int> Original_PARTNER_ID, 
-                    string Original_SZALLITOLEVEL_SZAM, 
-                    string Original_BIZONYLATSZAM, 
-                    int Original_KONYVELT, 
-                    string Original_SZAMLA_SZAM, 
-                    global::System.Nullable<double> Original_SZAMLA_OSSZESEN, 
-                    global::System.Nullable<double> Original_SZAMLA_OSSZ_BRUTTO, 
-                    int BEVETEL_FEJ_ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(DATUM));
-            if ((PARTNER_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(PARTNER_ID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((SZALLITOLEVEL_SZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SZALLITOLEVEL_SZAM));
-            }
-            if ((BIZONYLATSZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(BIZONYLATSZAM));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(KONYVELT));
-            if ((SZAMLA_SZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(SZAMLA_SZAM));
-            }
-            if ((SZAMLA_OSSZESEN.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(SZAMLA_OSSZESEN.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((SZAMLA_OSSZ_BRUTTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(SZAMLA_OSSZ_BRUTTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_BEVETEL_FEJ_ID));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_DATUM));
-            if ((Original_PARTNER_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_PARTNER_ID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SZALLITOLEVEL_SZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_SZALLITOLEVEL_SZAM));
-            }
-            if ((Original_BIZONYLATSZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_BIZONYLATSZAM));
-            }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_KONYVELT));
-            if ((Original_SZAMLA_SZAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_SZAMLA_SZAM));
-            }
-            if ((Original_SZAMLA_OSSZESEN.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((double)(Original_SZAMLA_OSSZESEN.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SZAMLA_OSSZ_BRUTTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((double)(Original_SZAMLA_OSSZ_BRUTTO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(BEVETEL_FEJ_ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
         }
     }
     
@@ -2211,8 +1903,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
         
         private UpdateOrderOption _updateOrder;
         
-        private BEVETEL_FEJTableAdapter _bEVETEL_FEJTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -2224,19 +1914,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
-            "", "System.Drawing.Design.UITypeEditor")]
-        public BEVETEL_FEJTableAdapter BEVETEL_FEJTableAdapter {
-            get {
-                return this._bEVETEL_FEJTableAdapter;
-            }
-            set {
-                this._bEVETEL_FEJTableAdapter = value;
             }
         }
         
@@ -2257,10 +1934,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._bEVETEL_FEJTableAdapter != null) 
-                            && (this._bEVETEL_FEJTableAdapter.Connection != null))) {
-                    return this._bEVETEL_FEJTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -2273,9 +1946,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._bEVETEL_FEJTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -2286,15 +1956,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateUpdatedRows(ECAFEDataSetBEVETELEZES dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._bEVETEL_FEJTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BEVETEL_FEJ.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._bEVETEL_FEJTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -2304,14 +1965,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateInsertedRows(ECAFEDataSetBEVETELEZES dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._bEVETEL_FEJTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BEVETEL_FEJ.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._bEVETEL_FEJTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -2321,14 +1974,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private int UpdateDeletedRows(ECAFEDataSetBEVETELEZES dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._bEVETEL_FEJTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BEVETEL_FEJ.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._bEVETEL_FEJTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -2366,11 +2011,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._bEVETEL_FEJTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._bEVETEL_FEJTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -2403,15 +2043,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._bEVETEL_FEJTableAdapter != null)) {
-                    revertConnections.Add(this._bEVETEL_FEJTableAdapter, this._bEVETEL_FEJTableAdapter.Connection);
-                    this._bEVETEL_FEJTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._bEVETEL_FEJTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._bEVETEL_FEJTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._bEVETEL_FEJTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._bEVETEL_FEJTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -2469,10 +2100,6 @@ WHERE        (s.BEVETEL_FEJ_ID = @fej_id)";
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._bEVETEL_FEJTableAdapter != null)) {
-                    this._bEVETEL_FEJTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._bEVETEL_FEJTableAdapter]));
-                    this._bEVETEL_FEJTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
