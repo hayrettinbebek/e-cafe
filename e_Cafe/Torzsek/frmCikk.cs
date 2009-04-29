@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using NSpring.Logging;
 using BusinessLogic;
 using e_Cafe.SQL;
+using e_Cafe.Keszlet;
 
 namespace e_Cafe.Torzsek
 {
@@ -30,8 +31,9 @@ namespace e_Cafe.Torzsek
 
         private void frmCikk_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsKeszletInfo.KESZLET_SOR' table. You can move, or remove it, as needed.
+            this.kESZLET_SORTableAdapter.Fill(this.dsKeszletInfo.KESZLET_SOR);
             // TODO: This line of code loads data into the 'dsKeszletInfo.KESZLET_FEJ' table. You can move, or remove it, as needed.
-           
             
 
             // TODO: This line of code loads data into the 'eCAFEDataSetCIKK.CIKK' table. You can move, or remove it, as needed.
@@ -277,6 +279,7 @@ namespace e_Cafe.Torzsek
 
         private void cikkKeszletBindingSource_CurrentChanged(object sender, EventArgs e)
         {
+            this.kESZLET_FEJTableAdapter.Fill(this.dsKeszletInfo.KESZLET_FEJ, -1, -1);
             if (cikkKeszletBindingSource.Current != null)
             {
                 if (aktCikk != null)
@@ -285,7 +288,40 @@ namespace e_Cafe.Torzsek
                     //gvKeszletInfo.DataSource = KeszletInfo.CreateDataSet(((CikkKeszlet)cikkKeszletBindingSource.Current).RAKTAR_ID, aktCikk.CIKK_ID).Tables[0].DefaultView;
                 }
             }
-            //gvKeszletInfo.DataSource = null;
+           
+
+        }
+
+        private void gvKeszletInfo_Navigate(object sender, NavigateEventArgs ne)
+        {
+
+        }
+
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (cikkKeszletBindingSource.Current != null)
+            {
+                frmAtvezetes fa = new frmAtvezetes(aktCikk.CIKK_ID, ((CikkKeszlet)cikkKeszletBindingSource.Current).RAKTAR_ID);
+
+                fa.ShowDialog();
+            }
+            else
+            {
+                frmAtvezetes fa = new frmAtvezetes();
+
+                fa.ShowDialog();
+            }
         }
 
 

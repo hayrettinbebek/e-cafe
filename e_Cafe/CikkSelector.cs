@@ -15,11 +15,13 @@ namespace e_Cafe
 {
     public partial class CikkSelector : Form
     {
-        public int CIKK_ID;
-        public int DEF_RAKT;
-        public double AFA_SZAZ;
-        public string CIKK_NEV;
+        public  int CIKK_ID;
+        public  int DEF_RAKT;
+        public  double AFA_SZAZ;
+        public  string CIKK_NEV;
         public Cikk c;
+        
+
 
         private Cikk_list l;
 
@@ -38,6 +40,12 @@ namespace e_Cafe
         private void btnOK_Click(object sender, EventArgs e)
         {
             SelectCikk();
+        }
+
+        public static Cikk SelectCikk(int _cikkId)
+        {
+            return (new Cikk(_cikkId, true, new SqlConnection(DEFS.ConSTR)));
+            
         }
 
         private void SelectCikk()
