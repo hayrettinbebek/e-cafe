@@ -38,21 +38,21 @@
             this.txtSzamlaszam = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CIKK_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAKTAR_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtVegNet = new System.Windows.Forms.TextBox();
-            this.txtVegAfa = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtVegBrutto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.bevetelSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtVegBrutto = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtVegAfa = new System.Windows.Forms.TextBox();
+            this.txtVegNet = new System.Windows.Forms.TextBox();
             this.sORIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bEVETELFEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CIKK_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bESZARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nETTOERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,8 +60,9 @@
             this.bRUTTOERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAKTARIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fELADVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAKTAR_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bevetelSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bevetelSorBindingSource)).BeginInit();
@@ -168,6 +169,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(890, 143);
             this.dataGridView1.TabIndex = 6;
             // 
+            // CIKK_NEV
+            // 
+            this.CIKK_NEV.DataPropertyName = "CIKK_NEV";
+            this.CIKK_NEV.HeaderText = "Cikk";
+            this.CIKK_NEV.Name = "CIKK_NEV";
+            this.CIKK_NEV.ReadOnly = true;
+            this.CIKK_NEV.Width = 65;
+            // 
+            // RAKTAR_NEV
+            // 
+            this.RAKTAR_NEV.DataPropertyName = "RAKTAR_NEV";
+            this.RAKTAR_NEV.HeaderText = "Raktár";
+            this.RAKTAR_NEV.Name = "RAKTAR_NEV";
+            this.RAKTAR_NEV.ReadOnly = true;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(189)))));
@@ -228,32 +244,14 @@
             this.panel1.Size = new System.Drawing.Size(890, 82);
             this.panel1.TabIndex = 9;
             // 
-            // txtVegNet
+            // label6
             // 
-            this.txtVegNet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtVegNet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVegNet.Location = new System.Drawing.Point(259, 6);
-            this.txtVegNet.Name = "txtVegNet";
-            this.txtVegNet.Size = new System.Drawing.Size(100, 13);
-            this.txtVegNet.TabIndex = 1;
-            // 
-            // txtVegAfa
-            // 
-            this.txtVegAfa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtVegAfa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVegAfa.Location = new System.Drawing.Point(259, 29);
-            this.txtVegAfa.Name = "txtVegAfa";
-            this.txtVegAfa.Size = new System.Drawing.Size(100, 13);
-            this.txtVegAfa.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(178, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Öszsesen Áfa:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(169, 51);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Összesen Bruttó";
             // 
             // txtVegBrutto
             // 
@@ -264,19 +262,32 @@
             this.txtVegBrutto.Size = new System.Drawing.Size(100, 13);
             this.txtVegBrutto.TabIndex = 1;
             // 
-            // label6
+            // label5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(169, 51);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Összesen Bruttó";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(178, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Öszsesen Áfa:";
             // 
-            // bevetelSorBindingSource
+            // txtVegAfa
             // 
-            this.bevetelSorBindingSource.DataSource = typeof(BusinessLogic.BevetelSor);
-            this.bevetelSorBindingSource.CurrentChanged += new System.EventHandler(this.bevetelSorBindingSource_CurrentChanged);
+            this.txtVegAfa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtVegAfa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtVegAfa.Location = new System.Drawing.Point(259, 29);
+            this.txtVegAfa.Name = "txtVegAfa";
+            this.txtVegAfa.Size = new System.Drawing.Size(100, 13);
+            this.txtVegAfa.TabIndex = 1;
+            // 
+            // txtVegNet
+            // 
+            this.txtVegNet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtVegNet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtVegNet.Location = new System.Drawing.Point(259, 6);
+            this.txtVegNet.Name = "txtVegNet";
+            this.txtVegNet.Size = new System.Drawing.Size(100, 13);
+            this.txtVegNet.TabIndex = 1;
             // 
             // sORIDDataGridViewTextBoxColumn
             // 
@@ -301,14 +312,6 @@
             this.cIKKIDDataGridViewTextBoxColumn.Name = "cIKKIDDataGridViewTextBoxColumn";
             this.cIKKIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.cIKKIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // CIKK_NEV
-            // 
-            this.CIKK_NEV.DataPropertyName = "CIKK_NEV";
-            this.CIKK_NEV.HeaderText = "Cikk";
-            this.CIKK_NEV.Name = "CIKK_NEV";
-            this.CIKK_NEV.ReadOnly = true;
-            this.CIKK_NEV.Width = 65;
             // 
             // mENNYDataGridViewTextBoxColumn
             // 
@@ -366,13 +369,6 @@
             this.fELADVADataGridViewTextBoxColumn.ReadOnly = true;
             this.fELADVADataGridViewTextBoxColumn.Visible = false;
             // 
-            // RAKTAR_NEV
-            // 
-            this.RAKTAR_NEV.DataPropertyName = "RAKTAR_NEV";
-            this.RAKTAR_NEV.HeaderText = "Raktár";
-            this.RAKTAR_NEV.Name = "RAKTAR_NEV";
-            this.RAKTAR_NEV.ReadOnly = true;
-            // 
             // mEGJEGYZESDataGridViewTextBoxColumn
             // 
             this.mEGJEGYZESDataGridViewTextBoxColumn.DataPropertyName = "MEGJEGYZES";
@@ -381,12 +377,28 @@
             this.mEGJEGYZESDataGridViewTextBoxColumn.ReadOnly = true;
             this.mEGJEGYZESDataGridViewTextBoxColumn.Width = 120;
             // 
+            // bevetelSorBindingSource
+            // 
+            this.bevetelSorBindingSource.DataSource = typeof(BusinessLogic.BevetelSor);
+            this.bevetelSorBindingSource.CurrentChanged += new System.EventHandler(this.bevetelSorBindingSource_CurrentChanged);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(194, 74);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(182, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Szállító cikkeinek hozzáadása";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // frmBevetel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 335);
             this.ControlBox = false;
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -448,5 +460,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fELADVADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAKTAR_NEV;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGJEGYZESDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button4;
     }
 }

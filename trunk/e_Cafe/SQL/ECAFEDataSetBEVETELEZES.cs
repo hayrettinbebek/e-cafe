@@ -28,7 +28,7 @@
     }
 }
 
-namespace e_Cafe.SQL.ECAFEDataSetBEVETELEZESTableAdapters
+namespace e_Cafe.ECAFEDataSetBEVETELEZESTableAdapters
 {
     
     

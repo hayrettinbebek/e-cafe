@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7A9003C7-484C-4510-BE0F-128F219A812B}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -93,6 +93,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUIElements.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="KeremVarjon.cs">

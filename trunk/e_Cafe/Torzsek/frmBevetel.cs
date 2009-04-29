@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using e_Cafe.Keszlet;
 using BusinessLogic;
 
 namespace e_Cafe
@@ -34,6 +34,7 @@ namespace e_Cafe
                 aktBevfej = new Bevetel_fej(bevfej_id, new SqlConnection(DEFS.ConSTR));
 
             }
+            p_id = aktBevfej.PARTNER_ID;
             fillFields();
         }
         private void initGrid()
@@ -51,6 +52,8 @@ namespace e_Cafe
             txtSzamlaszam.Text = aktBevfej.SZAMLASZAM;
             dtpDatum.Value = aktBevfej.DATUM;
             initGrid();
+            Szallito sz = new Szallito(p_id, new SqlConnection(DEFS.ConSTR));
+            lblSzallito.Text = sz.P_NEV + " " + sz.P_NEV2;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -102,7 +105,7 @@ namespace e_Cafe
         {
             if (SaveFej())
             {
-                ;
+                
                 frmBevetelSor fs = new frmBevetelSor();
                 fs.ShowDialog();
                 if (fs.DialogResult == DialogResult.OK)
@@ -154,6 +157,24 @@ namespace e_Cafe
             txtVegBrutto.Text = vegBrutto.ToString("# ##0.00");
             txtVegNet.Text = vegNet.ToString("# ##0.00");
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmBeszerzesSzallitoCikkei f = new frmBeszerzesSzallitoCikkei(p_id);
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+            {
+                if (SaveFej())
+                {
+                    foreach (var bs in TemporaryBevetelSorok.BevetelSorok)
+                    {
+                        bs.BEVETEL_FEJ_ID = aktBevfej.BEVETEL_FEJ_ID;
+                        aktBevfej.lBevetelSorok.Add(bs);
+                    }
+                }
+            }
+            initGrid();
         }
     }
 }

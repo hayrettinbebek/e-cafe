@@ -114,21 +114,21 @@ namespace e_Cafe
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView2.Columns.IndexOf(dgvcCIKK))
-            {
-                CikkSelector fc = new CikkSelector();
-                //fc.Parent = this;
-                fc.ShowDialog();
+            //if (e.ColumnIndex == dataGridView2.Columns.IndexOf(dgvcCIKK))
+            //{
+            //    CikkSelector fc = new CikkSelector();
+            //    //fc.Parent = this;
+            //    fc.ShowDialog();
 
-                if (fc.DialogResult == DialogResult.OK)
-                {
-                    if (bEVETELSORBindingSource.Current != null)
-                    {
-                        ((DataRowView)bEVETELSORBindingSource.Current)["CIKK_ID"] = fc.CIKK_ID;
-                        ((DataRowView)bEVETELSORBindingSource.Current)["RAKTAR_ID"] = fc.DEF_RAKT;
-                    }
-                }
-            }
+            //    if (fc.DialogResult == DialogResult.OK)
+            //    {
+            //        if (bEVETELSORBindingSource.Current != null)
+            //        {
+            //            ((DataRowView)bEVETELSORBindingSource.Current)["CIKK_ID"] = fc.CIKK_ID;
+            //            ((DataRowView)bEVETELSORBindingSource.Current)["RAKTAR_ID"] = fc.DEF_RAKT;
+            //        }
+            //    }
+            //}
         }
 
 

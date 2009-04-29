@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Resources;
 using System.Windows.Forms;
 using BusinessLogic;
-using GUI;
-using System.Resources;
-using System.Data.SqlClient;
-using e_Cafe.Reports;
-using XPTable.Renderers;
 using e_Cafe.FrontOffice;
+using e_Cafe.Reports;
+using GUI;
 using NSpring.Logging;
+using XPTable.Renderers;
 
 namespace e_Cafe
 {
