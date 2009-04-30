@@ -42,5 +42,10 @@ namespace e_Cafe.Keszlet
             dp.setReportMaker(new LeltarIv(_fej));
             dp.doPreview();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            DEFS.SendInfoMessage("Továbblépés a következő szintre hibára futott!");
+        }
     }
 }
