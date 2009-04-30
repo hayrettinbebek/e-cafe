@@ -115,7 +115,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAKTARIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kESZLETFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsKeszletInfo = new e_Cafe.dsKeszletInfo();
+            this.dsKeszletInfo = new e_Cafe.SQL.dsKeszletInfo();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -177,8 +177,8 @@
             this.filterAlcsoport = new System.Windows.Forms.ToolStripTextBox();
             this.cIKKTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
             this.lIT_KISZTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
-            this.kESZLET_FEJTableAdapter = new e_Cafe.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter();
-            this.kESZLET_SORTableAdapter = new e_Cafe.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter();
+            this.kESZLET_FEJTableAdapter = new e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter();
+            this.kESZLET_SORTableAdapter = new e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1810,11 +1810,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn eRTTIPUSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGYSMEGNEVEZESDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox2;
-        private dsKeszletInfo dsKeszletInfo;
+        private e_Cafe.SQL.dsKeszletInfo dsKeszletInfo;
         private System.Windows.Forms.BindingSource kESZLETFEJBindingSource;
-        private e_Cafe.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter kESZLET_FEJTableAdapter;
+        private e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter kESZLET_FEJTableAdapter;
         private System.Windows.Forms.BindingSource készletsorokBindingSource;
-        private e_Cafe.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter kESZLET_SORTableAdapter;
+        private e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter kESZLET_SORTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage2;

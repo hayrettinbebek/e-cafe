@@ -35,6 +35,7 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tsKeszVezet = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripCheckedBox1 = new GUI.ToolStripCheckedBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BIZONYLATSZAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SZAMLA_OSSZESEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +69,6 @@
             this.raktarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bEVETEL_FEJTableAdapter = new e_Cafe.SQL.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_FEJTableAdapter();
             this.bEVETEL_SORTableAdapter = new e_Cafe.SQL.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter();
-            this.toolStripCheckedBox1 = new GUI.ToolStripCheckedBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBEVETELEZESBindingSource)).BeginInit();
@@ -101,7 +101,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(85, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(82, 22);
             this.toolStripButton1.Text = "Új bevételezés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -111,7 +111,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(48, 22);
             this.toolStripButton2.Text = "Módosít";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -120,19 +120,34 @@
             this.tsKeszVezet.Image = ((System.Drawing.Image)(resources.GetObject("tsKeszVezet.Image")));
             this.tsKeszVezet.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsKeszVezet.Name = "tsKeszVezet";
-            this.tsKeszVezet.Size = new System.Drawing.Size(114, 22);
+            this.tsKeszVezet.Size = new System.Drawing.Size(112, 22);
             this.tsKeszVezet.Text = "Készletre vezetés";
             this.tsKeszVezet.Click += new System.EventHandler(this.tsKeszVezet_Click);
             // 
             // toolStripButton3
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Image = global::e_Cafe.Properties.Resources.ERROR_ICON;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(48, 22);
+            this.toolStripButton3.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton3.Text = "Kilépés";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripCheckedBox1
+            // 
+            // 
+            // toolStripCheckedBox1
+            // 
+            this.toolStripCheckedBox1.MyCheckBox.AccessibleName = "toolStripCheckedBox1";
+            this.toolStripCheckedBox1.MyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripCheckedBox1.MyCheckBox.Location = new System.Drawing.Point(309, 1);
+            this.toolStripCheckedBox1.MyCheckBox.Name = "toolStripCheckedBox1";
+            this.toolStripCheckedBox1.MyCheckBox.Size = new System.Drawing.Size(128, 22);
+            this.toolStripCheckedBox1.MyCheckBox.TabIndex = 1;
+            this.toolStripCheckedBox1.MyCheckBox.Text = "Csak könyveletlenek:";
+            this.toolStripCheckedBox1.Name = "toolStripCheckedBox1";
+            this.toolStripCheckedBox1.Size = new System.Drawing.Size(128, 22);
+            this.toolStripCheckedBox1.Text = "Csak könyveletlenek:";
             // 
             // dataGridView1
             // 
@@ -392,22 +407,6 @@
             // bEVETEL_SORTableAdapter
             // 
             this.bEVETEL_SORTableAdapter.ClearBeforeFill = true;
-            // 
-            // toolStripCheckedBox1
-            // 
-            // 
-            // toolStripCheckedBox1
-            // 
-            this.toolStripCheckedBox1.MyCheckBox.AccessibleName = "toolStripCheckedBox1";
-            this.toolStripCheckedBox1.MyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolStripCheckedBox1.MyCheckBox.Location = new System.Drawing.Point(311, 1);
-            this.toolStripCheckedBox1.MyCheckBox.Name = "toolStripCheckedBox1";
-            this.toolStripCheckedBox1.MyCheckBox.Size = new System.Drawing.Size(94, 22);
-            this.toolStripCheckedBox1.MyCheckBox.TabIndex = 1;
-            this.toolStripCheckedBox1.MyCheckBox.Text = "Csak aktívak:";
-            this.toolStripCheckedBox1.Name = "toolStripCheckedBox1";
-            this.toolStripCheckedBox1.Size = new System.Drawing.Size(94, 22);
-            this.toolStripCheckedBox1.Text = "Csak aktívak:";
             // 
             // Bevetelezes
             // 

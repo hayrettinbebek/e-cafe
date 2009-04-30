@@ -319,6 +319,21 @@ namespace e_Cafe
 
         }
 
+        private void újLeltárívToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLeltarozas fl = new frmLeltarozas();
+            fl.MdiParent = this;
+            fl.Show();
+
+        }
+
+        private void meglévőLeltárFolytatásaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLeltarSelect ls = new frmLeltarSelect();
+            ls.MdiParent = this;
+            ls.Show();
+        }
+
 
 
 

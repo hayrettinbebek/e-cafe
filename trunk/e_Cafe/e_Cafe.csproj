@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -83,7 +83,6 @@
     <Reference Include="Microsoft.SqlServer.SmoEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -165,12 +164,35 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
-    <Compile Include="dsKeszletInfo.Designer.cs">
+    <Compile Include="dsLeltar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLeltar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet\frmLeltarIv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmLeltarIv.Designer.cs">
+      <DependentUpon>frmLeltarIv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet\frmLeltarozas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmLeltarozas.Designer.cs">
+      <DependentUpon>frmLeltarozas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet\frmLeltarSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmLeltarSelect.Designer.cs">
+      <DependentUpon>frmLeltarSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\dsKeszletInfo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsOsszevontLista.Designer.cs">
+    <Compile Include="SQL\dsOsszevontLista.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
@@ -609,6 +631,15 @@
     <EmbeddedResource Include="FrontOffice\MMPartnerek.resx">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmLeltarIv.resx">
+      <DependentUpon>frmLeltarIv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmLeltarozas.resx">
+      <DependentUpon>frmLeltarozas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmLeltarSelect.resx">
+      <DependentUpon>frmLeltarSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmSelejtez.resx">
       <DependentUpon>frmSelejtez.cs</DependentUpon>
@@ -1083,26 +1114,41 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsKeszletInfo.xsc">
+    <None Include="dsLeltar.xsc">
+      <DependentUpon>dsLeltar.xsd</DependentUpon>
+    </None>
+    <None Include="dsLeltar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLeltar.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsLeltar.xss">
+      <DependentUpon>dsLeltar.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\BusinessLogic.LeltarSor.datasource" />
+    <None Include="SQL\update_028.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SQL\dsKeszletInfo.xsc">
       <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
     </None>
-    <None Include="dsKeszletInfo.xsd">
+    <None Include="SQL\dsKeszletInfo.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsKeszletInfo.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsKeszletInfo.xss">
+    <None Include="SQL\dsKeszletInfo.xss">
       <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
     </None>
-    <None Include="dsOsszevontLista.xsc">
+    <None Include="SQL\dsOsszevontLista.xsc">
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
     </None>
-    <None Include="dsOsszevontLista.xsd">
+    <None Include="SQL\dsOsszevontLista.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsOsszevontLista.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsOsszevontLista.xss">
+    <None Include="SQL\dsOsszevontLista.xss">
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.OpenDayCombo.datasource" />
