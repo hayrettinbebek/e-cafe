@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -83,6 +83,7 @@
     <Reference Include="Microsoft.SqlServer.SmoEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -191,6 +192,12 @@
     </Compile>
     <Compile Include="Keszlet\frmLeltarSelect.Designer.cs">
       <DependentUpon>frmLeltarSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet\frmMegrendelesArchivum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmMegrendelesArchivum.Designer.cs">
+      <DependentUpon>frmMegrendelesArchivum.cs</DependentUpon>
     </Compile>
     <Compile Include="Keszlet\frmMegrendelesKeszites.cs">
       <SubType>Form</SubType>
@@ -645,15 +652,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmLeltarIv.resx">
       <DependentUpon>frmLeltarIv.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmLeltarozas.resx">
       <DependentUpon>frmLeltarozas.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmLeltarSelect.resx">
       <DependentUpon>frmLeltarSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmMegrendelesArchivum.resx">
+      <DependentUpon>frmMegrendelesArchivum.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmMegrendelesKeszites.resx">
       <DependentUpon>frmMegrendelesKeszites.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmSelejtez.resx">
       <DependentUpon>frmSelejtez.cs</DependentUpon>
@@ -1236,7 +1251,11 @@
     <None Include="dsMegrendeles.xss">
       <DependentUpon>dsMegrendeles.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\BusinessLogic.MegrendelesSor.datasource" />
     <None Include="Resources\floppy-icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bundle-24x24x32b.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

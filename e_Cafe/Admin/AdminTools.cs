@@ -341,6 +341,22 @@ namespace e_Cafe
             mr.Show();
         }
 
+        private void mmBevetel2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void megrendelésBeérkeztetéseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DEFS.SendInfoMessage("Hiba a megrendelések betöltése közben");
+        }
+
+        private void archivumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMegrendelesArchivum fa = new frmMegrendelesArchivum();
+            fa.ShowDialog();
+        }
+
 
 
 

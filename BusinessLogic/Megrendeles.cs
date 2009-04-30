@@ -266,11 +266,36 @@ namespace BusinessLogic
         {
             get
             {
-                return (_CIKK.MEGNEVEZES);
+                if (_CIKK != null)
+                {
+                    return (_CIKK.MEGNEVEZES);
+                }
+                else
+                {
+                    return ("");
+                }
+                
             }
 
         }
-        
+
+        public string CIKK_MEGYS
+        {
+            get
+            {
+                if (_CIKK != null)
+                {
+                    return (_CIKK.MEGYS_MEGNEVEZES);
+                }
+                else
+                {
+                    return ("");
+                }
+               
+            }
+
+        }
+
         private double _MENNYISEG;
         public double MENNYISEG
         {
