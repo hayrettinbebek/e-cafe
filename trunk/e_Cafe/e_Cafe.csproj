@@ -169,6 +169,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsLeltar.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsMegrendeles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMegrendeles.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Keszlet\frmLeltarIv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1220,6 +1225,17 @@
     <None Include="Resources\Printer-64x64.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="dsMegrendeles.xsc">
+      <DependentUpon>dsMegrendeles.xsd</DependentUpon>
+    </None>
+    <None Include="dsMegrendeles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMegrendeles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsMegrendeles.xss">
+      <DependentUpon>dsMegrendeles.xsd</DependentUpon>
+    </None>
     <None Include="Resources\floppy-icon.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

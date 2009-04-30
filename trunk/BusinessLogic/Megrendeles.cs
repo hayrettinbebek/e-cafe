@@ -222,8 +222,6 @@ namespace BusinessLogic
 
     }
 
- 
-
     public class MegrendelesSor
     {
         #region Properties

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace e_Cafe.SQL {
+namespace e_Cafe {
     
     
     /// <summary>
@@ -21,16 +21,16 @@ namespace e_Cafe.SQL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsPartnerek")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsMegrendeles")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsPartnerek : global::System.Data.DataSet {
+    public partial class dsMegrendeles : global::System.Data.DataSet {
         
-        private PARTNERDataTable tablePARTNER;
+        private MEGRENDELES_FEJDataTable tableMEGRENDELES_FEJ;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public dsPartnerek() {
+        public dsMegrendeles() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -40,7 +40,7 @@ namespace e_Cafe.SQL {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        protected dsPartnerek(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsMegrendeles(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -53,8 +53,8 @@ namespace e_Cafe.SQL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["PARTNER"] != null)) {
-                    base.Tables.Add(new PARTNERDataTable(ds.Tables["PARTNER"]));
+                if ((ds.Tables["MEGRENDELES_FEJ"] != null)) {
+                    base.Tables.Add(new MEGRENDELES_FEJDataTable(ds.Tables["MEGRENDELES_FEJ"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -77,9 +77,9 @@ namespace e_Cafe.SQL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PARTNERDataTable PARTNER {
+        public MEGRENDELES_FEJDataTable MEGRENDELES_FEJ {
             get {
-                return this.tablePARTNER;
+                return this.tableMEGRENDELES_FEJ;
             }
         }
         
@@ -120,7 +120,7 @@ namespace e_Cafe.SQL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override global::System.Data.DataSet Clone() {
-            dsPartnerek cln = ((dsPartnerek)(base.Clone()));
+            dsMegrendeles cln = ((dsMegrendeles)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -142,8 +142,8 @@ namespace e_Cafe.SQL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["PARTNER"] != null)) {
-                    base.Tables.Add(new PARTNERDataTable(ds.Tables["PARTNER"]));
+                if ((ds.Tables["MEGRENDELES_FEJ"] != null)) {
+                    base.Tables.Add(new MEGRENDELES_FEJDataTable(ds.Tables["MEGRENDELES_FEJ"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -175,27 +175,27 @@ namespace e_Cafe.SQL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         internal void InitVars(bool initTable) {
-            this.tablePARTNER = ((PARTNERDataTable)(base.Tables["PARTNER"]));
+            this.tableMEGRENDELES_FEJ = ((MEGRENDELES_FEJDataTable)(base.Tables["MEGRENDELES_FEJ"]));
             if ((initTable == true)) {
-                if ((this.tablePARTNER != null)) {
-                    this.tablePARTNER.InitVars();
+                if ((this.tableMEGRENDELES_FEJ != null)) {
+                    this.tableMEGRENDELES_FEJ.InitVars();
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitClass() {
-            this.DataSetName = "dsPartnerek";
+            this.DataSetName = "dsMegrendeles";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsPartnerek.xsd";
+            this.Namespace = "http://tempuri.org/dsMegrendeles.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePARTNER = new PARTNERDataTable();
-            base.Tables.Add(this.tablePARTNER);
+            this.tableMEGRENDELES_FEJ = new MEGRENDELES_FEJDataTable();
+            base.Tables.Add(this.tableMEGRENDELES_FEJ);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private bool ShouldSerializePARTNER() {
+        private bool ShouldSerializeMEGRENDELES_FEJ() {
             return false;
         }
         
@@ -208,7 +208,7 @@ namespace e_Cafe.SQL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsPartnerek ds = new dsPartnerek();
+            dsMegrendeles ds = new dsMegrendeles();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -252,7 +252,7 @@ namespace e_Cafe.SQL {
             return type;
         }
         
-        public delegate void PARTNERRowChangeEventHandler(object sender, PARTNERRowChangeEvent e);
+        public delegate void MEGRENDELES_FEJRowChangeEventHandler(object sender, MEGRENDELES_FEJRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -260,30 +260,30 @@ namespace e_Cafe.SQL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PARTNERDataTable : global::System.Data.TypedTableBase<PARTNERRow> {
+        public partial class MEGRENDELES_FEJDataTable : global::System.Data.TypedTableBase<MEGRENDELES_FEJRow> {
             
-            private global::System.Data.DataColumn columnPARTNER_ID;
+            private global::System.Data.DataColumn columnMEGRENDELES_FEJ_ID;
             
-            private global::System.Data.DataColumn columnP_TIPUS;
+            private global::System.Data.DataColumn columnDATUM;
+            
+            private global::System.Data.DataColumn columnSZALLITO_ID;
+            
+            private global::System.Data.DataColumn columnSORSZAM;
+            
+            private global::System.Data.DataColumn columnLEZART;
             
             private global::System.Data.DataColumn columnP_NEV;
             
-            private global::System.Data.DataColumn columnP_NEV2;
-            
-            private global::System.Data.DataColumn columnP_NEV3;
-            
-            private global::System.Data.DataColumn columnAKTIV;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public PARTNERDataTable() {
-                this.TableName = "PARTNER";
+            public MEGRENDELES_FEJDataTable() {
+                this.TableName = "MEGRENDELES_FEJ";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal PARTNERDataTable(global::System.Data.DataTable table) {
+            internal MEGRENDELES_FEJDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -299,22 +299,43 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            protected PARTNERDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MEGRENDELES_FEJDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn PARTNER_IDColumn {
+            public global::System.Data.DataColumn MEGRENDELES_FEJ_IDColumn {
                 get {
-                    return this.columnPARTNER_ID;
+                    return this.columnMEGRENDELES_FEJ_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn P_TIPUSColumn {
+            public global::System.Data.DataColumn DATUMColumn {
                 get {
-                    return this.columnP_TIPUS;
+                    return this.columnDATUM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SZALLITO_IDColumn {
+                get {
+                    return this.columnSZALLITO_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn SORSZAMColumn {
+                get {
+                    return this.columnSORSZAM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn LEZARTColumn {
+                get {
+                    return this.columnLEZART;
                 }
             }
             
@@ -322,27 +343,6 @@ namespace e_Cafe.SQL {
             public global::System.Data.DataColumn P_NEVColumn {
                 get {
                     return this.columnP_NEV;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn P_NEV2Column {
-                get {
-                    return this.columnP_NEV2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn P_NEV3Column {
-                get {
-                    return this.columnP_NEV3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn AKTIVColumn {
-                get {
-                    return this.columnAKTIV;
                 }
             }
             
@@ -355,145 +355,143 @@ namespace e_Cafe.SQL {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public PARTNERRow this[int index] {
+            public MEGRENDELES_FEJRow this[int index] {
                 get {
-                    return ((PARTNERRow)(this.Rows[index]));
+                    return ((MEGRENDELES_FEJRow)(this.Rows[index]));
                 }
             }
             
-            public event PARTNERRowChangeEventHandler PARTNERRowChanging;
+            public event MEGRENDELES_FEJRowChangeEventHandler MEGRENDELES_FEJRowChanging;
             
-            public event PARTNERRowChangeEventHandler PARTNERRowChanged;
+            public event MEGRENDELES_FEJRowChangeEventHandler MEGRENDELES_FEJRowChanged;
             
-            public event PARTNERRowChangeEventHandler PARTNERRowDeleting;
+            public event MEGRENDELES_FEJRowChangeEventHandler MEGRENDELES_FEJRowDeleting;
             
-            public event PARTNERRowChangeEventHandler PARTNERRowDeleted;
+            public event MEGRENDELES_FEJRowChangeEventHandler MEGRENDELES_FEJRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void AddPARTNERRow(PARTNERRow row) {
+            public void AddMEGRENDELES_FEJRow(MEGRENDELES_FEJRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public PARTNERRow AddPARTNERRow(string P_TIPUS, string P_NEV, string P_NEV2, string P_NEV3, int AKTIV) {
-                PARTNERRow rowPARTNERRow = ((PARTNERRow)(this.NewRow()));
+            public MEGRENDELES_FEJRow AddMEGRENDELES_FEJRow(System.DateTime DATUM, int SZALLITO_ID, string SORSZAM, int LEZART, string P_NEV) {
+                MEGRENDELES_FEJRow rowMEGRENDELES_FEJRow = ((MEGRENDELES_FEJRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        P_TIPUS,
-                        P_NEV,
-                        P_NEV2,
-                        P_NEV3,
-                        AKTIV};
-                rowPARTNERRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPARTNERRow);
-                return rowPARTNERRow;
+                        DATUM,
+                        SZALLITO_ID,
+                        SORSZAM,
+                        LEZART,
+                        P_NEV};
+                rowMEGRENDELES_FEJRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMEGRENDELES_FEJRow);
+                return rowMEGRENDELES_FEJRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public PARTNERRow FindByPARTNER_ID(int PARTNER_ID) {
-                return ((PARTNERRow)(this.Rows.Find(new object[] {
-                            PARTNER_ID})));
+            public MEGRENDELES_FEJRow FindByMEGRENDELES_FEJ_ID(int MEGRENDELES_FEJ_ID) {
+                return ((MEGRENDELES_FEJRow)(this.Rows.Find(new object[] {
+                            MEGRENDELES_FEJ_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public override global::System.Data.DataTable Clone() {
-                PARTNERDataTable cln = ((PARTNERDataTable)(base.Clone()));
+                MEGRENDELES_FEJDataTable cln = ((MEGRENDELES_FEJDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PARTNERDataTable();
+                return new MEGRENDELES_FEJDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal void InitVars() {
-                this.columnPARTNER_ID = base.Columns["PARTNER_ID"];
-                this.columnP_TIPUS = base.Columns["P_TIPUS"];
+                this.columnMEGRENDELES_FEJ_ID = base.Columns["MEGRENDELES_FEJ_ID"];
+                this.columnDATUM = base.Columns["DATUM"];
+                this.columnSZALLITO_ID = base.Columns["SZALLITO_ID"];
+                this.columnSORSZAM = base.Columns["SORSZAM"];
+                this.columnLEZART = base.Columns["LEZART"];
                 this.columnP_NEV = base.Columns["P_NEV"];
-                this.columnP_NEV2 = base.Columns["P_NEV2"];
-                this.columnP_NEV3 = base.Columns["P_NEV3"];
-                this.columnAKTIV = base.Columns["AKTIV"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitClass() {
-                this.columnPARTNER_ID = new global::System.Data.DataColumn("PARTNER_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPARTNER_ID);
-                this.columnP_TIPUS = new global::System.Data.DataColumn("P_TIPUS", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnP_TIPUS);
+                this.columnMEGRENDELES_FEJ_ID = new global::System.Data.DataColumn("MEGRENDELES_FEJ_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMEGRENDELES_FEJ_ID);
+                this.columnDATUM = new global::System.Data.DataColumn("DATUM", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATUM);
+                this.columnSZALLITO_ID = new global::System.Data.DataColumn("SZALLITO_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSZALLITO_ID);
+                this.columnSORSZAM = new global::System.Data.DataColumn("SORSZAM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSORSZAM);
+                this.columnLEZART = new global::System.Data.DataColumn("LEZART", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLEZART);
                 this.columnP_NEV = new global::System.Data.DataColumn("P_NEV", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnP_NEV);
-                this.columnP_NEV2 = new global::System.Data.DataColumn("P_NEV2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnP_NEV2);
-                this.columnP_NEV3 = new global::System.Data.DataColumn("P_NEV3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnP_NEV3);
-                this.columnAKTIV = new global::System.Data.DataColumn("AKTIV", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAKTIV);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnPARTNER_ID}, true));
-                this.columnPARTNER_ID.AutoIncrement = true;
-                this.columnPARTNER_ID.AutoIncrementSeed = -1;
-                this.columnPARTNER_ID.AutoIncrementStep = -1;
-                this.columnPARTNER_ID.AllowDBNull = false;
-                this.columnPARTNER_ID.ReadOnly = true;
-                this.columnPARTNER_ID.Unique = true;
-                this.columnP_TIPUS.MaxLength = 1;
+                                this.columnMEGRENDELES_FEJ_ID}, true));
+                this.columnMEGRENDELES_FEJ_ID.AutoIncrement = true;
+                this.columnMEGRENDELES_FEJ_ID.AutoIncrementSeed = -1;
+                this.columnMEGRENDELES_FEJ_ID.AutoIncrementStep = -1;
+                this.columnMEGRENDELES_FEJ_ID.AllowDBNull = false;
+                this.columnMEGRENDELES_FEJ_ID.ReadOnly = true;
+                this.columnMEGRENDELES_FEJ_ID.Unique = true;
+                this.columnSORSZAM.MaxLength = 50;
                 this.columnP_NEV.MaxLength = 150;
-                this.columnP_NEV2.MaxLength = 150;
-                this.columnP_NEV3.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public PARTNERRow NewPARTNERRow() {
-                return ((PARTNERRow)(this.NewRow()));
+            public MEGRENDELES_FEJRow NewMEGRENDELES_FEJRow() {
+                return ((MEGRENDELES_FEJRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PARTNERRow(builder);
+                return new MEGRENDELES_FEJRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override global::System.Type GetRowType() {
-                return typeof(PARTNERRow);
+                return typeof(MEGRENDELES_FEJRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PARTNERRowChanged != null)) {
-                    this.PARTNERRowChanged(this, new PARTNERRowChangeEvent(((PARTNERRow)(e.Row)), e.Action));
+                if ((this.MEGRENDELES_FEJRowChanged != null)) {
+                    this.MEGRENDELES_FEJRowChanged(this, new MEGRENDELES_FEJRowChangeEvent(((MEGRENDELES_FEJRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PARTNERRowChanging != null)) {
-                    this.PARTNERRowChanging(this, new PARTNERRowChangeEvent(((PARTNERRow)(e.Row)), e.Action));
+                if ((this.MEGRENDELES_FEJRowChanging != null)) {
+                    this.MEGRENDELES_FEJRowChanging(this, new MEGRENDELES_FEJRowChangeEvent(((MEGRENDELES_FEJRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PARTNERRowDeleted != null)) {
-                    this.PARTNERRowDeleted(this, new PARTNERRowChangeEvent(((PARTNERRow)(e.Row)), e.Action));
+                if ((this.MEGRENDELES_FEJRowDeleted != null)) {
+                    this.MEGRENDELES_FEJRowDeleted(this, new MEGRENDELES_FEJRowChangeEvent(((MEGRENDELES_FEJRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PARTNERRowDeleting != null)) {
-                    this.PARTNERRowDeleting(this, new PARTNERRowChangeEvent(((PARTNERRow)(e.Row)), e.Action));
+                if ((this.MEGRENDELES_FEJRowDeleting != null)) {
+                    this.MEGRENDELES_FEJRowDeleting(this, new MEGRENDELES_FEJRowChangeEvent(((MEGRENDELES_FEJRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void RemovePARTNERRow(PARTNERRow row) {
+            public void RemoveMEGRENDELES_FEJRow(MEGRENDELES_FEJRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -501,7 +499,7 @@ namespace e_Cafe.SQL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsPartnerek ds = new dsPartnerek();
+                dsMegrendeles ds = new dsMegrendeles();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -519,7 +517,7 @@ namespace e_Cafe.SQL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PARTNERDataTable";
+                attribute2.FixedValue = "MEGRENDELES_FEJDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -564,38 +562,83 @@ namespace e_Cafe.SQL {
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public partial class PARTNERRow : global::System.Data.DataRow {
+        public partial class MEGRENDELES_FEJRow : global::System.Data.DataRow {
             
-            private PARTNERDataTable tablePARTNER;
+            private MEGRENDELES_FEJDataTable tableMEGRENDELES_FEJ;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal PARTNERRow(global::System.Data.DataRowBuilder rb) : 
+            internal MEGRENDELES_FEJRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePARTNER = ((PARTNERDataTable)(this.Table));
+                this.tableMEGRENDELES_FEJ = ((MEGRENDELES_FEJDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int PARTNER_ID {
+            public int MEGRENDELES_FEJ_ID {
                 get {
-                    return ((int)(this[this.tablePARTNER.PARTNER_IDColumn]));
+                    return ((int)(this[this.tableMEGRENDELES_FEJ.MEGRENDELES_FEJ_IDColumn]));
                 }
                 set {
-                    this[this.tablePARTNER.PARTNER_IDColumn] = value;
+                    this[this.tableMEGRENDELES_FEJ.MEGRENDELES_FEJ_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string P_TIPUS {
+            public System.DateTime DATUM {
                 get {
                     try {
-                        return ((string)(this[this.tablePARTNER.P_TIPUSColumn]));
+                        return ((global::System.DateTime)(this[this.tableMEGRENDELES_FEJ.DATUMColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'P_TIPUS\' in table \'PARTNER\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DATUM\' in table \'MEGRENDELES_FEJ\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePARTNER.P_TIPUSColumn] = value;
+                    this[this.tableMEGRENDELES_FEJ.DATUMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int SZALLITO_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tableMEGRENDELES_FEJ.SZALLITO_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SZALLITO_ID\' in table \'MEGRENDELES_FEJ\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMEGRENDELES_FEJ.SZALLITO_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string SORSZAM {
+                get {
+                    try {
+                        return ((string)(this[this.tableMEGRENDELES_FEJ.SORSZAMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SORSZAM\' in table \'MEGRENDELES_FEJ\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMEGRENDELES_FEJ.SORSZAMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int LEZART {
+                get {
+                    try {
+                        return ((int)(this[this.tableMEGRENDELES_FEJ.LEZARTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LEZART\' in table \'MEGRENDELES_FEJ\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMEGRENDELES_FEJ.LEZARTColumn] = value;
                 }
             }
             
@@ -603,110 +646,65 @@ namespace e_Cafe.SQL {
             public string P_NEV {
                 get {
                     try {
-                        return ((string)(this[this.tablePARTNER.P_NEVColumn]));
+                        return ((string)(this[this.tableMEGRENDELES_FEJ.P_NEVColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'P_NEV\' in table \'PARTNER\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'P_NEV\' in table \'MEGRENDELES_FEJ\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePARTNER.P_NEVColumn] = value;
+                    this[this.tableMEGRENDELES_FEJ.P_NEVColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string P_NEV2 {
-                get {
-                    try {
-                        return ((string)(this[this.tablePARTNER.P_NEV2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'P_NEV2\' in table \'PARTNER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePARTNER.P_NEV2Column] = value;
-                }
+            public bool IsDATUMNull() {
+                return this.IsNull(this.tableMEGRENDELES_FEJ.DATUMColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public string P_NEV3 {
-                get {
-                    try {
-                        return ((string)(this[this.tablePARTNER.P_NEV3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'P_NEV3\' in table \'PARTNER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePARTNER.P_NEV3Column] = value;
-                }
+            public void SetDATUMNull() {
+                this[this.tableMEGRENDELES_FEJ.DATUMColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int AKTIV {
-                get {
-                    try {
-                        return ((int)(this[this.tablePARTNER.AKTIVColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AKTIV\' in table \'PARTNER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePARTNER.AKTIVColumn] = value;
-                }
+            public bool IsSZALLITO_IDNull() {
+                return this.IsNull(this.tableMEGRENDELES_FEJ.SZALLITO_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsP_TIPUSNull() {
-                return this.IsNull(this.tablePARTNER.P_TIPUSColumn);
+            public void SetSZALLITO_IDNull() {
+                this[this.tableMEGRENDELES_FEJ.SZALLITO_IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetP_TIPUSNull() {
-                this[this.tablePARTNER.P_TIPUSColumn] = global::System.Convert.DBNull;
+            public bool IsSORSZAMNull() {
+                return this.IsNull(this.tableMEGRENDELES_FEJ.SORSZAMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetSORSZAMNull() {
+                this[this.tableMEGRENDELES_FEJ.SORSZAMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsLEZARTNull() {
+                return this.IsNull(this.tableMEGRENDELES_FEJ.LEZARTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetLEZARTNull() {
+                this[this.tableMEGRENDELES_FEJ.LEZARTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bool IsP_NEVNull() {
-                return this.IsNull(this.tablePARTNER.P_NEVColumn);
+                return this.IsNull(this.tableMEGRENDELES_FEJ.P_NEVColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetP_NEVNull() {
-                this[this.tablePARTNER.P_NEVColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsP_NEV2Null() {
-                return this.IsNull(this.tablePARTNER.P_NEV2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetP_NEV2Null() {
-                this[this.tablePARTNER.P_NEV2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsP_NEV3Null() {
-                return this.IsNull(this.tablePARTNER.P_NEV3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetP_NEV3Null() {
-                this[this.tablePARTNER.P_NEV3Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public bool IsAKTIVNull() {
-                return this.IsNull(this.tablePARTNER.AKTIVColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public void SetAKTIVNull() {
-                this[this.tablePARTNER.AKTIVColumn] = global::System.Convert.DBNull;
+                this[this.tableMEGRENDELES_FEJ.P_NEVColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -714,20 +712,20 @@ namespace e_Cafe.SQL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
-        public class PARTNERRowChangeEvent : global::System.EventArgs {
+        public class MEGRENDELES_FEJRowChangeEvent : global::System.EventArgs {
             
-            private PARTNERRow eventRow;
+            private MEGRENDELES_FEJRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public PARTNERRowChangeEvent(PARTNERRow row, global::System.Data.DataRowAction action) {
+            public MEGRENDELES_FEJRowChangeEvent(MEGRENDELES_FEJRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public PARTNERRow Row {
+            public MEGRENDELES_FEJRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -742,7 +740,7 @@ namespace e_Cafe.SQL {
         }
     }
 }
-namespace e_Cafe.SQL.dsPartnerekTableAdapters {
+namespace e_Cafe.dsMegrendelesTableAdapters {
     
     
     /// <summary>
@@ -755,7 +753,7 @@ namespace e_Cafe.SQL.dsPartnerekTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PARTNERTableAdapter : global::System.ComponentModel.Component {
+    public partial class MEGRENDELES_FEJTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -768,7 +766,7 @@ namespace e_Cafe.SQL.dsPartnerekTableAdapters {
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public PARTNERTableAdapter() {
+        public MEGRENDELES_FEJTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -859,62 +857,14 @@ namespace e_Cafe.SQL.dsPartnerekTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "PARTNER";
-            tableMapping.ColumnMappings.Add("PARTNER_ID", "PARTNER_ID");
-            tableMapping.ColumnMappings.Add("P_TIPUS", "P_TIPUS");
+            tableMapping.DataSetTable = "MEGRENDELES_FEJ";
+            tableMapping.ColumnMappings.Add("MEGRENDELES_FEJ_ID", "MEGRENDELES_FEJ_ID");
+            tableMapping.ColumnMappings.Add("DATUM", "DATUM");
+            tableMapping.ColumnMappings.Add("SZALLITO_ID", "SZALLITO_ID");
+            tableMapping.ColumnMappings.Add("SORSZAM", "SORSZAM");
+            tableMapping.ColumnMappings.Add("LEZART", "LEZART");
             tableMapping.ColumnMappings.Add("P_NEV", "P_NEV");
-            tableMapping.ColumnMappings.Add("P_NEV2", "P_NEV2");
-            tableMapping.ColumnMappings.Add("P_NEV3", "P_NEV3");
-            tableMapping.ColumnMappings.Add("AKTIV", "AKTIV");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [PARTNER] WHERE (([PARTNER_ID] = @Original_PARTNER_ID) AND ((@IsNull_P_TIPUS = 1 AND [P_TIPUS] IS NULL) OR ([P_TIPUS] = @Original_P_TIPUS)) AND ((@IsNull_P_NEV = 1 AND [P_NEV] IS NULL) OR ([P_NEV] = @Original_P_NEV)) AND ((@IsNull_P_NEV2 = 1 AND [P_NEV2] IS NULL) OR ([P_NEV2] = @Original_P_NEV2)) AND ((@IsNull_P_NEV3 = 1 AND [P_NEV3] IS NULL) OR ([P_NEV3] = @Original_P_NEV3)) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_TIPUS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_P_TIPUS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_NEV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_P_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_NEV2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_P_NEV2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_NEV3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_P_NEV3", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [PARTNER] ([P_TIPUS], [P_NEV], [P_NEV2], [P_NEV3], [AKTIV]) VALUES (@" +
-                "P_TIPUS, @P_NEV, @P_NEV2, @P_NEV3, @AKTIV);\r\nSELECT PARTNER_ID, P_TIPUS, P_NEV, " +
-                "P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PARTNER_ID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_TIPUS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_NEV2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_NEV3", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [PARTNER] SET [P_TIPUS] = @P_TIPUS, [P_NEV] = @P_NEV, [P_NEV2] = @P_NEV2, [P_NEV3] = @P_NEV3, [AKTIV] = @AKTIV WHERE (([PARTNER_ID] = @Original_PARTNER_ID) AND ((@IsNull_P_TIPUS = 1 AND [P_TIPUS] IS NULL) OR ([P_TIPUS] = @Original_P_TIPUS)) AND ((@IsNull_P_NEV = 1 AND [P_NEV] IS NULL) OR ([P_NEV] = @Original_P_NEV)) AND ((@IsNull_P_NEV2 = 1 AND [P_NEV2] IS NULL) OR ([P_NEV2] = @Original_P_NEV2)) AND ((@IsNull_P_NEV3 = 1 AND [P_NEV3] IS NULL) OR ([P_NEV3] = @Original_P_NEV3)) AND ((@IsNull_AKTIV = 1 AND [AKTIV] IS NULL) OR ([AKTIV] = @Original_AKTIV)));
-SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PARTNER_ID = @PARTNER_ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_TIPUS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_NEV2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@P_NEV3", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PARTNER_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_TIPUS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_P_TIPUS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_TIPUS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_NEV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_P_NEV", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_NEV2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_P_NEV2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_P_NEV3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_P_NEV3", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "P_NEV3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AKTIV", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PARTNER_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PARTNER_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -925,32 +875,22 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV\r\nFROM            " +
-                "PARTNER\r\nWHERE        (AKTIV = @aktiv)";
+            this._commandCollection[0].CommandText = @"SELECT     MEGRENDELES_FEJ.MEGRENDELES_FEJ_ID, MEGRENDELES_FEJ.DATUM, MEGRENDELES_FEJ.SZALLITO_ID, MEGRENDELES_FEJ.SORSZAM, 
+                      MEGRENDELES_FEJ.LEZART, PARTNER.P_NEV
+FROM         MEGRENDELES_FEJ INNER JOIN
+                      PARTNER ON MEGRENDELES_FEJ.SZALLITO_ID = PARTNER.PARTNER_ID
+WHERE     (MEGRENDELES_FEJ.LEZART = 0)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@aktiv", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV\r\nFROM            " +
-                "PARTNER\r\nWHERE        (AKTIV = @aktiv) and P_TIPUS = \'S\'";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@aktiv", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AKTIV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsPartnerek.PARTNERDataTable dataTable, global::System.Nullable<int> aktiv) {
+        public virtual int Fill(dsMegrendeles.MEGRENDELES_FEJDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((aktiv.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aktiv.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -961,286 +901,11 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsPartnerek.PARTNERDataTable GetData(global::System.Nullable<int> aktiv) {
+        public virtual dsMegrendeles.MEGRENDELES_FEJDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((aktiv.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aktiv.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            dsPartnerek.PARTNERDataTable dataTable = new dsPartnerek.PARTNERDataTable();
+            dsMegrendeles.MEGRENDELES_FEJDataTable dataTable = new dsMegrendeles.MEGRENDELES_FEJDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillSzallito(dsPartnerek.PARTNERDataTable dataTable, global::System.Nullable<int> aktiv) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((aktiv.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aktiv.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual dsPartnerek.PARTNERDataTable GetDataSzallito(global::System.Nullable<int> aktiv) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((aktiv.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(aktiv.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            dsPartnerek.PARTNERDataTable dataTable = new dsPartnerek.PARTNERDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsPartnerek.PARTNERDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsPartnerek dataSet) {
-            return this.Adapter.Update(dataSet, "PARTNER");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_PARTNER_ID, string Original_P_TIPUS, string Original_P_NEV, string Original_P_NEV2, string Original_P_NEV3, global::System.Nullable<int> Original_AKTIV) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_PARTNER_ID));
-            if ((Original_P_TIPUS == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_P_TIPUS));
-            }
-            if ((Original_P_NEV == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_P_NEV));
-            }
-            if ((Original_P_NEV2 == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_P_NEV2));
-            }
-            if ((Original_P_NEV3 == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_P_NEV3));
-            }
-            if ((Original_AKTIV.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_AKTIV.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string P_TIPUS, string P_NEV, string P_NEV2, string P_NEV3, global::System.Nullable<int> AKTIV) {
-            if ((P_TIPUS == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(P_TIPUS));
-            }
-            if ((P_NEV == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(P_NEV));
-            }
-            if ((P_NEV2 == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(P_NEV2));
-            }
-            if ((P_NEV3 == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(P_NEV3));
-            }
-            if ((AKTIV.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(AKTIV.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string P_TIPUS, string P_NEV, string P_NEV2, string P_NEV3, global::System.Nullable<int> AKTIV, int Original_PARTNER_ID, string Original_P_TIPUS, string Original_P_NEV, string Original_P_NEV2, string Original_P_NEV3, global::System.Nullable<int> Original_AKTIV, int PARTNER_ID) {
-            if ((P_TIPUS == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(P_TIPUS));
-            }
-            if ((P_NEV == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(P_NEV));
-            }
-            if ((P_NEV2 == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(P_NEV2));
-            }
-            if ((P_NEV3 == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(P_NEV3));
-            }
-            if ((AKTIV.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(AKTIV.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_PARTNER_ID));
-            if ((Original_P_TIPUS == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_P_TIPUS));
-            }
-            if ((Original_P_NEV == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_P_NEV));
-            }
-            if ((Original_P_NEV2 == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_P_NEV2));
-            }
-            if ((Original_P_NEV3 == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_P_NEV3));
-            }
-            if ((Original_AKTIV.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_AKTIV.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(PARTNER_ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string P_TIPUS, string P_NEV, string P_NEV2, string P_NEV3, global::System.Nullable<int> AKTIV, int Original_PARTNER_ID, string Original_P_TIPUS, string Original_P_NEV, string Original_P_NEV2, string Original_P_NEV3, global::System.Nullable<int> Original_AKTIV) {
-            return this.Update(P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV, Original_PARTNER_ID, Original_P_TIPUS, Original_P_NEV, Original_P_NEV2, Original_P_NEV3, Original_AKTIV, Original_PARTNER_ID);
         }
     }
     
@@ -1257,8 +922,6 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         
         private UpdateOrderOption _updateOrder;
         
-        private PARTNERTableAdapter _pARTNERTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1270,19 +933,6 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
-            "", "System.Drawing.Design.UITypeEditor")]
-        public PARTNERTableAdapter PARTNERTableAdapter {
-            get {
-                return this._pARTNERTableAdapter;
-            }
-            set {
-                this._pARTNERTableAdapter = value;
             }
         }
         
@@ -1303,10 +953,6 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._pARTNERTableAdapter != null) 
-                            && (this._pARTNERTableAdapter.Connection != null))) {
-                    return this._pARTNERTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1319,9 +965,6 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._pARTNERTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1330,17 +973,8 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         ///Update rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateUpdatedRows(dsPartnerek dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dsMegrendeles dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pARTNERTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.PARTNER.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._pARTNERTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1348,16 +982,8 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         ///Insert rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateInsertedRows(dsPartnerek dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dsMegrendeles dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pARTNERTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.PARTNER.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._pARTNERTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1365,16 +991,8 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         ///Delete rows in bottom-up order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private int UpdateDeletedRows(dsPartnerek dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dsMegrendeles dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._pARTNERTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.PARTNER.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._pARTNERTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1405,17 +1023,12 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
         ///Update all changes to the dataset.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public virtual int UpdateAll(dsPartnerek dataSet) {
+        public virtual int UpdateAll(dsMegrendeles dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._pARTNERTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._pARTNERTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1449,15 +1062,6 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._pARTNERTableAdapter != null)) {
-                    revertConnections.Add(this._pARTNERTableAdapter, this._pARTNERTableAdapter.Connection);
-                    this._pARTNERTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._pARTNERTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._pARTNERTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._pARTNERTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._pARTNERTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1515,10 +1119,6 @@ SELECT PARTNER_ID, P_TIPUS, P_NEV, P_NEV2, P_NEV3, AKTIV FROM PARTNER WHERE (PAR
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._pARTNERTableAdapter != null)) {
-                    this._pARTNERTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pARTNERTableAdapter]));
-                    this._pARTNERTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
