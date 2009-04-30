@@ -28,30 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nrRot = new System.Windows.Forms.NumericUpDown();
+            this.rb180 = new System.Windows.Forms.RadioButton();
+            this.rb270 = new System.Windows.Forms.RadioButton();
+            this.rb90 = new System.Windows.Forms.RadioButton();
+            this.rb0 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblAktAsztalId = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAsztalSzam = new System.Windows.Forms.TextBox();
-            this.txtAsztalTipus = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbHelyek = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlAsztalHelyek = new System.Windows.Forms.Panel();
-            this.rb0 = new System.Windows.Forms.RadioButton();
-            this.rb90 = new System.Windows.Forms.RadioButton();
-            this.rb270 = new System.Windows.Forms.RadioButton();
-            this.rb180 = new System.Windows.Forms.RadioButton();
-            this.nrRot = new System.Windows.Forms.NumericUpDown();
-            this.lblAktAsztalId = new System.Windows.Forms.Label();
+            this.cmbTipus = new System.Windows.Forms.ComboBox();
+            this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrRot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmbTipus);
             this.panel1.Controls.Add(this.nrRot);
             this.panel1.Controls.Add(this.rb180);
             this.panel1.Controls.Add(this.rb270);
@@ -62,7 +66,6 @@
             this.panel1.Controls.Add(this.lblAktAsztalId);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtAsztalSzam);
-            this.panel1.Controls.Add(this.txtAsztalTipus);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmbHelyek);
             this.panel1.Controls.Add(this.button3);
@@ -73,6 +76,66 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(988, 87);
             this.panel1.TabIndex = 0;
+            // 
+            // nrRot
+            // 
+            this.nrRot.Location = new System.Drawing.Point(766, 34);
+            this.nrRot.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.nrRot.Name = "nrRot";
+            this.nrRot.Size = new System.Drawing.Size(33, 20);
+            this.nrRot.TabIndex = 8;
+            // 
+            // rb180
+            // 
+            this.rb180.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb180.Location = new System.Drawing.Point(853, 27);
+            this.rb180.Name = "rb180";
+            this.rb180.Size = new System.Drawing.Size(40, 22);
+            this.rb180.TabIndex = 7;
+            this.rb180.TabStop = true;
+            this.rb180.Tag = "2";
+            this.rb180.Text = "180";
+            this.rb180.UseVisualStyleBackColor = true;
+            // 
+            // rb270
+            // 
+            this.rb270.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb270.Location = new System.Drawing.Point(893, 44);
+            this.rb270.Name = "rb270";
+            this.rb270.Size = new System.Drawing.Size(40, 22);
+            this.rb270.TabIndex = 7;
+            this.rb270.TabStop = true;
+            this.rb270.Tag = "2";
+            this.rb270.Text = "270";
+            this.rb270.UseVisualStyleBackColor = true;
+            // 
+            // rb90
+            // 
+            this.rb90.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb90.Location = new System.Drawing.Point(894, 9);
+            this.rb90.Name = "rb90";
+            this.rb90.Size = new System.Drawing.Size(40, 22);
+            this.rb90.TabIndex = 7;
+            this.rb90.TabStop = true;
+            this.rb90.Tag = "2";
+            this.rb90.Text = "90";
+            this.rb90.UseVisualStyleBackColor = true;
+            // 
+            // rb0
+            // 
+            this.rb0.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb0.Location = new System.Drawing.Point(934, 27);
+            this.rb0.Name = "rb0";
+            this.rb0.Size = new System.Drawing.Size(42, 22);
+            this.rb0.TabIndex = 7;
+            this.rb0.TabStop = true;
+            this.rb0.Tag = "2";
+            this.rb0.Text = "0";
+            this.rb0.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -93,6 +156,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Asztal szám:";
             // 
+            // lblAktAsztalId
+            // 
+            this.lblAktAsztalId.AutoSize = true;
+            this.lblAktAsztalId.Location = new System.Drawing.Point(23, 67);
+            this.lblAktAsztalId.Name = "lblAktAsztalId";
+            this.lblAktAsztalId.Size = new System.Drawing.Size(63, 13);
+            this.lblAktAsztalId.TabIndex = 5;
+            this.lblAktAsztalId.Text = "Asztal tipus:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -109,14 +181,6 @@
             this.txtAsztalSzam.Size = new System.Drawing.Size(100, 20);
             this.txtAsztalSzam.TabIndex = 4;
             this.txtAsztalSzam.Text = "0";
-            // 
-            // txtAsztalTipus
-            // 
-            this.txtAsztalTipus.Location = new System.Drawing.Point(614, 12);
-            this.txtAsztalTipus.Name = "txtAsztalTipus";
-            this.txtAsztalTipus.Size = new System.Drawing.Size(100, 20);
-            this.txtAsztalTipus.TabIndex = 4;
-            this.txtAsztalTipus.Text = "0";
             // 
             // label1
             // 
@@ -177,69 +241,20 @@
             this.pnlAsztalHelyek.Size = new System.Drawing.Size(988, 493);
             this.pnlAsztalHelyek.TabIndex = 1;
             // 
-            // rb0
+            // cmbTipus
             // 
-            this.rb0.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb0.Location = new System.Drawing.Point(934, 27);
-            this.rb0.Name = "rb0";
-            this.rb0.Size = new System.Drawing.Size(42, 22);
-            this.rb0.TabIndex = 7;
-            this.rb0.TabStop = true;
-            this.rb0.Tag = "2";
-            this.rb0.Text = "0";
-            this.rb0.UseVisualStyleBackColor = true;
+            this.cmbTipus.DataSource = this.dynComboBindingSource;
+            this.cmbTipus.DisplayMember = "DISPLAY_MEMBER";
+            this.cmbTipus.FormattingEnabled = true;
+            this.cmbTipus.Location = new System.Drawing.Point(614, 10);
+            this.cmbTipus.Name = "cmbTipus";
+            this.cmbTipus.Size = new System.Drawing.Size(100, 21);
+            this.cmbTipus.TabIndex = 9;
+            this.cmbTipus.ValueMember = "VALUE_MEMBER";
             // 
-            // rb90
+            // dynComboBindingSource
             // 
-            this.rb90.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb90.Location = new System.Drawing.Point(894, 9);
-            this.rb90.Name = "rb90";
-            this.rb90.Size = new System.Drawing.Size(40, 22);
-            this.rb90.TabIndex = 7;
-            this.rb90.TabStop = true;
-            this.rb90.Tag = "2";
-            this.rb90.Text = "90";
-            this.rb90.UseVisualStyleBackColor = true;
-            // 
-            // rb270
-            // 
-            this.rb270.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb270.Location = new System.Drawing.Point(893, 44);
-            this.rb270.Name = "rb270";
-            this.rb270.Size = new System.Drawing.Size(40, 22);
-            this.rb270.TabIndex = 7;
-            this.rb270.TabStop = true;
-            this.rb270.Tag = "2";
-            this.rb270.Text = "270";
-            this.rb270.UseVisualStyleBackColor = true;
-            // 
-            // rb180
-            // 
-            this.rb180.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb180.Location = new System.Drawing.Point(853, 27);
-            this.rb180.Name = "rb180";
-            this.rb180.Size = new System.Drawing.Size(40, 22);
-            this.rb180.TabIndex = 7;
-            this.rb180.TabStop = true;
-            this.rb180.Tag = "2";
-            this.rb180.Text = "180";
-            this.rb180.UseVisualStyleBackColor = true;
-            // 
-            // nrRot
-            // 
-            this.nrRot.Location = new System.Drawing.Point(766, 34);
-            this.nrRot.Name = "nrRot";
-            this.nrRot.Size = new System.Drawing.Size(33, 20);
-            this.nrRot.TabIndex = 8;
-            // 
-            // lblAktAsztalId
-            // 
-            this.lblAktAsztalId.AutoSize = true;
-            this.lblAktAsztalId.Location = new System.Drawing.Point(23, 67);
-            this.lblAktAsztalId.Name = "lblAktAsztalId";
-            this.lblAktAsztalId.Size = new System.Drawing.Size(63, 13);
-            this.lblAktAsztalId.TabIndex = 5;
-            this.lblAktAsztalId.Text = "Asztal tipus:";
+            this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
             // 
             // AsztalSetup
             // 
@@ -254,6 +269,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrRot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,7 +282,6 @@
         private System.Windows.Forms.ComboBox cmbHelyek;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtAsztalTipus;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAsztalSzam;
         private System.Windows.Forms.Label label4;
@@ -278,5 +293,7 @@
         private System.Windows.Forms.RadioButton rb90;
         private System.Windows.Forms.NumericUpDown nrRot;
         private System.Windows.Forms.Label lblAktAsztalId;
+        private System.Windows.Forms.ComboBox cmbTipus;
+        private System.Windows.Forms.BindingSource dynComboBindingSource;
     }
 }

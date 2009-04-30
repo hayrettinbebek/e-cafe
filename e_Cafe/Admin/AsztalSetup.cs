@@ -57,6 +57,24 @@ namespace e_Cafe
                
             }
 
+            dynComboBindingSource.Add(new DynCombo("11","11"));
+            dynComboBindingSource.Add(new DynCombo("12","12"));
+            dynComboBindingSource.Add(new DynCombo("13","13"));
+            dynComboBindingSource.Add(new DynCombo("14","14"));
+            dynComboBindingSource.Add(new DynCombo("15","15"));
+            dynComboBindingSource.Add(new DynCombo("16","16"));
+            dynComboBindingSource.Add(new DynCombo("17","17"));
+            dynComboBindingSource.Add(new DynCombo("18","18"));
+            dynComboBindingSource.Add(new DynCombo("19","19"));
+            
+            dynComboBindingSource.Add(new DynCombo("20","20"));
+            dynComboBindingSource.Add(new DynCombo("21","21"));
+            dynComboBindingSource.Add(new DynCombo("97","97"));
+            dynComboBindingSource.Add(new DynCombo("98","98"));
+            dynComboBindingSource.Add(new DynCombo("99","99"));
+
+
+
         }
 
         private void cmbHelyek_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,7 +90,8 @@ namespace e_Cafe
         {
             AktAsztal = ((GUI.Asztal_Button)sender).aObj;
             txtAsztalSzam.Text = ((GUI.Asztal_Button)sender).aObj.fASZTAL_SZAM;
-            txtAsztalTipus.Text = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
+            cmbTipus.SelectedValue = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
+            //txtAsztalTipus.Text = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
 
             switch (((GUI.Asztal_Button)sender).aObj.fASZTAL_ROTATE)
             {
@@ -113,7 +132,7 @@ namespace e_Cafe
         {
             nrRot.Value = setRoatation();
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(txtAsztalTipus.Text);
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(cmbTipus.SelectedValue);
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
 
             
@@ -123,7 +142,7 @@ namespace e_Cafe
         {
             nrRot.Value = setRoatation();
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(txtAsztalTipus.Text);
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(cmbTipus.SelectedValue);
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
         }
 
