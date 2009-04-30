@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSyspar));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pARAMNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pARAMVALUESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pARAMVALUEIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pARAMVALUEFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PARAM_VALUE_IMAGE = new System.Windows.Forms.DataGridViewImageColumn();
             this.sYSPARBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsSYSPAR = new e_Cafe.SQL.dsSYSPAR();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -41,11 +46,6 @@
             this.pbPreview = new System.Windows.Forms.PictureBox();
             this.sYSPARTableAdapter = new e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pARAMNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pARAMVALUESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pARAMVALUEIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pARAMVALUEFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PARAM_VALUE_IMAGE = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).BeginInit();
@@ -70,6 +70,39 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(595, 301);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // pARAMNAMEDataGridViewTextBoxColumn
+            // 
+            this.pARAMNAMEDataGridViewTextBoxColumn.DataPropertyName = "PARAM_NAME";
+            this.pARAMNAMEDataGridViewTextBoxColumn.HeaderText = "Paraméter neve";
+            this.pARAMNAMEDataGridViewTextBoxColumn.Name = "pARAMNAMEDataGridViewTextBoxColumn";
+            this.pARAMNAMEDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // pARAMVALUESDataGridViewTextBoxColumn
+            // 
+            this.pARAMVALUESDataGridViewTextBoxColumn.DataPropertyName = "PARAM_VALUE_S";
+            this.pARAMVALUESDataGridViewTextBoxColumn.HeaderText = "Szöveges érték";
+            this.pARAMVALUESDataGridViewTextBoxColumn.Name = "pARAMVALUESDataGridViewTextBoxColumn";
+            this.pARAMVALUESDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // pARAMVALUEIDataGridViewTextBoxColumn
+            // 
+            this.pARAMVALUEIDataGridViewTextBoxColumn.DataPropertyName = "PARAM_VALUE_I";
+            this.pARAMVALUEIDataGridViewTextBoxColumn.HeaderText = "Egész érték";
+            this.pARAMVALUEIDataGridViewTextBoxColumn.Name = "pARAMVALUEIDataGridViewTextBoxColumn";
+            // 
+            // pARAMVALUEFDataGridViewTextBoxColumn
+            // 
+            this.pARAMVALUEFDataGridViewTextBoxColumn.DataPropertyName = "PARAM_VALUE_F";
+            this.pARAMVALUEFDataGridViewTextBoxColumn.HeaderText = "Tizedes érték";
+            this.pARAMVALUEFDataGridViewTextBoxColumn.Name = "pARAMVALUEFDataGridViewTextBoxColumn";
+            // 
+            // PARAM_VALUE_IMAGE
+            // 
+            this.PARAM_VALUE_IMAGE.DataPropertyName = "PARAM_VALUE_IMAGE";
+            this.PARAM_VALUE_IMAGE.HeaderText = "PARAM_VALUE_IMAGE";
+            this.PARAM_VALUE_IMAGE.Name = "PARAM_VALUE_IMAGE";
+            this.PARAM_VALUE_IMAGE.Visible = false;
             // 
             // sYSPARBindingSource
             // 
@@ -98,16 +131,16 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(64, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton1.Text = "Kilépés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.floppy_icon;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(66, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(62, 22);
             this.toolStripButton2.Text = "Mentés";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -147,39 +180,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // pARAMNAMEDataGridViewTextBoxColumn
-            // 
-            this.pARAMNAMEDataGridViewTextBoxColumn.DataPropertyName = "PARAM_NAME";
-            this.pARAMNAMEDataGridViewTextBoxColumn.HeaderText = "Paraméter neve";
-            this.pARAMNAMEDataGridViewTextBoxColumn.Name = "pARAMNAMEDataGridViewTextBoxColumn";
-            this.pARAMNAMEDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // pARAMVALUESDataGridViewTextBoxColumn
-            // 
-            this.pARAMVALUESDataGridViewTextBoxColumn.DataPropertyName = "PARAM_VALUE_S";
-            this.pARAMVALUESDataGridViewTextBoxColumn.HeaderText = "Szöveges érték";
-            this.pARAMVALUESDataGridViewTextBoxColumn.Name = "pARAMVALUESDataGridViewTextBoxColumn";
-            this.pARAMVALUESDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // pARAMVALUEIDataGridViewTextBoxColumn
-            // 
-            this.pARAMVALUEIDataGridViewTextBoxColumn.DataPropertyName = "PARAM_VALUE_I";
-            this.pARAMVALUEIDataGridViewTextBoxColumn.HeaderText = "Egész érték";
-            this.pARAMVALUEIDataGridViewTextBoxColumn.Name = "pARAMVALUEIDataGridViewTextBoxColumn";
-            // 
-            // pARAMVALUEFDataGridViewTextBoxColumn
-            // 
-            this.pARAMVALUEFDataGridViewTextBoxColumn.DataPropertyName = "PARAM_VALUE_F";
-            this.pARAMVALUEFDataGridViewTextBoxColumn.HeaderText = "Tizedes érték";
-            this.pARAMVALUEFDataGridViewTextBoxColumn.Name = "pARAMVALUEFDataGridViewTextBoxColumn";
-            // 
-            // PARAM_VALUE_IMAGE
-            // 
-            this.PARAM_VALUE_IMAGE.DataPropertyName = "PARAM_VALUE_IMAGE";
-            this.PARAM_VALUE_IMAGE.HeaderText = "PARAM_VALUE_IMAGE";
-            this.PARAM_VALUE_IMAGE.Name = "PARAM_VALUE_IMAGE";
-            this.PARAM_VALUE_IMAGE.Visible = false;
             // 
             // frmSyspar
             // 

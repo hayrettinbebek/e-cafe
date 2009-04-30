@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLeltarIv));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvLeltarIv = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.P_CIKK_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.aKTKESZLETMENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leltarSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.gvLeltarIv)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -80,30 +81,26 @@
             this.P_CIKK_NEV.Name = "P_CIKK_NEV";
             this.P_CIKK_NEV.ReadOnly = true;
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
-            this.toolStripButton1.Text = "Mentés";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // aKTKESZLETMENNYDataGridViewTextBoxColumn
             // 
             this.aKTKESZLETMENNYDataGridViewTextBoxColumn.DataPropertyName = "AKT_KESZLET_MENNY";
             this.aKTKESZLETMENNYDataGridViewTextBoxColumn.HeaderText = "Készleten mennyiség";
             this.aKTKESZLETMENNYDataGridViewTextBoxColumn.Name = "aKTKESZLETMENNYDataGridViewTextBoxColumn";
+            this.aKTKESZLETMENNYDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sZAMOLTMENNYISEG1DataGridViewTextBoxColumn
             // 
             this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.DataPropertyName = "SZAMOLT_MENNYISEG1";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(241)))), ((int)(((byte)(253)))));
+            this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.HeaderText = "Számolt mennyiség";
             this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.Name = "sZAMOLTMENNYISEG1DataGridViewTextBoxColumn";
             // 
             // sZAMOLTMENNYISEG2DataGridViewTextBoxColumn
             // 
             this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.DataPropertyName = "SZAMOLT_MENNYISEG2";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(239)))));
+            this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.HeaderText = "Ellenőrző számolás";
             this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.Name = "sZAMOLTMENNYISEG2DataGridViewTextBoxColumn";
             // 
@@ -111,9 +108,18 @@
             // 
             this.leltarSorBindingSource.DataSource = typeof(BusinessLogic.LeltarSor);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::e_Cafe.Properties.Resources.floppy_icon;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton1.Text = "Mentés";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.Printer_24x24;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(95, 22);
@@ -144,10 +150,10 @@
         private System.Windows.Forms.BindingSource leltarSorBindingSource;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn P_CIKK_NEV;
         private System.Windows.Forms.DataGridViewTextBoxColumn aKTKESZLETMENNYDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMOLTMENNYISEG1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMOLTMENNYISEG2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

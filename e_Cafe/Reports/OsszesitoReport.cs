@@ -279,7 +279,8 @@ namespace e_Cafe.Reports
             builder.Table.InnerPenRow = new Pen(Color.Gray, reportDocument.ThinPen.Width);
             
             builder.Table.OuterPenBottom = new Pen(Color.Gray, reportDocument.ThinPen.Width);
-            builder.Table.DetailRowTextStyle.SizeDelta = 10;
+            builder.Table.DetailRowTextStyle.SizeDelta = 8;
+            builder.Table.ShowSummaryRow = true;
             // 210 széles lehet.
             builder.AddColumn(dv.Table.Columns[0], "Cikk", 90, false, false, HorizontalAlignment.Left);
             builder.AddColumn(dv.Table.Columns[1], "Készlet mennyisége", 40, false, false, HorizontalAlignment.Right);

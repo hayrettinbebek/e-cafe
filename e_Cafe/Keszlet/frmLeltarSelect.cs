@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using e_Cafe.Reports;
 
 namespace e_Cafe.Keszlet
 {
@@ -46,6 +47,16 @@ namespace e_Cafe.Keszlet
             this.lELTAR_FEJTableAdapter.Fill(this.dsLeltar.LELTAR_FEJ);
             chkLezartak.MyCheckBox.CheckedChanged += lezartChanged;
 
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (lELTARFEJBindingSource.Current != null)
+            {
+                doPrinting dp = new doPrinting();
+                dp.setReportMaker(new LeltarIv((int)((DataRowView)lELTARFEJBindingSource.Current)["LELTAR_FEJ_ID"]));
+                dp.doPreview();
+            }
         }
     }
 }

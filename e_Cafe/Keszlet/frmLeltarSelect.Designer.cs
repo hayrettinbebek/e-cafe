@@ -31,25 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLeltarSelect));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dsLeltar = new e_Cafe.dsLeltar();
-            this.chkLezartak = new GUI.ToolStripCheckedBox();
-            this.lELTAR_FEJTableAdapter = new e_Cafe.dsLeltarTableAdapters.LELTAR_FEJTableAdapter();
-            this.dsLeltarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lELTARFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKCSOPORTNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAKTARKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lEZARTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lELTARFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsLeltarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsLeltar = new e_Cafe.dsLeltar();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.chkLezartak = new GUI.ToolStripCheckedBox();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.lELTAR_FEJTableAdapter = new e_Cafe.dsLeltarTableAdapters.LELTAR_FEJTableAdapter();
             this.panel1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsLeltar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsLeltarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lELTARFEJBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsLeltarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsLeltar)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,27 +60,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(595, 186);
             this.panel1.TabIndex = 0;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.chkLezartak,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(595, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(84, 22);
-            this.toolStripButton1.Text = "Folytatás...";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // dataGridView1
             // 
@@ -99,41 +78,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(595, 186);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dsLeltar
-            // 
-            this.dsLeltar.DataSetName = "dsLeltar";
-            this.dsLeltar.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // chkLezartak
-            // 
-            // 
-            // chkLezartak
-            // 
-            this.chkLezartak.MyCheckBox.AccessibleName = "chkLezartak";
-            this.chkLezartak.MyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkLezartak.MyCheckBox.Location = new System.Drawing.Point(91, 1);
-            this.chkLezartak.MyCheckBox.Name = "chkLezartak";
-            this.chkLezartak.MyCheckBox.Size = new System.Drawing.Size(77, 22);
-            this.chkLezartak.MyCheckBox.TabIndex = 1;
-            this.chkLezartak.MyCheckBox.Text = "Lezártak is";
-            this.chkLezartak.Name = "chkLezartak";
-            this.chkLezartak.Size = new System.Drawing.Size(77, 22);
-            this.chkLezartak.Text = "Lezártak is";
-            // 
-            // lELTAR_FEJTableAdapter
-            // 
-            this.lELTAR_FEJTableAdapter.ClearBeforeFill = true;
-            // 
-            // dsLeltarBindingSource
-            // 
-            this.dsLeltarBindingSource.DataSource = this.dsLeltar;
-            this.dsLeltarBindingSource.Position = 0;
-            // 
-            // lELTARFEJBindingSource
-            // 
-            this.lELTARFEJBindingSource.DataMember = "LELTAR_FEJ";
-            this.lELTARFEJBindingSource.DataSource = this.dsLeltarBindingSource;
             // 
             // dATUMDataGridViewTextBoxColumn
             // 
@@ -165,13 +109,70 @@
             this.lEZARTDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.lEZARTDataGridViewTextBoxColumn.TrueValue = "1";
             // 
+            // lELTARFEJBindingSource
+            // 
+            this.lELTARFEJBindingSource.DataMember = "LELTAR_FEJ";
+            this.lELTARFEJBindingSource.DataSource = this.dsLeltarBindingSource;
+            // 
+            // dsLeltarBindingSource
+            // 
+            this.dsLeltarBindingSource.DataSource = this.dsLeltar;
+            this.dsLeltarBindingSource.Position = 0;
+            // 
+            // dsLeltar
+            // 
+            this.dsLeltar.DataSetName = "dsLeltar";
+            this.dsLeltar.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.chkLezartak,
+            this.toolStripButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(595, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(84, 22);
+            this.toolStripButton1.Text = "Folytatás...";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // chkLezartak
+            // 
+            // 
+            // chkLezartak
+            // 
+            this.chkLezartak.MyCheckBox.AccessibleName = "chkLezartak";
+            this.chkLezartak.MyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkLezartak.MyCheckBox.Location = new System.Drawing.Point(91, 1);
+            this.chkLezartak.MyCheckBox.Name = "chkLezartak";
+            this.chkLezartak.MyCheckBox.Size = new System.Drawing.Size(77, 22);
+            this.chkLezartak.MyCheckBox.TabIndex = 1;
+            this.chkLezartak.MyCheckBox.Text = "Lezártak is";
+            this.chkLezartak.Name = "chkLezartak";
+            this.chkLezartak.Size = new System.Drawing.Size(77, 22);
+            this.chkLezartak.Text = "Lezártak is";
+            // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.Printer_24x24;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(119, 22);
             this.toolStripButton2.Text = "leltárív nyomtatása";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // lELTAR_FEJTableAdapter
+            // 
+            this.lELTAR_FEJTableAdapter.ClearBeforeFill = true;
             // 
             // frmLeltarSelect
             // 
@@ -184,12 +185,12 @@
             this.Text = "frmLeltarSelect";
             this.Load += new System.EventHandler(this.frmLeltarSelect_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lELTARFEJBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsLeltarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsLeltar)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsLeltar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsLeltarBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lELTARFEJBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

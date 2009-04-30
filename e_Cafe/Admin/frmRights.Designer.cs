@@ -34,22 +34,22 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dsJOG = new e_Cafe.SQL.dsJOG();
-            this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._JOGTableAdapter = new e_Cafe.SQL.dsJOGTableAdapters._JOGTableAdapter();
             this.jOGIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jOGNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsJOG = new e_Cafe.SQL.dsJOG();
+            this._JOGTableAdapter = new e_Cafe.SQL.dsJOGTableAdapters._JOGTableAdapter();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsJOG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsJOG)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(554, 25);
@@ -66,7 +66,7 @@
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.floppy_icon;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(62, 22);
@@ -87,20 +87,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(554, 232);
             this.dataGridView1.TabIndex = 3;
             // 
-            // dsJOG
-            // 
-            this.dsJOG.DataSetName = "dsJOG";
-            this.dsJOG.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // jOGBindingSource
-            // 
-            this.jOGBindingSource.DataMember = "_JOG";
-            this.jOGBindingSource.DataSource = this.dsJOG;
-            // 
-            // _JOGTableAdapter
-            // 
-            this._JOGTableAdapter.ClearBeforeFill = true;
-            // 
             // jOGIDDataGridViewTextBoxColumn
             // 
             this.jOGIDDataGridViewTextBoxColumn.DataPropertyName = "JOG_ID";
@@ -113,6 +99,20 @@
             this.jOGNEVDataGridViewTextBoxColumn.HeaderText = "Leírás";
             this.jOGNEVDataGridViewTextBoxColumn.Name = "jOGNEVDataGridViewTextBoxColumn";
             this.jOGNEVDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // jOGBindingSource
+            // 
+            this.jOGBindingSource.DataMember = "_JOG";
+            this.jOGBindingSource.DataSource = this.dsJOG;
+            // 
+            // dsJOG
+            // 
+            this.dsJOG.DataSetName = "dsJOG";
+            this.dsJOG.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // _JOGTableAdapter
+            // 
+            this._JOGTableAdapter.ClearBeforeFill = true;
             // 
             // frmRights
             // 
@@ -128,8 +128,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsJOG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsJOG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
