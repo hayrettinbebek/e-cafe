@@ -247,12 +247,21 @@ namespace BusinessLogic
         }
         #endregion
 
-        #region BESZERZESI_AR
+        #region BESZERZESI_AR_S
         //megnevezés
-        public string BESZERZESI_AR
+        public string BESZERZESI_AR_S
         {
             get { return (getBeszAr(CIKK_ID)); }
            
+        }
+        #endregion
+
+        #region UTOLOS_BESZ_AR
+        //megnevezés
+        public double UTOLOS_BESZ_AR
+        {
+            get { return (getBeszArNet(CIKK_ID)); }
+
         }
         #endregion
 
@@ -766,6 +775,33 @@ namespace BusinessLogic
             c.Close();
             ret = br.ToString("#.00") + " / " + net.ToString("#.00");
             return (ret);
+
+        }
+
+        public static double getBeszArNet(int pCikk)
+        {
+           
+            double net = 0;
+            double br = 0;
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+            SqlCommand gk = new SqlCommand("select TOP 1 NETTO_ERTEK / MENNY as NETTO_AR, " +
+                                           " BRUTTO_ERTEK / MENNY as BRUTTO_AR " +
+                                           " from bevetel_sor " +
+                                           " where CIKK_ID = " + pCikk.ToString() + " order by SOR_ID DESC ", c);
+            gk.CommandType = CommandType.Text;
+            SqlDataReader rdr = gk.ExecuteReader();
+            while (rdr.Read())
+            {
+                net = (double)rdr["NETTO_AR"];
+                br = (double)rdr["BRUTTO_AR"];
+
+            }
+
+            c.Close();
+            
+            return (net);
 
         }
     }
