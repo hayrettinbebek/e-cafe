@@ -74,6 +74,13 @@ namespace e_Cafe.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap floppy_icon {
+            get {
+                object obj = ResourceManager.GetObject("floppy_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap hatter {
             get {
                 object obj = ResourceManager.GetObject("hatter", resourceCulture);
@@ -84,6 +91,34 @@ namespace e_Cafe.Properties {
         public static System.Drawing.Bitmap oldal1 {
             get {
                 object obj = ResourceManager.GetObject("oldal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap Printer_128x128 {
+            get {
+                object obj = ResourceManager.GetObject("Printer_128x128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap Printer_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("Printer_24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap Printer_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("Printer_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap Printer_64x64 {
+            get {
+                object obj = ResourceManager.GetObject("Printer_64x64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

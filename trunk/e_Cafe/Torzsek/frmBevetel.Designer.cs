@@ -38,8 +38,20 @@
             this.txtSzamlaszam = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sORIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bEVETELFEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CIKK_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bESZARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nETTOERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aFAERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bRUTTOERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAKTARIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fELADVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAKTAR_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bevetelSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -50,22 +62,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtVegAfa = new System.Windows.Forms.TextBox();
             this.txtVegNet = new System.Windows.Forms.TextBox();
-            this.sORIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bEVETELFEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bESZARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nETTOERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aFAERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bRUTTOERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAKTARIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fELADVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bevetelSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bevetelSorBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -169,6 +169,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(890, 143);
             this.dataGridView1.TabIndex = 6;
             // 
+            // sORIDDataGridViewTextBoxColumn
+            // 
+            this.sORIDDataGridViewTextBoxColumn.DataPropertyName = "SOR_ID";
+            this.sORIDDataGridViewTextBoxColumn.HeaderText = "SOR_ID";
+            this.sORIDDataGridViewTextBoxColumn.Name = "sORIDDataGridViewTextBoxColumn";
+            this.sORIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sORIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bEVETELFEJIDDataGridViewTextBoxColumn
+            // 
+            this.bEVETELFEJIDDataGridViewTextBoxColumn.DataPropertyName = "BEVETEL_FEJ_ID";
+            this.bEVETELFEJIDDataGridViewTextBoxColumn.HeaderText = "BEVETEL_FEJ_ID";
+            this.bEVETELFEJIDDataGridViewTextBoxColumn.Name = "bEVETELFEJIDDataGridViewTextBoxColumn";
+            this.bEVETELFEJIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bEVETELFEJIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cIKKIDDataGridViewTextBoxColumn
+            // 
+            this.cIKKIDDataGridViewTextBoxColumn.DataPropertyName = "CIKK_ID";
+            this.cIKKIDDataGridViewTextBoxColumn.HeaderText = "CIKK_ID";
+            this.cIKKIDDataGridViewTextBoxColumn.Name = "cIKKIDDataGridViewTextBoxColumn";
+            this.cIKKIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cIKKIDDataGridViewTextBoxColumn.Visible = false;
+            // 
             // CIKK_NEV
             // 
             this.CIKK_NEV.DataPropertyName = "CIKK_NEV";
@@ -177,12 +201,81 @@
             this.CIKK_NEV.ReadOnly = true;
             this.CIKK_NEV.Width = 65;
             // 
+            // mENNYDataGridViewTextBoxColumn
+            // 
+            this.mENNYDataGridViewTextBoxColumn.DataPropertyName = "MENNY";
+            this.mENNYDataGridViewTextBoxColumn.HeaderText = "Mennyiség";
+            this.mENNYDataGridViewTextBoxColumn.Name = "mENNYDataGridViewTextBoxColumn";
+            this.mENNYDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mENNYDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // bESZARDataGridViewTextBoxColumn
+            // 
+            this.bESZARDataGridViewTextBoxColumn.DataPropertyName = "BESZ_AR";
+            this.bESZARDataGridViewTextBoxColumn.HeaderText = "Besz. egys. ár";
+            this.bESZARDataGridViewTextBoxColumn.Name = "bESZARDataGridViewTextBoxColumn";
+            this.bESZARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bESZARDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // nETTOERTEKDataGridViewTextBoxColumn
+            // 
+            this.nETTOERTEKDataGridViewTextBoxColumn.DataPropertyName = "NETTO_ERTEK";
+            this.nETTOERTEKDataGridViewTextBoxColumn.HeaderText = "Nettó érték";
+            this.nETTOERTEKDataGridViewTextBoxColumn.Name = "nETTOERTEKDataGridViewTextBoxColumn";
+            this.nETTOERTEKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nETTOERTEKDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // aFAERTEKDataGridViewTextBoxColumn
+            // 
+            this.aFAERTEKDataGridViewTextBoxColumn.DataPropertyName = "AFA_ERTEK";
+            this.aFAERTEKDataGridViewTextBoxColumn.HeaderText = "Áfa érték";
+            this.aFAERTEKDataGridViewTextBoxColumn.Name = "aFAERTEKDataGridViewTextBoxColumn";
+            this.aFAERTEKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aFAERTEKDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // bRUTTOERTEKDataGridViewTextBoxColumn
+            // 
+            this.bRUTTOERTEKDataGridViewTextBoxColumn.DataPropertyName = "BRUTTO_ERTEK";
+            this.bRUTTOERTEKDataGridViewTextBoxColumn.HeaderText = "Bruttó érték";
+            this.bRUTTOERTEKDataGridViewTextBoxColumn.Name = "bRUTTOERTEKDataGridViewTextBoxColumn";
+            this.bRUTTOERTEKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bRUTTOERTEKDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // rAKTARIDDataGridViewTextBoxColumn
+            // 
+            this.rAKTARIDDataGridViewTextBoxColumn.DataPropertyName = "RAKTAR_ID";
+            this.rAKTARIDDataGridViewTextBoxColumn.HeaderText = "RAKTAR_ID";
+            this.rAKTARIDDataGridViewTextBoxColumn.Name = "rAKTARIDDataGridViewTextBoxColumn";
+            this.rAKTARIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAKTARIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // fELADVADataGridViewTextBoxColumn
+            // 
+            this.fELADVADataGridViewTextBoxColumn.DataPropertyName = "FELADVA";
+            this.fELADVADataGridViewTextBoxColumn.HeaderText = "FELADVA";
+            this.fELADVADataGridViewTextBoxColumn.Name = "fELADVADataGridViewTextBoxColumn";
+            this.fELADVADataGridViewTextBoxColumn.ReadOnly = true;
+            this.fELADVADataGridViewTextBoxColumn.Visible = false;
+            // 
             // RAKTAR_NEV
             // 
             this.RAKTAR_NEV.DataPropertyName = "RAKTAR_NEV";
             this.RAKTAR_NEV.HeaderText = "Raktár";
             this.RAKTAR_NEV.Name = "RAKTAR_NEV";
             this.RAKTAR_NEV.ReadOnly = true;
+            // 
+            // mEGJEGYZESDataGridViewTextBoxColumn
+            // 
+            this.mEGJEGYZESDataGridViewTextBoxColumn.DataPropertyName = "MEGJEGYZES";
+            this.mEGJEGYZESDataGridViewTextBoxColumn.HeaderText = "Megjegyzés";
+            this.mEGJEGYZESDataGridViewTextBoxColumn.Name = "mEGJEGYZESDataGridViewTextBoxColumn";
+            this.mEGJEGYZESDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mEGJEGYZESDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // bevetelSorBindingSource
+            // 
+            this.bevetelSorBindingSource.DataSource = typeof(BusinessLogic.BevetelSor);
+            this.bevetelSorBindingSource.CurrentChanged += new System.EventHandler(this.bevetelSorBindingSource_CurrentChanged);
             // 
             // button2
             // 
@@ -199,13 +292,16 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(572, 74);
+            this.button3.Image = global::e_Cafe.Properties.Resources.floppy_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(584, 64);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(91, 40);
             this.button3.TabIndex = 8;
             this.button3.Text = "Mentés";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -213,9 +309,9 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(491, 74);
+            this.btnCancel.Location = new System.Drawing.Point(496, 64);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(82, 40);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Mégse";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -289,99 +385,6 @@
             this.txtVegNet.Size = new System.Drawing.Size(100, 13);
             this.txtVegNet.TabIndex = 1;
             // 
-            // sORIDDataGridViewTextBoxColumn
-            // 
-            this.sORIDDataGridViewTextBoxColumn.DataPropertyName = "SOR_ID";
-            this.sORIDDataGridViewTextBoxColumn.HeaderText = "SOR_ID";
-            this.sORIDDataGridViewTextBoxColumn.Name = "sORIDDataGridViewTextBoxColumn";
-            this.sORIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sORIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // bEVETELFEJIDDataGridViewTextBoxColumn
-            // 
-            this.bEVETELFEJIDDataGridViewTextBoxColumn.DataPropertyName = "BEVETEL_FEJ_ID";
-            this.bEVETELFEJIDDataGridViewTextBoxColumn.HeaderText = "BEVETEL_FEJ_ID";
-            this.bEVETELFEJIDDataGridViewTextBoxColumn.Name = "bEVETELFEJIDDataGridViewTextBoxColumn";
-            this.bEVETELFEJIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bEVETELFEJIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cIKKIDDataGridViewTextBoxColumn
-            // 
-            this.cIKKIDDataGridViewTextBoxColumn.DataPropertyName = "CIKK_ID";
-            this.cIKKIDDataGridViewTextBoxColumn.HeaderText = "CIKK_ID";
-            this.cIKKIDDataGridViewTextBoxColumn.Name = "cIKKIDDataGridViewTextBoxColumn";
-            this.cIKKIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cIKKIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mENNYDataGridViewTextBoxColumn
-            // 
-            this.mENNYDataGridViewTextBoxColumn.DataPropertyName = "MENNY";
-            this.mENNYDataGridViewTextBoxColumn.HeaderText = "Mennyiség";
-            this.mENNYDataGridViewTextBoxColumn.Name = "mENNYDataGridViewTextBoxColumn";
-            this.mENNYDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mENNYDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // bESZARDataGridViewTextBoxColumn
-            // 
-            this.bESZARDataGridViewTextBoxColumn.DataPropertyName = "BESZ_AR";
-            this.bESZARDataGridViewTextBoxColumn.HeaderText = "Besz. egys. ár";
-            this.bESZARDataGridViewTextBoxColumn.Name = "bESZARDataGridViewTextBoxColumn";
-            this.bESZARDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bESZARDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // nETTOERTEKDataGridViewTextBoxColumn
-            // 
-            this.nETTOERTEKDataGridViewTextBoxColumn.DataPropertyName = "NETTO_ERTEK";
-            this.nETTOERTEKDataGridViewTextBoxColumn.HeaderText = "Nettó érték";
-            this.nETTOERTEKDataGridViewTextBoxColumn.Name = "nETTOERTEKDataGridViewTextBoxColumn";
-            this.nETTOERTEKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nETTOERTEKDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // aFAERTEKDataGridViewTextBoxColumn
-            // 
-            this.aFAERTEKDataGridViewTextBoxColumn.DataPropertyName = "AFA_ERTEK";
-            this.aFAERTEKDataGridViewTextBoxColumn.HeaderText = "Áfa érték";
-            this.aFAERTEKDataGridViewTextBoxColumn.Name = "aFAERTEKDataGridViewTextBoxColumn";
-            this.aFAERTEKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aFAERTEKDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // bRUTTOERTEKDataGridViewTextBoxColumn
-            // 
-            this.bRUTTOERTEKDataGridViewTextBoxColumn.DataPropertyName = "BRUTTO_ERTEK";
-            this.bRUTTOERTEKDataGridViewTextBoxColumn.HeaderText = "Bruttó érték";
-            this.bRUTTOERTEKDataGridViewTextBoxColumn.Name = "bRUTTOERTEKDataGridViewTextBoxColumn";
-            this.bRUTTOERTEKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bRUTTOERTEKDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // rAKTARIDDataGridViewTextBoxColumn
-            // 
-            this.rAKTARIDDataGridViewTextBoxColumn.DataPropertyName = "RAKTAR_ID";
-            this.rAKTARIDDataGridViewTextBoxColumn.HeaderText = "RAKTAR_ID";
-            this.rAKTARIDDataGridViewTextBoxColumn.Name = "rAKTARIDDataGridViewTextBoxColumn";
-            this.rAKTARIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAKTARIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fELADVADataGridViewTextBoxColumn
-            // 
-            this.fELADVADataGridViewTextBoxColumn.DataPropertyName = "FELADVA";
-            this.fELADVADataGridViewTextBoxColumn.HeaderText = "FELADVA";
-            this.fELADVADataGridViewTextBoxColumn.Name = "fELADVADataGridViewTextBoxColumn";
-            this.fELADVADataGridViewTextBoxColumn.ReadOnly = true;
-            this.fELADVADataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mEGJEGYZESDataGridViewTextBoxColumn
-            // 
-            this.mEGJEGYZESDataGridViewTextBoxColumn.DataPropertyName = "MEGJEGYZES";
-            this.mEGJEGYZESDataGridViewTextBoxColumn.HeaderText = "Megjegyzés";
-            this.mEGJEGYZESDataGridViewTextBoxColumn.Name = "mEGJEGYZESDataGridViewTextBoxColumn";
-            this.mEGJEGYZESDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mEGJEGYZESDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // bevetelSorBindingSource
-            // 
-            this.bevetelSorBindingSource.DataSource = typeof(BusinessLogic.BevetelSor);
-            this.bevetelSorBindingSource.CurrentChanged += new System.EventHandler(this.bevetelSorBindingSource_CurrentChanged);
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(194, 74);
@@ -417,9 +420,9 @@
             this.Text = "Bevételezés";
             this.Load += new System.EventHandler(this.frmBevetel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bevetelSorBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bevetelSorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
