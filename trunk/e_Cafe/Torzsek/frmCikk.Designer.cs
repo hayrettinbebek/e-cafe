@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCikk));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -102,6 +102,7 @@
             this.btnUjTartozek = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tpKiszereles = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -179,7 +180,7 @@
             this.lIT_KISZTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
             this.kESZLET_FEJTableAdapter = new e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter();
             this.kESZLET_SORTableAdapter = new e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter();
-            this.button6 = new System.Windows.Forms.Button();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -223,7 +224,8 @@
             this.toolStripButton2,
             this.toolStripButton1,
             this.btnDelete,
-            this.btnAktiv});
+            this.btnAktiv,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(955, 25);
@@ -933,6 +935,16 @@
             this.tpKiszereles.Text = "Készlet";
             this.tpKiszereles.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::e_Cafe.Properties.Resources.Printer_64x64;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(906, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(35, 35);
+            this.button6.TabIndex = 19;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tabControl2);
@@ -1021,16 +1033,16 @@
             // KESZLET_NYITO
             // 
             this.KESZLET_NYITO.DataPropertyName = "KESZLET_NYITO";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.KESZLET_NYITO.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.KESZLET_NYITO.DefaultCellStyle = dataGridViewCellStyle9;
             this.KESZLET_NYITO.HeaderText = "Napi nyitó készlet";
             this.KESZLET_NYITO.Name = "KESZLET_NYITO";
             // 
             // KESZLET_NAPI
             // 
             this.KESZLET_NAPI.DataPropertyName = "KESZLET_NAPI";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.KESZLET_NAPI.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.KESZLET_NAPI.DefaultCellStyle = dataGridViewCellStyle10;
             this.KESZLET_NAPI.HeaderText = "Készlet változás";
             this.KESZLET_NAPI.Name = "KESZLET_NAPI";
             // 
@@ -1124,8 +1136,8 @@
             // BEVETEL
             // 
             this.BEVETEL.DataPropertyName = "BEVETEL";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(230)))), ((int)(((byte)(196)))));
-            this.BEVETEL.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(230)))), ((int)(((byte)(196)))));
+            this.BEVETEL.DefaultCellStyle = dataGridViewCellStyle11;
             this.BEVETEL.HeaderText = "Készlet nökedés";
             this.BEVETEL.Name = "BEVETEL";
             this.BEVETEL.ReadOnly = true;
@@ -1134,8 +1146,8 @@
             // KIADAS
             // 
             this.KIADAS.DataPropertyName = "KIADAS";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.KIADAS.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.KIADAS.DefaultCellStyle = dataGridViewCellStyle12;
             this.KIADAS.HeaderText = "Csökkenés";
             this.KIADAS.Name = "KIADAS";
             this.KIADAS.ReadOnly = true;
@@ -1617,14 +1629,13 @@
             // 
             this.kESZLET_SORTableAdapter.ClearBeforeFill = true;
             // 
-            // button6
+            // toolStripButton3
             // 
-            this.button6.Location = new System.Drawing.Point(906, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(35, 39);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "nyomtat";
-            this.button6.UseVisualStyleBackColor = true;
+            this.toolStripButton3.Image = global::e_Cafe.Properties.Resources.bundle_24x24x32b;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(75, 22);
+            this.toolStripButton3.Text = "Cikk árak";
             // 
             // frmCikk
             // 
@@ -1839,5 +1850,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }

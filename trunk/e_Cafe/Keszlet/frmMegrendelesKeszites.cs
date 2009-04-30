@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace e_Cafe.Keszlet
     public partial class frmMegrendelesKeszites : Form
     {
         private Megrendeles aktMegr = null;
+        private Cikk_list aktCikkList = null;
 
         public frmMegrendelesKeszites()
         {
@@ -35,6 +37,85 @@ namespace e_Cafe.Keszlet
             {
                 DEFS.SendInfoMessage("Nincs megrendelés kiválasztva!");
                 tabControl1.SelectedTab = tpFej;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tpTetelek;
+        }
+
+        private void mEGRENDELESFEJBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (mEGRENDELESFEJBindingSource.Current != null)
+            {
+                aktMegr = new Megrendeles((int)((DataRowView)mEGRENDELESFEJBindingSource.Current)["MEGRENDELES_FEJ_ID"], new SqlConnection(DEFS.ConSTR));
+                aktCikkList = new Cikk_list(new Partner(aktMegr.SZALLITO_ID, new SqlConnection(DEFS.ConSTR)));
+                cikkBindingSource.Clear();
+                foreach (var c in aktCikkList.lCIKK)
+                {
+                    cikkBindingSource.Add(c);
+                }
+                megrendelesSorBindingSource.Clear();
+                foreach (var m in aktMegr.lMegrendelesSorok)
+                {
+                    megrendelesSorBindingSource.Add(m);
+                }
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSzallito.Checked)
+            {
+                aktCikkList = new Cikk_list(new Partner(aktMegr.SZALLITO_ID, new SqlConnection(DEFS.ConSTR)));
+                cikkBindingSource.Clear();
+                foreach (var c in aktCikkList.lCIKK)
+                {
+                    cikkBindingSource.Add(c);
+                }
+
+            }
+            if (chkMind.Checked)
+            {
+                aktCikkList = new Cikk_list();
+                cikkBindingSource.Clear();
+                foreach (var c in aktCikkList.lCIKK)
+                {
+                    cikkBindingSource.Add(c);
+                }
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            aktMegr = new Megrendeles((int)cmbSzallito.SelectedValue);
+            aktMegr.Save();
+            mEGRENDELES_FEJTableAdapter.Fill(dsMegrendeles.MEGRENDELES_FEJ);
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            aktMegr.addTetel((Cikk)lbCikkek.Items[lbCikkek.SelectedIndex], aktMegr.MEGRENDELES_FEJ_ID);
+            foreach (var m in aktMegr.lMegrendelesSorok)
+            {
+                m.Save();
+            }
+
+            megrendelesSorBindingSource.Clear();
+            foreach (var m in aktMegr.lMegrendelesSorok)
+            {
+                megrendelesSorBindingSource.Add(m);
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            foreach (var m in aktMegr.lMegrendelesSorok)
+            {
+                m.Save();
             }
         }
     }

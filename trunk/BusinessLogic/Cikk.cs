@@ -992,6 +992,33 @@ namespace BusinessLogic
             sc.Close();
         }
 
+        public Cikk_list(Partner p)
+        {
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = sc;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select CIKK_ID from cikk_beszallitok WHERE PARTNER_ID = " + p.PARTNER_ID.ToString();
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                try
+                {
+                    Cikk t = new Cikk((int)rdr["CIKK_ID"], true, new SqlConnection(DEFS.ConSTR));
+                    t.getKeszlet();
+                    lCIKK.Add(t);
+                }
+                catch (Exception e)
+                {
+                    DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                }
+            }
+            rdr.Close();
+            sc.Close();
+        }
+
         public Cikk_list(SqlConnection sc, bool forRendeles)
         {
             sc.Open();
@@ -1139,7 +1166,10 @@ namespace BusinessLogic
             sc.Close();
         }
 
+        
         #endregion
+
+
         public List<Cikk> CikkListByCsoport(int iCsoportId)
         {
             List<Cikk> iTmpRet = new List<Cikk>();
@@ -1168,7 +1198,6 @@ namespace BusinessLogic
             return (iTmpRet);
         }
 
-
         public List<Cikk> CikkListByCsoportTOP(int iCsoportId)
         {
             List<Cikk> iTmpRet = new List<Cikk>();
@@ -1183,9 +1212,6 @@ namespace BusinessLogic
             return (iTmpRet);
         }
 
-        
-        
-        
         public List<Cikk> CikkFilter(string iCikkNev)
         {
             List<Cikk> iTmpRet = new List<Cikk>();
