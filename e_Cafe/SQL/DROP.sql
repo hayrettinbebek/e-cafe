@@ -129,9 +129,15 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[fn_ge
 DROP FUNCTION [dbo].[fn_get_AfaSzaz]
 
 GO
-/****** Object:  StoredProcedure [dbo].[SP_KESZLET_ATVEZET]    Script Date: 02/23/2009 21:40:06 ******/
+/****** Object:  StoredProcedure [dbo].[SP_KESZLET_SELEJT]    Script Date: 02/23/2009 21:40:06 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SP_KESZLET_SELEJT]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[SP_KESZLET_SELEJT]
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[sp_create_leltariv]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_create_leltariv]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_create_leltariv]
 
 GO
 

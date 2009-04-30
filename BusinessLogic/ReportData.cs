@@ -253,5 +253,37 @@ namespace BusinessLogic
             return (dv);
         }
 
+
+        public static DataView getLeltarIv(int _fej)
+        {
+            TemporaryLeltarSorok.FillSorok(_fej);
+
+            DataTable dt = new DataTable("CIKK_LELTAR");
+            
+            dt.Columns.Add("Cikk", typeof(String));
+            dt.Columns.Add("Készlet mennyisége", typeof(double));
+            dt.Columns.Add("Számolt érték", typeof(String));
+            //dt.Columns.Add("Hitelre írt db", typeof(int));
+            //dt.Columns.Add("HItelre írás értéke", typeof(double));
+            //dt.Columns.Add("Kifizetett hitel db", typeof(int));
+            //dt.Columns.Add("Kifizetett hitelek értéke", typeof(double));
+
+
+            foreach (var cc in TemporaryLeltarSorok.LeltarSorok)
+            {
+                
+                dt.Rows.Add(
+                    new Object[] {  ((LeltarSor)cc).P_CIKK_NEV,
+                                    ((LeltarSor)cc).AKT_KESZLET_MENNY, 
+                                    "________________________"
+                                    }
+                    );
+            }
+
+            DataView dv = dt.DefaultView;
+
+            return (dv);
+
+        }
     }
 }

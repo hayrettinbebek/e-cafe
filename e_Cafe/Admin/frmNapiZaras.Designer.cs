@@ -50,8 +50,8 @@
             this.pnlKonzisztencia = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsOsszevontLista = new e_Cafe.dsOsszevontLista();
-            this._JOGTableAdapter = new e_Cafe.dsOsszevontListaTableAdapters._JOGTableAdapter();
+            this.dsOsszevontLista = new e_Cafe.SQL.dsOsszevontLista();
+            this._JOGTableAdapter = new e_Cafe.SQL.dsOsszevontListaTableAdapters._JOGTableAdapter();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).BeginInit();
@@ -305,9 +305,9 @@
         private System.Windows.Forms.Panel pnlNegRaktar;
         private System.Windows.Forms.Panel pnlKonzisztencia;
         private System.Windows.Forms.Button button1;
-        private dsOsszevontLista dsOsszevontLista;
+        private e_Cafe.SQL.dsOsszevontLista dsOsszevontLista;
         private System.Windows.Forms.BindingSource jOGBindingSource;
-        private e_Cafe.dsOsszevontListaTableAdapters._JOGTableAdapter _JOGTableAdapter;
+        private e_Cafe.SQL.dsOsszevontListaTableAdapters._JOGTableAdapter _JOGTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn jOGIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jOGNEVDataGridViewTextBoxColumn;
     }

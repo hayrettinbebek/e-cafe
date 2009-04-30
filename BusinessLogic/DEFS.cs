@@ -381,6 +381,40 @@ namespace BusinessLogic
 
         }
 
+        public static int doCreateLeltarIv(int prakt, int pCikkcsop)
+        {
+            int retval = -1;
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmdKeszlAtvezet = new SqlCommand("sp_create_leltariv", c);
+
+            cmdKeszlAtvezet.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+
+
+            cmdKeszlAtvezet.Parameters.Add("@p_cikkcsop_id", SqlDbType.Int);
+            cmdKeszlAtvezet.Parameters["@p_cikkcsop_id"].Direction = ParameterDirection.Input;
+            cmdKeszlAtvezet.Parameters["@p_cikkcsop_id"].Value = pCikkcsop;
+
+
+            cmdKeszlAtvezet.Parameters.Add("@p_raktar_id", SqlDbType.Int);
+            cmdKeszlAtvezet.Parameters["@p_raktar_id"].Direction = ParameterDirection.Input;
+            cmdKeszlAtvezet.Parameters["@p_raktar_id"].Value = prakt;
+
+
+            cmdKeszlAtvezet.Parameters.Add("@p_leltar_id", SqlDbType.Int);
+            cmdKeszlAtvezet.Parameters["@p_leltar_id"].Direction = ParameterDirection.Output;
+            
+
+            c.Open();
+            cmdKeszlAtvezet.ExecuteNonQuery();
+            retval = (int)cmdKeszlAtvezet.Parameters["@p_leltar_id"].Value;
+            
+            c.Close();
+
+            return (retval);
+
+        }
 
 
     }
