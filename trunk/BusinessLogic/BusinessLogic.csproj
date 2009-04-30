@@ -89,6 +89,7 @@
     <Compile Include="KeszletInfo.cs" />
     <Compile Include="Leltar.cs" />
     <Compile Include="Login.cs" />
+    <Compile Include="Megrendeles.cs" />
     <Compile Include="NapZaras.cs" />
     <Compile Include="P2Type.cs" />
     <Compile Include="Partner.cs" />

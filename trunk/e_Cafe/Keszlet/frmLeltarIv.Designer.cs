@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLeltarIv));
             this.gvLeltarIv = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.P_CIKK_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +41,7 @@
             this.leltarSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.gvLeltarIv)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leltarSorBindingSource)).BeginInit();
@@ -67,7 +69,8 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(751, 25);
@@ -91,16 +94,16 @@
             // sZAMOLTMENNYISEG1DataGridViewTextBoxColumn
             // 
             this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.DataPropertyName = "SZAMOLT_MENNYISEG1";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(241)))), ((int)(((byte)(253)))));
-            this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(241)))), ((int)(((byte)(253)))));
+            this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.HeaderText = "Számolt mennyiség";
             this.sZAMOLTMENNYISEG1DataGridViewTextBoxColumn.Name = "sZAMOLTMENNYISEG1DataGridViewTextBoxColumn";
             // 
             // sZAMOLTMENNYISEG2DataGridViewTextBoxColumn
             // 
             this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.DataPropertyName = "SZAMOLT_MENNYISEG2";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(239)))));
-            this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(199)))), ((int)(((byte)(239)))));
+            this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.HeaderText = "Ellenőrző számolás";
             this.sZAMOLTMENNYISEG2DataGridViewTextBoxColumn.Name = "sZAMOLTMENNYISEG2DataGridViewTextBoxColumn";
             // 
@@ -125,6 +128,15 @@
             this.toolStripButton2.Size = new System.Drawing.Size(95, 22);
             this.toolStripButton2.Text = "ív nyomtatása";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(75, 22);
+            this.toolStripButton3.Text = "Tovább...";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // frmLeltarIv
             // 
@@ -155,5 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn aKTKESZLETMENNYDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMOLTMENNYISEG1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMOLTMENNYISEG2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }

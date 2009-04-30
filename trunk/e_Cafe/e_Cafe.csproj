@@ -187,6 +187,12 @@
     <Compile Include="Keszlet\frmLeltarSelect.Designer.cs">
       <DependentUpon>frmLeltarSelect.cs</DependentUpon>
     </Compile>
+    <Compile Include="Keszlet\frmMegrendelesKeszites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmMegrendelesKeszites.Designer.cs">
+      <DependentUpon>frmMegrendelesKeszites.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL\dsKeszletInfo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -640,6 +646,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmLeltarSelect.resx">
       <DependentUpon>frmLeltarSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmMegrendelesKeszites.resx">
+      <DependentUpon>frmMegrendelesKeszites.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmSelejtez.resx">
       <DependentUpon>frmSelejtez.cs</DependentUpon>

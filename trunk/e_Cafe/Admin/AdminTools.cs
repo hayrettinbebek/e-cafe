@@ -334,6 +334,13 @@ namespace e_Cafe
             ls.Show();
         }
 
+        private void újMegrendelésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMegrendelesKeszites mr = new frmMegrendelesKeszites();
+            mr.MdiParent = this;
+            mr.Show();
+        }
+
 
 
 
