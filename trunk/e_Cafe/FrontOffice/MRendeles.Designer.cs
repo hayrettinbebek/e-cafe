@@ -84,6 +84,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
@@ -255,7 +257,7 @@
             this.flpCikkek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpCikkek.Location = new System.Drawing.Point(25, 60);
             this.flpCikkek.Name = "flpCikkek";
-            this.flpCikkek.Size = new System.Drawing.Size(497, 521);
+            this.flpCikkek.Size = new System.Drawing.Size(497, 520);
             this.flpCikkek.TabIndex = 2;
             this.flpCikkek.Paint += new System.Windows.Forms.PaintEventHandler(this.flpCikkek_Paint);
             // 
@@ -264,14 +266,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(25, 521);
+            this.panel1.Size = new System.Drawing.Size(25, 520);
             this.panel1.TabIndex = 1;
             // 
             // pnlOtherFilter
             // 
-            this.pnlOtherFilter.BackColor = System.Drawing.Color.Transparent;
-            this.pnlOtherFilter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlOtherFilter.BackgroundImage")));
+            this.pnlOtherFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlOtherFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlOtherFilter.Controls.Add(this.panel6);
             this.pnlOtherFilter.Controls.Add(this.panel8);
             this.pnlOtherFilter.Controls.Add(this.panel7);
             this.pnlOtherFilter.Dock = System.Windows.Forms.DockStyle.Top;
@@ -338,14 +340,14 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Controls.Add(this.panel12);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 581);
+            this.panel9.Location = new System.Drawing.Point(0, 580);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(522, 60);
+            this.panel9.Size = new System.Drawing.Size(522, 61);
             this.panel9.TabIndex = 3;
             // 
             // panel10
@@ -353,9 +355,9 @@
             this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.Controls.Add(this.btnNextCikk);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(479, 0);
+            this.panel10.Location = new System.Drawing.Point(492, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(43, 60);
+            this.panel10.Size = new System.Drawing.Size(30, 61);
             this.panel10.TabIndex = 1;
             // 
             // btnNextCikk
@@ -370,7 +372,7 @@
             this.btnNextCikk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNextCikk.Location = new System.Drawing.Point(0, 0);
             this.btnNextCikk.Name = "btnNextCikk";
-            this.btnNextCikk.Size = new System.Drawing.Size(43, 60);
+            this.btnNextCikk.Size = new System.Drawing.Size(30, 61);
             this.btnNextCikk.TabIndex = 5;
             this.btnNextCikk.UseVisualStyleBackColor = false;
             this.btnNextCikk.Click += new System.EventHandler(this.btnNextCikk_Click);
@@ -382,7 +384,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(38, 60);
+            this.panel11.Size = new System.Drawing.Size(25, 61);
             this.panel11.TabIndex = 0;
             // 
             // btnPrevCikk
@@ -397,7 +399,7 @@
             this.btnPrevCikk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrevCikk.Location = new System.Drawing.Point(0, 0);
             this.btnPrevCikk.Name = "btnPrevCikk";
-            this.btnPrevCikk.Size = new System.Drawing.Size(38, 60);
+            this.btnPrevCikk.Size = new System.Drawing.Size(25, 61);
             this.btnPrevCikk.TabIndex = 4;
             this.btnPrevCikk.UseVisualStyleBackColor = false;
             this.btnPrevCikk.Click += new System.EventHandler(this.btnPrevCikk_Click);
@@ -775,6 +777,24 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
             // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(25, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(467, 60);
+            this.panel6.TabIndex = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel12.BackgroundImage")));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(25, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(467, 61);
+            this.panel12.TabIndex = 2;
+            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -867,5 +887,7 @@
         private System.Windows.Forms.Button btnNextCikk;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button btnPrevCikk;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel12;
     }
 }

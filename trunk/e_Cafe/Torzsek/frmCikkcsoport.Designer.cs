@@ -32,27 +32,28 @@ namespace e_Cafe
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aFAKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.aFABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eCAFEDataSetAFA = new e_Cafe.SQL.ECAFEDataSetAFA();
-            this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSet = new e_Cafe.SQL.ECAFEDataSet();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.eCAFEDataSetAFABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aFATableAdapter = new e_Cafe.SQL.ECAFEDataSetAFATableAdapters.AFATableAdapter();
+            this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSet = new e_Cafe.SQL.ECAFEDataSet();
             this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aFAKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NEM_ELADO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -62,7 +63,8 @@ namespace e_Cafe
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn,
             this.cIKKCSOPORTNEVDataGridViewTextBoxColumn,
-            this.aFAKODDataGridViewTextBoxColumn});
+            this.aFAKODDataGridViewTextBoxColumn,
+            this.NEM_ELADO});
             this.dataGridView1.DataSource = this.cIKKCSOPORTBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
@@ -70,32 +72,6 @@ namespace e_Cafe
             this.dataGridView1.Size = new System.Drawing.Size(574, 238);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
-            // 
-            // cIKKCSOPORTIDDataGridViewTextBoxColumn
-            // 
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.DataPropertyName = "CIKKCSOPORT_ID";
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Name = "cIKKCSOPORTIDDataGridViewTextBoxColumn";
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cIKKCSOPORTNEVDataGridViewTextBoxColumn
-            // 
-            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.DataPropertyName = "CIKKCSOPORT_NEV";
-            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.HeaderText = "Megnevezés";
-            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.Name = "cIKKCSOPORTNEVDataGridViewTextBoxColumn";
-            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // aFAKODDataGridViewTextBoxColumn
-            // 
-            this.aFAKODDataGridViewTextBoxColumn.DataPropertyName = "AFA_KOD";
-            this.aFAKODDataGridViewTextBoxColumn.DataSource = this.aFABindingSource;
-            this.aFAKODDataGridViewTextBoxColumn.DisplayMember = "AFA_NEV";
-            this.aFAKODDataGridViewTextBoxColumn.HeaderText = "Áfa kód";
-            this.aFAKODDataGridViewTextBoxColumn.Name = "aFAKODDataGridViewTextBoxColumn";
-            this.aFAKODDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.aFAKODDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.aFAKODDataGridViewTextBoxColumn.ValueMember = "AFA_KOD";
             // 
             // aFABindingSource
             // 
@@ -106,17 +82,6 @@ namespace e_Cafe
             // 
             this.eCAFEDataSetAFA.DataSetName = "ECAFEDataSetAFA";
             this.eCAFEDataSetAFA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cIKKCSOPORTBindingSource
-            // 
-            this.cIKKCSOPORTBindingSource.DataMember = "CIKKCSOPORT";
-            this.cIKKCSOPORTBindingSource.DataSource = this.eCAFEDataSet;
-            this.cIKKCSOPORTBindingSource.DataError += new System.Windows.Forms.BindingManagerDataErrorEventHandler(this.cIKKCSOPORTBindingSource_DataError);
-            // 
-            // eCAFEDataSet
-            // 
-            this.eCAFEDataSet.DataSetName = "ECAFEDataSet";
-            this.eCAFEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // toolStrip1
             // 
@@ -160,9 +125,56 @@ namespace e_Cafe
             // 
             this.aFATableAdapter.ClearBeforeFill = true;
             // 
+            // cIKKCSOPORTBindingSource
+            // 
+            this.cIKKCSOPORTBindingSource.DataMember = "CIKKCSOPORT";
+            this.cIKKCSOPORTBindingSource.DataSource = this.eCAFEDataSet;
+            this.cIKKCSOPORTBindingSource.DataError += new System.Windows.Forms.BindingManagerDataErrorEventHandler(this.cIKKCSOPORTBindingSource_DataError);
+            // 
+            // eCAFEDataSet
+            // 
+            this.eCAFEDataSet.DataSetName = "ECAFEDataSet";
+            this.eCAFEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cIKKCSOPORTTableAdapter
             // 
             this.cIKKCSOPORTTableAdapter.ClearBeforeFill = true;
+            // 
+            // cIKKCSOPORTIDDataGridViewTextBoxColumn
+            // 
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.DataPropertyName = "CIKKCSOPORT_ID";
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Name = "cIKKCSOPORTIDDataGridViewTextBoxColumn";
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cIKKCSOPORTNEVDataGridViewTextBoxColumn
+            // 
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.DataPropertyName = "CIKKCSOPORT_NEV";
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.HeaderText = "Megnevezés";
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.Name = "cIKKCSOPORTNEVDataGridViewTextBoxColumn";
+            this.cIKKCSOPORTNEVDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // aFAKODDataGridViewTextBoxColumn
+            // 
+            this.aFAKODDataGridViewTextBoxColumn.DataPropertyName = "AFA_KOD";
+            this.aFAKODDataGridViewTextBoxColumn.DataSource = this.aFABindingSource;
+            this.aFAKODDataGridViewTextBoxColumn.DisplayMember = "AFA_NEV";
+            this.aFAKODDataGridViewTextBoxColumn.HeaderText = "Áfa kód";
+            this.aFAKODDataGridViewTextBoxColumn.Name = "aFAKODDataGridViewTextBoxColumn";
+            this.aFAKODDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.aFAKODDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.aFAKODDataGridViewTextBoxColumn.ValueMember = "AFA_KOD";
+            // 
+            // NEM_ELADO
+            // 
+            this.NEM_ELADO.DataPropertyName = "NEM_ELADO";
+            this.NEM_ELADO.FalseValue = "0";
+            this.NEM_ELADO.HeaderText = "Alapanyag";
+            this.NEM_ELADO.Name = "NEM_ELADO";
+            this.NEM_ELADO.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NEM_ELADO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.NEM_ELADO.TrueValue = "1";
             // 
             // frmCikkcsoport
             // 
@@ -178,11 +190,11 @@ namespace e_Cafe
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +217,6 @@ namespace e_Cafe
         private System.Windows.Forms.DataGridViewTextBoxColumn cIKKCSOPORTIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIKKCSOPORTNEVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn aFAKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn NEM_ELADO;
     }
 }

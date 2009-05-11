@@ -216,7 +216,7 @@ namespace GUI
             }
             else
             {
-                BackgroundImage = null;
+                BackgroundImage = global::GUI.Properties.Resources.zoldon;
             }
             BackgroundImageLayout = ImageLayout.Stretch;
             BackColor = Color.Transparent;
