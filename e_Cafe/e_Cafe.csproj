@@ -1255,6 +1255,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bundle-24x24x32b.png" />
+    <None Include="SQL\update_029.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
