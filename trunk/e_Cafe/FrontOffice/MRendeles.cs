@@ -314,6 +314,7 @@ namespace e_Cafe
             //Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR),pCikkcsoport, true);
             List<Cikk> lButtons = new List<Cikk>();
             DEFS.log(Level.Debug, "LoadCikkek() "+ pAlcsoportId.ToString() + " Cikkcsoport: " + pCikkcsoport.ToString());
+            Cikkek_needScroll = (flpCikkek.Width / (DEFS.CIKK_BTN_SIZE.Width + 4)) * (flpCikkek.Height / (DEFS.CIKK_BTN_SIZE.Height + 4));
 
             if (pCikkcsoport == -1)
             {
@@ -361,7 +362,7 @@ namespace e_Cafe
             Cikkek_MaxScroll = lButtons.Count;
             
             // lehetséges oszlopok * sorok
-            Cikkek_needScroll = (flpCikkek.Width / (DEFS.CIKK_BTN_SIZE.Width+4)) * (flpCikkek.Height / (DEFS.CIKK_BTN_SIZE.Height+4));
+            
 
 
         }
