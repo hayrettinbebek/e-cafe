@@ -214,5 +214,10 @@ namespace e_Cafe
             cmd.ExecuteNonQuery();
             a.RefreshAsztalok(true);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

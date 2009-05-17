@@ -29,6 +29,10 @@ namespace e_Cafe
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+         //   eCAFEDataSet.AcceptChanges();
+            dataGridView1.EndEdit();
+            cIKKCSOPORTBindingSource.EndEdit();
+            cIKKCSOPORTBindingSource.MoveFirst();
             cIKKCSOPORTTableAdapter.Update(eCAFEDataSet);
         }
 

@@ -138,7 +138,7 @@ namespace BusinessLogic
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "SELECT case when isnull(l.LIT_KISZ_ID,-1) = -1 then c.MEGNEVEZES else l.LIT_KISZ_NEV + ' ' + c.MEGNEVEZES END as MEGNEVEZES "+
-                                " ,count(*) as DB, sum(s.ERTEK) as ERTEK FROM RENDELES_SOR s " +
+                                " ,count(*)*1.0 as DB, sum(s.ERTEK) as ERTEK FROM RENDELES_SOR s " +
                                 " inner join CIKK c on s.CIKK_Id = c.CIKK_ID " +
                                 " left join LIT_KISZ l on s.LIT_KISZ_ID = l.LIT_KISZ_ID " +
                                 " WHERE DELETED = 0 AND isnull(FIZETVE,0) = 0 AND RENDELES_ID =" + this.fRENDELES_ID.ToString() +" " +
