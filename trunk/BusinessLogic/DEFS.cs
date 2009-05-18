@@ -416,7 +416,19 @@ namespace BusinessLogic
 
         }
 
+        public static void doRepairTables()
+        {
+            SqlConnection c = new SqlConnection(ConSTR);
+            SqlCommand cmdNyitNap = new SqlCommand("sp_repair_Tables", c);
+            cmdNyitNap.CommandType = System.Data.CommandType.StoredProcedure;
 
+            c.Open();
+            cmdNyitNap.ExecuteNonQuery();
+
+            c.Close();
+
+
+        }
     }
 
     public enum Fizmond : int

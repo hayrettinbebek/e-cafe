@@ -793,6 +793,11 @@ namespace e_Cafe
 
         }
 
+        private void MRendeles_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DEFS.doRepairTables();
+        }
+
 
 
 
