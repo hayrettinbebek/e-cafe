@@ -42,11 +42,13 @@
             this.flpCikkek = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOtherFilter = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnAlcsopNext = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnAlcsopPrev = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnNextCikk = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -84,8 +86,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
@@ -283,6 +283,15 @@
             this.pnlOtherFilter.TabIndex = 0;
             this.pnlOtherFilter.Visible = false;
             // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(25, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(467, 60);
+            this.panel6.TabIndex = 2;
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
@@ -349,6 +358,15 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(522, 61);
             this.panel9.TabIndex = 3;
+            // 
+            // panel12
+            // 
+            this.panel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel12.BackgroundImage")));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(25, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(467, 61);
+            this.panel12.TabIndex = 2;
             // 
             // panel10
             // 
@@ -777,24 +795,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
             // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(25, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(467, 60);
-            this.panel6.TabIndex = 2;
-            // 
-            // panel12
-            // 
-            this.panel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel12.BackgroundImage")));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(25, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(467, 61);
-            this.panel12.TabIndex = 2;
-            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -811,6 +811,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MRendeles_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MRendeles_FormClosed);
             this.pnlRendeles.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).EndInit();
             this.panel3.ResumeLayout(false);

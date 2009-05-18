@@ -461,4 +461,34 @@ namespace BusinessLogic
 
 
     }
+
+    public class SzamlaList
+    {
+        private List<Szamla> lSzamlaList = new List<Szamla>();
+
+        public SzamlaList()
+        {
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+            SqlCommand cmd = new SqlCommand("select SZAMLA_FEJ_ID from szamla_fej",sc);
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                lSzamlaList.Add(new Szamla((int)rdr["SZAMLA_FEJ_ID"]));
+
+            }
+            rdr.Close();
+
+
+            rdr.Close();
+            sc.Close();
+
+
+        }
+
+        public List<Szamla> getList()
+        {
+            return lSzamlaList;
+        }
+    }
 }
