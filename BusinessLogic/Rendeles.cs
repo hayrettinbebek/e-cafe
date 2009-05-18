@@ -149,7 +149,7 @@ namespace BusinessLogic
             {
 
 
-                tmpMod.Rows.Add(new Row(new Cell[] {new Cell((double)rdr["DB"]),
+                tmpMod.Rows.Add(new Row(new Cell[] {new Cell((decimal)rdr["DB"]),
 													new Cell((string)rdr["MEGNEVEZES"]),
 													new Cell((double)rdr["ERTEK"]),
 													}));
