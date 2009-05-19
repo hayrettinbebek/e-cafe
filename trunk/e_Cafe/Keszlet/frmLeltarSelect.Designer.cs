@@ -38,12 +38,12 @@
             this.lEZARTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lELTARFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsLeltarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsLeltar = new e_Cafe.dsLeltar();
+            this.dsLeltar = new e_Cafe.SQL.dsLeltar();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.chkLezartak = new GUI.ToolStripCheckedBox();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.lELTAR_FEJTableAdapter = new e_Cafe.dsLeltarTableAdapters.LELTAR_FEJTableAdapter();
+            this.lELTAR_FEJTableAdapter = new e_Cafe.SQL.dsLeltarTableAdapters.LELTAR_FEJTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lELTARFEJBindingSource)).BeginInit();
@@ -200,11 +200,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private dsLeltar dsLeltar;
+        private e_Cafe.SQL.dsLeltar dsLeltar;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private GUI.ToolStripCheckedBox chkLezartak;
-        private e_Cafe.dsLeltarTableAdapters.LELTAR_FEJTableAdapter lELTAR_FEJTableAdapter;
+        private e_Cafe.SQL.dsLeltarTableAdapters.LELTAR_FEJTableAdapter lELTAR_FEJTableAdapter;
         private System.Windows.Forms.BindingSource dsLeltarBindingSource;
         private System.Windows.Forms.BindingSource lELTARFEJBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATUMDataGridViewTextBoxColumn;

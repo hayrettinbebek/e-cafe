@@ -165,17 +165,17 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
-    <Compile Include="deSelejtezInfo.Designer.cs">
+    <Compile Include="SQL\deSelejtezInfo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsLeltar.Designer.cs">
+    <Compile Include="SQL\dsLeltar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsLeltar.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsMegrendeles.Designer.cs">
+    <Compile Include="SQL\dsMegrendeles.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMegrendeles.xsd</DependentUpon>
@@ -1158,15 +1158,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsLeltar.xsc">
+    <None Include="SQL\dsLeltar.xsc">
       <DependentUpon>dsLeltar.xsd</DependentUpon>
     </None>
-    <None Include="dsLeltar.xsd">
+    <None Include="SQL\dsLeltar.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsLeltar.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsLeltar.xss">
+    <None Include="SQL\dsLeltar.xss">
       <DependentUpon>dsLeltar.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.LeltarSor.datasource" />
@@ -1255,30 +1255,30 @@
     <None Include="Resources\Printer-64x64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsMegrendeles.xsc">
+    <None Include="SQL\dsMegrendeles.xsc">
       <DependentUpon>dsMegrendeles.xsd</DependentUpon>
     </None>
-    <None Include="dsMegrendeles.xsd">
+    <None Include="SQL\dsMegrendeles.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsMegrendeles.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsMegrendeles.xss">
+    <None Include="SQL\dsMegrendeles.xss">
       <DependentUpon>dsMegrendeles.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.MegrendelesSor.datasource" />
     <None Include="Resources\floppy-icon.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="deSelejtezInfo.xsc">
+    <None Include="SQL\deSelejtezInfo.xsc">
       <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
     </None>
-    <None Include="deSelejtezInfo.xsd">
+    <None Include="SQL\deSelejtezInfo.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>deSelejtezInfo.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="deSelejtezInfo.xss">
+    <None Include="SQL\deSelejtezInfo.xss">
       <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.Szamla.datasource" />

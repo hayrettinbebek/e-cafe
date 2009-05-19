@@ -55,7 +55,7 @@ namespace e_Cafe
             catch (Exception e)
             {
                 ret = false;
-                DEFS.SendValidatingMessage("Mennyigég", txtMenny.Text);
+                DEFS.SendValidatingMessage("Mennyigég", txtMenny.Text+" "+e.Message);
             }
             try
             {
