@@ -34,7 +34,7 @@
             this.mENNYISEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SELEJTEZESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deSelejtezInfo = new e_Cafe.deSelejtezInfo();
+            this.deSelejtezInfo = new e_Cafe.SQL.deSelejtezInfo();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.SELEJTEZESTableAdapter = new e_Cafe.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter();
+            this.SELEJTEZESTableAdapter = new e_Cafe.SQL.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SELEJTEZESBindingSource)).BeginInit();
@@ -200,9 +200,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private deSelejtezInfo deSelejtezInfo;
+        private e_Cafe.SQL.deSelejtezInfo deSelejtezInfo;
         private System.Windows.Forms.BindingSource SELEJTEZESBindingSource;
-        private e_Cafe.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter SELEJTEZESTableAdapter;
+        private e_Cafe.SQL.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter SELEJTEZESTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn tYPEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cOUNTERDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATUMDataGridViewTextBoxColumn;

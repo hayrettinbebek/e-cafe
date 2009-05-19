@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mEGRENDELESFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsMegrendeles = new e_Cafe.dsMegrendeles();
-            this.mEGRENDELES_FEJTableAdapter = new e_Cafe.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
+            this.dsMegrendeles = new e_Cafe.SQL.dsMegrendeles();
+            this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.mEGRENDELESFEJMEGRENDELESSORBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mEGRENDELES_SORTableAdapter = new e_Cafe.dsMegrendelesTableAdapters.MEGRENDELES_SORTableAdapter();
+            this.mEGRENDELES_SORTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_SORTableAdapter();
             this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sORSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -181,12 +181,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private dsMegrendeles dsMegrendeles;
+        private e_Cafe.SQL.dsMegrendeles dsMegrendeles;
         private System.Windows.Forms.BindingSource mEGRENDELESFEJBindingSource;
-        private e_Cafe.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter mEGRENDELES_FEJTableAdapter;
+        private e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter mEGRENDELES_FEJTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource mEGRENDELESFEJMEGRENDELESSORBindingSource;
-        private e_Cafe.dsMegrendelesTableAdapters.MEGRENDELES_SORTableAdapter mEGRENDELES_SORTableAdapter;
+        private e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_SORTableAdapter mEGRENDELES_SORTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATUMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pNEVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sORSZAMDataGridViewTextBoxColumn;

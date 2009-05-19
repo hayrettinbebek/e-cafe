@@ -102,6 +102,7 @@ namespace e_Cafe.Keszlet
             catch (Exception x)
             {
                 ok = false;
+                DEFS.DebugLog(x.StackTrace);
             }
 
             if (menny == 0) { ok = false; }

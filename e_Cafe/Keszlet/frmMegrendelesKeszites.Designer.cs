@@ -47,7 +47,7 @@
             this.sZALLITOIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lEZARTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGRENDELESFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsMegrendeles = new e_Cafe.dsMegrendeles();
+            this.dsMegrendeles = new e_Cafe.SQL.dsMegrendeles();
             this.tpTetelek = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chkMind = new System.Windows.Forms.RadioButton();
@@ -65,7 +65,7 @@
             this.cIKKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.megrendelesSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.mEGRENDELES_FEJTableAdapter = new e_Cafe.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
+            this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
             this.pARTNERTableAdapter = new e_Cafe.SQL.dsPartnerekTableAdapters.PARTNERTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -511,9 +511,9 @@
         private System.Windows.Forms.TabPage tpFej;
         private System.Windows.Forms.TabPage tpTetelek;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private dsMegrendeles dsMegrendeles;
+        private e_Cafe.SQL.dsMegrendeles dsMegrendeles;
         private System.Windows.Forms.BindingSource mEGRENDELESFEJBindingSource;
-        private e_Cafe.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter mEGRENDELES_FEJTableAdapter;
+        private e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter mEGRENDELES_FEJTableAdapter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATUMDataGridViewTextBoxColumn;
