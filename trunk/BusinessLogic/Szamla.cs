@@ -162,11 +162,11 @@ namespace BusinessLogic
 
             if (t.RENDELSOR._LitKiszId > 0)
                 {
-                    nev = t.RENDELSOR._Cikk.KISZ_MEGN +" " + t.RENDELSOR._Cikk.MEGNEVEZES;
+                    nev = t.CIKK.KISZ_MEGN + " " + t.CIKK.MEGNEVEZES;
                 }
                 else
                 {
-                    nev = t.RENDELSOR._Cikk.MEGNEVEZES;
+                    nev = t.CIKK.MEGNEVEZES;
                 }
 
 

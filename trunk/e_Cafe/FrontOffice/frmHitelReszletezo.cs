@@ -34,6 +34,11 @@ namespace e_Cafe.FrontOffice
 
         private void frmHitelReszletezo_Load(object sender, EventArgs e)
         {
+            refreshList();
+
+        }
+        private void refreshList()
+        {
             _aktPH = new PartnerHitel(pPartner);
             tblHitelek.ColumnModel = _aktPH.getColumnModel();
             tblHitelek.HeaderRenderer = new GradientHeaderRenderer();
@@ -42,28 +47,35 @@ namespace e_Cafe.FrontOffice
             tblHitelek.TableModel.RowHeight = 40;
 
             rbReszletek.Checked = true;
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            int szamla_fej_id = DEFS.GenerateSzamlaFej(pPartner, -101, (int)Fizmond.Keszpenz);
-            
-            if (szamla_fej_id != -1)
+            if (tblHitelek.SelectedItems.Count() == 0)
             {
-                foreach (var r in tblHitelek.SelectedItems)
+                DEFS.SendInfoMessage("Nincs fizetendő kiválasztva!");
+
+            }
+            else
+            {
+                int szamla_fej_id = DEFS.GenerateSzamlaFej(pPartner, -101, (int)Fizmond.Keszpenz);
+
+                if (szamla_fej_id != -1)
                 {
-                    DEFS.AddSzlaTetel(szamla_fej_id, ((HitelCell)r.Cells[0]).hSor._SOR_ID);
-                    ((HitelCell)r.Cells[0]).hSor.SetFizetve();
+                    foreach (var r in tblHitelek.SelectedItems)
+                    {
+                        DEFS.AddSzlaTetel(szamla_fej_id, ((HitelCell)r.Cells[0]).hSor._SOR_ID);
+                        ((HitelCell)r.Cells[0]).hSor.SetFizetve();
+                    }
+
+                    doPrinting dp = new doPrinting();
+                    dp.setReportMaker(new BlokkReport(szamla_fej_id));
+                    dp.doPreview();
+
+                    DEFS.DebugLog("Hitelek fizetve");
+
                 }
-
-                doPrinting dp = new doPrinting();
-                dp.setReportMaker(new BlokkReport(szamla_fej_id));
-                dp.doPreview();
-
-                DEFS.DebugLog("Hitelek fizetve");
-
+                refreshList();
             }
         }
 

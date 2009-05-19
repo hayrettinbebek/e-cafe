@@ -357,6 +357,12 @@ namespace e_Cafe
             fa.ShowDialog();
         }
 
+        private void selejtezésekVisszanézéseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSelejtezesInfo si = new frmSelejtezesInfo();
+            si.ShowDialog();
+        }
+
 
 
 

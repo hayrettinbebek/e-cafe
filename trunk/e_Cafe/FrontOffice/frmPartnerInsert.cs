@@ -24,15 +24,30 @@ namespace e_Cafe
         {
             partner_id = pId;
             InitializeComponent();
-            if (pId == -1)
+            loadPartner();
+
+            dynComboBindingSource.Add(new DynCombo("Vevő", "V"));
+            dynComboBindingSource.Add(new DynCombo("Törzsvendég", "T"));
+            dynComboBindingSource.Add(new DynCombo("Dolgozó", "D"));
+
+            NemSource.Add(new DynCombo("Férfi", "F"));
+            NemSource.Add(new DynCombo("Nő", "N"));
+            //keyb21.txtRet.Visible = false;
+            
+        }
+
+        private void loadPartner()
+        {
+            vevoBindingSource.Clear();
+            if (partner_id == -1)
             {
                 vevoBindingSource.Add(new Vevo());
-                
+
             }
             else
             {
-                v = new Vevo(pId,new SqlConnection(DEFS.ConSTR));
-               
+                v = new Vevo(partner_id, new SqlConnection(DEFS.ConSTR));
+
                 vevoBindingSource.Add(v);
                 if (v.PartnerNormalCim().Count > 0)
                 {
@@ -40,7 +55,7 @@ namespace e_Cafe
                 }
                 else
                 {
-                    Partner_cim pc = new Partner_cim(pId);
+                    Partner_cim pc = new Partner_cim(partner_id);
                     pc.CIM_TIPUS = 1;
                     v.lCimek.Add(pc);
                     partnercimBindingSource.Add(pc);
@@ -51,22 +66,13 @@ namespace e_Cafe
                 }
                 else
                 {
-                    Partner_cim pc2 = new Partner_cim(pId);
+                    Partner_cim pc2 = new Partner_cim(partner_id);
                     pc2.CIM_TIPUS = 2;
                     v.lCimek.Add(pc2);
                     partnercimBindingSource1.Add(pc2);
                 }
-                
+
             }
-
-            dynComboBindingSource.Add(new DynCombo("Vevő", "V"));
-            dynComboBindingSource.Add(new DynCombo("Törzsvendég", "T"));
-            dynComboBindingSource.Add(new DynCombo("Dolgozó", "D"));
-
-            NemSource.Add(new DynCombo("Férfi", "F"));
-            NemSource.Add(new DynCombo("Nő", "N"));
-            //keyb21.txtRet.Visible = false;
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -125,6 +131,8 @@ namespace e_Cafe
             frmHitelReszletezo hr = new frmHitelReszletezo();
             hr.pPartner = partner_id;
             hr.ShowDialog();
+
+            loadPartner();
 
         }
     }

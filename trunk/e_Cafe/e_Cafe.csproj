@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -83,6 +83,7 @@
     <Reference Include="Microsoft.SqlServer.SmoEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -164,6 +165,11 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
+    <Compile Include="deSelejtezInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsLeltar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -203,6 +209,12 @@
     </Compile>
     <Compile Include="Keszlet\frmMegrendelesKeszites.Designer.cs">
       <DependentUpon>frmMegrendelesKeszites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keszlet\frmSelejtezesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmSelejtezesInfo.Designer.cs">
+      <DependentUpon>frmSelejtezesInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL\dsKeszletInfo.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -671,6 +683,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmSelejtez.resx">
       <DependentUpon>frmSelejtez.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmSelejtezesInfo.resx">
+      <DependentUpon>frmSelejtezesInfo.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PartnerSelector.resx">
@@ -1254,6 +1270,17 @@
     <None Include="Resources\floppy-icon.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="deSelejtezInfo.xsc">
+      <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
+    </None>
+    <None Include="deSelejtezInfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>deSelejtezInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="deSelejtezInfo.xss">
+      <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\BusinessLogic.Szamla.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.Szamla_tetel.datasource" />
     <None Include="Resources\bundle-24x24x32b.png" />
