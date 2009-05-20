@@ -96,6 +96,7 @@ namespace e_Cafe.Torzsek
             catch (Exception x)
             {
                 DEFS.SendValidatingMessage("Mennyiség", "Hibás érték");
+                DEFS.ExLog(x.Message + "-->" + x.StackTrace);
                 ok = false;
             }
 

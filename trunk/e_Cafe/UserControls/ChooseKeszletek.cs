@@ -20,7 +20,7 @@ namespace e_Cafe
         ColumnModel _ColumnModel;
         List<CikkKeszlet> lKESZLET;
 
-        DateTime t1; DateTime t2;
+        //DateTime t1; DateTime t2;
 
         public int retRaktID;
         public double retMenny;

@@ -75,6 +75,7 @@ namespace BusinessLogic
                 catch (Exception e)
                 {
                     DEFS.log(Level.Exception, "Számla fej sikertelen betöltés, <null> érték az adatbázisban");
+                    DEFS.ExLog(e.Message + "--->" + e.StackTrace);
                 }
 
 
@@ -338,6 +339,7 @@ namespace BusinessLogic
                 catch (Exception e)
                 {
                     DEFS.log(Level.Exception, "Számla tétel sikertelen betöltés, <null> érték az adatbázisban");
+                    DEFS.ExLog(e.Message + "--->" + e.StackTrace);
                 }
                 
             }
