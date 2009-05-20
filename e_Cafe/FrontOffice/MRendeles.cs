@@ -253,7 +253,7 @@ namespace e_Cafe
             }
 
             resetCounter();
-            bool Call;
+           
             LastCikkcsopMenu = sender;
             LastOtherFilterMenu = null;
 
@@ -262,7 +262,7 @@ namespace e_Cafe
             if (otf.lOTF.Count > 0)
             {
                 pnlOtherFilter.Visible = true;
-                Call = false;
+                
 
                 TableLayoutPanel tlpOTFButtons = new TableLayoutPanel();
 

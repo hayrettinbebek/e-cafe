@@ -66,7 +66,7 @@ namespace e_Cafe.Admin
                 case 2:
                     {
                         #region nyitott rendelések ellenőrzése
-                        if (true)
+                        if (DEFS.checkNyitottRendeles())
                         {
                             pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
                         }
@@ -83,7 +83,7 @@ namespace e_Cafe.Admin
                 case 3:
                     {
                         #region tartozások ellenőrzése
-                        if (true)
+                        if (DEFS.checkTartozasok())
                         {
                             pnlNyitTartozas.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
                         }
@@ -100,7 +100,7 @@ namespace e_Cafe.Admin
                 case 4:
                     {
                         #region negatív raktárkészlet
-                        if (true)
+                        if (DEFS.checkNegativKeszlet())
                         {
                             pnlNegRaktar.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
                         }
@@ -117,7 +117,7 @@ namespace e_Cafe.Admin
                 case 5:
                     {
                         #region adatbázis konzisztencia
-                        if (true)
+                        if (DEFS.checkDatabaseKonsist())
                         {
                             pnlKonzisztencia.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
                         }

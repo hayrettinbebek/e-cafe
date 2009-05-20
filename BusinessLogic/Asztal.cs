@@ -249,7 +249,7 @@ namespace BusinessLogic
             catch (Exception e)
             {
                 sc.Close();
-                //string s = "Hiba az asztal pozició mentése közben!";
+                DEFS.ExLog(e.Message + "--->" + e.StackTrace);
                 return false;
                 
             }

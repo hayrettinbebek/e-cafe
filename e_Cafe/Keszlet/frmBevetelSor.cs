@@ -56,6 +56,7 @@ namespace e_Cafe
             {
                 ret = false;
                 DEFS.SendValidatingMessage("Mennyigég", txtMenny.Text+" "+e.Message);
+                DEFS.ExLog(e.Message + "-->" + e.StackTrace);
             }
             try
             {
@@ -65,6 +66,7 @@ namespace e_Cafe
             {
                 ret = false;
                 DEFS.SendValidatingMessage("Mennyigég", txtEgys.Text);
+                DEFS.ExLog(e.Message +"-->" +e.StackTrace);
             }
 
 

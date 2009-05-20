@@ -405,7 +405,6 @@ namespace BusinessLogic
 
         #region CIKK_NEV
         //Szállítólevél száma
-        private string _CIKK_NEV;
         public string CIKK_NEV
         {
             get
@@ -479,7 +478,6 @@ namespace BusinessLogic
 
         #region RAKTAR_NEV
         //Szállítólevél száma
-        private string _RAKTAR_NEV;
         public string RAKTAR_NEV
         {
             get {

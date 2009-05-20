@@ -429,6 +429,26 @@ namespace BusinessLogic
 
 
         }
+
+        #region NapiZaras Check
+        public static bool checkTartozasok()
+        {
+            return true;
+        }
+        public static bool checkNegativKeszlet()
+        {
+            return true;
+        }
+        public static bool checkDatabaseKonsist()
+        {
+            return true;
+        }
+        public static bool checkNyitottRendeles()
+        {
+            return true;
+        }
+
+        #endregion
     }
 
     public enum Fizmond : int

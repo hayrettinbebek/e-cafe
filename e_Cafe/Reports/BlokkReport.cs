@@ -32,8 +32,8 @@ namespace e_Cafe.Reports
             // Before adding sections, a layout must be started.  
             // We are using a linear layout - vertically, which means
             // each new section starts below the last one.
-            builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(140), DEFS.MMtoInch(297));
-            builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(8), DEFS.MMtoInch(8), DEFS.MMtoInch(8), DEFS.MMtoInch(8));
+            builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(80), DEFS.MMtoInch(297));
+            builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(4), DEFS.MMtoInch(4), DEFS.MMtoInch(4), DEFS.MMtoInch(4));
             builder.HorizLineMargins = 0.2f;
 
             builder.StartLinearLayout(Direction.Vertical);
@@ -95,9 +95,9 @@ namespace e_Cafe.Reports
             builder.Table.InnerPenRow = new Pen (Color.Gray, reportDocument.ThinPen.Width);
             builder.Table.OuterPenBottom = new Pen (Color.Gray, reportDocument.ThinPen.Width);
 
-            builder.AddColumn(dv.Table.Columns[0],"Mennyiség",30,false,false,HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[1],"Termék",90,false,false,HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[2],"Összeg",40,false,false,HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[0],"Db.",10,false,false,HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[1],"Termék",40,false,false,HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[2],"Összeg",30,false,false,HorizontalAlignment.Right);
 
             //dt.Columns.Add(, typeof(int));
             //dt.Columns.Add("Cikk", typeof(string));
@@ -117,8 +117,8 @@ namespace e_Cafe.Reports
             builder.DefaultTablePen = null;
             builder.AddTable(dv2, true, 100);
             
-            builder.AddColumn(dv2.Table.Columns[0], " ", 120, false, false, HorizontalAlignment.Right);
-            builder.AddColumn(dv2.Table.Columns[1], " ", 40, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv2.Table.Columns[0], " ", 50, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv2.Table.Columns[1], " ", 30, false, false, HorizontalAlignment.Right);
 
 
             #endregion

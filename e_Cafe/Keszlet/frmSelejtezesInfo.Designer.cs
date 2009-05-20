@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mENNYISEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SELEJTEZESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deSelejtezInfo = new e_Cafe.SQL.deSelejtezInfo();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -44,6 +41,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SELEJTEZESTableAdapter = new e_Cafe.SQL.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mENNYISEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SELEJTEZESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deSelejtezInfo)).BeginInit();
@@ -57,35 +57,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dATUMDataGridViewTextBoxColumn,
-            this.mENNYISEGDataGridViewTextBoxColumn,
-            this.mEGNEVEZESDataGridViewTextBoxColumn});
+            this.mEGNEVEZESDataGridViewTextBoxColumn,
+            this.mENNYISEGDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.SELEJTEZESBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 59);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(370, 208);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dATUMDataGridViewTextBoxColumn
-            // 
-            this.dATUMDataGridViewTextBoxColumn.DataPropertyName = "DATUM";
-            this.dATUMDataGridViewTextBoxColumn.HeaderText = "DATUM";
-            this.dATUMDataGridViewTextBoxColumn.Name = "dATUMDataGridViewTextBoxColumn";
-            this.dATUMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mENNYISEGDataGridViewTextBoxColumn
-            // 
-            this.mENNYISEGDataGridViewTextBoxColumn.DataPropertyName = "MENNYISEG";
-            this.mENNYISEGDataGridViewTextBoxColumn.HeaderText = "MENNYISEG";
-            this.mENNYISEGDataGridViewTextBoxColumn.Name = "mENNYISEGDataGridViewTextBoxColumn";
-            this.mENNYISEGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mEGNEVEZESDataGridViewTextBoxColumn
-            // 
-            this.mEGNEVEZESDataGridViewTextBoxColumn.DataPropertyName = "MEGNEVEZES";
-            this.mEGNEVEZESDataGridViewTextBoxColumn.HeaderText = "MEGNEVEZES";
-            this.mEGNEVEZESDataGridViewTextBoxColumn.Name = "mEGNEVEZESDataGridViewTextBoxColumn";
-            this.mEGNEVEZESDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // SELEJTEZESBindingSource
             // 
@@ -171,6 +150,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dATUMDataGridViewTextBoxColumn
+            // 
+            this.dATUMDataGridViewTextBoxColumn.DataPropertyName = "DATUM";
+            this.dATUMDataGridViewTextBoxColumn.HeaderText = "Dátum";
+            this.dATUMDataGridViewTextBoxColumn.Name = "dATUMDataGridViewTextBoxColumn";
+            this.dATUMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dATUMDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // mEGNEVEZESDataGridViewTextBoxColumn
+            // 
+            this.mEGNEVEZESDataGridViewTextBoxColumn.DataPropertyName = "MEGNEVEZES";
+            this.mEGNEVEZESDataGridViewTextBoxColumn.HeaderText = "Megnevezés";
+            this.mEGNEVEZESDataGridViewTextBoxColumn.Name = "mEGNEVEZESDataGridViewTextBoxColumn";
+            this.mEGNEVEZESDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mEGNEVEZESDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // mENNYISEGDataGridViewTextBoxColumn
+            // 
+            this.mENNYISEGDataGridViewTextBoxColumn.DataPropertyName = "MENNYISEG";
+            this.mENNYISEGDataGridViewTextBoxColumn.HeaderText = "Mennyiség";
+            this.mENNYISEGDataGridViewTextBoxColumn.Name = "mENNYISEGDataGridViewTextBoxColumn";
+            this.mENNYISEGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // frmSelejtezesInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,11 +205,8 @@
         private e_Cafe.SQL.deSelejtezInfo deSelejtezInfo;
         private System.Windows.Forms.BindingSource SELEJTEZESBindingSource;
         private e_Cafe.SQL.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter SELEJTEZESTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tYPEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cOUNTERDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATUMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mENNYISEGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mEGNEVEZESDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn tYPEDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn cOUNTERDataGridViewTextBoxColumn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label1;
@@ -217,5 +216,8 @@
         private System.Windows.Forms.Label label4;
         
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATUMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mEGNEVEZESDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mENNYISEGDataGridViewTextBoxColumn;
     }
 }

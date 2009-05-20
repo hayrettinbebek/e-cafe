@@ -985,6 +985,7 @@ namespace BusinessLogic
                 catch (Exception e)
                 {
                     DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                    DEFS.ExLog(e.Message + "--->" + e.StackTrace);
                 }
                 
             }
@@ -1013,6 +1014,7 @@ namespace BusinessLogic
                 catch (Exception e)
                 {
                     DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                    DEFS.ExLog(e.Message + "--->" + e.StackTrace);
                 }
             }
             rdr.Close();
@@ -1088,6 +1090,7 @@ namespace BusinessLogic
                 catch (Exception e)
                 {
                     DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                    DEFS.ExLog(e.Message + "--->" + e.StackTrace);
                 }
 
             }
@@ -1119,6 +1122,7 @@ namespace BusinessLogic
                 catch (Exception e)
                 {
                     DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                    DEFS.ExLog(e.Message + "--->" + e.StackTrace);
                 }
 
             }
@@ -1159,6 +1163,7 @@ namespace BusinessLogic
                 catch (Exception e)
                 {
                     DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                    DEFS.ExLog(e.Message + "--->" + e.StackTrace);
                 }
 
             }

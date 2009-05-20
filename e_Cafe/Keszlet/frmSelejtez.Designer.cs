@@ -40,14 +40,14 @@
             this.lblCikkNev = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cikkKeszletBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
             this.rAKTARTableAdapter = new e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
-            this.cikkKeszletBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -158,6 +158,11 @@
             this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "RAKTAR_ID";
             // 
+            // cikkKeszletBindingSource
+            // 
+            this.cikkKeszletBindingSource.DataSource = typeof(BusinessLogic.CikkKeszlet);
+            this.cikkKeszletBindingSource.CurrentChanged += new System.EventHandler(this.cikkKeszletBindingSource_CurrentChanged);
+            // 
             // rAKTARBindingSource
             // 
             this.rAKTARBindingSource.DataMember = "RAKTAR";
@@ -171,11 +176,6 @@
             // rAKTARTableAdapter
             // 
             this.rAKTARTableAdapter.ClearBeforeFill = true;
-            // 
-            // cikkKeszletBindingSource
-            // 
-            this.cikkKeszletBindingSource.DataSource = typeof(BusinessLogic.CikkKeszlet);
-            this.cikkKeszletBindingSource.CurrentChanged += new System.EventHandler(this.cikkKeszletBindingSource_CurrentChanged);
             // 
             // frmSelejtez
             // 
@@ -191,9 +191,9 @@
             this.Text = "Selejtezés";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
