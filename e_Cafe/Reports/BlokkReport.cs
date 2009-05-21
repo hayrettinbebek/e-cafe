@@ -32,8 +32,8 @@ namespace e_Cafe.Reports
             // Before adding sections, a layout must be started.  
             // We are using a linear layout - vertically, which means
             // each new section starts below the last one.
-            builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(80), DEFS.MMtoInch(297));
-            builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(4), DEFS.MMtoInch(4), DEFS.MMtoInch(4), DEFS.MMtoInch(4));
+            builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(75), DEFS.MMtoInch(150));
+            builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1));
             builder.HorizLineMargins = 0.2f;
 
             builder.StartLinearLayout(Direction.Vertical);
@@ -95,8 +95,8 @@ namespace e_Cafe.Reports
             builder.Table.InnerPenRow = new Pen (Color.Gray, reportDocument.ThinPen.Width);
             builder.Table.OuterPenBottom = new Pen (Color.Gray, reportDocument.ThinPen.Width);
 
-            builder.AddColumn(dv.Table.Columns[0],"Db.",10,false,false,HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[1],"Termék",40,false,false,HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[0],"Db.",8,false,false,HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[1],"Termék",35,false,false,HorizontalAlignment.Left);
             builder.AddColumn(dv.Table.Columns[2],"Összeg",30,false,false,HorizontalAlignment.Right);
 
             //dt.Columns.Add(, typeof(int));
