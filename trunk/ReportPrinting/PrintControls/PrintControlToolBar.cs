@@ -358,7 +358,17 @@ namespace ReportPrinting
         /// </summary>
         public virtual void Print (object sender, System.EventArgs e)
         {
+            this.printLogic1.PrintWithoutDialogBox = false;
             this.printLogic1.Print (sender, e);
+        }
+
+        /// <summary>
+        /// Call to print
+        /// </summary>
+        public void PrintDefault(object sender, System.EventArgs e)
+        {
+            this.printLogic1.PrintWithoutDialogBox = true;
+            this.printLogic1.Print(sender, e);
         }
         #endregion
 

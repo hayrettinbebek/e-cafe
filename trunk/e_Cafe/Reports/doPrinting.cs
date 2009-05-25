@@ -56,5 +56,13 @@ namespace e_Cafe.Reports
 
         }
 
+        public void doPrintDefault()
+        {
+            printControlToolBar1.PrintInBackground = true;
+
+            printControlToolBar1.PrintDefault(null, null);
+
+        }
+
     }
 }
