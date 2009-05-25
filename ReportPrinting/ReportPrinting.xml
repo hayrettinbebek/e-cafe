@@ -2630,6 +2630,11 @@
             Call to print
             </summary>
         </member>
+        <member name="M:ReportPrinting.PrintControlToolBar.PrintDefault(System.Object,System.EventArgs)">
+            <summary>
+            Call to print
+            </summary>
+        </member>
         <member name="M:ReportPrinting.PrintControlToolBar.PrintToolBar_ButtonClick(System.Object,System.Windows.Forms.ToolBarButtonClickEventArgs)">
             <summary>
             A button in the Tool Bar has been Pressed
@@ -4534,6 +4539,12 @@
             Default is true.
             When true, the PrintControllerWithStatusDialog is used.  Otherwise,
             a StandardPrintController is used for printing.
+            </summary>
+        </member>
+        <member name="P:ReportPrinting.PrintLogic.PrintWithoutDialogBox">
+            <summary>
+            Indicates that printig schould sho the print dialog box
+            Default is true.
             </summary>
         </member>
         <member name="P:ReportPrinting.PrintLogic.PrintInBackground">

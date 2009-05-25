@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
+using BusinessLogic;
+
 
 namespace ReportPrinting
 {
@@ -24,6 +26,7 @@ namespace ReportPrinting
 
         PrintDocument document;
         bool showStatusDialog = true;
+        bool printWithoutDialogBox = true;
         bool printInBackground = false;
         bool printInProgress = false;
         PageSetupDialog pageSetupDialog1 = new PageSetupDialog ();
@@ -56,6 +59,17 @@ namespace ReportPrinting
             set { this.showStatusDialog = value; }
         }
 
+        /// <summary>
+        /// Indicates that printig schould sho the print dialog box
+        /// Default is true.
+        /// </summary>
+        [Description("Indicates that printig schould sho the print dialog box"),
+        DefaultValue(true)]
+        public bool PrintWithoutDialogBox
+        {
+            get { return this.printWithoutDialogBox; }
+            set { this.printWithoutDialogBox = value; }
+        }
 
         /// <summary>
         /// Indicates that printing should be done in the background.
@@ -153,14 +167,16 @@ namespace ReportPrinting
         /// <summary>
         /// Call to print
         /// </summary>
-        public virtual void Print (object sender, System.EventArgs e)
+        public virtual void Print(object sender, System.EventArgs e)
         {
             if (!this.printInProgress)
             {
                 this.printDialog1.Document = this.document;
-                DialogResult result = this.printDialog1.ShowDialog();
-                if (result == DialogResult.OK)
+
+                if (this.PrintWithoutDialogBox)
                 {
+                    this.printDialog1.PrinterSettings.PrinterName = DEFS.DefPrinter;
+                    //MessageBox.Show(DEFS.DefPrinter);
                     PrintController printController;
                     printController = new StandardPrintController();
 
@@ -190,6 +206,44 @@ namespace ReportPrinting
                         onPrinted();
                     }
 
+
+                }
+                else
+                {
+
+                    DialogResult result = this.printDialog1.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        PrintController printController;
+                        printController = new StandardPrintController();
+
+                        if (this.ShowStatusDialog)
+                        {
+                            this.document.PrintController = new PrintControllerWithStatusDialog(
+                                printController, "Please wait...");
+                        }
+                        else
+                        {
+                            this.document.PrintController = printController;
+                        }
+
+                        onPrinting();
+                        if (this.PrintInBackground)
+                        {
+                            // disable buttons or else the user could get into trouble!
+                            PrintInBackgroundDelegate d = new PrintInBackgroundDelegate(
+                                BeginBackgroundPrint);
+                            d.BeginInvoke(new AsyncCallback(PrintInBackgroundComplete), null);
+                        }
+                        else
+                        {
+                            this.printInProgress = true;
+                            this.document.Print();
+                            this.printInProgress = false;
+                            onPrinted();
+                        }
+
+                    }
                 }
             }
         }
