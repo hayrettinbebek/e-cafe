@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ReportPrinting;
+using BusinessLogic;
 
 
 namespace e_Cafe.Reports
@@ -52,17 +53,22 @@ namespace e_Cafe.Reports
         {
             printControlToolBar1.PrintInBackground = true;
 
-            printControlToolBar1.Print(null, null);
+            if (DEFS.R_SYSPAR.GetIntValue("AUTO_PRINT_BLOKK") == 1)
+            {
+                printControlToolBar1.PrintDefault(null, null);
+            }
+            else if (DEFS.R_SYSPAR.GetIntValue("AUTO_PRINT_BLOKK") == 99)
+            {
+                printControlToolBar1.Preview(null, null);
+            }
+            else
+            {
+                printControlToolBar1.Print(null, null);
+            }
 
         }
 
-        public void doPrintDefault()
-        {
-            printControlToolBar1.PrintInBackground = true;
 
-            printControlToolBar1.PrintDefault(null, null);
-
-        }
 
     }
 }

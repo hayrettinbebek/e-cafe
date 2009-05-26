@@ -131,7 +131,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(64, 22);
             this.toolStripButton1.Text = "Kilépés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -140,7 +140,7 @@
             this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.floppy_icon;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(66, 22);
             this.toolStripButton2.Text = "Mentés";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -194,6 +194,7 @@
             this.ShowInTaskbar = false;
             this.Text = "Rendszerparaméterek";
             this.Load += new System.EventHandler(this.frmSyspar_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSyspar_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSYSPAR)).EndInit();

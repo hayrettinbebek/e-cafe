@@ -58,6 +58,11 @@ namespace e_Cafe.Admin
 
             pbPreview.Image = Image.FromFile(openFileDialog1.FileName);
         }
+
+        private void frmSyspar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DEFS.R_SYSPAR = new SysParList();
+        }
     }
 
   

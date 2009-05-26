@@ -16,7 +16,7 @@ namespace e_Cafe.Reports
             _SzamlaId = SzamlaId;
         }
 
-		public void MakeDocument(ReportDocument reportDocument)
+        public void MakeDocument(ReportDocument reportDocument)
         {
             // Always reset the text styles if you have multiple methods that
             // set them
@@ -27,13 +27,12 @@ namespace e_Cafe.Reports
             Szamla iSzamla = new Szamla(_SzamlaId);
             // Create a ReportBuilder object that assists with building a report
             ReportBuilder builder = new ReportBuilder(reportDocument);
-            
+
             builder.CurrentDocument.DocumentUnit = GraphicsUnit.Millimeter;
             // Before adding sections, a layout must be started.  
             // We are using a linear layout - vertically, which means
             // each new section starts below the last one.
-            builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(75), DEFS.MMtoInch(150));
-            builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1));
+
             builder.HorizLineMargins = 0.2f;
 
             builder.StartLinearLayout(Direction.Vertical);
@@ -43,8 +42,8 @@ namespace e_Cafe.Reports
             builder.AddPageHeader("ALL-IN Cafe", String.Empty, iSzamla.SZAMLA_DATUMA.ToShortDateString() + " " + iSzamla.SZAMLA_DATUMA.ToLongTimeString());
 
             #region fejlec
-            builder.StartLayeredLayout(false,false);
-            
+            builder.StartLayeredLayout(false, false);
+
             // Add various text sections in different headings
 
             box = new SectionBox();
@@ -89,34 +88,34 @@ namespace e_Cafe.Reports
             DataView dv = iSzamla.GetBlokkDataView();
             builder.DefaultTablePen = null;
 
-            builder.AddTable(dv, true,100);
-            
-            builder.Table.InnerPenHeaderBottom = reportDocument.NormalPen;
-            builder.Table.InnerPenRow = new Pen (Color.Gray, reportDocument.ThinPen.Width);
-            builder.Table.OuterPenBottom = new Pen (Color.Gray, reportDocument.ThinPen.Width);
+            builder.AddTable(dv, true, 100);
 
-            builder.AddColumn(dv.Table.Columns[0],"Db.",8,false,false,HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[1],"Termék",35,false,false,HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[2],"Összeg",30,false,false,HorizontalAlignment.Right);
+            builder.Table.InnerPenHeaderBottom = reportDocument.NormalPen;
+            builder.Table.InnerPenRow = new Pen(Color.Gray, reportDocument.ThinPen.Width);
+            builder.Table.OuterPenBottom = new Pen(Color.Gray, reportDocument.ThinPen.Width);
+
+            builder.AddColumn(dv.Table.Columns[0], "Db.", 8, false, false, HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[1], "Termék", 35, false, false, HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[2], "Összeg", 30, false, false, HorizontalAlignment.Right);
 
             //dt.Columns.Add(, typeof(int));
             //dt.Columns.Add("Cikk", typeof(string));
             //dt.Columns.Add("Összeg", typeof(double));
 
 
-           // builder.AddAllColumns(30.0f, true, true);
-            
+            // builder.AddAllColumns(30.0f, true, true);
+
             builder.CurrentSection.HorizontalAlignment = HorizontalAlignment.Left;
 
-            
-            
+
+
             #endregion
 
             #region végösszesen
             DataView dv2 = iSzamla.GetBlokkOsszegDataView();
             builder.DefaultTablePen = null;
             builder.AddTable(dv2, true, 100);
-            
+
             builder.AddColumn(dv2.Table.Columns[0], " ", 50, false, false, HorizontalAlignment.Right);
             builder.AddColumn(dv2.Table.Columns[1], " ", 30, false, false, HorizontalAlignment.Right);
 
@@ -124,16 +123,22 @@ namespace e_Cafe.Reports
             #endregion
 
             builder.AddText(" ");
-            for (int i = 0; i < 6; i++)
-            {
-                builder.AddText(DEFS.R_SYSPAR.GetStrValueFilterInt("BLOKK_LABLEC", i), TextStyle.Normal);
-            }
-            
+
+            builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC1"), TextStyle.Normal);
+
+            builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC2"), TextStyle.Normal);
+            builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC3"), TextStyle.Normal);
+            builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC4"), TextStyle.Normal);
+
             
 
-
+            builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(75), DEFS.MMtoInch(150));
+            builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1));
+            
             builder.FinishLinearLayout();
 
+            
+            
         }
 
         

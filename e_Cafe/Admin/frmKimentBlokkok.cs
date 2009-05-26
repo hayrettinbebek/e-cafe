@@ -57,7 +57,7 @@ namespace e_Cafe.Admin
             {
                 doPrinting dp = new doPrinting();
                 dp.setReportMaker(new BlokkReport(((Szamla)szamlaBindingSource.Current).FEJ_ID));
-                dp.doPrintDefault();
+                dp.doPrint();
                 //dp.doPreview();
             }
         }
