@@ -840,10 +840,9 @@ namespace e_Cafe.SQL.dsSYSPARTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PARAM_VALUE_IMAGE", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PARAM_VALUE_IMAGE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE       SYSPAR
-SET                PARAM_NAME = @p_name, PARAM_VALUE_S = @p_v_s, PARAM_VALUE_I = @p_v_i, PARAM_VALUE_F = @p_v_f, 
-                         PARAM_VALUE_IMAGE = @p_v_image
-WHERE        (PARAM_NAME = @p_name) AND (PARAM_VALUE_I = @p_v_i)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE       SYSPAR\r\nSET                PARAM_NAME = @p_name, PARAM_VALUE_S = @p_" +
+                "v_s, PARAM_VALUE_I = @p_v_i, PARAM_VALUE_F = @p_v_f, \r\n                         " +
+                "PARAM_VALUE_IMAGE = @p_v_image\r\nWHERE        (PARAM_NAME = @p_name)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p_name", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "PARAM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p_v_s", global::System.Data.SqlDbType.VarChar, 2050, global::System.Data.ParameterDirection.Input, 0, 0, "PARAM_VALUE_S", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
