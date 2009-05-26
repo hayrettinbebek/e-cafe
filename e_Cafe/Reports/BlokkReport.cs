@@ -20,6 +20,8 @@ namespace e_Cafe.Reports
         {
             // Always reset the text styles if you have multiple methods that
             // set them
+            int height = 0;
+            int sor_magas = 6;
             TextStyle.ResetStyles();
             SectionBox box;
             LinearSections contents;
@@ -41,6 +43,8 @@ namespace e_Cafe.Reports
 
             builder.AddPageHeader("ALL-IN Cafe", String.Empty, iSzamla.SZAMLA_DATUMA.ToShortDateString() + " " + iSzamla.SZAMLA_DATUMA.ToLongTimeString());
 
+            height += sor_magas;
+
             #region fejlec
             builder.StartLayeredLayout(false, false);
 
@@ -59,6 +63,8 @@ namespace e_Cafe.Reports
             contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_CIM"), TextStyle.Normal));
             box.AddSection(contents);
             builder.AddSection(box);
+
+            height += 10;
 
             // Logo
             box = new SectionBox();
@@ -84,9 +90,15 @@ namespace e_Cafe.Reports
             builder.AddText("Blokk sorszáma:", TextStyle.Normal);
             builder.AddText(" ");
 
+            height += 2 * sor_magas;
+
             #region sorok
             DataView dv = iSzamla.GetBlokkDataView();
             builder.DefaultTablePen = null;
+            
+            // ide még kell egy faktor ami a sortöréseket határozza meg.
+
+            height += sor_magas * dv.Count;
 
             builder.AddTable(dv, true, 100);
 
@@ -116,6 +128,8 @@ namespace e_Cafe.Reports
             builder.DefaultTablePen = null;
             builder.AddTable(dv2, true, 100);
 
+            height += sor_magas * dv2.Count;
+
             builder.AddColumn(dv2.Table.Columns[0], " ", 50, false, false, HorizontalAlignment.Right);
             builder.AddColumn(dv2.Table.Columns[1], " ", 30, false, false, HorizontalAlignment.Right);
 
@@ -124,15 +138,19 @@ namespace e_Cafe.Reports
 
             builder.AddText(" ");
 
+            
             builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC1"), TextStyle.Normal);
 
             builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC2"), TextStyle.Normal);
             builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC3"), TextStyle.Normal);
             builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC4"), TextStyle.Normal);
 
-            
-
-            builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(75), DEFS.MMtoInch(150));
+            height += sor_magas * ((DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC1").Length / 45)+1);
+            height += sor_magas * ((DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC2").Length / 45) + 1);
+            height += sor_magas * ((DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC3").Length / 45) + 1);
+            height += sor_magas * ((DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC4").Length / 45) + 1);
+            height += sor_magas;
+            builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(75), DEFS.MMtoInch(height));
             builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1));
             
             builder.FinishLinearLayout();
