@@ -134,13 +134,17 @@ namespace BusinessLogic
                                 " ) as S group by CIKKCSOPORT_NEV";
             #endregion
             DataTable dt = new DataTable("OSSZES");
+
             dt.Columns.Add("Cikkcsoport", typeof(String));
+            dt.Columns.Add("Típus", typeof(String));
             dt.Columns.Add("Összes eladás db", typeof(int));
             dt.Columns.Add("Összes eladás értéke", typeof(double));
-            dt.Columns.Add("Hitelre írt db", typeof(int));
-            dt.Columns.Add("HItelre írás értéke", typeof(double));
-            dt.Columns.Add("Kifizetett hitel db", typeof(int));
-            dt.Columns.Add("Kifizetett hitelek értéke", typeof(double));
+
+            //dt.Columns.Add("Hitelre írt db", typeof(int));
+            //dt.Columns.Add("HItelre írás értéke", typeof(double));
+
+            //dt.Columns.Add("Kifizetett hitel db", typeof(int));
+            //dt.Columns.Add("Kifizetett hitelek értéke", typeof(double));
 
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             SqlCommand cmd = new SqlCommand();
@@ -156,12 +160,21 @@ namespace BusinessLogic
             {
                 dt.Rows.Add(
                     new Object[] {  (string)rdr["CIKKCSOPORT_NEV"],
+                                    "Eladás:",
                                     (int)rdr["ELADAS_DB"], 
-                                    (double)rdr["ELADAS"],
+                                    Math.Round((double)rdr["ELADAS"])}
+                    );
+                dt.Rows.Add(
+                    new Object[] {  "",
+                                    "Hitel:",
                                     (int)rdr["HITEL_DB"],
-                                    (double)rdr["HITEL"],
+                                    Math.Round((double)rdr["HITEL"])}
+                    );
+                dt.Rows.Add(
+                    new Object[] {  "",
+                                    "Hitel fizetve:",
                                     (int)rdr["HITEL_FIZETVE_DB"],
-                                    (double)rdr["HITEL_FIZETVE"]}
+                                    Math.Round((double)rdr["HITEL_FIZETVE"])}
                     );
             }
 

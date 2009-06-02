@@ -85,7 +85,7 @@ namespace e_Cafe
             DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
             //MessageBox.Show("Aktuális adatbázis verzió:"+db_ver.ToString());
 
-            if (db_ver < 30)
+            if (db_ver < 31)
             {
 
                 if (MessageBox.Show("Elérhető új adatbázisfrissítés, akarja frissíteni?", "Adatbázis frissítés", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -94,15 +94,15 @@ namespace e_Cafe
                     updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\DROP.sql"));
                     DEFS.log(Level.Debug, "Aktuális adatbázis verzió:" + db_ver.ToString());
 
-                    if (db_ver < 1) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_001.sql")); }
-                    if (db_ver < 2) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_002.sql")); }
-                    if (db_ver < 3) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_003.sql")); }
-                    if (db_ver < 4) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_004.sql")); }
-                    if (db_ver < 5) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_005.sql")); }
-                    if (db_ver < 6) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_006.sql")); }
-                    if (db_ver < 7) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_007.sql")); }
-                    if (db_ver < 8) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_008.sql")); }
-                    if (db_ver < 9) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_009.sql")); }
+                    if (db_ver < 1)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_001.sql")); }
+                    if (db_ver < 2)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_002.sql")); }
+                    if (db_ver < 3)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_003.sql")); }
+                    if (db_ver < 4)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_004.sql")); }
+                    if (db_ver < 5)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_005.sql")); }
+                    if (db_ver < 6)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_006.sql")); }
+                    if (db_ver < 7)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_007.sql")); }
+                    if (db_ver < 8)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_008.sql")); }
+                    if (db_ver < 9)  { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_009.sql")); }
                     if (db_ver < 10) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_010.sql")); }
                     if (db_ver < 11) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_011.sql")); }
                     if (db_ver < 12) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_012.sql")); }
@@ -124,6 +124,7 @@ namespace e_Cafe
                     if (db_ver < 28) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_028.sql")); }
                     if (db_ver < 29) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_029.sql")); }
                     if (db_ver < 30) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_030.sql")); }
+                    if (db_ver < 31) { updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\update_031.sql")); }
 
                     updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
                     DEFS.SendShortMessage("Adatbázisfrissítés lefutott kérem küldje be a logokat a programból!" +

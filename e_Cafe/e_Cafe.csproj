@@ -1272,6 +1272,9 @@
     <None Include="Resources\floppy-icon.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="SQL\update_031.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SQL\deSelejtezInfo.xsc">
       <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
     </None>
