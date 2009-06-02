@@ -36,9 +36,18 @@ namespace e_Cafe.Admin
         private void listBox1_Click(object sender, EventArgs e)
         {
             doPrinting dp = new doPrinting();
-            dp.setReportMaker(new OsszesitoReport(((OpenDay)listBox1.SelectedValue).EV
-                                                    ,((OpenDay)listBox1.SelectedValue).HO,
-                                                    ((OpenDay)listBox1.SelectedValue).NAP));
+            if (DEFS.R_SYSPAR.GetStrValue("OSSZ_REPORT_FORMAT") == "L")
+            {
+                dp.setReportMaker(new OsszesitoReport(((OpenDay)listBox1.SelectedValue).EV
+                                                        , ((OpenDay)listBox1.SelectedValue).HO,
+                                                        ((OpenDay)listBox1.SelectedValue).NAP));
+            }
+            else
+            {
+                dp.setReportMaker(new OsszesitoReportSmall(((OpenDay)listBox1.SelectedValue).EV
+                                                                        , ((OpenDay)listBox1.SelectedValue).HO,
+                                                                        ((OpenDay)listBox1.SelectedValue).NAP));
+            }
             dp.doPreview();
 
             
