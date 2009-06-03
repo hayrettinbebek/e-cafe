@@ -287,12 +287,12 @@ namespace e_Cafe.Reports
             
             builder.Table.DetailRowTextStyle.Size = 8;
             // 210 széles lehet.
-            builder.AddColumn(dv.Table.Columns[0], "Össz. db", 20, false, false, HorizontalAlignment.Right);
-            builder.AddColumn(dv.Table.Columns[1], "Össz. ért.", 40, false, false, HorizontalAlignment.Right);
-            builder.AddColumn(dv.Table.Columns[2], "Hitel db", 20, false, false, HorizontalAlignment.Right);
-            builder.AddColumn(dv.Table.Columns[3], "Hitel ért.", 40, false, false, HorizontalAlignment.Right);
-            builder.AddColumn(dv.Table.Columns[4], "Kifiz. hitel db", 20, false, false, HorizontalAlignment.Right);
-            builder.AddColumn(dv.Table.Columns[5], "Kifiz. hitelek ért.", 40, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[0], "Típus", 30, false, false, HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[1], "db.", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[2], "Érték", 20, false, false, HorizontalAlignment.Right);
+            //builder.AddColumn(dv.Table.Columns[3], "Hitel ért.", 40, false, false, HorizontalAlignment.Right);
+            //builder.AddColumn(dv.Table.Columns[4], "Kifiz. hitel db", 20, false, false, HorizontalAlignment.Right);
+            //builder.AddColumn(dv.Table.Columns[5], "Kifiz. hitelek ért.", 40, false, false, HorizontalAlignment.Right);
 
             h_height += sor_magas * dv.Count;
             builder.CurrentSection.HorizontalAlignment = HorizontalAlignment.Left;
@@ -316,10 +316,10 @@ namespace e_Cafe.Reports
             builder.Table.HeaderTextStyle.Size = 8;
             builder.Table.DetailRowTextStyle.Size = 8;
             // 210 széles lehet.
-            builder.AddColumn(dv.Table.Columns[0], "C.csop.", 30, false, false, HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[0], "Cikkcsoport", 30, false, false, HorizontalAlignment.Left);
             builder.AddColumn(dv.Table.Columns[1], "Tipus", 30, false, false, HorizontalAlignment.Left);
             builder.AddColumn(dv.Table.Columns[2], "db", 10, false, false, HorizontalAlignment.Right);
-            builder.AddColumn(dv.Table.Columns[3], "ért.", 20, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[3], "érték", 20, false, false, HorizontalAlignment.Right);
             //builder.AddColumn(dv.Table.Columns[3], "Hitelre db", 20, false, false, HorizontalAlignment.Right);
             //builder.AddColumn(dv.Table.Columns[4], "Hitelre ért.", 30, false, false, HorizontalAlignment.Right);
             //builder.AddColumn(dv.Table.Columns[5], "Kifiz. hitel db", 20, false, false, HorizontalAlignment.Right);

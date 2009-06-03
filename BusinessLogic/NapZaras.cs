@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace BusinessLogic
 {
@@ -58,6 +59,7 @@ namespace BusinessLogic
             c.Open();
             cmd.ExecuteNonQuery();
             c.Close();
+            Application.Exit();
         }
     }
 }

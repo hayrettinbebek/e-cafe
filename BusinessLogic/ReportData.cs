@@ -53,12 +53,14 @@ namespace BusinessLogic
                                 " ) as S ";
             #endregion 
             DataTable dt = new DataTable("OSSZES");
+            dt.Columns.Add("Típus", typeof(string));
             dt.Columns.Add("Összes eladás db", typeof(int));
             dt.Columns.Add("Összes eladás értéke", typeof(double));
-            dt.Columns.Add("Hitelre írt db", typeof(int));
-            dt.Columns.Add("HItelre írás értéke", typeof(double));
-            dt.Columns.Add("Kifizetett hitel db", typeof(int));
-            dt.Columns.Add("Kifizetett hitelek értéke", typeof(double));
+
+            //dt.Columns.Add("Hitelre írt db", typeof(int));
+            //dt.Columns.Add("HItelre írás értéke", typeof(double));
+            //dt.Columns.Add("Kifizetett hitel db", typeof(int));
+            //dt.Columns.Add("Kifizetett hitelek értéke", typeof(double));
 
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             SqlCommand cmd = new SqlCommand();
@@ -73,10 +75,17 @@ namespace BusinessLogic
             while (rdr.Read())
             {
                 dt.Rows.Add(
-                    new Object[] {  (int)rdr["ELADAS_DB"], 
-                                    (double)rdr["ELADAS"],
+                    new Object[] {  "Eladás:",
+                                    (int)rdr["ELADAS_DB"], 
+                                    (double)rdr["ELADAS"]}
+                    );
+                dt.Rows.Add(
+                    new Object[] {  "Hitelre írás:",
                                     (int)rdr["HITEL_DB"],
-                                    (double)rdr["HITEL"],
+                                    (double)rdr["HITEL"]}
+                    );
+                dt.Rows.Add(
+                    new Object[] {  "Kifizetett hitel:",
                                     (int)rdr["HITEL_FIZETVE_DB"],
                                     (double)rdr["HITEL_FIZETVE"]}
                     );
