@@ -91,16 +91,16 @@ WHERE AKTIV = 1</CommandText>
         <xs:element name="HELY" msprop:Generator_UserTableName="HELY" msprop:Generator_RowDeletedName="HELYRowDeleted" msprop:Generator_RowChangedName="HELYRowChanged" msprop:Generator_RowClassName="HELYRow" msprop:Generator_RowChangingName="HELYRowChanging" msprop:Generator_RowEvArgName="HELYRowChangeEvent" msprop:Generator_RowEvHandlerName="HELYRowChangeEventHandler" msprop:Generator_TableClassName="HELYDataTable" msprop:Generator_TableVarName="tableHELY" msprop:Generator_RowDeletingName="HELYRowDeleting" msprop:Generator_TablePropName="HELY">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="HELY_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="HELY_ID" msprop:Generator_ColumnVarNameInTable="columnHELY_ID" msprop:Generator_ColumnPropNameInRow="HELY_ID" msprop:Generator_ColumnPropNameInTable="HELY_IDColumn" type="xs:int" />
-              <xs:element name="HELY_NEV" msprop:Generator_UserColumnName="HELY_NEV" msprop:Generator_ColumnVarNameInTable="columnHELY_NEV" msprop:Generator_ColumnPropNameInRow="HELY_NEV" msprop:Generator_ColumnPropNameInTable="HELY_NEVColumn" minOccurs="0">
+              <xs:element name="HELY_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="HELY_ID" msprop:Generator_ColumnPropNameInRow="HELY_ID" msprop:Generator_ColumnVarNameInTable="columnHELY_ID" msprop:Generator_ColumnPropNameInTable="HELY_IDColumn" type="xs:int" />
+              <xs:element name="HELY_NEV" msprop:Generator_UserColumnName="HELY_NEV" msprop:Generator_ColumnPropNameInRow="HELY_NEV" msprop:Generator_ColumnVarNameInTable="columnHELY_NEV" msprop:Generator_ColumnPropNameInTable="HELY_NEVColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HELY_VAN_DESIGN" msprop:Generator_UserColumnName="HELY_VAN_DESIGN" msprop:Generator_ColumnVarNameInTable="columnHELY_VAN_DESIGN" msprop:Generator_ColumnPropNameInRow="HELY_VAN_DESIGN" msprop:Generator_ColumnPropNameInTable="HELY_VAN_DESIGNColumn" type="xs:int" />
-              <xs:element name="AKTIV" msprop:Generator_UserColumnName="AKTIV" msprop:Generator_ColumnPropNameInRow="AKTIV" msprop:Generator_ColumnVarNameInTable="columnAKTIV" msprop:Generator_ColumnPropNameInTable="AKTIVColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="HELY_VAN_DESIGN" msprop:Generator_UserColumnName="HELY_VAN_DESIGN" msprop:Generator_ColumnPropNameInRow="HELY_VAN_DESIGN" msprop:Generator_ColumnVarNameInTable="columnHELY_VAN_DESIGN" msprop:Generator_ColumnPropNameInTable="HELY_VAN_DESIGNColumn" type="xs:int" default="0" />
+              <xs:element name="AKTIV" msprop:Generator_UserColumnName="AKTIV" msprop:Generator_ColumnVarNameInTable="columnAKTIV" msprop:Generator_ColumnPropNameInRow="AKTIV" msprop:Generator_ColumnPropNameInTable="AKTIVColumn" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
