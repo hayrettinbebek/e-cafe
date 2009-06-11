@@ -437,7 +437,33 @@ namespace BusinessLogic
         }
         public static bool checkNegativKeszlet()
         {
-            return true;
+            bool van = true;
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "select count(*) as DB from keszlet_fej f " +
+                                " inner join nap_nyitas n on f.EV = n.EV and f.HO = n.HO and f.NAP = n.NAP where "+
+                                " n.LEZART = 0 and Round(isnull(f.KESZLET_NYITO,0) + isnull(f.KESZLET_NAPI,0),2) < 0";
+            c.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                if ((int)rdr["DB"] > 0)
+                {
+                    van = true;
+                }
+                else
+                {
+                    van = false;
+                }
+            }
+            c.Close();
+
+            return (!van);
         }
         public static bool checkDatabaseKonsist()
         {
@@ -445,7 +471,34 @@ namespace BusinessLogic
         }
         public static bool checkNyitottRendeles()
         {
-            return true;
+            bool van = true;
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "select count(*) as DB from rendeles_fej where aktiv = 1";
+            c.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                if ((int)rdr["DB"] > 0)
+                {
+                    van = true ;
+                }
+                else
+                {
+                    van = false;
+                }
+            }
+            c.Close();
+
+            return (!van);
+
+            
+            
         }
 
         #endregion
