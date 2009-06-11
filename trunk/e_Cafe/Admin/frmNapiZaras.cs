@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
+using e_Cafe.Reports;
 
 namespace e_Cafe.Admin
 {
@@ -43,7 +44,7 @@ namespace e_Cafe.Admin
                         else
                         {
                             pnlVanNyitottNap.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
-
+                            button1.Enabled = false;
                         }
                         processCounter++;
                         pbStatus.Value = pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0));
@@ -73,6 +74,7 @@ namespace e_Cafe.Admin
                         else
                         {
                             pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
+                            button1.Enabled = false;
                         }
                         processCounter++;
                         pbStatus.Value = pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0));
@@ -90,6 +92,7 @@ namespace e_Cafe.Admin
                         else
                         {
                             pnlNyitTartozas.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
+                            button1.Enabled = false;
                         }
                         processCounter++;
                         pbStatus.Value = pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0));
@@ -107,6 +110,7 @@ namespace e_Cafe.Admin
                         else
                         {
                             pnlNegRaktar.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
+                            button1.Enabled = false;
                         }
                         processCounter++;
                         pbStatus.Value = pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0));
@@ -151,8 +155,28 @@ namespace e_Cafe.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            nz.CloseDay();
-            Application.Exit();
-        }
+
+            string str = DEFS.NyitNap_EV.ToString() + "." + DEFS.NyitNap_HO.ToString() + "." + DEFS.NyitNap_NAP.ToString();
+            if (MessageBox.Show("Valóban szeretné lezárni a " + str + " napot?", "Nap zárás", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+
+                nz.CloseDay();
+                doPrinting dp = new doPrinting();
+                if (DEFS.R_SYSPAR.GetStrValue("OSSZ_REPORT_FORMAT") == "L")
+                {
+                    dp.setReportMaker(new OsszesitoReport(DEFS.NyitNap_EV
+                                                            , DEFS.NyitNap_HO,
+                                                            DEFS.NyitNap_NAP));
+                }
+                else
+                {
+                    dp.setReportMaker(new OsszesitoReportSmall(DEFS.NyitNap_EV
+                                                                            , DEFS.NyitNap_HO,
+                                                                            DEFS.NyitNap_NAP));
+                }
+                dp.doPreview();
+                Application.Exit();
+            }
+        } 
     }
 }

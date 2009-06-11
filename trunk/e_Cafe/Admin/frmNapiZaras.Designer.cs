@@ -122,7 +122,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 700;
+            this.timer1.Interval = 400;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pbStatus
@@ -175,17 +175,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(282, 172);
+            this.label5.Location = new System.Drawing.Point(282, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "Nincs nyitott tartozás";
+            this.label5.Visible = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(189, 215);
+            this.label6.Location = new System.Drawing.Point(189, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(233, 17);
             this.label6.TabIndex = 3;
@@ -195,7 +196,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(186, 255);
+            this.label7.Location = new System.Drawing.Point(186, 208);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(236, 17);
             this.label7.TabIndex = 3;
@@ -204,15 +205,16 @@
             // pnlNyitTartozas
             // 
             this.pnlNyitTartozas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlNyitTartozas.Location = new System.Drawing.Point(428, 166);
+            this.pnlNyitTartozas.Location = new System.Drawing.Point(428, 246);
             this.pnlNyitTartozas.Name = "pnlNyitTartozas";
             this.pnlNyitTartozas.Size = new System.Drawing.Size(33, 29);
             this.pnlNyitTartozas.TabIndex = 4;
+            this.pnlNyitTartozas.Visible = false;
             // 
             // pnlNegRaktar
             // 
             this.pnlNegRaktar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlNegRaktar.Location = new System.Drawing.Point(428, 209);
+            this.pnlNegRaktar.Location = new System.Drawing.Point(428, 162);
             this.pnlNegRaktar.Name = "pnlNegRaktar";
             this.pnlNegRaktar.Size = new System.Drawing.Size(33, 29);
             this.pnlNegRaktar.TabIndex = 4;
@@ -220,14 +222,14 @@
             // pnlKonzisztencia
             // 
             this.pnlKonzisztencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlKonzisztencia.Location = new System.Drawing.Point(428, 249);
+            this.pnlKonzisztencia.Location = new System.Drawing.Point(428, 202);
             this.pnlKonzisztencia.Name = "pnlKonzisztencia";
             this.pnlKonzisztencia.Size = new System.Drawing.Size(33, 29);
             this.pnlKonzisztencia.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(192, 368);
+            this.button1.Location = new System.Drawing.Point(206, 302);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -253,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 446);
+            this.ClientSize = new System.Drawing.Size(502, 341);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbStatus);

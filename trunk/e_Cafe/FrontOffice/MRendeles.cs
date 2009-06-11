@@ -386,7 +386,7 @@ namespace e_Cafe
             }
             else
             {
-                if (((((CikkButton)sender).fCIKK.fKESZLET == 0) && (((CikkButton)sender).fCIKK.fKESZLET < ((CikkButton)sender).fCIKK.KISZ_MENNY)) || (DEFS.UserRights.HasRight("ALLOW_NEG_BOOK")))
+                if (((((CikkButton)sender).fCIKK.fKESZLET == 0) && (((CikkButton)sender).fCIKK.fKESZLET < ((CikkButton)sender).fCIKK.KISZ_MENNY)) /*|| (DEFS.UserRights.HasRight("ALLOW_NEG_BOOK"))*/)
                 {
                     if (((CikkButton)sender).fCIKK.fKESZLET_ALL >= ((CikkButton)sender).fCIKK.KISZ_MENNY) 
                     {
