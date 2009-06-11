@@ -35,11 +35,24 @@ namespace e_Cafe.Admin
             {
                 case 0:
                     {
+                        #region Aktuális nyitot nap
+                        lblHO.Text = DEFS.NyitNap_HO.ToString();
+                        lblNAP.Text = DEFS.NyitNap_NAP.ToString();
+                        lblNEV.Text = DEFS.NyitNap_EV.ToString();
+                        processCounter++;
+                        pbStatus.Value = pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0));
+                        break;
+                        #endregion
+                       
+
+                    }
+                case 1:
+                    {
                         #region nyitott nap ellenőrzése
                         if (nz.VaneNyitotNap())
                         {
                             pnlVanNyitottNap.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
-                            
+
                         }
                         else
                         {
@@ -52,24 +65,13 @@ namespace e_Cafe.Admin
                         #endregion
 
                     }
-                case 1:
-                    {
-                        #region Aktuális nyitot nap
-                        lblHO.Text = DEFS.NyitNap_HO.ToString();
-                        lblNAP.Text = DEFS.NyitNap_NAP.ToString();
-                        lblNEV.Text = DEFS.NyitNap_EV.ToString();
-                        processCounter++;
-                        pbStatus.Value = pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0));
-                        break;
-                        #endregion
-
-                    }
                 case 2:
                     {
                         #region nyitott rendelések ellenőrzése
                         if (DEFS.checkNyitottRendeles())
                         {
                             pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
+                            pnlNyitRendel.Click += NyitRendelInfo_Click;
                         }
                         else
                         {
@@ -177,6 +179,16 @@ namespace e_Cafe.Admin
                 dp.doPreview();
                 Application.Exit();
             }
+        }
+
+        private void pnlNyitRendel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NyitRendelInfo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("A főmenüben a sárga asztalokat kell lezárni a hiba elhárításához!");
         } 
     }
 }
