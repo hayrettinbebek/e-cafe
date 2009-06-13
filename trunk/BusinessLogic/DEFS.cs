@@ -208,6 +208,37 @@ namespace BusinessLogic
 
         #endregion
 
+        #region Helper utils
+        public static int BoolToInt(bool b)
+        {
+            if (b)
+            {
+                return (1);
+            }
+            else
+            {
+                return (0);
+            }
+
+        }
+
+
+        public static bool IntToBool(int i)
+        {
+            if (i>0)
+            {
+                return (true);
+            }
+            else
+            {
+                return (false);
+            }
+
+        }
+        #endregion 
+
+
+
         public static int GetDBVER()
         {
             int tmpret = 0;

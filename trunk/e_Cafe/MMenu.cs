@@ -154,6 +154,7 @@ namespace e_Cafe
             Invalidate();
 
             
+            goMainMenu(Convert.ToInt16(e_Cafe.Properties.Settings.Default.DefaultHely));            
         }
 
         #region Bejelentkezéssel kapcsolatos dolgok
@@ -426,11 +427,15 @@ namespace e_Cafe
         }
         public void goMainMenu(int aHelyId)
         {
-            panel3.Controls.Clear();
-            a = new Asztalok(panel3,  aHelyId);
-            a.RefreshAsztalok(true);
+            if (aHelyId > 0)
+            {
+                panel3.Controls.Clear();
+                a = new Asztalok(panel3, aHelyId);
+                a.RefreshAsztalok(true);
+            }
         }
 
+        #region Főmenük
         private void button2_Click(object sender, EventArgs e)
         {
             AdminTools adm = new AdminTools();
@@ -483,11 +488,7 @@ namespace e_Cafe
             Login(1);
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        #endregion
 
 
 

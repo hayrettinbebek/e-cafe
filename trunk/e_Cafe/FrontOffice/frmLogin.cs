@@ -101,7 +101,11 @@ namespace e_Cafe
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (changeUser == 0)
+            {
+                Application.Exit();
+            }
+            else { this.Close(); }
         }
 
         private void button13_Click(object sender, EventArgs e)

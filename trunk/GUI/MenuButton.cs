@@ -478,8 +478,6 @@ namespace GUI
                 _fUser = value;
                 lNAME.Text = _fUser.NAME;
                 lNAME2.Text = _fUser.LOGIN_NAME;
-
-
             }
         }
 
@@ -492,8 +490,16 @@ namespace GUI
         {
             base.OnCheckedChanged(e);
 
-            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.on_user; }
-            else { BackgroundImage = global::GUI.Properties.Resources.off_user; }
+            if (Checked)
+            {
+                BackgroundImage = global::GUI.Properties.Resources.on_user;
+                BackgroundImageLayout = ImageLayout.Stretch;
+            }
+            else
+            {
+                BackgroundImage = global::GUI.Properties.Resources.off_user;
+                BackgroundImageLayout = ImageLayout.Stretch;
+            }
 
         }
 
