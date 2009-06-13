@@ -260,7 +260,6 @@
             this.dataRepeater1.AllowUserToAddItems = false;
             this.dataRepeater1.AllowUserToDeleteItems = false;
             this.dataRepeater1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.dataRepeater1.BackgroundImage = global::e_Cafe.Properties.Resources.hatter;
             this.dataRepeater1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dataRepeater1.Enabled = false;
             this.dataRepeater1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -279,7 +278,6 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackgroundImage = global::e_Cafe.Properties.Resources.hatter;
             this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel1.Controls.Add(this.label6);
             this.flowLayoutPanel1.Controls.Add(this.label7);

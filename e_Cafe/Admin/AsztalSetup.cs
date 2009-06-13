@@ -93,6 +93,9 @@ namespace e_Cafe
             cmbTipus.SelectedValue = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
             //txtAsztalTipus.Text = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
 
+            chkNameVis.Checked = DEFS.IntToBool(a.aList.GetItem(AktAsztal.fASZTAL_ID).fNAME_VISIBLE);
+            chkRendelFel.Checked = DEFS.IntToBool(a.aList.GetItem(AktAsztal.fASZTAL_ID).fUSEABLE);
+            
             switch (((GUI.Asztal_Button)sender).aObj.fASZTAL_ROTATE)
             {
                 case 0:
@@ -134,8 +137,8 @@ namespace e_Cafe
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(cmbTipus.SelectedValue);
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
-
-            
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fNAME_VISIBLE = DEFS.BoolToInt(chkNameVis.Checked);
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fUSEABLE = DEFS.BoolToInt(chkRendelFel.Checked);
         }
 
         private void updateSettings()
@@ -144,6 +147,8 @@ namespace e_Cafe
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(cmbTipus.SelectedValue);
             a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fNAME_VISIBLE = DEFS.BoolToInt(chkNameVis.Checked);
+            a.aList.GetItem(AktAsztal.fASZTAL_ID).fUSEABLE = DEFS.BoolToInt(chkRendelFel.Checked);
         }
 
         private int setRoatation()
