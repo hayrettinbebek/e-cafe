@@ -1709,12 +1709,7 @@
         private e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter cIKKTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMegnevezes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIKKIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn cIKKCSOPORTIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eRTEKESITESTIPUSADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mEGYSIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oTHERFILTERIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dEFAULTRAKTARDataGridViewTextBoxColumn;
+               
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;

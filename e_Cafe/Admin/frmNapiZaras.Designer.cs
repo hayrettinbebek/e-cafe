@@ -113,7 +113,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 400;
+            this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pbStatus
@@ -123,6 +123,7 @@
             this.pbStatus.Name = "pbStatus";
             this.pbStatus.Size = new System.Drawing.Size(506, 23);
             this.pbStatus.Step = 1;
+            this.pbStatus.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pbStatus.TabIndex = 5;
             // 
             // label3

@@ -9,7 +9,7 @@ namespace e_Cafe
 {
     public partial class Bevetelezes : Form
     {
-        int AktBevId;
+        int AktBevId = -1;
         public Bevetelezes()
         {
             InitializeComponent();
