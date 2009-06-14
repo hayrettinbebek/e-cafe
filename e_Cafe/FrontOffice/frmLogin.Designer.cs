@@ -46,6 +46,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
+            this.flpLoggenInusers = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // txtPw
@@ -315,6 +316,14 @@
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
+            // flpLoggenInusers
+            // 
+            this.flpLoggenInusers.BackColor = System.Drawing.Color.Transparent;
+            this.flpLoggenInusers.Location = new System.Drawing.Point(650, 186);
+            this.flpLoggenInusers.Name = "flpLoggenInusers";
+            this.flpLoggenInusers.Size = new System.Drawing.Size(60, 252);
+            this.flpLoggenInusers.TabIndex = 6;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +333,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(729, 473);
             this.ControlBox = false;
+            this.Controls.Add(this.flpLoggenInusers);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flpUser);
@@ -370,5 +380,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.FlowLayoutPanel flpLoggenInusers;
     }
 }

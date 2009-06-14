@@ -227,7 +227,7 @@ namespace e_Cafe
             ub.BackgroundImage = global::GUI.Properties.Resources.off_user;
             ub.BackgroundImageLayout = ImageLayout.Stretch;
             ub.Checked = true;
-            ub.Dock = DockStyle.Fill;
+            ub.Dock = DockStyle.Left;
             panel7.Controls.Add(ub);
 
         }
