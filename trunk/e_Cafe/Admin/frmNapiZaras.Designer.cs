@@ -300,7 +300,6 @@
         private e_Cafe.SQL.dsOsszevontLista dsOsszevontLista;
         private System.Windows.Forms.BindingSource jOGBindingSource;
         private e_Cafe.SQL.dsOsszevontListaTableAdapters._JOGTableAdapter _JOGTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jOGIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jOGNEVDataGridViewTextBoxColumn;
+        
     }
 }
