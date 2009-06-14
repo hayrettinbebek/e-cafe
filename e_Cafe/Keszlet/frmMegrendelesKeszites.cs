@@ -98,16 +98,23 @@ namespace e_Cafe.Keszlet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            aktMegr.addTetel((Cikk)lbCikkek.Items[lbCikkek.SelectedIndex], aktMegr.MEGRENDELES_FEJ_ID);
-            foreach (var m in aktMegr.lMegrendelesSorok)
+            if (aktMegr.LEZART == false)
             {
-                m.Save();
-            }
+                aktMegr.addTetel((Cikk)lbCikkek.Items[lbCikkek.SelectedIndex], aktMegr.MEGRENDELES_FEJ_ID);
+                foreach (var m in aktMegr.lMegrendelesSorok)
+                {
+                    m.Save();
+                }
 
-            megrendelesSorBindingSource.Clear();
-            foreach (var m in aktMegr.lMegrendelesSorok)
+                megrendelesSorBindingSource.Clear();
+                foreach (var m in aktMegr.lMegrendelesSorok)
+                {
+                    megrendelesSorBindingSource.Add(m);
+                }
+            }
+            else
             {
-                megrendelesSorBindingSource.Add(m);
+                DEFS.SendInfoMessage("Ez a megrednelés már lezárásra került nem rögzíthet további tételeket!");
             }
         }
 
@@ -116,6 +123,29 @@ namespace e_Cafe.Keszlet
             foreach (var m in aktMegr.lMegrendelesSorok)
             {
                 m.Save();
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+            aktMegr.LEZART = true;
+            aktMegr.Save();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("kilépés előtt szeretne menteni?", "Kilépés a megrendelésekből", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                aktMegr.Save();
+                foreach (var m in aktMegr.lMegrendelesSorok)
+                {
+                    m.Save();
+                }
+            }
+            else
+            {
+                this.Close();
             }
         }
     }

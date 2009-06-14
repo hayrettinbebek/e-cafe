@@ -1,4 +1,4 @@
-﻿namespace e_Cafe.Torzsek
+﻿namespace e_Cafe.Admin
 {
     partial class frmUjUser
     {

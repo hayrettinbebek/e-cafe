@@ -50,6 +50,7 @@
             this.dsMegrendeles = new e_Cafe.SQL.dsMegrendeles();
             this.tpTetelek = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.chkMind = new System.Windows.Forms.RadioButton();
             this.chkSzallito = new System.Windows.Forms.RadioButton();
             this.lbCikkek = new System.Windows.Forms.ListBox();
@@ -65,12 +66,11 @@
             this.cIKKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.megrendelesSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
-            this.pARTNERTableAdapter = new e_Cafe.SQL.dsPartnerekTableAdapters.PARTNERTableAdapter();
-            this.button3 = new System.Windows.Forms.Button();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
+            this.pARTNERTableAdapter = new e_Cafe.SQL.dsPartnerekTableAdapters.PARTNERTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tpFej.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -289,6 +289,16 @@
             this.panel2.Size = new System.Drawing.Size(342, 333);
             this.panel2.TabIndex = 2;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(290, 117);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(34, 76);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "-->";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // chkMind
             // 
             this.chkMind.AutoSize = true;
@@ -427,31 +437,13 @@
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // mEGRENDELES_FEJTableAdapter
-            // 
-            this.mEGRENDELES_FEJTableAdapter.ClearBeforeFill = true;
-            // 
-            // pARTNERTableAdapter
-            // 
-            this.pARTNERTableAdapter.ClearBeforeFill = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(290, 117);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(34, 76);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "-->";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripButton1.Image = global::e_Cafe.Properties.Resources.floppy_icon;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(66, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
             this.toolStripButton1.Text = "Mentés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -461,23 +453,35 @@
             this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.Printer_24x24;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(74, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(68, 22);
             this.toolStripButton2.Text = "Nyomtat";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
             this.toolStripButton3.Image = global::e_Cafe.Properties.Resources.ERROR_ICON;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(64, 22);
+            this.toolStripButton3.Size = new System.Drawing.Size(60, 22);
             this.toolStripButton3.Text = "Kilépés";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // mEGRENDELES_FEJTableAdapter
+            // 
+            this.mEGRENDELES_FEJTableAdapter.ClearBeforeFill = true;
+            // 
+            // pARTNERTableAdapter
+            // 
+            this.pARTNERTableAdapter.ClearBeforeFill = true;
             // 
             // frmMegrendelesKeszites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 390);
+            this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMegrendelesKeszites";
             this.Text = "Megrendelés felvitele";
             this.Load += new System.EventHandler(this.frmMegrendelesKeszites_Load);
