@@ -1217,6 +1217,20 @@ namespace BusinessLogic
             return (iTmpRet);
         }
 
+        public List<Cikk> CikkListByNegKeszlet()
+        {
+            List<Cikk> iTmpRet = new List<Cikk>();
+
+            var ret_cikk =
+                from c in lCIKK
+                where (c.fKESZLET_ALL < 0)
+                select c;
+            ret_cikk.Each(c => iTmpRet.Add(c));
+
+
+            return (iTmpRet);
+        }
+
         public List<Cikk> CikkFilter(string iCikkNev)
         {
             List<Cikk> iTmpRet = new List<Cikk>();
