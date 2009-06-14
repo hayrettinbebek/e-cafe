@@ -68,9 +68,12 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsKilep = new System.Windows.Forms.ToolStripButton();
             this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
             this.pARTNERTableAdapter = new e_Cafe.SQL.dsPartnerekTableAdapters.PARTNERTableAdapter();
+            this.btnKilep = new System.Windows.Forms.Button();
+            this.pnlLezart = new System.Windows.Forms.Panel();
+            this.pnlLezart2 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tpFej.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -102,6 +105,7 @@
             // 
             // tpFej
             // 
+            this.tpFej.Controls.Add(this.pnlLezart);
             this.tpFej.Controls.Add(this.groupBox1);
             this.tpFej.Controls.Add(this.button1);
             this.tpFej.Controls.Add(this.label1);
@@ -116,6 +120,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnKilep);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cmbSzallito);
@@ -279,6 +284,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pnlLezart2);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.chkMind);
             this.panel2.Controls.Add(this.chkSzallito);
@@ -430,7 +436,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton3});
+            this.tsKilep});
             this.toolStrip1.Location = new System.Drawing.Point(3, 3);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(722, 25);
@@ -457,14 +463,14 @@
             this.toolStripButton2.Text = "Nyomtat";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // toolStripButton3
+            // tsKilep
             // 
-            this.toolStripButton3.Image = global::e_Cafe.Properties.Resources.ERROR_ICON;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(60, 22);
-            this.toolStripButton3.Text = "Kilépés";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.tsKilep.Image = global::e_Cafe.Properties.Resources.ERROR_ICON;
+            this.tsKilep.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsKilep.Name = "tsKilep";
+            this.tsKilep.Size = new System.Drawing.Size(60, 22);
+            this.tsKilep.Text = "Kilépés";
+            this.tsKilep.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // mEGRENDELES_FEJTableAdapter
             // 
@@ -473,6 +479,29 @@
             // pARTNERTableAdapter
             // 
             this.pARTNERTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnKilep
+            // 
+            this.btnKilep.Location = new System.Drawing.Point(251, 322);
+            this.btnKilep.Name = "btnKilep";
+            this.btnKilep.Size = new System.Drawing.Size(75, 23);
+            this.btnKilep.TabIndex = 3;
+            this.btnKilep.Text = "Kilépés";
+            this.btnKilep.UseVisualStyleBackColor = true;
+            // 
+            // pnlLezart
+            // 
+            this.pnlLezart.Location = new System.Drawing.Point(151, 3);
+            this.pnlLezart.Name = "pnlLezart";
+            this.pnlLezart.Size = new System.Drawing.Size(29, 27);
+            this.pnlLezart.TabIndex = 4;
+            // 
+            // pnlLezart2
+            // 
+            this.pnlLezart2.Location = new System.Drawing.Point(283, 13);
+            this.pnlLezart2.Name = "pnlLezart2";
+            this.pnlLezart2.Size = new System.Drawing.Size(49, 49);
+            this.pnlLezart2.TabIndex = 5;
             // 
             // frmMegrendelesKeszites
             // 
@@ -552,6 +581,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsKilep;
+        private System.Windows.Forms.Button btnKilep;
+        private System.Windows.Forms.Panel pnlLezart;
+        private System.Windows.Forms.Panel pnlLezart2;
     }
 }
