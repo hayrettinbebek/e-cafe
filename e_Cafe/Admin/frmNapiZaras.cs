@@ -71,12 +71,13 @@ namespace e_Cafe.Admin
                         if (DEFS.checkNyitottRendeles())
                         {
                             pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
-                            pnlNyitRendel.Click += NyitRendelInfo_Click;
+                            
                         }
                         else
                         {
                             pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
                             button1.Enabled = false;
+                            pnlNyitRendel.Click += NyitRendelInfo_Click;
                         }
                         processCounter++;
                         pbStatus.Value = pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0));
@@ -113,6 +114,7 @@ namespace e_Cafe.Admin
                         {
                             pnlNegRaktar.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
                             button1.Enabled = false;
+                            pnlNegRaktar.Click += NegKeszletInfo_Click;
                         }
                         processCounter++;
                         pbStatus.Value = pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0));
@@ -189,6 +191,14 @@ namespace e_Cafe.Admin
         private void NyitRendelInfo_Click(object sender, EventArgs e)
         {
             MessageBox.Show("A főmenüben a sárga asztalokat kell lezárni a hiba elhárításához!");
+        }
+
+        private void NegKeszletInfo_Click(object sender, EventArgs e)
+        {
+            frmNegkeszletInfo n = new frmNegkeszletInfo();
+            n.ShowDialog();
+
         } 
+        
     }
 }
