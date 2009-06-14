@@ -173,8 +173,8 @@ namespace BusinessLogic
                                           "    ,LEZART = @LEZART " +
 
                                           " WHERE MEGRENDELES_FEJ_ID= @MEGRENDELES_FEJ_ID";
-                        cmd.Parameters.Add(new SqlParameter("BEVETEL_FEJ", SqlDbType.Int));
-                        cmd.Parameters["BEVETEL_FEJ"].Value = _MEGRENDELES_FEJ_ID;
+                        cmd.Parameters.Add(new SqlParameter("MEGRENDELES_FEJ_ID", SqlDbType.Int));
+                        cmd.Parameters["MEGRENDELES_FEJ_ID"].Value = _MEGRENDELES_FEJ_ID;
                         break;
                     }
             }

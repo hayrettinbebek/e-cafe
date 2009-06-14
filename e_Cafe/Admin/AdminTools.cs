@@ -339,19 +339,14 @@ namespace e_Cafe
             mr.Show();
         }
 
-        private void mmBevetel2_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
-        private void megrendelésBeérkeztetéseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DEFS.SendInfoMessage("Hiba a megrendelések betöltése közben");
-        }
+
 
         private void archivumToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMegrendelesArchivum fa = new frmMegrendelesArchivum();
+            fa.LoadType = LoadTypes.archive;
             fa.ShowDialog();
         }
 
@@ -359,6 +354,13 @@ namespace e_Cafe
         {
             frmSelejtezesInfo si = new frmSelejtezesInfo();
             si.ShowDialog();
+        }
+
+        private void mmMegrendelBeerkez_Click(object sender, EventArgs e)
+        {
+            frmMegrendelesArchivum fa = new frmMegrendelesArchivum();
+            fa.LoadType = LoadTypes.select;
+            fa.ShowDialog();
         }
 
 

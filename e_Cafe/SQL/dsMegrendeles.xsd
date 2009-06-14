@@ -11,12 +11,11 @@
             <MainSource>
               <DbSource ConnectionRef="ECAFEConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT     MEGRENDELES_FEJ.MEGRENDELES_FEJ_ID, MEGRENDELES_FEJ.DATUM, MEGRENDELES_FEJ.SZALLITO_ID, MEGRENDELES_FEJ.SORSZAM, 
                       MEGRENDELES_FEJ.LEZART, PARTNER.P_NEV
 FROM         MEGRENDELES_FEJ INNER JOIN
-                      PARTNER ON MEGRENDELES_FEJ.SZALLITO_ID = PARTNER.PARTNER_ID
-WHERE     (MEGRENDELES_FEJ.LEZART = 0)</CommandText>
+                      PARTNER ON MEGRENDELES_FEJ.SZALLITO_ID = PARTNER.PARTNER_ID</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -81,18 +80,18 @@ FROM            MEGRENDELES_SOR AS s INNER JOIN
         <xs:element name="MEGRENDELES_FEJ" msprop:Generator_UserTableName="MEGRENDELES_FEJ" msprop:Generator_RowDeletedName="MEGRENDELES_FEJRowDeleted" msprop:Generator_RowChangedName="MEGRENDELES_FEJRowChanged" msprop:Generator_RowClassName="MEGRENDELES_FEJRow" msprop:Generator_RowChangingName="MEGRENDELES_FEJRowChanging" msprop:Generator_RowEvArgName="MEGRENDELES_FEJRowChangeEvent" msprop:Generator_RowEvHandlerName="MEGRENDELES_FEJRowChangeEventHandler" msprop:Generator_TableClassName="MEGRENDELES_FEJDataTable" msprop:Generator_TableVarName="tableMEGRENDELES_FEJ" msprop:Generator_RowDeletingName="MEGRENDELES_FEJRowDeleting" msprop:Generator_TablePropName="MEGRENDELES_FEJ">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MEGRENDELES_FEJ_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="MEGRENDELES_FEJ_ID" msprop:Generator_ColumnPropNameInRow="MEGRENDELES_FEJ_ID" msprop:Generator_ColumnVarNameInTable="columnMEGRENDELES_FEJ_ID" msprop:Generator_ColumnPropNameInTable="MEGRENDELES_FEJ_IDColumn" type="xs:int" />
-              <xs:element name="DATUM" msprop:Generator_UserColumnName="DATUM" msprop:Generator_ColumnPropNameInRow="DATUM" msprop:Generator_ColumnVarNameInTable="columnDATUM" msprop:Generator_ColumnPropNameInTable="DATUMColumn" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="SZALLITO_ID" msprop:Generator_UserColumnName="SZALLITO_ID" msprop:Generator_ColumnPropNameInRow="SZALLITO_ID" msprop:Generator_ColumnVarNameInTable="columnSZALLITO_ID" msprop:Generator_ColumnPropNameInTable="SZALLITO_IDColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="SORSZAM" msprop:Generator_UserColumnName="SORSZAM" msprop:Generator_ColumnPropNameInRow="SORSZAM" msprop:Generator_ColumnVarNameInTable="columnSORSZAM" msprop:Generator_ColumnPropNameInTable="SORSZAMColumn" minOccurs="0">
+              <xs:element name="MEGRENDELES_FEJ_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="MEGRENDELES_FEJ_ID" msprop:Generator_ColumnVarNameInTable="columnMEGRENDELES_FEJ_ID" msprop:Generator_ColumnPropNameInRow="MEGRENDELES_FEJ_ID" msprop:Generator_ColumnPropNameInTable="MEGRENDELES_FEJ_IDColumn" type="xs:int" />
+              <xs:element name="DATUM" msprop:Generator_UserColumnName="DATUM" msprop:Generator_ColumnVarNameInTable="columnDATUM" msprop:Generator_ColumnPropNameInRow="DATUM" msprop:Generator_ColumnPropNameInTable="DATUMColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SZALLITO_ID" msprop:Generator_UserColumnName="SZALLITO_ID" msprop:Generator_ColumnVarNameInTable="columnSZALLITO_ID" msprop:Generator_ColumnPropNameInRow="SZALLITO_ID" msprop:Generator_ColumnPropNameInTable="SZALLITO_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SORSZAM" msprop:Generator_UserColumnName="SORSZAM" msprop:Generator_ColumnVarNameInTable="columnSORSZAM" msprop:Generator_ColumnPropNameInRow="SORSZAM" msprop:Generator_ColumnPropNameInTable="SORSZAMColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="LEZART" msprop:Generator_UserColumnName="LEZART" msprop:Generator_ColumnPropNameInRow="LEZART" msprop:Generator_ColumnVarNameInTable="columnLEZART" msprop:Generator_ColumnPropNameInTable="LEZARTColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="P_NEV" msprop:Generator_UserColumnName="P_NEV" msprop:Generator_ColumnVarNameInTable="columnP_NEV" msprop:Generator_ColumnPropNameInRow="P_NEV" msprop:Generator_ColumnPropNameInTable="P_NEVColumn" minOccurs="0">
+              <xs:element name="LEZART" msprop:Generator_UserColumnName="LEZART" msprop:Generator_ColumnVarNameInTable="columnLEZART" msprop:Generator_ColumnPropNameInRow="LEZART" msprop:Generator_ColumnPropNameInTable="LEZARTColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="P_NEV" msprop:Generator_UserColumnName="P_NEV" msprop:Generator_ColumnPropNameInRow="P_NEV" msprop:Generator_ColumnVarNameInTable="columnP_NEV" msprop:Generator_ColumnPropNameInTable="P_NEVColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
@@ -102,22 +101,22 @@ FROM            MEGRENDELES_SOR AS s INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MEGRENDELES_SOR" msprop:Generator_UserTableName="MEGRENDELES_SOR" msprop:Generator_RowDeletedName="MEGRENDELES_SORRowDeleted" msprop:Generator_TableClassName="MEGRENDELES_SORDataTable" msprop:Generator_RowChangedName="MEGRENDELES_SORRowChanged" msprop:Generator_RowClassName="MEGRENDELES_SORRow" msprop:Generator_RowChangingName="MEGRENDELES_SORRowChanging" msprop:Generator_RowEvArgName="MEGRENDELES_SORRowChangeEvent" msprop:Generator_RowEvHandlerName="MEGRENDELES_SORRowChangeEventHandler" msprop:Generator_TablePropName="MEGRENDELES_SOR" msprop:Generator_TableVarName="tableMEGRENDELES_SOR" msprop:Generator_RowDeletingName="MEGRENDELES_SORRowDeleting">
+        <xs:element name="MEGRENDELES_SOR" msprop:Generator_UserTableName="MEGRENDELES_SOR" msprop:Generator_RowDeletedName="MEGRENDELES_SORRowDeleted" msprop:Generator_RowChangedName="MEGRENDELES_SORRowChanged" msprop:Generator_RowClassName="MEGRENDELES_SORRow" msprop:Generator_RowChangingName="MEGRENDELES_SORRowChanging" msprop:Generator_RowEvArgName="MEGRENDELES_SORRowChangeEvent" msprop:Generator_RowEvHandlerName="MEGRENDELES_SORRowChangeEventHandler" msprop:Generator_TableClassName="MEGRENDELES_SORDataTable" msprop:Generator_TableVarName="tableMEGRENDELES_SOR" msprop:Generator_RowDeletingName="MEGRENDELES_SORRowDeleting" msprop:Generator_TablePropName="MEGRENDELES_SOR">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="SOR_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="SOR_ID" msprop:Generator_ColumnPropNameInRow="SOR_ID" msprop:Generator_ColumnVarNameInTable="columnSOR_ID" msprop:Generator_ColumnPropNameInTable="SOR_IDColumn" type="xs:int" />
-              <xs:element name="FEJ_ID" msprop:Generator_UserColumnName="FEJ_ID" msprop:Generator_ColumnPropNameInRow="FEJ_ID" msprop:Generator_ColumnVarNameInTable="columnFEJ_ID" msprop:Generator_ColumnPropNameInTable="FEJ_IDColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="CIKK_ID" msprop:Generator_UserColumnName="CIKK_ID" msprop:Generator_ColumnPropNameInRow="CIKK_ID" msprop:Generator_ColumnVarNameInTable="columnCIKK_ID" msprop:Generator_ColumnPropNameInTable="CIKK_IDColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="BESZ_AR" msprop:Generator_UserColumnName="BESZ_AR" msprop:Generator_ColumnPropNameInRow="BESZ_AR" msprop:Generator_ColumnVarNameInTable="columnBESZ_AR" msprop:Generator_ColumnPropNameInTable="BESZ_ARColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="MENNYISEG" msprop:Generator_UserColumnName="MENNYISEG" msprop:Generator_ColumnPropNameInRow="MENNYISEG" msprop:Generator_ColumnVarNameInTable="columnMENNYISEG" msprop:Generator_ColumnPropNameInTable="MENNYISEGColumn" type="xs:double" minOccurs="0" />
-              <xs:element name="MEGNEVEZES" msprop:Generator_UserColumnName="MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGNEVEZESColumn">
+              <xs:element name="SOR_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="SOR_ID" msprop:Generator_ColumnVarNameInTable="columnSOR_ID" msprop:Generator_ColumnPropNameInRow="SOR_ID" msprop:Generator_ColumnPropNameInTable="SOR_IDColumn" type="xs:int" />
+              <xs:element name="FEJ_ID" msprop:Generator_UserColumnName="FEJ_ID" msprop:Generator_ColumnVarNameInTable="columnFEJ_ID" msprop:Generator_ColumnPropNameInRow="FEJ_ID" msprop:Generator_ColumnPropNameInTable="FEJ_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CIKK_ID" msprop:Generator_UserColumnName="CIKK_ID" msprop:Generator_ColumnVarNameInTable="columnCIKK_ID" msprop:Generator_ColumnPropNameInRow="CIKK_ID" msprop:Generator_ColumnPropNameInTable="CIKK_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="BESZ_AR" msprop:Generator_UserColumnName="BESZ_AR" msprop:Generator_ColumnVarNameInTable="columnBESZ_AR" msprop:Generator_ColumnPropNameInRow="BESZ_AR" msprop:Generator_ColumnPropNameInTable="BESZ_ARColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MENNYISEG" msprop:Generator_UserColumnName="MENNYISEG" msprop:Generator_ColumnVarNameInTable="columnMENNYISEG" msprop:Generator_ColumnPropNameInRow="MENNYISEG" msprop:Generator_ColumnPropNameInTable="MENNYISEGColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MEGNEVEZES" msprop:Generator_UserColumnName="MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGNEVEZESColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="MEGYS_MEGNEVEZES" msprop:Generator_UserColumnName="MEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGYS_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGYS_MEGNEVEZESColumn" minOccurs="0">
+              <xs:element name="MEGYS_MEGNEVEZES" msprop:Generator_UserColumnName="MEGYS_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGYS_MEGNEVEZESColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

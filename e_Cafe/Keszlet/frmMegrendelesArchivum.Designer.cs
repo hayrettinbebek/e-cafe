@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sORSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGRENDELESFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsMegrendeles = new e_Cafe.SQL.dsMegrendeles();
             this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.mEGRENDELESFEJMEGRENDELESSORBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mEGRENDELES_SORTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_SORTableAdapter();
-            this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sORSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mENNYISEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGYSMEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bESZARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mEGRENDELESFEJMEGRENDELESSORBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mEGRENDELES_SORTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_SORTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mEGRENDELESFEJBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMegrendeles)).BeginInit();
@@ -62,10 +62,34 @@
             this.dataGridView1.DataSource = this.mEGRENDELESFEJBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(736, 125);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // dATUMDataGridViewTextBoxColumn
+            // 
+            this.dATUMDataGridViewTextBoxColumn.DataPropertyName = "DATUM";
+            this.dATUMDataGridViewTextBoxColumn.HeaderText = "Dátum";
+            this.dATUMDataGridViewTextBoxColumn.Name = "dATUMDataGridViewTextBoxColumn";
+            this.dATUMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pNEVDataGridViewTextBoxColumn
+            // 
+            this.pNEVDataGridViewTextBoxColumn.DataPropertyName = "P_NEV";
+            this.pNEVDataGridViewTextBoxColumn.HeaderText = "Szállító";
+            this.pNEVDataGridViewTextBoxColumn.Name = "pNEVDataGridViewTextBoxColumn";
+            this.pNEVDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sORSZAMDataGridViewTextBoxColumn
+            // 
+            this.sORSZAMDataGridViewTextBoxColumn.DataPropertyName = "SORSZAM";
+            this.sORSZAMDataGridViewTextBoxColumn.HeaderText = "Sorszám";
+            this.sORSZAMDataGridViewTextBoxColumn.Name = "sORSZAMDataGridViewTextBoxColumn";
+            this.sORSZAMDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mEGRENDELESFEJBindingSource
             // 
@@ -99,36 +123,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(736, 150);
             this.dataGridView2.TabIndex = 1;
             // 
-            // mEGRENDELESFEJMEGRENDELESSORBindingSource
-            // 
-            this.mEGRENDELESFEJMEGRENDELESSORBindingSource.DataMember = "MEGRENDELES_FEJ_MEGRENDELES_SOR";
-            this.mEGRENDELESFEJMEGRENDELESSORBindingSource.DataSource = this.mEGRENDELESFEJBindingSource;
-            // 
-            // mEGRENDELES_SORTableAdapter
-            // 
-            this.mEGRENDELES_SORTableAdapter.ClearBeforeFill = true;
-            // 
-            // dATUMDataGridViewTextBoxColumn
-            // 
-            this.dATUMDataGridViewTextBoxColumn.DataPropertyName = "DATUM";
-            this.dATUMDataGridViewTextBoxColumn.HeaderText = "Dátum";
-            this.dATUMDataGridViewTextBoxColumn.Name = "dATUMDataGridViewTextBoxColumn";
-            this.dATUMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pNEVDataGridViewTextBoxColumn
-            // 
-            this.pNEVDataGridViewTextBoxColumn.DataPropertyName = "P_NEV";
-            this.pNEVDataGridViewTextBoxColumn.HeaderText = "Szállító";
-            this.pNEVDataGridViewTextBoxColumn.Name = "pNEVDataGridViewTextBoxColumn";
-            this.pNEVDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sORSZAMDataGridViewTextBoxColumn
-            // 
-            this.sORSZAMDataGridViewTextBoxColumn.DataPropertyName = "SORSZAM";
-            this.sORSZAMDataGridViewTextBoxColumn.HeaderText = "Sorszám";
-            this.sORSZAMDataGridViewTextBoxColumn.Name = "sORSZAMDataGridViewTextBoxColumn";
-            this.sORSZAMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // mEGNEVEZESDataGridViewTextBoxColumn
             // 
             this.mEGNEVEZESDataGridViewTextBoxColumn.DataPropertyName = "MEGNEVEZES";
@@ -158,6 +152,15 @@
             this.bESZARDataGridViewTextBoxColumn.Name = "bESZARDataGridViewTextBoxColumn";
             this.bESZARDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // mEGRENDELESFEJMEGRENDELESSORBindingSource
+            // 
+            this.mEGRENDELESFEJMEGRENDELESSORBindingSource.DataMember = "MEGRENDELES_FEJ_MEGRENDELES_SOR";
+            this.mEGRENDELESFEJMEGRENDELESSORBindingSource.DataSource = this.mEGRENDELESFEJBindingSource;
+            // 
+            // mEGRENDELES_SORTableAdapter
+            // 
+            this.mEGRENDELES_SORTableAdapter.ClearBeforeFill = true;
+            // 
             // frmMegrendelesArchivum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +170,7 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMegrendelesArchivum";
-            this.Text = "frmMegrendelesArchivum";
+            this.Text = "Megrendelések";
             this.Load += new System.EventHandler(this.frmMegrendelesArchivum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mEGRENDELESFEJBindingSource)).EndInit();

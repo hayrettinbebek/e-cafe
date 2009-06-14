@@ -28,7 +28,8 @@ namespace e_Cafe.Keszlet
             this.mEGRENDELES_FEJTableAdapter.Fill(this.dsMegrendeles.MEGRENDELES_FEJ);
 
             this.pARTNERTableAdapter.FillSzallito(this.dsPartnerek.PARTNER, 1);
-
+            tsKilep.Image = global::GUI.Properties.Resources.Close.ToBitmap();
+            btnKilep.Image = global::GUI.Properties.Resources.Close.ToBitmap();
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,6 +61,19 @@ namespace e_Cafe.Keszlet
                 foreach (var m in aktMegr.lMegrendelesSorok)
                 {
                     megrendelesSorBindingSource.Add(m);
+                }
+
+                if (aktMegr.LEZART == true)
+                {
+                    pnlLezart.BackgroundImage = global::GUI.Properties.Resources.Delete.ToBitmap();
+                    pnlLezart.BackgroundImageLayout = ImageLayout.Stretch;
+                    pnlLezart2.BackgroundImage = global::GUI.Properties.Resources.Delete.ToBitmap();
+                    pnlLezart2.BackgroundImageLayout = ImageLayout.Stretch;
+                }
+                else
+                {
+                    pnlLezart.BackgroundImage = null;
+                    pnlLezart2.BackgroundImage = null;
                 }
             }
         }
