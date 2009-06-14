@@ -70,7 +70,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(184, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(782, 470);
+            this.panel3.Size = new System.Drawing.Size(778, 466);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -78,9 +78,9 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(966, 0);
+            this.panel4.Location = new System.Drawing.Point(962, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(128, 470);
+            this.panel4.Size = new System.Drawing.Size(128, 466);
             this.panel4.TabIndex = 0;
             // 
             // panel5
@@ -115,7 +115,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(184, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(782, 20);
+            this.panel6.Size = new System.Drawing.Size(778, 20);
             this.panel6.TabIndex = 0;
             // 
             // ilLogin
@@ -137,7 +137,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(184, 470);
+            this.panel2.Size = new System.Drawing.Size(184, 466);
             this.panel2.TabIndex = 1;
             // 
             // pnlHelyek
@@ -146,7 +146,7 @@
             this.pnlHelyek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHelyek.Location = new System.Drawing.Point(10, 55);
             this.pnlHelyek.Name = "pnlHelyek";
-            this.pnlHelyek.Size = new System.Drawing.Size(150, 415);
+            this.pnlHelyek.Size = new System.Drawing.Size(150, 411);
             this.pnlHelyek.TabIndex = 9;
             // 
             // panel9
@@ -155,7 +155,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel9.Location = new System.Drawing.Point(160, 55);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(24, 415);
+            this.panel9.Size = new System.Drawing.Size(24, 411);
             this.panel9.TabIndex = 10;
             // 
             // panel8
@@ -164,7 +164,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 55);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 415);
+            this.panel8.Size = new System.Drawing.Size(10, 411);
             this.panel8.TabIndex = 7;
             // 
             // panel7
@@ -196,9 +196,9 @@
             this.panel1.Controls.Add(this.btnKijelent);
             this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 470);
+            this.panel1.Location = new System.Drawing.Point(0, 466);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1094, 116);
+            this.panel1.Size = new System.Drawing.Size(1090, 116);
             this.panel1.TabIndex = 0;
             // 
             // label7
@@ -406,7 +406,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 586);
+            this.ClientSize = new System.Drawing.Size(1090, 582);
             this.ControlBox = false;
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
