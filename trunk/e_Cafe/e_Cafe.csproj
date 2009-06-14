@@ -522,22 +522,22 @@
     <Compile Include="Torzsek\frmUjCikk.Designer.cs">
       <DependentUpon>frmUjCikk.cs</DependentUpon>
     </Compile>
-    <Compile Include="Torzsek\frmUjUser.cs">
+    <Compile Include="Admin\frmUjUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Torzsek\frmUjUser.Designer.cs">
+    <Compile Include="Admin\frmUjUser.Designer.cs">
       <DependentUpon>frmUjUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Torzsek\frmUser.cs">
+    <Compile Include="Admin\frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Torzsek\frmUser.Designer.cs">
+    <Compile Include="Admin\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Torzsek\frmUserJogok.cs">
+    <Compile Include="Admin\frmUserJogok.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Torzsek\frmUserJogok.Designer.cs">
+    <Compile Include="Admin\frmUserJogok.Designer.cs">
       <DependentUpon>frmUserJogok.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AsztalInfo.cs">
@@ -750,15 +750,15 @@
       <DependentUpon>frmUjCikk.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Torzsek\frmUjUser.resx">
+    <EmbeddedResource Include="Admin\frmUjUser.resx">
       <DependentUpon>frmUjUser.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Torzsek\frmUser.resx">
+    <EmbeddedResource Include="Admin\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Torzsek\frmUserJogok.resx">
+    <EmbeddedResource Include="Admin\frmUserJogok.resx">
       <DependentUpon>frmUserJogok.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

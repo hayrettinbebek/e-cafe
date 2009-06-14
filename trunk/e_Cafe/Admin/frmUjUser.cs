@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using BusinessLogic;
 
 
-namespace e_Cafe.Torzsek
+namespace e_Cafe.Admin
 {
     public partial class frmUjUser : Form
     {

@@ -858,6 +858,7 @@
     <Content Include="asztal\pult\pult_off.png" />
     <Content Include="asztal\pult\pult_on.png" />
     <Content Include="asztal\pult\pult_over.png" />
+    <None Include="gombok\User Group.ico" />
     <None Include="gombok\Delete.ico" />
     <None Include="gombok\Ok.ico" />
     <None Include="gombok\Ok-64x64.png" />

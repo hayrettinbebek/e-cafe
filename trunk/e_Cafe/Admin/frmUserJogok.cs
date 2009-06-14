@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace e_Cafe.Torzsek
+namespace e_Cafe.Admin
 {
     public partial class frmUserJogok : Form
 

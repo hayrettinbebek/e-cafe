@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
 
-namespace e_Cafe.Torzsek
+namespace e_Cafe.Admin
 {
     public partial class frmUser : Form
     {
@@ -36,6 +36,7 @@ namespace e_Cafe.Torzsek
         private void frmUser_Load(object sender, EventArgs e)
         {
             initDataset();
+            tsNewUser.Image = global::GUI.Properties.Resources.User_Group.ToBitmap();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

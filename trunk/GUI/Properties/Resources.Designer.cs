@@ -179,6 +179,13 @@ namespace GUI.Properties {
             }
         }
         
+        public static System.Drawing.Icon User_Group {
+            get {
+                object obj = ResourceManager.GetObject("User_Group", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap zoldon {
             get {
                 object obj = ResourceManager.GetObject("zoldon", resourceCulture);
