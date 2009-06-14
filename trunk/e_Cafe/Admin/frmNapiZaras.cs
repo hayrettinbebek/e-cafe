@@ -51,12 +51,12 @@ namespace e_Cafe.Admin
                         #region nyitott nap ellenőrzése
                         if (nz.VaneNyitotNap())
                         {
-                            pnlVanNyitottNap.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
+                            pnlVanNyitottNap.BackgroundImage = global::GUI.Properties.Resources.Ok.ToBitmap();
 
                         }
                         else
                         {
-                            pnlVanNyitottNap.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
+                            pnlVanNyitottNap.BackgroundImage = global::GUI.Properties.Resources.Delete.ToBitmap();
                             button1.Enabled = false;
                         }
                         processCounter++;
@@ -70,12 +70,12 @@ namespace e_Cafe.Admin
                         #region nyitott rendelések ellenőrzése
                         if (DEFS.checkNyitottRendeles())
                         {
-                            pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
+                            pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.Ok.ToBitmap();
                             
                         }
                         else
                         {
-                            pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
+                            pnlNyitRendel.BackgroundImage = global::GUI.Properties.Resources.Delete.ToBitmap();
                             button1.Enabled = false;
                             pnlNyitRendel.Click += NyitRendelInfo_Click;
                         }
@@ -90,11 +90,11 @@ namespace e_Cafe.Admin
                         #region tartozások ellenőrzése
                         if (DEFS.checkTartozasok())
                         {
-                            pnlNyitTartozas.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
+                            pnlNyitTartozas.BackgroundImage = global::GUI.Properties.Resources.Ok.ToBitmap();
                         }
                         else
                         {
-                            pnlNyitTartozas.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
+                            pnlNyitTartozas.BackgroundImage = global::GUI.Properties.Resources.Delete.ToBitmap();
                             button1.Enabled = false;
                         }
                         processCounter++;
@@ -108,11 +108,11 @@ namespace e_Cafe.Admin
                         #region negatív raktárkészlet
                         if (DEFS.checkNegativKeszlet())
                         {
-                            pnlNegRaktar.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
+                            pnlNegRaktar.BackgroundImage = global::GUI.Properties.Resources.Ok.ToBitmap();
                         }
                         else
                         {
-                            pnlNegRaktar.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
+                            pnlNegRaktar.BackgroundImage = global::GUI.Properties.Resources.Delete.ToBitmap();
                             button1.Enabled = false;
                             pnlNegRaktar.Click += NegKeszletInfo_Click;
                         }
@@ -127,11 +127,11 @@ namespace e_Cafe.Admin
                         #region adatbázis konzisztencia
                         if (DEFS.checkDatabaseKonsist())
                         {
-                            pnlKonzisztencia.BackgroundImage = global::GUI.Properties.Resources.OK_ICON;
+                            pnlKonzisztencia.BackgroundImage = global::GUI.Properties.Resources.Ok.ToBitmap();
                         }
                         else
                         {
-                            pnlKonzisztencia.BackgroundImage = global::GUI.Properties.Resources.ERROR_ICON;
+                            pnlKonzisztencia.BackgroundImage = global::GUI.Properties.Resources.Delete.ToBitmap();
                         }
                         processCounter++;
                         if ((pbStatus.Value + Convert.ToInt16(Math.Round((100.0 / maxEvents), 0))) > 100)
