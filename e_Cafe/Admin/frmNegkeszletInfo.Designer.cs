@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.cIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rOVIDNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +64,11 @@
             this.dataGridView1.Size = new System.Drawing.Size(747, 270);
             this.dataGridView1.TabIndex = 0;
             // 
+            // cikkBindingSource
+            // 
+            this.cikkBindingSource.AllowNew = false;
+            this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(328, 276);
@@ -73,10 +78,6 @@
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cikkBindingSource
-            // 
-            this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
             // 
             // cIKKIDDataGridViewTextBoxColumn
             // 
@@ -90,6 +91,7 @@
             this.mEGNEVEZESDataGridViewTextBoxColumn.DataPropertyName = "MEGNEVEZES";
             this.mEGNEVEZESDataGridViewTextBoxColumn.HeaderText = "Cikk neve";
             this.mEGNEVEZESDataGridViewTextBoxColumn.Name = "mEGNEVEZESDataGridViewTextBoxColumn";
+            this.mEGNEVEZESDataGridViewTextBoxColumn.ReadOnly = true;
             this.mEGNEVEZESDataGridViewTextBoxColumn.Width = 140;
             // 
             // rOVIDNEVDataGridViewTextBoxColumn
@@ -97,6 +99,7 @@
             this.rOVIDNEVDataGridViewTextBoxColumn.DataPropertyName = "ROVID_NEV";
             this.rOVIDNEVDataGridViewTextBoxColumn.HeaderText = "Rövid név";
             this.rOVIDNEVDataGridViewTextBoxColumn.Name = "rOVIDNEVDataGridViewTextBoxColumn";
+            this.rOVIDNEVDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fKESZLETDataGridViewTextBoxColumn
             // 
@@ -123,8 +126,11 @@
             // oSSZETETTDataGridViewCheckBoxColumn
             // 
             this.oSSZETETTDataGridViewCheckBoxColumn.DataPropertyName = "OSSZETETT";
-            this.oSSZETETTDataGridViewCheckBoxColumn.HeaderText = "OSSZETETT";
+            this.oSSZETETTDataGridViewCheckBoxColumn.FalseValue = "0";
+            this.oSSZETETTDataGridViewCheckBoxColumn.HeaderText = "Összetett cikk";
             this.oSSZETETTDataGridViewCheckBoxColumn.Name = "oSSZETETTDataGridViewCheckBoxColumn";
+            this.oSSZETETTDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.oSSZETETTDataGridViewCheckBoxColumn.TrueValue = "1";
             // 
             // frmNegkeszletInfo
             // 

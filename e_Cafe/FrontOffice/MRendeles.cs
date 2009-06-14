@@ -507,7 +507,7 @@ namespace e_Cafe
 
             foreach (var r in tblRendeles.SelectedItems)
             {
-                r.Cells[0].Image = global::GUI.Properties.Resources.pipaon;
+                r.Cells[0].Image = global::GUI.Properties.Resources.Ok.ToBitmap();
             }
 
         }

@@ -88,16 +88,16 @@ namespace GUI.Properties {
             }
         }
         
-        public static System.Drawing.Bitmap enter_T {
+        public static System.Drawing.Icon Delete {
             get {
-                object obj = ResourceManager.GetObject("enter_T", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("Delete", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
-        public static System.Drawing.Bitmap ERROR_ICON {
+        public static System.Drawing.Bitmap enter_T {
             get {
-                object obj = ResourceManager.GetObject("ERROR_ICON", resourceCulture);
+                object obj = ResourceManager.GetObject("enter_T", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,10 +123,10 @@ namespace GUI.Properties {
             }
         }
         
-        public static System.Drawing.Bitmap OK_ICON {
+        public static System.Drawing.Icon Ok {
             get {
-                object obj = ResourceManager.GetObject("OK_ICON", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("Ok", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -161,13 +161,6 @@ namespace GUI.Properties {
         public static System.Drawing.Bitmap pipaoff {
             get {
                 object obj = ResourceManager.GetObject("pipaoff", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        public static System.Drawing.Bitmap pipaon {
-            get {
-                object obj = ResourceManager.GetObject("pipaon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -61,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(17, 31);
+            this.label1.Location = new System.Drawing.Point(3, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 20);
             this.label1.TabIndex = 0;
@@ -72,7 +72,7 @@
             this.lblNEV.AutoSize = true;
             this.lblNEV.Location = new System.Drawing.Point(3, 0);
             this.lblNEV.Name = "lblNEV";
-            this.lblNEV.Size = new System.Drawing.Size(0, 20);
+            this.lblNEV.Size = new System.Drawing.Size(0, 25);
             this.lblNEV.TabIndex = 1;
             // 
             // lblHO
@@ -80,7 +80,7 @@
             this.lblHO.AutoSize = true;
             this.lblHO.Location = new System.Drawing.Point(9, 0);
             this.lblHO.Name = "lblHO";
-            this.lblHO.Size = new System.Drawing.Size(0, 20);
+            this.lblHO.Size = new System.Drawing.Size(0, 25);
             this.lblHO.TabIndex = 1;
             // 
             // lblNAP
@@ -88,7 +88,7 @@
             this.lblNAP.AutoSize = true;
             this.lblNAP.Location = new System.Drawing.Point(15, 0);
             this.lblNAP.Name = "lblNAP";
-            this.lblNAP.Size = new System.Drawing.Size(0, 20);
+            this.lblNAP.Size = new System.Drawing.Size(0, 25);
             this.lblNAP.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -96,8 +96,8 @@
             this.flowLayoutPanel1.Controls.Add(this.lblNEV);
             this.flowLayoutPanel1.Controls.Add(this.lblHO);
             this.flowLayoutPanel1.Controls.Add(this.lblNAP);
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(189, 26);
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(168, 31);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(158, 30);
             this.flowLayoutPanel1.TabIndex = 2;
@@ -105,7 +105,7 @@
             // pnlVanNyitottNap
             // 
             this.pnlVanNyitottNap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlVanNyitottNap.Location = new System.Drawing.Point(353, 27);
+            this.pnlVanNyitottNap.Location = new System.Drawing.Point(332, 32);
             this.pnlVanNyitottNap.Name = "pnlVanNyitottNap";
             this.pnlVanNyitottNap.Size = new System.Drawing.Size(33, 29);
             this.pnlVanNyitottNap.TabIndex = 4;
@@ -264,6 +264,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "frmNapiZaras";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Napi zárás";
             this.Load += new System.EventHandler(this.frmNapiZaras_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
