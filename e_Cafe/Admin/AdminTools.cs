@@ -9,9 +9,7 @@ namespace e_Cafe
 {
     public partial class AdminTools : Form
     {
-        private int childFormNumber = 0;
-        //TBLObj admBlObj;
-
+        
         public AdminTools()
         {
             InitializeComponent();

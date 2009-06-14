@@ -39,7 +39,7 @@ namespace e_Cafe
         int Cikkek_ScrollPos = 0;
         int Cikkek_MaxScroll = 0;
         int Cikkek_needScroll = 0;
-        int Cikkek_MaxSpace = 0;
+        
 
         int AlCsopScrollPos = 0;
         int Alcsop_MaxScroll = 0;

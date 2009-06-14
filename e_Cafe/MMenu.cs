@@ -198,12 +198,16 @@ namespace e_Cafe
                             DEFS.UserLogin(fl.selUser.USER_ID);
                         }
                         SetUserSettings(fl.selUser);
-                        
+
                         r = true;
                         break;
 
                     }
 
+                }
+                else
+                {
+                    k = 3;
                 }
             }
 
