@@ -82,11 +82,11 @@ namespace e_Cafe
         {
             if ((txtSzallitolevel.Text == "") && (txtSzamlaszam.Text == ""))
             {
-                
+
                 DEFS.SendInfoMessage("Szállítólevél vagy számlaszám megadása kötelező!!");
                 return false;
             }
-            else
+            else 
             {
                 aktBevfej.SZALLITOLEVEL_SZAM = txtSzallitolevel.Text;
                 aktBevfej.SZAMLASZAM = txtSzamlaszam.Text;
@@ -111,7 +111,17 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
+            lblCikk.Text = "Kérem válasszon cikket!";
+            cikk_id = -1;
+
             
+            
+            afa_szaz = -99;
+            lblMert.Text = "";
+            lblPenz.Text = "";
+            txtMegj.Text = "";
+            txtMenny.Text = "";
+            txtEgys.Text = "";
 
 
             if (SaveFej())
@@ -236,8 +246,16 @@ namespace e_Cafe
 
         private Boolean CheckInput()
         {
-            if (cikk_id > 0) { DEFS.DebugLog("Cikk kiválasztása sikeres:" + cikk_id.ToString()); }
             Boolean ret = true;
+            if (cikk_id > 0)
+            {
+                DEFS.DebugLog("Cikk kiválasztása sikeres:" + cikk_id.ToString());
+                ret = true;
+            }
+            else
+            {
+                ret = false;
+            }
 
             try
             {
