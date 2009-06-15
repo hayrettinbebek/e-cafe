@@ -84,9 +84,9 @@
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.cikkBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 202);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 85);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(651, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(651, 350);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 

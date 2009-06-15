@@ -13,7 +13,7 @@ namespace e_Cafe.Admin
 {
     public partial class frmNegkeszletInfo : Form
     {
-        Cikk_list cl = new Cikk_list(new SqlConnection(DEFS.ConSTR));
+        Cikk_list cl = new Cikk_list(CikkListContructType.FullCikk);
 
         public frmNegkeszletInfo()
         {

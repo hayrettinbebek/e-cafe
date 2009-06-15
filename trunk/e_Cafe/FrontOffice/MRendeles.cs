@@ -29,7 +29,7 @@ namespace e_Cafe
 
         Cikkcsoport_list cl = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
 
-        Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
+        Cikk_list lCikkList = new Cikk_list(CikkListContructType.ForRendeles);
         Rendeles _AktRendeles;
 
         int CikkCsopScrollPos = 0;
@@ -579,7 +579,7 @@ namespace e_Cafe
             }
             _AktRendeles.SaveRendeles();
             _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
-            lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR), true);
+            lCikkList = new Cikk_list(CikkListContructType.ForRendeles);
             initRendelTabla();
 
 
