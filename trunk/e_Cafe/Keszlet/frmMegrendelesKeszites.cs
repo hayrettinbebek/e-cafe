@@ -92,7 +92,7 @@ namespace e_Cafe.Keszlet
             }
             if (chkMind.Checked)
             {
-                aktCikkList = new Cikk_list();
+                aktCikkList = new Cikk_list(CikkListContructType.CikkSelector);
                 cikkBindingSource.Clear();
                 foreach (var c in aktCikkList.lCIKK)
                 {

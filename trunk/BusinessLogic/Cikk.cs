@@ -8,6 +8,11 @@ using NSpring.Logging;
 
 namespace BusinessLogic
 {
+    public enum CikkListContructType
+    {
+        CikkSelector,
+        CikkselectorKeszlet
+    }
     #region Cikk
     public class Cikk
     {
@@ -1098,7 +1103,7 @@ namespace BusinessLogic
             sc.Close();
         }
 
-        public Cikk_list()
+        public Cikk_list(CikkListContructType loadType)
         {
             SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
@@ -1107,26 +1112,60 @@ namespace BusinessLogic
             cmd.Connection = sc;
 
             cmd.CommandType = CommandType.Text;
-
-            cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, MEGYS_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK c WHERE AKTIV = 1 and CIKK_TIPUS = 0";
-            SqlDataReader rdr = cmd.ExecuteReader();
-            while (rdr.Read())
+            switch (loadType)
             {
-                try
-                {
-                    Cikk t = new Cikk((int)rdr["CIKK_ID"], (string)rdr["MEGNEVEZES"], (int)rdr["CIKK_TIPUS"], (int)rdr["CIKKCSOPORT_ID"]);
-                    t.MEGYS_ID = (string)rdr["MEGYS_ID"];
-                    t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
-                    lCIKK.Add(t);
-                }
-                catch (Exception e)
-                {
-                    DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
-                    DEFS.ExLog(e.Message + "--->" + e.StackTrace);
-                }
+                case CikkListContructType.CikkSelector:
+                    {
+                        cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, MEGYS_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK c WHERE AKTIV = 1 and CIKK_TIPUS = 0";
+                        SqlDataReader rdr = cmd.ExecuteReader();
+                        while (rdr.Read())
+                        {
+                            try
+                            {
+                                Cikk t = new Cikk((int)rdr["CIKK_ID"], (string)rdr["MEGNEVEZES"], (int)rdr["CIKK_TIPUS"], (int)rdr["CIKKCSOPORT_ID"]);
+                                t.MEGYS_ID = (string)rdr["MEGYS_ID"];
+                                t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                                lCIKK.Add(t);
+                            }
+                            catch (Exception e)
+                            {
+                                DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                                DEFS.ExLog(e.Message + "--->" + e.StackTrace);
+                            }
 
+                        }
+                        rdr.Close();
+                        break;
+                    }
+                case CikkListContructType.CikkselectorKeszlet:
+                    {
+                        cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, MEGYS_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK c WHERE AKTIV = 1 and CIKK_TIPUS = 0";
+                        SqlDataReader rdr = cmd.ExecuteReader();
+                        while (rdr.Read())
+                        {
+                            try
+                            {
+                                Cikk t = new Cikk((int)rdr["CIKK_ID"], (string)rdr["MEGNEVEZES"], (int)rdr["CIKK_TIPUS"], (int)rdr["CIKKCSOPORT_ID"]);
+                                t.MEGYS_ID = (string)rdr["MEGYS_ID"];
+                                t.ALAP_RAKTAR = (int)rdr["DEFAULT_RAKTAR"];
+                                t.getKeszlet();
+                                lCIKK.Add(t);
+                            }
+                            catch (Exception e)
+                            {
+                                DEFS.log(Level.Exception, "Sikertelen betöltés, <null> érték az adatbázisban");
+                                DEFS.ExLog(e.Message + "--->" + e.StackTrace);
+                            }
+
+                        }
+                        rdr.Close();
+                        break;
+                    }
+                default:
+                    break;
             }
-            rdr.Close();
+
+            
             sc.Close();
         }
 

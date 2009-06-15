@@ -258,7 +258,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(496, 451);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(422, 425);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 13);
             this.label1.TabIndex = 3;
@@ -319,9 +320,9 @@
             // flpLoggenInusers
             // 
             this.flpLoggenInusers.BackColor = System.Drawing.Color.Transparent;
-            this.flpLoggenInusers.Location = new System.Drawing.Point(650, 186);
+            this.flpLoggenInusers.Location = new System.Drawing.Point(650, 192);
             this.flpLoggenInusers.Name = "flpLoggenInusers";
-            this.flpLoggenInusers.Size = new System.Drawing.Size(60, 252);
+            this.flpLoggenInusers.Size = new System.Drawing.Size(60, 246);
             this.flpLoggenInusers.TabIndex = 6;
             // 
             // frmLogin

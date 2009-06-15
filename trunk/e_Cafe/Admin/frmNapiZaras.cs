@@ -178,7 +178,7 @@ namespace e_Cafe.Admin
                                                                             , DEFS.NyitNap_HO,
                                                                             DEFS.NyitNap_NAP));
                 }
-                dp.doPreview();
+                dp.doPrint();
                 Application.Exit();
             }
         }

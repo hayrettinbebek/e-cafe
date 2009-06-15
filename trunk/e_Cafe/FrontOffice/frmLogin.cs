@@ -74,7 +74,12 @@ namespace e_Cafe
             ub.BackgroundImageLayout = ImageLayout.Stretch;
             if (loginUsers.IsLoggedIn(-666))
             {
-                ub.BackColor = Color.Green;
+                //ub.BackColor = Color.Green;
+                Label ll = new Label();
+                ll.Text = nu.NAME;
+                ll.ForeColor = Color.White;
+                ll.Width = 60;
+                flpLoggenInusers.Controls.Add(ll);
             }
             ub.Checked = true;
 
