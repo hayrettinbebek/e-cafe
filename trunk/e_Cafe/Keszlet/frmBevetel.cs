@@ -221,8 +221,8 @@ namespace e_Cafe
                 cmbRaktar.SelectedValue = fc.DEF_RAKT;
                 lblCikk.Text = fc.CIKK_NEV;
                 afa_szaz = fc.AFA_SZAZ;
-                lblMert.Text = fc.c.MEGYS_ID.ToString();
-                lblPenz.Text = "Ft / " + fc.c.MEGYS_ID.ToString();
+                lblMert.Text = fc.c.MEGYS_MEGNEVEZES.ToString();
+                lblPenz.Text = "Ft / " + fc.c.MEGYS_MEGNEVEZES.ToString();
 
             }
         }
