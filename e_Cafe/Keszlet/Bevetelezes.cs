@@ -44,7 +44,7 @@ namespace e_Cafe
             //    bevetelfejBindingSource.Add(c);
             //}
 
-            Cikk_list cl = new Cikk_list(new SqlConnection(DEFS.ConSTR));
+            Cikk_list cl = new Cikk_list(CikkListContructType.FullCikk);
             cikkBindingSource.Clear();
             foreach (var cc in cl.lCIKK)
             {
