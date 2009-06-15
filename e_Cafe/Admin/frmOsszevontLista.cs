@@ -48,7 +48,7 @@ namespace e_Cafe.Admin
                                                                         , ((OpenDay)listBox1.SelectedValue).HO,
                                                                         ((OpenDay)listBox1.SelectedValue).NAP));
             }
-            dp.doPreview();
+            dp.doPrint();
 
             
         }

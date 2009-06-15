@@ -5,7 +5,7 @@ namespace BusinessLogic
 {
     public sealed class KeszletInfo
     {
-        private static DataSet _dataSet;
+        //private static DataSet _dataSet;
 
         public static DataSet CreateDataSet(int _Raktar, int _Cikk)
         {

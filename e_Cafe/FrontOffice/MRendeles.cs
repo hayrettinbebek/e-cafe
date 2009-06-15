@@ -730,7 +730,7 @@ namespace e_Cafe
 
                     doPrinting dp = new doPrinting();
                     dp.setReportMaker(new BlokkReport(szamla_fej_id));
-                    dp.doPreview();
+                    dp.doPrint();
 
                     DEFS.DebugLog("Rendelés fizetve");
 

@@ -50,7 +50,7 @@
             this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(411, 2);
+            this.button12.Location = new System.Drawing.Point(214, 195);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(39, 45);
             this.button12.TabIndex = 3;

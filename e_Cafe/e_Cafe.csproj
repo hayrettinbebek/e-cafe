@@ -456,10 +456,10 @@
     <Compile Include="Torzsek\frmAFA.Designer.cs">
       <DependentUpon>frmAFA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Torzsek\frmBevetel.cs">
+    <Compile Include="Keszlet\frmBevetel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Torzsek\frmBevetel.Designer.cs">
+    <Compile Include="Keszlet\frmBevetel.Designer.cs">
       <DependentUpon>frmBevetel.cs</DependentUpon>
     </Compile>
     <Compile Include="Torzsek\frmCikk.cs">
@@ -705,7 +705,7 @@
       <DependentUpon>frmAFA.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Torzsek\frmBevetel.resx">
+    <EmbeddedResource Include="Keszlet\frmBevetel.resx">
       <DependentUpon>frmBevetel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

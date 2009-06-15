@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace BusinessLogic
 {
     public partial class frmInfoMessage1 : Form
@@ -14,6 +15,7 @@ namespace BusinessLogic
         public frmInfoMessage1()
         {
             InitializeComponent();
+            button12.BackgroundImage = global::BusinessLogic.Properties.Resources.Ok.ToBitmap();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

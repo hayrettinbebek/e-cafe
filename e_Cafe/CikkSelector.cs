@@ -28,7 +28,7 @@ namespace e_Cafe
         public CikkSelector()
         {
             InitializeComponent();
-            l = new Cikk_list();
+            l = new Cikk_list(CikkListContructType.CikkselectorKeszlet);
             cikkBindingSource.Clear();
 
             foreach (var c in l.CikkFilter(""))
@@ -64,18 +64,37 @@ namespace e_Cafe
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            Filter();
+
+        }
+        private void Filter()
+        {
             cikkBindingSource.Clear();
 
             foreach (var c in l.CikkFilter(textBox1.Text))
             {
-                cikkBindingSource.Add(c);
+                if (chkNegKeszl.Checked)
+                {
+                    if (c.fKESZLET_ALL < 0)
+                    {
+                        cikkBindingSource.Add(c);
+                    }
+                }
+                else
+                {
+                    cikkBindingSource.Add(c);
+                }
             }
-
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             SelectCikk();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Filter();
         }
 
 

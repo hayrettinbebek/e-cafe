@@ -44,6 +44,7 @@
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chkNegKeszl = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBindingSource)).BeginInit();
@@ -82,9 +83,10 @@
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn,
             this.eRTEKESITESTIPUSADataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.cikkBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 62);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 202);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(610, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(651, 233);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
@@ -100,11 +102,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkNegKeszl);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 53);
+            this.groupBox1.Size = new System.Drawing.Size(450, 76);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kereső";
@@ -176,18 +179,31 @@
             // 
             this.cikkBindingSource.DataSource = typeof(BusinessLogic.Cikk);
             // 
+            // chkNegKeszl
+            // 
+            this.chkNegKeszl.AutoSize = true;
+            this.chkNegKeszl.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkNegKeszl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chkNegKeszl.Location = new System.Drawing.Point(36, 45);
+            this.chkNegKeszl.Name = "chkNegKeszl";
+            this.chkNegKeszl.Size = new System.Drawing.Size(138, 21);
+            this.chkNegKeszl.TabIndex = 5;
+            this.chkNegKeszl.Text = "Negatív készlet";
+            this.chkNegKeszl.UseVisualStyleBackColor = true;
+            this.chkNegKeszl.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // CikkSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 304);
+            this.ClientSize = new System.Drawing.Size(651, 435);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CikkSelector";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "CikkSelector";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cikk kiválasztása";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -213,5 +229,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn eRTEKESITESTIPUSADataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkNegKeszl;
     }
 }
