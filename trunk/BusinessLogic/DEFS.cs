@@ -481,6 +481,7 @@ namespace BusinessLogic
                                 " n.LEZART = 0 and Round(isnull(f.KESZLET_NYITO,0) + isnull(f.KESZLET_NAPI,0),2) < 0";
             c.Open();
             SqlDataReader rdr = cmd.ExecuteReader();
+            van = false;
             while (rdr.Read())
             {
                 if ((int)rdr["DB"] > 0)
