@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Data.SqlClient;
 using NSpring.Logging;
+using Microsoft.VisualBasic;
 
 namespace BusinessLogic
 {
@@ -1266,7 +1267,7 @@ namespace BusinessLogic
 
             var ret_cikk =
                 from c in lCIKK
-                where c.MEGNEVEZES.Contains(iCikkNev)
+                where c.MEGNEVEZES.ToUpper().Contains(iCikkNev.ToUpper())
                 select c;
             ret_cikk.Each(c => iTmpRet.Add(c));
 

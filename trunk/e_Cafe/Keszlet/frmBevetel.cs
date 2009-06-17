@@ -150,6 +150,19 @@ namespace e_Cafe
         {
             SaveFej();
             SaveSorok();
+
+            foreach (var bs in aktBevfej.lBevetelSorok)
+            {
+                if (bs.FELADVA == 0)
+                {
+                    bs.FELADVA = 1;
+                    bs.Save();
+                }
+            }
+            aktBevfej.KONYVELT = true;
+            aktBevfej.Save();
+
+
             DialogResult = DialogResult.OK;
             this.Close();
         }
