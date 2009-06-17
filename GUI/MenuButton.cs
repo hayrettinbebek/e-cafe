@@ -301,15 +301,15 @@ namespace GUI
             lKeszletOther.Width = 50;
             lKeszletOther.Height = 20;
             lKeszletOther.BackColor = Color.Transparent;
-            lKeszletOther.Location = new Point(90, 0);
+            lKeszletOther.Location = new Point(95, 7);
             lKeszletOther.Click += this.OnLabelClick;
             this.Controls.Add(lKeszletOther);
 
             lMegnevezes = new Label();
-            lMegnevezes.Width = 120;
+            lMegnevezes.Width = 180;
             lMegnevezes.Height = 20;
             lMegnevezes.BackColor = Color.Transparent;
-            lMegnevezes.Location = new Point(10, 20);
+            lMegnevezes.Location = new Point(10, 28);
             lMegnevezes.Font = f2;
             lMegnevezes.Click += this.OnLabelClick;
             this.Controls.Add(lMegnevezes);
@@ -318,7 +318,7 @@ namespace GUI
             lKiszereles.Width = 70;
             lKiszereles.Height = 20;
             lKiszereles.BackColor = Color.Transparent;
-            lKiszereles.Location = new Point(10, 45);
+            lKiszereles.Location = new Point(10, 50);
             lKiszereles.Font = f1;
             lKiszereles.Click += this.OnLabelClick;
             this.Controls.Add(lKiszereles);
@@ -327,7 +327,7 @@ namespace GUI
             lAr.Width = 50;
             lAr.Height = 20;
             lAr.BackColor = Color.Transparent;
-            lAr.Location = new Point(92, 45);
+            lAr.Location = new Point(92, 50);
             lAr.Font = f1;
             lAr.Click += this.OnLabelClick;
             this.Controls.Add(lAr);

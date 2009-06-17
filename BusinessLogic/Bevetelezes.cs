@@ -655,7 +655,7 @@ namespace BusinessLogic
             }
             //DEFS.SendSaveErrMessage(new_p_id.ToString() +" : Sikertelen bevlételezés mentés");
 
-            _BEVETEL_FEJ_ID = new_p_id;
+            //_BEVETEL_FEJ_ID = new_p_id;
 
             c.Close();
         }

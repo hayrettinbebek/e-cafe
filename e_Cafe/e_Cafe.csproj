@@ -564,12 +564,6 @@
     <Compile Include="UserControls\ChooseKeszletek.Designer.cs">
       <DependentUpon>ChooseKeszletek.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CikkValaszt.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\CikkValaszt.Designer.cs">
-      <DependentUpon>CikkValaszt.cs</DependentUpon>
-    </Compile>
     <Compile Include="MMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -776,10 +770,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ChooseKeszletek.resx">
       <DependentUpon>ChooseKeszletek.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CikkValaszt.resx">
-      <DependentUpon>CikkValaszt.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MMenu.resx">
