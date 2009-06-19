@@ -59,10 +59,6 @@ namespace BusinessLogic
             c.Open();
             cmd.ExecuteNonQuery();
             c.Close();
-            
-
-
-            Application.Exit();
         }
     }
 }
