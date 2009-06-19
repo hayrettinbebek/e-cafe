@@ -10,12 +10,12 @@ namespace BusinessLogic
         public static DataView GetOsszesEladas(int pEV, int pHO, int pNAP)
         {
             #region select
-            String SQL_COMMAND = "select sum(isnull(ELADAS_DB,0)) as ELADAS_DB, " +
-                                " sum(isnull(ELADAS,0)) as ELADAS, " +
-                                " sum(isnull(HITEL_DB,0)) as HITEL_DB, " +
-                                " sum(isnull(HITEL,0)) as HITEL, " +
-                                " sum(isnull(HITEL_FIZETVE_DB,0)) as HITEL_FIZETVE_DB, " +
-                                " sum(isnull(HITEL_FIZETVE,0)) as HITEL_FIZETVE from ( " +
+            String SQL_COMMAND = "select isnull(sum(ELADAS_DB),0) as ELADAS_DB, " +
+                                " isnull(sum(ELADAS),0) as ELADAS, " +
+                                " isnull(sum(HITEL_DB),0) as HITEL_DB, " +
+                                " isnull(sum(HITEL),0) as HITEL, " +
+                                " isnull(sum(HITEL_FIZETVE_DB),0) as HITEL_FIZETVE_DB, " +
+                                " isnull(sum(HITEL_FIZETVE),0) as HITEL_FIZETVE from ( " +
                                 " SELECT c.CIKKCSOPORT_ID, c.MEGNEVEZES, c.SPEC_ZARAS, " +
                                 " (select count(*)  from szamla_fej sf " +
 	                            " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +

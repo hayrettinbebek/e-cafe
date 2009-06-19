@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNapiZaras));
             this.label1 = new System.Windows.Forms.Label();
             this.lblNEV = new System.Windows.Forms.Label();
             this.lblHO = new System.Windows.Forms.Label();
@@ -51,6 +52,8 @@
             this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsOsszevontLista = new e_Cafe.SQL.dsOsszevontLista();
             this._JOGTableAdapter = new e_Cafe.SQL.dsOsszevontListaTableAdapters._JOGTableAdapter();
+            this.btnKilep = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).BeginInit();
@@ -222,7 +225,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(212, 306);
+            this.button1.Location = new System.Drawing.Point(212, 288);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -244,11 +247,41 @@
             // 
             this._JOGTableAdapter.ClearBeforeFill = true;
             // 
+            // btnKilep
+            // 
+            this.btnKilep.Location = new System.Drawing.Point(212, 317);
+            this.btnKilep.Name = "btnKilep";
+            this.btnKilep.Size = new System.Drawing.Size(75, 23);
+            this.btnKilep.TabIndex = 8;
+            this.btnKilep.Text = "Kilépés";
+            this.btnKilep.UseVisualStyleBackColor = true;
+            this.btnKilep.Visible = false;
+            this.btnKilep.Click += new System.EventHandler(this.btnKilep_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(471, 25);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(31, 36);
+            this.btnClose.TabIndex = 9;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.button12_Click);
+            // 
             // frmNapiZaras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 341);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnKilep);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbStatus);
@@ -302,6 +335,8 @@
         private e_Cafe.SQL.dsOsszevontLista dsOsszevontLista;
         private System.Windows.Forms.BindingSource jOGBindingSource;
         private e_Cafe.SQL.dsOsszevontListaTableAdapters._JOGTableAdapter _JOGTableAdapter;
+        private System.Windows.Forms.Button btnKilep;
+        private System.Windows.Forms.Button btnClose;
         
     }
 }

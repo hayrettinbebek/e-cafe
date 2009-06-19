@@ -163,6 +163,15 @@ namespace e_Cafe.Admin
             string str = DEFS.NyitNap_EV.ToString() + "." + DEFS.NyitNap_HO.ToString() + "." + DEFS.NyitNap_NAP.ToString();
             if (MessageBox.Show("Valóban szeretné lezárni a " + str + " napot?", "Nap zárás", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                LoggedInUsers l = new LoggedInUsers();
+                while (l.lLoggedInUsers.Count > 0)
+                {
+                    foreach (var u in l.lLoggedInUsers)
+                    {
+                        DEFS.UserLogout(u.USER_ID);
+                    }
+                    l = new LoggedInUsers();
+                }
 
                 nz.CloseDay();
                 doPrinting dp = new doPrinting();
@@ -179,7 +188,10 @@ namespace e_Cafe.Admin
                                                                             DEFS.NyitNap_NAP));
                 }
                 dp.doPrint();
-                Application.Exit();
+                button1.Visible = false;
+                btnClose.Visible = false;
+                btnKilep.Visible = true;
+               
             }
         }
 
@@ -198,6 +210,16 @@ namespace e_Cafe.Admin
             frmNegkeszletInfo n = new frmNegkeszletInfo();
             n.ShowDialog();
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnKilep_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         } 
         
     }

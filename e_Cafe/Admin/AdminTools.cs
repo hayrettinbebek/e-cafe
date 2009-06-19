@@ -222,8 +222,9 @@ namespace e_Cafe
         private void mmNapiZaras_Click(object sender, EventArgs e)
         {
             frmNapiZaras nz = new frmNapiZaras();
-            nz.MdiParent = this;
-            nz.Show();
+            //nz.MdiParent = this;
+            nz.ShowDialog();
+            
         }
 
         private void blokkokVisszakereséseToolStripMenuItem_Click(object sender, EventArgs e)
