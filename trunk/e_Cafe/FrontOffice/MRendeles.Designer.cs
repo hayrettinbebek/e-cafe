@@ -86,6 +86,17 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnKedv = new System.Windows.Forms.Button();
+            this.lblOsszText = new System.Windows.Forms.Label();
+            this.lblKedvText = new System.Windows.Forms.Label();
+            this.lblFizetText = new System.Windows.Forms.Label();
+            this.lblOsszValue = new System.Windows.Forms.Label();
+            this.lblFizetValue = new System.Windows.Forms.Label();
+            this.lblKedvValue = new System.Windows.Forms.Label();
+            this.txtSzaz = new System.Windows.Forms.TextBox();
+            this.txtFt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
@@ -106,6 +117,17 @@
             // 
             this.pnlRendeles.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.pnlRendeles.Controls.Add(this.label10);
+            this.pnlRendeles.Controls.Add(this.label9);
+            this.pnlRendeles.Controls.Add(this.txtFt);
+            this.pnlRendeles.Controls.Add(this.txtSzaz);
+            this.pnlRendeles.Controls.Add(this.lblFizetText);
+            this.pnlRendeles.Controls.Add(this.lblKedvText);
+            this.pnlRendeles.Controls.Add(this.lblFizetValue);
+            this.pnlRendeles.Controls.Add(this.lblKedvValue);
+            this.pnlRendeles.Controls.Add(this.lblOsszValue);
+            this.pnlRendeles.Controls.Add(this.lblOsszText);
+            this.pnlRendeles.Controls.Add(this.btnKedv);
             this.pnlRendeles.Controls.Add(this.button8);
             this.pnlRendeles.Controls.Add(this.rbOsszetett);
             this.pnlRendeles.Controls.Add(this.rbReszletes);
@@ -140,34 +162,42 @@
             // rbOsszetett
             // 
             this.rbOsszetett.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbOsszetett.BackColor = System.Drawing.Color.Gray;
+            this.rbOsszetett.BackColor = System.Drawing.Color.Transparent;
+            this.rbOsszetett.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbOsszetett.BackgroundImage")));
+            this.rbOsszetett.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rbOsszetett.FlatAppearance.BorderSize = 0;
-            this.rbOsszetett.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rbOsszetett.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.rbOsszetett.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbOsszetett.Location = new System.Drawing.Point(140, 113);
+            this.rbOsszetett.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbOsszetett.Location = new System.Drawing.Point(140, 104);
             this.rbOsszetett.Name = "rbOsszetett";
-            this.rbOsszetett.Size = new System.Drawing.Size(121, 24);
+            this.rbOsszetett.Size = new System.Drawing.Size(121, 33);
             this.rbOsszetett.TabIndex = 6;
             this.rbOsszetett.Tag = "3";
             this.rbOsszetett.Text = "Összetett";
+            this.rbOsszetett.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbOsszetett.UseVisualStyleBackColor = false;
             this.rbOsszetett.CheckedChanged += new System.EventHandler(this.rbOsszetett_CheckedChanged);
             // 
             // rbReszletes
             // 
             this.rbReszletes.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbReszletes.BackColor = System.Drawing.Color.Gray;
+            this.rbReszletes.BackColor = System.Drawing.Color.Transparent;
+            this.rbReszletes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbReszletes.BackgroundImage")));
+            this.rbReszletes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rbReszletes.Checked = true;
             this.rbReszletes.FlatAppearance.BorderSize = 0;
-            this.rbReszletes.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rbReszletes.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.rbReszletes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbReszletes.Location = new System.Drawing.Point(20, 113);
+            this.rbReszletes.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rbReszletes.Location = new System.Drawing.Point(20, 104);
             this.rbReszletes.Name = "rbReszletes";
-            this.rbReszletes.Size = new System.Drawing.Size(121, 24);
+            this.rbReszletes.Size = new System.Drawing.Size(121, 33);
             this.rbReszletes.TabIndex = 6;
             this.rbReszletes.TabStop = true;
             this.rbReszletes.Tag = "3";
             this.rbReszletes.Text = "Részletes";
+            this.rbReszletes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbReszletes.UseVisualStyleBackColor = false;
             this.rbReszletes.CheckedChanged += new System.EventHandler(this.rbReszletes_CheckedChanged);
             // 
@@ -795,6 +825,123 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
             // 
+            // btnKedv
+            // 
+            this.btnKedv.BackColor = System.Drawing.Color.Transparent;
+            this.btnKedv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKedv.BackgroundImage")));
+            this.btnKedv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKedv.FlatAppearance.BorderSize = 0;
+            this.btnKedv.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnKedv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnKedv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnKedv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKedv.Location = new System.Drawing.Point(116, 3);
+            this.btnKedv.Name = "btnKedv";
+            this.btnKedv.Size = new System.Drawing.Size(57, 57);
+            this.btnKedv.TabIndex = 8;
+            this.btnKedv.UseVisualStyleBackColor = false;
+            this.btnKedv.Click += new System.EventHandler(this.btnKedv_Click);
+            // 
+            // lblOsszText
+            // 
+            this.lblOsszText.AutoSize = true;
+            this.lblOsszText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOsszText.ForeColor = System.Drawing.Color.Maroon;
+            this.lblOsszText.Location = new System.Drawing.Point(37, 568);
+            this.lblOsszText.Name = "lblOsszText";
+            this.lblOsszText.Size = new System.Drawing.Size(93, 20);
+            this.lblOsszText.TabIndex = 9;
+            this.lblOsszText.Text = "Összesen:";
+            // 
+            // lblKedvText
+            // 
+            this.lblKedvText.AutoSize = true;
+            this.lblKedvText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKedvText.ForeColor = System.Drawing.Color.Maroon;
+            this.lblKedvText.Location = new System.Drawing.Point(16, 588);
+            this.lblKedvText.Name = "lblKedvText";
+            this.lblKedvText.Size = new System.Drawing.Size(114, 20);
+            this.lblKedvText.TabIndex = 9;
+            this.lblKedvText.Text = "Kedvezmény:";
+            // 
+            // lblFizetText
+            // 
+            this.lblFizetText.AutoSize = true;
+            this.lblFizetText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFizetText.ForeColor = System.Drawing.Color.Maroon;
+            this.lblFizetText.Location = new System.Drawing.Point(36, 608);
+            this.lblFizetText.Name = "lblFizetText";
+            this.lblFizetText.Size = new System.Drawing.Size(94, 20);
+            this.lblFizetText.TabIndex = 9;
+            this.lblFizetText.Text = "Fizetendő:";
+            // 
+            // lblOsszValue
+            // 
+            this.lblOsszValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOsszValue.ForeColor = System.Drawing.Color.Maroon;
+            this.lblOsszValue.Location = new System.Drawing.Point(126, 568);
+            this.lblOsszValue.Name = "lblOsszValue";
+            this.lblOsszValue.Size = new System.Drawing.Size(107, 20);
+            this.lblOsszValue.TabIndex = 9;
+            this.lblOsszValue.Text = "0";
+            this.lblOsszValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblFizetValue
+            // 
+            this.lblFizetValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFizetValue.ForeColor = System.Drawing.Color.Maroon;
+            this.lblFizetValue.Location = new System.Drawing.Point(126, 608);
+            this.lblFizetValue.Name = "lblFizetValue";
+            this.lblFizetValue.Size = new System.Drawing.Size(107, 20);
+            this.lblFizetValue.TabIndex = 9;
+            this.lblFizetValue.Text = "0";
+            this.lblFizetValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblKedvValue
+            // 
+            this.lblKedvValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKedvValue.ForeColor = System.Drawing.Color.Maroon;
+            this.lblKedvValue.Location = new System.Drawing.Point(126, 588);
+            this.lblKedvValue.Name = "lblKedvValue";
+            this.lblKedvValue.Size = new System.Drawing.Size(107, 20);
+            this.lblKedvValue.TabIndex = 9;
+            this.lblKedvValue.Text = "0";
+            this.lblKedvValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtSzaz
+            // 
+            this.txtSzaz.Location = new System.Drawing.Point(55, 66);
+            this.txtSzaz.Name = "txtSzaz";
+            this.txtSzaz.Size = new System.Drawing.Size(64, 20);
+            this.txtSzaz.TabIndex = 10;
+            this.txtSzaz.Text = "0";
+            // 
+            // txtFt
+            // 
+            this.txtFt.Location = new System.Drawing.Point(159, 66);
+            this.txtFt.Name = "txtFt";
+            this.txtFt.Size = new System.Drawing.Size(49, 20);
+            this.txtFt.TabIndex = 11;
+            this.txtFt.Text = "0";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(125, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(15, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "%";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(214, 73);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Ft";
+            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -813,6 +960,7 @@
             this.Load += new System.EventHandler(this.MRendeles_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MRendeles_FormClosed);
             this.pnlRendeles.ResumeLayout(false);
+            this.pnlRendeles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pnlOtherFilter.ResumeLayout(false);
@@ -890,5 +1038,16 @@
         private System.Windows.Forms.Button btnPrevCikk;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button btnKedv;
+        private System.Windows.Forms.Label lblFizetText;
+        private System.Windows.Forms.Label lblKedvText;
+        private System.Windows.Forms.Label lblOsszText;
+        private System.Windows.Forms.Label lblOsszValue;
+        private System.Windows.Forms.Label lblFizetValue;
+        private System.Windows.Forms.Label lblKedvValue;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtFt;
+        private System.Windows.Forms.TextBox txtSzaz;
     }
 }

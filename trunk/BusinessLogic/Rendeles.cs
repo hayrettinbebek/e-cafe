@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using XPTable.Models;
@@ -180,6 +181,7 @@ namespace BusinessLogic
             fDATUM = DateTime.Now;
             fFIZETVE = false;
             fASZTAL_ID = pAsztalID;
+            fKEDVEZMENY = 0;
 
             SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
@@ -193,7 +195,7 @@ namespace BusinessLogic
 
                 cmd.CommandType = CommandType.Text;
 
-                cmd.CommandText = "SELECT ASZTAL_ID, isnull(PARTNER_ID,-1) PARTNER_ID, DATUM, FIZETVE FROM RENDELES_FEJ WHERE RENDELES_ID =" + pRendeles_id.ToString();
+                cmd.CommandText = "SELECT ASZTAL_ID, isnull(PARTNER_ID,-1) PARTNER_ID, DATUM, FIZETVE, isnull(KEDVEZMENY,0) as KEDVEZMENY FROM RENDELES_FEJ WHERE RENDELES_ID =" + pRendeles_id.ToString();
 
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
@@ -202,6 +204,7 @@ namespace BusinessLogic
                     fPARTNER_ID = (int)rdr["PARTNER_ID"];
                     fDATUM = (DateTime)rdr["DATUM"];
                     fFIZETVE = (1 == (int)rdr["FIZETVE"]);
+                    fKEDVEZMENY = (double)rdr["KEDVEZMENY"];
                 }
                 rdr.Close();
 
@@ -225,7 +228,73 @@ namespace BusinessLogic
 
         }
 
-       
+        #region Összesítők
+        private double fKEDVEZMENY;
+        public double KEDVEZMENY
+        {
+            get
+            {
+
+                double iTmpSum = 0;
+
+                var ret_cikk =
+                    from c in lRendelesSor
+                    select c;
+                ret_cikk.Each(c => iTmpSum += c.KEDVEZMENY);
+
+
+                return (iTmpSum);
+
+            }
+        }
+
+        public double OSSZESEN
+        {
+            get { 
+            
+            double iTmpSum = 0;
+
+            var ret_cikk =
+                from c in lRendelesSor
+                select c;
+            ret_cikk.Each(c => iTmpSum += c._Ertek);
+
+
+            return (iTmpSum);
+            
+            }
+            
+        }
+
+        public double FIZETENDO
+        {
+            get
+            {
+
+                return (OSSZESEN-KEDVEZMENY);
+
+            }
+
+        }
+
+        #endregion
+
+
+        public void addKedvezmSzaz(double k)
+        {
+            foreach (var s in lRendelesSor)
+            {
+                s.addKedvezmSzaz(k);
+            }
+        }
+
+        public void addKedvezmFt(double k)
+        {
+            foreach (var s in lRendelesSor)
+            {
+                s.addKedvezmFt((s._Ertek*k)/OSSZESEN);
+            }
+        }
 
         #region Lista funkciók
 
@@ -263,7 +332,8 @@ namespace BusinessLogic
                                         ",EV " +
                                         ",HO " +
                                         ",NAP " +
-                                        ",FIZETVE) " +
+                                        ",FIZETVE "+
+                                        ",KEDVEZMENY) " +
                                     "VALUES " +
                                         "(@ASZTAL_ID  " +
                                         ",@DATUM  " +
@@ -272,7 +342,8 @@ namespace BusinessLogic
                                         ",@EV " +
                                         ",@HO " +
                                         ",@NAP " +
-                                        ",@FIZETVE)";
+                                        ",@FIZETVE " +
+                                        ",@KEDVEZMENY)";
 
                     break;}
                 default:{
@@ -283,7 +354,8 @@ namespace BusinessLogic
                                                    " EV = @EV, "+
                                                    " HO = @HO, "+
                                                    " NAP = @NAP, "+
-                                                   " FIZETVE = @FIZETVE "+
+                                                   " FIZETVE = @FIZETVE, "+
+                                                   " KEDVEZMENY = @KEDVEZMENY "+
                                        "WHERE RENDELES_ID = @RENDELES_ID";
                     cmd.Parameters.Add(new SqlParameter("RENDELES_ID", SqlDbType.Int));
                     cmd.Parameters["RENDELES_ID"].Value = fRENDELES_ID;
@@ -295,6 +367,7 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("DATUM", SqlDbType.DateTime));
             cmd.Parameters.Add(new SqlParameter("PARTNER_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("FIZETVE", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("KEDVEZMENY", SqlDbType.Float));
 
             cmd.Parameters.Add(new SqlParameter("USER_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("HO", SqlDbType.Int));
@@ -306,6 +379,8 @@ namespace BusinessLogic
             cmd.Parameters["DATUM"].Value = fDATUM;
             cmd.Parameters["PARTNER_ID"].Value = fPARTNER_ID;
             cmd.Parameters["FIZETVE"].Value = 0;
+            cmd.Parameters["KEDVEZMENY"].Value = fKEDVEZMENY;
+            
 
             cmd.Parameters["USER_ID"].Value = DEFS.LogInUser.USER_ID;
             cmd.Parameters["HO"].Value = DEFS.NyitNap_HO;
@@ -384,6 +459,13 @@ namespace BusinessLogic
         public int _RaktarId;
         public int _LitKiszId;
 
+        private double fKEDVEZMENY;
+        public double KEDVEZMENY
+        {
+            get { return (fKEDVEZMENY); }
+            set { fKEDVEZMENY = value; }
+        }
+
         public RendelesSor(Cikk pCikk, double pDb, double pErtek, DateTime pDatum, int litkisz)
         {
 
@@ -400,6 +482,7 @@ namespace BusinessLogic
             }
             _Netto_Ertek = pErtek;
             _SOR_ID = -1;
+            fKEDVEZMENY = 0;
             _RaktarId = pCikk.ALAP_RAKTAR;
         }
 
@@ -419,6 +502,7 @@ namespace BusinessLogic
             }
             _Netto_Ertek = pErtek;
             _SOR_ID = -1;
+            fKEDVEZMENY = 0;
             _RaktarId = pRaktar;
         }
 
@@ -433,12 +517,12 @@ namespace BusinessLogic
 
             if (pSzamla)
             {
-                cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID " +
-                                   " FROM RENDELES_SOR WHERE SOR_ID =" + pRendelesSorID.ToString();
+                cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID, " +
+                                   "isnull(KEDVEZMENY,0) as KEDVEZMENY FROM RENDELES_SOR WHERE SOR_ID =" + pRendelesSorID.ToString();
             } else
             {
-                cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID " +
-                                    " FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
+                cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID, " +
+                                    "isnull(KEDVEZMENY,0) as KEDVEZMENY  FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
             }
             SqlDataReader rdr2 = cmd2.ExecuteReader();
 
@@ -452,6 +536,7 @@ namespace BusinessLogic
                 _db = (double)rdr2["DB"];
                 _RaktarId = (int)rdr2["RAKTAR_ID"];
                 _LitKiszId = (int)rdr2["LIT_KISZ_ID"];
+                fKEDVEZMENY = (double)rdr2["KEDVEZMENY"];
                 _Cikk = new Cikk((int)rdr2["CIKK_ID"], new SqlConnection(DEFS.ConSTR), (int)rdr2["LIT_KISZ_ID"]);
 
             }
@@ -488,7 +573,8 @@ namespace BusinessLogic
                                             ",AFA_ERTEK " +
                                             ",ERTEK " +
                                             ",NETTO_ERTEK " +
-                                            ",LIT_KISZ_ID) " +
+                                            ",LIT_KISZ_ID "+
+                                            ",KEDVEZMENY) " +
                                         "VALUES " +
                                             "(@RENDELES_ID " +
                                             ",@CIKK_ID " +
@@ -499,7 +585,8 @@ namespace BusinessLogic
                                             ",@AFA_ERTEK " +
                                             ",@ERTEK " +
                                             ",@NETTO_ERTEK " +
-                                            ",@LIT_KISZ_ID) SET @newid = SCOPE_IDENTITY()";
+                                            ",@LIT_KISZ_ID "+
+                                            ",@KEDVEZMENY) SET @newid = SCOPE_IDENTITY()";
                         cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
                         cmd.Parameters["newid"].Direction = ParameterDirection.Output;
 
@@ -514,7 +601,8 @@ namespace BusinessLogic
                                                        " RAKTAR_ID = @RAKTAR_ID, " +
                                                        " MODIFIED_USER = @MODIFIED_USER, " +
                                                        " NETTO_ERTEK = @NETTO_ERTEK, " +
-                                                       " LIT_KISZ_ID = @LIT_KISZ_ID " +
+                                                       " LIT_KISZ_ID = @LIT_KISZ_ID, " +
+                                                       " KEDVEZMENY = @KEDVEZMENY " +
                                            "WHERE SOR_ID = @SOR_ID";
                         cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
                         cmd.Parameters["SOR_ID"].Value = _SOR_ID;
@@ -528,6 +616,7 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("NETTO_ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("AFA_ERTEK", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("ERTEK", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("KEDVEZMENY", SqlDbType.Float));
             cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("MODIFIED_USER", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("LIT_KISZ_ID", SqlDbType.Int));
@@ -542,6 +631,8 @@ namespace BusinessLogic
             cmd.Parameters["ERTEK"].Value = Math.Round(_Netto_Ertek * (1+(_Cikk.AFA_SZAZ/100)),2);
             cmd.Parameters["AFA_ERTEK"].Value = Math.Round(_Netto_Ertek * (_Cikk.AFA_SZAZ / 100), 2);
             cmd.Parameters["LIT_KISZ_ID"].Value = _LitKiszId;
+            cmd.Parameters["KEDVEZMENY"].Value = fKEDVEZMENY;
+            
             try
             {
                 cmd.ExecuteNonQuery();
@@ -613,6 +704,18 @@ namespace BusinessLogic
                 DEFS.SendSaveErrMessage("Hiba a rendelés sorok sztornózása közben!" + _SOR_ID.ToString() + e.Message + "\n" + e.StackTrace);
             }
             c.Close();
+
+        }
+
+        public void addKedvezmSzaz(double k)
+        {
+            KEDVEZMENY = _Ertek * (k/100);
+
+        }
+
+        public void addKedvezmFt(double k)
+        {
+            KEDVEZMENY = k;
 
         }
 

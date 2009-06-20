@@ -141,13 +141,19 @@ namespace BusinessLogic
 
             double Osszeg = 0;
             double afa = 0;
+            double kedv = 0;
 
 
             var ret_cikk =
                 from c in lTETELEK
                 select c;
-            ret_cikk.Each(c => { Osszeg += c.BRUTTO; afa += c.AFA; });
+            ret_cikk.Each(c => { Osszeg += c.BRUTTO; afa += c.AFA; kedv += c.KEDVEZMENY; });
             dt.Rows.Add(new Object[] { "Összesen:", Math.Round(Osszeg) });
+            if (kedv > 0)
+            {
+                dt.Rows.Add(new Object[] { "Kedvezmény:", Math.Round(kedv) });
+                dt.Rows.Add(new Object[] { "Fizetendő:", Math.Round(Osszeg - kedv) });
+            }
             dt.Rows.Add(new Object[] { "Áfa összesen:", Math.Round(afa) });
            
             DataView dv = dt.DefaultView;
@@ -290,6 +296,7 @@ namespace BusinessLogic
         private int fTETEL_ID;
         private string fCIKK_MEGNEVEZES;
         private RendelesSor fRENDELSOR;
+        private double fKEDVEZMENY;
 
         public Szamla_tetel(int pSzla_Tetelid)
         {
@@ -312,7 +319,8 @@ namespace BusinessLogic
                                   ",AFA_KOD " +
                                   ",MEGJEGYZES " +
                                   ",CIKK_MEGNEVEZES " +
-                                  ",SZAMLA_FEJ_ID " +
+                                  ",SZAMLA_FEJ_ID "+
+                                  ",isnull(KEDVEZMENY,0) as KEDVEZMENY " +
                               "FROM SZAMLA_TETEL WHERE TETEL_ID = @tid";
 
             cmd.Parameters.Add(new SqlParameter("tid", SqlDbType.Int));
@@ -335,6 +343,7 @@ namespace BusinessLogic
                     fMEGJEGYZES = (string)rdr["MEGJEGYZES"];
                     fCIKK_MEGNEVEZES = (string)rdr["CIKK_MEGNEVEZES"];
                     fFEJ_ID = (int)rdr["SZAMLA_FEJ_ID"];
+                    fKEDVEZMENY = (double)rdr["KEDVEZMENY"];
                 }
                 catch (Exception e)
                 {
@@ -456,6 +465,14 @@ namespace BusinessLogic
                 return (fCIKK_MEGNEVEZES);
             }
 
+        }
+
+        public double KEDVEZMENY
+        {
+            get
+            {
+                return (fKEDVEZMENY);
+            }
         }
 
         #endregion

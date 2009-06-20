@@ -172,6 +172,13 @@ namespace GUI.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap pipaon {
+            get {
+                object obj = ResourceManager.GetObject("pipaon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap piroson {
             get {
                 object obj = ResourceManager.GetObject("piroson", resourceCulture);
