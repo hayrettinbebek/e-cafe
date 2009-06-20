@@ -107,5 +107,15 @@ namespace e_Cafe.FrontOffice
             splitContainer1.Panel1Collapsed = false;
             getSzazalekok();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            button1_Click(sender, e);
+        }
     }
 }
