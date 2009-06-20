@@ -630,7 +630,7 @@ namespace GUI
             FlatAppearance.MouseOverBackColor = Color.Transparent;
             FlatAppearance.CheckedBackColor = Color.Transparent;
             FlatAppearance.BorderColor = Color.Gray;
-            FlatAppearance.BorderSize = 2;
+            FlatAppearance.BorderSize = 0;
             ForeColor = Color.FromArgb(192, 0, 0);
             TextAlign = ContentAlignment.MiddleCenter;
             Font = f2;
@@ -665,7 +665,7 @@ namespace GUI
             FlatAppearance.MouseOverBackColor = Color.Transparent;
             FlatAppearance.CheckedBackColor = Color.Transparent;
             FlatAppearance.BorderColor = Color.Gray;
-            FlatAppearance.BorderSize = 2;
+            FlatAppearance.BorderSize = 0;
             ForeColor = Color.FromArgb(192,0,0);
             TextAlign = ContentAlignment.MiddleCenter;
             Font = f2;

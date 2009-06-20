@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportDebugger", "ReportDeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridExtensions", "GridExtensions\GridExtensions.csproj", "{E5247765-0134-4714-A110-64D571FBF636}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinampFrontEndLib", "WinampFrontEndLib\WinampFrontEndLib.csproj", "{0FA619A7-6266-4677-A439-43A7E0316353}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,12 @@ Global
 		{E5247765-0134-4714-A110-64D571FBF636}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5247765-0134-4714-A110-64D571FBF636}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E5247765-0134-4714-A110-64D571FBF636}.Release|x86.ActiveCfg = Release|Any CPU
+		{0FA619A7-6266-4677-A439-43A7E0316353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA619A7-6266-4677-A439-43A7E0316353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA619A7-6266-4677-A439-43A7E0316353}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0FA619A7-6266-4677-A439-43A7E0316353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA619A7-6266-4677-A439-43A7E0316353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA619A7-6266-4677-A439-43A7E0316353}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
