@@ -108,6 +108,7 @@
     <Compile Include="StringEnum.cs" />
     <Compile Include="Syspar.cs" />
     <Compile Include="Szamla.cs" />
+    <Compile Include="TimeSpanUtils.cs" />
     <Compile Include="Uzenet.cs" />
     <Compile Include="Win32.cs" />
   </ItemGroup>

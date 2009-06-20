@@ -185,6 +185,12 @@
     <Compile Include="FrontOffice\frmKedevemenyChoice.Designer.cs">
       <DependentUpon>frmKedevemenyChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontOffice\frmMediaPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\frmMediaPlayer.Designer.cs">
+      <DependentUpon>frmMediaPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL\deSelejtezInfo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -636,6 +642,9 @@
     <EmbeddedResource Include="FrontOffice\frmKedevemenyChoice.resx">
       <DependentUpon>frmKedevemenyChoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrontOffice\frmMediaPlayer.resx">
+      <DependentUpon>frmMediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmOsszCikkView.resx">
       <DependentUpon>frmOsszCikkView.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -860,6 +869,10 @@
     <ProjectReference Include="..\ReportPrinting\ReportPrinting.csproj">
       <Project>{9330BA30-6B74-45C9-9788-3697F7731D32}</Project>
       <Name>ReportPrinting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinampFrontEndLib\WinampFrontEndLib.csproj">
+      <Project>{0FA619A7-6266-4677-A439-43A7E0316353}</Project>
+      <Name>WinampFrontEndLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
