@@ -495,6 +495,11 @@ namespace e_Cafe
 
         #endregion
 
+        private void btnFoglalas_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

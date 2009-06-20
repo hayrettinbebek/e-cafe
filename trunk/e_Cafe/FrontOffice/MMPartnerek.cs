@@ -116,7 +116,7 @@ namespace e_Cafe
             }
             else
             {
-                frmShadowLayer p = new frmShadowLayer();
+                frmShadowLayer p = new frmShadowLayer(UsingForms.PartnerInsert);
                 p.param = ((PartnerButton)sender).fPARTNER.PARTNER_ID;
                 p.ShowDialog();
             }
@@ -124,7 +124,7 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmShadowLayer p = new frmShadowLayer();
+            frmShadowLayer p = new frmShadowLayer(UsingForms.PartnerInsert);
             p.param = -1;
             p.ShowDialog();
 

@@ -565,4 +565,121 @@ namespace GUI
 
     }
 
+    public class KedvezmenyButton : System.Windows.Forms.RadioButton
+    {
+        int rg;
+        int hdl;
+        int kedvSZ = 0;
+       
+
+        // Import the CreateRoundRectRgn function from the GDI32.DLL 
+        // From the Unmanaged Code
+        [DllImport("GDI32.DLL", EntryPoint = "CreateRoundRectRgn")]
+        private static extern int CreateRoundRectRgn(int x1, int y1, int x2, int y2, int x3, int y3);
+
+        // Import the SetWindowRgn function from the user32.DLL
+        // From the Unmanaged Code
+        [DllImport("user32.DLL", EntryPoint = "SetWindowRgn")]
+        private static extern int SetWindowRgn(int hWnd, int hRgn, int bRedraw);
+
+        Font f1 = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+        Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+
+
+        public int KEDVEZEMNY
+        {
+            get { return (kedvSZ); }
+            set
+            {
+                kedvSZ = value;
+                this.Text = "-" + kedvSZ.ToString() + "%";
+            }
+        }
+
+        protected void OnLabelClick(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
+
+        protected override void OnCheckedChanged(EventArgs e)
+        {
+            base.OnCheckedChanged(e);
+
+
+
+        }
+
+        public KedvezmenyButton()
+        {
+            Width = 85;
+            Height = 85;
+            AutoSize = false;
+
+            KEDVEZEMNY = 0;
+            // Get the dimension of the client rectangle 
+            Rectangle rect = this.ClientRectangle;
+            // Invoke the unmanaged DLL function here to create the RoundRectangleRegion
+            rg = CreateRoundRectRgn(rect.Left, rect.Top, rect.Right, rect.Bottom, 0, 0);
+            // Get the handle to the window. 
+            hdl = this.Handle.ToInt32();
+            // Set the Window Region to a a Rectangle with rounded corners
+            SetWindowRgn(hdl, rg, 1);
+            Appearance = Appearance.Button;
+            FlatAppearance.BorderSize = 0;
+            FlatAppearance.MouseDownBackColor = Color.Transparent;
+            FlatAppearance.MouseOverBackColor = Color.Transparent;
+            FlatAppearance.CheckedBackColor = Color.Transparent;
+            FlatAppearance.BorderColor = Color.Gray;
+            FlatAppearance.BorderSize = 2;
+            ForeColor = Color.FromArgb(192, 0, 0);
+            TextAlign = ContentAlignment.MiddleCenter;
+            Font = f2;
+
+            BackgroundImage = global::GUI.Properties.Resources.uresGomb;
+            BackgroundImageLayout = ImageLayout.Stretch;
+
+            FlatStyle = FlatStyle.Flat;
+
+            BackColor = Color.Transparent;
+
+
+
+        }
+        public KedvezmenyButton(int k)
+        {
+            Width = 85;
+            Height = 85;
+            AutoSize = false;
+            KEDVEZEMNY = k;
+            // Get the dimension of the client rectangle 
+            Rectangle rect = this.ClientRectangle;
+            // Invoke the unmanaged DLL function here to create the RoundRectangleRegion
+            rg = CreateRoundRectRgn(rect.Left, rect.Top, rect.Right, rect.Bottom, 0, 0);
+            // Get the handle to the window. 
+            hdl = this.Handle.ToInt32();
+            // Set the Window Region to a a Rectangle with rounded corners
+            SetWindowRgn(hdl, rg, 1);
+            Appearance = Appearance.Button;
+            FlatAppearance.BorderSize = 0;
+            FlatAppearance.MouseDownBackColor = Color.Transparent;
+            FlatAppearance.MouseOverBackColor = Color.Transparent;
+            FlatAppearance.CheckedBackColor = Color.Transparent;
+            FlatAppearance.BorderColor = Color.Gray;
+            FlatAppearance.BorderSize = 2;
+            ForeColor = Color.FromArgb(192,0,0);
+            TextAlign = ContentAlignment.MiddleCenter;
+            Font = f2;
+            BackgroundImage = global::GUI.Properties.Resources.uresGomb; 
+            BackgroundImageLayout = ImageLayout.Stretch;
+
+            FlatStyle = FlatStyle.Flat;
+
+            BackColor = Color.Transparent;
+
+            
+
+        }
+
+
+    }
 }

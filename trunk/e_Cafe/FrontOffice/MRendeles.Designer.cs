@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MRendeles));
             this.pnlRendeles = new System.Windows.Forms.Panel();
+            this.lblFizetText = new System.Windows.Forms.Label();
+            this.lblKedvText = new System.Windows.Forms.Label();
+            this.lblFizetValue = new System.Windows.Forms.Label();
+            this.lblKedvValue = new System.Windows.Forms.Label();
+            this.lblOsszValue = new System.Windows.Forms.Label();
+            this.lblOsszText = new System.Windows.Forms.Label();
+            this.btnKedv = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.rbOsszetett = new System.Windows.Forms.RadioButton();
             this.rbReszletes = new System.Windows.Forms.RadioButton();
@@ -86,17 +93,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnKedv = new System.Windows.Forms.Button();
-            this.lblOsszText = new System.Windows.Forms.Label();
-            this.lblKedvText = new System.Windows.Forms.Label();
-            this.lblFizetText = new System.Windows.Forms.Label();
-            this.lblOsszValue = new System.Windows.Forms.Label();
-            this.lblFizetValue = new System.Windows.Forms.Label();
-            this.lblKedvValue = new System.Windows.Forms.Label();
-            this.txtSzaz = new System.Windows.Forms.TextBox();
-            this.txtFt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
@@ -117,10 +113,6 @@
             // 
             this.pnlRendeles.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlRendeles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.pnlRendeles.Controls.Add(this.label10);
-            this.pnlRendeles.Controls.Add(this.label9);
-            this.pnlRendeles.Controls.Add(this.txtFt);
-            this.pnlRendeles.Controls.Add(this.txtSzaz);
             this.pnlRendeles.Controls.Add(this.lblFizetText);
             this.pnlRendeles.Controls.Add(this.lblKedvText);
             this.pnlRendeles.Controls.Add(this.lblFizetValue);
@@ -141,6 +133,89 @@
             this.pnlRendeles.Size = new System.Drawing.Size(313, 641);
             this.pnlRendeles.TabIndex = 1;
             this.pnlRendeles.Click += new System.EventHandler(this.pnlRendeles_Click);
+            // 
+            // lblFizetText
+            // 
+            this.lblFizetText.AutoSize = true;
+            this.lblFizetText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFizetText.ForeColor = System.Drawing.Color.Maroon;
+            this.lblFizetText.Location = new System.Drawing.Point(36, 608);
+            this.lblFizetText.Name = "lblFizetText";
+            this.lblFizetText.Size = new System.Drawing.Size(94, 20);
+            this.lblFizetText.TabIndex = 9;
+            this.lblFizetText.Text = "Fizetendő:";
+            // 
+            // lblKedvText
+            // 
+            this.lblKedvText.AutoSize = true;
+            this.lblKedvText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKedvText.ForeColor = System.Drawing.Color.Maroon;
+            this.lblKedvText.Location = new System.Drawing.Point(16, 588);
+            this.lblKedvText.Name = "lblKedvText";
+            this.lblKedvText.Size = new System.Drawing.Size(114, 20);
+            this.lblKedvText.TabIndex = 9;
+            this.lblKedvText.Text = "Kedvezmény:";
+            // 
+            // lblFizetValue
+            // 
+            this.lblFizetValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFizetValue.ForeColor = System.Drawing.Color.Maroon;
+            this.lblFizetValue.Location = new System.Drawing.Point(126, 608);
+            this.lblFizetValue.Name = "lblFizetValue";
+            this.lblFizetValue.Size = new System.Drawing.Size(107, 20);
+            this.lblFizetValue.TabIndex = 9;
+            this.lblFizetValue.Text = "0";
+            this.lblFizetValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblKedvValue
+            // 
+            this.lblKedvValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKedvValue.ForeColor = System.Drawing.Color.Maroon;
+            this.lblKedvValue.Location = new System.Drawing.Point(126, 588);
+            this.lblKedvValue.Name = "lblKedvValue";
+            this.lblKedvValue.Size = new System.Drawing.Size(107, 20);
+            this.lblKedvValue.TabIndex = 9;
+            this.lblKedvValue.Text = "0";
+            this.lblKedvValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblOsszValue
+            // 
+            this.lblOsszValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOsszValue.ForeColor = System.Drawing.Color.Maroon;
+            this.lblOsszValue.Location = new System.Drawing.Point(126, 568);
+            this.lblOsszValue.Name = "lblOsszValue";
+            this.lblOsszValue.Size = new System.Drawing.Size(107, 20);
+            this.lblOsszValue.TabIndex = 9;
+            this.lblOsszValue.Text = "0";
+            this.lblOsszValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblOsszText
+            // 
+            this.lblOsszText.AutoSize = true;
+            this.lblOsszText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOsszText.ForeColor = System.Drawing.Color.Maroon;
+            this.lblOsszText.Location = new System.Drawing.Point(37, 568);
+            this.lblOsszText.Name = "lblOsszText";
+            this.lblOsszText.Size = new System.Drawing.Size(93, 20);
+            this.lblOsszText.TabIndex = 9;
+            this.lblOsszText.Text = "Összesen:";
+            // 
+            // btnKedv
+            // 
+            this.btnKedv.BackColor = System.Drawing.Color.Transparent;
+            this.btnKedv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKedv.BackgroundImage")));
+            this.btnKedv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKedv.FlatAppearance.BorderSize = 0;
+            this.btnKedv.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnKedv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnKedv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnKedv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKedv.Location = new System.Drawing.Point(116, 3);
+            this.btnKedv.Name = "btnKedv";
+            this.btnKedv.Size = new System.Drawing.Size(57, 57);
+            this.btnKedv.TabIndex = 8;
+            this.btnKedv.UseVisualStyleBackColor = false;
+            this.btnKedv.Click += new System.EventHandler(this.btnKedv_Click);
             // 
             // button8
             // 
@@ -825,123 +900,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
             // 
-            // btnKedv
-            // 
-            this.btnKedv.BackColor = System.Drawing.Color.Transparent;
-            this.btnKedv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKedv.BackgroundImage")));
-            this.btnKedv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnKedv.FlatAppearance.BorderSize = 0;
-            this.btnKedv.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnKedv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnKedv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnKedv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKedv.Location = new System.Drawing.Point(116, 3);
-            this.btnKedv.Name = "btnKedv";
-            this.btnKedv.Size = new System.Drawing.Size(57, 57);
-            this.btnKedv.TabIndex = 8;
-            this.btnKedv.UseVisualStyleBackColor = false;
-            this.btnKedv.Click += new System.EventHandler(this.btnKedv_Click);
-            // 
-            // lblOsszText
-            // 
-            this.lblOsszText.AutoSize = true;
-            this.lblOsszText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblOsszText.ForeColor = System.Drawing.Color.Maroon;
-            this.lblOsszText.Location = new System.Drawing.Point(37, 568);
-            this.lblOsszText.Name = "lblOsszText";
-            this.lblOsszText.Size = new System.Drawing.Size(93, 20);
-            this.lblOsszText.TabIndex = 9;
-            this.lblOsszText.Text = "Összesen:";
-            // 
-            // lblKedvText
-            // 
-            this.lblKedvText.AutoSize = true;
-            this.lblKedvText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblKedvText.ForeColor = System.Drawing.Color.Maroon;
-            this.lblKedvText.Location = new System.Drawing.Point(16, 588);
-            this.lblKedvText.Name = "lblKedvText";
-            this.lblKedvText.Size = new System.Drawing.Size(114, 20);
-            this.lblKedvText.TabIndex = 9;
-            this.lblKedvText.Text = "Kedvezmény:";
-            // 
-            // lblFizetText
-            // 
-            this.lblFizetText.AutoSize = true;
-            this.lblFizetText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFizetText.ForeColor = System.Drawing.Color.Maroon;
-            this.lblFizetText.Location = new System.Drawing.Point(36, 608);
-            this.lblFizetText.Name = "lblFizetText";
-            this.lblFizetText.Size = new System.Drawing.Size(94, 20);
-            this.lblFizetText.TabIndex = 9;
-            this.lblFizetText.Text = "Fizetendő:";
-            // 
-            // lblOsszValue
-            // 
-            this.lblOsszValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblOsszValue.ForeColor = System.Drawing.Color.Maroon;
-            this.lblOsszValue.Location = new System.Drawing.Point(126, 568);
-            this.lblOsszValue.Name = "lblOsszValue";
-            this.lblOsszValue.Size = new System.Drawing.Size(107, 20);
-            this.lblOsszValue.TabIndex = 9;
-            this.lblOsszValue.Text = "0";
-            this.lblOsszValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblFizetValue
-            // 
-            this.lblFizetValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblFizetValue.ForeColor = System.Drawing.Color.Maroon;
-            this.lblFizetValue.Location = new System.Drawing.Point(126, 608);
-            this.lblFizetValue.Name = "lblFizetValue";
-            this.lblFizetValue.Size = new System.Drawing.Size(107, 20);
-            this.lblFizetValue.TabIndex = 9;
-            this.lblFizetValue.Text = "0";
-            this.lblFizetValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblKedvValue
-            // 
-            this.lblKedvValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblKedvValue.ForeColor = System.Drawing.Color.Maroon;
-            this.lblKedvValue.Location = new System.Drawing.Point(126, 588);
-            this.lblKedvValue.Name = "lblKedvValue";
-            this.lblKedvValue.Size = new System.Drawing.Size(107, 20);
-            this.lblKedvValue.TabIndex = 9;
-            this.lblKedvValue.Text = "0";
-            this.lblKedvValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtSzaz
-            // 
-            this.txtSzaz.Location = new System.Drawing.Point(55, 66);
-            this.txtSzaz.Name = "txtSzaz";
-            this.txtSzaz.Size = new System.Drawing.Size(64, 20);
-            this.txtSzaz.TabIndex = 10;
-            this.txtSzaz.Text = "0";
-            // 
-            // txtFt
-            // 
-            this.txtFt.Location = new System.Drawing.Point(159, 66);
-            this.txtFt.Name = "txtFt";
-            this.txtFt.Size = new System.Drawing.Size(49, 20);
-            this.txtFt.TabIndex = 11;
-            this.txtFt.Text = "0";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(125, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(15, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "%";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(214, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Ft";
-            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1045,9 +1003,5 @@
         private System.Windows.Forms.Label lblOsszValue;
         private System.Windows.Forms.Label lblFizetValue;
         private System.Windows.Forms.Label lblKedvValue;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtFt;
-        private System.Windows.Forms.TextBox txtSzaz;
     }
 }
