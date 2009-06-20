@@ -364,6 +364,13 @@ namespace e_Cafe
             fa.ShowDialog();
         }
 
+        private void mmAltKedvezmeny_Click(object sender, EventArgs e)
+        {
+            frmAltKedvezm f = new frmAltKedvezm();
+            f.MdiParent = this;
+            f.Show();
+        }
+
 
 
 

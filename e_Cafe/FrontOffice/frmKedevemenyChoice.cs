@@ -49,11 +49,13 @@ namespace e_Cafe.FrontOffice
         private void getSzazalekok()
         {
             flpKedvezmenyek.Controls.Clear();
-           
-            for (int i = 0; i < (3); i++)
+
+            Kedvezmenyek kk = new Kedvezmenyek();
+
+            for (int i = 0; i < kk.lKEDVEZMENY.Count; i++)
             {
 
-                KedvezmenyButton kb = new KedvezmenyButton(i);
+                KedvezmenyButton kb = new KedvezmenyButton(kk.lKEDVEZMENY[i].SZAZALEK);
 
                 //kb.Location = new Point(0, 0);
 
