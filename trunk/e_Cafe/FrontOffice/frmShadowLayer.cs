@@ -14,7 +14,8 @@ namespace e_Cafe
     public enum UsingForms
     {
         PartnerInsert,
-        KedvezmenyValaszt
+        KedvezmenyValaszt,
+        MediaPlayer
     }
     public partial class frmShadowLayer : Form
     {
@@ -49,6 +50,14 @@ namespace e_Cafe
                         {
                             ke = kc.tmpKe;
                         }
+                        Close();
+                        break;
+                    }
+                case UsingForms.MediaPlayer:
+                    {
+                        frmMediaPlayer mp = new frmMediaPlayer();
+                        mp.ShowDialog();
+                        
                         Close();
                         break;
                     }

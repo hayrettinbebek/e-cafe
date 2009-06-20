@@ -137,6 +137,8 @@ namespace WinampFrontEndLib
 		public WinampLib()
 		{
 		}
+       
+
 
 		#region Other useful Winamp Methods
 		public static string GetCurrentSongTitle() 
@@ -319,6 +321,21 @@ namespace WinampFrontEndLib
 			IntPtr hwnd = FindWindow(m_windowName, null); 
 			eqPosition = SendMessageA(hwnd, WM_WA_IPC, position, IPC_GETEQDATA);
 		}
+
+        public static int GetVolume()
+        {
+            IntPtr hwnd = FindWindow(m_windowName, null);
+            return SendMessageA(hwnd, WM_WA_IPC, -666, IPC_SETVOLUME);
+        }
+
+        // Returns status of playback. Returns: 1 = playing, 3 = paused, 0 = not playing)
+        public static int GetState()
+        {
+            IntPtr hwnd = FindWindow(m_windowName, null);
+            return SendMessageA(hwnd, WM_WA_IPC, 0, IPC_ISPLAYING);
+        }
+        	 
+
 
 		public static int SetEqData()
 		{

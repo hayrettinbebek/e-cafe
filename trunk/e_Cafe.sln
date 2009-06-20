@@ -6,6 +6,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{4423B230-FAEA-458A-94FC-F8D912C2709A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e_Cafe", "e_Cafe\e_Cafe.csproj", "{23496019-7E6E-4263-A603-28B203C20C8F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FA619A7-6266-4677-A439-43A7E0316353} = {0FA619A7-6266-4677-A439-43A7E0316353}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportPrinting", "ReportPrinting\ReportPrinting.csproj", "{9330BA30-6B74-45C9-9788-3697F7731D32}"
 EndProject

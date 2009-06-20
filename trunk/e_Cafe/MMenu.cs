@@ -10,6 +10,7 @@ using GUI.billentyu;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using NSpring.Logging;
+using WinampFrontEndLib;
 
 
 namespace e_Cafe
@@ -144,6 +145,12 @@ namespace e_Cafe
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = Convert.ToString(Convert.ToDateTime(DateTime.Now).Hour) + ":" + Convert.ToString(Convert.ToDateTime(DateTime.Now).Minute) + ":" + Convert.ToString(Convert.ToDateTime(DateTime.Now).Second);
+            lbltrackInfo.Text = DisplaySong();
+        }
+        private string DisplaySong()
+        {
+            return WinampLib.GetCurrentSongTitle() +"    "+ Math.Round(TimeSpanUtils.ConvertMillisecondsToMinutes(WinampLib.GetTrackPosition()))+
+                        ":"+Math.Round(TimeSpanUtils.ConvertMillisecondsToSeconds(WinampLib.GetTrackPosition())%60);
         }
 
         private void MMenu_Load(object sender, EventArgs e)
@@ -497,6 +504,23 @@ namespace e_Cafe
 
         private void btnFoglalas_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void lbltrackInfo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lbltrackInfo_DoubleClick(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void lbltrackInfo_Click_1(object sender, EventArgs e)
+        {
+            frmShadowLayer fs = new frmShadowLayer(UsingForms.MediaPlayer);
+            fs.ShowDialog();
 
         }
 

@@ -57,8 +57,10 @@
             this.btnKilep = new System.Windows.Forms.Button();
             this.btnKijelent = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.lbltrackInfo = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +72,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(184, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(770, 458);
+            this.panel3.Size = new System.Drawing.Size(717, 456);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -78,9 +80,9 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(954, 0);
+            this.panel4.Location = new System.Drawing.Point(901, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(128, 458);
+            this.panel4.Size = new System.Drawing.Size(128, 456);
             this.panel4.TabIndex = 0;
             // 
             // panel5
@@ -112,10 +114,11 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.panel6.Controls.Add(this.lbltrackInfo);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(184, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(770, 20);
+            this.panel6.Size = new System.Drawing.Size(717, 20);
             this.panel6.TabIndex = 0;
             // 
             // ilLogin
@@ -137,7 +140,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(184, 458);
+            this.panel2.Size = new System.Drawing.Size(184, 456);
             this.panel2.TabIndex = 1;
             // 
             // pnlHelyek
@@ -146,7 +149,7 @@
             this.pnlHelyek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHelyek.Location = new System.Drawing.Point(10, 55);
             this.pnlHelyek.Name = "pnlHelyek";
-            this.pnlHelyek.Size = new System.Drawing.Size(150, 403);
+            this.pnlHelyek.Size = new System.Drawing.Size(150, 401);
             this.pnlHelyek.TabIndex = 9;
             // 
             // panel9
@@ -155,7 +158,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel9.Location = new System.Drawing.Point(160, 55);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(24, 403);
+            this.panel9.Size = new System.Drawing.Size(24, 401);
             this.panel9.TabIndex = 10;
             // 
             // panel8
@@ -164,7 +167,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 55);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 403);
+            this.panel8.Size = new System.Drawing.Size(10, 401);
             this.panel8.TabIndex = 7;
             // 
             // panel7
@@ -196,9 +199,9 @@
             this.panel1.Controls.Add(this.btnKijelent);
             this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 458);
+            this.panel1.Location = new System.Drawing.Point(0, 456);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1082, 116);
+            this.panel1.Size = new System.Drawing.Size(1029, 116);
             this.panel1.TabIndex = 0;
             // 
             // label7
@@ -403,11 +406,23 @@
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.button2_Click);
             // 
+            // lbltrackInfo
+            // 
+            this.lbltrackInfo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbltrackInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbltrackInfo.ForeColor = System.Drawing.Color.Maroon;
+            this.lbltrackInfo.Location = new System.Drawing.Point(287, 0);
+            this.lbltrackInfo.Name = "lbltrackInfo";
+            this.lbltrackInfo.Size = new System.Drawing.Size(430, 20);
+            this.lbltrackInfo.TabIndex = 0;
+            this.lbltrackInfo.Text = "label1";
+            this.lbltrackInfo.Click += new System.EventHandler(this.lbltrackInfo_Click_1);
+            // 
             // MMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 574);
+            this.ClientSize = new System.Drawing.Size(1029, 572);
             this.ControlBox = false;
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
@@ -421,6 +436,7 @@
             this.Load += new System.EventHandler(this.MMenu_Load);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -458,6 +474,7 @@
         private System.Windows.Forms.Button btnKijelent;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ImageList ilLogin;
+        private System.Windows.Forms.Label lbltrackInfo;
         
     }
 }
