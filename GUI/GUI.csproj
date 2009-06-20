@@ -77,6 +77,12 @@
     <Compile Include="Asztal_Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="billentyu\numericKeyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="billentyu\numericKeyboard.Designer.cs">
+      <DependentUpon>numericKeyboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="billentyu\keyb2.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +144,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="billentyu\numericKeyboard.resx">
+      <DependentUpon>numericKeyboard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="billentyu\keyb2.resx">
       <DependentUpon>keyb2.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -858,6 +868,11 @@
     <Content Include="asztal\pult\pult_off.png" />
     <Content Include="asztal\pult\pult_on.png" />
     <Content Include="asztal\pult\pult_over.png" />
+    <None Include="Resources\uresGomb.png" />
+    <None Include="Resources\fizet_off.png" />
+    <None Include="Resources\afa_off.png" />
+    <None Include="Resources\fizet.png" />
+    <None Include="Resources\afa.png" />
     <None Include="Resources\pipaoff.png" />
     <None Include="Resources\pipaon.png" />
     <None Include="gombok\Close.ico" />

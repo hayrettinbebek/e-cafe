@@ -858,53 +858,63 @@ namespace e_Cafe
 
         private void btnKedv_Click(object sender, EventArgs e)
         {
-            if (Convert.ToDouble(txtSzaz.Text) > 0)
-            {
-                double tmpszaz = Convert.ToDouble(txtSzaz.Text);
-                if (tblRendeles.SelectedItems.Length > 0)
-                {
-                    foreach (var s in tblRendeles.SelectedItems)
-                    {
-                        ((eCell)s.Cells[0]).rSor.addKedvezmSzaz(tmpszaz);
-                    }
-                }
-                else
-                {
-                    _AktRendeles.addKedvezmSzaz(tmpszaz);
+            frmShadowLayer p = new frmShadowLayer(UsingForms.KedvezmenyValaszt);
+            
+            p.ShowDialog();
 
-                }
-            }
-            else if (Convert.ToDouble(txtFt.Text) > 0)
+            if (p.ke != null)
             {
-                double tmpFt = Convert.ToDouble(txtFt.Text);
-                if (tblRendeles.SelectedItems.Length > 0)
+                if (p.ke.SZAZALEK > 0)
                 {
-                    double tmpValue = 0;
-                    foreach (var s in tblRendeles.SelectedItems)
+                    int tmpszaz = p.ke.SZAZALEK;
+                    if (tblRendeles.SelectedItems.Length > 0)
                     {
-                        tmpValue+=((eCell)s.Cells[0]).rSor._Ertek;
-                    }
-
-                    foreach (var s in tblRendeles.SelectedItems)
-                    {
-                        if (tmpValue == 0)
+                        foreach (var s in tblRendeles.SelectedItems)
                         {
-                            ((eCell)s.Cells[0]).rSor.addKedvezmFt(0);
-                        }
-                        else
-                        {
-                            ((eCell)s.Cells[0]).rSor.addKedvezmFt((tmpFt * ((eCell)s.Cells[0]).rSor._Ertek) / tmpValue);
+                            ((eCell)s.Cells[0]).rSor.addKedvezmSzaz(tmpszaz);
                         }
                     }
-                }
-                else
-                {
-                    _AktRendeles.addKedvezmFt(tmpFt);
+                    else
+                    {
+                        _AktRendeles.addKedvezmSzaz(tmpszaz);
 
+                    }
                 }
+                else if (p.ke.ERTEK > 0)
+                {
+                    double tmpFt = p.ke.ERTEK;
+                    if (tblRendeles.SelectedItems.Length > 0)
+                    {
+                        double tmpValue = 0;
+                        foreach (var s in tblRendeles.SelectedItems)
+                        {
+                            tmpValue += ((eCell)s.Cells[0]).rSor._Ertek;
+                        }
+
+                        foreach (var s in tblRendeles.SelectedItems)
+                        {
+                            if (tmpValue == 0)
+                            {
+                                ((eCell)s.Cells[0]).rSor.addKedvezmFt(0);
+                            }
+                            else
+                            {
+                                ((eCell)s.Cells[0]).rSor.addKedvezmFt((tmpFt * ((eCell)s.Cells[0]).rSor._Ertek) / tmpValue);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        _AktRendeles.addKedvezmFt(tmpFt);
+
+                    }
+                }
+                _AktRendeles.SaveRendeles();
+                initSums();
             }
-            _AktRendeles.SaveRendeles();
-            initSums();
+
+            
+            
         }
 
 

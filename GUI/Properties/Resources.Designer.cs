@@ -109,6 +109,20 @@ namespace GUI.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap ertek_off {
+            get {
+                object obj = ResourceManager.GetObject("ertek_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap ertek_on {
+            get {
+                object obj = ResourceManager.GetObject("ertek_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -189,6 +203,27 @@ namespace GUI.Properties {
         public static System.Drawing.Bitmap space_T {
             get {
                 object obj = ResourceManager.GetObject("space_T", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap szazalek_off {
+            get {
+                object obj = ResourceManager.GetObject("szazalek_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap szazalek_on {
+            get {
+                object obj = ResourceManager.GetObject("szazalek_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap uresGomb {
+            get {
+                object obj = ResourceManager.GetObject("uresGomb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
