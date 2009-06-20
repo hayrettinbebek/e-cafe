@@ -652,23 +652,7 @@ namespace BusinessLogic
 
     }
 
-    public class KedvezmenyErtek
-    {
-        public int SZAZALEK;
-        public double ERTEK;
-        public KedvezmenyErtek(int sz)
-        {
-            SZAZALEK = sz;
-            ERTEK = 0;
-        }
-
-        public KedvezmenyErtek(double ert)
-        {
-            SZAZALEK = 0;
-            ERTEK = ert;
-        }
-
-    }
+  
 
 
 
