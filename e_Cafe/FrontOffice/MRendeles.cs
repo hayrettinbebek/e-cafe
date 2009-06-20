@@ -460,6 +460,9 @@ namespace e_Cafe
             tblRendeles.TableModel.RowHeight = 40;
             RendelTableSelectionRefresh();
 
+            initSums();
+            
+
 
         }
 
@@ -478,6 +481,7 @@ namespace e_Cafe
             tblRendeles.Font = DEFS.f2;
             tblRendeles.TableModel.RowHeight = 40;
             RendelTableSelectionRefresh();
+            initSums();
         }
 
         private void initRendelTablaSumNoDraw()
@@ -494,6 +498,7 @@ namespace e_Cafe
             tblRendeles.TableModel = _AktRendeles.getTableModelSum();
             tblRendeles.Font = DEFS.f2;
             tblRendeles.TableModel.RowHeight = 40;
+            initSums();
         }
 
         private void RendelTableSelectionRefresh()
@@ -507,9 +512,9 @@ namespace e_Cafe
 
             foreach (var r in tblRendeles.SelectedItems)
             {
-                r.Cells[0].Image = global::GUI.Properties.Resources.Ok.ToBitmap();
+                r.Cells[0].Image = global::GUI.Properties.Resources.pipaon;
             }
-
+            initSums();
         }
 
         private void tblRendeles_SelectionChanged(object sender, XPTable.Events.SelectionEventArgs e)
@@ -582,6 +587,55 @@ namespace e_Cafe
             lCikkList = new Cikk_list(CikkListContructType.ForRendeles);
             initRendelTabla();
 
+
+
+        }
+
+        private void initSums()
+        {
+            if (_AktRendeles != null)
+            {
+
+                if (_AktRendeles.KEDVEZMENY > 0)
+                {
+                    lblKedvText.Visible = true;
+                    lblKedvValue.Visible = true;
+                    lblFizetValue.Visible = true;
+                    lblFizetText.Visible = true;
+                }
+
+
+                if (tblRendeles.SelectedItems.Length > 0)
+                {
+                    double tmpOssz = 0;
+                    double tmpKedv = 0;
+
+                    foreach (var s in tblRendeles.SelectedItems)
+                    {
+                        tmpOssz += ((eCell)s.Cells[0]).rSor._Ertek;
+                        tmpKedv += ((eCell)s.Cells[0]).rSor.KEDVEZMENY;
+                    }
+                    lblKedvValue.Text = tmpKedv.ToString("# ##0");
+                    lblOsszValue.Text = tmpOssz.ToString("# ##0");
+                    lblFizetValue.Text = (tmpOssz - tmpKedv).ToString("# ##0");
+
+                }
+                else
+                {
+                    lblKedvValue.Text = _AktRendeles.KEDVEZMENY.ToString("# ##0");
+                    lblOsszValue.Text = _AktRendeles.OSSZESEN.ToString("# ##0");
+                    lblFizetValue.Text = _AktRendeles.FIZETENDO.ToString("# ##0");
+                }
+
+            }
+            else
+            {
+                lblKedvText.Visible = false;
+                lblKedvValue.Visible = false;
+                lblFizetValue.Visible = false;
+                lblFizetText.Visible = false;
+            }
+            
 
 
         }
@@ -800,6 +854,57 @@ namespace e_Cafe
         private void MRendeles_FormClosed(object sender, FormClosedEventArgs e)
         {
             DEFS.doRepairTables();
+        }
+
+        private void btnKedv_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToDouble(txtSzaz.Text) > 0)
+            {
+                double tmpszaz = Convert.ToDouble(txtSzaz.Text);
+                if (tblRendeles.SelectedItems.Length > 0)
+                {
+                    foreach (var s in tblRendeles.SelectedItems)
+                    {
+                        ((eCell)s.Cells[0]).rSor.addKedvezmSzaz(tmpszaz);
+                    }
+                }
+                else
+                {
+                    _AktRendeles.addKedvezmSzaz(tmpszaz);
+
+                }
+            }
+            else if (Convert.ToDouble(txtFt.Text) > 0)
+            {
+                double tmpFt = Convert.ToDouble(txtFt.Text);
+                if (tblRendeles.SelectedItems.Length > 0)
+                {
+                    double tmpValue = 0;
+                    foreach (var s in tblRendeles.SelectedItems)
+                    {
+                        tmpValue+=((eCell)s.Cells[0]).rSor._Ertek;
+                    }
+
+                    foreach (var s in tblRendeles.SelectedItems)
+                    {
+                        if (tmpValue == 0)
+                        {
+                            ((eCell)s.Cells[0]).rSor.addKedvezmFt(0);
+                        }
+                        else
+                        {
+                            ((eCell)s.Cells[0]).rSor.addKedvezmFt((tmpFt * ((eCell)s.Cells[0]).rSor._Ertek) / tmpValue);
+                        }
+                    }
+                }
+                else
+                {
+                    _AktRendeles.addKedvezmFt(tmpFt);
+
+                }
+            }
+            _AktRendeles.SaveRendeles();
+            initSums();
         }
 
 

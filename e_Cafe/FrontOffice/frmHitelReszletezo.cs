@@ -102,7 +102,7 @@ namespace e_Cafe.FrontOffice
 
             foreach (var r in tblHitelek.SelectedItems)
             {
-                r.Cells[0].Image = global::GUI.Properties.Resources.Ok.ToBitmap();
+                r.Cells[0].Image = global::GUI.Properties.Resources.pipaon;
             }
         }
 
