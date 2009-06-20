@@ -27,6 +27,7 @@ namespace e_Cafe.Torzsek
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             aFATableAdapter.Update(eCAFEDataSetAFA);
+
         }
 
 

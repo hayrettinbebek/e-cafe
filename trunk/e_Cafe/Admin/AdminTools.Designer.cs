@@ -91,6 +91,8 @@
             this.logokKüldéseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adatbázisFrissítésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mmNapiZaras = new System.Windows.Forms.ToolStripMenuItem();
+            this.kedvezményekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmAltKedvezmeny = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -360,7 +362,8 @@
             this.mmafa_kodok,
             this.helyekToolStripMenuItem,
             this.mmRaktar,
-            this.mennyiségiEgységekToolStripMenuItem});
+            this.mennyiségiEgységekToolStripMenuItem,
+            this.kedvezményekToolStripMenuItem});
             this.áfaKódokToolStripMenuItem.Name = "áfaKódokToolStripMenuItem";
             this.áfaKódokToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.áfaKódokToolStripMenuItem.Text = "Egyéb törzsek";
@@ -572,6 +575,21 @@
             this.mmNapiZaras.Text = "!! NAPI ZÁRÁS !!";
             this.mmNapiZaras.Click += new System.EventHandler(this.mmNapiZaras_Click);
             // 
+            // kedvezményekToolStripMenuItem
+            // 
+            this.kedvezményekToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mmAltKedvezmeny});
+            this.kedvezményekToolStripMenuItem.Name = "kedvezményekToolStripMenuItem";
+            this.kedvezményekToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.kedvezményekToolStripMenuItem.Text = "Kedvezmények";
+            // 
+            // mmAltKedvezmeny
+            // 
+            this.mmAltKedvezmeny.Name = "mmAltKedvezmeny";
+            this.mmAltKedvezmeny.Size = new System.Drawing.Size(203, 22);
+            this.mmAltKedvezmeny.Text = "Általános kedvezmények";
+            this.mmAltKedvezmeny.Click += new System.EventHandler(this.mmAltKedvezmeny_Click);
+            // 
             // AdminTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -656,6 +674,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem akciókToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selejtezésekVisszanézéseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kedvezményekToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mmAltKedvezmeny;
     }
 }
 
