@@ -39,7 +39,7 @@ namespace e_Cafe.Torzsek
             {
                 this.rECEPTTableAdapter.Fill(this.receptMentes.RECEPT,Parent_cikk_id,load_cikk_id);
 
-                ac = new Cikk(load_cikk_id, true, new System.Data.SqlClient.SqlConnection(DEFS.ConSTR));
+                ac = new Cikk(load_cikk_id, true);
                 lblCikk.Text = ac.MEGNEVEZES;
 
                 lblMert.Text = ac.MEGYS_MEGNEVEZES;

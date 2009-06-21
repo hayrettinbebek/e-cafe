@@ -44,7 +44,7 @@ namespace e_Cafe
 
         public static Cikk SelectCikk(int _cikkId)
         {
-            return (new Cikk(_cikkId, true, new SqlConnection(DEFS.ConSTR)));
+            return (new Cikk(_cikkId, true));
             
         }
 

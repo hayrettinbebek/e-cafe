@@ -344,7 +344,7 @@ namespace BusinessLogic
             {
                 _SOR_ID = (int)rdr["SOR_ID"];
                 _FEJ_ID = (int)rdr["FEJ_ID"];
-                _CIKK = new Cikk((int)rdr["CIKK_ID"],true,new SqlConnection(DEFS.ConSTR));
+                _CIKK = new Cikk((int)rdr["CIKK_ID"],true);
                 _BESZ_AR = (double)rdr["BESZ_AR"];
                 _MENNYISEG = (double)rdr["MENNYISEG"];
 

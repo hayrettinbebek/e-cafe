@@ -1338,6 +1338,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\BusinessLogic.CikkAr.datasource" />
     <None Include="SQL\DataSets\dsALTALANOS_KEDVEZMENY.xsc">
       <DependentUpon>dsALTALANOS_KEDVEZMENY.xsd</DependentUpon>
     </None>

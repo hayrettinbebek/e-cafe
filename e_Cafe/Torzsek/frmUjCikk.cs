@@ -43,7 +43,7 @@ namespace e_Cafe
             dynComboBindingSource.Add(new DynCombo("Folyó", "L"));
             if (CikkID > 0)
             {
-                newCikk = new Cikk(CikkID,true,new System.Data.SqlClient.SqlConnection(DEFS.ConSTR));
+                newCikk = new Cikk(CikkID,true);
             }
             else
             {

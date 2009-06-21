@@ -333,7 +333,7 @@ namespace BusinessLogic
                 {
                     fTETEL_ID = (int)rdr["TETEL_ID"];
                     fRENDELSOR = new RendelesSor((int)rdr["RENDELES_SOR_ID"],new SqlConnection(DEFS.ConSTR), true);
-                    fCIKK = new Cikk((int)rdr["CIKK_ID"], true, new SqlConnection(DEFS.ConSTR));
+                    fCIKK = new Cikk((int)rdr["CIKK_ID"], true);
                     fMENNYISEG = (double)rdr["MENNYISEG"];
                     fEGYSEGAR = (double)rdr["EGYSEGAR"];
                     fNETTO = (double)rdr["NETTO"];

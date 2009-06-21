@@ -409,7 +409,7 @@ namespace BusinessLogic
         {
             get
             {
-                Cikk c = new Cikk(_CIKK_ID,true, new SqlConnection(DEFS.ConSTR));
+                Cikk c = new Cikk(_CIKK_ID,true);
                 return (c.MEGNEVEZES);
             }
             
@@ -665,7 +665,7 @@ namespace BusinessLogic
     {
         public SzallitoCikkek(int cikk_id, double besz_ar)
         {
-            _Cikk = new Cikk(cikk_id, true, new SqlConnection(DEFS.ConSTR));
+            _Cikk = new Cikk(cikk_id, true);
             _egys = besz_ar;
             _raktar_id = _Cikk.ALAP_RAKTAR;
         }
