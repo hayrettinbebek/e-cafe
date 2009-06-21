@@ -199,6 +199,8 @@
             this.ERVENBYES_TOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eRVENYESIGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eLADASIARNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.filter_RovidNev = new System.Windows.Forms.ToolStripTextBox();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1251,6 +1253,8 @@
             this.toolStripLabel1,
             this.toolStripLabel2,
             this.filterMegnevezes,
+            this.toolStripLabel5,
+            this.filter_RovidNev,
             this.toolStripLabel3,
             this.filterCikkcsop,
             this.toolStripLabel4,
@@ -1836,6 +1840,18 @@
             this.eLADASIARNDataGridViewTextBoxColumn.HeaderText = "Eladási ár";
             this.eLADASIARNDataGridViewTextBoxColumn.Name = "eLADASIARNDataGridViewTextBoxColumn";
             // 
+            // toolStripLabel5
+            // 
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(55, 22);
+            this.toolStripLabel5.Text = "Rövid név";
+            // 
+            // filter_RovidNev
+            // 
+            this.filter_RovidNev.Name = "filter_RovidNev";
+            this.filter_RovidNev.Size = new System.Drawing.Size(100, 25);
+            this.filter_RovidNev.TextChanged += new System.EventHandler(this.filter_RovidNev_TextChanged);
+            // 
             // frmCikk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2070,5 +2086,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ERVENBYES_TOL;
         private System.Windows.Forms.DataGridViewTextBoxColumn eRVENYESIGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eLADASIARNDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
+        private System.Windows.Forms.ToolStripTextBox filter_RovidNev;
     }
 }

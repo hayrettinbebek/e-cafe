@@ -790,6 +790,7 @@ namespace BusinessLogic
             _cikkcsop = "";
         }
         private string _nev = "";
+        private string _rovid_nev = "";
         private string _cikkcsop = "";
         private string _alcsop = "";
 
@@ -800,6 +801,16 @@ namespace BusinessLogic
             {
                 _nev = value;
                 
+            }
+        }
+
+        public string FILTER_ROVID_NEV
+        {
+            get { return (_rovid_nev); }
+            set
+            {
+                _rovid_nev = value;
+
             }
         }
 
@@ -825,21 +836,20 @@ namespace BusinessLogic
 
         }
 
+
+
         public string  getResult()
         {
             
             string res_str = "";
-            //if (_nev != "")
-            //{
+
                 res_str += "(MEGNEVEZES like '" + _nev + "%')";
 
-            //}
-            
-            
-            //if (_cikkcsop != "")
-            //{
+
                 res_str += " and ( CIKKCSOPORT  like '" + _cikkcsop + "%')";
-            //}
+
+                res_str += " and ( CIKK_ROVID_NEV  like '" + _rovid_nev + "%')";
+           
                 if (_alcsop == "")
                 {
                     //res_str += " and ( ALCSOPORT  like '" + _alcsop + "%')";
