@@ -37,19 +37,20 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flpKedvezmenyek = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.numericKeyboar1 = new GUI.billentyu.numericKeyboar();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnErtek = new System.Windows.Forms.RadioButton();
             this.btnSzazalek = new System.Windows.Forms.RadioButton();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.numericKeyboar1 = new GUI.billentyu.numericKeyboar();
+            this.btnPartner = new System.Windows.Forms.RadioButton();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -152,13 +153,31 @@
             this.flpKedvezmenyek.Size = new System.Drawing.Size(25, 272);
             this.flpKedvezmenyek.TabIndex = 0;
             // 
-            // panel7
+            // button11
             // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(395, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(150, 272);
-            this.panel7.TabIndex = 3;
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(317, 163);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(40, 80);
+            this.button11.TabIndex = 3;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // numericKeyboar1
+            // 
+            this.numericKeyboar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numericKeyboar1.BackgroundImage")));
+            this.numericKeyboar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numericKeyboar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericKeyboar1.Location = new System.Drawing.Point(153, 0);
+            this.numericKeyboar1.Name = "numericKeyboar1";
+            this.numericKeyboar1.Size = new System.Drawing.Size(242, 272);
+            this.numericKeyboar1.TabIndex = 1;
             // 
             // panel3
             // 
@@ -168,10 +187,19 @@
             this.panel3.Size = new System.Drawing.Size(153, 272);
             this.panel3.TabIndex = 2;
             // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(395, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(150, 272);
+            this.panel7.TabIndex = 3;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnPartner);
             this.panel1.Controls.Add(this.btnErtek);
             this.panel1.Controls.Add(this.btnSzazalek);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -179,6 +207,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(574, 86);
             this.panel1.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(235, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Érték";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(116, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 19);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Százalék";
             // 
             // btnErtek
             // 
@@ -191,7 +240,7 @@
             this.btnErtek.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnErtek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnErtek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnErtek.Location = new System.Drawing.Point(307, 3);
+            this.btnErtek.Location = new System.Drawing.Point(228, 3);
             this.btnErtek.Name = "btnErtek";
             this.btnErtek.Size = new System.Drawing.Size(60, 60);
             this.btnErtek.TabIndex = 9;
@@ -210,7 +259,7 @@
             this.btnSzazalek.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSzazalek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSzazalek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSzazalek.Location = new System.Drawing.Point(206, 3);
+            this.btnSzazalek.Location = new System.Drawing.Point(127, 3);
             this.btnSzazalek.Name = "btnSzazalek";
             this.btnSzazalek.Size = new System.Drawing.Size(60, 60);
             this.btnSzazalek.TabIndex = 8;
@@ -265,52 +314,23 @@
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // label1
+            // btnPartner
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(195, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 19);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Százalék";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(314, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 19);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Érték";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(317, 163);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(40, 80);
-            this.button11.TabIndex = 3;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // numericKeyboar1
-            // 
-            this.numericKeyboar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numericKeyboar1.BackgroundImage")));
-            this.numericKeyboar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numericKeyboar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericKeyboar1.Location = new System.Drawing.Point(153, 0);
-            this.numericKeyboar1.Name = "numericKeyboar1";
-            this.numericKeyboar1.Size = new System.Drawing.Size(242, 272);
-            this.numericKeyboar1.TabIndex = 1;
+            this.btnPartner.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnPartner.BackColor = System.Drawing.Color.Transparent;
+            this.btnPartner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPartner.BackgroundImage")));
+            this.btnPartner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPartner.FlatAppearance.BorderSize = 0;
+            this.btnPartner.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnPartner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPartner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPartner.Location = new System.Drawing.Point(326, 0);
+            this.btnPartner.Name = "btnPartner";
+            this.btnPartner.Size = new System.Drawing.Size(60, 60);
+            this.btnPartner.TabIndex = 9;
+            this.btnPartner.UseVisualStyleBackColor = false;
+            this.btnPartner.CheckedChanged += new System.EventHandler(this.btnFoglalas_CheckedChanged);
             // 
             // frmKedevemenyChoice
             // 
@@ -364,5 +384,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.RadioButton btnPartner;
     }
 }

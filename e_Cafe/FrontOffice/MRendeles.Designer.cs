@@ -466,7 +466,6 @@
             // 
             // panel12
             // 
-            this.panel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel12.BackgroundImage")));
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(25, 0);
             this.panel12.Name = "panel12";

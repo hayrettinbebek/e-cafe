@@ -13,9 +13,15 @@ using GUI;
 
 namespace e_Cafe
 {
+    public enum PartnerSelectModes
+    {
+        hitelhez,
+        Kedvezmeny,
+        edit
+    }
     public partial class MMPartnerek : Form
     {
-        public bool SelectMode = false;
+        public PartnerSelectModes SelectMode = PartnerSelectModes.hitelhez;
         public double neededHitel = 0;
         public Partner SelectedPartner;
 
@@ -100,26 +106,44 @@ namespace e_Cafe
         }
         private void ShowPartner(object sender, EventArgs e)
         {
-            if (SelectMode)
+            switch (SelectMode)
             {
-                SelectedPartner = ((PartnerButton)sender).fPARTNER;
-                if (SelectedPartner.HITEL_SZABAD >= neededHitel)
-                {
-                    DEFS.DebugLog("Partnernak van hitelkerete:" + SelectedPartner.PARTNER_ID.ToString());
-                    DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    DEFS.SendInfoMessage("A kiválasztott partnernak nincs elegendő hitelkerete");
-                }
+                case PartnerSelectModes.hitelhez:
+                    {
+                        SelectedPartner = ((PartnerButton)sender).fPARTNER;
+                        if (SelectedPartner.HITEL_SZABAD >= neededHitel)
+                        {
+                            DEFS.DebugLog("Partnernak van hitelkerete:" + SelectedPartner.PARTNER_ID.ToString());
+                            DialogResult = DialogResult.OK;
+                            this.Close();
+                        }
+                        else
+                        {
+                            DEFS.SendInfoMessage("A kiválasztott partnernak nincs elegendő hitelkerete");
+                        }
+
+                        break;
+                    }
+                case PartnerSelectModes.Kedvezmeny:
+                    {
+                        SelectedPartner = ((PartnerButton)sender).fPARTNER;
+                        DialogResult = DialogResult.OK;
+                        this.Close();
+                        break;
+                    }
+                case PartnerSelectModes.edit:
+                    {
+                        frmShadowLayer p = new frmShadowLayer(UsingForms.PartnerInsert);
+                        p.param = ((PartnerButton)sender).fPARTNER.PARTNER_ID;
+                        p.ShowDialog();
+
+                        break;
+                    }
+                default:
+                    break;
             }
-            else
-            {
-                frmShadowLayer p = new frmShadowLayer(UsingForms.PartnerInsert);
-                p.param = ((PartnerButton)sender).fPARTNER.PARTNER_ID;
-                p.ShowDialog();
-            }
+         
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -133,8 +157,8 @@ namespace e_Cafe
         private void MMPartnerek_Load(object sender, EventArgs e)
         {
 
-             
-            btnPartnerNelkul.Visible = SelectMode;
+
+            btnPartnerNelkul.Visible = (SelectMode == PartnerSelectModes.edit);
             SetUserSettings();
 
         }

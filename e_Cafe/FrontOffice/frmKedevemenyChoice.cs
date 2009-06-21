@@ -15,6 +15,7 @@ namespace e_Cafe.FrontOffice
     {
         public KedvezmenyErtek tmpKe;
         private int selKedvSzaz = 0;
+        private Partner selPartner = null;
 
         public frmKedevemenyChoice()
         {
@@ -37,13 +38,29 @@ namespace e_Cafe.FrontOffice
                 splitContainer1.Panel1Collapsed = false;
                 getSzazalekok();
             }
-            else
+            else if (btnErtek.Checked)
             {
                 btnSzazalek.BackgroundImage = global::GUI.Properties.Resources.szazalek_off; 
                 btnErtek.BackgroundImage = global::GUI.Properties.Resources.ertek_on;
                 splitContainer1.Panel2Collapsed = false;
                 splitContainer1.Panel1Collapsed = true;
 
+            }
+            else if (btnPartner.Checked)
+            {
+                if (selPartner == null)
+                {
+                    MMPartnerek mp = new MMPartnerek();
+                    mp.SelectMode = PartnerSelectModes.Kedvezmeny;
+
+
+                    mp.ShowDialog();
+                    if (mp.DialogResult == DialogResult.OK)
+                    {
+                        selPartner = new Partner(mp.SelectedPartner.PARTNER_ID);
+                    }
+                }
+                button1_Click(sender, e);
             }
         }
         private void getSzazalekok()
@@ -90,9 +107,16 @@ namespace e_Cafe.FrontOffice
             {
                 tmpKe = new KedvezmenyErtek(Convert.ToDouble(numericKeyboar1.txtRet.Text));
             }
-            else
+            else if (btnSzazalek.Checked)
             {
                 tmpKe = new KedvezmenyErtek(selKedvSzaz);
+            }
+            else if (btnPartner.Checked)
+            {
+                if (selPartner != null)
+                {
+                    tmpKe = new KedvezmenyErtek(selPartner);
+                }
             }
             DialogResult = DialogResult.OK;
             Close();

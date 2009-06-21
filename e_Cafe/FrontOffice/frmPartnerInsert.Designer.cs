@@ -244,11 +244,13 @@
             // 
             this.txtKedvezmeny.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.txtKedvezmeny.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKedvezmeny.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "KEDVEZEMNY_SZAZALEK", true));
             this.txtKedvezmeny.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtKedvezmeny.Location = new System.Drawing.Point(105, 348);
             this.txtKedvezmeny.Name = "txtKedvezmeny";
             this.txtKedvezmeny.Size = new System.Drawing.Size(24, 19);
             this.txtKedvezmeny.TabIndex = 18;
+            this.txtKedvezmeny.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
             // label14
             // 

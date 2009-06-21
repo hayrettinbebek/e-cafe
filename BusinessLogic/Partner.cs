@@ -10,7 +10,7 @@ using NSpring.Logging;
 
 namespace BusinessLogic
 {
-
+    
 
     public class Szallito : Partner
     {
@@ -72,9 +72,10 @@ namespace BusinessLogic
             
         }
 
-        public Szallito(int pPartner_id, SqlConnection c)
-            : base(pPartner_id,c)
+        public Szallito(int pPartner_id)
+            : base(pPartner_id)
         {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
             if (c.State == ConnectionState.Closed) { c.Open(); }
             SqlCommand cmd = new SqlCommand();
 
@@ -474,9 +475,10 @@ namespace BusinessLogic
 
         }
 
-        public Vevo(int pPartner_id, SqlConnection c)
-            : base(pPartner_id, c)
+        public Vevo(int pPartner_id)
+            : base(pPartner_id)
         {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
             if (c.State == ConnectionState.Closed) { c.Open(); }
             SqlCommand cmd = new SqlCommand();
 
@@ -772,8 +774,10 @@ namespace BusinessLogic
             _partner_id = -1;
         }
 
-        public Partner(int pPartner_id, SqlConnection c)
+        public Partner(int pPartner_id)
         {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+
             if (c.State == ConnectionState.Closed) { c.Open(); }
             SqlCommand cmd = new SqlCommand();
 
@@ -1012,19 +1016,19 @@ namespace BusinessLogic
                 {
                     case "S":
                         {
-                            Szallito t = new Szallito((int)rdr["PARTNER_ID"], new SqlConnection(DEFS.ConSTR));
+                            Szallito t = new Szallito((int)rdr["PARTNER_ID"]);
                             lSzallitok.Add(t);
                             break;
                         }
                     case "V":
                         {
-                            Vevo t = new Vevo((int)rdr["PARTNER_ID"], new SqlConnection(DEFS.ConSTR));
+                            Vevo t = new Vevo((int)rdr["PARTNER_ID"]);
                             lVevok.Add(t);
                             break;
                         }
                     case "T":
                         {
-                            Vevo t = new Vevo((int)rdr["PARTNER_ID"], new SqlConnection(DEFS.ConSTR));
+                            Vevo t = new Vevo((int)rdr["PARTNER_ID"]);
                             lVevok.Add(t);
                             break;
                         }

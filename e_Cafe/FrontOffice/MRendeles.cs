@@ -674,7 +674,7 @@ namespace e_Cafe
             }
 
             MMPartnerek mp = new MMPartnerek();
-            mp.SelectMode = true;
+            mp.SelectMode = PartnerSelectModes.hitelhez;
             mp.neededHitel = selectionFizetendo();
 
             mp.ShowDialog();
@@ -872,12 +872,29 @@ namespace e_Cafe
                         foreach (var s in tblRendeles.SelectedItems)
                         {
                             ((eCell)s.Cells[0]).rSor.addKedvezmSzaz(tmpszaz);
+                            if (p.ke._Partner != null)
+                            {
+                                ((eCell)s.Cells[0]).rSor._KEDV_PARTNER_ID = p.ke._Partner.PARTNER_ID;
+
+                            }
+                            else
+                            {
+                                ((eCell)s.Cells[0]).rSor._KEDV_PARTNER_ID = -1;
+                            }
+                                
                         }
                     }
                     else
                     {
                         _AktRendeles.addKedvezmSzaz(tmpszaz);
-
+                        if (p.ke._Partner != null)
+                        {
+                            _AktRendeles.fPARTNER_ID = p.ke._Partner.PARTNER_ID;
+                        }
+                        else
+                        {
+                            _AktRendeles.fPARTNER_ID = -1;
+                        }
                     }
                 }
                 else if (p.ke.ERTEK > 0)
