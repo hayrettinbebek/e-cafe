@@ -376,7 +376,7 @@ namespace e_Cafe.Torzsek
 
         private void filter_RovidNev_TextChanged(object sender, EventArgs e)
         {
-            aktCikkfilter.FILTER_ALCSOPORT = filterAlcsoport.Text;
+            aktCikkfilter.FILTER_ROVID_NEV = filter_RovidNev.Text;
             cIKKBindingSource.Filter = aktCikkfilter.getResult();
         }
 
