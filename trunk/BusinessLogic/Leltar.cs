@@ -114,7 +114,7 @@ namespace BusinessLogic
             {
                 LeltarSor tmpLeltar = new LeltarSor();
                 tmpLeltar.SOR_ID = (int)rdr["LELTAR_SOR_ID"];
-                tmpLeltar.P_CIKK = new Cikk((int)rdr["CIKK_ID"], true, new SqlConnection(DEFS.ConSTR));
+                tmpLeltar.P_CIKK = new Cikk((int)rdr["CIKK_ID"], true);
                 tmpLeltar.AKT_KESZLET_MENNY = (double)rdr["AKT_KESZLET_MENNY"];
                 tmpLeltar.SZAMOLT_MENNYISEG1 = (double)rdr["SZAMOLT_MENNYISEG1"];
                 tmpLeltar.SZAMOLT_MENNYISEG2 = (double)rdr["SZAMOLT_MENNYISEG2"];

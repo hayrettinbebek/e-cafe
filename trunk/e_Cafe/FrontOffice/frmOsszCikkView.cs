@@ -18,7 +18,7 @@ namespace e_Cafe.FrontOffice
             AktCikkId = _cikkId;
             InitializeComponent();
             cIKKTableAdapter.Fill(dsReceptText.CIKK, AktCikkId);
-            Cikk c = new Cikk(AktCikkId,true, new System.Data.SqlClient.SqlConnection(DEFS.ConSTR));
+            Cikk c = new Cikk(AktCikkId,true);
             lblCikkNeve.Text = c.MEGNEVEZES;
             rECEPTTableAdapter.Fill(dsReceptCikkek.RECEPT, AktCikkId);
 

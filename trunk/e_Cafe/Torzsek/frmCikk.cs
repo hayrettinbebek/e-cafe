@@ -62,8 +62,24 @@ namespace e_Cafe.Torzsek
             
 
         }
-        
 
+        private void RefreshSubData()
+        {
+            if (aktCikk != null)
+            {
+                tpRecept.Visible = aktCikk.OSSZETETT;
+                cikkKeszletBindingSource.Clear();
+                foreach (var k in aktCikk.lKESZLET)
+                {
+                    cikkKeszletBindingSource.Add(k);
+                }
+                cikkArBindingSource.Clear();
+                foreach (var a in aktCikk.CIKK_ARAK)
+                {
+                    cikkArBindingSource.Add(a);
+                }
+            }
+        }
         private void cIKKBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             if (cIKKBindingSource.Current != null)
@@ -74,17 +90,9 @@ namespace e_Cafe.Torzsek
 
                 //if (cikkList != null)
                 //{
-                    aktCikk = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"],true,new SqlConnection(DEFS.ConSTR));
+                    aktCikk = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"],true);
+                    RefreshSubData();
 
-                    if (aktCikk != null)
-                    {
-                        tpRecept.Visible = aktCikk.OSSZETETT;
-                        cikkKeszletBindingSource.Clear();
-                        foreach (var k in aktCikk.lKESZLET)
-                        {
-                            cikkKeszletBindingSource.Add(k);
-                        }
-                    }
                 //}
                 txtBeszAR.Text =  Cikk.getBeszAr((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"]);
 
@@ -225,7 +233,7 @@ namespace e_Cafe.Torzsek
         {
             if (cIKKBindingSource.Current != null)
             {
-                Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"],true, new SqlConnection(DEFS.ConSTR));
+                Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"],true);
                 c.AKTIV = 0;
                 c.Save();
                 refreshDataset();
@@ -236,7 +244,7 @@ namespace e_Cafe.Torzsek
         {
             if (cIKKBindingSource.Current != null)
             {
-                Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], true, new SqlConnection(DEFS.ConSTR));
+                Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], true);
                 c.AKTIV = 1;
                 c.Save();
                 refreshDataset();
@@ -338,6 +346,31 @@ namespace e_Cafe.Torzsek
                 frmSelejtez fa = new frmSelejtez();
 
                 fa.ShowDialog();
+            }
+        }
+
+        private void btnUjAr_Click(object sender, EventArgs e)
+        {
+            pnlUjArSor.Visible = true;
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+
+            aktCikk.AddCikkAr(dtpArFrom.Value, dtpArTo.Value, Convert.ToDouble(txtAr.Text));
+            RefreshSubData();
+
+            pnlUjArSor.Visible = false;
+        }
+
+        private void btnCikArSave_Click(object sender, EventArgs e)
+        {
+            
+            foreach (var a in cikkArBindingSource)
+            {
+                ((CikkAr)a).Save();
             }
         }
 
