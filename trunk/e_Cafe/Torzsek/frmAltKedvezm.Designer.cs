@@ -33,9 +33,9 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dsALTALANOS_KEDVEZMENY = new e_Cafe.dsALTALANOS_KEDVEZMENY();
+            this.dsALTALANOS_KEDVEZMENY = new e_Cafe.SQL.DataSets.dsALTALANOS_KEDVEZMENY();
             this.aLTALANOSKEDVEZMENYBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aLTALANOS_KEDVEZMENYTableAdapter = new e_Cafe.dsALTALANOS_KEDVEZMENYTableAdapters.ALTALANOS_KEDVEZMENYTableAdapter();
+            this.aLTALANOS_KEDVEZMENYTableAdapter = new e_Cafe.SQL.DataSets.dsALTALANOS_KEDVEZMENYTableAdapters.ALTALANOS_KEDVEZMENYTableAdapter();
             this.kEDEZMENYSZAZALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kEDEZMENYJOGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
@@ -130,9 +130,9 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private dsALTALANOS_KEDVEZMENY dsALTALANOS_KEDVEZMENY;
+        private e_Cafe.SQL.DataSets.dsALTALANOS_KEDVEZMENY dsALTALANOS_KEDVEZMENY;
         private System.Windows.Forms.BindingSource aLTALANOSKEDVEZMENYBindingSource;
-        private e_Cafe.dsALTALANOS_KEDVEZMENYTableAdapters.ALTALANOS_KEDVEZMENYTableAdapter aLTALANOS_KEDVEZMENYTableAdapter;
+        private e_Cafe.SQL.DataSets.dsALTALANOS_KEDVEZMENYTableAdapters.ALTALANOS_KEDVEZMENYTableAdapter aLTALANOS_KEDVEZMENYTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn kEDEZMENYSZAZALDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kEDEZMENYJOGDataGridViewTextBoxColumn;
     }

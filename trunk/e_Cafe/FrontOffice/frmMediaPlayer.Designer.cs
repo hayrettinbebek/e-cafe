@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMediaPlayer));
-            this.psVolume = new System.Windows.Forms.ProgressBar();
             this.btnUp = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
@@ -37,16 +36,8 @@
             this.btnRW = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.ucVolume = new GUI.ucVolumeControl();
             this.SuspendLayout();
-            // 
-            // psVolume
-            // 
-            this.psVolume.Location = new System.Drawing.Point(250, 83);
-            this.psVolume.Maximum = 255;
-            this.psVolume.Name = "psVolume";
-            this.psVolume.Size = new System.Drawing.Size(334, 23);
-            this.psVolume.Step = 1;
-            this.psVolume.TabIndex = 2;
             // 
             // btnUp
             // 
@@ -54,8 +45,11 @@
             this.btnUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUp.BackgroundImage")));
             this.btnUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUp.FlatAppearance.BorderSize = 0;
+            this.btnUp.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUp.Location = new System.Drawing.Point(269, 12);
+            this.btnUp.Location = new System.Drawing.Point(244, 12);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(65, 65);
             this.btnUp.TabIndex = 3;
@@ -68,12 +62,14 @@
             this.btnDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDown.BackgroundImage")));
             this.btnDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDown.FlatAppearance.BorderSize = 0;
+            this.btnDown.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDown.Location = new System.Drawing.Point(269, 124);
+            this.btnDown.Location = new System.Drawing.Point(244, 120);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(65, 65);
             this.btnDown.TabIndex = 4;
-            this.btnDown.Text = "button3";
             this.btnDown.UseVisualStyleBackColor = false;
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
@@ -83,8 +79,11 @@
             this.btnPlay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlay.BackgroundImage")));
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlay.FlatAppearance.BorderSize = 0;
+            this.btnPlay.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Location = new System.Drawing.Point(86, 12);
+            this.btnPlay.Location = new System.Drawing.Point(89, 58);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(65, 65);
             this.btnPlay.TabIndex = 3;
@@ -97,8 +96,11 @@
             this.btnFW.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFW.BackgroundImage")));
             this.btnFW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFW.FlatAppearance.BorderSize = 0;
+            this.btnFW.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnFW.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFW.Location = new System.Drawing.Point(157, 74);
+            this.btnFW.Location = new System.Drawing.Point(160, 120);
             this.btnFW.Name = "btnFW";
             this.btnFW.Size = new System.Drawing.Size(65, 65);
             this.btnFW.TabIndex = 3;
@@ -111,8 +113,11 @@
             this.btnRW.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRW.BackgroundImage")));
             this.btnRW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRW.FlatAppearance.BorderSize = 0;
+            this.btnRW.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnRW.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnRW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRW.Location = new System.Drawing.Point(12, 74);
+            this.btnRW.Location = new System.Drawing.Point(15, 120);
             this.btnRW.Name = "btnRW";
             this.btnRW.Size = new System.Drawing.Size(65, 65);
             this.btnRW.TabIndex = 3;
@@ -125,8 +130,11 @@
             this.btnStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStop.BackgroundImage")));
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStop.FlatAppearance.BorderSize = 0;
+            this.btnStop.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnStop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnStop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.Location = new System.Drawing.Point(86, 74);
+            this.btnStop.Location = new System.Drawing.Point(89, 120);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(65, 65);
             this.btnStop.TabIndex = 3;
@@ -149,6 +157,16 @@
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
+            // ucVolume
+            // 
+            this.ucVolume.BackColor = System.Drawing.Color.Transparent;
+            this.ucVolume.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucVolume.Location = new System.Drawing.Point(252, 80);
+            this.ucVolume.Name = "ucVolume";
+            this.ucVolume.Size = new System.Drawing.Size(361, 21);
+            this.ucVolume.TabIndex = 6;
+            this.ucVolume.VOLUME = 40;
+            // 
             // frmMediaPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,7 +174,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(596, 574);
+            this.ClientSize = new System.Drawing.Size(686, 574);
+            this.ControlBox = false;
+            this.Controls.Add(this.ucVolume);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnStop);
@@ -164,17 +184,18 @@
             this.Controls.Add(this.btnFW);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.btnUp);
-            this.Controls.Add(this.psVolume);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMediaPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMediaPlayer";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Load += new System.EventHandler(this.frmMediaPlayer_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar psVolume;
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnPlay;
@@ -182,5 +203,6 @@
         private System.Windows.Forms.Button btnRW;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button button12;
+        private GUI.ucVolumeControl ucVolume;
     }
 }

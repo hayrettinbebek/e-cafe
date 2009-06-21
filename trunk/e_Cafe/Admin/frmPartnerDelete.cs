@@ -40,11 +40,11 @@ namespace e_Cafe.Admin
         {
             if (del.Equals(1))
             {
-                ((dsPartnerek.PARTNERRow)(((DataRowView)pARTNERBindingSource.Current).Row)).AKTIV = 0;
+                ((e_Cafe.SQL.DataSets.dsPartnerek.PARTNERRow)(((DataRowView)pARTNERBindingSource.Current).Row)).AKTIV = 0;
             }
             else
             {
-                ((dsPartnerek.PARTNERRow)(((DataRowView)pARTNERBindingSource.Current).Row)).AKTIV = 1;
+                ((e_Cafe.SQL.DataSets.dsPartnerek.PARTNERRow)(((DataRowView)pARTNERBindingSource.Current).Row)).AKTIV = 1;
             }
             this.pARTNERTableAdapter.Update(this.dsPartnerek);
         }

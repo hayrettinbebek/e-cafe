@@ -39,6 +39,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtKedvezmeny = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtNormalCimPartnerId2 = new System.Windows.Forms.TextBox();
             this.partnercimBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.txtNormalCimPartnerId = new System.Windows.Forms.TextBox();
@@ -189,6 +192,9 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.label15);
+            this.panel11.Controls.Add(this.txtKedvezmeny);
+            this.panel11.Controls.Add(this.label14);
             this.panel11.Controls.Add(this.txtNormalCimPartnerId2);
             this.panel11.Controls.Add(this.txtNormalCimPartnerId);
             this.panel11.Controls.Add(this.textBox7);
@@ -223,6 +229,35 @@
             this.panel11.Size = new System.Drawing.Size(613, 392);
             this.panel11.TabIndex = 17;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label15.Location = new System.Drawing.Point(132, 349);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(19, 15);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "%";
+            // 
+            // txtKedvezmeny
+            // 
+            this.txtKedvezmeny.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.txtKedvezmeny.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKedvezmeny.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtKedvezmeny.Location = new System.Drawing.Point(105, 348);
+            this.txtKedvezmeny.Name = "txtKedvezmeny";
+            this.txtKedvezmeny.Size = new System.Drawing.Size(24, 19);
+            this.txtKedvezmeny.TabIndex = 18;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 351);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 13);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Kedvezmény";
             // 
             // txtNormalCimPartnerId2
             // 
@@ -370,6 +405,7 @@
             // 
             // textBox14
             // 
+            this.textBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource1, "CIM", true));
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -383,6 +419,7 @@
             // 
             // textBox12
             // 
+            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource1, "IRSZ", true));
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -396,6 +433,7 @@
             // 
             // textBox13
             // 
+            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource1, "VAROS", true));
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -513,6 +551,7 @@
             // 
             // textBox11
             // 
+            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource, "CIM", true));
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -526,6 +565,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource, "VAROS", true));
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -538,6 +578,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partnercimBindingSource, "IRSZ", true));
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -551,6 +592,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "VEVO_MAIL", true));
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -563,6 +605,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "MOBIL_SZAM", true));
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -820,6 +863,9 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.BindingSource partnercimBindingSource1;
         private System.Windows.Forms.TextBox txtNormalCimPartnerId2;
+        private System.Windows.Forms.TextBox txtKedvezmeny;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
 
     }
 }

@@ -34,12 +34,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbRaktar = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.eCAFEDataSet = new e_Cafe.SQL.ECAFEDataSet();
+            this.eCAFEDataSet = new e_Cafe.SQL.DataSets.ECAFEDataSet();
             this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
-            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
+            this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
+            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR();
             this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rAKTARTableAdapter = new e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
+            this.rAKTARTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
@@ -181,12 +181,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbRaktar;
         private System.Windows.Forms.Label label3;
-        private e_Cafe.SQL.ECAFEDataSet eCAFEDataSet;
+        private e_Cafe.SQL.DataSets.ECAFEDataSet eCAFEDataSet;
         private System.Windows.Forms.BindingSource cIKKCSOPORTBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter cIKKCSOPORTTableAdapter;
-        private e_Cafe.SQL.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter cIKKCSOPORTTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
         private System.Windows.Forms.BindingSource rAKTARBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
 

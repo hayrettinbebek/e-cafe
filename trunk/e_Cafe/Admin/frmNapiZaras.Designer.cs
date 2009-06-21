@@ -50,8 +50,8 @@
             this.pnlKonzisztencia = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsOsszevontLista = new e_Cafe.SQL.dsOsszevontLista();
-            this._JOGTableAdapter = new e_Cafe.SQL.dsOsszevontListaTableAdapters._JOGTableAdapter();
+            this.dsOsszevontLista = new e_Cafe.SQL.DataSets.dsOsszevontLista();
+            this._JOGTableAdapter = new e_Cafe.SQL.DataSets.dsOsszevontListaTableAdapters._JOGTableAdapter();
             this.btnKilep = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
@@ -332,9 +332,9 @@
         private System.Windows.Forms.Panel pnlNegRaktar;
         private System.Windows.Forms.Panel pnlKonzisztencia;
         private System.Windows.Forms.Button button1;
-        private e_Cafe.SQL.dsOsszevontLista dsOsszevontLista;
+        private e_Cafe.SQL.DataSets.dsOsszevontLista dsOsszevontLista;
         private System.Windows.Forms.BindingSource jOGBindingSource;
-        private e_Cafe.SQL.dsOsszevontListaTableAdapters._JOGTableAdapter _JOGTableAdapter;
+        private e_Cafe.SQL.DataSets.dsOsszevontListaTableAdapters._JOGTableAdapter _JOGTableAdapter;
         private System.Windows.Forms.Button btnKilep;
         private System.Windows.Forms.Button btnClose;
         

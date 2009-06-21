@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbSzallito = new System.Windows.Forms.ComboBox();
             this.pARTNERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsPartnerek = new e_Cafe.SQL.dsPartnerek();
+            this.dsPartnerek = new e_Cafe.SQL.DataSets.dsPartnerek();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,7 +47,7 @@
             this.sZALLITOIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lEZARTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGRENDELESFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsMegrendeles = new e_Cafe.SQL.dsMegrendeles();
+            this.dsMegrendeles = new e_Cafe.SQL.DataSets.dsMegrendeles();
             this.tpTetelek = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -69,8 +69,8 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.tsKilep = new System.Windows.Forms.ToolStripButton();
-            this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
-            this.pARTNERTableAdapter = new e_Cafe.SQL.dsPartnerekTableAdapters.PARTNERTableAdapter();
+            this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.DataSets.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
+            this.pARTNERTableAdapter = new e_Cafe.SQL.DataSets.dsPartnerekTableAdapters.PARTNERTableAdapter();
             this.btnKilep = new System.Windows.Forms.Button();
             this.pnlLezart = new System.Windows.Forms.Panel();
             this.pnlLezart2 = new System.Windows.Forms.Panel();
@@ -544,9 +544,9 @@
         private System.Windows.Forms.TabPage tpFej;
         private System.Windows.Forms.TabPage tpTetelek;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private e_Cafe.SQL.dsMegrendeles dsMegrendeles;
+        private e_Cafe.SQL.DataSets.dsMegrendeles dsMegrendeles;
         private System.Windows.Forms.BindingSource mEGRENDELESFEJBindingSource;
-        private e_Cafe.SQL.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter mEGRENDELES_FEJTableAdapter;
+        private e_Cafe.SQL.DataSets.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter mEGRENDELES_FEJTableAdapter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATUMDataGridViewTextBoxColumn;
@@ -559,8 +559,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbSzallito;
         private System.Windows.Forms.BindingSource pARTNERBindingSource;
-        private e_Cafe.SQL.dsPartnerek dsPartnerek;
-        private e_Cafe.SQL.dsPartnerekTableAdapters.PARTNERTableAdapter pARTNERTableAdapter;
+        private e_Cafe.SQL.DataSets.dsPartnerek dsPartnerek;
+        private e_Cafe.SQL.DataSets.dsPartnerekTableAdapters.PARTNERTableAdapter pARTNERTableAdapter;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;

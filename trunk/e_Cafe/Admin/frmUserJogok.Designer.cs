@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserJogok));
             this.lbJogok = new System.Windows.Forms.ListBox();
             this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsJOG = new e_Cafe.SQL.dsJOG();
-            this._JOGTableAdapter = new e_Cafe.SQL.dsJOGTableAdapters._JOGTableAdapter();
+            this.dsJOG = new e_Cafe.SQL.DataSets.dsJOG();
+            this._JOGTableAdapter = new e_Cafe.SQL.DataSets.dsJOGTableAdapters._JOGTableAdapter();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -43,8 +43,8 @@
             this.uSERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jOGIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uSERJOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsUserJog = new e_Cafe.SQL.dsUserJog();
-            this._USER_JOGTableAdapter = new e_Cafe.SQL.dsUserJogTableAdapters._USER_JOGTableAdapter();
+            this.dsUserJog = new e_Cafe.SQL.DataSets.dsUserJog();
+            this._USER_JOGTableAdapter = new e_Cafe.SQL.DataSets.dsUserJogTableAdapters._USER_JOGTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsJOG)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -206,18 +206,18 @@
         #endregion
 
         private System.Windows.Forms.ListBox lbJogok;
-        private e_Cafe.SQL.dsJOG dsJOG;
+        private e_Cafe.SQL.DataSets.dsJOG dsJOG;
         private System.Windows.Forms.BindingSource jOGBindingSource;
-        private e_Cafe.SQL.dsJOGTableAdapters._JOGTableAdapter _JOGTableAdapter;
+        private e_Cafe.SQL.DataSets.dsJOGTableAdapters._JOGTableAdapter _JOGTableAdapter;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private e_Cafe.SQL.dsUserJog dsUserJog;
+        private e_Cafe.SQL.DataSets.dsUserJog dsUserJog;
         private System.Windows.Forms.BindingSource uSERJOGBindingSource;
-        private e_Cafe.SQL.dsUserJogTableAdapters._USER_JOGTableAdapter _USER_JOGTableAdapter;
+        private e_Cafe.SQL.DataSets.dsUserJogTableAdapters._USER_JOGTableAdapter _USER_JOGTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn uSERIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jOGIDDataGridViewTextBoxColumn;
     }

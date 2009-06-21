@@ -51,7 +51,7 @@
             this.sZAMLAOSSZBRUTTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SZAMLASZAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eCAFEDataSetBEVETELEZESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetBEVETELEZES = new e_Cafe.SQL.ECAFEDataSetBEVETELEZES();
+            this.eCAFEDataSetBEVETELEZES = new e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZES();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -67,8 +67,8 @@
             this.bEVETELSORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.raktarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bEVETEL_FEJTableAdapter = new e_Cafe.SQL.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_FEJTableAdapter();
-            this.bEVETEL_SORTableAdapter = new e_Cafe.SQL.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter();
+            this.bEVETEL_FEJTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_FEJTableAdapter();
+            this.bEVETEL_SORTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBEVETELEZESBindingSource)).BeginInit();
@@ -453,7 +453,7 @@
         private System.Windows.Forms.BindingSource cikkBindingSource;
         private System.Windows.Forms.BindingSource raktarBindingSource;
         private System.Windows.Forms.BindingSource eCAFEDataSetBEVETELEZESBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetBEVETELEZES eCAFEDataSetBEVETELEZES;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZES eCAFEDataSetBEVETELEZES;
         private System.Windows.Forms.DataGridViewTextBoxColumn bEVETELFEJIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATUMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn;
@@ -463,9 +463,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLASZAMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLAOSSZESENDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLAOSSZBRUTTODataGridViewTextBoxColumn;
-        private e_Cafe.SQL.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_FEJTableAdapter bEVETEL_FEJTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_FEJTableAdapter bEVETEL_FEJTableAdapter;
         private System.Windows.Forms.BindingSource bEVETELSORBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter bEVETEL_SORTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter bEVETEL_SORTableAdapter;
         private System.Windows.Forms.ToolStripButton tsKeszVezet;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.DataGridViewTextBoxColumn MEGNEVEZES;

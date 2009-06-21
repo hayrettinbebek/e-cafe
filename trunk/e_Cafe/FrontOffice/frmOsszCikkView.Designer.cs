@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOsszCikkView));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.cIKKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptText = new e_Cafe.SQL.dsReceptText();
+            this.dsReceptText = new e_Cafe.SQL.DataSets.dsReceptText();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,17 +47,17 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.button12 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cIKKTableAdapter = new e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter();
+            this.cIKKTableAdapter = new e_Cafe.SQL.DataSets.dsReceptTextTableAdapters.CIKKTableAdapter();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCikkNeve = new System.Windows.Forms.Label();
             this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptCikkek = new e_Cafe.SQL.dsReceptCikkek();
+            this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.rECEPTTableAdapter = new e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
+            this.rECEPTTableAdapter = new e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReceptText)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -376,8 +376,8 @@
 
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.BindingSource cIKKBindingSource;
-        private e_Cafe.SQL.dsReceptText dsReceptText;
-        private e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter cIKKTableAdapter;
+        private e_Cafe.SQL.DataSets.dsReceptText dsReceptText;
+        private e_Cafe.SQL.DataSets.dsReceptTextTableAdapters.CIKKTableAdapter cIKKTableAdapter;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Label label1;
@@ -397,8 +397,8 @@
         private Microsoft.VisualBasic.PowerPacks.DataRepeater dataRepeater1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource rECEPTBindingSource;
-        private e_Cafe.SQL.dsReceptCikkek dsReceptCikkek;
-        private e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter rECEPTTableAdapter;
+        private e_Cafe.SQL.DataSets.dsReceptCikkek dsReceptCikkek;
+        private e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter rECEPTTableAdapter;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label8;

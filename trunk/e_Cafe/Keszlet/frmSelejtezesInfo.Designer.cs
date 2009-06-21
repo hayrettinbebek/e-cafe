@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SELEJTEZESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deSelejtezInfo = new e_Cafe.SQL.deSelejtezInfo();
+            this.deSelejtezInfo = new e_Cafe.SQL.DataSets.deSelejtezInfo();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.SELEJTEZESTableAdapter = new e_Cafe.SQL.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter();
+            this.SELEJTEZESTableAdapter = new e_Cafe.SQL.DataSets.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -202,9 +202,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private e_Cafe.SQL.deSelejtezInfo deSelejtezInfo;
+        private e_Cafe.SQL.DataSets.deSelejtezInfo deSelejtezInfo;
         private System.Windows.Forms.BindingSource SELEJTEZESBindingSource;
-        private e_Cafe.SQL.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter SELEJTEZESTableAdapter;
+        private e_Cafe.SQL.DataSets.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter SELEJTEZESTableAdapter;
         //private System.Windows.Forms.DataGridViewTextBoxColumn tYPEDataGridViewTextBoxColumn;
         //private System.Windows.Forms.DataGridViewTextBoxColumn cOUNTERDataGridViewTextBoxColumn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
