@@ -60,7 +60,7 @@ namespace e_Cafe
             txtSzamlaszam.Text = aktBevfej.SZAMLASZAM;
             dtpDatum.Value = aktBevfej.DATUM;
             initGrid();
-            Szallito sz = new Szallito(p_id, new SqlConnection(DEFS.ConSTR));
+            Szallito sz = new Szallito(p_id);
             lblSzallito.Text = sz.P_NEV + " " + sz.P_NEV2;
         }
 

@@ -459,6 +459,8 @@ namespace BusinessLogic
         public int _RaktarId;
         public int _LitKiszId;
 
+        public int _KEDV_PARTNER_ID;
+
         private double fKEDVEZMENY;
         public double KEDVEZMENY
         {
@@ -504,6 +506,7 @@ namespace BusinessLogic
             _SOR_ID = -1;
             fKEDVEZMENY = 0;
             _RaktarId = pRaktar;
+            _KEDV_PARTNER_ID = -1;
         }
 
         public RendelesSor(int pRendelesSorID, SqlConnection c, bool pSzamla)
@@ -518,11 +521,11 @@ namespace BusinessLogic
             if (pSzamla)
             {
                 cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID, " +
-                                   "isnull(KEDVEZMENY,0) as KEDVEZMENY FROM RENDELES_SOR WHERE SOR_ID =" + pRendelesSorID.ToString();
+                                   "isnull(KEDVEZMENY,0) as KEDVEZMENY, isnull(KEDV_PARTNER_ID,-1) as KEDV_PARTNER_ID  FROM RENDELES_SOR WHERE SOR_ID =" + pRendelesSorID.ToString();
             } else
             {
                 cmd2.CommandText = "SELECT SOR_ID, CIKK_ID, DB, DATUM, ERTEK as ERTEK, isnull(NETTO_ERTEK,0) as NETTO_ERTEK, isnull(AFA_ERTEK,0) as AFA_ERTEK  , isnull(RAKTAR_ID,-1) as RAKTAR_ID, isnull(LIT_KISZ_ID,-1) as  LIT_KISZ_ID, " +
-                                    "isnull(KEDVEZMENY,0) as KEDVEZMENY  FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
+                                    "isnull(KEDVEZMENY,0) as KEDVEZMENY, isnull(KEDV_PARTNER_ID,-1) as KEDV_PARTNER_ID  FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND SOR_ID =" + pRendelesSorID.ToString();
             }
             SqlDataReader rdr2 = cmd2.ExecuteReader();
 
@@ -538,7 +541,7 @@ namespace BusinessLogic
                 _LitKiszId = (int)rdr2["LIT_KISZ_ID"];
                 fKEDVEZMENY = (double)rdr2["KEDVEZMENY"];
                 _Cikk = new Cikk((int)rdr2["CIKK_ID"], new SqlConnection(DEFS.ConSTR), (int)rdr2["LIT_KISZ_ID"]);
-
+                _KEDV_PARTNER_ID = (int)rdr2["KEDV_PARTNER_ID"];
             }
             rdr2.Close();
             c.Close();
@@ -574,7 +577,8 @@ namespace BusinessLogic
                                             ",ERTEK " +
                                             ",NETTO_ERTEK " +
                                             ",LIT_KISZ_ID "+
-                                            ",KEDVEZMENY) " +
+                                            ",KEDVEZMENY " +
+                                            ",KEDV_PARTNER_ID) " +
                                         "VALUES " +
                                             "(@RENDELES_ID " +
                                             ",@CIKK_ID " +
@@ -586,7 +590,8 @@ namespace BusinessLogic
                                             ",@ERTEK " +
                                             ",@NETTO_ERTEK " +
                                             ",@LIT_KISZ_ID "+
-                                            ",@KEDVEZMENY) SET @newid = SCOPE_IDENTITY()";
+                                            ",@KEDVEZMENY "+
+                                            ",@KEDV_PARTNER_ID ) SET @newid = SCOPE_IDENTITY()";
                         cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
                         cmd.Parameters["newid"].Direction = ParameterDirection.Output;
 
@@ -602,7 +607,8 @@ namespace BusinessLogic
                                                        " MODIFIED_USER = @MODIFIED_USER, " +
                                                        " NETTO_ERTEK = @NETTO_ERTEK, " +
                                                        " LIT_KISZ_ID = @LIT_KISZ_ID, " +
-                                                       " KEDVEZMENY = @KEDVEZMENY " +
+                                                       " KEDVEZMENY = @KEDVEZMENY, " +
+                                                       " KEDV_PARTNER_ID = @KEDV_PARTNER_ID "+
                                            "WHERE SOR_ID = @SOR_ID";
                         cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
                         cmd.Parameters["SOR_ID"].Value = _SOR_ID;
@@ -620,6 +626,8 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("RAKTAR_ID", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("MODIFIED_USER", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("LIT_KISZ_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("KEDV_PARTNER_ID", SqlDbType.Int));
+            
 
             cmd.Parameters["RENDELES_ID"].Value = pRendelesId;
             cmd.Parameters["CIKK_ID"].Value = _Cikk.CIKK_ID;
@@ -632,6 +640,8 @@ namespace BusinessLogic
             cmd.Parameters["AFA_ERTEK"].Value = Math.Round(_Netto_Ertek * (_Cikk.AFA_SZAZ / 100), 2);
             cmd.Parameters["LIT_KISZ_ID"].Value = _LitKiszId;
             cmd.Parameters["KEDVEZMENY"].Value = fKEDVEZMENY;
+            cmd.Parameters["KEDV_PARTNER_ID"].Value = _KEDV_PARTNER_ID;
+            
             
             try
             {

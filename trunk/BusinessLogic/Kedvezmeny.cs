@@ -66,6 +66,7 @@ namespace BusinessLogic
     {
         public int SZAZALEK;
         public double ERTEK;
+        public Partner _Partner;
         public KedvezmenyErtek(int sz)
         {
             SZAZALEK = sz;
@@ -76,6 +77,26 @@ namespace BusinessLogic
         {
             SZAZALEK = 0;
             ERTEK = ert;
+        }
+
+        public KedvezmenyErtek(Partner p)
+        {
+            
+            ERTEK = 0;
+            _Partner = p;
+            try
+            {
+                if (p.P_TIPUS == "V")
+                {
+                    SZAZALEK = new Vevo(p.PARTNER_ID).KEDVEZEMNY_SZAZALEK;
+                }
+            }
+            catch (Exception)
+            {
+                SZAZALEK = 0;
+                throw;
+            }
+            
         }
 
     }

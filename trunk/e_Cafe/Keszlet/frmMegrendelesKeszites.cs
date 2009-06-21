@@ -51,7 +51,7 @@ namespace e_Cafe.Keszlet
             if (mEGRENDELESFEJBindingSource.Current != null)
             {
                 aktMegr = new Megrendeles((int)((DataRowView)mEGRENDELESFEJBindingSource.Current)["MEGRENDELES_FEJ_ID"], new SqlConnection(DEFS.ConSTR));
-                aktCikkList = new Cikk_list(new Partner(aktMegr.SZALLITO_ID, new SqlConnection(DEFS.ConSTR)));
+                aktCikkList = new Cikk_list(new Partner(aktMegr.SZALLITO_ID));
                 cikkBindingSource.Clear();
                 foreach (var c in aktCikkList.lCIKK)
                 {
@@ -82,7 +82,7 @@ namespace e_Cafe.Keszlet
         {
             if (chkSzallito.Checked)
             {
-                aktCikkList = new Cikk_list(new Partner(aktMegr.SZALLITO_ID, new SqlConnection(DEFS.ConSTR)));
+                aktCikkList = new Cikk_list(new Partner(aktMegr.SZALLITO_ID));
                 cikkBindingSource.Clear();
                 foreach (var c in aktCikkList.lCIKK)
                 {
