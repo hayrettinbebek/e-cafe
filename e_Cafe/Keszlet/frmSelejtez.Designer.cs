@@ -42,8 +42,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cikkKeszletBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
-            this.rAKTARTableAdapter = new e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
+            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR();
+            this.rAKTARTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
@@ -213,7 +213,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource cikkKeszletBindingSource;
         private System.Windows.Forms.BindingSource rAKTARBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
-        private e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
     }
 }

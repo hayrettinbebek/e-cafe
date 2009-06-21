@@ -37,8 +37,7 @@ namespace e_Cafe.FrontOffice
         private void GetStatus()
         {
 
-            
-            psVolume.Value = WinampLib.GetVolume();
+            ucVolume.VOLUME = WinampLib.GetVolume();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -77,6 +76,11 @@ namespace e_Cafe.FrontOffice
         private void button12_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmMediaPlayer_Load(object sender, EventArgs e)
+        {
+            GetStatus();
         }
     }
 }

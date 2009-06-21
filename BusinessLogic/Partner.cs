@@ -428,6 +428,16 @@ namespace BusinessLogic
         }
         #endregion
 
+        #region KEDVEZEMNY_SZAZALEK
+        private int _KEDVEZEMNY_SZAZALEK;
+        public int KEDVEZEMNY_SZAZALEK
+        {
+            get { return (_KEDVEZEMNY_SZAZALEK); }
+            set { _KEDVEZEMNY_SZAZALEK = value; }
+        }
+        #endregion
+        
+
         public List<Partner_cim> PartnerNormalCim()
         {
             List<Partner_cim> iTmpRet = new List<Partner_cim>();
@@ -481,6 +491,7 @@ namespace BusinessLogic
                               ",NEVNAP_HO " +
                               ",NEVNAP_NAP " +
                               ",HITEL_CREDIT " +
+                              ",isnull(KEDVEZEMNY_SZAZALEK,0) as KEDVEZEMNY_SZAZALEK " +
                           "FROM PARTNER_VEVO WHERE PARTNER_ID=" + pPartner_id.ToString();
 
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -516,6 +527,11 @@ namespace BusinessLogic
 
                 if (!DBNull.Value.Equals(rdr["HITEL_CREDIT"])) { _hitel = (double)rdr["HITEL_CREDIT"]; }
                 else { _hitel = 0; }
+
+                if (!DBNull.Value.Equals(rdr["KEDVEZEMNY_SZAZALEK"])) { _KEDVEZEMNY_SZAZALEK = (int)rdr["KEDVEZEMNY_SZAZALEK"]; }
+                else { _KEDVEZEMNY_SZAZALEK = 0; }
+
+
 
             }
             rdr.Close();
@@ -553,7 +569,8 @@ namespace BusinessLogic
                                            ",SZULETESNAP " +
                                            ",NEVNAP_HO " +
                                            ",NEVNAP_NAP " +
-                                           ",HITEL_CREDIT) " +
+                                           ",HITEL_CREDIT " +
+                                           ",KEDVEZEMNY_SZAZALEK) " +
                                      "VALUES " +
                                            "(@PARTNER_ID " +
                                            ",@PARTNER_KOD " +
@@ -562,7 +579,8 @@ namespace BusinessLogic
                                            ",@SZULETESNAP " +
                                            ",@NEVNAP_HO " +
                                            ",@NEVNAP_NAP " +
-                                           ",@HITEL_CREDIT)";
+                                           ",@HITEL_CREDIT " +
+                                           ",@KEDVEZEMNY_SZAZALEK )";
 
                         break;
                     }
@@ -577,6 +595,7 @@ namespace BusinessLogic
                                            "   ,NEVNAP_HO = @NEVNAP_HO " +
                                            "   ,NEVNAP_NAP = @NEVNAP_NAP " +
                                            "   ,HITEL_CREDIT = @HITEL_CREDIT " +
+                                           "   ,KEDVEZEMNY_SZAZALEK = @KEDVEZEMNY_SZAZALEK " +
                                          "WHERE PARTNER_ID= @PARTNER_ID";
 
                         break;
@@ -592,6 +611,8 @@ namespace BusinessLogic
             cmd.Parameters.Add(new SqlParameter("NEVNAP_HO", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("NEVNAP_NAP", SqlDbType.Int));
             cmd.Parameters.Add(new SqlParameter("HITEL_CREDIT", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("KEDVEZEMNY_SZAZALEK", SqlDbType.Int));
+                
 
             cmd.Parameters["PARTNER_ID"].Value = part_id;
             cmd.Parameters["PARTNER_KOD"].Value = _kod;
@@ -604,7 +625,7 @@ namespace BusinessLogic
             cmd.Parameters["NEVNAP_HO"].Value = _nevn_ho;
             cmd.Parameters["NEVNAP_NAP"].Value = _nevn_nap;
             cmd.Parameters["HITEL_CREDIT"].Value = _hitel;
-
+            cmd.Parameters["KEDVEZEMNY_SZAZALEK"].Value = _KEDVEZEMNY_SZAZALEK;
             try
             {
                 cmd.ExecuteNonQuery();

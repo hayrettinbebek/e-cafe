@@ -33,16 +33,16 @@ namespace e_Cafe
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.aFABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetAFA = new e_Cafe.SQL.ECAFEDataSetAFA();
+            this.eCAFEDataSetAFA = new e_Cafe.SQL.DataSets.ECAFEDataSetAFA();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.eCAFEDataSetAFABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aFATableAdapter = new e_Cafe.SQL.ECAFEDataSetAFATableAdapters.AFATableAdapter();
+            this.aFATableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetAFATableAdapters.AFATableAdapter();
             this.cIKKCSOPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSet = new e_Cafe.SQL.ECAFEDataSet();
-            this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
+            this.eCAFEDataSet = new e_Cafe.SQL.DataSets.ECAFEDataSet();
+            this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKCSOPORTNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aFAKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -203,15 +203,15 @@ namespace e_Cafe
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private e_Cafe.SQL.ECAFEDataSet eCAFEDataSet;
+        private e_Cafe.SQL.DataSets.ECAFEDataSet eCAFEDataSet;
         private System.Windows.Forms.BindingSource cIKKCSOPORTBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter cIKKCSOPORTTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter cIKKCSOPORTTableAdapter;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private e_Cafe.SQL.ECAFEDataSetAFA eCAFEDataSetAFA;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetAFA eCAFEDataSetAFA;
         private System.Windows.Forms.BindingSource eCAFEDataSetAFABindingSource;
         private System.Windows.Forms.BindingSource aFABindingSource;
-        private e_Cafe.SQL.ECAFEDataSetAFATableAdapters.AFATableAdapter aFATableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetAFATableAdapters.AFATableAdapter aFATableAdapter;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIKKCSOPORTIDDataGridViewTextBoxColumn;

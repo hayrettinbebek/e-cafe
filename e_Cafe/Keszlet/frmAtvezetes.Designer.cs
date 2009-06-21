@@ -42,9 +42,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbToRakt = new System.Windows.Forms.ComboBox();
             this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
+            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR();
             this.button2 = new System.Windows.Forms.Button();
-            this.rAKTARTableAdapter = new e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
+            this.rAKTARTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -241,9 +241,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbToRakt;
         private System.Windows.Forms.Button button2;
-        private e_Cafe.SQL.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
         private System.Windows.Forms.BindingSource rAKTARBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
         private System.Windows.Forms.Button button3;
     }
 }

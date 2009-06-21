@@ -37,14 +37,14 @@
             this.pARAMVALUEFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PARAM_VALUE_IMAGE = new System.Windows.Forms.DataGridViewImageColumn();
             this.sYSPARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsSYSPAR = new e_Cafe.SQL.dsSYSPAR();
+            this.dsSYSPAR = new e_Cafe.SQL.DataSets.dsSYSPAR();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pbPreview = new System.Windows.Forms.PictureBox();
-            this.sYSPARTableAdapter = new e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter();
+            this.sYSPARTableAdapter = new e_Cafe.SQL.DataSets.dsSYSPARTableAdapters.SYSPARTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sYSPARBindingSource)).BeginInit();
@@ -210,9 +210,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private e_Cafe.SQL.dsSYSPAR dsSYSPAR;
+        private e_Cafe.SQL.DataSets.dsSYSPAR dsSYSPAR;
         private System.Windows.Forms.BindingSource sYSPARBindingSource;
-        private e_Cafe.SQL.dsSYSPARTableAdapters.SYSPARTableAdapter sYSPARTableAdapter;
+        private e_Cafe.SQL.DataSets.dsSYSPARTableAdapters.SYSPARTableAdapter sYSPARTableAdapter;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;

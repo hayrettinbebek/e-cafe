@@ -193,9 +193,23 @@ namespace GUI.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap piros {
+            get {
+                object obj = ResourceManager.GetObject("piros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap piroson {
             get {
                 object obj = ResourceManager.GetObject("piroson", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap sarga {
+            get {
+                object obj = ResourceManager.GetObject("sarga", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -232,6 +246,13 @@ namespace GUI.Properties {
             get {
                 object obj = ResourceManager.GetObject("User_Group", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        public static System.Drawing.Bitmap zold {
+            get {
+                object obj = ResourceManager.GetObject("zold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

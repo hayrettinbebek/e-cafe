@@ -174,7 +174,7 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
-    <Compile Include="dsALTALANOS_KEDVEZMENY.Designer.cs">
+    <Compile Include="SQL\DataSets\dsALTALANOS_KEDVEZMENY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsALTALANOS_KEDVEZMENY.xsd</DependentUpon>
@@ -191,17 +191,17 @@
     <Compile Include="FrontOffice\frmMediaPlayer.Designer.cs">
       <DependentUpon>frmMediaPlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL\deSelejtezInfo.Designer.cs">
+    <Compile Include="SQL\DataSets\deSelejtezInfo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsLeltar.Designer.cs">
+    <Compile Include="SQL\DataSets\dsLeltar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsLeltar.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsMegrendeles.Designer.cs">
+    <Compile Include="SQL\DataSets\dsMegrendeles.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMegrendeles.xsd</DependentUpon>
@@ -242,12 +242,12 @@
     <Compile Include="Keszlet\frmSelejtezesInfo.Designer.cs">
       <DependentUpon>frmSelejtezesInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsKeszletInfo.Designer.cs">
+    <Compile Include="SQL\DataSets\dsKeszletInfo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsOsszevontLista.Designer.cs">
+    <Compile Include="SQL\DataSets\dsOsszevontLista.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
@@ -267,12 +267,16 @@
     <Compile Include="Reports\BlokkReport.cs" />
     <Compile Include="Reports\OsszesitoReport.cs" />
     <Compile Include="Reports\doPrinting.cs" />
-    <Compile Include="SQL\dsJOG.Designer.cs">
+    <Compile Include="SQL\DataSets\dsJOG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsJOG.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsUserJog.Designer.cs">
+    <Compile Include="SQL\DataSets\dsPartnerek.cs">
+      <DependentUpon>dsPartnerek.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQL\DataSets\dsUserJog.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUserJog.xsd</DependentUpon>
@@ -283,17 +287,17 @@
     <Compile Include="FrontOffice\frmHitelReszletezo.Designer.cs">
       <DependentUpon>frmHitelReszletezo.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsPartnerek.Designer.cs">
+    <Compile Include="SQL\DataSets\dsPartnerek.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPartnerek.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsRepSzamla.Designer.cs">
+    <Compile Include="SQL\DataSets\dsRepSzamla.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsRepSzamla.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsSZAMLAZAS.Designer.cs">
+    <Compile Include="SQL\DataSets\dsSZAMLAZAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
@@ -304,7 +308,7 @@
     <Compile Include="FrontOffice\frmOsszCikkView.Designer.cs">
       <DependentUpon>frmOsszCikkView.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsSYSPAR.Designer.cs">
+    <Compile Include="SQL\DataSets\dsSYSPAR.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSYSPAR.xsd</DependentUpon>
@@ -321,7 +325,7 @@
     <Compile Include="FrontOffice\frmUzenetek.Designer.cs">
       <DependentUpon>frmUzenetek.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsFOGLALAS.Designer.cs">
+    <Compile Include="SQL\DataSets\dsFOGLALAS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
@@ -344,81 +348,81 @@
     <Compile Include="CikkSelector.Designer.cs">
       <DependentUpon>CikkSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetHELY.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetHELY.cs">
       <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SQL\ReceptMentes.Designer.cs">
+    <Compile Include="SQL\DataSets\ReceptMentes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReceptMentes.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsReceptCikkek.cs">
+    <Compile Include="SQL\DataSets\dsReceptCikkek.cs">
       <DependentUpon>dsReceptCikkek.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SQL\dsReceptCikkek.Designer.cs">
+    <Compile Include="SQL\DataSets\dsReceptCikkek.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReceptCikkek.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\dsReceptText.Designer.cs">
+    <Compile Include="SQL\DataSets\dsReceptText.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReceptText.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSet.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSet.cs">
       <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSet.Designer.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetAFA.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetAFA.cs">
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetAFA.Designer.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetAFA.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetBEVETELEZES.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetBEVETELEZES.cs">
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetBEVETELEZES.Designer.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetBEVETELEZES.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetCIKK.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetCIKK.cs">
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetCIKK.Designer.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetCIKK.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetHELY.Designer.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetHELY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetMEGYS1.Designer.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetMEGYS1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetMEGYS1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetOTHER_FILTER.Designer.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetOTHER_FILTER.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SQL\ECAFEDataSetRAKTAR.Designer.cs">
+    <Compile Include="SQL\DataSets\ECAFEDataSetRAKTAR.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
@@ -877,70 +881,70 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="SQL\ECAFEDataSet.xsc">
+    <None Include="SQL\DataSets\ECAFEDataSet.xsc">
       <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSet.xsd">
+    <None Include="SQL\DataSets\ECAFEDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ECAFEDataSet.xss">
+    <None Include="SQL\DataSets\ECAFEDataSet.xss">
       <DependentUpon>ECAFEDataSet.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetAFA.xsc">
+    <None Include="SQL\DataSets\ECAFEDataSetAFA.xsc">
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetAFA.xsd">
+    <None Include="SQL\DataSets\ECAFEDataSetAFA.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetAFA.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ECAFEDataSetAFA.xss">
+    <None Include="SQL\DataSets\ECAFEDataSetAFA.xss">
       <DependentUpon>ECAFEDataSetAFA.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetCIKK.xsc">
+    <None Include="SQL\DataSets\ECAFEDataSetCIKK.xsc">
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetCIKK.xsd">
+    <None Include="SQL\DataSets\ECAFEDataSetCIKK.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetCIKK.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ECAFEDataSetCIKK.xss">
+    <None Include="SQL\DataSets\ECAFEDataSetCIKK.xss">
       <DependentUpon>ECAFEDataSetCIKK.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetHELY.xsc">
+    <None Include="SQL\DataSets\ECAFEDataSetHELY.xsc">
       <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetHELY.xsd">
+    <None Include="SQL\DataSets\ECAFEDataSetHELY.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetHELY.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ECAFEDataSetHELY.xss">
+    <None Include="SQL\DataSets\ECAFEDataSetHELY.xss">
       <DependentUpon>ECAFEDataSetHELY.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetOTHER_FILTER.xsc">
+    <None Include="SQL\DataSets\ECAFEDataSetOTHER_FILTER.xsc">
       <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetOTHER_FILTER.xsd">
+    <None Include="SQL\DataSets\ECAFEDataSetOTHER_FILTER.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetOTHER_FILTER.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ECAFEDataSetOTHER_FILTER.xss">
+    <None Include="SQL\DataSets\ECAFEDataSetOTHER_FILTER.xss">
       <DependentUpon>ECAFEDataSetOTHER_FILTER.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetRAKTAR.xsc">
+    <None Include="SQL\DataSets\ECAFEDataSetRAKTAR.xsc">
       <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetRAKTAR.xsd">
+    <None Include="SQL\DataSets\ECAFEDataSetRAKTAR.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetRAKTAR.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ECAFEDataSetRAKTAR.xss">
+    <None Include="SQL\DataSets\ECAFEDataSetRAKTAR.xss">
       <DependentUpon>ECAFEDataSetRAKTAR.xsd</DependentUpon>
     </None>
     <None Include="e_Cafe_TemporaryKey.pfx" />
@@ -997,70 +1001,70 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQL\dsFOGLALAS.xsc">
+    <None Include="SQL\DataSets\dsFOGLALAS.xsc">
       <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsFOGLALAS.xsd">
+    <None Include="SQL\DataSets\dsFOGLALAS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsFOGLALAS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsFOGLALAS.xss">
+    <None Include="SQL\DataSets\dsFOGLALAS.xss">
       <DependentUpon>dsFOGLALAS.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ReceptMentes.xsc">
+    <None Include="SQL\DataSets\ReceptMentes.xsc">
       <DependentUpon>ReceptMentes.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ReceptMentes.xsd">
+    <None Include="SQL\DataSets\ReceptMentes.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ReceptMentes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ReceptMentes.xss">
+    <None Include="SQL\DataSets\ReceptMentes.xss">
       <DependentUpon>ReceptMentes.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsReceptCikkek.xsc">
+    <None Include="SQL\DataSets\dsReceptCikkek.xsc">
       <DependentUpon>dsReceptCikkek.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsReceptCikkek.xsd">
+    <None Include="SQL\DataSets\dsReceptCikkek.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsReceptCikkek.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsReceptCikkek.xss">
+    <None Include="SQL\DataSets\dsReceptCikkek.xss">
       <DependentUpon>dsReceptCikkek.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsReceptText.xsc">
+    <None Include="SQL\DataSets\dsReceptText.xsc">
       <DependentUpon>dsReceptText.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsReceptText.xsd">
+    <None Include="SQL\DataSets\dsReceptText.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsReceptText.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsReceptText.xss">
+    <None Include="SQL\DataSets\dsReceptText.xss">
       <DependentUpon>dsReceptText.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetBEVETELEZES.xsc">
+    <None Include="SQL\DataSets\ECAFEDataSetBEVETELEZES.xsc">
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetBEVETELEZES.xsd">
+    <None Include="SQL\DataSets\ECAFEDataSetBEVETELEZES.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetBEVETELEZES.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ECAFEDataSetBEVETELEZES.xss">
+    <None Include="SQL\DataSets\ECAFEDataSetBEVETELEZES.xss">
       <DependentUpon>ECAFEDataSetBEVETELEZES.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetMEGYS1.xsc">
+    <None Include="SQL\DataSets\ECAFEDataSetMEGYS1.xsc">
       <DependentUpon>ECAFEDataSetMEGYS1.xsd</DependentUpon>
     </None>
-    <None Include="SQL\ECAFEDataSetMEGYS1.xsd">
+    <None Include="SQL\DataSets\ECAFEDataSetMEGYS1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ECAFEDataSetMEGYS1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\ECAFEDataSetMEGYS1.xss">
+    <None Include="SQL\DataSets\ECAFEDataSetMEGYS1.xss">
       <DependentUpon>ECAFEDataSetMEGYS1.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.CikkKeszlet.datasource" />
@@ -1098,15 +1102,15 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQL\dsSZAMLAZAS.xsc">
+    <None Include="SQL\DataSets\dsSZAMLAZAS.xsc">
       <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsSZAMLAZAS.xsd">
+    <None Include="SQL\DataSets\dsSZAMLAZAS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsSZAMLAZAS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsSZAMLAZAS.xss">
+    <None Include="SQL\DataSets\dsSZAMLAZAS.xss">
       <DependentUpon>dsSZAMLAZAS.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.Partner_cim1.datasource" />
@@ -1122,15 +1126,15 @@
     <None Include="SQL\update_011.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="SQL\dsSYSPAR.xsc">
+    <None Include="SQL\DataSets\dsSYSPAR.xsc">
       <DependentUpon>dsSYSPAR.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsSYSPAR.xsd">
+    <None Include="SQL\DataSets\dsSYSPAR.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsSYSPAR.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsSYSPAR.xss">
+    <None Include="SQL\DataSets\dsSYSPAR.xss">
       <DependentUpon>dsSYSPAR.xsd</DependentUpon>
     </None>
     <None Include="SQL\update_010.sql">
@@ -1158,15 +1162,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQL\dsPartnerek.xsc">
+    <None Include="SQL\DataSets\dsPartnerek.xsc">
       <DependentUpon>dsPartnerek.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsPartnerek.xsd">
+    <None Include="SQL\DataSets\dsPartnerek.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsPartnerek.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsPartnerek.xss">
+    <None Include="SQL\DataSets\dsPartnerek.xss">
       <DependentUpon>dsPartnerek.xsd</DependentUpon>
     </None>
     <None Include="SQL\update_020.sql">
@@ -1184,54 +1188,54 @@
     <None Include="SQL\update_016.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="SQL\dsRepSzamla.xsc">
+    <None Include="SQL\DataSets\dsRepSzamla.xsc">
       <DependentUpon>dsRepSzamla.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsRepSzamla.xsd">
+    <None Include="SQL\DataSets\dsRepSzamla.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsRepSzamla.Designer.cs</LastGenOutput>
     </None>
-    <None Include="SQL\dsRepSzamla.xss">
+    <None Include="SQL\DataSets\dsRepSzamla.xss">
       <DependentUpon>dsRepSzamla.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQL\dsLeltar.xsc">
+    <None Include="SQL\DataSets\dsLeltar.xsc">
       <DependentUpon>dsLeltar.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsLeltar.xsd">
+    <None Include="SQL\DataSets\dsLeltar.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsLeltar.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsLeltar.xss">
+    <None Include="SQL\DataSets\dsLeltar.xss">
       <DependentUpon>dsLeltar.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.LeltarSor.datasource" />
     <None Include="SQL\update_028.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="SQL\dsKeszletInfo.xsc">
+    <None Include="SQL\DataSets\dsKeszletInfo.xsc">
       <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsKeszletInfo.xsd">
+    <None Include="SQL\DataSets\dsKeszletInfo.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsKeszletInfo.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsKeszletInfo.xss">
+    <None Include="SQL\DataSets\dsKeszletInfo.xss">
       <DependentUpon>dsKeszletInfo.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsOsszevontLista.xsc">
+    <None Include="SQL\DataSets\dsOsszevontLista.xsc">
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsOsszevontLista.xsd">
+    <None Include="SQL\DataSets\dsOsszevontLista.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsOsszevontLista.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsOsszevontLista.xss">
+    <None Include="SQL\DataSets\dsOsszevontLista.xss">
       <DependentUpon>dsOsszevontLista.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.OpenDayCombo.datasource" />
@@ -1251,26 +1255,26 @@
     <None Include="SQL\update_023.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="SQL\dsJOG.xsc">
+    <None Include="SQL\DataSets\dsJOG.xsc">
       <DependentUpon>dsJOG.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsJOG.xsd">
+    <None Include="SQL\DataSets\dsJOG.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsJOG.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsJOG.xss">
+    <None Include="SQL\DataSets\dsJOG.xss">
       <DependentUpon>dsJOG.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsUserJog.xsc">
+    <None Include="SQL\DataSets\dsUserJog.xsc">
       <DependentUpon>dsUserJog.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsUserJog.xsd">
+    <None Include="SQL\DataSets\dsUserJog.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsUserJog.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsUserJog.xss">
+    <None Include="SQL\DataSets\dsUserJog.xss">
       <DependentUpon>dsUserJog.xsd</DependentUpon>
     </None>
     <None Include="Resources\bezar1.png" />
@@ -1294,30 +1298,30 @@
     <None Include="Resources\Printer-64x64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQL\dsMegrendeles.xsc">
+    <None Include="SQL\DataSets\dsMegrendeles.xsc">
       <DependentUpon>dsMegrendeles.xsd</DependentUpon>
     </None>
-    <None Include="SQL\dsMegrendeles.xsd">
+    <None Include="SQL\DataSets\dsMegrendeles.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsMegrendeles.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\dsMegrendeles.xss">
+    <None Include="SQL\DataSets\dsMegrendeles.xss">
       <DependentUpon>dsMegrendeles.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.MegrendelesSor.datasource" />
     <None Include="Resources\floppy-icon.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQL\deSelejtezInfo.xsc">
+    <None Include="SQL\DataSets\deSelejtezInfo.xsc">
       <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
     </None>
-    <None Include="SQL\deSelejtezInfo.xsd">
+    <None Include="SQL\DataSets\deSelejtezInfo.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>deSelejtezInfo.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SQL\deSelejtezInfo.xss">
+    <None Include="SQL\DataSets\deSelejtezInfo.xss">
       <DependentUpon>deSelejtezInfo.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BusinessLogic.Szamla.datasource" />
@@ -1334,18 +1338,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsALTALANOS_KEDVEZMENY.xsc">
+    <None Include="SQL\DataSets\dsALTALANOS_KEDVEZMENY.xsc">
       <DependentUpon>dsALTALANOS_KEDVEZMENY.xsd</DependentUpon>
     </None>
-    <None Include="dsALTALANOS_KEDVEZMENY.xsd">
+    <None Include="SQL\DataSets\dsALTALANOS_KEDVEZMENY.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsALTALANOS_KEDVEZMENY.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsALTALANOS_KEDVEZMENY.xss">
+    <None Include="SQL\DataSets\dsALTALANOS_KEDVEZMENY.xss">
       <DependentUpon>dsALTALANOS_KEDVEZMENY.xsd</DependentUpon>
     </None>
     <None Include="Resources\Ok.ico" />
+    <None Include="SQL\update_033.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SQL\update_032.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -35,11 +35,11 @@
             this.hELYVANDESIGNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.AKTIV = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.hELYBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetHELY = new e_Cafe.SQL.ECAFEDataSetHELY();
+            this.eCAFEDataSetHELY = new e_Cafe.SQL.DataSets.ECAFEDataSetHELY();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.hELYTableAdapter = new e_Cafe.SQL.ECAFEDataSetHELYTableAdapters.HELYTableAdapter();
+            this.hELYTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetHELYTableAdapters.HELYTableAdapter();
             this.chkInaktivak = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hELYBindingSource)).BeginInit();
@@ -176,9 +176,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private e_Cafe.SQL.ECAFEDataSetHELY eCAFEDataSetHELY;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetHELY eCAFEDataSetHELY;
         private System.Windows.Forms.BindingSource hELYBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetHELYTableAdapters.HELYTableAdapter hELYTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetHELYTableAdapters.HELYTableAdapter hELYTableAdapter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hELYIDDataGridViewTextBoxColumn;

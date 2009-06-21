@@ -64,9 +64,9 @@
             this.txtVegNet = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.pnlAddCikk = new System.Windows.Forms.Panel();
-            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.ECAFEDataSetRAKTAR();
+            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR();
             this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rAKTARTableAdapter = new e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
+            this.rAKTARTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             this.lblCikk = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.btnCikk = new System.Windows.Forms.Button();
@@ -676,9 +676,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGJEGYZESDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel pnlAddCikk;
-        private e_Cafe.SQL.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR eCAFEDataSetRAKTAR;
         private System.Windows.Forms.BindingSource rAKTARBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter rAKTARTableAdapter;
         private System.Windows.Forms.Label lblCikk;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnCikk;

@@ -45,7 +45,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.cIKKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eCAFEDataSetCIKK = new e_Cafe.SQL.ECAFEDataSetCIKK();
+            this.eCAFEDataSetCIKK = new e_Cafe.SQL.DataSets.ECAFEDataSetCIKK();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -83,7 +83,7 @@
             this.grpRecept = new System.Windows.Forms.GroupBox();
             this.txtRecAlk = new System.Windows.Forms.TextBox();
             this.bsRecept = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptText = new e_Cafe.SQL.dsReceptText();
+            this.dsReceptText = new e_Cafe.SQL.DataSets.dsReceptText();
             this.txtRecPoh = new System.Windows.Forms.TextBox();
             this.txtRecMod = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
             this.bsReceptCikkek = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptCikkek = new e_Cafe.SQL.dsReceptCikkek();
+            this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
             this.button4 = new System.Windows.Forms.Button();
             this.btnReceptCikkModosit = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -116,7 +116,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAKTARIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kESZLETFEJBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsKeszletInfo = new e_Cafe.SQL.dsKeszletInfo();
+            this.dsKeszletInfo = new e_Cafe.SQL.DataSets.dsKeszletInfo();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dATUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -166,8 +166,8 @@
             this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eRTTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEGYSMEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taReceptCikkek = new e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
-            this.taRecept = new e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter();
+            this.taReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
+            this.taRecept = new e_Cafe.SQL.DataSets.dsReceptTextTableAdapters.CIKKTableAdapter();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -176,10 +176,10 @@
             this.filterCikkcsop = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.filterAlcsoport = new System.Windows.Forms.ToolStripTextBox();
-            this.cIKKTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
-            this.lIT_KISZTableAdapter = new e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
-            this.kESZLET_FEJTableAdapter = new e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter();
-            this.kESZLET_SORTableAdapter = new e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter();
+            this.cIKKTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter();
+            this.lIT_KISZTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
+            this.kESZLET_FEJTableAdapter = new e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter();
+            this.kESZLET_SORTableAdapter = new e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1704,9 +1704,9 @@
         private System.Windows.Forms.TabPage tpKiszereles;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private e_Cafe.SQL.ECAFEDataSetCIKK eCAFEDataSetCIKK;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetCIKK eCAFEDataSetCIKK;
         private System.Windows.Forms.BindingSource cIKKBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter cIKKTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter cIKKTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMegnevezes;
                
@@ -1724,7 +1724,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TabPage tpRecept;
         private System.Windows.Forms.BindingSource lITKISZBindingSource;
-        private e_Cafe.SQL.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter lIT_KISZTableAdapter;
+        private e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter lIT_KISZTableAdapter;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.TextBox textBox1;
@@ -1752,13 +1752,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.RichTextBox rtfReceptLeiras;
-        private e_Cafe.SQL.dsReceptText dsReceptText;
+        private e_Cafe.SQL.DataSets.dsReceptText dsReceptText;
         private System.Windows.Forms.BindingSource bsRecept;
-        private e_Cafe.SQL.dsReceptTextTableAdapters.CIKKTableAdapter taRecept;
+        private e_Cafe.SQL.DataSets.dsReceptTextTableAdapters.CIKKTableAdapter taRecept;
         private Microsoft.VisualBasic.PowerPacks.DataRepeater dataRepeater1;
-        private e_Cafe.SQL.dsReceptCikkek dsReceptCikkek;
+        private e_Cafe.SQL.DataSets.dsReceptCikkek dsReceptCikkek;
         private System.Windows.Forms.BindingSource bsReceptCikkek;
-        private e_Cafe.SQL.dsReceptCikkekTableAdapters.RECEPTTableAdapter taReceptCikkek;
+        private e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter taReceptCikkek;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -1816,11 +1816,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn eRTTIPUSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGYSMEGNEVEZESDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox2;
-        private e_Cafe.SQL.dsKeszletInfo dsKeszletInfo;
+        private e_Cafe.SQL.DataSets.dsKeszletInfo dsKeszletInfo;
         private System.Windows.Forms.BindingSource kESZLETFEJBindingSource;
-        private e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter kESZLET_FEJTableAdapter;
+        private e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter kESZLET_FEJTableAdapter;
         private System.Windows.Forms.BindingSource készletsorokBindingSource;
-        private e_Cafe.SQL.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter kESZLET_SORTableAdapter;
+        private e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter kESZLET_SORTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage2;

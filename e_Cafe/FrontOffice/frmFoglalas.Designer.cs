@@ -54,8 +54,8 @@
             this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
             this.fOGLALASBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsFOGLALAS = new e_Cafe.SQL.dsFOGLALAS();
-            this.fOGLALASTableAdapter = new e_Cafe.SQL.dsFOGLALASTableAdapters.FOGLALASTableAdapter();
+            this.dsFOGLALAS = new e_Cafe.SQL.DataSets.dsFOGLALAS();
+            this.fOGLALASTableAdapter = new e_Cafe.SQL.DataSets.dsFOGLALASTableAdapters.FOGLALASTableAdapter();
             this.panel5 = new System.Windows.Forms.Panel();
             this.mcDatum = new System.Windows.Forms.MonthCalendar();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -703,9 +703,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private e_Cafe.SQL.dsFOGLALAS dsFOGLALAS;
+        private e_Cafe.SQL.DataSets.dsFOGLALAS dsFOGLALAS;
         private System.Windows.Forms.BindingSource fOGLALASBindingSource;
-        private e_Cafe.SQL.dsFOGLALASTableAdapters.FOGLALASTableAdapter fOGLALASTableAdapter;
+        private e_Cafe.SQL.DataSets.dsFOGLALASTableAdapters.FOGLALASTableAdapter fOGLALASTableAdapter;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn fOGLALASIDDataGridViewTextBoxColumn;

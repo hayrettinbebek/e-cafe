@@ -87,7 +87,7 @@ namespace e_Cafe
             }
 
 
-            this.aFATableAdapter.Fill(this.eCAFEDataSet.AFA, ((SQL.ECAFEDataSet.CIKKCSOPORTRow)((DataRowView)cIKKCSOPORTBindingSource.Current).Row).AFA_KOD.ToString());
+            this.aFATableAdapter.Fill(this.eCAFEDataSet.AFA, ((SQL.DataSets.ECAFEDataSet.CIKKCSOPORTRow)((DataRowView)cIKKCSOPORTBindingSource.Current).Row).AFA_KOD.ToString());
         }
 
         private void SaveCikk()
@@ -238,7 +238,7 @@ namespace e_Cafe
         {
             this.cIKCSOP_OTHER_FILTERTableAdapter.Fill(this.eCAFEDataSetOTHER_FILTER.CIKCSOP_OTHER_FILTER, Convert.ToInt16(cmdCikkcsop.SelectedValue));
 
-            this.aFATableAdapter.Fill(this.eCAFEDataSet.AFA, ((SQL.ECAFEDataSet.CIKKCSOPORTRow)((DataRowView)cIKKCSOPORTBindingSource.Current).Row).AFA_KOD.ToString());
+            this.aFATableAdapter.Fill(this.eCAFEDataSet.AFA, ((SQL.DataSets.ECAFEDataSet.CIKKCSOPORTRow)((DataRowView)cIKKCSOPORTBindingSource.Current).Row).AFA_KOD.ToString());
             
         }
 
@@ -249,12 +249,12 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtEladArNet.Text = DEFS.getNetto(Convert.ToDouble(txtEladAr.Text), (((SQL.ECAFEDataSet.AFARow)((DataRowView)aFABindingSource.Current).Row).AFA_ERTEK)).ToString();
+            txtEladArNet.Text = DEFS.getNetto(Convert.ToDouble(txtEladAr.Text), (((SQL.DataSets.ECAFEDataSet.AFARow)((DataRowView)aFABindingSource.Current).Row).AFA_ERTEK)).ToString();
         }
 
         private void netToBrut_Click(object sender, EventArgs e)
         {
-            txtEladAr.Text = DEFS.getBrutto(Convert.ToDouble(txtEladArNet.Text), (((SQL.ECAFEDataSet.AFARow)((DataRowView)aFABindingSource.Current).Row).AFA_ERTEK)).ToString();
+            txtEladAr.Text = DEFS.getBrutto(Convert.ToDouble(txtEladArNet.Text), (((SQL.DataSets.ECAFEDataSet.AFARow)((DataRowView)aFABindingSource.Current).Row).AFA_ERTEK)).ToString();
         }
     }
 }
