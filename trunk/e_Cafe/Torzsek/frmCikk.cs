@@ -374,6 +374,12 @@ namespace e_Cafe.Torzsek
             }
         }
 
+        private void filter_RovidNev_TextChanged(object sender, EventArgs e)
+        {
+            aktCikkfilter.FILTER_ALCSOPORT = filterAlcsoport.Text;
+            cIKKBindingSource.Filter = aktCikkfilter.getResult();
+        }
+
 
     }
 }
