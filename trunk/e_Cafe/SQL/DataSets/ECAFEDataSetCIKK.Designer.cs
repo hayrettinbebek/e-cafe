@@ -340,7 +340,9 @@ namespace e_Cafe.SQL.DataSets {
             
             private global::System.Data.DataColumn columnELADASI_AR_NETTO;
             
-            private global::System.Data.DataColumn columnExpr1;
+            private global::System.Data.DataColumn columnCIKK_TIPUS1;
+            
+            private global::System.Data.DataColumn columnCIKK_ROVID_NEV;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public CIKKDataTable() {
@@ -534,9 +536,16 @@ namespace e_Cafe.SQL.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public global::System.Data.DataColumn Expr1Column {
+            public global::System.Data.DataColumn CIKK_TIPUS1Column {
                 get {
-                    return this.columnExpr1;
+                    return this.columnCIKK_TIPUS1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn CIKK_ROVID_NEVColumn {
+                get {
+                    return this.columnCIKK_ROVID_NEV;
                 }
             }
             
@@ -592,7 +601,8 @@ namespace e_Cafe.SQL.DataSets {
                         string ERTEKESITES_TIPUSA, 
                         int SPEC_ZARAS, 
                         double ELADASI_AR_NETTO, 
-                        int Expr1) {
+                        int CIKK_TIPUS1, 
+                        string CIKK_ROVID_NEV) {
                 CIKKRow rowCIKKRow = ((CIKKRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MEGNEVEZES,
@@ -618,7 +628,8 @@ namespace e_Cafe.SQL.DataSets {
                         ERTEKESITES_TIPUSA,
                         SPEC_ZARAS,
                         ELADASI_AR_NETTO,
-                        Expr1};
+                        CIKK_TIPUS1,
+                        CIKK_ROVID_NEV};
                 rowCIKKRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCIKKRow);
                 return rowCIKKRow;
@@ -667,7 +678,8 @@ namespace e_Cafe.SQL.DataSets {
                 this.columnERTEKESITES_TIPUSA = base.Columns["ERTEKESITES_TIPUSA"];
                 this.columnSPEC_ZARAS = base.Columns["SPEC_ZARAS"];
                 this.columnELADASI_AR_NETTO = base.Columns["ELADASI_AR_NETTO"];
-                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnCIKK_TIPUS1 = base.Columns["CIKK_TIPUS1"];
+                this.columnCIKK_ROVID_NEV = base.Columns["CIKK_ROVID_NEV"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -718,8 +730,10 @@ namespace e_Cafe.SQL.DataSets {
                 base.Columns.Add(this.columnSPEC_ZARAS);
                 this.columnELADASI_AR_NETTO = new global::System.Data.DataColumn("ELADASI_AR_NETTO", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnELADASI_AR_NETTO);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
+                this.columnCIKK_TIPUS1 = new global::System.Data.DataColumn("CIKK_TIPUS1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCIKK_TIPUS1);
+                this.columnCIKK_ROVID_NEV = new global::System.Data.DataColumn("CIKK_ROVID_NEV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCIKK_ROVID_NEV);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCIKK_ID}, true));
                 this.columnMEGNEVEZES.AllowDBNull = false;
@@ -744,7 +758,8 @@ namespace e_Cafe.SQL.DataSets {
                 this.columnCIKK_ID.ReadOnly = true;
                 this.columnCIKK_ID.Unique = true;
                 this.columnERTEKESITES_TIPUSA.MaxLength = 1;
-                this.columnExpr1.AllowDBNull = false;
+                this.columnCIKK_TIPUS1.AllowDBNull = false;
+                this.columnCIKK_ROVID_NEV.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1502,12 +1517,27 @@ namespace e_Cafe.SQL.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public int Expr1 {
+            public int CIKK_TIPUS1 {
                 get {
-                    return ((int)(this[this.tableCIKK.Expr1Column]));
+                    return ((int)(this[this.tableCIKK.CIKK_TIPUS1Column]));
                 }
                 set {
-                    this[this.tableCIKK.Expr1Column] = value;
+                    this[this.tableCIKK.CIKK_TIPUS1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string CIKK_ROVID_NEV {
+                get {
+                    try {
+                        return ((string)(this[this.tableCIKK.CIKK_ROVID_NEVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CIKK_ROVID_NEV\' in table \'CIKK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCIKK.CIKK_ROVID_NEVColumn] = value;
                 }
             }
             
@@ -1719,6 +1749,16 @@ namespace e_Cafe.SQL.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public void SetELADASI_AR_NETTONull() {
                 this[this.tableCIKK.ELADASI_AR_NETTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsCIKK_ROVID_NEVNull() {
+                return this.IsNull(this.tableCIKK.CIKK_ROVID_NEVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetCIKK_ROVID_NEVNull() {
+                this[this.tableCIKK.CIKK_ROVID_NEVColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2051,7 +2091,8 @@ namespace e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters {
             tableMapping.ColumnMappings.Add("ERTEKESITES_TIPUSA", "ERTEKESITES_TIPUSA");
             tableMapping.ColumnMappings.Add("SPEC_ZARAS", "SPEC_ZARAS");
             tableMapping.ColumnMappings.Add("ELADASI_AR_NETTO", "ELADASI_AR_NETTO");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("CIKK_TIPUS1", "CIKK_TIPUS1");
+            tableMapping.ColumnMappings.Add("CIKK_ROVID_NEV", "CIKK_ROVID_NEV");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2070,7 +2111,7 @@ namespace e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters {
                       cs.CIKKCSOPORT_NEV AS CIKKCSOPORT, CASE WHEN ERTEKESITES_TIPUSA = 'D' THEN 'Darab' ELSE 'Folyó' END AS ERT_TIPUS, 
                       m.MEGYS_MEGNEVEZES, o.OTHER_NAME AS ALCSOPORT, r.RAKTAR_KOD, c.SZJ_SZAM, c.CIKKSZAM, c.EAN_KOD, c.MINIMUM_KESZLET, 
                       c.OPTIMALIS_KESZLET, c.ELADASI_AR, c.HELYETTES_TERMEK, c.MAX_KEDVEZMENY_SZ, c.MAX_KEDVEZM_FT, c.MEGJEGYZES, c.AKTIV, 
-                      c.GYORSKOD, c.SPEC_ZARAS, c.ELADASI_AR_NETTO, c.CIKK_TIPUS AS Expr1
+                      c.GYORSKOD, c.SPEC_ZARAS, c.ELADASI_AR_NETTO, c.CIKK_TIPUS AS CIKK_TIPUS, CIKK_ROVID_NEV
 FROM         CIKK AS c LEFT OUTER JOIN
                       CIKKCSOPORT AS cs ON c.CIKKCSOPORT_ID = cs.CIKKCSOPORT_ID LEFT OUTER JOIN
                       MEGYS AS m ON c.MEGYS_ID = m.MEGYS_ID LEFT OUTER JOIN
