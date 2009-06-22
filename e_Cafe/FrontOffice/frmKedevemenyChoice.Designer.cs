@@ -38,20 +38,20 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flpKedvezmenyek = new System.Windows.Forms.FlowLayoutPanel();
             this.button11 = new System.Windows.Forms.Button();
+            this.numericKeyboar1 = new GUI.billentyu.numericKeyboar();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPartner = new System.Windows.Forms.RadioButton();
             this.btnErtek = new System.Windows.Forms.RadioButton();
             this.btnSzazalek = new System.Windows.Forms.RadioButton();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
-            this.btnPartner = new System.Windows.Forms.RadioButton();
-            this.numericKeyboar1 = new GUI.billentyu.numericKeyboar();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -170,6 +170,16 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // numericKeyboar1
+            // 
+            this.numericKeyboar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numericKeyboar1.BackgroundImage")));
+            this.numericKeyboar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numericKeyboar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericKeyboar1.Location = new System.Drawing.Point(153, 0);
+            this.numericKeyboar1.Name = "numericKeyboar1";
+            this.numericKeyboar1.Size = new System.Drawing.Size(242, 272);
+            this.numericKeyboar1.TabIndex = 1;
+            // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
@@ -200,6 +210,16 @@
             this.panel1.Size = new System.Drawing.Size(574, 86);
             this.panel1.TabIndex = 10;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(322, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 19);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Partner";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -220,6 +240,24 @@
             this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 10;
             this.label1.Text = "Százalék";
+            // 
+            // btnPartner
+            // 
+            this.btnPartner.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnPartner.BackColor = System.Drawing.Color.Transparent;
+            this.btnPartner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPartner.BackgroundImage")));
+            this.btnPartner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPartner.FlatAppearance.BorderSize = 0;
+            this.btnPartner.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnPartner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPartner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPartner.Location = new System.Drawing.Point(326, 3);
+            this.btnPartner.Name = "btnPartner";
+            this.btnPartner.Size = new System.Drawing.Size(60, 60);
+            this.btnPartner.TabIndex = 9;
+            this.btnPartner.UseVisualStyleBackColor = false;
+            this.btnPartner.CheckedChanged += new System.EventHandler(this.btnFoglalas_CheckedChanged);
             // 
             // btnErtek
             // 
@@ -278,6 +316,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel9
@@ -305,44 +344,6 @@
             this.button12.TabIndex = 6;
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // btnPartner
-            // 
-            this.btnPartner.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnPartner.BackColor = System.Drawing.Color.Transparent;
-            this.btnPartner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPartner.BackgroundImage")));
-            this.btnPartner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPartner.FlatAppearance.BorderSize = 0;
-            this.btnPartner.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnPartner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPartner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPartner.Location = new System.Drawing.Point(326, 3);
-            this.btnPartner.Name = "btnPartner";
-            this.btnPartner.Size = new System.Drawing.Size(60, 60);
-            this.btnPartner.TabIndex = 9;
-            this.btnPartner.UseVisualStyleBackColor = false;
-            this.btnPartner.CheckedChanged += new System.EventHandler(this.btnFoglalas_CheckedChanged);
-            // 
-            // numericKeyboar1
-            // 
-            this.numericKeyboar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numericKeyboar1.BackgroundImage")));
-            this.numericKeyboar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numericKeyboar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericKeyboar1.Location = new System.Drawing.Point(153, 0);
-            this.numericKeyboar1.Name = "numericKeyboar1";
-            this.numericKeyboar1.Size = new System.Drawing.Size(242, 272);
-            this.numericKeyboar1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(322, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 19);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Partner";
             // 
             // frmKedevemenyChoice
             // 
