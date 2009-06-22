@@ -478,7 +478,7 @@ namespace e_Cafe
         private void btnPartnerek_Click(object sender, EventArgs e)
         {
             MMPartnerek f = new MMPartnerek();
-            
+            f.SelectMode = PartnerSelectModes.edit;
             f.ShowDialog();
 
         }
