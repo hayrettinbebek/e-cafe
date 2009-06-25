@@ -107,8 +107,8 @@ namespace e_Cafe.Reports
             builder.Table.OuterPenBottom = new Pen(Color.Gray, reportDocument.ThinPen.Width);
 
             builder.AddColumn(dv.Table.Columns[0], "Db.", 8, false, false, HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[1], "Termék", 35, false, false, HorizontalAlignment.Left);
-            builder.AddColumn(dv.Table.Columns[2], "Összeg", 30, false, false, HorizontalAlignment.Right);
+            builder.AddColumn(dv.Table.Columns[1], "Termék", 30, false, false, HorizontalAlignment.Left);
+            builder.AddColumn(dv.Table.Columns[2], "Összeg", 40, false, false, HorizontalAlignment.Right);
 
             //dt.Columns.Add(, typeof(int));
             //dt.Columns.Add("Cikk", typeof(string));

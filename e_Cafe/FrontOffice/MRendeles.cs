@@ -719,6 +719,7 @@ namespace e_Cafe
         #region Stornózás
         private void button2_Click(object sender, EventArgs e)
         {
+            int szamla_fej_id = -1;
             if (tblRendeles.SelectedItems.Length == 0)
             {
                 for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
@@ -727,13 +728,26 @@ namespace e_Cafe
                     tblRendeles.TableModel.Selections.AddCell(i, 0);
                 }
             }
-            foreach (var r in tblRendeles.SelectedItems)
-            {
-                ((eCell)r.Cells[0]).rSor.StornoSor();
-            }
-            _AktRendeles.SaveRendeles();
-            _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
 
+            szamla_fej_id = DEFS.GenerateSzamlaFej(-99, _AktRendeles.fRENDELES_ID, 9);
+            if (szamla_fej_id != -1)
+            {
+                foreach (var r in tblRendeles.SelectedItems)
+                {
+                    DEFS.AddSzlaTetel(szamla_fej_id, ((eCell)r.Cells[0]).rSor._SOR_ID);
+                    DEFS.AddStornoSzlaTetel(szamla_fej_id, ((eCell)r.Cells[0]).rSor._SOR_ID);
+
+                    ((eCell)r.Cells[0]).rSor.StornoSor();
+
+                }
+                _AktRendeles.SaveRendeles();
+                _AktRendeles.InitRendeles(_AktRendeles.fRENDELES_ID);
+
+                doPrinting dp = new doPrinting();
+                dp.setReportMaker(new BlokkReport(szamla_fej_id));
+                dp.doPrint();
+
+            }
             initRendelTabla();
             DEFS.DebugLog("Rendelés sztornózva");
             this.Close();
@@ -797,7 +811,7 @@ namespace e_Cafe
 
         }
 
-
+       
         
 
         private void button6_Click(object sender, EventArgs e)

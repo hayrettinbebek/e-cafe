@@ -178,7 +178,7 @@ namespace BusinessLogic
 
 
 
-            return (new Object[] { mennyiseg, nev, t.RENDELSOR._Ertek });
+            return (new Object[] { mennyiseg, nev, t.BRUTTO });
         }
 
         #region PROPERTIES
@@ -232,6 +232,22 @@ namespace BusinessLogic
                 return (fFIZETESI_MOD);
             }
             
+        }
+
+        public string STORNO
+        {
+            get
+            {
+                if (FIZETESI_MOD == 9)
+                {
+                    return ("STORNO");
+                }
+                else
+                {
+                    return ("");
+                }
+            }
+
         }
 
         public DateTime SZAMLA_DATUMA
