@@ -47,7 +47,9 @@ namespace e_Cafe.Admin
         {
             foreach (var s in tmpSZL)
             {
+
                 szamlaBindingSource.Add(s);
+                
             }
         }
 

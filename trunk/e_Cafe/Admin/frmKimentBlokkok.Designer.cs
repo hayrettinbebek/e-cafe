@@ -36,6 +36,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.cIKKMEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mENNYISEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eGYSEGARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,8 +50,10 @@
             this.fEJIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tETELIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.szamlatetelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.szamlaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sZAMLASORSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sZAMLADATUMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STORNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARTNERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rENDELESIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,8 +63,6 @@
             this.hODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uSERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szamlaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.szamlatetelBindingSource)).BeginInit();
@@ -86,6 +87,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sZAMLASORSZAMDataGridViewTextBoxColumn,
             this.sZAMLADATUMADataGridViewTextBoxColumn,
+            this.STORNO,
             this.fEJIDDataGridViewTextBoxColumn,
             this.pARTNERIDDataGridViewTextBoxColumn,
             this.rENDELESIDDataGridViewTextBoxColumn,
@@ -96,9 +98,9 @@
             this.nAPDataGridViewTextBoxColumn,
             this.uSERIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.szamlaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(279, 330);
+            this.dataGridView1.Size = new System.Drawing.Size(335, 330);
             this.dataGridView1.TabIndex = 2;
             // 
             // dataGridView2
@@ -121,10 +123,10 @@
             this.fEJIDDataGridViewTextBoxColumn1,
             this.tETELIDDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.szamlatetelBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(297, 52);
+            this.dataGridView2.Location = new System.Drawing.Point(353, 52);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(708, 330);
+            this.dataGridView2.Size = new System.Drawing.Size(652, 330);
             this.dataGridView2.TabIndex = 3;
             // 
             // dateTimePicker1
@@ -161,6 +163,17 @@
             this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "-ig";
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::e_Cafe.Properties.Resources.Printer_64x64;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(286, 9);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(35, 35);
+            this.button6.TabIndex = 20;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // cIKKMEGNEVEZESDataGridViewTextBoxColumn
             // 
@@ -256,6 +269,11 @@
             // 
             this.szamlatetelBindingSource.DataSource = typeof(BusinessLogic.Szamla_tetel);
             // 
+            // szamlaBindingSource
+            // 
+            this.szamlaBindingSource.DataSource = typeof(BusinessLogic.Szamla);
+            this.szamlaBindingSource.CurrentItemChanged += new System.EventHandler(this.szamlaBindingSource_CurrentItemChanged);
+            // 
             // sZAMLASORSZAMDataGridViewTextBoxColumn
             // 
             this.sZAMLASORSZAMDataGridViewTextBoxColumn.DataPropertyName = "SZAMLA_SORSZAM";
@@ -269,6 +287,14 @@
             this.sZAMLADATUMADataGridViewTextBoxColumn.HeaderText = "Dátum";
             this.sZAMLADATUMADataGridViewTextBoxColumn.Name = "sZAMLADATUMADataGridViewTextBoxColumn";
             this.sZAMLADATUMADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // STORNO
+            // 
+            this.STORNO.DataPropertyName = "STORNO";
+            this.STORNO.HeaderText = "Tipus";
+            this.STORNO.Name = "STORNO";
+            this.STORNO.ReadOnly = true;
+            this.STORNO.Width = 90;
             // 
             // fEJIDDataGridViewTextBoxColumn
             // 
@@ -342,22 +368,6 @@
             this.uSERIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.uSERIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // szamlaBindingSource
-            // 
-            this.szamlaBindingSource.DataSource = typeof(BusinessLogic.Szamla);
-            this.szamlaBindingSource.CurrentItemChanged += new System.EventHandler(this.szamlaBindingSource_CurrentItemChanged);
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::e_Cafe.Properties.Resources.Printer_64x64;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(286, 9);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(35, 35);
-            this.button6.TabIndex = 20;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // frmKimentBlokkok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,17 +399,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource szamlaBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLASORSZAMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLADATUMADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fEJIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rENDELESIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kEDVEZMENYDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fIZETESIMODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nAPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uSERIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource szamlatetelBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIKKMEGNEVEZESDataGridViewTextBoxColumn;
@@ -419,5 +418,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLASORSZAMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLADATUMADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STORNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fEJIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rENDELESIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kEDVEZMENYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fIZETESIMODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nAPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uSERIDDataGridViewTextBoxColumn;
     }
 }

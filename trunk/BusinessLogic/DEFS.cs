@@ -145,6 +145,34 @@ namespace BusinessLogic
 
 
         }
+        public static void AddStornoSzlaTetel(int szla_fej_id, int sor_id)
+        {
+
+
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            SqlCommand cmdAddSzlaTetel = new SqlCommand("sp_add_storno_szamla_tetel", c);
+            cmdAddSzlaTetel.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+            cmdAddSzlaTetel.Parameters.Add("@p_szamla_fej_id", SqlDbType.Int);
+            cmdAddSzlaTetel.Parameters["@p_szamla_fej_id"].Direction = ParameterDirection.Input;
+            cmdAddSzlaTetel.Parameters["@p_szamla_fej_id"].Value = szla_fej_id;
+
+            cmdAddSzlaTetel.Parameters.Add("@p_rendeles_sor_id", SqlDbType.Int);
+            cmdAddSzlaTetel.Parameters["@p_rendeles_sor_id"].Direction = ParameterDirection.Input;
+            cmdAddSzlaTetel.Parameters["@p_rendeles_sor_id"].Value = sor_id;
+
+
+            c.Open();
+            cmdAddSzlaTetel.ExecuteNonQuery();
+
+
+
+            c.Close();
+
+
+        }
         #endregion
 
         #region könyvelési napokkal kapcsolatos lekérdezések

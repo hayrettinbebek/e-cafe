@@ -465,7 +465,8 @@ namespace e_Cafe
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-
+            updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\DROP.sql"));
+            updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
         }
 
         private void textBox1_Click(object sender, EventArgs e)
