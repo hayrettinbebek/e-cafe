@@ -31,6 +31,16 @@ namespace BusinessLogic
         }
     }
 
+    public class PartnerTartozasCell : XPTable.Models.Cell
+    {
+        public Partner_tartozas tartSor;
+
+        public PartnerTartozasCell(Partner_tartozas h)
+        {
+            tartSor = h;
+        }
+    }
+
     public class RaktCell : XPTable.Models.Cell
     {
         public CikkKeszlet rK;

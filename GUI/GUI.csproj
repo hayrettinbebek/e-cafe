@@ -77,6 +77,12 @@
     <Compile Include="Asztal_Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="billentyu\frmTouchKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="billentyu\frmTouchKeyboard.Designer.cs">
+      <DependentUpon>frmTouchKeyboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="billentyu\numericKeyboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="billentyu\frmTouchKeyboard.resx">
+      <DependentUpon>frmTouchKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="billentyu\numericKeyboard.resx">
       <DependentUpon>numericKeyboard.cs</DependentUpon>
       <SubType>Designer</SubType>

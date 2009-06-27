@@ -7,6 +7,10 @@ using System.Text;
 
 using NSpring.Logging;
 
+using XPTable;
+using XPTable.Models;
+using XPTable.Renderers;
+
 
 namespace BusinessLogic
 {
@@ -758,7 +762,21 @@ namespace BusinessLogic
                         tmpRet = (double)rdr["SZABAD"];
                     }
 
-                    return (tmpRet);
+                    double tmpTart = 0;
+                    foreach (var t in TARTOZASOK)
+                    {
+                        tmpTart += t.OSSZEG;
+                    }
+
+                    double tmpBef = 0;
+                    foreach (var b in BEFIZETESEK)
+                    {
+                        tmpBef += b.OSSZEG;
+                    }
+                    DEFS.DebugLog(" Tartozás: " + tmpTart.ToString());
+                    DEFS.DebugLog(" Befizetés: " + tmpBef.ToString());
+                    DEFS.DebugLog(" Egyenleg: " + tmpRet.ToString());
+                    return (tmpRet - tmpTart + tmpBef);
                 
             }
             
@@ -991,6 +1009,118 @@ namespace BusinessLogic
 
             return (new_p_id);
         }
+
+
+        #region tartozások kezelése
+        private List<Partner_tartozas> getPartnerTartozasok()
+        {
+            List<Partner_tartozas> tmpList = new List<Partner_tartozas>();
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+
+            if (c.State == ConnectionState.Closed) { c.Open(); }
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT SOR_ID FROM PARTNER_TARTOZASOK WHERE PARTNER_ID =" + _partner_id.ToString();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            
+            while (rdr.Read())
+            {
+                tmpList.Add(new Partner_tartozas((int)rdr["SOR_ID"]));
+
+            }
+            rdr.Close();
+
+            c.Close();
+            return tmpList;
+        }
+        public List<Partner_tartozas> TARTOZASOK
+        {
+            get { return (getPartnerTartozasok()); }
+        }
+
+        private List<Partner_befizetes> getPartnerBefizetesek()
+        {
+            List<Partner_befizetes> tmpList = new List<Partner_befizetes>();
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+
+            if (c.State == ConnectionState.Closed) { c.Open(); }
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT SOR_ID FROM PARTNER_BEFIZETESEK WHERE PARTNER_ID =" + _partner_id.ToString();
+            SqlDataReader rdr = cmd.ExecuteReader();
+             
+            while (rdr.Read())
+            {
+                tmpList.Add(new Partner_befizetes((int)rdr["SOR_ID"]));
+
+            }
+            rdr.Close();
+
+            c.Close();
+            return tmpList;
+        }
+        public List<Partner_befizetes> BEFIZETESEK
+        {
+            get { return (getPartnerBefizetesek()); }
+        }
+
+        
+        public ColumnModel getTartozasokColumnModel()
+        {
+
+            //1. oszlop
+            ImageColumn imageColumn = new ImageColumn("", 30);
+            imageColumn.Editable = false;
+
+            TextColumn textColumn = new TextColumn("Jogcím", 140);
+            textColumn.Editable = false;
+
+            NumberColumn ertekColumn = new NumberColumn("Összeg", 70);
+            ertekColumn.Editable = false;
+
+            NumberColumn ertekMaradekColumn = new NumberColumn("Hátralék", 70);
+            ertekMaradekColumn.Editable = false;
+
+            return (new ColumnModel(new Column[] {imageColumn,
+                                              textColumn,
+											  ertekColumn,
+											  ertekMaradekColumn
+											  }));
+        }
+
+        public TableModel getTartozasokTableModel()
+        {
+            TableModel tmpMod = new TableModel(new Row[] { });
+
+            for (int i = 0; i < TARTOZASOK.Count; i++)
+            {
+
+                tmpMod.Rows.Add(new Row(new Cell[] {new PartnerTartozasCell(TARTOZASOK[i]),
+													new Cell(TARTOZASOK[i].JOGCIM),
+													new Cell(TARTOZASOK[i].OSSZEG),
+													new Cell(TARTOZASOK[i].HATRALEK)
+                                                    }
+                                       )
+                               );
+            }
+
+            return (tmpMod);
+
+        }
+
+        
+
+        #endregion
+
+
     }
 
     public class Partner_list
@@ -1571,6 +1701,350 @@ namespace BusinessLogic
             //{
             //    string s = "Hiba a rendelés sorok mentése közben!" + _BEVETEL_FEJ_ID.ToString()+ e.Data;
             //}
+
+            c.Close();
+        }
+
+    }
+
+    public class Partner_tartozas
+    {
+
+        private int _SOR_ID;
+        private int _partner_id;
+        private string _jogcim;
+        private string _megjegyzes;
+        private double _osszeg;
+        private double _fizetve;
+
+        #region PROPERTIES
+        public int SOR_ID
+        {
+            get { return (_SOR_ID); }
+            set { _SOR_ID = value; }
+        }
+        
+        public int PARTNER_ID
+        {
+            get { return (_partner_id); }
+            set { _partner_id = value; }
+        }
+
+        public string JOGCIM
+        {
+            get { return (_jogcim); }
+            set { _jogcim = value; }
+        }
+
+        public string MEGJEGYZES
+        {
+            get { return (_megjegyzes); }
+            set { _megjegyzes = value; }
+        }
+
+        public double OSSZEG
+                    {
+            get { return (_osszeg); }
+            set { _osszeg = value; }
+        }
+
+        public double FIZETVE
+        {
+            get { return (_fizetve); }
+            set { _fizetve = value; }
+        }
+
+        public bool LEZART
+        {
+            get { return ( (OSSZEG- FIZETVE) == 0); }
+           
+        }
+        public double HATRALEK
+        {
+            get { return (OSSZEG - FIZETVE); }
+
+        }
+
+        #endregion
+
+        public Partner_tartozas(int pPartner, double pOsszeg, string pJogcim)
+        {
+            _SOR_ID = -1;
+            _partner_id = pPartner;
+            _jogcim = pJogcim;
+            _megjegyzes = "";
+            _osszeg = pOsszeg;
+        }
+
+        public Partner_tartozas(int pSorId)
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+
+            if (c.State == ConnectionState.Closed) { c.Open(); }
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT  PARTNER_ID ,SOR_ID ,JOGCIM ,MEGJEGYZES ,OSSZEG, isnull(FIZETVE,0) as FIZETVE FROM  PARTNER_TARTOZASOK WHERE SOR_ID=" + pSorId.ToString();
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                if (!DBNull.Value.Equals(rdr["SOR_ID"])) { _SOR_ID = (int)rdr["SOR_ID"]; }
+                else { _SOR_ID = -1; }
+
+                if (!DBNull.Value.Equals(rdr["PARTNER_ID"])) { _partner_id = (int)rdr["PARTNER_ID"]; }
+                else { _partner_id = -1; }
+
+                if (!DBNull.Value.Equals(rdr["JOGCIM"])) { _jogcim = (string)rdr["JOGCIM"]; }
+                else { _jogcim = ""; }
+
+                if (!DBNull.Value.Equals(rdr["MEGJEGYZES"])) { _megjegyzes = (string)rdr["MEGJEGYZES"]; }
+                else { _megjegyzes = ""; }
+
+                if (!DBNull.Value.Equals(rdr["OSSZEG"])) { _osszeg = (double)rdr["OSSZEG"]; }
+                else
+                { _osszeg = 0; }
+
+                if (!DBNull.Value.Equals(rdr["FIZETVE"])) { _fizetve = (double)rdr["FIZETVE"]; }
+                else
+                { _fizetve = 0; }
+
+            }
+            c.Close();
+        }
+
+        public void Save()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+
+
+            switch (_SOR_ID)
+            {
+                case -1:
+                    {
+                        //új rekord!!
+                        cmd.CommandText = "INSERT INTO  PARTNER_TARTOZASOK " +
+                                         " (PARTNER_ID " +
+                                         " ,JOGCIM " +
+                                         " ,MEGJEGYZES " +
+                                         " ,OSSZEG " +
+                                         " ,FIZETVE ) " +
+                                         "     VALUES " +
+                                         " (@PARTNER_ID " +
+                                         " ,@JOGCIM " +
+                                         " ,@MEGJEGYZES " +
+                                         " ,@OSSZEG " +
+                                         " ,@FIZETVE)";
+
+                        break;
+                    }
+                default:
+                    {
+
+                        cmd.CommandText = "UPDATE PARTNER_TARTOZASOK " +
+                                          "  SET PARTNER_ID = @PARTNER_ID " +
+                                          "     ,JOGCIM = @JOGCIM " +
+                                          "     ,MEGJEGYZES = @MEGJEGYZES " +
+                                          "     ,OSSZEG = @OSSZEG " +
+                                          "     ,FIZETVE = @FIZETVE " + 
+                                          " WHERE  SOR_ID= @SOR_ID";
+                        cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
+                        cmd.Parameters["SOR_ID"].Value = _SOR_ID;
+                        break;
+                    }
+            }
+
+            cmd.Parameters.Add(new SqlParameter("PARTNER_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("JOGCIM", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("MEGJEGYZES", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("OSSZEG", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("FIZETVE", SqlDbType.Float));
+
+            cmd.Parameters["PARTNER_ID"].Value = _partner_id;
+            cmd.Parameters["JOGCIM"].Value = _jogcim;
+            cmd.Parameters["MEGJEGYZES"].Value = _megjegyzes;
+            cmd.Parameters["OSSZEG"].Value = _osszeg;
+            cmd.Parameters["FIZETVE"].Value = _fizetve;
+
+
+            cmd.ExecuteNonQuery();
+            
+
+            c.Close();
+        }
+
+    }
+
+    public class Partner_befizetes
+    {
+
+        private int _SOR_ID;
+        private int _partner_id;
+        private string _jogcim;
+        private string _megjegyzes;
+        private double _osszeg;
+        private double _kipontozva;
+
+        #region PROPERTIES
+        public int SOR_ID
+        {
+            get { return (_SOR_ID); }
+            set { _SOR_ID = value; }
+        }
+
+        public int PARTNER_ID
+        {
+            get { return (_partner_id); }
+            set { _partner_id = value; }
+        }
+
+        public string JOGCIM
+        {
+            get { return (_jogcim); }
+            set { _jogcim = value; }
+        }
+
+        public string MEGJEGYZES
+        {
+            get { return (_megjegyzes); }
+            set { _megjegyzes = value; }
+        }
+
+        public double OSSZEG
+        {
+            get { return (_osszeg); }
+            set { _osszeg = value; }
+        }
+
+        public double KIPONTOZVA
+        {
+            get { return (_kipontozva); }
+            set { _kipontozva = value; }
+        }
+
+
+        #endregion
+
+        public Partner_befizetes(int pPartner, double pOsszeg, string pJogcim)
+        {
+            _SOR_ID = -1;
+            _partner_id = pPartner;
+            _jogcim = pJogcim;
+            _megjegyzes = "";
+            _osszeg = pOsszeg;
+        }
+
+        public Partner_befizetes(int pSorId)
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+
+            if (c.State == ConnectionState.Closed) { c.Open(); }
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT  PARTNER_ID ,SOR_ID ,JOGCIM ,MEGJEGYZES ,OSSZEG, isnull(KIPONTOZVA,0) as KIPONTOZVA FROM  PARTNER_BEFIZETESEK WHERE SOR_ID=" + pSorId.ToString();
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                if (!DBNull.Value.Equals(rdr["SOR_ID"])) { _SOR_ID = (int)rdr["SOR_ID"]; }
+                else { _SOR_ID = -1; }
+
+                if (!DBNull.Value.Equals(rdr["PARTNER_ID"])) { _partner_id = (int)rdr["PARTNER_ID"]; }
+                else { _partner_id = -1; }
+
+                if (!DBNull.Value.Equals(rdr["JOGCIM"])) { _jogcim = (string)rdr["JOGCIM"]; }
+                else { _jogcim = ""; }
+
+                if (!DBNull.Value.Equals(rdr["MEGJEGYZES"])) { _megjegyzes = (string)rdr["MEGJEGYZES"]; }
+                else { _megjegyzes = ""; }
+
+                if (!DBNull.Value.Equals(rdr["OSSZEG"])) { _osszeg = (double)rdr["OSSZEG"]; }
+                else
+                { _osszeg = 0; }
+
+                if (!DBNull.Value.Equals(rdr["KIPONTOZVA"])) { _kipontozva = (double)rdr["KIPONTOZVA"]; }
+                else
+                { _kipontozva = 0; }
+
+            }
+            c.Close();
+        }
+
+        public void Save()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+
+
+            switch (_SOR_ID)
+            {
+                case -1:
+                    {
+                        //új rekord!!
+                        cmd.CommandText = "INSERT INTO  PARTNER_BEFIZETESEK " +
+                                         " (PARTNER_ID " +
+                                         " ,JOGCIM " +
+                                         " ,MEGJEGYZES " +
+                                         " ,OSSZEG " +
+                                         " ,KIPONTOZVA ) " +
+                                         "     VALUES " +
+                                         " (@PARTNER_ID " +
+                                         " ,@JOGCIM " +
+                                         " ,@MEGJEGYZES " +
+                                         " ,@OSSZEG " +
+                                         " ,@KIPONTOZVA)";
+
+                        break;
+                    }
+                default:
+                    {
+
+                        cmd.CommandText = "UPDATE PARTNER_BEFIZETESEK " +
+                                          "  SET PARTNER_ID = @PARTNER_ID " +
+                                          "     ,JOGCIM = @JOGCIM " +
+                                          "     ,MEGJEGYZES = @MEGJEGYZES " +
+                                          "     ,OSSZEG = @OSSZEG " +
+                                          "     ,KIPONTOZVA = @KIPONTOZVA " +
+                                          " WHERE  SOR_ID= @SOR_ID";
+                        cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
+                        cmd.Parameters["SOR_ID"].Value = _SOR_ID;
+                        break;
+                    }
+            }
+
+            cmd.Parameters.Add(new SqlParameter("PARTNER_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("JOGCIM", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("MEGJEGYZES", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("OSSZEG", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("KIPONTOZVA", SqlDbType.Float));
+
+            cmd.Parameters["PARTNER_ID"].Value = _partner_id;
+            cmd.Parameters["JOGCIM"].Value = _jogcim;
+            cmd.Parameters["MEGJEGYZES"].Value = _megjegyzes;
+            cmd.Parameters["OSSZEG"].Value = _osszeg;
+            cmd.Parameters["KIPONTOZVA"].Value = _kipontozva;
+
+
+            cmd.ExecuteNonQuery();
+
 
             c.Close();
         }

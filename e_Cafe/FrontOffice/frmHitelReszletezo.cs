@@ -10,6 +10,7 @@ using e_Cafe.Reports;
 using XPTable;
 using XPTable.Models;
 using XPTable.Renderers;
+using GUI.billentyu;
 
 using BusinessLogic;
 
@@ -18,6 +19,7 @@ namespace e_Cafe.FrontOffice
     public partial class frmHitelReszletezo : Form
     {
         private PartnerHitel _aktPH;
+        private Partner _aktPartner;
         public int pPartner;
         Size NOT_SELECTED_SIZE = new Size(125,30);
         Size SELECTED_SIZE = new Size(130,40);
@@ -34,48 +36,45 @@ namespace e_Cafe.FrontOffice
 
         private void frmHitelReszletezo_Load(object sender, EventArgs e)
         {
-            refreshList();
+            refreshReszletesList();
 
         }
-        private void refreshList()
-        {
-            _aktPH = new PartnerHitel(pPartner);
-            tblHitelek.ColumnModel = _aktPH.getColumnModel();
-            tblHitelek.HeaderRenderer = new GradientHeaderRenderer();
-            tblHitelek.TableModel = _aktPH.getTableModel();
-            tblHitelek.Font = DEFS.f2;
-            tblHitelek.TableModel.RowHeight = 40;
-
-            rbReszletek.Checked = true;
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (tblHitelek.SelectedItems.Count() == 0)
+            if (rbReszletek.Checked == true)
             {
-                DEFS.SendInfoMessage("Nincs fizetendő kiválasztva!");
-
-            }
-            else
-            {
-                int szamla_fej_id = DEFS.GenerateSzamlaFej(pPartner, -101, (int)Fizmond.Keszpenz);
-
-                if (szamla_fej_id != -1)
+                if (tblHitelek.SelectedItems.Count() == 0)
                 {
-                    foreach (var r in tblHitelek.SelectedItems)
-                    {
-                        DEFS.AddSzlaTetel(szamla_fej_id, ((HitelCell)r.Cells[0]).hSor._SOR_ID);
-                        ((HitelCell)r.Cells[0]).hSor.SetFizetve();
-                    }
-
-                    doPrinting dp = new doPrinting();
-                    dp.setReportMaker(new BlokkReport(szamla_fej_id));
-                    dp.doPrint();
-
-                    DEFS.DebugLog("Hitelek fizetve");
+                    DEFS.SendInfoMessage("Nincs fizetendő kiválasztva!");
 
                 }
-                refreshList();
+                else
+                {
+                    int szamla_fej_id = DEFS.GenerateSzamlaFej(pPartner, -101, (int)Fizmond.Keszpenz);
+
+                    if (szamla_fej_id != -1)
+                    {
+                        foreach (var r in tblHitelek.SelectedItems)
+                        {
+                            DEFS.AddSzlaTetel(szamla_fej_id, ((HitelCell)r.Cells[0]).hSor._SOR_ID);
+                            ((HitelCell)r.Cells[0]).hSor.SetFizetve();
+                        }
+
+                        doPrinting dp = new doPrinting();
+                        dp.setReportMaker(new BlokkReport(szamla_fej_id));
+                        dp.doPrint();
+
+                        DEFS.DebugLog("Hitelek fizetve");
+
+                    }
+                    refreshReszletesList();
+                }
+            }
+            if (rbNemNevesitett.Checked == true) {
+
+
             }
         }
 
@@ -106,6 +105,7 @@ namespace e_Cafe.FrontOffice
             }
         }
 
+
         private void button8_Click(object sender, EventArgs e)
         {
             tblHitelek.TableModel.Selections.Clear();
@@ -117,18 +117,90 @@ namespace e_Cafe.FrontOffice
             }
         }
 
-
-
-        private void rbOsszesitett_CheckedChanged(object sender, EventArgs e)
+        #region Grid cuccok
+        private void refreshReszletesList()
         {
-            
+
+            _aktPH = new PartnerHitel(pPartner);
+            tblHitelek.ColumnModel = _aktPH.getColumnModel();
+            tblHitelek.HeaderRenderer = new GradientHeaderRenderer();
+            tblHitelek.TableModel = _aktPH.getTableModel();
+            tblHitelek.Font = DEFS.f2;
+            tblHitelek.TableModel.RowHeight = 40;
+            pnltartozas.Visible = false;
+           
         }
 
-        private void rbReszletek_CheckedChanged(object sender, EventArgs e)
+
+        private void refreshEgyebList()
         {
+
+
+            _aktPartner = new Partner(pPartner);
+            tblHitelek.ColumnModel = _aktPartner.getTartozasokColumnModel();
+            tblHitelek.HeaderRenderer = new GradientHeaderRenderer();
+            tblHitelek.TableModel = _aktPartner.getTartozasokTableModel();
+            tblHitelek.Font = DEFS.f2;
+            tblHitelek.TableModel.RowHeight = 40;
+
             
         }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbNemNevesitett.Checked == true)
+            {
+                refreshEgyebList();
 
-        
+            }
+
+            if (rbOsszesitett.Checked == true)
+            {
+                refreshReszletesList();
+
+            }
+
+            if (rbReszletek.Checked == true)
+            {
+                refreshReszletesList();
+
+            }
+        }
+        #endregion
+
+        private void btnAddTartozas_Click(object sender, EventArgs e)
+        {
+            pnltartozas.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            (new Partner_tartozas(pPartner, Convert.ToDouble(txtTartBefOsszeg.Text), txtTartBefJogcim.Text)).Save();
+            refreshEgyebList();
+
+            pnltartozas.Visible = false;
+        }
+
+        private void txtTartBefJogcim_Click(object sender, EventArgs e)
+        {
+            frmTouchKeyboard ft = new frmTouchKeyboard();
+            ft.ShowDialog();
+            if (ft.DialogResult == DialogResult.OK)
+            {
+                txtTartBefJogcim.Text = ft.ResultString;
+
+            }
+        }
+
+        private void txtTartBefOsszeg_Click(object sender, EventArgs e)
+        {
+            frmTouchKeyboard ft = new frmTouchKeyboard();
+            ft.ShowDialog();
+            if (ft.DialogResult == DialogResult.OK)
+            {
+                txtTartBefOsszeg.Text = ft.ResultString;
+
+            }
+        }
+
     }
 }

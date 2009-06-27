@@ -36,7 +36,15 @@
             this.button8 = new System.Windows.Forms.Button();
             this.rbOsszesitett = new System.Windows.Forms.RadioButton();
             this.rbReszletek = new System.Windows.Forms.RadioButton();
+            this.rbNemNevesitett = new System.Windows.Forms.RadioButton();
+            this.btnAddTartozas = new System.Windows.Forms.Button();
+            this.addBefizetes = new System.Windows.Forms.Button();
+            this.txtTartBefOsszeg = new System.Windows.Forms.TextBox();
+            this.txtTartBefJogcim = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnltartozas = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tblHitelek)).BeginInit();
+            this.pnltartozas.SuspendLayout();
             this.SuspendLayout();
             // 
             // button12
@@ -112,7 +120,7 @@
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(563, 43);
+            this.button8.Location = new System.Drawing.Point(588, 43);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(56, 57);
             this.button8.TabIndex = 14;
@@ -127,31 +135,114 @@
             this.rbOsszesitett.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.rbOsszesitett.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.rbOsszesitett.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbOsszesitett.Location = new System.Drawing.Point(175, 43);
+            this.rbOsszesitett.Location = new System.Drawing.Point(143, 43);
             this.rbOsszesitett.Name = "rbOsszesitett";
             this.rbOsszesitett.Size = new System.Drawing.Size(130, 30);
             this.rbOsszesitett.TabIndex = 15;
+            this.rbOsszesitett.Tag = "1";
             this.rbOsszesitett.Text = "Összesített";
             this.rbOsszesitett.UseVisualStyleBackColor = false;
-            this.rbOsszesitett.CheckedChanged += new System.EventHandler(this.rbOsszesitett_CheckedChanged);
+            this.rbOsszesitett.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // rbReszletek
             // 
             this.rbReszletek.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbReszletek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rbReszletek.BackColor = System.Drawing.Color.Silver;
             this.rbReszletek.Checked = true;
             this.rbReszletek.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rbReszletek.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.rbReszletek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.rbReszletek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbReszletek.Location = new System.Drawing.Point(44, 43);
+            this.rbReszletek.Location = new System.Drawing.Point(12, 43);
             this.rbReszletek.Name = "rbReszletek";
             this.rbReszletek.Size = new System.Drawing.Size(125, 30);
             this.rbReszletek.TabIndex = 15;
             this.rbReszletek.TabStop = true;
+            this.rbReszletek.Tag = "1";
             this.rbReszletek.Text = "Részletek";
             this.rbReszletek.UseVisualStyleBackColor = false;
-            this.rbReszletek.CheckedChanged += new System.EventHandler(this.rbReszletek_CheckedChanged);
+            this.rbReszletek.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // rbNemNevesitett
+            // 
+            this.rbNemNevesitett.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbNemNevesitett.BackColor = System.Drawing.Color.Silver;
+            this.rbNemNevesitett.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rbNemNevesitett.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.rbNemNevesitett.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.rbNemNevesitett.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbNemNevesitett.Location = new System.Drawing.Point(407, 43);
+            this.rbNemNevesitett.Name = "rbNemNevesitett";
+            this.rbNemNevesitett.Size = new System.Drawing.Size(150, 30);
+            this.rbNemNevesitett.TabIndex = 15;
+            this.rbNemNevesitett.Tag = "1";
+            this.rbNemNevesitett.Text = "Nem nevesített tartozások";
+            this.rbNemNevesitett.UseVisualStyleBackColor = false;
+            this.rbNemNevesitett.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // btnAddTartozas
+            // 
+            this.btnAddTartozas.Location = new System.Drawing.Point(594, 125);
+            this.btnAddTartozas.Name = "btnAddTartozas";
+            this.btnAddTartozas.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTartozas.TabIndex = 16;
+            this.btnAddTartozas.Text = "Uj Tartozás";
+            this.btnAddTartozas.UseVisualStyleBackColor = true;
+            this.btnAddTartozas.Click += new System.EventHandler(this.btnAddTartozas_Click);
+            // 
+            // addBefizetes
+            // 
+            this.addBefizetes.Location = new System.Drawing.Point(593, 181);
+            this.addBefizetes.Name = "addBefizetes";
+            this.addBefizetes.Size = new System.Drawing.Size(75, 23);
+            this.addBefizetes.TabIndex = 17;
+            this.addBefizetes.Text = "button2";
+            this.addBefizetes.UseVisualStyleBackColor = true;
+            this.addBefizetes.Visible = false;
+            // 
+            // txtTartBefOsszeg
+            // 
+            this.txtTartBefOsszeg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.txtTartBefOsszeg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTartBefOsszeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtTartBefOsszeg.Location = new System.Drawing.Point(335, 4);
+            this.txtTartBefOsszeg.Name = "txtTartBefOsszeg";
+            this.txtTartBefOsszeg.Size = new System.Drawing.Size(102, 19);
+            this.txtTartBefOsszeg.TabIndex = 18;
+            this.txtTartBefOsszeg.Click += new System.EventHandler(this.txtTartBefOsszeg_Click);
+            // 
+            // txtTartBefJogcim
+            // 
+            this.txtTartBefJogcim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.txtTartBefJogcim.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTartBefJogcim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtTartBefJogcim.Location = new System.Drawing.Point(3, 3);
+            this.txtTartBefJogcim.Name = "txtTartBefJogcim";
+            this.txtTartBefJogcim.Size = new System.Drawing.Size(326, 19);
+            this.txtTartBefJogcim.TabIndex = 18;
+            this.txtTartBefJogcim.Click += new System.EventHandler(this.txtTartBefJogcim_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.Location = new System.Drawing.Point(455, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Rögzít";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pnltartozas
+            // 
+            this.pnltartozas.BackColor = System.Drawing.Color.Transparent;
+            this.pnltartozas.Controls.Add(this.txtTartBefJogcim);
+            this.pnltartozas.Controls.Add(this.button1);
+            this.pnltartozas.Controls.Add(this.txtTartBefOsszeg);
+            this.pnltartozas.Location = new System.Drawing.Point(12, 341);
+            this.pnltartozas.Name = "pnltartozas";
+            this.pnltartozas.Size = new System.Drawing.Size(545, 30);
+            this.pnltartozas.TabIndex = 20;
             // 
             // frmHitelReszletezo
             // 
@@ -159,9 +250,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(704, 375);
+            this.ClientSize = new System.Drawing.Size(704, 415);
             this.ControlBox = false;
+            this.Controls.Add(this.pnltartozas);
+            this.Controls.Add(this.addBefizetes);
+            this.Controls.Add(this.btnAddTartozas);
             this.Controls.Add(this.rbReszletek);
+            this.Controls.Add(this.rbNemNevesitett);
             this.Controls.Add(this.rbOsszesitett);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label1);
@@ -173,6 +268,8 @@
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmHitelReszletezo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblHitelek)).EndInit();
+            this.pnltartozas.ResumeLayout(false);
+            this.pnltartozas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +284,12 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.RadioButton rbOsszesitett;
         private System.Windows.Forms.RadioButton rbReszletek;
+        private System.Windows.Forms.RadioButton rbNemNevesitett;
+        private System.Windows.Forms.Button btnAddTartozas;
+        private System.Windows.Forms.Button addBefizetes;
+        private System.Windows.Forms.TextBox txtTartBefOsszeg;
+        private System.Windows.Forms.TextBox txtTartBefJogcim;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnltartozas;
     }
 }

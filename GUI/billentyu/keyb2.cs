@@ -13,6 +13,8 @@ namespace GUI.billentyu
     {
         public TextBox OutTxtBox;
 
+        public string resString;
+
         public keyb2()
         {
             InitializeComponent();
@@ -50,9 +52,22 @@ namespace GUI.billentyu
 
         private void button42_Click(object sender, EventArgs e)
         {
-            OutTxtBox.Text = txtRet.Text;
-            OutTxtBox.Focus();
-            SendKeys.Send("{TAB}");
+            if (OutTxtBox != null)
+            {
+                OutTxtBox.Text = txtRet.Text;
+                OutTxtBox.Focus();
+                SendKeys.Send("{TAB}");
+            }
+            else
+            {
+                resString = txtRet.Text;
+            }
+            if (Parent.GetType() == typeof(frmTouchKeyboard))
+            {
+                ((frmTouchKeyboard)Parent).ResultString = resString;
+                ((frmTouchKeyboard)Parent).DialogResult = DialogResult.OK;
+                ((frmTouchKeyboard)Parent).Close();
+            }
 
         }
     }
