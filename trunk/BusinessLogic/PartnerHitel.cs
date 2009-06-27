@@ -46,9 +46,6 @@ namespace BusinessLogic
 
         }
 
-
-
-        
         public ColumnModel getColumnModel()
         {
 

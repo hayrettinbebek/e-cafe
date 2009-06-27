@@ -47,7 +47,7 @@ namespace e_Cafe
             else
             {
                 v = new Vevo(partner_id);
-
+                
                 vevoBindingSource.Add(v);
                 if (v.PartnerNormalCim().Count > 0)
                 {

@@ -41,13 +41,13 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.txtKedvezmeny = new System.Windows.Forms.TextBox();
+            this.vevoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.txtNormalCimPartnerId2 = new System.Windows.Forms.TextBox();
             this.partnercimBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.txtNormalCimPartnerId = new System.Windows.Forms.TextBox();
             this.partnercimBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.vevoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -95,9 +95,9 @@
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vevoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vevoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NemSource)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -252,6 +252,10 @@
             this.txtKedvezmeny.TabIndex = 18;
             this.txtKedvezmeny.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
             // 
+            // vevoBindingSource
+            // 
+            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -307,10 +311,6 @@
             this.textBox7.TabIndex = 9;
             this.textBox7.Click += new System.EventHandler(this.txt_to_keyboard_Click);
             this.textBox7.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
-            // 
-            // vevoBindingSource
-            // 
-            this.vevoBindingSource.DataSource = typeof(BusinessLogic.Vevo);
             // 
             // button2
             // 
@@ -788,9 +788,9 @@
             this.panel4.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vevoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vevoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NemSource)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
