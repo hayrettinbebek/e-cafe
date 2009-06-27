@@ -15,14 +15,16 @@ namespace BusinessLogic
                                 " isnull(sum(HITEL_DB),0) as HITEL_DB, " +
                                 " isnull(sum(HITEL),0) as HITEL, " +
                                 " isnull(sum(HITEL_FIZETVE_DB),0) as HITEL_FIZETVE_DB, " +
-                                " isnull(sum(HITEL_FIZETVE),0) as HITEL_FIZETVE from ( " +
+                                " isnull(sum(HITEL_FIZETVE),0) as HITEL_FIZETVE, " +
+                                " isnull(sum(STORNO_DB),0) as STORNO_DB,    " +
+                                " isnull(sum(STORNO),0) as STORNO from ( " +
                                 " SELECT c.CIKKCSOPORT_ID, c.MEGNEVEZES, c.SPEC_ZARAS, " +
                                 " (select count(*)  from szamla_fej sf " +
-	                            " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
-                                " 	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id) as ELADAS_DB, " +
+                                " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
+                                " 	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod <> 9 ) as ELADAS_DB, " +
                                 " (select sum(st.BRUTTO)  from szamla_fej sf " +
-	                            " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
-	                            " where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id) as ELADAS, " +
+                                " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
+                                " where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod <> 9 ) as ELADAS, " +
                                 " (SELECT count(*) from RENDELES_SOR rs  " +
                                 " inner join HITEL_SOR hs on rs.sor_id = hs.rendeles_sor_id " +
                                 " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
@@ -46,12 +48,20 @@ namespace BusinessLogic
                                 " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
                                 " where rs.cikk_id = c.cikk_id and rf.EV = f.EV and rf.HO = f.HO and rf.NAP = f.NAP " +
                                 " and hs.FIZETVE = 1 " +
-                                " ) as HITEL_FIZETVE " +
+                                " ) as HITEL_FIZETVE, " +
+                                " (select count(*)  from szamla_fej sf    " +
+                                "   inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id     " +
+                                "   	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod = 9 " +
+                                " ) as STORNO_DB,     " +
+                                "   (select sum(ABS(st.BRUTTO))/2  from szamla_fej sf     " +
+                                "   inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id     " +
+                                "   where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod = 9 " +
+                                " ) as STORNO " +
                                 " FROM CIKK c " +
                                 " inner join keszlet_fej f on c.cikk_id = f.cikk_id " +
-                                " WHERE f.EV = "+ pEV.ToString() + " and f.HO = "+ pHO.ToString()+" and f.NAP = " + pNAP.ToString()+ " " +
+                                " WHERE f.EV = " + pEV.ToString() + " and f.HO = " + pHO.ToString() + " and f.NAP = " + pNAP.ToString() + " " +
                                 " ) as S ";
-            #endregion 
+            #endregion
             DataTable dt = new DataTable("OSSZES");
             dt.Columns.Add("Típus", typeof(string));
             dt.Columns.Add("Összes eladás db", typeof(int));
@@ -89,6 +99,12 @@ namespace BusinessLogic
                                     (int)rdr["HITEL_FIZETVE_DB"],
                                     Math.Round((double)rdr["HITEL_FIZETVE"])}
                     );
+                dt.Rows.Add(
+                    new Object[] {  "",
+                                    "Stronózott:",
+                                    (int)rdr["STORNO_DB"],
+                                    Math.Round((double)rdr["STORNO"])}
+                    );
             }
 
             DataView dv = dt.DefaultView;
@@ -104,14 +120,16 @@ namespace BusinessLogic
                                 " sum(isnull(HITEL_DB,0)) as HITEL_DB, " +
                                 " sum(isnull(HITEL,0)) as HITEL, " +
                                 " sum(isnull(HITEL_FIZETVE_DB,0)) as HITEL_FIZETVE_DB, " +
-                                " sum(isnull(HITEL_FIZETVE,0)) as HITEL_FIZETVE from ( " +
+                                " sum(isnull(HITEL_FIZETVE,0)) as HITEL_FIZETVE, " +
+                                " isnull(sum(STORNO_DB),0) as STORNO_DB,    " +
+                                " isnull(sum(STORNO),0) as STORNO  from ( " +
                                 " SELECT cs.CIKKCSOPORT_NEV, " +
                                 " (select count(*)  from szamla_fej sf " +
                                 " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
-                                " 	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id) as ELADAS_DB, " +
+                                " 	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id  and sf.fizetesi_mod <> 9 ) as ELADAS_DB, " +
                                 " (select sum(st.BRUTTO)  from szamla_fej sf " +
                                 " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
-                                " where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id) as ELADAS, " +
+                                " where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id  and sf.fizetesi_mod <> 9 ) as ELADAS, " +
                                 " (SELECT count(*) from RENDELES_SOR rs  " +
                                 " inner join HITEL_SOR hs on rs.sor_id = hs.rendeles_sor_id " +
                                 " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
@@ -135,7 +153,15 @@ namespace BusinessLogic
                                 " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
                                 " where rs.cikk_id = c.cikk_id and rf.EV = f.EV and rf.HO = f.HO and rf.NAP = f.NAP " +
                                 " and hs.FIZETVE = 1 " +
-                                " ) as HITEL_FIZETVE " +
+                                " ) as HITEL_FIZETVE, " +
+                                " (select count(*)  from szamla_fej sf    " +
+                                "   inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id     " +
+                                "   	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod = 9 " +
+                                " ) as STORNO_DB,     " +
+                                "   (select sum(ABS(st.BRUTTO))/2  from szamla_fej sf     " +
+                                "   inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id     " +
+                                "   where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod = 9 " +
+                                " ) as STORNO " +
                                 " FROM CIKK c " +
                                 " inner join keszlet_fej f on c.cikk_id = f.cikk_id " +
                                 " inner join cikkcsoport cs on c.cikkcsoport_id = cs.cikkcsoport_id " +
@@ -185,6 +211,12 @@ namespace BusinessLogic
                                     (int)rdr["HITEL_FIZETVE_DB"],
                                     Math.Round((double)rdr["HITEL_FIZETVE"])}
                     );
+                dt.Rows.Add(
+                    new Object[] {  "",
+                                    "Stronózott:",
+                                    (int)rdr["STORNO_DB"],
+                                    Math.Round((double)rdr["STORNO"])}
+                    );
             }
 
             DataView dv = dt.DefaultView;
@@ -200,14 +232,16 @@ namespace BusinessLogic
                                 " sum(isnull(HITEL_DB,0)) as HITEL_DB, " +
                                 " sum(isnull(HITEL,0)) as HITEL, " +
                                 " sum(isnull(HITEL_FIZETVE_DB,0)) as HITEL_FIZETVE_DB, " +
-                                " sum(isnull(HITEL_FIZETVE,0)) as HITEL_FIZETVE from ( " +
+                                " sum(isnull(HITEL_FIZETVE,0)) as HITEL_FIZETVE, " +
+                                " isnull(sum(STORNO_DB),0) as STORNO_DB,    " +
+                                " isnull(sum(STORNO),0) as STORNO from ( " +
                                 " SELECT cs.CIKKCSOPORT_NEV, " +
                                 " (select count(*)  from szamla_fej sf " +
                                 " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
-                                " 	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id) as ELADAS_DB, " +
+                                " 	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod <> 9 ) as ELADAS_DB, " +
                                 " (select sum(st.BRUTTO)  from szamla_fej sf " +
                                 " inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id " +
-                                " where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id) as ELADAS, " +
+                                " where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod <> 9 ) as ELADAS, " +
                                 " (SELECT count(*) from RENDELES_SOR rs  " +
                                 " inner join HITEL_SOR hs on rs.sor_id = hs.rendeles_sor_id " +
                                 " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
@@ -231,7 +265,15 @@ namespace BusinessLogic
                                 " inner join RENDELES_FEJ rf on rs.RENDELES_ID = rf.RENDELES_ID " +
                                 " where rs.cikk_id = c.cikk_id and rf.EV = f.EV and rf.HO = f.HO and rf.NAP = f.NAP " +
                                 " and hs.FIZETVE = 1 " +
-                                " ) as HITEL_FIZETVE " +
+                                " ) as HITEL_FIZETVE, " +
+                                " (select count(*)  from szamla_fej sf    " +
+                                "   inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id     " +
+                                "   	where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod = 9 " +
+                                " ) as STORNO_DB,     " +
+                                "   (select sum(ABS(st.BRUTTO))/2  from szamla_fej sf     " +
+                                "   inner join szamla_tetel st on sf.szamla_fej_id = st.szamla_fej_id     " +
+                                "   where sf.EV = f.EV and sf.HO = f.HO and sf.NAP = f.NAP and st.cikk_id = c.cikk_id and sf.fizetesi_mod = 9 " +
+                                " ) as STORNO " +
                                 " FROM CIKK c " +
                                 " inner join keszlet_fej f on c.cikk_id = f.cikk_id " +
                                 " inner join cikkcsoport cs on c.cikkcsoport_id = cs.cikkcsoport_id " +
