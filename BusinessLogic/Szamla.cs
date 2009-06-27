@@ -234,7 +234,7 @@ namespace BusinessLogic
             
         }
 
-        public string STORNO
+        public string TIPUS
         {
             get
             {
@@ -244,7 +244,7 @@ namespace BusinessLogic
                 }
                 else
                 {
-                    return ("");
+                    return ("ELADAS");
                 }
             }
 

@@ -275,7 +275,7 @@ namespace e_Cafe.Reports
             builder.AddText("Napi összesített eladás statisztika");
             h_height += 4 * sor_magas;
             #region Összes eladás
-            DataView dv = ReportData.GetOsszesEladas(DEFS.NyitNap_EV, DEFS.NyitNap_HO, DEFS.NyitNap_NAP);
+            DataView dv = ReportData.GetOsszesEladas(_EV, _HO, _NAP);
             builder.DefaultTablePen = null;
 
             builder.AddTable(dv, true, 100);
@@ -305,7 +305,7 @@ namespace e_Cafe.Reports
             builder.AddText("Cikkcsoportonkénti összesített napi statisztika");
             h_height += sor_magas * 4;
             #region Cikkcsoportonkénti összesítő
-            dv = ReportData.GetCikkcsopOsszesEladas(DEFS.NyitNap_EV, DEFS.NyitNap_HO, DEFS.NyitNap_NAP);
+            dv = ReportData.GetCikkcsopOsszesEladas(_EV, _HO, _NAP);
             builder.DefaultTablePen = null;
 
             builder.AddTable(dv, true, 100);
@@ -336,7 +336,7 @@ namespace e_Cafe.Reports
             builder.AddText("Speciális zárás statisztika");
             h_height += sor_magas * 4;
             #region Speciális zárás összesítő
-            dv = ReportData.GetSpecZarasEladas(DEFS.NyitNap_EV, DEFS.NyitNap_HO, DEFS.NyitNap_NAP);
+            dv = ReportData.GetSpecZarasEladas(_EV,_HO,_NAP);
             builder.DefaultTablePen = null;
 
             builder.AddTable(dv, true, 100);
