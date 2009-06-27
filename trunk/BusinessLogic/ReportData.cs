@@ -77,17 +77,17 @@ namespace BusinessLogic
                 dt.Rows.Add(
                     new Object[] {  "Eladás:",
                                     (int)rdr["ELADAS_DB"], 
-                                    (double)rdr["ELADAS"]}
+                                    Math.Round((double)rdr["ELADAS"])}
                     );
                 dt.Rows.Add(
                     new Object[] {  "Hitelre írás:",
                                     (int)rdr["HITEL_DB"],
-                                    (double)rdr["HITEL"]}
+                                    Math.Round((double)rdr["HITEL"])}
                     );
                 dt.Rows.Add(
                     new Object[] {  "Kifizetett hitel:",
                                     (int)rdr["HITEL_FIZETVE_DB"],
-                                    (double)rdr["HITEL_FIZETVE"]}
+                                    Math.Round((double)rdr["HITEL_FIZETVE"])}
                     );
             }
 
@@ -262,11 +262,11 @@ namespace BusinessLogic
                 dt.Rows.Add(
                     new Object[] {  (string)rdr["CIKKCSOPORT_NEV"],
                                     (int)rdr["ELADAS_DB"], 
-                                    (double)rdr["ELADAS"],
+                                    Math.Round((double)rdr["ELADAS"]),
                                     (int)rdr["HITEL_DB"],
-                                    (double)rdr["HITEL"],
+                                    Math.Round((double)rdr["HITEL"]),
                                     (int)rdr["HITEL_FIZETVE_DB"],
-                                    (double)rdr["HITEL_FIZETVE"]}
+                                    Math.Round((double)rdr["HITEL_FIZETVE"])}
                     );
             }
 

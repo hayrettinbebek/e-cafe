@@ -53,7 +53,7 @@
             this.szamlaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sZAMLASORSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sZAMLADATUMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STORNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARTNERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rENDELESIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,7 +87,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sZAMLASORSZAMDataGridViewTextBoxColumn,
             this.sZAMLADATUMADataGridViewTextBoxColumn,
-            this.STORNO,
+            this.TIPUS,
             this.fEJIDDataGridViewTextBoxColumn,
             this.pARTNERIDDataGridViewTextBoxColumn,
             this.rENDELESIDDataGridViewTextBoxColumn,
@@ -123,7 +123,7 @@
             this.fEJIDDataGridViewTextBoxColumn1,
             this.tETELIDDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.szamlatetelBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(353, 52);
+            this.dataGridView2.Location = new System.Drawing.Point(353, 50);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(652, 330);
@@ -288,13 +288,13 @@
             this.sZAMLADATUMADataGridViewTextBoxColumn.Name = "sZAMLADATUMADataGridViewTextBoxColumn";
             this.sZAMLADATUMADataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // STORNO
+            // TIPUS
             // 
-            this.STORNO.DataPropertyName = "STORNO";
-            this.STORNO.HeaderText = "Tipus";
-            this.STORNO.Name = "STORNO";
-            this.STORNO.ReadOnly = true;
-            this.STORNO.Width = 90;
+            this.TIPUS.DataPropertyName = "TIPUS";
+            this.TIPUS.HeaderText = "Típus";
+            this.TIPUS.Name = "TIPUS";
+            this.TIPUS.ReadOnly = true;
+            this.TIPUS.Width = 90;
             // 
             // fEJIDDataGridViewTextBoxColumn
             // 
@@ -420,7 +420,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLASORSZAMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLADATUMADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STORNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPUS;
         private System.Windows.Forms.DataGridViewTextBoxColumn fEJIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rENDELESIDDataGridViewTextBoxColumn;
