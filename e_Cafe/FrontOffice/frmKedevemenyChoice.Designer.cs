@@ -37,10 +37,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flpKedvezmenyek = new System.Windows.Forms.FlowLayoutPanel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.numericKeyboar1 = new GUI.billentyu.numericKeyboar();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +48,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.numericKeyboar1 = new GUI.billentyu.numericKeyboar();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -138,7 +137,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button11);
             this.splitContainer1.Panel2.Controls.Add(this.numericKeyboar1);
             this.splitContainer1.Panel2.Controls.Add(this.panel3);
             this.splitContainer1.Panel2.Controls.Add(this.panel7);
@@ -153,48 +151,6 @@
             this.flpKedvezmenyek.Name = "flpKedvezmenyek";
             this.flpKedvezmenyek.Size = new System.Drawing.Size(25, 272);
             this.flpKedvezmenyek.TabIndex = 0;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(317, 163);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(40, 80);
-            this.button11.TabIndex = 3;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // numericKeyboar1
-            // 
-            this.numericKeyboar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numericKeyboar1.BackgroundImage")));
-            this.numericKeyboar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numericKeyboar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericKeyboar1.Location = new System.Drawing.Point(153, 0);
-            this.numericKeyboar1.Name = "numericKeyboar1";
-            this.numericKeyboar1.Size = new System.Drawing.Size(242, 272);
-            this.numericKeyboar1.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(153, 272);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(395, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(150, 272);
-            this.panel7.TabIndex = 3;
             // 
             // panel1
             // 
@@ -345,6 +301,32 @@
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(395, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(150, 272);
+            this.panel7.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(153, 272);
+            this.panel3.TabIndex = 2;
+            // 
+            // numericKeyboar1
+            // 
+            this.numericKeyboar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numericKeyboar1.BackgroundImage")));
+            this.numericKeyboar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numericKeyboar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericKeyboar1.Location = new System.Drawing.Point(153, 0);
+            this.numericKeyboar1.Name = "numericKeyboar1";
+            this.numericKeyboar1.Size = new System.Drawing.Size(242, 272);
+            this.numericKeyboar1.TabIndex = 1;
+            // 
             // frmKedevemenyChoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,15 +371,14 @@
         private System.Windows.Forms.RadioButton btnSzazalek;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private GUI.billentyu.numericKeyboar numericKeyboar1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flpKedvezmenyek;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.RadioButton btnPartner;
         private System.Windows.Forms.Label label3;
+        private GUI.billentyu.numericKeyboar numericKeyboar1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel7;
     }
 }

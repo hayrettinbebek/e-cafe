@@ -621,12 +621,22 @@ namespace BusinessLogic
                 
 
             cmd.Parameters["PARTNER_ID"].Value = part_id;
-            cmd.Parameters["PARTNER_KOD"].Value = _kod;
+                string tmp_KOD = "";
+            if (_kod == null || _kod.Length < 1)
+            {
+                tmp_KOD = DEFS.GetSorszam("VEV","V",6);
+                cmd.Parameters["PARTNER_KOD"].Value = tmp_KOD;
+                _kod = tmp_KOD;
+            }
+            else
+            {
+                cmd.Parameters["PARTNER_KOD"].Value = _kod;
+            }
             cmd.Parameters["NEM"].Value = _nem;
             cmd.Parameters["SZEMELYI_IG"].Value = _szig;
             
             
-                cmd.Parameters["SZULETESNAP"].Value = _szuldat;
+            cmd.Parameters["SZULETESNAP"].Value = _szuldat;
             
             cmd.Parameters["NEVNAP_HO"].Value = _nevn_ho;
             cmd.Parameters["NEVNAP_NAP"].Value = _nevn_nap;
@@ -651,11 +661,11 @@ namespace BusinessLogic
         {
             bool ret = base.checkKitoltes(out s);
 
-            if (_kod == null)
-            {
-                ret = false;
-                s += "Partner kód  <null> értéket kapott!";
-            }
+            //if (_kod == null)
+            //{
+            //    ret = false;
+            //    s += "Partner kód  <null> értéket kapott!";
+            //}
             if (_nem == null)
             {
                 ret = false;

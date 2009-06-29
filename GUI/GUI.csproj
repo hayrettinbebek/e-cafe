@@ -83,6 +83,12 @@
     <Compile Include="billentyu\frmTouchKeyboard.Designer.cs">
       <DependentUpon>frmTouchKeyboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="billentyu\frmTouchNumKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="billentyu\frmTouchNumKeyboard.Designer.cs">
+      <DependentUpon>frmTouchNumKeyboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="billentyu\numericKeyboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,12 +100,6 @@
     </Compile>
     <Compile Include="billentyu\keyb2.Designer.cs">
       <DependentUpon>keyb2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="billentyu\TouchKeyboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="billentyu\TouchKeyboard.Designer.cs">
-      <DependentUpon>TouchKeyboard.cs</DependentUpon>
     </Compile>
     <Compile Include="CellStyles.cs">
       <SubType>Component</SubType>
@@ -160,16 +160,15 @@
     <EmbeddedResource Include="billentyu\frmTouchKeyboard.resx">
       <DependentUpon>frmTouchKeyboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="billentyu\frmTouchNumKeyboard.resx">
+      <DependentUpon>frmTouchNumKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="billentyu\numericKeyboard.resx">
       <DependentUpon>numericKeyboard.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="billentyu\keyb2.resx">
       <DependentUpon>keyb2.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="billentyu\TouchKeyboard.resx">
-      <DependentUpon>TouchKeyboard.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="KeremVarjon.resx">

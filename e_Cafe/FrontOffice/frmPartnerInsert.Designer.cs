@@ -736,6 +736,7 @@
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vevoBindingSource, "KOD", true));
+            this.textBox4.Enabled = false;
             this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Location = new System.Drawing.Point(91, 15);
             this.textBox4.Name = "textBox4";

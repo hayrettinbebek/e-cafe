@@ -20,6 +20,7 @@ namespace e_Cafe.FrontOffice
         public frmKedevemenyChoice()
         {
             InitializeComponent();
+            numericKeyboar1.btnRet.Click += button1_Click;
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -105,7 +106,7 @@ namespace e_Cafe.FrontOffice
         {
             if (btnErtek.Checked)
             {
-                tmpKe = new KedvezmenyErtek(Convert.ToDouble(numericKeyboar1.txtRet.Text));
+                tmpKe = new KedvezmenyErtek(Convert.ToDouble(numericKeyboar1.resString));
             }
             else if (btnSzazalek.Checked)
             {

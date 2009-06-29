@@ -232,6 +232,7 @@ namespace e_Cafe
             DEFS.UserRights = new Rights(u.USER_ID);
             UserButton ub = new UserButton();
             ub.fUser = u;
+            //b.Click += (o, e) => { i.showPrefs(); };
             ub.Click += UserChange;
             ub.BackgroundImage = global::GUI.Properties.Resources.off_user;
             ub.BackgroundImageLayout = ImageLayout.Stretch;
@@ -469,12 +470,6 @@ namespace e_Cafe
             updateDB(new FileInfo(DEFS.DefProgramLocation + @"\SQL\END.sql"));
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            TouchKeyboard tk = new TouchKeyboard();
-            tk.ShowDialog();
- 
-        }
 
         private void btnPartnerek_Click(object sender, EventArgs e)
         {
