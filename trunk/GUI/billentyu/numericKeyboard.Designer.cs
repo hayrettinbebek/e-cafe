@@ -41,6 +41,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnRet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtRet
@@ -250,12 +251,29 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button_Click);
             // 
+            // btnRet
+            // 
+            this.btnRet.BackColor = System.Drawing.Color.Transparent;
+            this.btnRet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRet.BackgroundImage")));
+            this.btnRet.FlatAppearance.BorderSize = 0;
+            this.btnRet.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnRet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRet.Location = new System.Drawing.Point(161, 161);
+            this.btnRet.Name = "btnRet";
+            this.btnRet.Size = new System.Drawing.Size(40, 80);
+            this.btnRet.TabIndex = 69;
+            this.btnRet.UseVisualStyleBackColor = false;
+            this.btnRet.Click += new System.EventHandler(this.button11_Click);
+            // 
             // numericKeyboar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btnRet);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button8);
@@ -270,7 +288,7 @@
             this.Controls.Add(this.txtRet);
             this.DoubleBuffered = true;
             this.Name = "numericKeyboar";
-            this.Size = new System.Drawing.Size(204, 250);
+            this.Size = new System.Drawing.Size(211, 256);
             this.Load += new System.EventHandler(this.keyb2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,5 +309,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnRet;
     }
 }

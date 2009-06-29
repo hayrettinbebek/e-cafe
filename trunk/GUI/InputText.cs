@@ -78,5 +78,39 @@ namespace GUI
 
         }
 
+        public static int getInt2(bool req)
+        {
+            // Paramtéer TRUE = Kötelezően nem lehet 0 hosszú
+            int tmpInt = 0;
+            frmTouchNumKeyboard ft = new frmTouchNumKeyboard(InputType.Number);
+
+            if (req)
+            {
+                while (tmpInt == 0)
+                {
+                    ft.ShowDialog();
+                    if (ft.DialogResult == DialogResult.OK)
+                    {
+                        tmpInt = Convert.ToInt16(ft.ResultString);
+
+                    }
+                }
+            }
+            else
+            {
+                ft.ShowDialog();
+                if (ft.DialogResult == DialogResult.OK)
+                {
+                    tmpInt = Convert.ToInt16(ft.ResultString);
+
+                }
+            }
+
+            return (tmpInt);
+
+        }
+
+
+
     }
 }

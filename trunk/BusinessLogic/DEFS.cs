@@ -75,6 +75,38 @@ namespace BusinessLogic
         }
         #endregion
 
+        public static string GetSorszam(string tipus, string prefix, int hossz)
+        {
+            string retval = "";
+            int tmp_ret_num = 0;
+
+            SqlConnection c = new SqlConnection(ConSTR);
+            SqlCommand cmdNyitNap = new SqlCommand("SP_GET_SORSZAM", c);
+            cmdNyitNap.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdNyitNap.Parameters.Add("@TYPE", SqlDbType.VarChar);
+            cmdNyitNap.Parameters["@TYPE"].Direction = ParameterDirection.Input;
+            cmdNyitNap.Parameters["@TYPE"].Value = tipus;
+            
+            cmdNyitNap.Parameters.Add("@SZAM", SqlDbType.Int);
+            cmdNyitNap.Parameters["@SZAM"].Direction = ParameterDirection.Output;
+            
+
+            
+            c.Open();
+            cmdNyitNap.ExecuteNonQuery();
+
+            tmp_ret_num = (int)cmdNyitNap.Parameters["@SZAM"].Value;
+
+            if (tmp_ret_num > 0)
+            {
+                retval = (prefix + tmp_ret_num.ToString().PadLeft(hossz, '0'));
+
+            }
+            c.Close();
+
+            return retval;
+        }
 
         #region számlázás
         public static int GenerateSzamlaFej(int partner_id, int rendeles_id, int p_fizmod)

@@ -1,6 +1,6 @@
 ﻿namespace GUI.billentyu
 {
-    partial class frmTouchKeyboard
+    partial class frmTouchNumKeyboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTouchKeyboard));
-            this.keyb21 = new GUI.billentyu.keyb2();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTouchNumKeyboard));
+            this.numericKeyboar1 = new GUI.billentyu.numericKeyboar();
             this.SuspendLayout();
             // 
-            // keyb21
+            // numericKeyboar1
             // 
-            this.keyb21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("keyb21.BackgroundImage")));
-            this.keyb21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.keyb21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.keyb21.Location = new System.Drawing.Point(0, 0);
-            this.keyb21.Name = "keyb21";
-            this.keyb21.Size = new System.Drawing.Size(646, 254);
-            this.keyb21.TabIndex = 0;
+            this.numericKeyboar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numericKeyboar1.BackgroundImage")));
+            this.numericKeyboar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numericKeyboar1.Location = new System.Drawing.Point(1, 2);
+            this.numericKeyboar1.Name = "numericKeyboar1";
+            this.numericKeyboar1.Size = new System.Drawing.Size(204, 250);
+            this.numericKeyboar1.TabIndex = 0;
             // 
-            // frmTouchKeyboard
+            // frmTouchNumKeyboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(646, 254);
+            this.ClientSize = new System.Drawing.Size(206, 250);
             this.ControlBox = false;
-            this.Controls.Add(this.keyb21);
+            this.Controls.Add(this.numericKeyboar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmTouchKeyboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Name = "frmTouchNumKeyboard";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private keyb2 keyb21;
+        private numericKeyboar numericKeyboar1;
     }
 }

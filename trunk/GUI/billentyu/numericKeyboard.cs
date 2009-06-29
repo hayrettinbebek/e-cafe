@@ -13,6 +13,10 @@ namespace GUI.billentyu
     {
         public TextBox OutTxtBox;
 
+        public InputType it = InputType.Number;
+        public string resString;
+
+
         public numericKeyboar()
         {
             InitializeComponent();
@@ -54,6 +58,33 @@ namespace GUI.billentyu
             OutTxtBox.Focus();
             SendKeys.Send("{TAB}");
 
+        }
+
+
+        public void doWhat(object sender, EventArgs e)
+        {
+                //      
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (OutTxtBox != null)
+            {
+                OutTxtBox.Text = txtRet.Text;
+                OutTxtBox.Focus();
+                SendKeys.Send("{TAB}");
+            }
+            else
+            {
+                resString = txtRet.Text;
+            }
+            if (Parent.GetType() == typeof(frmTouchNumKeyboard))
+            {
+                ((frmTouchNumKeyboard)Parent).ResultString = resString;
+                ((frmTouchNumKeyboard)Parent).DialogResult = DialogResult.OK;
+                ((frmTouchNumKeyboard)Parent).Close();
+            }
+            doWhat(sender,e);
         }
     }
 }

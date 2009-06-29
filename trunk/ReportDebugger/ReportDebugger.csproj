@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7E9C7AB4-E7CE-4AD8-B9F8-D2A56FEBD8FB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -87,6 +87,10 @@
     <ProjectReference Include="..\e_Cafe\e_Cafe.csproj">
       <Project>{23496019-7E6E-4263-A603-28B203C20C8F}</Project>
       <Name>e_Cafe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GUI\GUI.csproj">
+      <Project>{7A9003C7-484C-4510-BE0F-128F219A812B}</Project>
+      <Name>GUI</Name>
     </ProjectReference>
     <ProjectReference Include="..\ReportPrinting\ReportPrinting.csproj">
       <Project>{9330BA30-6B74-45C9-9788-3697F7731D32}</Project>
