@@ -182,6 +182,7 @@ namespace GUI
 
         Font f1 = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
         Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F,  System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+        Font f4 = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
 
        // private Label lKeszlet;
         private Label lKeszletOther;
@@ -233,7 +234,8 @@ namespace GUI
                 lMegnevezes.Text = value.ROVID_NEV;
                 lKiszereles.Text = value.KISZ_MEGN;
                 // lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
-                lKeszletOther.Text = (value.fKESZLET_ALL / value.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
+                //lKeszletOther.Text = (value.fKESZLET_ALL / value.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
+                lKeszletOther.Text = (value.fKESZLET_ALL / value.KISZ_MENNY).ToString("0", CultureInfo.InvariantCulture);
                 //lKeszletOther.Visible = ((value.fKESZLET == 0) && (value.fKESZLET_ALL != 0));
                 lAr.Text = value.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
                 SetBackColor();
@@ -248,7 +250,8 @@ namespace GUI
             lMegnevezes.Text = _Cikk.ROVID_NEV;
             lKiszereles.Text = _Cikk.KISZ_MEGN;
             //lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
-            lKeszletOther.Text = (_Cikk.fKESZLET_ALL / _Cikk.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
+            //lKeszletOther.Text = (_Cikk.fKESZLET_ALL / _Cikk.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
+            lKeszletOther.Text = (_Cikk.fKESZLET_ALL / _Cikk.KISZ_MENNY).ToString("0", CultureInfo.InvariantCulture);
             //lKeszletOther.Visible = ((_Cikk.fKESZLET == 0) && (_Cikk.fKESZLET_ALL != 0));
             lAr.Text = _Cikk.ELADASI_AR_VALOS.ToString("0.00", CultureInfo.InvariantCulture);
             SetBackColor();
@@ -301,7 +304,9 @@ namespace GUI
             lKeszletOther.Width = 50;
             lKeszletOther.Height = 20;
             lKeszletOther.BackColor = Color.Transparent;
-            lKeszletOther.Location = new Point(95, 7);
+            lKeszletOther.Location = new Point(90, 7);
+            lKeszletOther.Font = f4;
+            lKeszletOther.TextAlign = ContentAlignment.MiddleCenter;
             lKeszletOther.Click += this.OnLabelClick;
             this.Controls.Add(lKeszletOther);
 

@@ -784,7 +784,7 @@ namespace BusinessLogic
             cmd.CommandType = CommandType.Text;
 
 
-            cmd.CommandText = "UPDATE RENDELES_SOR SET CANCELED = 1, FIZETVE = 1 WHERE SOR_ID =" + _SOR_ID.ToString();
+            cmd.CommandText = "UPDATE RENDELES_SOR SET CANCELED = 1, DELETED = 1, FIZETVE = 1 WHERE SOR_ID =" + _SOR_ID.ToString();
 
 
 
