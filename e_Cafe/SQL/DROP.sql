@@ -107,6 +107,13 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_ad
 DROP PROCEDURE [dbo].[sp_add_szamla_tetel]
 
 GO
+
+/****** Object:  StoredProcedure [dbo].[sp_add_szamla_tetel]    Script Date: 02/23/2009 21:40:06 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_egyeb_szamla_tetel]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[sp_add_egyeb_szamla_tetel]
+
+GO
+
 /****** Object:  StoredProcedure [dbo].[sp_add_storno_szamla_tetel]    Script Date: 02/23/2009 21:40:06 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sp_add_storno_szamla_tetel]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].sp_add_storno_szamla_tetel

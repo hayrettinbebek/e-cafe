@@ -110,6 +110,7 @@
     <Compile Include="GUIElements.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="InputText.cs" />
     <Compile Include="KeremVarjon.cs">
       <SubType>UserControl</SubType>
     </Compile>

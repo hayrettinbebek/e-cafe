@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using GUI;
 
 namespace GUI.billentyu
 {
@@ -15,6 +16,8 @@ namespace GUI.billentyu
 
         public string resString;
 
+        public InputType it = InputType.String;
+
         public keyb2()
         {
             InitializeComponent();
@@ -23,7 +26,21 @@ namespace GUI.billentyu
         private void button_Click(object sender, EventArgs e)
         {
             txtRet.Focus();
-            SendKeys.Send(((Button)sender).Text);
+            if (it == InputType.Number)
+            {
+
+                int isNumber = 0;
+                if (int.TryParse(((Button)sender).Text.ToString(), out isNumber)) {
+                    SendKeys.Send(((Button)sender).Text);
+                }
+
+                
+
+            }
+            else
+            {             
+                SendKeys.Send(((Button)sender).Text);
+            }
         }
 
         private void back_Click(object sender, EventArgs e)

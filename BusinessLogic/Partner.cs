@@ -1102,14 +1102,16 @@ namespace BusinessLogic
 
             for (int i = 0; i < TARTOZASOK.Count; i++)
             {
-
-                tmpMod.Rows.Add(new Row(new Cell[] {new PartnerTartozasCell(TARTOZASOK[i]),
+                if (TARTOZASOK[i].HATRALEK > 0)
+                {
+                    tmpMod.Rows.Add(new Row(new Cell[] {new PartnerTartozasCell(TARTOZASOK[i]),
 													new Cell(TARTOZASOK[i].JOGCIM),
 													new Cell(TARTOZASOK[i].OSSZEG),
 													new Cell(TARTOZASOK[i].HATRALEK)
                                                     }
-                                       )
-                               );
+                                           )
+                                   );
+                }
             }
 
             return (tmpMod);
@@ -1983,7 +1985,7 @@ namespace BusinessLogic
             c.Close();
         }
 
-        public void Save()
+        public int Save()
         {
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
@@ -2010,8 +2012,9 @@ namespace BusinessLogic
                                          " ,@JOGCIM " +
                                          " ,@MEGJEGYZES " +
                                          " ,@OSSZEG " +
-                                         " ,@KIPONTOZVA)";
-
+                                         " ,@KIPONTOZVA)  SET @newid = SCOPE_IDENTITY()";
+                        cmd.Parameters.Add(new SqlParameter("newid", SqlDbType.Int));
+                        cmd.Parameters["newid"].Direction = ParameterDirection.Output;
                         break;
                     }
                 default:
@@ -2045,9 +2048,40 @@ namespace BusinessLogic
 
             cmd.ExecuteNonQuery();
 
-
+            if (_SOR_ID == -1)
+            {
+                _SOR_ID = (int)cmd.Parameters["newid"].Value;
+                
+            }
             c.Close();
+            return (_SOR_ID);
+            
         }
 
+        public void Delete()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+
+
+            cmd.CommandText = "DELETE FROM  PARTNER_BEFIZETESEK " +
+                              " WHERE  SOR_ID= @SOR_ID";
+            cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
+            cmd.Parameters["SOR_ID"].Value = _SOR_ID;
+
+
+
+            cmd.ExecuteNonQuery();
+
+
+
+            c.Close();
+
+        }
     }
 }

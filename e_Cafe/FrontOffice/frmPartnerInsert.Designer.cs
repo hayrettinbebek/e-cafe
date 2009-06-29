@@ -577,6 +577,7 @@
             this.textBox8.TabIndex = 5;
             this.textBox8.Click += new System.EventHandler(this.txt_to_keyboard_Click);
             this.textBox8.Enter += new System.EventHandler(this.txt_to_keyboard_Click);
+            this.textBox8.EnabledChanged += new System.EventHandler(this.textBox8_EnabledChanged);
             // 
             // textBox6
             // 
