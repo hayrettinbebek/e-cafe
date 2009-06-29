@@ -886,6 +886,7 @@
     <Content Include="asztal\pult\pult_off.png" />
     <Content Include="asztal\pult\pult_on.png" />
     <Content Include="asztal\pult\pult_over.png" />
+    <None Include="Resources\on02.png" />
     <None Include="Resources\zold.png" />
     <None Include="Resources\sarga.png" />
     <None Include="Resources\piros.png" />

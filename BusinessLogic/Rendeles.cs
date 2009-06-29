@@ -19,6 +19,8 @@ namespace BusinessLogic
         public int fPARTNER_ID;
         public bool fFIZETVE;
 
+        private Partner usedPartner;
+
 
         #region GUI elemek
         private ColumnModel _ColumnModel;
@@ -202,6 +204,7 @@ namespace BusinessLogic
                 {
                     fASZTAL_ID = (int)rdr["ASZTAL_ID"];
                     fPARTNER_ID = (int)rdr["PARTNER_ID"];
+                    if (fPARTNER_ID > 0) { usedPartner = new Partner(fPARTNER_ID); }
                     fDATUM = (DateTime)rdr["DATUM"];
                     fFIZETVE = (1 == (int)rdr["FIZETVE"]);
                     fKEDVEZMENY = (double)rdr["KEDVEZMENY"];
@@ -222,6 +225,67 @@ namespace BusinessLogic
                 }
                 rdr.Close();
                 
+
+            }
+            sc.Close();
+
+        }
+
+        public Rendeles(Partner pPartner)
+        {
+
+
+            _AsztalId = -99;
+            setColumnModel();
+            setColumnModelSum();
+            _ScrollPos = 0;
+            fRENDELES_ID = pPartner.RENDELES_ID;
+            fDATUM = DateTime.Now;
+            fFIZETVE = false;
+            fASZTAL_ID = -99;
+            fKEDVEZMENY = 0;
+            fPARTNER_ID = pPartner.PARTNER_ID;
+            usedPartner = pPartner;
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+
+            if (pPartner.RENDELES_ID != -1)
+            {
+                // meglevő rendelés be kell tölteni az ID-ra a rendelést.
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = sc;
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "SELECT ASZTAL_ID, isnull(PARTNER_ID,-1) PARTNER_ID, DATUM, FIZETVE, isnull(KEDVEZMENY,0) as KEDVEZMENY FROM RENDELES_FEJ WHERE RENDELES_ID =" + pPartner.RENDELES_ID.ToString();
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    fASZTAL_ID = (int)rdr["ASZTAL_ID"];
+                    fPARTNER_ID = (int)rdr["PARTNER_ID"];
+                    if (fPARTNER_ID > 0) { usedPartner = new Partner(fPARTNER_ID); }
+                    fDATUM = (DateTime)rdr["DATUM"];
+                    fFIZETVE = (1 == (int)rdr["FIZETVE"]);
+                    fKEDVEZMENY = (double)rdr["KEDVEZMENY"];
+                }
+                rdr.Close();
+
+
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "SELECT SOR_ID FROM RENDELES_SOR WHERE isnull(DELETED,0) = 0 AND isnull(FIZETVE,0) = 0 AND RENDELES_ID =" + pPartner.RENDELES_ID.ToString();
+
+                rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    lRendelesSor.Add(new RendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR), false));
+
+                }
+                rdr.Close();
+
 
             }
             sc.Close();
@@ -279,7 +343,7 @@ namespace BusinessLogic
 
         #endregion
 
-
+        #region Kedvezmények kezelése
         public void addKedvezmSzaz(double k)
         {
             foreach (var s in lRendelesSor)
@@ -296,17 +360,37 @@ namespace BusinessLogic
             }
         }
 
-        #region Lista funkciók
+        #endregion
+
+        #region Tételek kezelése / funkciók
 
         public void addTetel(Cikk pCikk)
         {
-
+            
             lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round( pCikk.NETTO_AR,2), DateTime.Now, pCikk.LIT_KISZ_ID));
+            SaveRendeles();
+            InitRendeles(fRENDELES_ID);
+            if ((fPARTNER_ID > 0))
+            {
+                usedPartner = new Partner(fPARTNER_ID);
+                Vevo  tmpVevo= new Vevo(usedPartner.PARTNER_ID);
+                if (tmpVevo.KEDVEZEMNY_SZAZALEK > 0) { addKedvezmSzaz(tmpVevo.KEDVEZEMNY_SZAZALEK); }
+            }
+            SaveRendeles();
         }
         public void addTetel(Cikk pCikk, int pRakt)
         {
 
             lRendelesSor.Add(new RendelesSor(pCikk, pCikk.KISZ_MENNY, Math.Round(pCikk.NETTO_AR, 2), DateTime.Now, pRakt, pCikk.LIT_KISZ_ID));
+            SaveRendeles();
+            InitRendeles(fRENDELES_ID);
+            if ((fPARTNER_ID > 0) )
+            {
+                usedPartner = new Partner(fPARTNER_ID);
+                Vevo tmpVevo = new Vevo(usedPartner.PARTNER_ID);
+                if (tmpVevo.KEDVEZEMNY_SZAZALEK > 0) { addKedvezmSzaz(tmpVevo.KEDVEZEMNY_SZAZALEK); }
+            }
+            SaveRendeles();
         }
 
         #endregion

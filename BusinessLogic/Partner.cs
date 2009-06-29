@@ -793,6 +793,40 @@ namespace BusinessLogic
         }
         #endregion
 
+
+        #region RENDELES_ID
+
+        public int RENDELES_ID
+        {
+            get
+            {
+
+                int tmpRet = -1;
+                SqlConnection c = new SqlConnection(DEFS.ConSTR);
+                c.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = c;
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "select isnull(max(RENDELES_ID),-1) as RENDELES_ID from RENDELES_FEJ f where isnull(f.FIZETVE,0) = 0 and isnull(AKTIV,1) = 1  and ASZTAL_ID = -99 and PARTNER_ID = " + PARTNER_ID.ToString();
+                
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    tmpRet = (int)rdr["RENDELES_ID"];
+                }
+
+               
+                return (tmpRet);
+
+            }
+
+        }
+        #endregion
+
         public List<Partner_tel> lTelefon= new List<Partner_tel>();
         public List<Partner_cim> lCimek = new List<Partner_cim>();
         public List<Partner_bsz> lBankszamlak = new List<Partner_bsz>();

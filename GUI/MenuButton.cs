@@ -345,6 +345,37 @@ namespace GUI
         int hdl;
         private Partner _Partner;
 
+
+        
+        private bool _van_rendel = false;
+        public bool VAN_RENDEL
+        {
+            get { return (_van_rendel); }
+            set
+            {
+                switch (value)
+                {
+                    case true:
+                        {
+                            
+                            BackgroundImage = global::GUI.Properties.Resources.partner_rendel;
+                            break;
+                        }
+                    case false:
+                        {
+                            if (Checked) { BackgroundImage = global::GUI.Properties.Resources.Partner_on; }
+                            else { BackgroundImage = global::GUI.Properties.Resources.partner_off; }
+                            break;
+                        }
+
+                }
+                _van_rendel = value;
+            }
+
+
+        }
+         
+
         // Import the CreateRoundRectRgn function from the GDI32.DLL 
         // From the Unmanaged Code
         [DllImport("GDI32.DLL", EntryPoint = "CreateRoundRectRgn")]
@@ -361,6 +392,9 @@ namespace GUI
         //private Image lImage;
         private Label lNAME;
         private Label lNAME2;
+
+        public Panel pnlEdit;
+        public Panel pnlRendel;
 
 
 
@@ -389,6 +423,7 @@ namespace GUI
             if (Checked) { BackgroundImage = global::GUI.Properties.Resources.Partner_on; }
             else { BackgroundImage = global::GUI.Properties.Resources.partner_off; }
 
+            if (VAN_RENDEL) { BackgroundImage = global::GUI.Properties.Resources.partner_rendel; }
         }
 
 
@@ -416,11 +451,32 @@ namespace GUI
 
             if (Checked) { BackgroundImage = global::GUI.Properties.Resources.Partner_on; }
             else { BackgroundImage = global::GUI.Properties.Resources.partner_off; }
+
+            if (VAN_RENDEL) { BackgroundImage = global::GUI.Properties.Resources.partner_rendel; }
+
             BackgroundImageLayout = ImageLayout.Stretch;
 
             FlatStyle = FlatStyle.Flat;
 
             BackColor = Color.Transparent;
+
+            pnlRendel = new Panel();
+            pnlRendel.Width = 40;
+            pnlRendel.Height = this.Height;
+            pnlRendel.BackColor = Color.Transparent;
+            pnlRendel.Dock = DockStyle.Right;
+            pnlRendel.Font = f1;
+            
+            this.Controls.Add(pnlRendel);
+
+            pnlEdit = new Panel();
+            pnlEdit.Width = 110;
+            pnlEdit.Height = this.Height;
+            pnlEdit.BackColor = Color.Transparent;
+            pnlEdit.Dock = DockStyle.Left;
+            pnlEdit.Font = f1;
+            pnlEdit.Click += this.OnLabelClick;
+            this.Controls.Add(pnlEdit);
 
             lNAME = new Label();
             lNAME.Width = 50;
@@ -429,7 +485,7 @@ namespace GUI
             lNAME.Location = new Point(45, 10);
             lNAME.Font = f1;
             lNAME.Click += this.OnLabelClick;
-            this.Controls.Add(lNAME);
+            pnlEdit.Controls.Add(lNAME);
 
 
             lNAME2 = new Label();
@@ -439,7 +495,7 @@ namespace GUI
             lNAME2.Location = new Point(45, 30);
             lNAME2.Font = f1;
             lNAME2.Click += this.OnLabelClick;
-            this.Controls.Add(lNAME2);
+            pnlEdit.Controls.Add(lNAME2);
 
         }
 
