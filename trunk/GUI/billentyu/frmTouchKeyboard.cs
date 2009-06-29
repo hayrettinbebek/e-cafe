@@ -16,9 +16,12 @@ namespace GUI.billentyu
         public TextBox t = new TextBox();
 
         public String ResultString;
-        public frmTouchKeyboard()
+
+
+        public frmTouchKeyboard(InputType t)
         {
             InitializeComponent();
+            keyb21.it = t;
 
         }
     }

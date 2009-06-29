@@ -32,6 +32,8 @@ namespace e_Cafe
 
             NemSource.Add(new DynCombo("Férfi", "F"));
             NemSource.Add(new DynCombo("Nő", "N"));
+
+            pnlKeyb.Visible = false;
             //keyb21.txtRet.Visible = false;
             
         }
@@ -105,6 +107,7 @@ namespace e_Cafe
 
         private void txt_to_keyboard_Click(object sender, EventArgs e)
         {
+            pnlKeyb.Visible = true;
             keyb21.txtRet.Text = ((TextBox)sender).Text;
             keyb21.OutTxtBox = (TextBox)sender;
             
@@ -128,11 +131,17 @@ namespace e_Cafe
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            pnlKeyb.Visible = false;
             frmHitelReszletezo hr = new frmHitelReszletezo();
             hr.pPartner = partner_id;
             hr.ShowDialog();
 
             loadPartner();
+            
+        }
+
+        private void textBox8_EnabledChanged(object sender, EventArgs e)
+        {
 
         }
     }

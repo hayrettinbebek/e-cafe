@@ -10,7 +10,7 @@ using e_Cafe.Reports;
 using XPTable;
 using XPTable.Models;
 using XPTable.Renderers;
-using GUI.billentyu;
+using GUI;
 
 using BusinessLogic;
 
@@ -73,7 +73,47 @@ namespace e_Cafe.FrontOffice
                 }
             }
             if (rbNemNevesitett.Checked == true) {
+                if (tblHitelek.SelectedItems.Count() == 0)
+                {
+                    DEFS.SendInfoMessage("Nincs fizetendő kiválasztva!");
 
+                }
+                else
+                {
+                    int szamla_fej_id = DEFS.GenerateSzamlaFej(pPartner, -101, (int)Fizmond.Keszpenz);
+
+                    if (szamla_fej_id != -1)
+                    {
+                        
+                        foreach (var r in tblHitelek.SelectedItems)
+                        {
+                            Partner_befizetes pb = new Partner_befizetes(pPartner, ((PartnerTartozasCell)r.Cells[0]).tartSor.OSSZEG, ((PartnerTartozasCell)r.Cells[0]).tartSor.JOGCIM);
+                            try
+                            {
+                                DEFS.AddEgyebSzlaTetel(szamla_fej_id,
+                                                                    pb.Save());
+                                ((PartnerTartozasCell)r.Cells[0]).tartSor.FIZETVE = ((PartnerTartozasCell)r.Cells[0]).tartSor.OSSZEG;
+                                ((PartnerTartozasCell)r.Cells[0]).tartSor.Save();
+                            }
+                            catch (Exception)
+                            {
+                                pb.Delete();
+                                throw;
+                            }
+                            
+
+
+                        }
+                        
+                        doPrinting dp = new doPrinting();
+                        dp.setReportMaker(new BlokkReport(szamla_fej_id));
+                        dp.doPrint();
+
+                        DEFS.DebugLog("Hitelek fizetve");
+
+                    }
+                    refreshReszletesList();
+                }
 
             }
         }
@@ -182,24 +222,17 @@ namespace e_Cafe.FrontOffice
 
         private void txtTartBefJogcim_Click(object sender, EventArgs e)
         {
-            frmTouchKeyboard ft = new frmTouchKeyboard();
-            ft.ShowDialog();
-            if (ft.DialogResult == DialogResult.OK)
-            {
-                txtTartBefJogcim.Text = ft.ResultString;
 
-            }
+            txtTartBefJogcim.Text = InputText.getString(true);
+
+         
         }
 
         private void txtTartBefOsszeg_Click(object sender, EventArgs e)
         {
-            frmTouchKeyboard ft = new frmTouchKeyboard();
-            ft.ShowDialog();
-            if (ft.DialogResult == DialogResult.OK)
-            {
-                txtTartBefOsszeg.Text = ft.ResultString;
 
-            }
+                txtTartBefOsszeg.Text = InputText.getInt(true).ToString();
+
         }
 
     }

@@ -166,8 +166,15 @@ namespace BusinessLogic
         {
             int mennyiseg = 1;
             string nev = "";
+            if (t.CIKK.CIKK_ID == 0)
+            {
+                nev = t.CIKK_MEGNEVEZES;
 
-            if (t.RENDELSOR._LitKiszId > 0)
+            }
+            else
+            {
+
+                if (t.RENDELSOR._LitKiszId > 0)
                 {
                     nev = t.CIKK.KISZ_MEGN + " " + t.CIKK.MEGNEVEZES;
                 }
@@ -176,7 +183,7 @@ namespace BusinessLogic
                     nev = t.CIKK.MEGNEVEZES;
                 }
 
-
+            }
 
             return (new Object[] { mennyiseg, nev, t.BRUTTO });
         }

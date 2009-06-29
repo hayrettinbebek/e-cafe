@@ -43,6 +43,8 @@
             this.txtTartBefJogcim = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pnltartozas = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblHitelek)).BeginInit();
             this.pnltartozas.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +77,7 @@
             this.tblHitelek.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tblHitelek.SelectionForeColor = System.Drawing.Color.Black;
             this.tblHitelek.SelectionStyle = XPTable.Models.SelectionStyle.Grid;
-            this.tblHitelek.Size = new System.Drawing.Size(545, 256);
+            this.tblHitelek.Size = new System.Drawing.Size(545, 240);
             this.tblHitelek.TabIndex = 8;
             this.tblHitelek.Text = "table1";
             this.tblHitelek.CellClick += new XPTable.Events.CellMouseEventHandler(this.tblHitelek_CellClick);
@@ -205,7 +207,7 @@
             this.txtTartBefOsszeg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.txtTartBefOsszeg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTartBefOsszeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtTartBefOsszeg.Location = new System.Drawing.Point(335, 4);
+            this.txtTartBefOsszeg.Location = new System.Drawing.Point(335, 20);
             this.txtTartBefOsszeg.Name = "txtTartBefOsszeg";
             this.txtTartBefOsszeg.Size = new System.Drawing.Size(102, 19);
             this.txtTartBefOsszeg.TabIndex = 18;
@@ -216,9 +218,9 @@
             this.txtTartBefJogcim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.txtTartBefJogcim.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTartBefJogcim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtTartBefJogcim.Location = new System.Drawing.Point(3, 3);
+            this.txtTartBefJogcim.Location = new System.Drawing.Point(6, 20);
             this.txtTartBefJogcim.Name = "txtTartBefJogcim";
-            this.txtTartBefJogcim.Size = new System.Drawing.Size(326, 19);
+            this.txtTartBefJogcim.Size = new System.Drawing.Size(323, 19);
             this.txtTartBefJogcim.TabIndex = 18;
             this.txtTartBefJogcim.Click += new System.EventHandler(this.txtTartBefJogcim_Click);
             // 
@@ -236,13 +238,35 @@
             // pnltartozas
             // 
             this.pnltartozas.BackColor = System.Drawing.Color.Transparent;
+            this.pnltartozas.Controls.Add(this.label3);
+            this.pnltartozas.Controls.Add(this.label2);
             this.pnltartozas.Controls.Add(this.txtTartBefJogcim);
             this.pnltartozas.Controls.Add(this.button1);
             this.pnltartozas.Controls.Add(this.txtTartBefOsszeg);
-            this.pnltartozas.Location = new System.Drawing.Point(12, 341);
+            this.pnltartozas.Location = new System.Drawing.Point(12, 325);
             this.pnltartozas.Name = "pnltartozas";
-            this.pnltartozas.Size = new System.Drawing.Size(545, 30);
+            this.pnltartozas.Size = new System.Drawing.Size(545, 49);
             this.pnltartozas.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(3, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Tartozás jogcím";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(332, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Összeg";
             // 
             // frmHitelReszletezo
             // 
@@ -291,5 +315,7 @@
         private System.Windows.Forms.TextBox txtTartBefJogcim;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnltartozas;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
