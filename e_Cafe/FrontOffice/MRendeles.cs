@@ -169,6 +169,7 @@ namespace e_Cafe
         }
         private void button10_Click(object sender, EventArgs e)
         {
+            resetCounter();
             if ((Alcsop_needScroll + AlCsopScrollPos) < Alcsop_MaxScroll)
             {
                 AlCsopScrollPos += Alcsop_needScroll;
@@ -181,6 +182,7 @@ namespace e_Cafe
 
         private void btnPrevCikk_Click(object sender, EventArgs e)
         {
+            resetCounter();
             if (Cikkek_needScroll < Cikkek_MaxScroll)
             {
                 Cikkek_ScrollPos -= ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
@@ -192,6 +194,7 @@ namespace e_Cafe
 
         private void btnNextCikk_Click(object sender, EventArgs e)
         {
+            resetCounter();
             if (Cikkek_needScroll < Cikkek_MaxScroll)
             {
                 Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
@@ -203,6 +206,7 @@ namespace e_Cafe
 
         private void button9_Click(object sender, EventArgs e)
         {
+            resetCounter();
             //if ((Alcsop_needScroll + AlCsopScrollPos) < Alcsop_MaxScroll)
             //{
                 AlCsopScrollPos -= Alcsop_needScroll;
@@ -547,6 +551,7 @@ namespace e_Cafe
 
         private void tblRendeles_CellClick(object sender, XPTable.Events.CellMouseEventArgs e)
         {
+            resetCounter();
             if (tblRendeles.TableModel.Selections.IsRowSelected(e.Row))
             {
                 tblRendeles.TableModel.Selections.RemoveCell(e.Row, 0);
@@ -588,6 +593,7 @@ namespace e_Cafe
         //összeset kijelöl
         private void button8_Click(object sender, EventArgs e)
         {
+            resetCounter();
             tblRendeles.TableModel.Selections.Clear();
 
             for (int i = 0; i < tblRendeles.TableModel.Rows.Count; i++)
@@ -600,7 +606,7 @@ namespace e_Cafe
         // töröl
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            resetCounter();
             foreach (var s in tblRendeles.SelectedItems)
             {
                 ((eCell)s.Cells[0]).rSor.DeleteSor();
@@ -676,11 +682,13 @@ namespace e_Cafe
 
         private void rbOsszetett_CheckedChanged(object sender, EventArgs e)
         {
+            resetCounter();
             initRendelTablaSumNoDraw();
         }
 
         private void rbReszletes_CheckedChanged(object sender, EventArgs e)
         {
+            resetCounter();
             initRendelTablaNoDraw();
         }
 
@@ -852,6 +860,8 @@ namespace e_Cafe
 
         private void button12_Click(object sender, EventArgs e)
         {
+
+            resetCounter(); 
             if (needScroll < MaxScroll)
             {
                 CikkCsopScrollPos--;
@@ -895,6 +905,8 @@ namespace e_Cafe
 
         private void btnKedv_Click(object sender, EventArgs e)
         {
+            resetCounter();
+            timer1.Stop();
             frmShadowLayer p = new frmShadowLayer(UsingForms.KedvezmenyValaszt);
             
             p.ShowDialog();
@@ -966,6 +978,7 @@ namespace e_Cafe
                 _AktRendeles.SaveRendeles();
                 
                 initSums();
+                timer1.Start();
             }
 
             
