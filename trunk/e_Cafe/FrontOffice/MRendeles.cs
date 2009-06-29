@@ -24,6 +24,7 @@ namespace e_Cafe
         Object LastCikkcsopMenu;
         Object LastOtherFilterMenu;
         TableLayoutPanel tlpButtons;
+        Partner usedPartner = null;
 
         private static int CCSOP_BTN_SIZE = 60;
 
@@ -80,6 +81,28 @@ namespace e_Cafe
             pnlRendeles.Visible = false;
             pnlFunctions.Visible=false;
             
+
+        }
+
+
+        public MRendeles(Partner pPartner)
+        {
+            System.Reflection.Assembly myAssembly;
+            myAssembly = this.GetType().Assembly;
+            myResources = new ResourceManager("e_Cafe.OtherImages", myAssembly);
+            _isOsszetettCikViewer = false;
+            InitializeComponent();
+            _SelAsztal = null;
+
+            //label1.Text = _SelAsztal.fASZTAL_SZAM + ". asztal";
+            _InactivityCounter = 0;
+            _AktRendeles = new Rendeles(pPartner);
+
+
+
+
+            initRendelTabla();
+
 
         }
 
@@ -941,6 +964,7 @@ namespace e_Cafe
                     }
                 }
                 _AktRendeles.SaveRendeles();
+                
                 initSums();
             }
 

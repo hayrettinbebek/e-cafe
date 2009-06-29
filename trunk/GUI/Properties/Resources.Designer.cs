@@ -179,6 +179,13 @@ namespace GUI.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap partner_rendel {
+            get {
+                object obj = ResourceManager.GetObject("partner_rendel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap pipaoff {
             get {
                 object obj = ResourceManager.GetObject("pipaoff", resourceCulture);

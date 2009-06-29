@@ -25,6 +25,8 @@ namespace e_Cafe
         public double neededHitel = 0;
         public Partner SelectedPartner;
 
+        private string last_selected = "";
+
         public MMPartnerek()
         {
             InitializeComponent();
@@ -38,7 +40,9 @@ namespace e_Cafe
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
+            last_selected = ((ButtonBase)sender).Tag.ToString();
             loadPartnerek(((ButtonBase)sender).Tag.ToString());
+
             if (((RadioButton)sender).Checked)
             {
                 ((RadioButton)sender).BackgroundImage = global::GUI.Properties.Resources.on_menubtn;
@@ -81,6 +85,11 @@ namespace e_Cafe
                                 PartnerButton pb = new PartnerButton();
                                 pb.fPARTNER = (Partner)pl.lVevok[i];
                                 pb.Click += ShowPartner;
+                                pb.pnlRendel.Click += RendelToPartner;
+                                if (((Partner)pl.lVevok[i]).RENDELES_ID > 0)
+                                {
+                                    pb.VAN_RENDEL = true;
+                                }
                                 flpPartner.Controls.Add(pb);
                             }
 
@@ -94,6 +103,11 @@ namespace e_Cafe
                             PartnerButton pb = new PartnerButton();
                             pb.fPARTNER = (Partner)pl.lVevok[i];
                             pb.Click += ShowPartner;
+                            if (((Partner)pl.lVevok[i]).RENDELES_ID > 0)
+                            {
+                                pb.VAN_RENDEL = true;
+                            }
+                            pb.pnlRendel.Click += RendelToPartner;
                             flpPartner.Controls.Add(pb);
 
                         }
@@ -102,6 +116,17 @@ namespace e_Cafe
                     }       
 
             }
+
+        }
+
+        private void RendelToPartner(object sender, EventArgs e)
+        {
+            SelectedPartner = ((PartnerButton)((Panel)sender).Parent).fPARTNER;
+           
+            MRendeles mr = new MRendeles(SelectedPartner);
+            mr.ShowDialog();
+
+            loadPartnerek(last_selected);
 
         }
         private void ShowPartner(object sender, EventArgs e)
