@@ -231,12 +231,15 @@ namespace e_Cafe.Torzsek
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            if (cIKKBindingSource.Current != null)
+            if (DEFS.Kerdes("Valóban törölni szeretné a kiválasztott terméket?" + "\n" + "(A termék a örlést követően nem lesz látható az értékesítés során)"))
             {
-                Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"],true);
-                c.AKTIV = 0;
-                c.Save();
-                refreshDataset();
+                if (cIKKBindingSource.Current != null)
+                {
+                    Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], true);
+                    c.AKTIV = 0;
+                    c.Save();
+                    refreshDataset();
+                }
             }
         }
 

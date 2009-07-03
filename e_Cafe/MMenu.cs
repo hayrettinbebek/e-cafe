@@ -460,8 +460,10 @@ namespace e_Cafe
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-            Application.Exit();
+            if (DEFS.Kerdes("Biztosan ki szeretne lépni?" + "\n" + "Minden belépett felhasználó kiléptetésre kerül!"))
+            {
+                Application.Exit();
+            }
         }
 
         private void lblTime_Click(object sender, EventArgs e)
