@@ -358,7 +358,7 @@ namespace BusinessLogic
             APP_LOG.EventFormatter = new PatternEventFormatter("{mm}/{dd}/{yyyy} {time}  [{ln:uc}]  {msg}");
             APP_LOG.Open();
         }
-
+        
 
         public static void ExLog( string t)
         {
@@ -434,6 +434,26 @@ namespace BusinessLogic
             fi.tmrTime.Enabled = false;
             fi.ShowDialog();
             
+
+        }
+
+        public static bool Kerdes(string kerdes_szoveg)
+        {
+            // true-t ad vissza ha IGEN-t választottunk.
+            log(Level.Info, kerdes_szoveg);
+            frmKerdes fi = new frmKerdes();
+            fi.lblMessage.Text = kerdes_szoveg;
+             
+            fi.ShowDialog();
+            if (fi.DialogResult == DialogResult.OK)
+            {
+                return (true);
+            }
+            else
+            {
+                return (false);
+            }
+
 
         }
 

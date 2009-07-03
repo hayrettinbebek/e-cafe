@@ -60,6 +60,13 @@ namespace BusinessLogic.Properties {
             }
         }
         
+        internal static System.Drawing.Icon NO {
+            get {
+                object obj = ResourceManager.GetObject("NO", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
         internal static System.Drawing.Icon Ok {
             get {
                 object obj = ResourceManager.GetObject("Ok", resourceCulture);
