@@ -103,9 +103,7 @@ namespace e_Cafe
 
         private void asztalokToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AsztalSetup ck = new AsztalSetup();
-            ck.MdiParent = this;
-            ck.Show();
+
         }
 
         private void ttBevetelezes_Click(object sender, EventArgs e)
@@ -369,6 +367,13 @@ namespace e_Cafe
             frmAltKedvezm f = new frmAltKedvezm();
             f.MdiParent = this;
             f.Show();
+        }
+
+        private void asztalokToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AsztalSetup ck = new AsztalSetup();
+            ck.MdiParent = this;
+            ck.Show();
         }
 
 

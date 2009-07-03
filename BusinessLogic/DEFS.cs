@@ -622,6 +622,33 @@ namespace BusinessLogic
         }
 
         #endregion
+
+        #region InputValidators
+
+        public static bool isOnlyNumber(Keys c)
+        {
+            bool ok = true;
+
+            if (c < Keys.D0 || c > Keys.D9)
+            {
+                // Determine whether the keystroke is a number from the keypad.
+                if (c < Keys.NumPad0 || c > Keys.NumPad9)
+                {
+                    // Determine whether the keystroke is a backspace.
+                    if (c != Keys.Back)
+                    {
+                        // A non-numerical keystroke was pressed.
+                        // Set the flag to true and evaluate in KeyPress event.
+                        ok = false;
+                    }
+                }
+            }
+
+            return (ok);
+        }
+
+        #endregion
+
     }
 
     public enum Fizmond : int
@@ -630,6 +657,29 @@ namespace BusinessLogic
         Bankkartya = 2,
         Utalvany = 3,
         egyeb = 4
+    }
+    public enum MobilTipus
+    {
+        [StringValue("Mobil")]
+        mobil = 1,
+        [StringValue("E-Mail")]
+        email = 2,
+        [StringValue("Vezetékes")]
+        vezetekes = 3
+
+    }
+    public enum CimTipus
+    {
+        [StringValue("Székhely")]
+        szekhely = 1,
+        [StringValue("Állandó lakcím")]
+        allandolakcim = 2,
+        [StringValue("Levelezési cím")]
+        levelezcim = 3,
+        [StringValue("Tartózkodási hely")]
+        tarthely = 4
+
+
     }
 
     public class ertTip

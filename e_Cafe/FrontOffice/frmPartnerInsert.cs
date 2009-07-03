@@ -58,7 +58,7 @@ namespace e_Cafe
                 else
                 {
                     Partner_cim pc = new Partner_cim(partner_id);
-                    pc.CIM_TIPUS = 1;
+                    pc.CIM_TIPUS = 1.ToString();
                     v.lCimek.Add(pc);
                     partnercimBindingSource.Add(pc);
                 }
@@ -69,7 +69,7 @@ namespace e_Cafe
                 else
                 {
                     Partner_cim pc2 = new Partner_cim(partner_id);
-                    pc2.CIM_TIPUS = 2;
+                    pc2.CIM_TIPUS = 2.ToString();
                     v.lCimek.Add(pc2);
                     partnercimBindingSource1.Add(pc2);
                 }

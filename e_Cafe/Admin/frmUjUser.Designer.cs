@@ -38,6 +38,7 @@
             this.chkAktiv = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -91,6 +92,8 @@
             this.txtPW.PasswordChar = '*';
             this.txtPW.Size = new System.Drawing.Size(115, 20);
             this.txtPW.TabIndex = 1;
+            this.txtPW.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPW_KeyDown);
+            this.txtPW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPW_KeyPress);
             // 
             // chkAdmin
             // 
@@ -120,6 +123,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Mégse";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -131,12 +135,25 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblWarning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblWarning.Location = new System.Drawing.Point(109, 112);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(141, 13);
+            this.lblWarning.TabIndex = 5;
+            this.lblWarning.Text = "!!! csak szám adható !!!";
+            this.lblWarning.Visible = false;
+            // 
             // frmUjUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 273);
             this.ControlBox = false;
+            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chkAktiv);
@@ -168,5 +185,6 @@
         private System.Windows.Forms.CheckBox chkAktiv;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblWarning;
     }
 }

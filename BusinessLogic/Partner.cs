@@ -342,7 +342,7 @@ namespace BusinessLogic
                 string ret_telszam = "";
                 var ret_telefonszam =
                     from c in lTelefon
-                    where c.TEL_TIPUS == 1
+                    where c.TEL_TIPUS == 1.ToString()
                     select c;
                 ret_telefonszam.Each(c => ret_telszam = c.TELEFON);
                 return (ret_telszam);
@@ -351,7 +351,7 @@ namespace BusinessLogic
 
                     var ret_telefonszam =
                             from c in lTelefon
-                            where c.TEL_TIPUS == 1
+                            where c.TEL_TIPUS == 1.ToString()
                             select c;
                     if (ret_telefonszam.Count() > 0)
                     {
@@ -374,7 +374,7 @@ namespace BusinessLogic
                 string ret_telszam = "";
                 var ret_telefonszam =
                     from c in lTelefon
-                    where c.TEL_TIPUS == 2
+                    where c.TEL_TIPUS == 2.ToString()
                     select c;
                 ret_telefonszam.Each(c => ret_telszam = c.TELEFON);
                 return (ret_telszam);
@@ -385,7 +385,7 @@ namespace BusinessLogic
 
                 var ret_telefonszam =
                         from c in lTelefon
-                        where c.TEL_TIPUS == 2
+                        where c.TEL_TIPUS == 2.ToString()
                         select c;
                 if (ret_telefonszam.Count() > 0)
                 {
@@ -449,7 +449,7 @@ namespace BusinessLogic
 
             var ret_cikk =
                 from c in lCimek
-                where c.CIM_TIPUS == 1
+                where c.CIM_TIPUS == 1.ToString()
                 select c;
             ret_cikk.Each(c => iTmpRet.Add(c));
 
@@ -463,7 +463,7 @@ namespace BusinessLogic
 
             var ret_cikk =
                 from c in lCimek
-                where c.CIM_TIPUS == 2
+                where c.CIM_TIPUS == 2.ToString()
                 select c;
             ret_cikk.Each(c => iTmpRet.Add(c));
 
@@ -1226,7 +1226,7 @@ namespace BusinessLogic
         public List<Szallito> SzallitoFilterByName(string iPArtnerNev)
         {
             List<Szallito> iTmpRet = new List<Szallito>();
-
+            
             var ret_cikk =
                 from c in lSzallitok
                 where c.P_NEV.Contains(iPArtnerNev) 
@@ -1281,10 +1281,10 @@ namespace BusinessLogic
          
          */
         private int _tel_tipus;
-        public int TEL_TIPUS
+        public string TEL_TIPUS
         {
-            get { return (_tel_tipus); }
-            set { _tel_tipus = value; }
+            get { return (_tel_tipus.ToString()); }
+            set { _tel_tipus = Convert.ToInt16(value); }
         }
         #endregion
 
@@ -1300,6 +1300,7 @@ namespace BusinessLogic
         public Partner_tel(int pPartner)
         {
             _tel_id = -1;
+            _tel_tipus = 1;
             _partner_id = pPartner;
         }
 
@@ -1434,10 +1435,10 @@ namespace BusinessLogic
 
         #region CIM_TIPUS
         private int _cim_tipus;
-        public int CIM_TIPUS
+        public string CIM_TIPUS
         {
-            get { return (_cim_tipus); }
-            set { _cim_tipus = value; }
+            get { return (_cim_tipus.ToString()); }
+            set { _cim_tipus = Convert.ToInt16(value); }
         }
         #endregion
 
@@ -1472,6 +1473,7 @@ namespace BusinessLogic
         public Partner_cim(int pPartner)
         {
             _cim_id = -1;
+            _cim_tipus = 1;
             _partner_id = pPartner;
         }
 

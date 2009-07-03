@@ -31,12 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TIPUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.chkMind = new System.Windows.Forms.CheckBox();
             this.cIKKMEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mENNYISEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eGYSEGARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +52,8 @@
             this.fEJIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tETELIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.szamlatetelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.szamlaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sZAMLASORSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sZAMLADATUMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARTNERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rENDELESIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +63,7 @@
             this.hODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uSERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.szamlaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.szamlatetelBindingSource)).BeginInit();
@@ -100,8 +101,16 @@
             this.dataGridView1.DataSource = this.szamlaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(15, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(335, 330);
+            this.dataGridView1.Size = new System.Drawing.Size(357, 501);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // TIPUS
+            // 
+            this.TIPUS.DataPropertyName = "TIPUS";
+            this.TIPUS.HeaderText = "Típus";
+            this.TIPUS.Name = "TIPUS";
+            this.TIPUS.ReadOnly = true;
+            this.TIPUS.Width = 90;
             // 
             // dataGridView2
             // 
@@ -123,33 +132,34 @@
             this.fEJIDDataGridViewTextBoxColumn1,
             this.tETELIDDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.szamlatetelBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(353, 50);
+            this.dataGridView2.Location = new System.Drawing.Point(378, 50);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(652, 330);
+            this.dataGridView2.Size = new System.Drawing.Size(728, 501);
             this.dataGridView2.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtpFrom
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 25);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFrom.Location = new System.Drawing.Point(82, 25);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(102, 20);
+            this.dtpFrom.TabIndex = 4;
+            this.dtpFrom.ValueChanged += new System.EventHandler(this.DatumSelect);
             // 
-            // dateTimePicker2
+            // dtpTo
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(154, 25);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker2.TabIndex = 5;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.DatumSelect);
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTo.Location = new System.Drawing.Point(221, 25);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(102, 20);
+            this.dtpTo.TabIndex = 5;
+            this.dtpTo.ValueChanged += new System.EventHandler(this.DatumSelect);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 29);
+            this.label1.Location = new System.Drawing.Point(190, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 6;
@@ -158,7 +168,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(262, 29);
+            this.label3.Location = new System.Drawing.Point(329, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 6;
@@ -168,12 +178,23 @@
             // 
             this.button6.BackgroundImage = global::e_Cafe.Properties.Resources.Printer_64x64;
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(286, 9);
+            this.button6.Location = new System.Drawing.Point(353, 9);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(35, 35);
             this.button6.TabIndex = 20;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // chkMind
+            // 
+            this.chkMind.AutoSize = true;
+            this.chkMind.Location = new System.Drawing.Point(15, 28);
+            this.chkMind.Name = "chkMind";
+            this.chkMind.Size = new System.Drawing.Size(49, 17);
+            this.chkMind.TabIndex = 21;
+            this.chkMind.Text = "Mind";
+            this.chkMind.UseVisualStyleBackColor = true;
+            this.chkMind.CheckedChanged += new System.EventHandler(this.chkMind_CheckedChanged);
             // 
             // cIKKMEGNEVEZESDataGridViewTextBoxColumn
             // 
@@ -269,11 +290,6 @@
             // 
             this.szamlatetelBindingSource.DataSource = typeof(BusinessLogic.Szamla_tetel);
             // 
-            // szamlaBindingSource
-            // 
-            this.szamlaBindingSource.DataSource = typeof(BusinessLogic.Szamla);
-            this.szamlaBindingSource.CurrentItemChanged += new System.EventHandler(this.szamlaBindingSource_CurrentItemChanged);
-            // 
             // sZAMLASORSZAMDataGridViewTextBoxColumn
             // 
             this.sZAMLASORSZAMDataGridViewTextBoxColumn.DataPropertyName = "SZAMLA_SORSZAM";
@@ -287,14 +303,6 @@
             this.sZAMLADATUMADataGridViewTextBoxColumn.HeaderText = "Dátum";
             this.sZAMLADATUMADataGridViewTextBoxColumn.Name = "sZAMLADATUMADataGridViewTextBoxColumn";
             this.sZAMLADATUMADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // TIPUS
-            // 
-            this.TIPUS.DataPropertyName = "TIPUS";
-            this.TIPUS.HeaderText = "Típus";
-            this.TIPUS.Name = "TIPUS";
-            this.TIPUS.ReadOnly = true;
-            this.TIPUS.Width = 90;
             // 
             // fEJIDDataGridViewTextBoxColumn
             // 
@@ -368,16 +376,22 @@
             this.uSERIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.uSERIDDataGridViewTextBoxColumn.Visible = false;
             // 
+            // szamlaBindingSource
+            // 
+            this.szamlaBindingSource.DataSource = typeof(BusinessLogic.Szamla);
+            this.szamlaBindingSource.CurrentItemChanged += new System.EventHandler(this.szamlaBindingSource_CurrentItemChanged);
+            // 
             // frmKimentBlokkok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 394);
+            this.ClientSize = new System.Drawing.Size(1118, 563);
+            this.Controls.Add(this.chkMind);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpTo);
+            this.Controls.Add(this.dtpFrom);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -413,8 +427,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mEGJEGYZESDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fEJIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tETELIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button6;
@@ -430,5 +444,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nAPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn uSERIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox chkMind;
     }
 }

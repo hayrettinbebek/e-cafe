@@ -532,5 +532,17 @@ namespace BusinessLogic
         {
             return lSzamlaList;
         }
+
+        public List<Szamla> getFilteredList(DateTime from_date, DateTime to_date)
+        {
+            List<Szamla> tmpList = new List<Szamla>();
+            var ret_cikk =
+              from c in lSzamlaList
+              where (c.SZAMLA_DATUMA >= from_date) && (c.SZAMLA_DATUMA <= to_date)
+              select c;
+            ret_cikk.Each(c => tmpList.Add(c));
+
+            return (tmpList);
+        }
     }
 }

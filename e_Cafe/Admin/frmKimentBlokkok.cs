@@ -28,7 +28,12 @@ namespace e_Cafe.Admin
 
         private void DatumSelect(object sender, EventArgs e)
         {
-            // ide jön a filter rész.
+            chkMind.Checked = false;
+            if (!chkMind.Checked)
+            {
+                tmpSZL = (new SzamlaList()).getFilteredList(dtpFrom.Value, dtpTo.Value);
+            }
+            ReloadList();
         }
 
         private void szamlaBindingSource_CurrentItemChanged(object sender, EventArgs e)
@@ -45,13 +50,22 @@ namespace e_Cafe.Admin
 
         private void frmKimentBlokkok_Load(object sender, EventArgs e)
         {
+            ReloadList();
+        }
+
+        private void ReloadList()
+        {
+
+            szamlaBindingSource.Clear();
             foreach (var s in tmpSZL)
             {
 
                 szamlaBindingSource.Add(s);
-                
+
             }
+
         }
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -62,6 +76,12 @@ namespace e_Cafe.Admin
                 dp.doPrint();
                 //dp.doPreview();
             }
+        }
+
+        private void chkMind_CheckedChanged(object sender, EventArgs e)
+        {
+            tmpSZL = (new SzamlaList()).getList();
+            ReloadList();
         }
     }
 }
