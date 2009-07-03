@@ -89,5 +89,21 @@ namespace e_Cafe.Admin
             }
 
         }
+
+        private void txtPW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+              
+        }
+
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!DEFS.isOnlyNumber(e.KeyCode)) { e.SuppressKeyPress = true; lblWarning.Visible = true; }
+            else { lblWarning.Visible = false; }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

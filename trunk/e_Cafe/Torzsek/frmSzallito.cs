@@ -30,6 +30,23 @@ namespace e_Cafe.Torzsek
                 szallitoBindingSource.Add(c);
             }
 
+            dynComboBindingSource.Clear();
+
+            StringEnum ct = new StringEnum(typeof(CimTipus));
+            for (int cy = 0; cy <= Enum.GetValues(typeof(CimTipus)).Length - 1; cy++)
+            {
+                int value = (int)Enum.Parse(typeof(CimTipus), Enum.GetName(typeof(CimTipus), cy + 1));
+                dynComboBindingSource.Add(new DynCombo(ct.GetStringValue(Enum.GetName(typeof(CimTipus), cy + 1)), value.ToString()));
+            }
+
+            
+            dynComboBindingSource1.Clear();
+            StringEnum mt = new StringEnum(typeof(MobilTipus));
+            for (int cy = 0; cy <= Enum.GetValues(typeof(MobilTipus)).Length - 1; cy++)
+            {
+                int value = (int)Enum.Parse(typeof(MobilTipus), Enum.GetName(typeof(MobilTipus), cy + 1));
+                dynComboBindingSource1.Add(new DynCombo(mt.GetStringValue(Enum.GetName(typeof(MobilTipus), cy + 1)), value.ToString()));
+            }
 
 
         }
@@ -103,6 +120,7 @@ namespace e_Cafe.Torzsek
             {
                 ((Partner_bsz)k).Save();
             }
+            loadData();
         }
 
         private void partnerbszBindingSource_AddingNew(object sender, AddingNewEventArgs e)

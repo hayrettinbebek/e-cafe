@@ -34,30 +34,12 @@
             this.tsbtnNew = new System.Windows.Forms.ToolStripButton();
             this.tsbtnSave = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.szallitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.bSZIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pARTNERIDDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bANKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bANKSZAMLADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partnerbszBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.tELIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pARTNERIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tELTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tELEFONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partnertelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.cIMIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pARTNERIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIMTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iRSZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vAROSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partnercimBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -72,6 +54,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bSZIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pARTNERIDDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bANKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bANKSZAMLADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partnerbszBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dynComboBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.partnertelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cIMIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pARTNERIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cIMTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iRSZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vAROSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partnercimBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.szallitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pNEV2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pNEV3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,16 +80,22 @@
             this.kONTAKTELERHETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pARTNERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tELIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pARTNERIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tELTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tELEFONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.szallitoBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partnerbszBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partnertelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partnerbszBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partnertelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.szallitoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -121,7 +125,7 @@
             this.tsbtnSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSave.Image")));
             this.tsbtnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSave.Name = "tsbtnSave";
-            this.tsbtnSave.Size = new System.Drawing.Size(50, 22);
+            this.tsbtnSave.Size = new System.Drawing.Size(46, 22);
             this.tsbtnSave.Text = "Mentés";
             this.tsbtnSave.Click += new System.EventHandler(this.tsbtnSave_Click);
             // 
@@ -150,12 +154,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1201, 438);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // szallitoBindingSource
-            // 
-            this.szallitoBindingSource.DataSource = typeof(BusinessLogic.Szallito);
-            this.szallitoBindingSource.CurrentChanged += new System.EventHandler(this.szallitoBindingSource_CurrentChanged);
-            this.szallitoBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.szallitoBindingSource_AddingNew);
             // 
             // panel1
             // 
@@ -199,38 +197,6 @@
             this.dataGridView4.Size = new System.Drawing.Size(342, 72);
             this.dataGridView4.TabIndex = 9;
             // 
-            // bSZIDDataGridViewTextBoxColumn
-            // 
-            this.bSZIDDataGridViewTextBoxColumn.DataPropertyName = "BSZ_ID";
-            this.bSZIDDataGridViewTextBoxColumn.HeaderText = "BSZ_ID";
-            this.bSZIDDataGridViewTextBoxColumn.Name = "bSZIDDataGridViewTextBoxColumn";
-            this.bSZIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pARTNERIDDataGridViewTextBoxColumn3
-            // 
-            this.pARTNERIDDataGridViewTextBoxColumn3.DataPropertyName = "PARTNER_ID";
-            this.pARTNERIDDataGridViewTextBoxColumn3.HeaderText = "PARTNER_ID";
-            this.pARTNERIDDataGridViewTextBoxColumn3.Name = "pARTNERIDDataGridViewTextBoxColumn3";
-            this.pARTNERIDDataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // bANKDataGridViewTextBoxColumn
-            // 
-            this.bANKDataGridViewTextBoxColumn.DataPropertyName = "BANK";
-            this.bANKDataGridViewTextBoxColumn.HeaderText = "Bank";
-            this.bANKDataGridViewTextBoxColumn.Name = "bANKDataGridViewTextBoxColumn";
-            // 
-            // bANKSZAMLADataGridViewTextBoxColumn
-            // 
-            this.bANKSZAMLADataGridViewTextBoxColumn.DataPropertyName = "BANKSZAMLA";
-            this.bANKSZAMLADataGridViewTextBoxColumn.HeaderText = "Számlaszám";
-            this.bANKSZAMLADataGridViewTextBoxColumn.Name = "bANKSZAMLADataGridViewTextBoxColumn";
-            this.bANKSZAMLADataGridViewTextBoxColumn.Width = 170;
-            // 
-            // partnerbszBindingSource
-            // 
-            this.partnerbszBindingSource.DataSource = typeof(BusinessLogic.Partner_bsz);
-            this.partnerbszBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.partnerbszBindingSource_AddingNew);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -267,40 +233,6 @@
             this.dataGridView3.Size = new System.Drawing.Size(369, 81);
             this.dataGridView3.TabIndex = 6;
             // 
-            // tELIDDataGridViewTextBoxColumn
-            // 
-            this.tELIDDataGridViewTextBoxColumn.DataPropertyName = "TEL_ID";
-            this.tELIDDataGridViewTextBoxColumn.HeaderText = "TEL_ID";
-            this.tELIDDataGridViewTextBoxColumn.Name = "tELIDDataGridViewTextBoxColumn";
-            this.tELIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pARTNERIDDataGridViewTextBoxColumn2
-            // 
-            this.pARTNERIDDataGridViewTextBoxColumn2.DataPropertyName = "PARTNER_ID";
-            this.pARTNERIDDataGridViewTextBoxColumn2.HeaderText = "PARTNER_ID";
-            this.pARTNERIDDataGridViewTextBoxColumn2.Name = "pARTNERIDDataGridViewTextBoxColumn2";
-            this.pARTNERIDDataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // tELTIPUSDataGridViewTextBoxColumn
-            // 
-            this.tELTIPUSDataGridViewTextBoxColumn.DataPropertyName = "TEL_TIPUS";
-            this.tELTIPUSDataGridViewTextBoxColumn.HeaderText = "Típus";
-            this.tELTIPUSDataGridViewTextBoxColumn.Name = "tELTIPUSDataGridViewTextBoxColumn";
-            this.tELTIPUSDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // tELEFONDataGridViewTextBoxColumn
-            // 
-            this.tELEFONDataGridViewTextBoxColumn.DataPropertyName = "TELEFON";
-            this.tELEFONDataGridViewTextBoxColumn.HeaderText = "Szám";
-            this.tELEFONDataGridViewTextBoxColumn.Name = "tELEFONDataGridViewTextBoxColumn";
-            this.tELEFONDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // partnertelBindingSource
-            // 
-            this.partnertelBindingSource.AllowNew = true;
-            this.partnertelBindingSource.DataSource = typeof(BusinessLogic.Partner_tel);
-            this.partnertelBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.partnertelBindingSource_AddingNew);
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
@@ -321,53 +253,6 @@
             this.dataGridView2.RowTemplate.Height = 20;
             this.dataGridView2.Size = new System.Drawing.Size(523, 80);
             this.dataGridView2.TabIndex = 5;
-            // 
-            // cIMIDDataGridViewTextBoxColumn
-            // 
-            this.cIMIDDataGridViewTextBoxColumn.DataPropertyName = "CIM_ID";
-            this.cIMIDDataGridViewTextBoxColumn.HeaderText = "CIM_ID";
-            this.cIMIDDataGridViewTextBoxColumn.Name = "cIMIDDataGridViewTextBoxColumn";
-            this.cIMIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pARTNERIDDataGridViewTextBoxColumn1
-            // 
-            this.pARTNERIDDataGridViewTextBoxColumn1.DataPropertyName = "PARTNER_ID";
-            this.pARTNERIDDataGridViewTextBoxColumn1.HeaderText = "PARTNER_ID";
-            this.pARTNERIDDataGridViewTextBoxColumn1.Name = "pARTNERIDDataGridViewTextBoxColumn1";
-            this.pARTNERIDDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // cIMTIPUSDataGridViewTextBoxColumn
-            // 
-            this.cIMTIPUSDataGridViewTextBoxColumn.DataPropertyName = "CIM_TIPUS";
-            this.cIMTIPUSDataGridViewTextBoxColumn.HeaderText = "Cím típusa";
-            this.cIMTIPUSDataGridViewTextBoxColumn.Name = "cIMTIPUSDataGridViewTextBoxColumn";
-            // 
-            // iRSZDataGridViewTextBoxColumn
-            // 
-            this.iRSZDataGridViewTextBoxColumn.DataPropertyName = "IRSZ";
-            this.iRSZDataGridViewTextBoxColumn.HeaderText = "Irsz.";
-            this.iRSZDataGridViewTextBoxColumn.Name = "iRSZDataGridViewTextBoxColumn";
-            this.iRSZDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // vAROSDataGridViewTextBoxColumn
-            // 
-            this.vAROSDataGridViewTextBoxColumn.DataPropertyName = "VAROS";
-            this.vAROSDataGridViewTextBoxColumn.HeaderText = "Város";
-            this.vAROSDataGridViewTextBoxColumn.Name = "vAROSDataGridViewTextBoxColumn";
-            this.vAROSDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // cIMDataGridViewTextBoxColumn
-            // 
-            this.cIMDataGridViewTextBoxColumn.DataPropertyName = "CIM";
-            this.cIMDataGridViewTextBoxColumn.HeaderText = "Utca/Hsz.";
-            this.cIMDataGridViewTextBoxColumn.Name = "cIMDataGridViewTextBoxColumn";
-            this.cIMDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // partnercimBindingSource
-            // 
-            this.partnercimBindingSource.AllowNew = true;
-            this.partnercimBindingSource.DataSource = typeof(BusinessLogic.Partner_cim);
-            this.partnercimBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.partnercimBindingSource_AddingNew);
             // 
             // textBox5
             // 
@@ -496,6 +381,110 @@
             this.textBox1.Size = new System.Drawing.Size(257, 20);
             this.textBox1.TabIndex = 0;
             // 
+            // bSZIDDataGridViewTextBoxColumn
+            // 
+            this.bSZIDDataGridViewTextBoxColumn.DataPropertyName = "BSZ_ID";
+            this.bSZIDDataGridViewTextBoxColumn.HeaderText = "BSZ_ID";
+            this.bSZIDDataGridViewTextBoxColumn.Name = "bSZIDDataGridViewTextBoxColumn";
+            this.bSZIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pARTNERIDDataGridViewTextBoxColumn3
+            // 
+            this.pARTNERIDDataGridViewTextBoxColumn3.DataPropertyName = "PARTNER_ID";
+            this.pARTNERIDDataGridViewTextBoxColumn3.HeaderText = "PARTNER_ID";
+            this.pARTNERIDDataGridViewTextBoxColumn3.Name = "pARTNERIDDataGridViewTextBoxColumn3";
+            this.pARTNERIDDataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // bANKDataGridViewTextBoxColumn
+            // 
+            this.bANKDataGridViewTextBoxColumn.DataPropertyName = "BANK";
+            this.bANKDataGridViewTextBoxColumn.HeaderText = "Bank";
+            this.bANKDataGridViewTextBoxColumn.Name = "bANKDataGridViewTextBoxColumn";
+            // 
+            // bANKSZAMLADataGridViewTextBoxColumn
+            // 
+            this.bANKSZAMLADataGridViewTextBoxColumn.DataPropertyName = "BANKSZAMLA";
+            this.bANKSZAMLADataGridViewTextBoxColumn.HeaderText = "Számlaszám";
+            this.bANKSZAMLADataGridViewTextBoxColumn.Name = "bANKSZAMLADataGridViewTextBoxColumn";
+            this.bANKSZAMLADataGridViewTextBoxColumn.Width = 170;
+            // 
+            // partnerbszBindingSource
+            // 
+            this.partnerbszBindingSource.DataSource = typeof(BusinessLogic.Partner_bsz);
+            this.partnerbszBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.partnerbszBindingSource_AddingNew);
+            // 
+            // dynComboBindingSource1
+            // 
+            this.dynComboBindingSource1.DataSource = typeof(BusinessLogic.DynCombo);
+            // 
+            // partnertelBindingSource
+            // 
+            this.partnertelBindingSource.AllowNew = true;
+            this.partnertelBindingSource.DataSource = typeof(BusinessLogic.Partner_tel);
+            this.partnertelBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.partnertelBindingSource_AddingNew);
+            // 
+            // cIMIDDataGridViewTextBoxColumn
+            // 
+            this.cIMIDDataGridViewTextBoxColumn.DataPropertyName = "CIM_ID";
+            this.cIMIDDataGridViewTextBoxColumn.HeaderText = "CIM_ID";
+            this.cIMIDDataGridViewTextBoxColumn.Name = "cIMIDDataGridViewTextBoxColumn";
+            this.cIMIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pARTNERIDDataGridViewTextBoxColumn1
+            // 
+            this.pARTNERIDDataGridViewTextBoxColumn1.DataPropertyName = "PARTNER_ID";
+            this.pARTNERIDDataGridViewTextBoxColumn1.HeaderText = "PARTNER_ID";
+            this.pARTNERIDDataGridViewTextBoxColumn1.Name = "pARTNERIDDataGridViewTextBoxColumn1";
+            this.pARTNERIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // cIMTIPUSDataGridViewTextBoxColumn
+            // 
+            this.cIMTIPUSDataGridViewTextBoxColumn.DataPropertyName = "CIM_TIPUS";
+            this.cIMTIPUSDataGridViewTextBoxColumn.DataSource = this.dynComboBindingSource;
+            this.cIMTIPUSDataGridViewTextBoxColumn.DisplayMember = "DISPLAY_MEMBER";
+            this.cIMTIPUSDataGridViewTextBoxColumn.HeaderText = "Cím típusa";
+            this.cIMTIPUSDataGridViewTextBoxColumn.Name = "cIMTIPUSDataGridViewTextBoxColumn";
+            this.cIMTIPUSDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cIMTIPUSDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cIMTIPUSDataGridViewTextBoxColumn.ValueMember = "VALUE_MEMBER";
+            // 
+            // dynComboBindingSource
+            // 
+            this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
+            // 
+            // iRSZDataGridViewTextBoxColumn
+            // 
+            this.iRSZDataGridViewTextBoxColumn.DataPropertyName = "IRSZ";
+            this.iRSZDataGridViewTextBoxColumn.HeaderText = "Irsz.";
+            this.iRSZDataGridViewTextBoxColumn.Name = "iRSZDataGridViewTextBoxColumn";
+            this.iRSZDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // vAROSDataGridViewTextBoxColumn
+            // 
+            this.vAROSDataGridViewTextBoxColumn.DataPropertyName = "VAROS";
+            this.vAROSDataGridViewTextBoxColumn.HeaderText = "Város";
+            this.vAROSDataGridViewTextBoxColumn.Name = "vAROSDataGridViewTextBoxColumn";
+            this.vAROSDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // cIMDataGridViewTextBoxColumn
+            // 
+            this.cIMDataGridViewTextBoxColumn.DataPropertyName = "CIM";
+            this.cIMDataGridViewTextBoxColumn.HeaderText = "Utca/Hsz.";
+            this.cIMDataGridViewTextBoxColumn.Name = "cIMDataGridViewTextBoxColumn";
+            this.cIMDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // partnercimBindingSource
+            // 
+            this.partnercimBindingSource.AllowNew = true;
+            this.partnercimBindingSource.DataSource = typeof(BusinessLogic.Partner_cim);
+            this.partnercimBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.partnercimBindingSource_AddingNew);
+            // 
+            // szallitoBindingSource
+            // 
+            this.szallitoBindingSource.DataSource = typeof(BusinessLogic.Szallito);
+            this.szallitoBindingSource.CurrentChanged += new System.EventHandler(this.szallitoBindingSource_CurrentChanged);
+            this.szallitoBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.szallitoBindingSource_AddingNew);
+            // 
             // pNEVDataGridViewTextBoxColumn
             // 
             this.pNEVDataGridViewTextBoxColumn.DataPropertyName = "P_NEV";
@@ -575,6 +564,41 @@
             this.pTIPUSDataGridViewTextBoxColumn.ReadOnly = true;
             this.pTIPUSDataGridViewTextBoxColumn.Visible = false;
             // 
+            // tELIDDataGridViewTextBoxColumn
+            // 
+            this.tELIDDataGridViewTextBoxColumn.DataPropertyName = "TEL_ID";
+            this.tELIDDataGridViewTextBoxColumn.HeaderText = "TEL_ID";
+            this.tELIDDataGridViewTextBoxColumn.Name = "tELIDDataGridViewTextBoxColumn";
+            this.tELIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pARTNERIDDataGridViewTextBoxColumn2
+            // 
+            this.pARTNERIDDataGridViewTextBoxColumn2.DataPropertyName = "PARTNER_ID";
+            this.pARTNERIDDataGridViewTextBoxColumn2.HeaderText = "PARTNER_ID";
+            this.pARTNERIDDataGridViewTextBoxColumn2.Name = "pARTNERIDDataGridViewTextBoxColumn2";
+            this.pARTNERIDDataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // tELTIPUSDataGridViewTextBoxColumn
+            // 
+            this.tELTIPUSDataGridViewTextBoxColumn.DataPropertyName = "TEL_TIPUS";
+            this.tELTIPUSDataGridViewTextBoxColumn.DataSource = this.dynComboBindingSource1;
+            this.tELTIPUSDataGridViewTextBoxColumn.DisplayMember = "DISPLAY_MEMBER";
+            this.tELTIPUSDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.tELTIPUSDataGridViewTextBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tELTIPUSDataGridViewTextBoxColumn.HeaderText = "Típus";
+            this.tELTIPUSDataGridViewTextBoxColumn.Name = "tELTIPUSDataGridViewTextBoxColumn";
+            this.tELTIPUSDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tELTIPUSDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tELTIPUSDataGridViewTextBoxColumn.ValueMember = "VALUE_MEMBER";
+            this.tELTIPUSDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // tELEFONDataGridViewTextBoxColumn
+            // 
+            this.tELEFONDataGridViewTextBoxColumn.DataPropertyName = "TELEFON";
+            this.tELEFONDataGridViewTextBoxColumn.HeaderText = "Szám";
+            this.tELEFONDataGridViewTextBoxColumn.Name = "tELEFONDataGridViewTextBoxColumn";
+            this.tELEFONDataGridViewTextBoxColumn.Width = 200;
+            // 
             // frmSzallito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,15 +612,17 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.szallitoBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partnerbszBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partnertelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partnerbszBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partnertelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partnercimBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.szallitoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,20 +651,10 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource partnercimBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIMIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIMTIPUSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iRSZDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vAROSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIMDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource partnertelBindingSource;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tELIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tELTIPUSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tELEFONDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.BindingSource partnerbszBindingSource;
@@ -656,5 +672,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kONTAKTELERHETDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pTIPUSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cIMIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn cIMTIPUSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dynComboBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iRSZDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vAROSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cIMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dynComboBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tELIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn tELTIPUSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tELEFONDataGridViewTextBoxColumn;
     }
 }
