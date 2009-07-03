@@ -71,6 +71,12 @@
     <Compile Include="Asztal.cs" />
     <Compile Include="Bevetelezes.cs" />
     <Compile Include="Cikk.cs" />
+    <Compile Include="frmKerdes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKerdes.Designer.cs">
+      <DependentUpon>frmKerdes.cs</DependentUpon>
+    </Compile>
     <Compile Include="DEFS.cs" />
     <Compile Include="EmailSending.cs" />
     <Compile Include="frmInfoMessage1.cs">
@@ -117,9 +123,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="nspring.dll" />
+    <None Include="Resources\Close.ico" />
     <None Include="Resources\Ok.ico" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmKerdes.resx">
+      <DependentUpon>frmKerdes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInfoMessage1.resx">
       <DependentUpon>frmInfoMessage1.cs</DependentUpon>
       <SubType>Designer</SubType>
