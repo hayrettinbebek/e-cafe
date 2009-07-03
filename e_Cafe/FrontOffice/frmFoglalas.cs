@@ -65,6 +65,8 @@ namespace e_Cafe.FrontOffice
             ctMinSelector.SourceControl.Text = "45";
         }
 
+
+
         private void txtIgM_Click(object sender, EventArgs e)
         {
             ctMinSelector.Show(txtIgM, new Point(10, 10));
@@ -137,13 +139,36 @@ namespace e_Cafe.FrontOffice
 
         }
 
+        private void setHourSelector(int from_h, int to_h)
+        {
+            cmHourSelector.Items.Clear();
+            for (int i = from_h; i <= to_h; i++)
+            {
+                ToolStripMenuItem tsmi = new ToolStripMenuItem();
+                tsmi.Font =  new  Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+                tsmi.Click += new System.EventHandler(this.toolStripHour_Click);
+                tsmi.Text = i.ToString().PadLeft(2, '0');
+                cmHourSelector.Items.Add(tsmi);
+            }
+
+        }
+
         private void txtTolH_Click(object sender, EventArgs e)
         {
+            setHourSelector(9, 23);
             cmHourSelector.Show(txtTolH, new Point(10, 10));
         }
 
         private void txtIgH_Click(object sender, EventArgs e)
         {
+            if (txtTolH.Text.Length > 0)
+            {
+                setHourSelector(Convert.ToInt16(txtTolH.Text), 23);
+            }
+            else
+            {
+                setHourSelector(9, 23);
+            }
             cmHourSelector.Show(txtIgH, new Point(10, 10));
         }
 

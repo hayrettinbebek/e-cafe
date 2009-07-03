@@ -64,13 +64,13 @@
             this.txtVegNet = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.pnlAddCikk = new System.Windows.Forms.Panel();
-            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR();
-            this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rAKTARTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
-            this.lblCikk = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnCikk = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.txtMegj = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.cmbRaktar = new System.Windows.Forms.ComboBox();
+            this.rAKTARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eCAFEDataSetRAKTAR = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR();
             this.lblPenz = new System.Windows.Forms.Label();
             this.txtEgys = new System.Windows.Forms.TextBox();
             this.txtMenny = new System.Windows.Forms.TextBox();
@@ -78,16 +78,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lblMert = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtMegj = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.lblCikk = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnCikk = new System.Windows.Forms.Button();
+            this.rAKTARTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bevetelSorBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlAddCikk.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -444,19 +444,126 @@
             this.pnlAddCikk.TabIndex = 11;
             this.pnlAddCikk.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAddCikk_Paint);
             // 
-            // eCAFEDataSetRAKTAR
+            // button6
             // 
-            this.eCAFEDataSetRAKTAR.DataSetName = "ECAFEDataSetRAKTAR";
-            this.eCAFEDataSetRAKTAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(189)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(293, 86);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(72, 23);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Felvisz";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(185, 86);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(66, 23);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "Mégse";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // txtMegj
+            // 
+            this.txtMegj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMegj.Location = new System.Drawing.Point(143, 60);
+            this.txtMegj.Name = "txtMegj";
+            this.txtMegj.Size = new System.Drawing.Size(265, 20);
+            this.txtMegj.TabIndex = 15;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(76, 62);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Megjegyzés";
+            // 
+            // cmbRaktar
+            // 
+            this.cmbRaktar.DataSource = this.rAKTARBindingSource;
+            this.cmbRaktar.DisplayMember = "RAKTAR_KOD";
+            this.cmbRaktar.FormattingEnabled = true;
+            this.cmbRaktar.Location = new System.Drawing.Point(443, 32);
+            this.cmbRaktar.Name = "cmbRaktar";
+            this.cmbRaktar.Size = new System.Drawing.Size(90, 21);
+            this.cmbRaktar.TabIndex = 13;
+            this.cmbRaktar.ValueMember = "RAKTAR_ID";
             // 
             // rAKTARBindingSource
             // 
             this.rAKTARBindingSource.DataMember = "RAKTAR";
             this.rAKTARBindingSource.DataSource = this.eCAFEDataSetRAKTAR;
             // 
-            // rAKTARTableAdapter
+            // eCAFEDataSetRAKTAR
             // 
-            this.rAKTARTableAdapter.ClearBeforeFill = true;
+            this.eCAFEDataSetRAKTAR.DataSetName = "ECAFEDataSetRAKTAR";
+            this.eCAFEDataSetRAKTAR.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lblPenz
+            // 
+            this.lblPenz.AutoSize = true;
+            this.lblPenz.Location = new System.Drawing.Point(364, 37);
+            this.lblPenz.Name = "lblPenz";
+            this.lblPenz.Size = new System.Drawing.Size(0, 13);
+            this.lblPenz.TabIndex = 12;
+            // 
+            // txtEgys
+            // 
+            this.txtEgys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEgys.Location = new System.Drawing.Point(299, 34);
+            this.txtEgys.Name = "txtEgys";
+            this.txtEgys.Size = new System.Drawing.Size(59, 20);
+            this.txtEgys.TabIndex = 10;
+            // 
+            // txtMenny
+            // 
+            this.txtMenny.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMenny.Location = new System.Drawing.Point(143, 34);
+            this.txtMenny.Name = "txtMenny";
+            this.txtMenny.Size = new System.Drawing.Size(59, 20);
+            this.txtMenny.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(440, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Raktár";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(296, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Egységár";
+            // 
+            // lblMert
+            // 
+            this.lblMert.AutoSize = true;
+            this.lblMert.Location = new System.Drawing.Point(208, 36);
+            this.lblMert.Name = "lblMert";
+            this.lblMert.Size = new System.Drawing.Size(0, 13);
+            this.lblMert.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(76, 37);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Mennyiség";
             // 
             // lblCikk
             // 
@@ -492,116 +599,9 @@
             this.btnCikk.UseVisualStyleBackColor = false;
             this.btnCikk.Click += new System.EventHandler(this.btnCikk_Click);
             // 
-            // cmbRaktar
+            // rAKTARTableAdapter
             // 
-            this.cmbRaktar.DataSource = this.rAKTARBindingSource;
-            this.cmbRaktar.DisplayMember = "RAKTAR_KOD";
-            this.cmbRaktar.FormattingEnabled = true;
-            this.cmbRaktar.Location = new System.Drawing.Point(443, 32);
-            this.cmbRaktar.Name = "cmbRaktar";
-            this.cmbRaktar.Size = new System.Drawing.Size(90, 21);
-            this.cmbRaktar.TabIndex = 13;
-            this.cmbRaktar.ValueMember = "RAKTAR_ID";
-            // 
-            // lblPenz
-            // 
-            this.lblPenz.AutoSize = true;
-            this.lblPenz.Location = new System.Drawing.Point(364, 37);
-            this.lblPenz.Name = "lblPenz";
-            this.lblPenz.Size = new System.Drawing.Size(0, 13);
-            this.lblPenz.TabIndex = 12;
-            // 
-            // txtEgys
-            // 
-            this.txtEgys.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEgys.Location = new System.Drawing.Point(299, 34);
-            this.txtEgys.Name = "txtEgys";
-            this.txtEgys.Size = new System.Drawing.Size(59, 20);
-            this.txtEgys.TabIndex = 10;
-            // 
-            // txtMenny
-            // 
-            this.txtMenny.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMenny.Location = new System.Drawing.Point(143, 34);
-            this.txtMenny.Name = "txtMenny";
-            this.txtMenny.Size = new System.Drawing.Size(59, 20);
-            this.txtMenny.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(395, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Raktár";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(239, 37);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Egységár";
-            // 
-            // lblMert
-            // 
-            this.lblMert.AutoSize = true;
-            this.lblMert.Location = new System.Drawing.Point(208, 36);
-            this.lblMert.Name = "lblMert";
-            this.lblMert.Size = new System.Drawing.Size(0, 13);
-            this.lblMert.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(76, 37);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Mennyiség";
-            // 
-            // txtMegj
-            // 
-            this.txtMegj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMegj.Location = new System.Drawing.Point(143, 60);
-            this.txtMegj.Name = "txtMegj";
-            this.txtMegj.Size = new System.Drawing.Size(265, 20);
-            this.txtMegj.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(76, 62);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Megjegyzés";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(189)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(293, 86);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(72, 23);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Felvisz";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(185, 86);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(66, 23);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "Mégse";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.rAKTARTableAdapter.ClearBeforeFill = true;
             // 
             // frmBevetel
             // 
@@ -632,8 +632,8 @@
             this.panel1.PerformLayout();
             this.pnlAddCikk.ResumeLayout(false);
             this.pnlAddCikk.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetRAKTAR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

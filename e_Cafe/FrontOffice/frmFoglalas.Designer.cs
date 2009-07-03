@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFoglalas));
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.keyb21 = new GUI.billentyu.keyb2();
             this.ctMinSelector = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,7 +88,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.keyb21 = new GUI.billentyu.keyb2();
             this.panel3.SuspendLayout();
             this.ctMinSelector.SuspendLayout();
             this.cmHourSelector.SuspendLayout();
@@ -114,6 +114,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(619, 266);
             this.panel3.TabIndex = 4;
+            // 
+            // keyb21
+            // 
+            this.keyb21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("keyb21.BackgroundImage")));
+            this.keyb21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.keyb21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.keyb21.Location = new System.Drawing.Point(0, 0);
+            this.keyb21.Name = "keyb21";
+            this.keyb21.Size = new System.Drawing.Size(619, 266);
+            this.keyb21.TabIndex = 0;
             // 
             // ctMinSelector
             // 
@@ -633,31 +643,22 @@
             this.shapeContainer1.TabIndex = 4;
             this.shapeContainer1.TabStop = false;
             // 
-            // keyb21
-            // 
-            this.keyb21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("keyb21.BackgroundImage")));
-            this.keyb21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.keyb21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.keyb21.Location = new System.Drawing.Point(0, 0);
-            this.keyb21.Name = "keyb21";
-            this.keyb21.Size = new System.Drawing.Size(619, 266);
-            this.keyb21.TabIndex = 0;
-            // 
             // frmFoglalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Yellow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(939, 625);
             this.ControlBox = false;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFoglalas";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TransparencyKey = System.Drawing.Color.Yellow;
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Load += new System.EventHandler(this.frmFoglalas_Load);
             this.LocationChanged += new System.EventHandler(this.frmFoglalas_LocationChanged);
             this.panel3.ResumeLayout(false);
