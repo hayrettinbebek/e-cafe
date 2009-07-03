@@ -27,5 +27,10 @@ namespace e_Cafe.Admin
         {
             _JOGTableAdapter.Update(dsJOG._JOG);
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
