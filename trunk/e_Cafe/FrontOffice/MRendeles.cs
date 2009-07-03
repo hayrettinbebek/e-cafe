@@ -873,7 +873,7 @@ namespace e_Cafe
 
         private void button11_Click_1(object sender, EventArgs e)
         {
-            if (needScroll < MaxScroll)
+            if ((needScroll + CikkCsopScrollPos) < MaxScroll)
             {
                 CikkCsopScrollPos++;
 
