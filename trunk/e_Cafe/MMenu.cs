@@ -56,7 +56,7 @@ namespace e_Cafe
             if (!Login(0)) { Application.Exit(); }
 
         }
-
+        #region Adatbázis frissítés 
         //new FileInfo(@"C:\SQL\DROP.sql")
         private void updateDB(FileInfo file)
         {
@@ -136,6 +136,7 @@ namespace e_Cafe
             }
 
         }
+        #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -371,11 +372,27 @@ namespace e_Cafe
             else
             {
                 
-                tmp_a.Text = tmp_a.ClickTime.ToString();
+                //tmp_a.Text = tmp_a.ClickTime.ToString();
                 if (tmp_a.ClickTime > 300)
                 {
                     #region Asztal info
+                    
+                    frmAsztalInfo fai = new frmAsztalInfo(tmp_a.aObj);
+                    int new_x = panel2.Width + tmp_a.Location.X;
+                    int new_y = tmp_a.Location.Y;
+                
+                    if ((tmp_a.Location.X + fai.Size.Width) >panel3.Width) {
+                        new_x = panel2.Width + panel3.Width - fai.Size.Width;
+                    }
+                    
+                    if ((tmp_a.Location.Y + fai.Size.Height) >panel3.Height) {
+                        new_y = panel3.Height - fai.Size.Height;
+                    }
+                    
 
+
+                    fai.Location = new Point(new_x, new_y);
+                    fai.Show();
                     #endregion
                 }
                 else
