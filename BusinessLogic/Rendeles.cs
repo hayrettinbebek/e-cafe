@@ -98,6 +98,37 @@ namespace BusinessLogic
             });
         }
 
+        public ColumnModel getColumnModelInfo()
+        {
+
+            //1. oszlop
+            //ImageColumn imageColumn = new ImageColumn("", 30);
+            //imageColumn.Editable = false;
+
+            NumberColumn numberColumn = new NumberColumn("db", 40);
+            numberColumn.Editable = false;
+
+            TextColumn ertekColumn = new TextColumn("érték", 150);
+            ertekColumn.Editable = false;
+            ertekColumn.Alignment = ColumnAlignment.Right;
+            return (new ColumnModel(new Column[] {numberColumn, ertekColumn} ));
+        }
+
+        public TableModel getTableModelInfo()
+        {
+
+            TableModel tmpMod = new TableModel(new Row[] { });
+
+            tmpMod.Rows.Add(new Row(new Cell[] {new Cell(OSSZ_DB),
+													new Cell(OSSZESEN.ToString("# ###") + " Ft")
+													}));
+
+
+            return (tmpMod);
+
+
+        }
+
         public TableModel getTableModel()
         {
             TableModel tmpMod = new TableModel( new Row[] {});
@@ -328,6 +359,25 @@ namespace BusinessLogic
             
             }
             
+        }
+
+        public int OSSZ_DB
+        {
+            get
+            {
+
+                int iTmpSum = 0;
+
+                var ret_cikk =
+                    from c in lRendelesSor
+                    select c;
+                ret_cikk.Each(c => iTmpSum++);
+
+
+                return (iTmpSum);
+
+            }
+
         }
 
         public double FIZETENDO
