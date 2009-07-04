@@ -180,6 +180,12 @@
     <Compile Include="FrontOffice\frmAsztalInfo.Designer.cs">
       <DependentUpon>frmAsztalInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Keszlet\frmKeszletKarton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keszlet\frmKeszletKarton.Designer.cs">
+      <DependentUpon>frmKeszletKarton.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQL\DataSets\dsALTALANOS_KEDVEZMENY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -709,6 +715,9 @@
     <EmbeddedResource Include="FrontOffice\MMPartnerek.resx">
       <DependentUpon>MMPartnerek.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keszlet\frmKeszletKarton.resx">
+      <DependentUpon>frmKeszletKarton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Keszlet\frmLeltarIv.resx">
       <DependentUpon>frmLeltarIv.cs</DependentUpon>
@@ -1348,6 +1357,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\BusinessLogic.CikkAr.datasource" />
+    <None Include="Properties\DataSources\BusinessLogic.KeszletSor.datasource" />
     <None Include="SQL\update_034.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
