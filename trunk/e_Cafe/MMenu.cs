@@ -23,6 +23,7 @@ namespace e_Cafe
         Asztalok a;
         public bool _Rendel;
         MainMenuBtn tlpButtons;
+        private bool login_ok = false;
 
         private static int C_HELYEK_WIDTH = 120;
         private static int C_HELYEK_HEIGHT = 60;
@@ -50,10 +51,10 @@ namespace e_Cafe
             DEFS.LoadPossibleOpenDays();
             DEFS.LoadNyitottNap();
             DEFS.SendShortMessage("Nyitott nap:" + DEFS.NyitNap_EV.ToString() + DEFS.NyitNap_HO.ToString() + DEFS.NyitNap_NAP.ToString(), 1000);
-            
 
-            
-            if (!Login(0)) { Application.Exit(); }
+
+            login_ok = Login(0);
+            //if (!Login(0)) { Application.Exit(); }
 
         }
         #region Adatbázis frissítés 
@@ -157,6 +158,7 @@ namespace e_Cafe
 
         private void MMenu_Load(object sender, EventArgs e)
         {
+            if (!login_ok) { Application.Exit(); }
             DEFS.CheckOpenDay();
             //blObj = new TBLObj(-1, DEFS.ConSTR, FieldInfo);
 
@@ -373,7 +375,7 @@ namespace e_Cafe
             {
                 
                 //tmp_a.Text = tmp_a.ClickTime.ToString();
-                if (tmp_a.ClickTime > 300)
+                if ((tmp_a.ClickTime > 300) && (tmp_a.aObj.fRENDELES_ID >0))
                 {
                     #region Asztal info
                     
@@ -392,6 +394,7 @@ namespace e_Cafe
 
 
                     fai.Location = new Point(new_x, new_y);
+                    
                     fai.Show();
                     #endregion
                 }

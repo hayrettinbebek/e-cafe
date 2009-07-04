@@ -110,7 +110,7 @@ namespace BusinessLogic
             return (tmpl);
         }
 
-    }
+     }
 
     public class Asztal_List
     {

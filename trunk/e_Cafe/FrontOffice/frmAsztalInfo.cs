@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
+using XPTable.Renderers;
+
 
 namespace e_Cafe.FrontOffice
 {
@@ -18,6 +20,13 @@ namespace e_Cafe.FrontOffice
             InitializeComponent();
             used_asztal = aa;
             lblAsztalSzam.Text = aa.fASZTAL_SZAM + " . asztal";
+            Rendeles r = new Rendeles(aa.fASZTAL_ID, aa.fRENDELES_ID);
+            tblRendelesek.ColumnModel = r.getColumnModelInfo();
+            tblRendelesek.HeaderRenderer = new GradientHeaderRenderer();
+            tblRendelesek.TableModel = r.getTableModelInfo();
+
+            tblRendelesek.Font = DEFS.fRendelInfo;
+            tblRendelesek.TableModel.RowHeight = 40;
         }
 
         private void btnNem_Click(object sender, EventArgs e)
@@ -29,5 +38,7 @@ namespace e_Cafe.FrontOffice
         {
             this.Close();
         }
+
+
     }
 }
