@@ -23,6 +23,7 @@ namespace e_Cafe
         public BevetelSor retSor;
         private double afa_szaz;
 
+        private BevetelSor aktSor;
 
 
         public frmBevetel()
@@ -38,7 +39,7 @@ namespace e_Cafe
             }
             else
             {
-                aktBevfej = new Bevetel_fej(bevfej_id, new SqlConnection(DEFS.ConSTR));
+                aktBevfej = new Bevetel_fej(bevfej_id);
 
             }
             p_id = aktBevfej.PARTNER_ID;
@@ -111,6 +112,15 @@ namespace e_Cafe
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (SaveFej())
+            {
+                this.rAKTARTableAdapter.Fill(this.eCAFEDataSetRAKTAR.RAKTAR);
+                pnlAddCikk.Visible = true;
+                initGrid();
+            }
+
+            aktSor = null;
+            dataGridView1.Enabled = false;
             lblCikk.Text = "Kérem válasszon cikket!";
             cikk_id = -1;
 
@@ -124,26 +134,7 @@ namespace e_Cafe
             txtEgys.Text = "";
 
 
-            if (SaveFej())
-            {
-                this.rAKTARTableAdapter.Fill(this.eCAFEDataSetRAKTAR.RAKTAR);
-                pnlAddCikk.Visible = true;
-                //frmBevetelSor fs = new frmBevetelSor();
-                //fs.ShowDialog();
-                
 
-                
-                //if (fs.DialogResult == DialogResult.OK)
-                //{
-                //    fs.retSor.BEVETEL_FEJ_ID = bevfej_id;
-
-
-                //    aktBevfej.lBevetelSorok.Add(fs.retSor);
-                //    DEFS.DebugLog("Sor hozáfűzve" + fs.retSor.BEVETEL_FEJ_ID.ToString());
-
-                //}
-                initGrid();
-            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -151,16 +142,19 @@ namespace e_Cafe
             SaveFej();
             SaveSorok();
 
-            foreach (var bs in aktBevfej.lBevetelSorok)
+            if (DEFS.Kerdes("Szeretné a rendelés készletre vezetni és ezzel a megrendelést végelegesíteni?"))
             {
-                if (bs.FELADVA == 0)
+                foreach (var bs in aktBevfej.lBevetelSorok)
                 {
-                    bs.FELADVA = 1;
-                    bs.Save();
+                    if (bs.FELADVA == 0)
+                    {
+                        bs.FELADVA = 1;
+                        bs.Save();
+                    }
                 }
+                aktBevfej.KONYVELT = true;
+                aktBevfej.Save();
             }
-            aktBevfej.KONYVELT = true;
-            aktBevfej.Save();
 
 
             DialogResult = DialogResult.OK;
@@ -194,7 +188,24 @@ namespace e_Cafe
             txtVegAfa.Text = vegAfa.ToString("# ##0.00");
             txtVegBrutto.Text = vegBrutto.ToString("# ##0.00");
             txtVegNet.Text = vegNet.ToString("# ##0.00");
+            this.rAKTARTableAdapter.Fill(this.eCAFEDataSetRAKTAR.RAKTAR);
+            if (bevetelSorBindingSource.Current != null)
+            {
+                aktSor = ((BevetelSor)bevetelSorBindingSource.Current);
 
+                cikk_id = aktSor.CIKK_ID;
+                Cikk tc = new Cikk(cikk_id,true);
+                lblMert.Text = tc.MEGYS_MEGNEVEZES;
+                lblPenz.Text = "Ft / " + tc.MEGYS_MEGNEVEZES.ToString();
+                txtMegj.Text = aktSor.MEGJEGYZES;
+                txtMenny.Text = aktSor.MENNY.ToString();
+                txtEgys.Text = aktSor.BESZ_AR.ToString();
+
+                cmbRaktar.SelectedValue = tc.ALAP_RAKTAR;
+                lblCikk.Text = tc.MEGNEVEZES;
+                afa_szaz = tc.AFA_SZAZ;
+                
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -297,47 +308,81 @@ namespace e_Cafe
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
-
-            if (CheckInput())
+            if (aktSor != null)
             {
-                retSor = new BevetelSor();
-                retSor.BESZ_AR = Convert.ToDouble(txtEgys.Text);
-                retSor.MENNY = Convert.ToDouble(txtMenny.Text);
-                retSor.NETTO_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text);
-                retSor.MEGJEGYZES = txtMegj.Text;
-                retSor.FELADVA = 0;
-                retSor.CIKK_ID = cikk_id;
-                retSor.RAKTAR_ID = (int)cmbRaktar.SelectedValue;
+                if (CheckInput())
+                {
+                    
+                    aktSor.BESZ_AR = Convert.ToDouble(txtEgys.Text);
+                    aktSor.MENNY = Convert.ToDouble(txtMenny.Text);
+                    aktSor.NETTO_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text);
+                    aktSor.MEGJEGYZES = txtMegj.Text;
+                    aktSor.FELADVA = 0;
+                    aktSor.CIKK_ID = cikk_id;
+                    aktSor.RAKTAR_ID = (int)cmbRaktar.SelectedValue;
 
-                retSor.AFA_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text) * (afa_szaz / 100);
-                retSor.BRUTTO_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text) * (1 + (afa_szaz / 100));
-                pnlAddCikk.Visible = false;
-                
+                    aktSor.AFA_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text) * (afa_szaz / 100);
+                    aktSor.BRUTTO_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text) * (1 + (afa_szaz / 100));
+                    pnlAddCikk.Visible = false;
+                    aktSor.Save();
+
+                }
+                else
+                {
+                    aktSor = null;
+                    pnlAddCikk.Visible = false;
+                }
             }
             else
             {
-                retSor = null;
-                pnlAddCikk.Visible = false;
+                if (CheckInput())
+                {
+                    retSor = new BevetelSor();
+                    retSor.BESZ_AR = Convert.ToDouble(txtEgys.Text);
+                    retSor.MENNY = Convert.ToDouble(txtMenny.Text);
+                    retSor.NETTO_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text);
+                    retSor.MEGJEGYZES = txtMegj.Text;
+                    retSor.FELADVA = 0;
+                    retSor.CIKK_ID = cikk_id;
+                    retSor.RAKTAR_ID = (int)cmbRaktar.SelectedValue;
+
+                    retSor.AFA_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text) * (afa_szaz / 100);
+                    retSor.BRUTTO_ERTEK = Convert.ToDouble(txtMenny.Text) * Convert.ToDouble(txtEgys.Text) * (1 + (afa_szaz / 100));
+                    pnlAddCikk.Visible = false;
+
+                }
+                else
+                {
+                    retSor = null;
+                    pnlAddCikk.Visible = false;
+                }
+
+                if (retSor != null)
+                {
+                    retSor.BEVETEL_FEJ_ID = bevfej_id;
+
+
+                    aktBevfej.lBevetelSorok.Add(retSor);
+                    DEFS.DebugLog("Sor hozáfűzve" + retSor.BEVETEL_FEJ_ID.ToString());
+                    retSor = null;
+                }
+                
+
             }
-
-            if (retSor != null)
-            {
-                retSor.BEVETEL_FEJ_ID = bevfej_id;
-
-
-                aktBevfej.lBevetelSorok.Add(retSor);
-                DEFS.DebugLog("Sor hozáfűzve" + retSor.BEVETEL_FEJ_ID.ToString());
-                retSor = null;
-            }
+            dataGridView1.Enabled = true;
             initGrid();
-            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             retSor = null;
             pnlAddCikk.Visible = false;
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            pnlAddCikk.Visible = true;
+
         }
     }
 }

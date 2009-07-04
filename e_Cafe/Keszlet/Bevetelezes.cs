@@ -21,10 +21,18 @@ namespace e_Cafe
         {
             if (eCAFEDataSetBEVETELEZESBindingSource.Current != null)
             {
-                frmBevetel f = new frmBevetel();
-                f.bevfej_id = (int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"];
+                Bevetel_fej bf = new Bevetel_fej((int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"]);
+                if (!bf.KONYVELT)
+                {
+                    frmBevetel f = new frmBevetel();
+                    f.bevfej_id = bf.BEVETEL_FEJ_ID;
 
-                f.ShowDialog();
+                    f.ShowDialog();
+                }
+                else
+                {
+                    DEFS.SendInfoMessage("A bevételezés nem módosítható, már könyvelésre került!");
+                }
             }
         }
 
@@ -165,7 +173,7 @@ namespace e_Cafe
                 }
                 else
                 {
-                    Bevetel_fej bf = new Bevetel_fej((int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"], new SqlConnection(DEFS.ConSTR));
+                    Bevetel_fej bf = new Bevetel_fej((int)((DataRowView)eCAFEDataSetBEVETELEZESBindingSource.Current)["BEVETEL_FEJ_ID"]);
                     foreach (var bs in bf.lBevetelSorok)
                     {
                         if (bs.FELADVA == 0)

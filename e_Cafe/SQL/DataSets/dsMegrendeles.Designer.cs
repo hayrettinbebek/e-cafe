@@ -1446,7 +1446,7 @@ namespace e_Cafe.SQL.DataSets.dsMegrendelesTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT     MEGRENDELES_FEJ.MEGRENDELES_FEJ_ID, MEGRENDELES_FEJ.DATUM, MEGRENDELES_FEJ.SZALLITO_ID, MEGRENDELES_FEJ.SORSZAM, 
@@ -1462,6 +1462,14 @@ FROM         MEGRENDELES_FEJ INNER JOIN
                       PARTNER ON MEGRENDELES_FEJ.SZALLITO_ID = PARTNER.PARTNER_ID
 WHERE     (MEGRENDELES_FEJ.LEZART = 1)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT     MEGRENDELES_FEJ.MEGRENDELES_FEJ_ID, MEGRENDELES_FEJ.DATUM, MEGRENDELES_FEJ.SZALLITO_ID, MEGRENDELES_FEJ.SORSZAM, 
+                      MEGRENDELES_FEJ.LEZART, PARTNER.P_NEV
+FROM         MEGRENDELES_FEJ INNER JOIN
+                      PARTNER ON MEGRENDELES_FEJ.SZALLITO_ID = PARTNER.PARTNER_ID
+WHERE LEZART = 0";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1503,6 +1511,28 @@ WHERE     (MEGRENDELES_FEJ.LEZART = 1)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual dsMegrendeles.MEGRENDELES_FEJDataTable GetDataArch() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            dsMegrendeles.MEGRENDELES_FEJDataTable dataTable = new dsMegrendeles.MEGRENDELES_FEJDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillNyitott(dsMegrendeles.MEGRENDELES_FEJDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsMegrendeles.MEGRENDELES_FEJDataTable GetDataNyitott() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             dsMegrendeles.MEGRENDELES_FEJDataTable dataTable = new dsMegrendeles.MEGRENDELES_FEJDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

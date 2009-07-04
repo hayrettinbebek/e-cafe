@@ -131,8 +131,9 @@ namespace BusinessLogic
         }
 
 
-        public Bevetel_fej(int pBevFej_id, SqlConnection c)
+        public Bevetel_fej(int pBevFej_id)
         {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
             if (c.State == ConnectionState.Closed) { c.Open(); }
             SqlCommand cmd = new SqlCommand();
 
@@ -177,7 +178,7 @@ namespace BusinessLogic
             rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                lBevetelSorok.Add(new BevetelSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR)));
+                lBevetelSorok.Add(new BevetelSor((int)rdr["SOR_ID"]));
 
             }
             rdr.Close();
@@ -284,7 +285,7 @@ namespace BusinessLogic
         public void addTetel(int pSor)
         {
 
-            lBevetelSorok.Add(new BevetelSor(pSor,new SqlConnection(DEFS.ConSTR)));
+            lBevetelSorok.Add(new BevetelSor(pSor));
         }
 
         public void addTetel()
@@ -313,7 +314,7 @@ namespace BusinessLogic
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                Bevetel_fej t = new Bevetel_fej((int)rdr["BEVETEL_FEJ_ID"], new SqlConnection(DEFS.ConSTR));
+                Bevetel_fej t = new Bevetel_fej((int)rdr["BEVETEL_FEJ_ID"]);
 
 
                 lBevFej.Add(t);
@@ -523,8 +524,9 @@ namespace BusinessLogic
         }
 
 
-        public BevetelSor(int pBevSor_id, SqlConnection c)
+        public BevetelSor(int pBevSor_id)
         {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
             if (c.State == ConnectionState.Closed) { c.Open(); }
             SqlCommand cmd = new SqlCommand();
 
@@ -726,5 +728,41 @@ namespace BusinessLogic
     {
         public static List<BevetelSor> BevetelSorok = new List<BevetelSor>();
 
+
+        public static int GenerateBevetelezesFromMegrendeles(Megrendeles m)
+        {
+            Bevetel_fej bfej = new Bevetel_fej();
+            bfej.PARTNER_ID = m.SZALLITO_ID;
+            bfej.KONYVELT = false;
+            bfej.SZALLITOLEVEL_SZAM = "<HIANYZIK>";
+            bfej.SZAMLASZAM = "<HIANYZIK>";
+            bfej.DATUM = DateTime.Now;
+            bfej.BIZONYLATSZAM = "";
+
+            int akt_bevfej = bfej.Save();
+
+            foreach (var m_sor in m.getSorok())
+            {
+                BevetelSor retSor = new BevetelSor();
+                retSor.BEVETEL_FEJ_ID = akt_bevfej;
+                retSor.BESZ_AR = m_sor.BESZ_AR;
+                retSor.MENNY = m_sor.MENNYISEG;
+                retSor.NETTO_ERTEK = m_sor.MENNYISEG * m_sor.BESZ_AR;
+                retSor.MEGJEGYZES = "automatikusan generált sor";
+                retSor.FELADVA = 0;
+                retSor.CIKK_ID = m_sor.CIKK.CIKK_ID;
+                retSor.RAKTAR_ID = m_sor.CIKK.ALAP_RAKTAR;
+
+                retSor.AFA_ERTEK = m_sor.MENNYISEG * m_sor.BESZ_AR * (m_sor.CIKK.AFA_SZAZ / 100);
+                retSor.BRUTTO_ERTEK = m_sor.MENNYISEG * m_sor.BESZ_AR * (1 + (m_sor.CIKK.AFA_SZAZ / 100));
+
+
+                bfej.lBevetelSorok.Add(retSor);
+                retSor.Save();
+            }
+
+            return akt_bevfej;
+
+        }
     }
 }
