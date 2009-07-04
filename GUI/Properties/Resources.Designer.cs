@@ -242,6 +242,13 @@ namespace GUI.Properties {
             }
         }
         
+        public static System.Drawing.Bitmap tesztuzem {
+            get {
+                object obj = ResourceManager.GetObject("tesztuzem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         public static System.Drawing.Bitmap uresGomb {
             get {
                 object obj = ResourceManager.GetObject("uresGomb", resourceCulture);

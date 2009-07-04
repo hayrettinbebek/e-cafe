@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.partnerButton1 = new GUI.PartnerButton();
             this.SuspendLayout();
             // 
             // button1
@@ -74,33 +72,11 @@
             this.textBox1.TabIndex = 3;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
-            // partnerButton1
-            // 
-            this.partnerButton1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.partnerButton1.BackColor = System.Drawing.Color.Transparent;
-            this.partnerButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("partnerButton1.BackgroundImage")));
-            this.partnerButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.partnerButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.partnerButton1.FlatAppearance.BorderSize = 2;
-            this.partnerButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.partnerButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.partnerButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.partnerButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.partnerButton1.fPARTNER = null;
-            this.partnerButton1.Location = new System.Drawing.Point(115, 108);
-            this.partnerButton1.Name = "partnerButton1";
-            this.partnerButton1.Size = new System.Drawing.Size(150, 50);
-            this.partnerButton1.TabIndex = 4;
-            this.partnerButton1.TabStop = true;
-            this.partnerButton1.Text = "partnerButton1";
-            this.partnerButton1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 273);
-            this.Controls.Add(this.partnerButton1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -119,7 +95,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
-        private GUI.PartnerButton partnerButton1;
     }
 }
 

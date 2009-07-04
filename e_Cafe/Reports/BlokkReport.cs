@@ -84,13 +84,34 @@ namespace e_Cafe.Reports
             // Finish a layout that we started
             // builder.FinishLayeredLayout();
             // 
+            
+
             builder.FinishLayeredLayout();
+
             #endregion
 
             builder.AddText("Blokk sorszáma:", TextStyle.Normal);
             builder.AddText(" ");
 
             height += 2 * sor_magas;
+
+
+            builder.StartLayeredLayout(false, false);
+            // Tesztüzem
+            SectionBox box_teszt = new SectionBox();
+            box_teszt.WidthPercent = 30;
+            //box.Height = 1;
+            box_teszt.HorizontalAlignment = HorizontalAlignment.Center;
+            box.VerticalAlignment = VerticalAlignment.Top;
+            //box.Border = reportDocument.NormalPen;
+            SectionImage image_teszt = new SectionImage(global::GUI.Properties.Resources.tesztuzem);
+            image_teszt.Transparency = 80;
+            //image.PreserveAspectRatio = false;
+            box_teszt.AddSection(image_teszt);
+            builder.AddSection(box_teszt);
+
+           
+
 
             #region sorok
             DataView dv = iSzamla.GetBlokkDataView();
@@ -122,7 +143,8 @@ namespace e_Cafe.Reports
 
 
             #endregion
-
+builder.FinishLayeredLayout();
+            
             #region végösszesen
             DataView dv2 = iSzamla.GetBlokkOsszegDataView();
             builder.DefaultTablePen = null;
@@ -135,6 +157,9 @@ namespace e_Cafe.Reports
 
 
             #endregion
+
+            
+
 
             builder.AddText(" ");
 

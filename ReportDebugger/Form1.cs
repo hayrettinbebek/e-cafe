@@ -26,7 +26,7 @@ namespace ReportDebugger
         private void button1_Click(object sender, EventArgs e)
         {
             doPrinting dp = new doPrinting();
-            dp.setReportMaker(new BlokkReport(26));
+            dp.setReportMaker(new BlokkReport(35));
             dp.doPreview();
         }
 
