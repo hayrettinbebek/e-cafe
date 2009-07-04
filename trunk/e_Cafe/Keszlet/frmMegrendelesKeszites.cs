@@ -25,7 +25,7 @@ namespace e_Cafe.Keszlet
         private void frmMegrendelesKeszites_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dsMegrendeles.MEGRENDELES_FEJ' table. You can move, or remove it, as needed.
-            this.mEGRENDELES_FEJTableAdapter.Fill(this.dsMegrendeles.MEGRENDELES_FEJ);
+            this.mEGRENDELES_FEJTableAdapter.FillNyitott(this.dsMegrendeles.MEGRENDELES_FEJ);
 
             this.pARTNERTableAdapter.FillSzallito(this.dsPartnerek.PARTNER, 1);
             tsKilep.Image = global::GUI.Properties.Resources.Close.ToBitmap();
@@ -58,7 +58,7 @@ namespace e_Cafe.Keszlet
                     cikkBindingSource.Add(c);
                 }
                 megrendelesSorBindingSource.Clear();
-                foreach (var m in aktMegr.lMegrendelesSorok)
+                foreach (var m in aktMegr.getSorok())
                 {
                     megrendelesSorBindingSource.Add(m);
                 }
@@ -106,7 +106,7 @@ namespace e_Cafe.Keszlet
         {
             aktMegr = new Megrendeles((int)cmbSzallito.SelectedValue);
             aktMegr.Save();
-            mEGRENDELES_FEJTableAdapter.Fill(dsMegrendeles.MEGRENDELES_FEJ);
+            mEGRENDELES_FEJTableAdapter.FillNyitott(dsMegrendeles.MEGRENDELES_FEJ);
             
         }
 
@@ -124,17 +124,20 @@ namespace e_Cafe.Keszlet
                 foreach (var m in aktMegr.lMegrendelesSorok)
                 {
                     megrendelesSorBindingSource.Add(m);
+                    
                 }
+                
             }
             else
             {
                 DEFS.SendInfoMessage("Ez a megrednelés már lezárásra került nem rögzíthet további tételeket!");
             }
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            foreach (var m in aktMegr.lMegrendelesSorok)
+            foreach (var m in aktMegr.getSorok())
             {
                 m.Save();
             }
@@ -156,11 +159,33 @@ namespace e_Cafe.Keszlet
                 {
                     m.Save();
                 }
+                this.Close();
             }
             else
             {
                 this.Close();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ((MegrendelesSor)megrendelesSorBindingSource.Current).Delete();
+            megrendelesSorBindingSource.Clear();
+            foreach (var m in aktMegr.getSorok())
+            {
+                megrendelesSorBindingSource.Add(m);
+
+            }
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnKilep_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

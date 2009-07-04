@@ -689,6 +689,17 @@ namespace BusinessLogic
         vezetekes = 3
 
     }
+
+    public enum MegrendelesAllapot
+    {
+        [StringValue("Nyitott")]
+        mobil = 0,
+        [StringValue("Elküldött/Bevételezhető")]
+        email = 1,
+        [StringValue("Bevételezett")]
+        vezetekes = 2
+
+    }
     public enum CimTipus
     {
         [StringValue("Székhely")]
@@ -746,10 +757,27 @@ namespace BusinessLogic
             set { _value = value; }
         }
         #endregion
+
+        #region VALUE_MEMBER_INT
+        private int _value_int;
+        public int VALUE_MEMBER_INT
+        {
+            get { return (_value_int); }
+            set { _value_int = value; }
+        }
+        #endregion
         public DynCombo(string pDisp, string pValue)
         {
             _disp = pDisp;
             _value = pValue;
+
+        }
+
+
+        public DynCombo(string pDisp, int pValue)
+        {
+            _disp = pDisp;
+            _value_int = pValue;
 
         }
 

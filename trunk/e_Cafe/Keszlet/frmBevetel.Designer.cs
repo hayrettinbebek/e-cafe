@@ -190,6 +190,7 @@
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.Size = new System.Drawing.Size(967, 214);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // sORIDDataGridViewTextBoxColumn
             // 

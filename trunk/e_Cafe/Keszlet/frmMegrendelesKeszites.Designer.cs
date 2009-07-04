@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpFej = new System.Windows.Forms.TabPage();
+            this.pnlLezart = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnKilep = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbSzallito = new System.Windows.Forms.ComboBox();
@@ -50,6 +52,8 @@
             this.dsMegrendeles = new e_Cafe.SQL.DataSets.dsMegrendeles();
             this.tpTetelek = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlLezart2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.chkMind = new System.Windows.Forms.RadioButton();
             this.chkSzallito = new System.Windows.Forms.RadioButton();
@@ -71,9 +75,6 @@
             this.tsKilep = new System.Windows.Forms.ToolStripButton();
             this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.DataSets.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
             this.pARTNERTableAdapter = new e_Cafe.SQL.DataSets.dsPartnerekTableAdapters.PARTNERTableAdapter();
-            this.btnKilep = new System.Windows.Forms.Button();
-            this.pnlLezart = new System.Windows.Forms.Panel();
-            this.pnlLezart2 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tpFej.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -118,6 +119,13 @@
             this.tpFej.Text = "Megrendelés adatok";
             this.tpFej.UseVisualStyleBackColor = true;
             // 
+            // pnlLezart
+            // 
+            this.pnlLezart.Location = new System.Drawing.Point(151, 3);
+            this.pnlLezart.Name = "pnlLezart";
+            this.pnlLezart.Size = new System.Drawing.Size(29, 27);
+            this.pnlLezart.TabIndex = 4;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnKilep);
@@ -130,6 +138,16 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Új megrendelés készítése";
+            // 
+            // btnKilep
+            // 
+            this.btnKilep.Location = new System.Drawing.Point(275, 288);
+            this.btnKilep.Name = "btnKilep";
+            this.btnKilep.Size = new System.Drawing.Size(51, 57);
+            this.btnKilep.TabIndex = 3;
+            this.btnKilep.Text = "Kilépés";
+            this.btnKilep.UseVisualStyleBackColor = true;
+            this.btnKilep.Click += new System.EventHandler(this.btnKilep_Click);
             // 
             // button2
             // 
@@ -285,6 +303,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.pnlLezart2);
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.chkMind);
             this.panel2.Controls.Add(this.chkSzallito);
@@ -295,9 +314,26 @@
             this.panel2.Size = new System.Drawing.Size(342, 333);
             this.panel2.TabIndex = 2;
             // 
+            // pnlLezart2
+            // 
+            this.pnlLezart2.Location = new System.Drawing.Point(283, 13);
+            this.pnlLezart2.Name = "pnlLezart2";
+            this.pnlLezart2.Size = new System.Drawing.Size(49, 49);
+            this.pnlLezart2.TabIndex = 5;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(290, 160);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(34, 76);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "<--";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(290, 117);
+            this.button3.Location = new System.Drawing.Point(290, 78);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(34, 76);
             this.button3.TabIndex = 3;
@@ -442,6 +478,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(722, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripButton1
             // 
@@ -479,29 +516,6 @@
             // pARTNERTableAdapter
             // 
             this.pARTNERTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnKilep
-            // 
-            this.btnKilep.Location = new System.Drawing.Point(251, 322);
-            this.btnKilep.Name = "btnKilep";
-            this.btnKilep.Size = new System.Drawing.Size(75, 23);
-            this.btnKilep.TabIndex = 3;
-            this.btnKilep.Text = "Kilépés";
-            this.btnKilep.UseVisualStyleBackColor = true;
-            // 
-            // pnlLezart
-            // 
-            this.pnlLezart.Location = new System.Drawing.Point(151, 3);
-            this.pnlLezart.Name = "pnlLezart";
-            this.pnlLezart.Size = new System.Drawing.Size(29, 27);
-            this.pnlLezart.TabIndex = 4;
-            // 
-            // pnlLezart2
-            // 
-            this.pnlLezart2.Location = new System.Drawing.Point(283, 13);
-            this.pnlLezart2.Name = "pnlLezart2";
-            this.pnlLezart2.Size = new System.Drawing.Size(49, 49);
-            this.pnlLezart2.TabIndex = 5;
             // 
             // frmMegrendelesKeszites
             // 
@@ -585,5 +599,6 @@
         private System.Windows.Forms.Button btnKilep;
         private System.Windows.Forms.Panel pnlLezart;
         private System.Windows.Forms.Panel pnlLezart2;
+        private System.Windows.Forms.Button button4;
     }
 }

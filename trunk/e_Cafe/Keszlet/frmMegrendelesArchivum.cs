@@ -31,8 +31,18 @@ namespace e_Cafe.Keszlet
             // TODO: This line of code loads data into the 'dsMegrendeles.MEGRENDELES_SOR' table. You can move, or remove it, as needed.
             this.mEGRENDELES_SORTableAdapter.Fill (this.dsMegrendeles.MEGRENDELES_SOR);
             // TODO: This line of code loads data into the 'dsMegrendeles.MEGRENDELES_FEJ' table. You can move, or remove it, as needed.
+
+            dynComboBindingSource.Clear();
+            StringEnum mt = new StringEnum(typeof(MegrendelesAllapot));
+            for (int cy = 0; cy <= Enum.GetValues(typeof(MegrendelesAllapot)).Length - 1; cy++)
+            {
+                int value = (int)Enum.Parse(typeof(MegrendelesAllapot), Enum.GetName(typeof(MegrendelesAllapot), cy ));
+                dynComboBindingSource.Add(new DynCombo(mt.GetStringValue(Enum.GetName(typeof(MegrendelesAllapot), cy )), value));
+            }
+
             if (LoadType == LoadTypes.select)
             {
+                // Az 1-ES LEZART kodúak jönnek csak fel ezeket lehet bevételezni.
                 this.mEGRENDELES_FEJTableAdapter.FillArch(this.dsMegrendeles.MEGRENDELES_FEJ);
             }
             else
@@ -47,7 +57,12 @@ namespace e_Cafe.Keszlet
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             aktMegr = new Megrendeles((int)((DataRowView)mEGRENDELESFEJBindingSource.Current)["MEGRENDELES_FEJ_ID"], new SqlConnection(DEFS.ConSTR));
-            MessageBox.Show(aktMegr.MEGRENDELES_FEJ_ID.ToString());
+            frmBevetel f = new frmBevetel();
+            f.bevfej_id = TemporaryBevetelSorok.GenerateBevetelezesFromMegrendeles(aktMegr);
+
+            f.ShowDialog();
+
+           
         }
     }
 }

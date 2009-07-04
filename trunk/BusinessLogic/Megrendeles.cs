@@ -75,7 +75,7 @@ namespace BusinessLogic
             _DATUM = DateTime.Now;
 
         }
-
+        public List<MegrendelesSor> lMegrendelesSorok = new List<MegrendelesSor>();
 
         public Megrendeles(int pM_FejId, SqlConnection c)
         {
@@ -107,20 +107,6 @@ namespace BusinessLogic
 
             }
             rdr.Close();
-            cmd.CommandType = CommandType.Text;
-
-            cmd.CommandText = "SELECT SOR_ID FROM MEGRENDELES_SOR WHERE FEJ_ID =" + pM_FejId.ToString();
-
-            
-
-            rdr = cmd.ExecuteReader();
-            while (rdr.Read())
-            {
-                lMegrendelesSorok.Add(new MegrendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR)));
-
-            }
-            rdr.Close();
-
 
             c.Close();
             isModified = false;
@@ -207,7 +193,36 @@ namespace BusinessLogic
             return (new_p_id);
         }
 
-        public List<MegrendelesSor> lMegrendelesSorok = new List<MegrendelesSor>();
+        public List<MegrendelesSor> getSorok()
+        {
+
+            lMegrendelesSorok.Clear();
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT SOR_ID FROM MEGRENDELES_SOR WHERE FEJ_ID =" + _MEGRENDELES_FEJ_ID.ToString();
+            SqlDataReader rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                lMegrendelesSorok.Add(new MegrendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR)));
+
+            }
+            rdr.Close();
+
+
+            c.Close();
+
+            return lMegrendelesSorok;
+        }
+
+        
 
         public void addTetel(int pSor)
         {
@@ -428,6 +443,27 @@ namespace BusinessLogic
             //DEFS.SendSaveErrMessage(new_p_id.ToString() +" : Sikertelen bevlételezés mentés");
 
             _SOR_ID = new_p_id;
+
+            c.Close();
+        }
+
+        public void Delete()
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+
+            cmd.CommandText = "DELETE FROM  MEGRENDELES_SOR WHERE  SOR_ID= @SOR_ID";
+            cmd.Parameters.Add(new SqlParameter("SOR_ID", SqlDbType.Int));
+            cmd.Parameters["SOR_ID"].Value = _SOR_ID;
+
+
+            cmd.ExecuteNonQuery();
+
 
             c.Close();
         }
