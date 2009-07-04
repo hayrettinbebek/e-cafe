@@ -301,7 +301,9 @@ namespace e_Cafe
 
         private void készletkartonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmKeszletKarton fa = new frmKeszletKarton();
+            fa.MdiParent = this;
+            fa.Show();
         }
 
         private void selejtezésToolStripMenuItem_Click(object sender, EventArgs e)

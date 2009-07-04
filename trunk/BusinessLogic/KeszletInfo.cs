@@ -1,8 +1,10 @@
 ﻿using System.Text;
 using System.Data;
 using System.Linq;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using NSpring.Logging;
 
 namespace BusinessLogic
 {
@@ -54,34 +56,6 @@ namespace BusinessLogic
         }
 
 
-        //public static List<KeszletSor> getAktKeszletKarton()
-        //{
-
-
-
-        //}
-
-//        select kf.KESZLET_NYITO,
-//       KF.KESZLET_ERTEK_NYITO ,
-//    kf.beszerzesi_ar,
-//    kf.CIKK_ID,
-//    r.RAKTAR_KOD,
-//    c.CIKKCSOPORT_ID,
-//    m.MEGYS_MEGNEVEZES,
-//    c.MINIMUM_KESZLET,
-//    c.OPTIMALIS_KESZLET
-
-
-//from KESZLET_FEJ kf
-//inner join nap_nyitas n on kf.EV = n.EV and kf.HO = n.HO and kf.NAP = n.NAP
-//inner join CIKK c on kf. CIKK_ID = c.CIKK_ID
-//inner join MEGYS m on c.MEGYS_ID = m.MEGYS_ID
-//inner join RAKTAR r on kf.RAKTAR_ID = r.RAKTAR_ID
-
-//where n.LEZART = 0
-
-
-
 
     }
 
@@ -90,10 +64,62 @@ namespace BusinessLogic
         private List<KeszletSor> lKESZLETKARTON = new List<KeszletSor>();
 
 
-            public KeszletKarton()
+        public KeszletKarton()
             {
+                SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+                sc.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = sc;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select kf.KESZLET_NYITO, " + 
+                                    " KF.KESZLET_ERTEK_NYITO , " + 
+                                    " kf.beszerzesi_ar, " + 
+                                    " kf.CIKK_ID, " + 
+                                    " r.RAKTAR_KOD, " + 
+                                    " c.CIKKCSOPORT_ID, " + 
+                                    " m.MEGYS_MEGNEVEZES, " + 
+                                    " c.MINIMUM_KESZLET, " + 
+                                    " c.OPTIMALIS_KESZLET " + 
+                                    " from KESZLET_FEJ kf " + 
+                                    " inner join nap_nyitas n on kf.EV = n.EV and kf.HO = n.HO and kf.NAP = n.NAP " + 
+                                    " inner join CIKK c on kf. CIKK_ID = c.CIKK_ID " + 
+                                    " inner join MEGYS m on c.MEGYS_ID = m.MEGYS_ID " + 
+                                    " inner join RAKTAR r on kf.RAKTAR_ID = r.RAKTAR_ID " + 
+                                    " where n.LEZART = 0" ;
 
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    try
+                    {
+                        KeszletSor ks = new KeszletSor();
+
+                        ks.KESZLET_NYITO = (double)rdr["KESZLET_NYITO"];
+                        ks.KESZLET_ERTEK_NYITO = (double)rdr["KESZLET_ERTEK_NYITO"];
+                        ks.BESZERZESI_AR = (double)rdr["beszerzesi_ar"];
+                        ks.RAKTAR_KOD = (string)rdr["RAKTAR_KOD"];
+                        ks.CIKKCSOPORT_ID = (int)rdr["CIKKCSOPORT_ID"];
+                        ks.CIKK_ID = (int)rdr["CIKK_ID"];
+                        ks.MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
+                        ks.OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
+                        ks.MEGYS_MEGNEVEZES = (string)rdr["MEGYS_MEGNEVEZES"];
+                        lKESZLETKARTON.Add(ks);
+                    }
+                    catch (Exception e)
+                    {
+                        DEFS.log(Level.Exception, "Sikertelen betöltés, <null> értékek a készletekben!!!");
+                        DEFS.ExLog(e.Message + "--->" + e.StackTrace);
+                    }
+                }
+                rdr.Close();
+                sc.Close();
             }
+
+        public List<KeszletSor> getKarton()
+        {
+
+            return lKESZLETKARTON;
+        }
 
     }
 
@@ -109,11 +135,13 @@ namespace BusinessLogic
         private double fOPTIMALIS_KESZLET;
         private string fMEGYS_MEGNEVEZES;
 
-
+        private Cikk i_cikk;
         public KeszletSor()
         {
 
         }
+
+
 
 
         public double KESZLET_NYITO
@@ -121,44 +149,40 @@ namespace BusinessLogic
             get { return (_KESZLET_NYITO); }
             set { _KESZLET_NYITO = value; }
         }
-
         public double KESZLET_ERTEK_NYITO
         {
             get { return (_KESZLET_ERTEK_NYITO); }
             set { _KESZLET_ERTEK_NYITO = value; }
         }
-
         public double BESZERZESI_AR
         {
             get { return (_BESZERZESI_AR); }
             set { _BESZERZESI_AR = value; }
         }
-
         public string RAKTAR_KOD
         {
             get { return (fRAKTAR_KOD); }
             set { fRAKTAR_KOD = value; }
         }
-
         public int CIKKCSOPORT_ID
         {
             get { return (fCIKKCSOPORT_ID); }
             set { fCIKKCSOPORT_ID = value; }
         }
-
-
         public int CIKK_ID
         {
             get { return (fCIKK_ID); }
-            set { fCIKK_ID = value; }
+            set
+            {
+                fCIKK_ID = value;
+                i_cikk = new Cikk(fCIKK_ID, true);
+            }
         }
-
         public string MEGYS_MEGNEVEZES
         {
             get { return (fMEGYS_MEGNEVEZES); }
             set { fMEGYS_MEGNEVEZES = value; }
         }
-
         public double MINIMUM_KESZLET
         {
             get { return (fMINIMUM_KESZLET); }
@@ -170,7 +194,11 @@ namespace BusinessLogic
             set { fOPTIMALIS_KESZLET = value; }
         }
 
+        public string CIKK_NEV
+        { get { return i_cikk.MEGNEVEZES; } }
 
+        public double CIKK_ALL_KESZLET
+        { get { return i_cikk.fKESZLET_ALL; } }
 
 
 
