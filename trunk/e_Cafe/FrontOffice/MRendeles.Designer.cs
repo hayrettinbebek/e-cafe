@@ -93,6 +93,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
@@ -390,7 +391,6 @@
             // 
             // panel6
             // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(25, 0);
             this.panel6.Name = "panel6";
@@ -637,6 +637,7 @@
             // pnlFunctions
             // 
             this.pnlFunctions.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFunctions.Controls.Add(this.button9);
             this.pnlFunctions.Controls.Add(this.button7);
             this.pnlFunctions.Controls.Add(this.button6);
             this.pnlFunctions.Controls.Add(this.label3);
@@ -899,6 +900,16 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(715, 6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(77, 78);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "egyedi Cikk";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            // 
             // MRendeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1002,5 +1013,6 @@
         private System.Windows.Forms.Label lblOsszValue;
         private System.Windows.Forms.Label lblFizetValue;
         private System.Windows.Forms.Label lblKedvValue;
+        private System.Windows.Forms.Button button9;
     }
 }
