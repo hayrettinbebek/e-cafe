@@ -142,61 +142,75 @@ namespace e_Cafe.FrontOffice
 
         private void CikkcsopMenuClick(object sender, EventArgs e)
         {
-            if (reset_scrolls)
+            if (checkBox1.Checked)
             {
-                AlCsopScrollPos = 0;
-            }
-
-            
-
-            LastCikkcsopMenu = sender;
-            LastOtherFilterMenu = null;
-
-            OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.ID, new SqlConnection(DEFS.ConSTR));
-            Alcsop_MaxScroll = otf.lOTF.Count;
-            if (otf.lOTF.Count > 0)
-            {
-                pnlOtherFilter.Visible = true;
-
-
-                TableLayoutPanel tlpOTFButtons = new TableLayoutPanel();
-
-                pnlOtherFilter.Controls.Add(tlpOTFButtons);
-                tlpOTFButtons.Dock = DockStyle.Fill;
-                tlpOTFButtons.BringToFront();
-                tlpOTFButtons.GrowStyle = TableLayoutPanelGrowStyle.AddColumns;
-
-                tlpOTFButtons.ColumnCount = otf.lOTF.Count + 1;
-                tlpOTFButtons.RowCount = 1;
-
-                for (int i = AlCsopScrollPos; i < (otf.lOTF.Count); i++)
+                if (AktSzerkesztettCikk != null)
                 {
-
-                    OtherFButton bt = new OtherFButton(otf.lOTF[i]);
-                    bt.Location = new Point(0, 0);
-                    bt.Text = otf.lOTF[i].ONEV;
-                    bt.TextAlign = ContentAlignment.TopCenter;
-                    bt.Dock = DockStyle.Fill;
-                    bt.Click += AlcsopMenuClick;
-
-                    tlpOTFButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(SizeType.Absolute, 120));
-                    tlpOTFButtons.Controls.Add(bt);
+                    AktSzerkesztettCikk.CIKKCSOPORT_ID = ((CikkcsopButton)sender)._Cikkcsoport.ID;
+                    AktSzerkesztettCikk.Save();
                 }
-                tlpOTFButtons.Refresh();
+                AktSzerkesztettCikk = new Cikk(AktSzerkesztettCikk.CIKK_ID, true);
+                checkBox1.Checked = false;
+                ((CikkcsopButton)sender).Checked = false;
+                lblCikkcsopSelectInfo.Visible = false;
             }
-            else { pnlOtherFilter.Visible = false;/* pnlOldalsav.Visible = false;*/ }
-
-            if (pnlOtherFilter.Visible)
+            else
             {
-                //pnlOldalsav.Visible = true;
-                //pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
+                if (reset_scrolls)
+                {
+                    AlCsopScrollPos = 0;
+                }
+
+
+
+                LastCikkcsopMenu = sender;
+                LastOtherFilterMenu = null;
+
+                OTF_list otf = new OTF_list(((CikkcsopButton)sender)._Cikkcsoport.ID, new SqlConnection(DEFS.ConSTR));
+                Alcsop_MaxScroll = otf.lOTF.Count;
+                if (otf.lOTF.Count > 0)
+                {
+                    pnlOtherFilter.Visible = true;
+
+
+                    TableLayoutPanel tlpOTFButtons = new TableLayoutPanel();
+
+                    pnlOtherFilter.Controls.Add(tlpOTFButtons);
+                    tlpOTFButtons.Dock = DockStyle.Fill;
+                    tlpOTFButtons.BringToFront();
+                    tlpOTFButtons.GrowStyle = TableLayoutPanelGrowStyle.AddColumns;
+
+                    tlpOTFButtons.ColumnCount = otf.lOTF.Count + 1;
+                    tlpOTFButtons.RowCount = 1;
+
+                    for (int i = AlCsopScrollPos; i < (otf.lOTF.Count); i++)
+                    {
+
+                        OtherFButton bt = new OtherFButton(otf.lOTF[i]);
+                        bt.Location = new Point(0, 0);
+                        bt.Text = otf.lOTF[i].ONEV;
+                        bt.TextAlign = ContentAlignment.TopCenter;
+                        bt.Dock = DockStyle.Fill;
+                        bt.Click += AlcsopMenuClick;
+
+                        tlpOTFButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(SizeType.Absolute, 120));
+                        tlpOTFButtons.Controls.Add(bt);
+                    }
+                    tlpOTFButtons.Refresh();
+                }
+                else { pnlOtherFilter.Visible = false;/* pnlOldalsav.Visible = false;*/ }
+
+                if (pnlOtherFilter.Visible)
+                {
+                    //pnlOldalsav.Visible = true;
+                    //pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
+                }
+                ((CikkcsopButton)sender).Refresh();
+                loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1);
+                //if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
+
+                Alcsop_needScroll = pnlOtherFilter.Width / 120;
             }
-            ((CikkcsopButton)sender).Refresh();
-            loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1);
-            //if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
-
-            Alcsop_needScroll = pnlOtherFilter.Width / 120;
-
         }
 
         private void AlcsopMenuClick(object sender, EventArgs e)
@@ -370,12 +384,28 @@ namespace e_Cafe.FrontOffice
             textBox2.Text = InputText.getInt(true).ToString();
             if (AktSzerkesztettCikk != null)
             {
-                AktSzerkesztettCikk.ELADASI_AR = textBox1.Text;
+                AktSzerkesztettCikk.ELADASI_AR = Convert.ToDouble(textBox2.Text);
+                AktSzerkesztettCikk.NETTO_AR = DEFS.getNetto(Convert.ToDouble(textBox2.Text),20);
+                
                 AktSzerkesztettCikk.Save();
 
             }
 
             rECEPTTableAdapter.Fill(dsReceptCikkek.RECEPT, AktSzerkesztettCikk.CIKK_ID);
+        }
+
+        private void checkBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                lblCikkcsopSelectInfo.Visible = true;
+
+            }
         }
 
     }

@@ -674,7 +674,14 @@ namespace BusinessLogic
                 _RaktarId = (int)rdr2["RAKTAR_ID"];
                 _LitKiszId = (int)rdr2["LIT_KISZ_ID"];
                 fKEDVEZMENY = (double)rdr2["KEDVEZMENY"];
-                _Cikk = new Cikk((int)rdr2["CIKK_ID"], (int)rdr2["LIT_KISZ_ID"]);
+                if ((int)rdr2["LIT_KISZ_ID"] <= 0) 
+                {
+                    _Cikk = new Cikk((int)rdr2["CIKK_ID"], true);
+                }
+                else
+                {
+                    _Cikk = new Cikk((int)rdr2["CIKK_ID"], (int)rdr2["LIT_KISZ_ID"]);
+                }
                 _KEDV_PARTNER_ID = (int)rdr2["KEDV_PARTNER_ID"];
             }
             rdr2.Close();

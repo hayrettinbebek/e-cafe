@@ -373,6 +373,7 @@ namespace BusinessLogic
             fMEGJEGYZES = "";
             fMEGYS_ID = "1";
             fROVID_NEV = "";
+            
         }
 
         public Cikk()
