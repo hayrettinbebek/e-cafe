@@ -61,8 +61,6 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
-            this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCikkcsopSelectInfo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,10 +68,16 @@
             this.lblCikkNev = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.rECEPTTableAdapter = new e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
+            this.rECEPTTableAdapter = new e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
+            this.receptMentes = new e_Cafe.SQL.DataSets.ReceptMentes();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.receptTableAdapter1 = new e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.RECEPTTableAdapter();
             this.panel3.SuspendLayout();
             this.pnlOtherFilter.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -92,6 +96,8 @@
             this.dataRepeater1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rECEPTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receptMentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -476,24 +482,15 @@
             // 
             // dataRepeater1.ItemTemplate
             // 
+            this.dataRepeater1.ItemTemplate.Controls.Add(this.button1);
             this.dataRepeater1.ItemTemplate.Controls.Add(this.labelControl1);
             this.dataRepeater1.ItemTemplate.Controls.Add(this.label3);
-            this.dataRepeater1.ItemTemplate.Size = new System.Drawing.Size(211, 37);
+            this.dataRepeater1.ItemTemplate.Size = new System.Drawing.Size(211, 45);
             this.dataRepeater1.Location = new System.Drawing.Point(6, 153);
             this.dataRepeater1.Name = "dataRepeater1";
             this.dataRepeater1.Size = new System.Drawing.Size(219, 368);
             this.dataRepeater1.TabIndex = 2;
             this.dataRepeater1.Text = "dataRepeater1";
-            // 
-            // rECEPTBindingSource
-            // 
-            this.rECEPTBindingSource.DataMember = "RECEPT";
-            this.rECEPTBindingSource.DataSource = this.dsReceptCikkek;
-            // 
-            // dsReceptCikkek
-            // 
-            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
-            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -569,10 +566,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
-            // rECEPTTableAdapter
-            // 
-            this.rECEPTTableAdapter.ClearBeforeFill = true;
-            // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -603,6 +596,44 @@
             this.labelControl1.Size = new System.Drawing.Size(63, 13);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "labelControl1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(113, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "DB módosít";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // rECEPTBindingSource
+            // 
+            this.rECEPTBindingSource.DataMember = "RECEPT";
+            this.rECEPTBindingSource.DataSource = this.dsReceptCikkek;
+            // 
+            // dsReceptCikkek
+            // 
+            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
+            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rECEPTTableAdapter
+            // 
+            this.rECEPTTableAdapter.ClearBeforeFill = true;
+            // 
+            // receptMentes
+            // 
+            this.receptMentes.DataSetName = "ReceptMentes";
+            this.receptMentes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "RECEPT";
+            this.bindingSource1.DataSource = this.receptMentes;
+            // 
+            // receptTableAdapter1
+            // 
+            this.receptTableAdapter1.ClearBeforeFill = true;
             // 
             // frmOsszCikkCreator
             // 
@@ -641,6 +672,8 @@
             this.dataRepeater1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rECEPTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReceptCikkek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receptMentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -691,5 +724,9 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.Button button1;
+        private e_Cafe.SQL.DataSets.ReceptMentes receptMentes;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        public e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.RECEPTTableAdapter receptTableAdapter1;
     }
 }

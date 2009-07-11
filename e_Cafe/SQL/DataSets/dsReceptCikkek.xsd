@@ -33,6 +33,14 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)</CommandText>
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE    RECEPT
+SET              OSSZ_CIKK_ID =, OSSZ_CIKK_TARTOZEK_ID =, TARTOZEK_MENNY = @menny
+WHERE     (OSSZ_CIKK_ID = @szulo) AND (OSSZ_CIKK_TARTOZEK_ID = @r_cikk)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </MainSource>
             <Mappings>
@@ -55,17 +63,17 @@ WHERE     (RECEPT.OSSZ_CIKK_ID = @pCikk_id)</CommandText>
         <xs:element name="RECEPT" msprop:Generator_UserTableName="RECEPT" msprop:Generator_RowDeletedName="RECEPTRowDeleted" msprop:Generator_RowChangedName="RECEPTRowChanged" msprop:Generator_RowClassName="RECEPTRow" msprop:Generator_RowChangingName="RECEPTRowChanging" msprop:Generator_RowEvArgName="RECEPTRowChangeEvent" msprop:Generator_RowEvHandlerName="RECEPTRowChangeEventHandler" msprop:Generator_TableClassName="RECEPTDataTable" msprop:Generator_TableVarName="tableRECEPT" msprop:Generator_RowDeletingName="RECEPTRowDeleting" msprop:Generator_TablePropName="RECEPT">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="OSSZ_CIKK_ID" msprop:Generator_UserColumnName="OSSZ_CIKK_ID" msprop:Generator_ColumnPropNameInRow="OSSZ_CIKK_ID" msprop:Generator_ColumnVarNameInTable="columnOSSZ_CIKK_ID" msprop:Generator_ColumnPropNameInTable="OSSZ_CIKK_IDColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="OSSZ_CIKK_TARTOZEK_ID" msprop:Generator_UserColumnName="OSSZ_CIKK_TARTOZEK_ID" msprop:Generator_ColumnPropNameInRow="OSSZ_CIKK_TARTOZEK_ID" msprop:Generator_ColumnVarNameInTable="columnOSSZ_CIKK_TARTOZEK_ID" msprop:Generator_ColumnPropNameInTable="OSSZ_CIKK_TARTOZEK_IDColumn" type="xs:int" minOccurs="0" />
-              <xs:element name="TARTOZEK_MENNY" msprop:Generator_UserColumnName="TARTOZEK_MENNY" msprop:Generator_ColumnPropNameInRow="TARTOZEK_MENNY" msprop:Generator_ColumnVarNameInTable="columnTARTOZEK_MENNY" msprop:Generator_ColumnPropNameInTable="TARTOZEK_MENNYColumn" type="xs:decimal" minOccurs="0" />
-              <xs:element name="MEGNEVEZES" msprop:Generator_UserColumnName="MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGNEVEZESColumn">
+              <xs:element name="OSSZ_CIKK_ID" msprop:Generator_UserColumnName="OSSZ_CIKK_ID" msprop:Generator_ColumnVarNameInTable="columnOSSZ_CIKK_ID" msprop:Generator_ColumnPropNameInRow="OSSZ_CIKK_ID" msprop:Generator_ColumnPropNameInTable="OSSZ_CIKK_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="OSSZ_CIKK_TARTOZEK_ID" msprop:Generator_UserColumnName="OSSZ_CIKK_TARTOZEK_ID" msprop:Generator_ColumnVarNameInTable="columnOSSZ_CIKK_TARTOZEK_ID" msprop:Generator_ColumnPropNameInRow="OSSZ_CIKK_TARTOZEK_ID" msprop:Generator_ColumnPropNameInTable="OSSZ_CIKK_TARTOZEK_IDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TARTOZEK_MENNY" msprop:Generator_UserColumnName="TARTOZEK_MENNY" msprop:Generator_ColumnVarNameInTable="columnTARTOZEK_MENNY" msprop:Generator_ColumnPropNameInRow="TARTOZEK_MENNY" msprop:Generator_ColumnPropNameInTable="TARTOZEK_MENNYColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MEGNEVEZES" msprop:Generator_UserColumnName="MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGNEVEZESColumn">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="MEGYS_MEGNEVEZES" msprop:Generator_UserColumnName="MEGYS_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGYS_MEGNEVEZESColumn" minOccurs="0">
+              <xs:element name="MEGYS_MEGNEVEZES" msprop:Generator_UserColumnName="MEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInRow="MEGYS_MEGNEVEZES" msprop:Generator_ColumnVarNameInTable="columnMEGYS_MEGNEVEZES" msprop:Generator_ColumnPropNameInTable="MEGYS_MEGNEVEZESColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

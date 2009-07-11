@@ -820,6 +820,12 @@ namespace e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters {
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cikk", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@alkoto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OSSZ_CIKK_TARTOZEK_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE    RECEPT\r\nSET              OSSZ_CIKK_ID =, OSSZ_CIKK_TARTOZEK_ID =, TARTO" +
+                "ZEK_MENNY = @menny\r\nWHERE     (OSSZ_CIKK_ID = @szulo) AND (OSSZ_CIKK_TARTOZEK_ID" +
+                " = @r_cikk)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
