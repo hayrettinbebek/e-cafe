@@ -26,7 +26,7 @@ namespace GUI.billentyu
 
         public void doWhat(object sender, EventArgs e)
         {
-            MessageBox.Show("EEEE");
+
         }
     }
 }
