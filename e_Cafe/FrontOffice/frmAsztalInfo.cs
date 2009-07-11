@@ -20,13 +20,33 @@ namespace e_Cafe.FrontOffice
             InitializeComponent();
             used_asztal = aa;
             lblAsztalSzam.Text = aa.fASZTAL_SZAM + " . asztal";
-            Rendeles r = new Rendeles(aa.fASZTAL_ID, aa.fRENDELES_ID);
-            tblRendelesek.ColumnModel = r.getColumnModelInfo();
-            tblRendelesek.HeaderRenderer = new GradientHeaderRenderer();
-            tblRendelesek.TableModel = r.getTableModelInfo();
+            if (aa.fRENDELES_ID > 0)
+            {
+                Rendeles r = new Rendeles(aa.fASZTAL_ID, aa.fRENDELES_ID);
+                tblRendelesek.ColumnModel = r.getColumnModelInfo();
+                tblRendelesek.HeaderRenderer = new GradientHeaderRenderer();
+                tblRendelesek.TableModel = r.getTableModelInfo();
+                tblRendelesek.Font = DEFS.fRendelInfo;
+                tblRendelesek.TableModel.RowHeight = 40;
+            }
+            else if (aa.lFOGLALAS_PARAM_IDON_BELUL.Count > 0)
+            {
+ 
+                tblRendelesek.ColumnModel = Foglalas.getColumnModelInfo();
+                tblRendelesek.HeaderRenderer = new GradientHeaderRenderer();
+                tblRendelesek.TableModel = Foglalas.getTableModelInfo(aa.lFOGLALAS_PARAM_IDON_BELUL);
+                tblRendelesek.Font = DEFS.fFoglalasokInfo;
+                if (aa.lFOGLALAS_PARAM_IDON_BELUL.Count > 1)
+                {
+                    tblRendelesek.TableModel.RowHeight = 10;
+                }
+                else
+                {
+                    tblRendelesek.TableModel.RowHeight = 20;
+                }
+                
+            }
 
-            tblRendelesek.Font = DEFS.fRendelInfo;
-            tblRendelesek.TableModel.RowHeight = 40;
         }
 
         private void btnNem_Click(object sender, EventArgs e)

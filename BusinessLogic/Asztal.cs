@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using XPTable.Models;
 
 
 namespace BusinessLogic
@@ -45,6 +46,7 @@ namespace BusinessLogic
             }
         }
 
+       
         #endregion
 
 
@@ -285,6 +287,45 @@ namespace BusinessLogic
             MEDDIG = pMEDDIG;
             NEV = pNEV;
             TELEFON = pTELEFON;
+        }
+
+        public static ColumnModel getColumnModelInfo()
+        {
+
+            //1. oszlop
+            //ImageColumn imageColumn = new ImageColumn("", 30);
+            //imageColumn.Editable = false;
+
+            TextColumn d_tol = new TextColumn("Tól", 85);
+            d_tol.Editable = false;
+
+            TextColumn d_ig = new TextColumn("Ig", 45);
+            d_ig.Editable = false;
+
+            TextColumn NevColumn = new TextColumn("Név", 170);
+            NevColumn.Editable = false;
+            NevColumn.Alignment = ColumnAlignment.Right;
+
+            return (new ColumnModel(new Column[] { d_tol,d_ig, NevColumn }));
+        }
+
+        public static TableModel getTableModelInfo(List<Foglalas> ff)
+        {
+            TableModel tmpMod = new TableModel(new Row[] { });
+
+            foreach (var lf in ff)
+            {
+                tmpMod.Rows.Add(new Row(new Cell[] {new Cell(lf.METTOL.ToString("MM.dd hh:mm")),
+													new Cell(lf.MEDDIG.ToString("hh:mm")),
+                                                    new Cell(lf.NEV)
+													}));
+                tmpMod.Rows.Add(new Row(new Cell[] {new Cell(),
+													new Cell(),
+                                                    new Cell(lf.TELEFON)
+													}));
+            }
+
+            return (tmpMod);
         }
     }
 
