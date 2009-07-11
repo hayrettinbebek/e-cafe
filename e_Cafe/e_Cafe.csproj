@@ -180,6 +180,12 @@
     <Compile Include="FrontOffice\frmAsztalInfo.Designer.cs">
       <DependentUpon>frmAsztalInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontOffice\frmOsszCikkCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\frmOsszCikkCreator.Designer.cs">
+      <DependentUpon>frmOsszCikkCreator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Keszlet\frmKeszletKarton.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -663,6 +669,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmMediaPlayer.resx">
       <DependentUpon>frmMediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontOffice\frmOsszCikkCreator.resx">
+      <DependentUpon>frmOsszCikkCreator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontOffice\frmOsszCikkView.resx">
       <DependentUpon>frmOsszCikkView.cs</DependentUpon>
@@ -1358,6 +1367,9 @@
   <ItemGroup>
     <None Include="Properties\DataSources\BusinessLogic.CikkAr.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.KeszletSor.datasource" />
+    <None Include="SQL\update_035.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SQL\update_034.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

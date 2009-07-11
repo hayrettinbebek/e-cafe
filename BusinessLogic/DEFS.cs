@@ -297,7 +297,7 @@ namespace BusinessLogic
 
         #endregion
 
-        #region Helper utils
+        #region Konvertálásaok
         public static int BoolToInt(bool b)
         {
             if (b)

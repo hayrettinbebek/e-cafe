@@ -28,7 +28,7 @@ namespace e_Cafe
 
         private static int CCSOP_BTN_SIZE = 60;
 
-        Cikkcsoport_list cl = new Cikkcsoport_list(new SqlConnection(DEFS.ConSTR));
+        Cikkcsoport_list cl = new Cikkcsoport_list(CikkcsoportContructType.Visible);
 
         Cikk_list lCikkList = new Cikk_list(CikkListContructType.ForRendeles);
         Rendeles _AktRendeles;
@@ -142,7 +142,7 @@ namespace e_Cafe
 
         #region Gombok
 
-        #region Átvitel
+
         private void button1_Click(object sender, EventArgs e)
         {
             frmAsztalSelect fa = new frmAsztalSelect();
@@ -162,7 +162,7 @@ namespace e_Cafe
                 initRendelTabla();
             }
         }
-        #endregion
+
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -983,6 +983,20 @@ namespace e_Cafe
 
             
             
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            frmOsszCikkCreator foc = new frmOsszCikkCreator();
+            foc.ShowDialog();
+            if (foc.DialogResult == DialogResult.OK)
+            {
+                _AktRendeles.addTetel(foc.AktSzerkesztettCikk);
+                _AktRendeles.SaveRendeles();
+                initRendelTabla();
+
+            }
+
         }
 
 

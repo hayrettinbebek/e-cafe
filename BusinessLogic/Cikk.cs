@@ -17,10 +17,24 @@ namespace BusinessLogic
         ForRendeles
     }
 
+    public enum CikkcsoportContructType
+    {
+        Full,
+        Visible
+    }
+
     public enum CikkConstructorType
     {
         Rendeles,
         Kiszereles
+    }
+
+
+    public enum CikkTipus
+    {
+        Normal = 0,
+        Osszetett = 1,
+        Egyedi = 2
     }
     #region Cikk
     public class Cikk
@@ -351,6 +365,14 @@ namespace BusinessLogic
             CIKK_KISZERELES = new CikkKiszerelesList();//fCIKK_ID, new SqlConnection(DEFS.ConSTR));
             fAKTIV = 1;
             fVIRTUAL = 0;
+            fCIKKSZAM = "";
+            fGYORSKOD = "";
+            fERT_TIP = "D";
+            fEAN = "";
+            fSZJ = "";
+            fMEGJEGYZES = "";
+            fMEGYS_ID = "1";
+            fROVID_NEV = "";
         }
 
         public Cikk()
@@ -631,6 +653,7 @@ namespace BusinessLogic
             }
             cmd.Parameters["OTHER_FILTER_ID"].Value = ALCSOPORT;
             cmd.Parameters["DEFAULT_RAKTAR"].Value = ALAP_RAKTAR;
+
             cmd.Parameters["CIKKSZAM"].Value = CIKKSZAM;
             cmd.Parameters["GYORSKOD"].Value = GYORSKOD;
             cmd.Parameters["SZJ"].Value = SZJ;
@@ -778,6 +801,41 @@ namespace BusinessLogic
 
             }
             c.Close();
+        }
+
+
+        public bool AddReceptTetel(int r_cikk, double menny)
+        {
+            bool rt;
+            List<CikkAr> tmpLCikkArak = new List<CikkAr>();
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO  RECEPT (OSSZ_CIKK_ID ,OSSZ_CIKK_TARTOZEK_ID,TARTOZEK_MENNY) " +
+                            "VALUES (@CIKK_ID, @R_CIKK, @MENNY)", c);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("R_CIKK", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("MENNY", SqlDbType.Float));
+
+            cmd.Parameters["CIKK_ID"].Value = CIKK_ID;
+            cmd.Parameters["R_CIKK"].Value = r_cikk;
+            cmd.Parameters["MENNY"].Value = menny;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                rt = true;
+            }
+            catch
+            {
+                rt = false;
+            }
+
+            c.Close();
+
+            return rt;
         }
     }
 
@@ -1671,9 +1729,9 @@ namespace BusinessLogic
         public List<Cikkcsoport> lCIKKCSOPORT = new List<Cikkcsoport>();
         
 
-        public Cikkcsoport_list(SqlConnection sc)
+        public Cikkcsoport_list(CikkcsoportContructType csct)
         {
-            
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
             sc.Open();
 
             SqlCommand cmd = new SqlCommand();
@@ -1682,7 +1740,14 @@ namespace BusinessLogic
 
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "SELECT CIKKCSOPORT_ID, CIKKCSOPORT_NEV, AFA_KOD  FROM CIKKCSOPORT WHERE isnull(NEM_ELADO,0)=0";
+            if (csct == CikkcsoportContructType.Full)
+            {
+                cmd.CommandText = "SELECT CIKKCSOPORT_ID, CIKKCSOPORT_NEV, AFA_KOD  FROM CIKKCSOPORT";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT CIKKCSOPORT_ID, CIKKCSOPORT_NEV, AFA_KOD  FROM CIKKCSOPORT WHERE isnull(NEM_ELADO,0)=0";
+            }
             DEFS.log(Level.Debug, "Get Cikkcsoportok:");
             SqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())

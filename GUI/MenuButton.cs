@@ -231,7 +231,11 @@ namespace GUI
             set
             {
                 _Cikk = value;
-                lMegnevezes.Text = value.ROVID_NEV;
+                if (_Cikk.ROVID_NEV.Trim().Length == 0) { lMegnevezes.Text = _Cikk.MEGNEVEZES; }
+                else
+                {
+                    lMegnevezes.Text = value.ROVID_NEV;
+                }
                 lKiszereles.Text = value.KISZ_MEGN;
                 // lKeszlet.Text = value.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
                 //lKeszletOther.Text = (value.fKESZLET_ALL / value.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
@@ -247,7 +251,11 @@ namespace GUI
 
         public void re_SetCikk()
         {
-            lMegnevezes.Text = _Cikk.ROVID_NEV;
+            if (_Cikk.ROVID_NEV.Trim().Length == 0) { lMegnevezes.Text = _Cikk.MEGNEVEZES; }
+            else
+            {
+                lMegnevezes.Text = _Cikk.ROVID_NEV;
+            }
             lKiszereles.Text = _Cikk.KISZ_MEGN;
             //lKeszlet.Text = _Cikk.fKESZLET.ToString("0.00", CultureInfo.InvariantCulture);
             //lKeszletOther.Text = (_Cikk.fKESZLET_ALL / _Cikk.KISZ_MENNY).ToString("0.00", CultureInfo.InvariantCulture);
