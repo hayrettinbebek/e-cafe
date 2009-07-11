@@ -359,9 +359,9 @@ namespace BusinessLogic
                     fCIKK = new Cikk((int)rdr["CIKK_ID"], true);
                     fMENNYISEG = (double)rdr["MENNYISEG"];
                     fEGYSEGAR = (double)rdr["EGYSEGAR"];
-                    fNETTO = (double)rdr["NETTO"];
-                    fAFA = (double)rdr["AFA"];
-                    fBRUTTO = (double)rdr["BRUTTO"];
+                    fNETTO = Math.Round((double)rdr["NETTO"]);
+                    fAFA = Math.Round((double)rdr["AFA"]);
+                    fBRUTTO = Math.Round((double)rdr["BRUTTO"]);
                     fAFA_KOD = (string)rdr["AFA_KOD"];
                     fMEGJEGYZES = (string)rdr["MEGJEGYZES"];
                     fCIKK_MEGNEVEZES = (string)rdr["CIKK_MEGNEVEZES"];

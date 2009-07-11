@@ -68,6 +68,9 @@
             this.rECEPTTableAdapter = new e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.lblCikkcsopSelectInfo = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.pnlOtherFilter.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -435,7 +438,10 @@
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.checkBox1);
             this.panel13.Controls.Add(this.dataRepeater1);
+            this.panel13.Controls.Add(this.lblCikkcsopSelectInfo);
+            this.panel13.Controls.Add(this.label5);
             this.panel13.Controls.Add(this.label4);
             this.panel13.Controls.Add(this.lblCikkNev);
             this.panel13.Controls.Add(this.textBox2);
@@ -454,9 +460,9 @@
             // 
             this.dataRepeater1.ItemTemplate.Controls.Add(this.label3);
             this.dataRepeater1.ItemTemplate.Size = new System.Drawing.Size(211, 37);
-            this.dataRepeater1.Location = new System.Drawing.Point(6, 133);
+            this.dataRepeater1.Location = new System.Drawing.Point(6, 153);
             this.dataRepeater1.Name = "dataRepeater1";
-            this.dataRepeater1.Size = new System.Drawing.Size(219, 388);
+            this.dataRepeater1.Size = new System.Drawing.Size(219, 368);
             this.dataRepeater1.TabIndex = 2;
             this.dataRepeater1.Text = "dataRepeater1";
             // 
@@ -506,9 +512,9 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(3, 92);
+            this.textBox2.Location = new System.Drawing.Point(46, 60);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 23);
+            this.textBox2.Size = new System.Drawing.Size(167, 23);
             this.textBox2.TabIndex = 0;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
@@ -517,12 +523,48 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(3, 69);
+            this.label4.Location = new System.Drawing.Point(3, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Ára";
             this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(3, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Cikkcsoportja";
+            this.label5.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.Location = new System.Drawing.Point(123, 90);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(93, 37);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // lblCikkcsopSelectInfo
+            // 
+            this.lblCikkcsopSelectInfo.AutoSize = true;
+            this.lblCikkcsopSelectInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblCikkcsopSelectInfo.ForeColor = System.Drawing.Color.Red;
+            this.lblCikkcsopSelectInfo.Location = new System.Drawing.Point(20, 130);
+            this.lblCikkcsopSelectInfo.Name = "lblCikkcsopSelectInfo";
+            this.lblCikkcsopSelectInfo.Size = new System.Drawing.Size(193, 13);
+            this.lblCikkcsopSelectInfo.TabIndex = 1;
+            this.lblCikkcsopSelectInfo.Text = "Válasszon a cikkcsoportok közül";
+            this.lblCikkcsopSelectInfo.Visible = false;
+            this.lblCikkcsopSelectInfo.Click += new System.EventHandler(this.label4_Click);
             // 
             // frmOsszCikkCreator
             // 
@@ -603,5 +645,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label lblCikkcsopSelectInfo;
     }
 }
