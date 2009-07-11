@@ -89,8 +89,8 @@
             this.txtROVID_NEV = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chkTOPCikk = new System.Windows.Forms.CheckBox();
             this.chkCikkcsopPrefer = new System.Windows.Forms.CheckBox();
+            this.chkTOPCikk = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.cIKKCSOPORTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rAKTARBindingSource)).BeginInit();
@@ -605,16 +605,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Statisztika";
             // 
-            // chkTOPCikk
-            // 
-            this.chkTOPCikk.AutoSize = true;
-            this.chkTOPCikk.Location = new System.Drawing.Point(20, 19);
-            this.chkTOPCikk.Name = "chkTOPCikk";
-            this.chkTOPCikk.Size = new System.Drawing.Size(98, 17);
-            this.chkTOPCikk.TabIndex = 34;
-            this.chkTOPCikk.Text = "TOP 30 termék";
-            this.chkTOPCikk.UseVisualStyleBackColor = true;
-            // 
             // chkCikkcsopPrefer
             // 
             this.chkCikkcsopPrefer.AutoSize = true;
@@ -624,6 +614,16 @@
             this.chkCikkcsopPrefer.TabIndex = 34;
             this.chkCikkcsopPrefer.Text = "Cikkcsoport kiemelt termék";
             this.chkCikkcsopPrefer.UseVisualStyleBackColor = true;
+            // 
+            // chkTOPCikk
+            // 
+            this.chkTOPCikk.AutoSize = true;
+            this.chkTOPCikk.Location = new System.Drawing.Point(20, 19);
+            this.chkTOPCikk.Name = "chkTOPCikk";
+            this.chkTOPCikk.Size = new System.Drawing.Size(98, 17);
+            this.chkTOPCikk.TabIndex = 34;
+            this.chkTOPCikk.Text = "TOP 30 termék";
+            this.chkTOPCikk.UseVisualStyleBackColor = true;
             // 
             // frmUjCikk
             // 

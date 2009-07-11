@@ -62,5 +62,15 @@ namespace ReportDebugger
         {
             textBox1.Text = InputText.getInt2(true).ToString(); ;
         }
+
+        private void zoomTrackBarControl1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBarControl1_Properties_ValueChanged(object sender, EventArgs e)
+        {
+             
+        }
     }
 }

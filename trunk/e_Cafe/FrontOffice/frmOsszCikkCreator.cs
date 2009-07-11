@@ -381,7 +381,7 @@ namespace e_Cafe.FrontOffice
 
         private void textBox2_Click(object sender, EventArgs e)
         {
-            textBox2.Text = InputText.getInt(true).ToString();
+            textBox2.Text = InputText.getInt2(true).ToString();
             if (AktSzerkesztettCikk != null)
             {
                 AktSzerkesztettCikk.ELADASI_AR = Convert.ToDouble(textBox2.Text);

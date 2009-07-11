@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsztalInfo));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblAsztalSzam = new System.Windows.Forms.Label();
             this.tblRendelesek = new XPTable.Models.Table();
+            this.lblAsztalSzam = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendelesek)).BeginInit();
             this.SuspendLayout();
@@ -51,21 +51,10 @@
             this.panel1.Controls.Add(this.tblRendelesek);
             this.panel1.Controls.Add(this.lblAsztalSzam);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 39);
+            this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(238, 109);
+            this.panel1.Size = new System.Drawing.Size(305, 144);
             this.panel1.TabIndex = 0;
-            // 
-            // lblAsztalSzam
-            // 
-            this.lblAsztalSzam.BackColor = System.Drawing.Color.Transparent;
-            this.lblAsztalSzam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblAsztalSzam.ForeColor = System.Drawing.Color.White;
-            this.lblAsztalSzam.Location = new System.Drawing.Point(3, 10);
-            this.lblAsztalSzam.Name = "lblAsztalSzam";
-            this.lblAsztalSzam.Size = new System.Drawing.Size(256, 23);
-            this.lblAsztalSzam.TabIndex = 1;
-            this.lblAsztalSzam.Text = "label1";
             // 
             // tblRendelesek
             // 
@@ -80,16 +69,27 @@
             this.tblRendelesek.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tblRendelesek.SelectionForeColor = System.Drawing.Color.Black;
             this.tblRendelesek.SelectionStyle = XPTable.Models.SelectionStyle.Grid;
-            this.tblRendelesek.Size = new System.Drawing.Size(232, 48);
+            this.tblRendelesek.Size = new System.Drawing.Size(299, 85);
             this.tblRendelesek.TabIndex = 2;
             this.tblRendelesek.Text = "table1";
+            // 
+            // lblAsztalSzam
+            // 
+            this.lblAsztalSzam.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsztalSzam.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblAsztalSzam.ForeColor = System.Drawing.Color.White;
+            this.lblAsztalSzam.Location = new System.Drawing.Point(3, 10);
+            this.lblAsztalSzam.Name = "lblAsztalSzam";
+            this.lblAsztalSzam.Size = new System.Drawing.Size(256, 23);
+            this.lblAsztalSzam.TabIndex = 1;
+            this.lblAsztalSzam.Text = "label1";
             // 
             // frmAsztalInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(238, 148);
+            this.ClientSize = new System.Drawing.Size(305, 170);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

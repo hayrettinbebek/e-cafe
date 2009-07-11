@@ -375,7 +375,7 @@ namespace e_Cafe
             {
                 
                 //tmp_a.Text = tmp_a.ClickTime.ToString();
-                if ((tmp_a.ClickTime > 300) && (tmp_a.aObj.fRENDELES_ID >0))
+                if ((tmp_a.ClickTime > 300) )//&& (tmp_a.aObj.fRENDELES_ID >0)
                 {
                     #region Asztal info
                     
@@ -404,7 +404,7 @@ namespace e_Cafe
                     #region Rendelés
                     if (tmp_a.aObj.lFOGLALAS_PARAM_IDON_BELUL.Count > 0)
                     {
-                        DEFS.SendInfoMessage("Információ! : Az asztalra foglalás van!" + "\n" + "Szeretné feloldani?");
+                        DEFS.SendInfoMessage("Információ! : Az asztalra foglalás van!" + "\n" + "A foglalást előbb fel kell oldani!");
                     }
                     else
                     {
@@ -412,7 +412,7 @@ namespace e_Cafe
                         a.aList.SelectAsztal(tmp_a.Asztal_id);
                         tmp_a.vSelected = true;
 
-                   
+
                         MRendeles mr = new MRendeles(a.aList.GetItem(tmp_a.Asztal_id));
                         mr.ShowDialog();
                         a.RefreshAsztalok(true);

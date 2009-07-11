@@ -37,6 +37,17 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.ucVolume = new GUI.ucVolumeControl();
+            this.gaugeControl1 = new DevExpress.XtraGauges.Win.GaugeControl();
+            this.circularGauge1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
+            this.arcScaleBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent();
+            this.arcScaleComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
+            this.arcScaleEffectLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleEffectLayerComponent();
+            this.arcScaleNeedleComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent();
+            ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleEffectLayerComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUp
@@ -161,11 +172,79 @@
             // 
             this.ucVolume.BackColor = System.Drawing.Color.Transparent;
             this.ucVolume.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucVolume.Location = new System.Drawing.Point(252, 80);
+            this.ucVolume.Location = new System.Drawing.Point(45, 263);
             this.ucVolume.Name = "ucVolume";
             this.ucVolume.Size = new System.Drawing.Size(361, 21);
             this.ucVolume.TabIndex = 6;
             this.ucVolume.VOLUME = 40;
+            // 
+            // gaugeControl1
+            // 
+            this.gaugeControl1.BackColor = System.Drawing.Color.Transparent;
+            this.gaugeControl1.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
+            this.circularGauge1});
+            this.gaugeControl1.Location = new System.Drawing.Point(361, 3);
+            this.gaugeControl1.Name = "gaugeControl1";
+            this.gaugeControl1.Size = new System.Drawing.Size(260, 254);
+            this.gaugeControl1.TabIndex = 7;
+            // 
+            // circularGauge1
+            // 
+            this.circularGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
+            this.arcScaleBackgroundLayerComponent1});
+            this.circularGauge1.Bounds = new System.Drawing.Rectangle(6, 6, 248, 242);
+            this.circularGauge1.EffectLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleEffectLayerComponent[] {
+            this.arcScaleEffectLayerComponent1});
+            this.circularGauge1.Name = "cGauge1";
+            this.circularGauge1.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
+            this.arcScaleNeedleComponent1});
+            this.circularGauge1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
+            this.arcScaleComponent1});
+            // 
+            // arcScaleBackgroundLayerComponent1
+            // 
+            this.arcScaleBackgroundLayerComponent1.ArcScale = this.arcScaleComponent1;
+            this.arcScaleBackgroundLayerComponent1.Name = "bg1";
+            this.arcScaleBackgroundLayerComponent1.ScaleCenterPos = new DevExpress.XtraGauges.Core.Base.PointF2D(0.5F, 0.815F);
+            this.arcScaleBackgroundLayerComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.BackgroundLayerShapeType.CircularHalf_Style7;
+            this.arcScaleBackgroundLayerComponent1.Size = new System.Drawing.SizeF(250F, 154F);
+            this.arcScaleBackgroundLayerComponent1.ZOrder = 1000;
+            // 
+            // arcScaleComponent1
+            // 
+            this.arcScaleComponent1.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 165F);
+            this.arcScaleComponent1.EndAngle = 0F;
+            this.arcScaleComponent1.MajorTickCount = 7;
+            this.arcScaleComponent1.MajorTickmark.FormatString = "{0:F0}";
+            this.arcScaleComponent1.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style7_2;
+            this.arcScaleComponent1.MajorTickmark.TextOffset = 22F;
+            this.arcScaleComponent1.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
+            this.arcScaleComponent1.MaxValue = 255F;
+            this.arcScaleComponent1.MinorTickCount = 4;
+            this.arcScaleComponent1.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style7_1;
+            this.arcScaleComponent1.Name = "scale1";
+            this.arcScaleComponent1.RadiusX = 83F;
+            this.arcScaleComponent1.RadiusY = 83F;
+            this.arcScaleComponent1.StartAngle = -180F;
+            this.arcScaleComponent1.Value = 20F;
+            // 
+            // arcScaleEffectLayerComponent1
+            // 
+            this.arcScaleEffectLayerComponent1.ArcScale = this.arcScaleComponent1;
+            this.arcScaleEffectLayerComponent1.Name = "effect1";
+            this.arcScaleEffectLayerComponent1.Shader = new DevExpress.XtraGauges.Core.Drawing.OpacityShader("Opacity[0.75]");
+            this.arcScaleEffectLayerComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.EffectLayerShapeType.CircularFull_Style7;
+            this.arcScaleEffectLayerComponent1.Size = new System.Drawing.SizeF(230F, 110F);
+            this.arcScaleEffectLayerComponent1.ZOrder = -1000;
+            // 
+            // arcScaleNeedleComponent1
+            // 
+            this.arcScaleNeedleComponent1.ArcScale = this.arcScaleComponent1;
+            this.arcScaleNeedleComponent1.EndOffset = -25F;
+            this.arcScaleNeedleComponent1.Name = "needle1";
+            this.arcScaleNeedleComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.NeedleShapeType.CircularFull_Style7;
+            this.arcScaleNeedleComponent1.StartOffset = -21F;
+            this.arcScaleNeedleComponent1.ZOrder = -50;
             // 
             // frmMediaPlayer
             // 
@@ -184,12 +263,18 @@
             this.Controls.Add(this.btnFW);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.btnUp);
+            this.Controls.Add(this.gaugeControl1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMediaPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Load += new System.EventHandler(this.frmMediaPlayer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleEffectLayerComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +289,11 @@
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button button12;
         private GUI.ucVolumeControl ucVolume;
+        private DevExpress.XtraGauges.Win.GaugeControl gaugeControl1;
+        private DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge circularGauge1;
+        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent arcScaleBackgroundLayerComponent1;
+        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent arcScaleComponent1;
+        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleEffectLayerComponent arcScaleEffectLayerComponent1;
+        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent arcScaleNeedleComponent1;
     }
 }

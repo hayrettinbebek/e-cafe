@@ -74,6 +74,24 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.1, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v9.1.Core, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v9.1.Win, Version=9.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MarqueeLabel, Version=1.0.1888.32534, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MarqueeLabel.dll</HintPath>
@@ -292,7 +310,6 @@
     </Compile>
     <Compile Include="SQL\DataSets\dsPartnerek.cs">
       <DependentUpon>dsPartnerek.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQL\DataSets\dsUserJog.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -760,6 +777,7 @@
       <DependentUpon>PartnerSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Torzsek\frmAFA.resx">
       <DependentUpon>frmAFA.cs</DependentUpon>
       <SubType>Designer</SubType>
