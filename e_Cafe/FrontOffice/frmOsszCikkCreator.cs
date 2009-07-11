@@ -206,7 +206,7 @@ namespace e_Cafe.FrontOffice
                     //pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
                 }
                 ((CikkcsopButton)sender).Refresh();
-                loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1);
+                loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1,null);
                 //if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
 
                 Alcsop_needScroll = pnlOtherFilter.Width / 120;
@@ -217,25 +217,30 @@ namespace e_Cafe.FrontOffice
         {
             
             LastOtherFilterMenu = sender;
-            loadCikkek(((OtherFButton)sender)._OTF.CikkCsopID, ((OtherFButton)sender)._OTF.OID);
+            loadCikkek(((OtherFButton)sender)._OTF.CikkCsopID, ((OtherFButton)sender)._OTF.OID,null);
         }
 
         #endregion
 
-        private void loadCikkek(int pCikkcsoport, int pAlcsoportId)
+        private void loadCikkek(int pCikkcsoport, int pAlcsoportId, string sFilter)
         {
             flpCikkek.Controls.Clear();
             //Cikk_list lCikkList = new Cikk_list(new SqlConnection(DEFS.ConSTR),pCikkcsoport, true);
             List<Cikk> lButtons = new List<Cikk>();
             DEFS.log(Level.Debug, "LoadCikkek() " + pAlcsoportId.ToString() + " Cikkcsoport: " + pCikkcsoport.ToString());
             Cikkek_needScroll = (flpCikkek.Width / (DEFS.CIKK_BTN_SIZE.Width + 4)) * (flpCikkek.Height / (DEFS.CIKK_BTN_SIZE.Height + 4));
+            if (sFilter != null)
+            {
+                lButtons = lCikkList.CikkFilter(sFilter);
 
+            }
+            else 
             if (pCikkcsoport == -1)
             {
 
                 lButtons = lCikkList.CikkListByTOP();
             }
-            else
+            else 
             {
 
                 if (pAlcsoportId == -1)
@@ -255,6 +260,7 @@ namespace e_Cafe.FrontOffice
                     lButtons = lCikkList.CikkListByAlcsoport(pCikkcsoport, pAlcsoportId);
                 }
             }
+
             int j = 0;
             for (int i = Cikkek_ScrollPos; i < lButtons.Count; i++)
             {
@@ -406,6 +412,12 @@ namespace e_Cafe.FrontOffice
                 lblCikkcsopSelectInfo.Visible = true;
 
             }
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = InputText.getString(true);
+            loadCikkek(-1, -1, textBox3.Text);
         }
 
     }
