@@ -41,6 +41,8 @@
             this.btnAlcsopPrev = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnNextCikk = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -61,6 +63,10 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
+            this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
+            this.button1 = new System.Windows.Forms.Button();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCikkcsopSelectInfo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,16 +74,11 @@
             this.lblCikkNev = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.button1 = new System.Windows.Forms.Button();
-            this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
             this.rECEPTTableAdapter = new e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
             this.receptMentes = new e_Cafe.SQL.DataSets.ReceptMentes();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.receptTableAdapter1 = new e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.RECEPTTableAdapter();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.pnlOtherFilter.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -227,6 +228,28 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(532, 61);
             this.panel12.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox3.Location = new System.Drawing.Point(81, 11);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(285, 32);
+            this.textBox3.TabIndex = 0;
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(6, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Keresés:";
+            this.label6.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel10
             // 
@@ -450,6 +473,8 @@
             // 
             // panel13
             // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.panel13.Controls.Add(this.label7);
             this.panel13.Controls.Add(this.checkBox1);
             this.panel13.Controls.Add(this.dataRepeater1);
             this.panel13.Controls.Add(this.lblCikkcsopSelectInfo);
@@ -471,7 +496,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(93, 37);
             this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.Text = "Kérem válasszon...";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -491,6 +516,35 @@
             this.dataRepeater1.Size = new System.Drawing.Size(219, 368);
             this.dataRepeater1.TabIndex = 2;
             this.dataRepeater1.Text = "dataRepeater1";
+            // 
+            // rECEPTBindingSource
+            // 
+            this.rECEPTBindingSource.DataMember = "RECEPT";
+            this.rECEPTBindingSource.DataSource = this.dsReceptCikkek;
+            // 
+            // dsReceptCikkek
+            // 
+            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
+            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(113, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "DB módosít";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rECEPTBindingSource, "TARTOZEK_MENNY", true));
+            this.labelControl1.Location = new System.Drawing.Point(3, 3);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(63, 13);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "labelControl1";
             // 
             // label3
             // 
@@ -566,57 +620,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(81, 11);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(285, 32);
-            this.textBox3.TabIndex = 0;
-            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(6, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Keresés:";
-            this.label6.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rECEPTBindingSource, "TARTOZEK_MENNY", true));
-            this.labelControl1.Location = new System.Drawing.Point(3, 3);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(63, 13);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "labelControl1";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(113, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "DB módosít";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // rECEPTBindingSource
-            // 
-            this.rECEPTBindingSource.DataMember = "RECEPT";
-            this.rECEPTBindingSource.DataSource = this.dsReceptCikkek;
-            // 
-            // dsReceptCikkek
-            // 
-            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
-            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // rECEPTTableAdapter
             // 
             this.rECEPTTableAdapter.ClearBeforeFill = true;
@@ -634,6 +637,15 @@
             // receptTableAdapter1
             // 
             this.receptTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(119, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "label7";
             // 
             // frmOsszCikkCreator
             // 
@@ -728,5 +740,6 @@
         private e_Cafe.SQL.DataSets.ReceptMentes receptMentes;
         private System.Windows.Forms.BindingSource bindingSource1;
         public e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.RECEPTTableAdapter receptTableAdapter1;
+        private System.Windows.Forms.Label label7;
     }
 }

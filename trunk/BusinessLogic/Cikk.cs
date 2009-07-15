@@ -1064,7 +1064,7 @@ namespace BusinessLogic
                 case CikkListContructType.CikkselectorKeszlet:
                     {
                         #region CikkListContructType.CikkselectorKeszlet
-                        cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, MEGYS_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK c WHERE AKTIV = 1 and CIKK_TIPUS = 0";
+                        cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, MEGYS_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR FROM CIKK c WHERE AKTIV = 1 and CIKK_TIPUS = 0 ";
                         SqlDataReader rdr = cmd.ExecuteReader();
                         while (rdr.Read())
                         {
@@ -1092,7 +1092,7 @@ namespace BusinessLogic
                         #region CikkListContructType.FullCikk
                         cmd.CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID, isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, " +
                                     " isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS " + //, isnull(l.LIT_KISZ_NEV,'') as KISZ_NEV, isnull(l.LIT_KISZ_MENNY,'1') as KISZ_MENNY " +
-                                    " FROM CIKK c";
+                                    " FROM CIKK c WHERE CIKK_TIPUS != 2";
 
                         SqlDataReader rdr = cmd.ExecuteReader();
                         while (rdr.Read())
@@ -1123,7 +1123,7 @@ namespace BusinessLogic
                                         " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                                         " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ,  " +
                                         " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR, isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER, isnull(LIT_KISZ_ID,-1) as LIT_KISZ_ID " +
-                                " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE AKTIV = 1 ORDER BY isnull(CIKK_ROVID_NEV,'') ";
+                                " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE AKTIV = 1 and WHERE CIKK_TIPUS != 2 ORDER BY isnull(CIKK_ROVID_NEV,'') ";
 
                         SqlDataReader rdr = cmd.ExecuteReader();
 

@@ -58,7 +58,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(334, 22);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(240, 155);
+            this.button3.Size = new System.Drawing.Size(121, 22);
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -85,6 +85,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

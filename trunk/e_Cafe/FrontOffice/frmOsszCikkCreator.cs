@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
 using GUI;
+using GUI.billentyu;
 using NSpring.Logging;
 using NSpring.Logging.EventFormatters;
 
@@ -21,7 +22,7 @@ namespace e_Cafe.FrontOffice
 
         Cikkcsoport_list cl = new Cikkcsoport_list(CikkcsoportContructType.Full);
         Cikk_list lCikkList = new Cikk_list(CikkListContructType.ForRendeles);
-        
+
         Object LastCikkcsopMenu;
         Object LastOtherFilterMenu;
 
@@ -58,7 +59,7 @@ namespace e_Cafe.FrontOffice
 
         private void button12_Click(object sender, EventArgs e)
         {
-            
+
             if (needScroll < MaxScroll)
             {
                 CikkCsopScrollPos--;
@@ -82,7 +83,7 @@ namespace e_Cafe.FrontOffice
 
         private void btnPrevCikk_Click(object sender, EventArgs e)
         {
-            
+
             if (Cikkek_needScroll < Cikkek_MaxScroll)
             {
                 Cikkek_ScrollPos -= ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
@@ -94,7 +95,7 @@ namespace e_Cafe.FrontOffice
 
         private void btnNextCikk_Click(object sender, EventArgs e)
         {
-            
+
             if (Cikkek_needScroll < Cikkek_MaxScroll)
             {
                 Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
@@ -106,7 +107,7 @@ namespace e_Cafe.FrontOffice
 
         private void btnAlcsopNext_Click(object sender, EventArgs e)
         {
-            
+
             if ((Alcsop_needScroll + AlCsopScrollPos) < Alcsop_MaxScroll)
             {
                 AlCsopScrollPos += Alcsop_needScroll;
@@ -119,7 +120,7 @@ namespace e_Cafe.FrontOffice
 
         private void btnAlcsopPrev_Click(object sender, EventArgs e)
         {
-            
+
             //if ((Alcsop_needScroll + AlCsopScrollPos) < Alcsop_MaxScroll)
             //{
             AlCsopScrollPos -= Alcsop_needScroll;
@@ -146,6 +147,7 @@ namespace e_Cafe.FrontOffice
             {
                 if (AktSzerkesztettCikk != null)
                 {
+                    checkBox1.Text = ((CikkcsopButton)sender)._Cikkcsoport.NEV;
                     AktSzerkesztettCikk.CIKKCSOPORT_ID = ((CikkcsopButton)sender)._Cikkcsoport.ID;
                     AktSzerkesztettCikk.Save();
                 }
@@ -206,7 +208,7 @@ namespace e_Cafe.FrontOffice
                     //pnlOldalsav.Height = ((CikkcsopButton)sender).Parent.Parent.Location.Y + ((CikkcsopButton)sender).Location.Y + ((CikkcsopButton)sender).Height - pnlOtherFilter.Height;
                 }
                 ((CikkcsopButton)sender).Refresh();
-                loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1,null);
+                loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.ID, -1, null);
                 //if (Call) { loadCikkek(((CikkcsopButton)sender)._Cikkcsoport.fCIKKCSOPORT_ID, -1); }
 
                 Alcsop_needScroll = pnlOtherFilter.Width / 120;
@@ -215,9 +217,9 @@ namespace e_Cafe.FrontOffice
 
         private void AlcsopMenuClick(object sender, EventArgs e)
         {
-            
+
             LastOtherFilterMenu = sender;
-            loadCikkek(((OtherFButton)sender)._OTF.CikkCsopID, ((OtherFButton)sender)._OTF.OID,null);
+            loadCikkek(((OtherFButton)sender)._OTF.CikkCsopID, ((OtherFButton)sender)._OTF.OID, null);
         }
 
         #endregion
@@ -234,32 +236,32 @@ namespace e_Cafe.FrontOffice
                 lButtons = lCikkList.CikkFilter(sFilter);
 
             }
-            else 
-            if (pCikkcsoport == -1)
-            {
-
-                lButtons = lCikkList.CikkListByTOP();
-            }
-            else 
-            {
-
-                if (pAlcsoportId == -1)
+            else
+                if (pCikkcsoport == -1)
                 {
-                    if (pnlOtherFilter.Visible == true)
-                    {
-                        lButtons = lCikkList.CikkListByCsoportTOP(pCikkcsoport);
-                    }
-                    else
-                    {
-                        lButtons = lCikkList.CikkListByCsoport(pCikkcsoport);
-                    }
 
+                    lButtons = lCikkList.CikkListByTOP();
                 }
                 else
                 {
-                    lButtons = lCikkList.CikkListByAlcsoport(pCikkcsoport, pAlcsoportId);
+
+                    if (pAlcsoportId == -1)
+                    {
+                        if (pnlOtherFilter.Visible == true)
+                        {
+                            lButtons = lCikkList.CikkListByCsoportTOP(pCikkcsoport);
+                        }
+                        else
+                        {
+                            lButtons = lCikkList.CikkListByCsoport(pCikkcsoport);
+                        }
+
+                    }
+                    else
+                    {
+                        lButtons = lCikkList.CikkListByAlcsoport(pCikkcsoport, pAlcsoportId);
+                    }
                 }
-            }
 
             int j = 0;
             for (int i = Cikkek_ScrollPos; i < lButtons.Count; i++)
@@ -293,8 +295,8 @@ namespace e_Cafe.FrontOffice
                 AktSzerkesztettCikk.AddReceptTetel(((CikkButton)sender).fCIKK.CIKK_ID, ((CikkButton)sender).fCIKK.KISZ_MENNY);
                 rECEPTTableAdapter.Fill(dsReceptCikkek.RECEPT, AktSzerkesztettCikk.CIKK_ID);
             }
-                
-           
+
+
         }
 
         private void frmOsszCikkCreator_Load(object sender, EventArgs e)
@@ -368,9 +370,19 @@ namespace e_Cafe.FrontOffice
         {
             if (AktSzerkesztettCikk != null)
             {
-                DialogResult = DialogResult.OK;
-                this.Close();
-
+                if (AktSzerkesztettCikk.ELADASI_AR < 0)
+                {
+                    DEFS.SendInfoMessage("Nem adott meg eladási árat!");
+                }
+                else if ((AktSzerkesztettCikk.CIKKCSOPORT_ID < 0))
+                {
+                    DEFS.SendInfoMessage("Nem rendelte cikkcsoporthoz!");
+                }
+                else
+                {
+                    DialogResult = DialogResult.OK;
+                    this.Close();
+                }
 
             }
         }
@@ -391,8 +403,8 @@ namespace e_Cafe.FrontOffice
             if (AktSzerkesztettCikk != null)
             {
                 AktSzerkesztettCikk.ELADASI_AR = Convert.ToDouble(textBox2.Text);
-                AktSzerkesztettCikk.NETTO_AR = DEFS.getNetto(Convert.ToDouble(textBox2.Text),20);
-                
+                AktSzerkesztettCikk.NETTO_AR = DEFS.getNetto(Convert.ToDouble(textBox2.Text), 20);
+
                 AktSzerkesztettCikk.Save();
 
             }
@@ -422,6 +434,25 @@ namespace e_Cafe.FrontOffice
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //frmTouchNumKeyboard ft = new frmTouchNumKeyboard(InputType.Number);
+            //ft.every_key_close = true;
+
+
+            //    while (ft.DialogResult != DialogResult.OK)
+            //    {
+            //        ft.defaultValue = label7.Text;
+            //        ft.ShowDialog();
+
+            //        label7.Text =  ft.ResultString;
+
+
+
+            //    }
+
+
+
+
+
             int Parent_cikk_id = (int)((DataRowView)rECEPTBindingSource.Current)["OSSZ_CIKK_ID"];
             int load_cikk_id = (int)((DataRowView)rECEPTBindingSource.Current)["OSSZ_CIKK_TARTOZEK_ID"];
 

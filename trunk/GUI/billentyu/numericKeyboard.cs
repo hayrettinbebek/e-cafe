@@ -26,6 +26,8 @@ namespace GUI.billentyu
         {
             txtRet.Focus();
             SendKeys.Send(((Button)sender).Tag.ToString());
+            SendKeys.Send("{TAB}");
+
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -58,6 +60,7 @@ namespace GUI.billentyu
             OutTxtBox.Focus();
             SendKeys.Send("{TAB}");
 
+
         }
 
 
@@ -85,6 +88,33 @@ namespace GUI.billentyu
                 ((frmTouchNumKeyboard)Parent).Close();
             }
             doWhat(sender,e);
+        }
+
+        private void button8_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void button8_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button8_Leave(object sender, EventArgs e)
+        {
+            if (((frmTouchNumKeyboard)Parent).every_key_close)
+            {
+                resString = txtRet.Text;
+                ((frmTouchNumKeyboard)Parent).ResultString = resString;
+                ((frmTouchNumKeyboard)Parent).DialogResult = DialogResult.Abort;
+                ((frmTouchNumKeyboard)Parent).Close();
+
+            }
         }
     }
 }
