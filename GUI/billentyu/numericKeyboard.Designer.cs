@@ -105,7 +105,11 @@
             this.button8.TabIndex = 68;
             this.button8.Tag = "8";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Paint += new System.Windows.Forms.PaintEventHandler(this.button8_Paint);
+            this.button8.Validated += new System.EventHandler(this.button8_Validated);
             this.button8.Click += new System.EventHandler(this.button_Click);
+            this.button8.Leave += new System.EventHandler(this.button8_Leave);
+            this.button8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button8_MouseUp);
             // 
             // button6
             // 

@@ -109,8 +109,79 @@ namespace GUI
             return (tmpInt);
 
         }
+        /*
+        public static int getInt3(bool req)
+        {
+            // Paramtéer TRUE = Kötelezően nem lehet 0 hosszú
+            int tmpInt = 0;
+            frmTouchNumKeyboard ft = new frmTouchNumKeyboard(InputType.Number);
 
+            if (req)
+            {
+                while (tmpInt == 0)
+                {
+                    ft.ShowDialog();
+                    if (ft.DialogResult == DialogResult.OK)
+                    {
+                        tmpInt = Convert.ToInt16(ft.ResultString);
 
+                    }
+                }
+            }
+            else
+            {
+                ft.ShowDialog();
+                if (ft.DialogResult == DialogResult.OK)
+                {
+                    tmpInt = Convert.ToInt16(ft.ResultString);
+
+                }
+            }
+
+            return (tmpInt);
+
+        }
+
+        private static bool getInt2(bool req, out int szam )
+        {
+            // Paramtéer TRUE = Kötelezően nem lehet 0 hosszú
+            int tmpInt = 0;
+            frmTouchNumKeyboard ft = new frmTouchNumKeyboard(InputType.Number);
+
+            if (req)
+            {
+                while (tmpInt == 0)
+                {
+                    ft.ShowDialog();
+                    if (ft.DialogResult == DialogResult.OK)
+                    {
+                        szam = Convert.ToInt16(ft.ResultString);
+
+                    }
+                    if (ft.DialogResult == DialogResult.Cancel)
+                    {
+                        szam = 0;
+                        break;
+
+                    }
+
+                }
+            }
+            else
+            {
+                ft.ShowDialog();
+                if (ft.DialogResult == DialogResult.OK)
+                {
+                    szam = Convert.ToInt16(ft.ResultString);
+
+                }
+            }
+
+            return (tmpInt);
+
+        }
+
+        */
 
     }
 }
