@@ -35,7 +35,7 @@ namespace ReportDebugger
             try
             {
                 DEFS.createLogger();
-                DEFS.ConSTR = @"Data Source=ERNIE-HOME\SQLEXPRESS;Initial Catalog=E_CAFE;Persist Security Info=True;User ID=sa;Password=x";
+                DEFS.ConSTR = @"Data Source=ERNIE-NB\SQLEXPRESS;Initial Catalog=ECAFE_0407;Persist Security Info=True;User ID=sa;Password=x";
                 DEFS.DefProgramLocation = AppDomain.CurrentDomain.BaseDirectory;
                 DEFS.R_SYSPAR = new SysParList();
                 DEFS.LoadNyitottNap();
@@ -55,7 +55,9 @@ namespace ReportDebugger
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("V" + 5.ToString().PadLeft(8,'0') );
+            MessageBox.Show( Syspar2.GetValue(ParamCodes.OSSZ_REPORT_FORMAT).ToString() );
+
+            //typeof(Syspar.GetType(ParamTypes.szoveg))
         }
 
         private void textBox1_Click(object sender, EventArgs e)

@@ -7,8 +7,13 @@ using System.Data.SqlClient;
 
 namespace BusinessLogic
 {
+
     public class Syspar
     {
+        public ParamCodes PARAM_CODE;
+
+
+
         public string PARAM_NAME;
         public string VALUE_S;
         public int VALUE_I;
@@ -23,9 +28,14 @@ namespace BusinessLogic
 
 
         }
+
+        public void Save()
+        {
+
+        }
     }
 
-
+    
     public class SysParList
     {
 
@@ -99,123 +109,83 @@ namespace BusinessLogic
             return (ret);
         }
     }
-
-
-    public class SYSTEM_GLOBAL_PARAMS
+    
+    public enum ParamTypes
     {
-        private int _SHOW_ORDER_BEFORE;
-        private string _CEG_NEV;
-        private string _CEG_CIM;
-        private string _BLOKK_LABLEC1;
-        private string _BLOKK_LABLEC2;
-        private string _BLOKK_LABLEC3;
-        private int _LELTAR_KOROK_SZAMA;
-        private int _AUTO_PRINT_BLOKK;
-        private string _OSSZ_REPORT_FORMAT;
-
-        public int SHOW_ORDER_BEFORE
+        egesz,
+        szoveg,
+        tizedes,
+        image
+    }
+    public static class Syspar2
+    {
+        public static Object GetValue(ParamCodes c)
         {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-        public string CEG_NEV
-        {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-        public string CEG_CIM
-        {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-        public string BLOKK_LABLEC1
-        {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-        public string BLOKK_LABLEC2
-        {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-        public string BLOKK_LABLEC3
-        {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-
-        public int LELTAR_KOROK_SZAMA
-        {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-        public int AUTO_PRINT_BLOKK
-        {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-        public string OSSZ_REPORT_FORMAT
-        {
-            get { return (_SHOW_ORDER_BEFORE); }
-            set { SHOW_ORDER_BEFORE = value; }
-        }
-
-
-        public SYSTEM_GLOBAL_PARAMS()
-        {
-
-            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
-            sc.Open();
-
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.Connection = sc;
-
-            cmd.CommandType = CommandType.Text;
-
-            cmd.CommandText = "SELECT PARAM_NAME, isnull(PARAM_VALUE_S,'') as PARAM_VALUE_S, isnull(PARAM_VALUE_I,-1) as PARAM_VALUE_I, isnull(PARAM_VALUE_F,-1.0) as PARAM_VALUE_F FROM SYSPAR";
-
-            SqlDataReader rdr = cmd.ExecuteReader();
-            while (rdr.Read())
+            string field_name = "";
+            switch ((ParamTypes)Enum.Parse(typeof(ParamCodes), c.ToString()))
             {
-                if (((string)rdr["PARAM_NAME"]) == "SHOW_ORDER_BEFORE")
-                { SHOW_ORDER_BEFORE = (int)rdr["PARAM_VALUE_I"]; }
-                else
-                    if (((string)rdr["PARAM_NAME"]) == "CEG_NEV")
-                    { CEG_NEV = (string)rdr["PARAM_VALUE_S"]; }
-                    else
-                        if (((string)rdr["PARAM_NAME"]) == "CEG_CIM")
-                        { CEG_CIM = (string)rdr["PARAM_VALUE_S"]; }
-                        else
-                            if (((string)rdr["PARAM_NAME"]) == "BLOKK_LABLEC1")
-                            { BLOKK_LABLEC1 = (string)rdr["PARAM_VALUE_S"]; }
-                            else
-                                if (((string)rdr["PARAM_NAME"]) == "BLOKK_LABLEC2")
-                                { BLOKK_LABLEC2 = (string)rdr["PARAM_VALUE_S"]; }
-                                else
-                                    if (((string)rdr["PARAM_NAME"]) == "BLOKK_LABLEC3")
-                                    { BLOKK_LABLEC3 = (string)rdr["PARAM_VALUE_S"]; }
-                                    else
-                                        if (((string)rdr["PARAM_NAME"]) == "LELTAR_KOROK_SZAMA")
-                                        { LELTAR_KOROK_SZAMA = (int)rdr["PARAM_VALUE_I"]; }
-                                        else
-                                            if (((string)rdr["PARAM_NAME"]) == "AUTO_PRINT_BLOKK")
-                                            { AUTO_PRINT_BLOKK = (int)rdr["PARAM_VALUE_I"]; }
-                                            else
-                                                if (((string)rdr["PARAM_NAME"]) == "OSSZ_REPORT_FORMAT")
-                                                { OSSZ_REPORT_FORMAT = (string)rdr["PARAM_VALUE_S"]; }
+                case ParamTypes.egesz:
+                    field_name = "PARAM_VALUE_I";
+                    break;
+                case ParamTypes.szoveg:
+                    field_name = "PARAM_VALUE_S";
+                    break;
+                case ParamTypes.tizedes:
+                    field_name = "PARAM_VALUE_F";
+                    break;
+                case ParamTypes.image:
+                    field_name = "PARAM_VALUE_IMAGE";
+                    break;
+                default:
+                    break;
             }
-            rdr.Close();
-            sc.Close();
+
+            return (Object)(field_name +"-->" +GetType(c));
+
         }
 
-        public void Save()
+        public static Type GetType(ParamCodes cc)
         {
+            switch (((ParamTypes)Enum.Parse(typeof(ParamCodes), cc.ToString())))
+            {
+                case ParamTypes.egesz:
+                    return typeof(Int16);
+                    break;
+                case ParamTypes.szoveg:
+                    return (typeof(String));
+                    break;
+                case ParamTypes.tizedes:
+                    return typeof(Double);
+                    break;
+                case ParamTypes.image:
+                    return typeof(String);
+                    break;
+                default:
+                    return typeof(Object);
+                    break;
+            }
 
-            // ide kell propertynként a mentés megvalósítása
+
         }
-
 
 
     }
+
+    public enum ParamCodes
+    {
+       SHOW_ORDER_BEFORE = ParamTypes.egesz,
+       CEG_NEV = ParamTypes.szoveg,
+       CEG_CIM = ParamTypes.szoveg,
+       BLOKK_LABLEC1 = ParamTypes.szoveg,
+       BLOKK_LABLEC2 = ParamTypes.szoveg,
+       BLOKK_LABLEC3 = ParamTypes.szoveg,
+       LELTAR_KOROK_SZAMA = ParamTypes.egesz,
+       AUTO_PRINT_BLOKK = ParamTypes.egesz,
+       OSSZ_REPORT_FORMAT = ParamTypes.szoveg
+
+    }
+    
+
+
+   
 }
