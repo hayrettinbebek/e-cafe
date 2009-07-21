@@ -45,7 +45,7 @@ namespace e_Cafe
                 DEFS.log(Level.Exception, c.Message);
             }
             _Rendel = false;
-            DEFS.R_SYSPAR = new SysParList();
+            //DEFS.R_SYSPAR = new SysParList();
             DEFS.log(Level.Info, "Sikeres inicializálás");
             RefreshDatabase();
             DEFS.LoadPossibleOpenDays();

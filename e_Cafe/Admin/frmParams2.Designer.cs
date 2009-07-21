@@ -28,53 +28,189 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.seSHOW_ORDER_BEFORE = new DevExpress.XtraEditors.SpinEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.seSHOW_ORDER_BEFORE.Properties)).BeginInit();
+            this.txtCegNev = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCegCim = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtLablec1 = new System.Windows.Forms.TextBox();
+            this.txtLablec2 = new System.Windows.Forms.TextBox();
+            this.txtLablec3 = new System.Windows.Forms.TextBox();
+            this.nuSchowOrderBefore = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chkBlokkAutoNyomt = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuSchowOrderBefore)).BeginInit();
             this.SuspendLayout();
             // 
-            // seSHOW_ORDER_BEFORE
+            // txtCegNev
             // 
-            this.seSHOW_ORDER_BEFORE.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.seSHOW_ORDER_BEFORE.Location = new System.Drawing.Point(137, 12);
-            this.seSHOW_ORDER_BEFORE.Name = "seSHOW_ORDER_BEFORE";
-            this.seSHOW_ORDER_BEFORE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.seSHOW_ORDER_BEFORE.Size = new System.Drawing.Size(47, 20);
-            this.seSHOW_ORDER_BEFORE.TabIndex = 0;
+            this.txtCegNev.Location = new System.Drawing.Point(91, 6);
+            this.txtCegNev.Name = "txtCegNev";
+            this.txtCegNev.Size = new System.Drawing.Size(157, 20);
+            this.txtCegNev.TabIndex = 0;
             // 
-            // labelControl1
+            // label1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 15);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(119, 13);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Asztal foglalások jelzése ";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Cég neve:";
             // 
-            // labelControl2
+            // label2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(190, 15);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(95, 13);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "órával érkezés előtt";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Cég címe:";
+            // 
+            // txtCegCim
+            // 
+            this.txtCegCim.Location = new System.Drawing.Point(91, 32);
+            this.txtCegCim.Name = "txtCegCim";
+            this.txtCegCim.Size = new System.Drawing.Size(157, 20);
+            this.txtCegCim.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Láblécen megjelenő szövegek:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.chkBlokkAutoNyomt);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtLablec3);
+            this.groupBox1.Controls.Add(this.txtLablec2);
+            this.groupBox1.Controls.Add(this.txtLablec1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 58);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(359, 154);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Blokk paraméterek";
+            // 
+            // txtLablec1
+            // 
+            this.txtLablec1.Location = new System.Drawing.Point(25, 69);
+            this.txtLablec1.Name = "txtLablec1";
+            this.txtLablec1.Size = new System.Drawing.Size(312, 20);
+            this.txtLablec1.TabIndex = 0;
+            // 
+            // txtLablec2
+            // 
+            this.txtLablec2.Location = new System.Drawing.Point(25, 95);
+            this.txtLablec2.Name = "txtLablec2";
+            this.txtLablec2.Size = new System.Drawing.Size(312, 20);
+            this.txtLablec2.TabIndex = 0;
+            // 
+            // txtLablec3
+            // 
+            this.txtLablec3.Location = new System.Drawing.Point(25, 121);
+            this.txtLablec3.Name = "txtLablec3";
+            this.txtLablec3.Size = new System.Drawing.Size(312, 20);
+            this.txtLablec3.TabIndex = 0;
+            // 
+            // nuSchowOrderBefore
+            // 
+            this.nuSchowOrderBefore.Location = new System.Drawing.Point(471, 6);
+            this.nuSchowOrderBefore.Name = "nuSchowOrderBefore";
+            this.nuSchowOrderBefore.Size = new System.Drawing.Size(41, 20);
+            this.nuSchowOrderBefore.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(345, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Asztalfoglalások mutatása";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(518, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "nappal előtte";
+            // 
+            // chkBlokkAutoNyomt
+            // 
+            this.chkBlokkAutoNyomt.AutoSize = true;
+            this.chkBlokkAutoNyomt.Location = new System.Drawing.Point(9, 19);
+            this.chkBlokkAutoNyomt.Name = "chkBlokkAutoNyomt";
+            this.chkBlokkAutoNyomt.Size = new System.Drawing.Size(176, 17);
+            this.chkBlokkAutoNyomt.TabIndex = 2;
+            this.chkBlokkAutoNyomt.Text = "Blokkk automatikus nyomtatása";
+            this.chkBlokkAutoNyomt.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(122, 239);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Mentés";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(402, 239);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(139, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Kilépés mentés nélkül";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(486, 34);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Reload data from DB";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmParams2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 380);
-            this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.seSHOW_ORDER_BEFORE);
+            this.ClientSize = new System.Drawing.Size(612, 304);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.nuSchowOrderBefore);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtCegCim);
+            this.Controls.Add(this.txtCegNev);
             this.Name = "frmParams2";
             this.Text = "Rendszerparaméterek";
-            ((System.ComponentModel.ISupportInitialize)(this.seSHOW_ORDER_BEFORE.Properties)).EndInit();
+            this.Load += new System.EventHandler(this.frmParams2_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuSchowOrderBefore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,8 +218,23 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.SpinEdit seSHOW_ORDER_BEFORE;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private System.Windows.Forms.TextBox txtCegNev;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCegCim;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtLablec3;
+        private System.Windows.Forms.TextBox txtLablec2;
+        private System.Windows.Forms.TextBox txtLablec1;
+        private System.Windows.Forms.NumericUpDown nuSchowOrderBefore;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chkBlokkAutoNyomt;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+
+
     }
 }

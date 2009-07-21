@@ -175,7 +175,7 @@ namespace e_Cafe.Admin
 
                 nz.CloseDay();
                 doPrinting dp = new doPrinting();
-                if (DEFS.R_SYSPAR.GetStrValue("OSSZ_REPORT_FORMAT") == "L")
+                if ((string)Syspar2.GetValue(ParamCodes.OSSZ_REPORT_FORMAT) == "L")
                 {
                     dp.setReportMaker(new OsszesitoReport(DEFS.NyitNap_EV
                                                             , DEFS.NyitNap_HO,

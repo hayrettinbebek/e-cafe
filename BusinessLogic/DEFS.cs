@@ -32,7 +32,7 @@ namespace BusinessLogic
 
         
 
-        public static SysParList R_SYSPAR;
+       // public static SysParList R_SYSPAR;
 
         public static Rights UserRights;
 

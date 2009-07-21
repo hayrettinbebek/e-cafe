@@ -37,7 +37,7 @@ namespace BusinessLogic
 
                 var ret_fogl =
                     from c in lFOGLALASOK
-                    where (c.METTOL < (DateTime.Now).AddHours(DEFS.R_SYSPAR.GetIntValue("SHOW_ORDER_BEFORE")) && c.MEDDIG >= DateTime.Now)
+                    where (c.METTOL < (DateTime.Now).AddHours((int)Syspar2.GetValue(ParamCodes.SHOW_ORDER_BEFORE)) && c.MEDDIG >= DateTime.Now)
                     select c;
                 ret_fogl.Each(c => iTmpRet.Add(c));
 

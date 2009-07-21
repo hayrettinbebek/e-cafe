@@ -59,8 +59,8 @@ namespace e_Cafe.Reports
             //box.Border.
             //box.Background = Brushes.Ivory;
             contents = new LinearSections();
-            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_NEV"), TextStyle.Heading1));
-            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_CIM"), TextStyle.Normal));
+            contents.AddSection(new SectionText((string)Syspar2.GetValue(ParamCodes.CEG_NEV), TextStyle.Heading1));
+            contents.AddSection(new SectionText((string)Syspar2.GetValue(ParamCodes.CEG_CIM), TextStyle.Normal));
             box.AddSection(contents);
             builder.AddSection(box);
 
@@ -163,17 +163,17 @@ builder.FinishLayeredLayout();
 
             builder.AddText(" ");
 
-            
-            builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC1"), TextStyle.Normal);
 
-            builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC2"), TextStyle.Normal);
-            builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC3"), TextStyle.Normal);
-            builder.AddText(DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC4"), TextStyle.Normal);
+            builder.AddText((string)Syspar2.GetValue(ParamCodes.BLOKK_LABLEC1), TextStyle.Normal);
 
-            height += sor_magas * ((DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC1").Length / 45)+1);
-            height += sor_magas * ((DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC2").Length / 45) + 1);
-            height += sor_magas * ((DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC3").Length / 45) + 1);
-            height += sor_magas * ((DEFS.R_SYSPAR.GetStrValue("BLOKK_LABLEC4").Length / 45) + 1);
+            builder.AddText((string)Syspar2.GetValue(ParamCodes.BLOKK_LABLEC2), TextStyle.Normal);
+            builder.AddText((string)Syspar2.GetValue(ParamCodes.BLOKK_LABLEC3), TextStyle.Normal);
+            //builder.AddText((string)Syspar2.GetValue(ParamCodes.BLOKK_LABLEC4), TextStyle.Normal);
+
+            height += sor_magas * ((Syspar2.GetValue(ParamCodes.BLOKK_LABLEC1).ToString().Length / 45) + 1);
+            height += sor_magas * ((Syspar2.GetValue(ParamCodes.BLOKK_LABLEC2).ToString().Length / 45) + 1);
+            height += sor_magas * ((Syspar2.GetValue(ParamCodes.BLOKK_LABLEC3).ToString().Length / 45) + 1);
+            //height += sor_magas * (((string)Syspar2.GetValue(ParamCodes.BLOKK_LABLEC4).Length / 45) + 1);
             height += sor_magas;
             builder.CurrentDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Custom", DEFS.MMtoInch(75), DEFS.MMtoInch(height));
             builder.CurrentDocument.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1), DEFS.MMtoInch(1));

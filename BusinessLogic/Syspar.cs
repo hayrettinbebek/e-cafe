@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace BusinessLogic
 {
-
+    /*
     public class Syspar
     {
         public ParamCodes PARAM_CODE;
@@ -109,20 +109,131 @@ namespace BusinessLogic
             return (ret);
         }
     }
-    
-    public enum ParamTypes
-    {
-        egesz,
-        szoveg,
-        tizedes,
-        image
-    }
+
+    */
+
     public static class Syspar2
     {
         public static Object GetValue(ParamCodes c)
         {
+            Object ret_obj = null;
+            string search_obj = c.ToString();
             string field_name = "";
-            switch ((ParamTypes)Enum.Parse(typeof(ParamCodes), c.ToString()))
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+
+
+            switch (GetType(c))
+            {
+                case ParamTypes.egesz:
+                    field_name = "PARAM_VALUE_I";
+                    break;
+                case ParamTypes.szoveg:
+                    field_name = "PARAM_VALUE_S";
+                    break;
+                case ParamTypes.tizedes:
+                    field_name= "PARAM_VALUE_F";
+                    break;
+                case ParamTypes.image:
+                    field_name = "PARAM_VALUE_IMAGE";
+                    break;
+                default:
+                    field_name = "";
+                    break;
+            }
+
+            if (field_name != "")
+            {
+                cmd.CommandText = "select " + field_name + " as VALUE from syspar where PARAM_NAME = '" + search_obj + "'";
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+
+                while (rdr.Read())
+                {
+                    ret_obj = rdr["VALUE"];
+                }
+                sc.Close();
+
+                return (Object)(ret_obj);
+            }
+            else
+            {
+                return (null);
+            }
+        }
+
+        public static ParamTypes GetType(ParamCodes cc)
+        {
+            if (cc == ParamCodes.SHOW_ORDER_BEFORE)
+            {
+                return ParamTypes.egesz;
+            }
+            else if (cc == ParamCodes.CEG_NEV)
+            {
+                return (ParamTypes.szoveg);
+            }
+            else if (cc == ParamCodes.SHOW_ORDER_BEFORE)
+            {
+                return (ParamTypes.szoveg);
+            }
+            else if (cc == ParamCodes.SHOW_ORDER_BEFORE)
+            {
+                return (ParamTypes.egesz);
+            }
+            else if (cc == ParamCodes.CEG_CIM)
+            {
+                return (ParamTypes.szoveg);
+            }
+            else if (cc == ParamCodes.BLOKK_LABLEC1)
+            {
+                return (ParamTypes.szoveg);
+            }
+            else if (cc == ParamCodes.BLOKK_LABLEC2)
+            {
+                return (ParamTypes.szoveg);
+            }
+            else if (cc == ParamCodes.BLOKK_LABLEC3)
+            {
+                return (ParamTypes.szoveg);
+            }
+            else if (cc == ParamCodes.AUTO_PRINT_BLOKK)
+            {
+                return (ParamTypes.egesz);
+            }
+            else if (cc == ParamCodes.LELTAR_KOROK_SZAMA)
+            {
+                return (ParamTypes.egesz);
+            }
+            else if (cc == ParamCodes.OSSZ_REPORT_FORMAT)
+            {
+                return (ParamTypes.szoveg);
+            }
+            else
+            {
+                return ParamTypes.egesz;
+            }
+        }
+
+        public static void SetValues(ParamCodes uc, Object val){
+            SqlConnection sc = new SqlConnection(DEFS.ConSTR);
+            sc.Open();
+            string search_obj = uc.ToString();
+            string field_name = "";
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = sc;
+
+            cmd.CommandType = CommandType.Text;
+
+            switch (GetType(uc))
             {
                 case ParamTypes.egesz:
                     field_name = "PARAM_VALUE_I";
@@ -137,51 +248,43 @@ namespace BusinessLogic
                     field_name = "PARAM_VALUE_IMAGE";
                     break;
                 default:
+                    field_name = "";
                     break;
             }
 
-            return (Object)(field_name +"-->" +GetType(c));
-
-        }
-
-        public static Type GetType(ParamCodes cc)
-        {
-            switch (((ParamTypes)Enum.Parse(typeof(ParamCodes), cc.ToString())))
+            if (field_name != "")
             {
-                case ParamTypes.egesz:
-                    return typeof(Int16);
-                    break;
-                case ParamTypes.szoveg:
-                    return (typeof(String));
-                    break;
-                case ParamTypes.tizedes:
-                    return typeof(Double);
-                    break;
-                case ParamTypes.image:
-                    return typeof(String);
-                    break;
-                default:
-                    return typeof(Object);
-                    break;
+
+                string sql_str = "IF EXISTS(select '' from syspar where PARAM_NAME = '" + search_obj + "') BEGIN " +
+                                " UPDATE SYSPAR SET " + field_name + " = '" + val.ToString() + "' WHERE PARAM_NAME = '" + search_obj + "' " +
+                                " end else begin INSERT INTO syspar (PARAM_NAME, " + field_name + ") VALUES ('" + search_obj + "' ,'" + val.ToString() + "') END ";
+                cmd.CommandText = sql_str;
+
+                cmd.ExecuteNonQuery();
+                sc.Close();
             }
 
-
         }
-
-
     }
 
+    public enum ParamTypes
+    {
+        egesz,
+        szoveg,
+        tizedes,
+        image
+    }
     public enum ParamCodes
     {
-       SHOW_ORDER_BEFORE = ParamTypes.egesz,
-       CEG_NEV = ParamTypes.szoveg,
-       CEG_CIM = ParamTypes.szoveg,
-       BLOKK_LABLEC1 = ParamTypes.szoveg,
-       BLOKK_LABLEC2 = ParamTypes.szoveg,
-       BLOKK_LABLEC3 = ParamTypes.szoveg,
-       LELTAR_KOROK_SZAMA = ParamTypes.egesz,
-       AUTO_PRINT_BLOKK = ParamTypes.egesz,
-       OSSZ_REPORT_FORMAT = ParamTypes.szoveg
+       SHOW_ORDER_BEFORE ,
+       CEG_NEV ,
+       CEG_CIM ,
+       BLOKK_LABLEC1 ,
+       BLOKK_LABLEC2 ,
+       BLOKK_LABLEC3 ,
+       AUTO_PRINT_BLOKK ,
+       LELTAR_KOROK_SZAMA,
+       OSSZ_REPORT_FORMAT
 
     }
     

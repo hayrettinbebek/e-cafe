@@ -349,7 +349,7 @@ namespace e_Cafe.FrontOffice
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = InputText.getString(true);
+            textBox1.Text = InputText.getString(true, textBox1.Text);
             if (AktSzerkesztettCikk == null)
             {
                 AktSzerkesztettCikk = new Cikk(-1, textBox1.Text, 2, -1);
@@ -377,6 +377,10 @@ namespace e_Cafe.FrontOffice
                 else if ((AktSzerkesztettCikk.CIKKCSOPORT_ID < 0))
                 {
                     DEFS.SendInfoMessage("Nem rendelte cikkcsoporthoz!");
+                }
+                else if (dataRepeater1.ItemCount == 0)
+                {
+                    DEFS.SendInfoMessage("Nincsenek összetevők");
                 }
                 else
                 {
@@ -428,7 +432,7 @@ namespace e_Cafe.FrontOffice
 
         private void textBox3_Click(object sender, EventArgs e)
         {
-            textBox3.Text = InputText.getString(true);
+            textBox3.Text = InputText.getString(true, textBox3.Text);
             loadCikkek(-1, -1, textBox3.Text);
         }
 

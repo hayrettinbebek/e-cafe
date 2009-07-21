@@ -53,11 +53,11 @@ namespace e_Cafe.Reports
         {
             printControlToolBar1.PrintInBackground = true;
 
-            if (DEFS.R_SYSPAR.GetIntValue("AUTO_PRINT_BLOKK") == 1)
+            if ((int)Syspar2.GetValue(ParamCodes.AUTO_PRINT_BLOKK) == 1)
             {
                 printControlToolBar1.PrintDefault(null, null);
             }
-            else if (DEFS.R_SYSPAR.GetIntValue("AUTO_PRINT_BLOKK") == 99)
+            else if ((int)Syspar2.GetValue(ParamCodes.AUTO_PRINT_BLOKK) == 99)
             {
                 printControlToolBar1.Preview(null, null);
             }

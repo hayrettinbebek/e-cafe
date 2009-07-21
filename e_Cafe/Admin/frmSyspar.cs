@@ -29,7 +29,7 @@ namespace e_Cafe.Admin
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             sYSPARTableAdapter.Update(dsSYSPAR.SYSPAR);
-            DEFS.R_SYSPAR = new SysParList();
+            //DEFS.R_SYSPAR = new SysParList();
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -61,7 +61,7 @@ namespace e_Cafe.Admin
 
         private void frmSyspar_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DEFS.R_SYSPAR = new SysParList();
+            //DEFS.R_SYSPAR = new SysParList();
         }
     }
 

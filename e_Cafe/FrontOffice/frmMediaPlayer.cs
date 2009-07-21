@@ -36,7 +36,7 @@ namespace e_Cafe.FrontOffice
 
         private void GetStatus()
         {
-            arcScaleComponent1.Value = WinampLib.GetVolume();
+            
             ucVolume.VOLUME = WinampLib.GetVolume();
         }
 

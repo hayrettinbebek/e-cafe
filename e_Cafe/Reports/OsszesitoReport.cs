@@ -63,8 +63,8 @@ namespace e_Cafe.Reports
             //box.Border.
             //box.Background = Brushes.Ivory;
             contents = new LinearSections();
-            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_NEV"), TextStyle.Heading1));
-            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_CIM"), TextStyle.Normal));
+            contents.AddSection(new SectionText((string)Syspar2.GetValue(ParamCodes.CEG_NEV), TextStyle.Heading1));
+            contents.AddSection(new SectionText((string)Syspar2.GetValue(ParamCodes.CEG_CIM), TextStyle.Normal));
             box.AddSection(contents);
             builder.AddSection(box);
 
@@ -243,8 +243,8 @@ namespace e_Cafe.Reports
             //box.Border.
             //box.Background = Brushes.Ivory;
             contents = new LinearSections();
-            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_NEV"), TextStyle.Heading1));
-            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_CIM"), TextStyle.Normal));
+            contents.AddSection(new SectionText((string)Syspar2.GetValue(ParamCodes.CEG_NEV), TextStyle.Heading1));
+            contents.AddSection(new SectionText((string)Syspar2.GetValue(ParamCodes.CEG_CIM), TextStyle.Normal));
             box.AddSection(contents);
             builder.AddSection(box);
             h_height += 10;
@@ -424,8 +424,8 @@ namespace e_Cafe.Reports
             //box.Border.
             //box.Background = Brushes.Ivory;
             contents = new LinearSections();
-            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_NEV"), TextStyle.Heading1));
-            contents.AddSection(new SectionText(DEFS.R_SYSPAR.GetStrValue("CEG_CIM"), TextStyle.Normal));
+            contents.AddSection(new SectionText((string)Syspar2.GetValue(ParamCodes.CEG_NEV), TextStyle.Heading1));
+            contents.AddSection(new SectionText((string)Syspar2.GetValue(ParamCodes.CEG_CIM), TextStyle.Normal));
             box.AddSection(contents);
             builder.AddSection(box);
 

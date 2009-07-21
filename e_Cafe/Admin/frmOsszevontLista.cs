@@ -36,7 +36,7 @@ namespace e_Cafe.Admin
         private void listBox1_Click(object sender, EventArgs e)
         {
             doPrinting dp = new doPrinting();
-            if (DEFS.R_SYSPAR.GetStrValue("OSSZ_REPORT_FORMAT") == "L")
+            if ((string)Syspar2.GetValue(ParamCodes.OSSZ_REPORT_FORMAT) == "L")
             {
                 dp.setReportMaker(new OsszesitoReport(((OpenDay)listBox1.SelectedValue).EV
                                                         , ((OpenDay)listBox1.SelectedValue).HO,

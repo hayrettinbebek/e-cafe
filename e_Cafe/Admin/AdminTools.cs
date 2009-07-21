@@ -212,7 +212,7 @@ namespace e_Cafe
 
         private void rendszerparaméterekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSyspar fa = new frmSyspar();
+            frmParams2 fa = new frmParams2();
             fa.MdiParent = this;
             fa.Show();
         }
