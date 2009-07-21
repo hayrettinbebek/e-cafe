@@ -20,7 +20,6 @@ namespace ReportDebugger
         public Form1()
         {
             InitializeComponent();
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,7 +36,7 @@ namespace ReportDebugger
                 DEFS.createLogger();
                 DEFS.ConSTR = @"Data Source=ERNIE-NB\SQLEXPRESS;Initial Catalog=ECAFE_0407;Persist Security Info=True;User ID=sa;Password=x";
                 DEFS.DefProgramLocation = AppDomain.CurrentDomain.BaseDirectory;
-                DEFS.R_SYSPAR = new SysParList();
+                //DEFS.R_SYSPAR = new SysParList();
                 DEFS.LoadNyitottNap();
             }
             catch (Exception z)
@@ -55,14 +54,14 @@ namespace ReportDebugger
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show( Syspar2.GetValue(ParamCodes.OSSZ_REPORT_FORMAT).ToString() );
-
-            //typeof(Syspar.GetType(ParamTypes.szoveg))
+            
+            //Syspar2.SetValues(ParamCodes.CEG_NEV, (Object)"All-In Cafe");
+            //MessageBox.Show(Syspar2.GetValue(ParamCodes.CEG_NEV).ToString());
         }
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = InputText.getInt2(true).ToString(); ;
+            textBox1.Text = InputText.getInt2(true).ToString();
         }
 
         private void zoomTrackBarControl1_EditValueChanged(object sender, EventArgs e)

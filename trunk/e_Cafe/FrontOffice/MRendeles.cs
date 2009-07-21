@@ -993,6 +993,8 @@ namespace e_Cafe
             {
                 _AktRendeles.addTetel(foc.AktSzerkesztettCikk);
                 _AktRendeles.SaveRendeles();
+                lCikkList = new Cikk_list(CikkListContructType.ForRendeles);
+                loadCikkek(-1, -1);
                 initRendelTabla();
 
             }

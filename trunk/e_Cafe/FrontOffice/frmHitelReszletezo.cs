@@ -223,7 +223,7 @@ namespace e_Cafe.FrontOffice
         private void txtTartBefJogcim_Click(object sender, EventArgs e)
         {
 
-            txtTartBefJogcim.Text = InputText.getString(true);
+            txtTartBefJogcim.Text = InputText.getString(true,"");
 
          
         }

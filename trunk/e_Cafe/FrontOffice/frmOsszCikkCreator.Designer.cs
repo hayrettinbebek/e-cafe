@@ -61,12 +61,13 @@
             this.btnKilep = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
             this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
             this.button1 = new System.Windows.Forms.Button();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCikkcsopSelectInfo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -78,7 +79,7 @@
             this.receptMentes = new e_Cafe.SQL.DataSets.ReceptMentes();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.receptTableAdapter1 = new e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.RECEPTTableAdapter();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.pnlOtherFilter.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -489,6 +490,15 @@
             this.panel13.Size = new System.Drawing.Size(228, 527);
             this.panel13.TabIndex = 5;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(119, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "label7";
+            // 
             // checkBox1
             // 
             this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
@@ -508,6 +518,7 @@
             // dataRepeater1.ItemTemplate
             // 
             this.dataRepeater1.ItemTemplate.Controls.Add(this.button1);
+            this.dataRepeater1.ItemTemplate.Controls.Add(this.label8);
             this.dataRepeater1.ItemTemplate.Controls.Add(this.labelControl1);
             this.dataRepeater1.ItemTemplate.Controls.Add(this.label3);
             this.dataRepeater1.ItemTemplate.Size = new System.Drawing.Size(211, 45);
@@ -529,7 +540,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(113, 22);
+            this.button1.Location = new System.Drawing.Point(125, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -540,17 +551,18 @@
             // labelControl1
             // 
             this.labelControl1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rECEPTBindingSource, "TARTOZEK_MENNY", true));
-            this.labelControl1.Location = new System.Drawing.Point(3, 3);
+            this.labelControl1.Location = new System.Drawing.Point(3, 25);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(63, 13);
+            this.labelControl1.Size = new System.Drawing.Size(82, 16);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "labelControl1";
+            this.labelControl1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rECEPTBindingSource, "MEGNEVEZES", true));
-            this.label3.Location = new System.Drawing.Point(18, 19);
+            this.label3.Location = new System.Drawing.Point(3, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 0;
@@ -638,14 +650,15 @@
             // 
             this.receptTableAdapter1.ClearBeforeFill = true;
             // 
-            // label7
+            // label8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(119, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "label7";
+            this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rECEPTBindingSource, "MEGYS_MEGNEVEZES", true));
+            this.label8.Location = new System.Drawing.Point(81, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 19);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "labelControl1";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmOsszCikkCreator
             // 
@@ -735,11 +748,12 @@
         private System.Windows.Forms.Label lblCikkcsopSelectInfo;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.Label labelControl1;
         private System.Windows.Forms.Button button1;
         private e_Cafe.SQL.DataSets.ReceptMentes receptMentes;
         private System.Windows.Forms.BindingSource bindingSource1;
         public e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.RECEPTTableAdapter receptTableAdapter1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

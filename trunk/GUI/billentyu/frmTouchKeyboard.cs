@@ -12,7 +12,7 @@ namespace GUI.billentyu
     public partial class frmTouchKeyboard : Form
     {
        
-
+        public string start_string = "";
         public TextBox t = new TextBox();
 
         public String ResultString;
@@ -21,6 +21,7 @@ namespace GUI.billentyu
         public frmTouchKeyboard(InputType t)
         {
             InitializeComponent();
+            keyb21.txtRet.Text = start_string;
             keyb21.it = t;
 
         }

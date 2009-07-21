@@ -1123,7 +1123,7 @@ namespace BusinessLogic
                                         " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " +
                                         " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ,  " +
                                         " isnull(LIT_KISZ_AR,0) as KISZ_ELADASI_AR, isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER, isnull(LIT_KISZ_ID,-1) as LIT_KISZ_ID " +
-                                " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE AKTIV = 1 and WHERE CIKK_TIPUS != 2 ORDER BY isnull(CIKK_ROVID_NEV,'') ";
+                                " FROM CIKK c left hash join LIT_KISZ l on c.CIKK_ID = l.LIT_KISZ_CIKK_Id WHERE AKTIV = 1 and CIKK_TIPUS != 2 ORDER BY isnull(CIKK_ROVID_NEV,'') ";
 
                         SqlDataReader rdr = cmd.ExecuteReader();
 
