@@ -56,13 +56,20 @@ namespace e_Cafe.Keszlet
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
             aktMegr = new Megrendeles((int)((DataRowView)mEGRENDELESFEJBindingSource.Current)["MEGRENDELES_FEJ_ID"], new SqlConnection(DEFS.ConSTR));
-            frmBevetel f = new frmBevetel();
-            f.bevfej_id = TemporaryBevetelSorok.GenerateBevetelezesFromMegrendeles(aktMegr);
+            if (aktMegr.LEZART == 1)
+            {
+                frmBevetel f = new frmBevetel();
+                f.bevfej_id = TemporaryBevetelSorok.GenerateBevetelezesFromMegrendeles(aktMegr);
 
-            f.ShowDialog();
-
-           
+                f.ShowDialog();
+            }
+            else
+            {
+                if (aktMegr.LEZART == 0) { DEFS.SendInfoMessage("A megrendelés még nincs elküldve!"); }
+                if (aktMegr.LEZART == 2) { DEFS.SendInfoMessage("A megrendelés már bevételezésre került!"); }
+            }
         }
     }
 }

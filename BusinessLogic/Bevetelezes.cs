@@ -761,6 +761,8 @@ namespace BusinessLogic
                 retSor.Save();
             }
 
+            m.LEZART = 2;
+            m.Save();
             return akt_bevfej;
 
         }

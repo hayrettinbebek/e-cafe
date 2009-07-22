@@ -62,6 +62,9 @@
             this.lbCikkek = new System.Windows.Forms.ListBox();
             this.cikkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblOsszMegrendeles = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.cIKKNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mENNYISEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +92,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.megrendelesSorBindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -412,12 +416,42 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(380, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(345, 333);
             this.panel1.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblOsszMegrendeles);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 302);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(345, 31);
+            this.panel3.TabIndex = 1;
+            // 
+            // lblOsszMegrendeles
+            // 
+            this.lblOsszMegrendeles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblOsszMegrendeles.Location = new System.Drawing.Point(217, 8);
+            this.lblOsszMegrendeles.Name = "lblOsszMegrendeles";
+            this.lblOsszMegrendeles.Size = new System.Drawing.Size(123, 18);
+            this.lblOsszMegrendeles.TabIndex = 1;
+            this.lblOsszMegrendeles.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(111, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Összesen:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dataGridView2
             // 
@@ -494,6 +528,8 @@
             // megrendelesSorBindingSource
             // 
             this.megrendelesSorBindingSource.DataSource = typeof(BusinessLogic.MegrendelesSor);
+            this.megrendelesSorBindingSource.CurrentChanged += new System.EventHandler(this.megrendelesSorBindingSource_CurrentChanged);
+            this.megrendelesSorBindingSource.BindingComplete += new System.Windows.Forms.BindingCompleteEventHandler(this.megrendelesSorBindingSource_BindingComplete);
             // 
             // toolStrip1
             // 
@@ -572,6 +608,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.megrendelesSorBindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -630,5 +667,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblOsszMegrendeles;
+        private System.Windows.Forms.Label label3;
     }
 }
