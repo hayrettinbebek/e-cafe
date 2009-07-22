@@ -211,7 +211,7 @@ namespace BusinessLogic
 
             while (rdr.Read())
             {
-                lMegrendelesSorok.Add(new MegrendelesSor((int)rdr["SOR_ID"], new SqlConnection(DEFS.ConSTR)));
+                lMegrendelesSorok.Add(new MegrendelesSor((int)rdr["SOR_ID"]));
 
             }
             rdr.Close();
@@ -222,17 +222,48 @@ namespace BusinessLogic
             return lMegrendelesSorok;
         }
 
-        
+        public bool CikkAlreadyExists(Cikk ic)
+        {
+            lMegrendelesSorok = getSorok();
+            bool van = false;
+            var exists_cikk =
+                from c in lMegrendelesSorok
+                where c.CIKK.CIKK_ID == ic.CIKK_ID
+                select c;
+            exists_cikk.Each(c => van = true);
+
+            return van;
+
+        }
+
+        public bool ReadyForBook()
+        {
+            lMegrendelesSorok = getSorok();
+            bool ok = true;
+            var exists_cikk =
+                from c in lMegrendelesSorok
+                where c.MENNYISEG <=0
+                select c;
+            exists_cikk.Each(c => ok = false);
+
+            return ok;
+
+        }
 
         public void addTetel(int pSor)
         {
 
-            lMegrendelesSorok.Add(new MegrendelesSor(pSor, new SqlConnection(DEFS.ConSTR)));
+            lMegrendelesSorok.Add(new MegrendelesSor(pSor));
         }
 
         public void addTetel(Cikk _c, int _fej)
         {
             lMegrendelesSorok.Add(new MegrendelesSor(_c, _fej));
+        }
+
+        public void addTetel(Cikk _c, int _fej, double _menny)
+        {
+            lMegrendelesSorok.Add(new MegrendelesSor(_c, _fej, _menny));
         }
 
     }
@@ -340,8 +371,21 @@ namespace BusinessLogic
             
         }
 
-        public MegrendelesSor(int pSor_id, SqlConnection c)
+        public MegrendelesSor(Cikk c, int pfej_id, double pMenny)
         {
+
+            _SOR_ID = -1;
+            isModified = false;
+            _CIKK = c;
+            _BESZ_AR = _CIKK.UTOLOS_BESZ_AR;
+            _MENNYISEG = pMenny;
+            _FEJ_ID = pfej_id;
+
+        }
+
+        public MegrendelesSor(int pSor_id )
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
             if (c.State == ConnectionState.Closed) { c.Open(); }
             SqlCommand cmd = new SqlCommand();
 

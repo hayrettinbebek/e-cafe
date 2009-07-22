@@ -73,7 +73,8 @@ namespace BusinessLogic
         #endregion
 
         public List<CikkKeszlet> lKESZLET = new List<CikkKeszlet>();
-       
+
+        public List<CikkBeszallito> lBESZALLITOK = new List<CikkBeszallito>();
         #region PROPERTIES
 
         public int CIKK_ID
@@ -442,6 +443,7 @@ namespace BusinessLogic
 
             }
             getKeszlet();
+            getBeszallitok();
             CIKK_KISZERELES = new CikkKiszerelesList(fCIKK_ID, new SqlConnection(DEFS.ConSTR));
             c.Close();
 
@@ -499,6 +501,7 @@ namespace BusinessLogic
 
             }
             getKeszlet();
+            getBeszallitok();
             CIKK_KISZERELES = new CikkKiszerelesList(fCIKK_ID, new SqlConnection(DEFS.ConSTR));
             c.Close();
 
@@ -735,8 +738,8 @@ namespace BusinessLogic
 
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
-            SqlCommand gk = new SqlCommand("select TOP 1 NETTO_ERTEK / MENNY as NETTO_AR, " +
-                                           " BRUTTO_ERTEK / MENNY as BRUTTO_AR " +
+            SqlCommand gk = new SqlCommand("select TOP 1 case when MENNY = 0 THEN 0 else NETTO_ERTEK / MENNY end as NETTO_AR, " +
+                                           " case when MENNY = 0 THEN 0 else  BRUTTO_ERTEK / MENNY end as BRUTTO_AR " +
                                            " from bevetel_sor " +
                                            " where CIKK_ID = " + pCikk.ToString() + " order by SOR_ID DESC ", c);
             gk.CommandType = CommandType.Text;
@@ -769,6 +772,34 @@ namespace BusinessLogic
             }
             c.Close();
             return tmpLCikkArak;
+        }
+
+        private void getBeszallitok()
+        {
+            lBESZALLITOK.Clear();
+
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+            SqlCommand gk = new SqlCommand("SELECT PARTNER_ID, BESZ_AR, isnull(KISZ_MENNY,0) as KISZ_MENNY FROM cikk_beszallitok WHERE CIKK_ID = " + CIKK_ID.ToString(), c);
+            gk.CommandType = CommandType.Text;
+            SqlDataReader rdr = gk.ExecuteReader();
+            while (rdr.Read())
+            {
+                lBESZALLITOK.Add(new CikkBeszallito(new Szallito((int)rdr["PARTNER_ID"]),  this, (double)rdr["BESZ_AR"], (double)rdr["KISZ_MENNY"]));
+            }
+            c.Close();
+            
+        }
+
+        public CikkBeszallito getCurrentBeszallito(int sz_id)
+        {
+            CikkBeszallito tmpCikkBesz = null;
+            var curr_besz =
+                from c in lBESZALLITOK
+                where c.SZALLITO.PARTNER_ID == sz_id
+                select c;
+            curr_besz.Each(c => tmpCikkBesz = c);
+            return tmpCikkBesz;
         }
         public void AddCikkAr(DateTime ar_from, DateTime ar_to, double ar)
         {
@@ -1440,6 +1471,95 @@ namespace BusinessLogic
             }
             c.Close();
         }
+    }
+
+    public class CikkBeszallito
+    {
+        private Szallito _szall;
+        private Cikk _cikk;
+        private double _besz_ar;
+        private double _kisz_menny;
+
+        public Szallito SZALLITO
+        {
+            get { return (_szall); }
+            set { _szall = value; }
+        }
+
+        public string SZALLITO_NEV
+        {
+            get { return (_szall.P_NEV); }
+        }
+        public Cikk CIKK
+        {
+            get { return (_cikk); }
+            set { _cikk = value; }
+        }
+        public string CIKK_NEV
+        {
+            get { return (_cikk.MEGNEVEZES); }
+        }
+        public string KISZERELES_MEGYS_NEV
+        {
+            get { return (_cikk.MEGYS_MEGNEVEZES); }
+        }
+        public double BESZ_AR
+        {
+            get { return (_besz_ar); }
+            set { _besz_ar = value; }
+        }
+
+
+        public double KISZ_MENNY
+        {
+            get { return (_kisz_menny); }
+            set { _kisz_menny = value; }
+        }
+
+        public CikkBeszallito(Szallito pSz, Cikk pC, double pBesz_ar, double pKisz_menny)
+        {
+            _szall = pSz;
+            _cikk = pC;
+            _besz_ar = pBesz_ar;
+            _kisz_menny = pKisz_menny;
+        }
+
+        public void Save() 
+        {
+            SqlConnection c = new SqlConnection(DEFS.ConSTR);
+            c.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = c;
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = " UPDATE  cikk_beszallitok " +
+                              " SET KISZ_MENNY = @KISZ_MENNY  " +
+                              " WHERE CIKK_ID = @CIKK_ID and PARTNER_ID = @SZALL_ID";
+
+            
+            cmd.Parameters.Add(new SqlParameter("KISZ_MENNY", SqlDbType.Float));
+            cmd.Parameters.Add(new SqlParameter("CIKK_ID", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("SZALL_ID", SqlDbType.Int));
+
+            cmd.Parameters["KISZ_MENNY"].Value = KISZ_MENNY;
+            cmd.Parameters["CIKK_ID"].Value = CIKK.CIKK_ID;
+            cmd.Parameters["SZALL_ID"].Value = SZALLITO.PARTNER_ID;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                DEFS.log(Level.Info, "Hiba a Cikk szállítóinak mennyiségi kiszerelésének frissítése közben:" + "/n" + e.Message + "/n" + e.StackTrace);
+
+            }
+            c.Close();
+
+
+        }
+
     }
 
 

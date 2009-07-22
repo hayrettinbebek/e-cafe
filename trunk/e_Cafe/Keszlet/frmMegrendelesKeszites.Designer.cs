@@ -52,6 +52,8 @@
             this.dsMegrendeles = new e_Cafe.SQL.DataSets.dsMegrendeles();
             this.tpTetelek = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.pnlLezart2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -302,6 +304,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.pnlLezart2);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
@@ -311,34 +315,58 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 28);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(342, 333);
+            this.panel2.Size = new System.Drawing.Size(377, 333);
             this.panel2.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button6.Location = new System.Drawing.Point(275, 241);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(96, 51);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "-->\r\nOptimális készletre feltölt";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button5.Location = new System.Drawing.Point(275, 184);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(96, 51);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "-->\r\nMinimum készletre feltölt";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pnlLezart2
             // 
-            this.pnlLezart2.Location = new System.Drawing.Point(283, 13);
+            this.pnlLezart2.Location = new System.Drawing.Point(300, 13);
             this.pnlLezart2.Name = "pnlLezart2";
             this.pnlLezart2.Size = new System.Drawing.Size(49, 49);
             this.pnlLezart2.TabIndex = 5;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(290, 160);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button4.Location = new System.Drawing.Point(275, 121);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(34, 76);
+            this.button4.Size = new System.Drawing.Size(96, 36);
             this.button4.TabIndex = 3;
-            this.button4.Text = "<--";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Text = "<--\r\nVisszavon";
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(290, 78);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.Location = new System.Drawing.Point(275, 78);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(34, 76);
+            this.button3.Size = new System.Drawing.Size(96, 37);
             this.button3.TabIndex = 3;
-            this.button3.Text = "-->";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "-->\r\nHozzáad";
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // chkMind
@@ -386,9 +414,9 @@
             // 
             this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(345, 28);
+            this.panel1.Location = new System.Drawing.Point(380, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 333);
+            this.panel1.Size = new System.Drawing.Size(345, 333);
             this.panel1.TabIndex = 1;
             // 
             // dataGridView2
@@ -409,7 +437,7 @@
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(380, 333);
+            this.dataGridView2.Size = new System.Drawing.Size(345, 333);
             this.dataGridView2.TabIndex = 0;
             // 
             // cIKKNEVDataGridViewTextBoxColumn
@@ -486,7 +514,7 @@
             this.toolStripButton1.Image = global::e_Cafe.Properties.Resources.floppy_icon;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(66, 22);
             this.toolStripButton1.Text = "Mentés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -496,7 +524,7 @@
             this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.Printer_24x24;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(68, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(74, 22);
             this.toolStripButton2.Text = "Nyomtat";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -505,7 +533,7 @@
             this.tsKilep.Image = global::e_Cafe.Properties.Resources.ERROR_ICON;
             this.tsKilep.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsKilep.Name = "tsKilep";
-            this.tsKilep.Size = new System.Drawing.Size(60, 22);
+            this.tsKilep.Size = new System.Drawing.Size(64, 22);
             this.tsKilep.Text = "Kilépés";
             this.tsKilep.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -600,5 +628,7 @@
         private System.Windows.Forms.Panel pnlLezart;
         private System.Windows.Forms.Panel pnlLezart2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }

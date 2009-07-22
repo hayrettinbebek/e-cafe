@@ -41,6 +41,7 @@
             this.keyb21.Name = "keyb21";
             this.keyb21.Size = new System.Drawing.Size(646, 254);
             this.keyb21.TabIndex = 0;
+            this.keyb21.Load += new System.EventHandler(this.keyb21_Load);
             // 
             // frmTouchKeyboard
             // 
@@ -54,6 +55,7 @@
             this.Name = "frmTouchKeyboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Load += new System.EventHandler(this.frmTouchKeyboard_Load);
             this.ResumeLayout(false);
 
         }

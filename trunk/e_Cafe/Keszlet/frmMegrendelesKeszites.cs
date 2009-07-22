@@ -12,8 +12,10 @@ using BusinessLogic;
 
 namespace e_Cafe.Keszlet
 {
+    
     public partial class frmMegrendelesKeszites : Form
     {
+        private String LEZART_RENDELES_VAN = "Ez a megrednelés már lezárásra került nem rögzíthet további tételeket!";
         private Megrendeles aktMegr = null;
         private Cikk_list aktCikkList = null;
 
@@ -96,7 +98,7 @@ namespace e_Cafe.Keszlet
                 cikkBindingSource.Clear();
                 foreach (var c in aktCikkList.lCIKK)
                 {
-                    cikkBindingSource.Add(c);
+                     cikkBindingSource.Add(c);
                 }
 
             }
@@ -114,23 +116,30 @@ namespace e_Cafe.Keszlet
         {
             if (aktMegr.LEZART == false)
             {
-                aktMegr.addTetel((Cikk)lbCikkek.Items[lbCikkek.SelectedIndex], aktMegr.MEGRENDELES_FEJ_ID);
-                foreach (var m in aktMegr.lMegrendelesSorok)
+                if (!aktMegr.CikkAlreadyExists((Cikk)lbCikkek.Items[lbCikkek.SelectedIndex]))
                 {
-                    m.Save();
+                    aktMegr.addTetel((Cikk)lbCikkek.Items[lbCikkek.SelectedIndex], aktMegr.MEGRENDELES_FEJ_ID);
+                    foreach (var m in aktMegr.lMegrendelesSorok)
+                    {
+                        m.Save();
+                    }
+
+                    megrendelesSorBindingSource.Clear();
+                    foreach (var m in aktMegr.lMegrendelesSorok)
+                    {
+                        megrendelesSorBindingSource.Add(m);
+
+                    }
+                }
+                else
+                {
+                    DEFS.SendInfoMessage("A cikk már a megrendeléshez hozzá lett rendelve!");
                 }
 
-                megrendelesSorBindingSource.Clear();
-                foreach (var m in aktMegr.lMegrendelesSorok)
-                {
-                    megrendelesSorBindingSource.Add(m);
-                    
-                }
-                
             }
             else
             {
-                DEFS.SendInfoMessage("Ez a megrednelés már lezárásra került nem rögzíthet további tételeket!");
+                DEFS.SendInfoMessage(LEZART_RENDELES_VAN);
             }
 
         }
@@ -145,9 +154,11 @@ namespace e_Cafe.Keszlet
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-
-            aktMegr.LEZART = true;
-            aktMegr.Save();
+            if (aktMegr.ReadyForBook())
+            {
+                aktMegr.LEZART = true;
+                aktMegr.Save();
+            }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -186,6 +197,85 @@ namespace e_Cafe.Keszlet
         private void btnKilep_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            double tmp_kisz_menny = 0;
+             
+            if (aktMegr.LEZART == false)
+            {
+                foreach (var ck in aktCikkList.lCIKK)
+                {
+                    tmp_kisz_menny = 0;
+                    ck.getKeszlet();
+                    if (ck.fKESZLET_ALL < ck.MINIMUM_KESZLET)
+                    {
+                        if (!aktMegr.CikkAlreadyExists(ck))
+                        {
+                            tmp_kisz_menny = (ck.getCurrentBeszallito(aktMegr.SZALLITO_ID)).KISZ_MENNY;
+                            if (tmp_kisz_menny == 0) { tmp_kisz_menny = 1; }
+
+                            aktMegr.addTetel(ck, aktMegr.MEGRENDELES_FEJ_ID, (Math.Round((ck.MINIMUM_KESZLET - ck.fKESZLET_ALL) / tmp_kisz_menny - 0.5, 0) + 1) * tmp_kisz_menny);
+                            foreach (var m in aktMegr.lMegrendelesSorok)
+                            {
+                                m.Save();
+                            }
+
+                            megrendelesSorBindingSource.Clear();
+                            foreach (var m in aktMegr.lMegrendelesSorok)
+                            {
+                                megrendelesSorBindingSource.Add(m);
+
+                            }
+                        }
+                    }
+                   
+                }
+            }
+            else
+            {
+                DEFS.SendInfoMessage(LEZART_RENDELES_VAN);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            double tmp_kisz_menny = 0;
+            if (aktMegr.LEZART == false)
+            {
+                foreach (var ck in aktCikkList.lCIKK)
+                {
+                    tmp_kisz_menny = 0;
+                    ck.getKeszlet();
+                    if (ck.fKESZLET_ALL < ck.OPTIMALIS_KESZLET)
+                    {
+                        if (!aktMegr.CikkAlreadyExists(ck))
+                        {
+                            tmp_kisz_menny = (ck.getCurrentBeszallito(aktMegr.SZALLITO_ID)).KISZ_MENNY;
+                            if (tmp_kisz_menny == 0) { tmp_kisz_menny = 1; }
+
+                            aktMegr.addTetel(ck, aktMegr.MEGRENDELES_FEJ_ID, (Math.Round((ck.OPTIMALIS_KESZLET - ck.fKESZLET_ALL) / tmp_kisz_menny - 0.5, 0) + 1) * tmp_kisz_menny);
+                            foreach (var m in aktMegr.lMegrendelesSorok)
+                            {
+                                m.Save();
+                            }
+
+                            megrendelesSorBindingSource.Clear();
+                            foreach (var m in aktMegr.lMegrendelesSorok)
+                            {
+                                megrendelesSorBindingSource.Add(m);
+
+                            }
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                DEFS.SendInfoMessage(LEZART_RENDELES_VAN);
+            }
         }
     }
 }

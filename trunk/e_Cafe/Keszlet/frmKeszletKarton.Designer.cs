@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgKarton = new System.Windows.Forms.DataGridView();
-            this.keszletSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CIKK_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAKTARKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kESZLETNYITODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +41,7 @@
             this.OPTIMALIS_KESZLET = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.keszletSorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgKarton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.keszletSorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,10 +74,6 @@
             this.dgKarton.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgKarton_RowPrePaint);
             this.dgKarton.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgKarton_CellPainting);
             this.dgKarton.Paint += new System.Windows.Forms.PaintEventHandler(this.dgKarton_Paint);
-            // 
-            // keszletSorBindingSource
-            // 
-            this.keszletSorBindingSource.DataSource = typeof(BusinessLogic.KeszletSor);
             // 
             // CIKK_NEV
             // 
@@ -151,6 +147,11 @@
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn.HeaderText = "CIKKCSOPORT_ID";
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Name = "cIKKCSOPORTIDDataGridViewTextBoxColumn";
             this.cIKKCSOPORTIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // keszletSorBindingSource
+            // 
+            this.keszletSorBindingSource.AllowNew = false;
+            this.keszletSorBindingSource.DataSource = typeof(BusinessLogic.KeszletSor);
             // 
             // frmKeszletKarton
             // 

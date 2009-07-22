@@ -50,7 +50,6 @@ namespace GUI.billentyu
 
         }
 
-
         private void space_Click(object sender, EventArgs e)
         {
             txtRet.Focus();

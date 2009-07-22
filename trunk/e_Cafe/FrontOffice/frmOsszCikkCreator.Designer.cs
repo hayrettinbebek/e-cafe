@@ -64,9 +64,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataRepeater1 = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
-            this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
             this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.labelControl1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCikkcsopSelectInfo = new System.Windows.Forms.Label();
@@ -75,11 +74,12 @@
             this.lblCikkNev = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rECEPTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReceptCikkek = new e_Cafe.SQL.DataSets.dsReceptCikkek();
             this.rECEPTTableAdapter = new e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter();
             this.receptMentes = new e_Cafe.SQL.DataSets.ReceptMentes();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.receptTableAdapter1 = new e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.RECEPTTableAdapter();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.pnlOtherFilter.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -528,25 +528,28 @@
             this.dataRepeater1.TabIndex = 2;
             this.dataRepeater1.Text = "dataRepeater1";
             // 
-            // rECEPTBindingSource
-            // 
-            this.rECEPTBindingSource.DataMember = "RECEPT";
-            this.rECEPTBindingSource.DataSource = this.dsReceptCikkek;
-            // 
-            // dsReceptCikkek
-            // 
-            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
-            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 0);
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.button1.Location = new System.Drawing.Point(140, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(53, 41);
             this.button1.TabIndex = 2;
             this.button1.Text = "DB módosít";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label8
+            // 
+            this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rECEPTBindingSource, "MEGYS_MEGNEVEZES", true));
+            this.label8.Location = new System.Drawing.Point(81, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 19);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "labelControl1";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelControl1
             // 
@@ -632,6 +635,16 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
+            // rECEPTBindingSource
+            // 
+            this.rECEPTBindingSource.DataMember = "RECEPT";
+            this.rECEPTBindingSource.DataSource = this.dsReceptCikkek;
+            // 
+            // dsReceptCikkek
+            // 
+            this.dsReceptCikkek.DataSetName = "dsReceptCikkek";
+            this.dsReceptCikkek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // rECEPTTableAdapter
             // 
             this.rECEPTTableAdapter.ClearBeforeFill = true;
@@ -649,16 +662,6 @@
             // receptTableAdapter1
             // 
             this.receptTableAdapter1.ClearBeforeFill = true;
-            // 
-            // label8
-            // 
-            this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.rECEPTBindingSource, "MEGYS_MEGNEVEZES", true));
-            this.label8.Location = new System.Drawing.Point(81, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 19);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "labelControl1";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmOsszCikkCreator
             // 

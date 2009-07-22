@@ -19,12 +19,14 @@ namespace GUI
             // Paramtéer TRUE = Kötelezően nem lehet 0 hosszú
             string tmpStr = "";
             frmTouchKeyboard ft = new frmTouchKeyboard(InputType.String);
-            ft.start_string = def;
+            
             if (req)
             {
                 while (tmpStr.Length == 0)
                 {
+                    ft.start_string = def;
                     ft.ShowDialog();
+                    
                     if (ft.DialogResult == DialogResult.OK)
                     {
                         tmpStr = ft.ResultString;
@@ -34,6 +36,7 @@ namespace GUI
             }
             else
             {
+                ft.start_string = def;
                 ft.ShowDialog();
                 if (ft.DialogResult == DialogResult.OK)
                 {
