@@ -65,7 +65,7 @@ namespace e_Cafe.Keszlet
                     megrendelesSorBindingSource.Add(m);
                 }
 
-                if (aktMegr.LEZART == true)
+                if (aktMegr.LEZART != 0)
                 {
                     pnlLezart.BackgroundImage = global::GUI.Properties.Resources.Delete.ToBitmap();
                     pnlLezart.BackgroundImageLayout = ImageLayout.Stretch;
@@ -114,7 +114,7 @@ namespace e_Cafe.Keszlet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (aktMegr.LEZART == false)
+            if (aktMegr.LEZART == 0)
             {
                 if (!aktMegr.CikkAlreadyExists((Cikk)lbCikkek.Items[lbCikkek.SelectedIndex]))
                 {
@@ -156,9 +156,10 @@ namespace e_Cafe.Keszlet
         {
             if (aktMegr.ReadyForBook())
             {
-                aktMegr.LEZART = true;
+                aktMegr.LEZART = 1;
                 aktMegr.Save();
             }
+            DEFS.SendInfoMessage("Formátum még nincs kialakítva!");
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -203,7 +204,7 @@ namespace e_Cafe.Keszlet
         {
             double tmp_kisz_menny = 0;
              
-            if (aktMegr.LEZART == false)
+            if (aktMegr.LEZART == 0)
             {
                 foreach (var ck in aktCikkList.lCIKK)
                 {
@@ -242,7 +243,7 @@ namespace e_Cafe.Keszlet
         private void button6_Click(object sender, EventArgs e)
         {
             double tmp_kisz_menny = 0;
-            if (aktMegr.LEZART == false)
+            if (aktMegr.LEZART == 0)
             {
                 foreach (var ck in aktCikkList.lCIKK)
                 {
@@ -276,6 +277,16 @@ namespace e_Cafe.Keszlet
             {
                 DEFS.SendInfoMessage(LEZART_RENDELES_VAN);
             }
+        }
+
+        private void megrendelesSorBindingSource_BindingComplete(object sender, BindingCompleteEventArgs e)
+        {
+           
+        }
+
+        private void megrendelesSorBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            lblOsszMegrendeles.Text = aktMegr.GetSumErtek().ToString("# ###.00") + " Ft";
         }
     }
 }

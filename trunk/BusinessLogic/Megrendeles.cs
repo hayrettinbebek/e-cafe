@@ -8,13 +8,17 @@ using System.Data;
 namespace BusinessLogic
 {
 
-    public class Megrendeles
+    public class Megrendeles 
     {
         #region Properties
 
         public bool isModified;
-
+        private int _LEZART;
+        private DateTime _DATUM;
+        private int _SZALLITO_ID;
         private int _MEGRENDELES_FEJ_ID;
+        private string _SORSZAM;
+
         public int MEGRENDELES_FEJ_ID
         {
             get { return (_MEGRENDELES_FEJ_ID); }
@@ -24,9 +28,7 @@ namespace BusinessLogic
                 _MEGRENDELES_FEJ_ID = value;
             }
         }
-
-        private DateTime _DATUM;
-         public DateTime DATUM
+        public DateTime DATUM
         {
             get { return (_DATUM); }
             set
@@ -35,30 +37,20 @@ namespace BusinessLogic
                 _DATUM = value;
             }
         }
-
-        private int _SZALLITO_ID;
         public int SZALLITO_ID
         {
             get { return (_SZALLITO_ID); }
             set { if (_SZALLITO_ID != value) { isModified = true; } _SZALLITO_ID = value; }
         }
-
-        private string _SORSZAM;
         public string SORSZAM
         {
             get { return (_SORSZAM); }
             set { if (_SORSZAM != value) { isModified = true; } _SORSZAM = value; }
         }
-
-        private int _LEZART;
-        public bool LEZART
+        public int LEZART
         {
-            get { return (_LEZART == 1); }
-            set
-            {
-                if (value) { _LEZART = 1; }
-                else { _LEZART = 0; }
-            }
+            get { return (_LEZART); }
+            set { _LEZART = value; }
         }
 
        
@@ -233,6 +225,20 @@ namespace BusinessLogic
             exists_cikk.Each(c => van = true);
 
             return van;
+
+        }
+
+        public double GetSumErtek()
+        {
+            double tmp_sum = 0;
+
+            
+            var exists_cikk =
+                from c in lMegrendelesSorok
+                select c;
+            exists_cikk.Each(c => tmp_sum += c.MENNYISEG*c.BESZ_AR);
+
+            return tmp_sum;
 
         }
 
