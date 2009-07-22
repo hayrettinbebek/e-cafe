@@ -1382,6 +1382,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\BusinessLogic.CikkAr.datasource" />
+    <None Include="Properties\DataSources\BusinessLogic.CikkBeszallito.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.KeszletSor.datasource" />
     <None Include="SQL\update_035.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

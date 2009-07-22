@@ -161,12 +161,15 @@ namespace BusinessLogic
                     ret_obj = rdr["VALUE"];
                 }
                 sc.Close();
-
-                return (Object)(ret_obj);
+                if (ret_obj == null) { return (Object)(""); }
+                else
+                {
+                    return (Object)(ret_obj);
+                }
             }
             else
             {
-                return (null);
+                return ("");
             }
         }
 
@@ -213,6 +216,10 @@ namespace BusinessLogic
                 return (ParamTypes.egesz);
             }
             else if (cc == ParamCodes.OSSZ_REPORT_FORMAT)
+            {
+                return (ParamTypes.szoveg);
+            }
+            else if (cc == ParamCodes.BLOKK_LOGO_PATH)
             {
                 return (ParamTypes.szoveg);
             }
@@ -276,15 +283,16 @@ namespace BusinessLogic
     }
     public enum ParamCodes
     {
-       SHOW_ORDER_BEFORE ,
-       CEG_NEV ,
-       CEG_CIM ,
-       BLOKK_LABLEC1 ,
-       BLOKK_LABLEC2 ,
-       BLOKK_LABLEC3 ,
-       AUTO_PRINT_BLOKK ,
-       LELTAR_KOROK_SZAMA,
-       OSSZ_REPORT_FORMAT
+        SHOW_ORDER_BEFORE,
+        CEG_NEV,
+        CEG_CIM,
+        BLOKK_LABLEC1,
+        BLOKK_LABLEC2,
+        BLOKK_LABLEC3,
+        AUTO_PRINT_BLOKK,
+        LELTAR_KOROK_SZAMA,
+        OSSZ_REPORT_FORMAT,
+        BLOKK_LOGO_PATH
 
     }
     

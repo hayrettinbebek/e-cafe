@@ -34,16 +34,20 @@
             this.txtCegCim = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLablec1 = new System.Windows.Forms.TextBox();
-            this.txtLablec2 = new System.Windows.Forms.TextBox();
+            this.chkBlokkAutoNyomt = new System.Windows.Forms.CheckBox();
             this.txtLablec3 = new System.Windows.Forms.TextBox();
+            this.txtLablec2 = new System.Windows.Forms.TextBox();
+            this.txtLablec1 = new System.Windows.Forms.TextBox();
             this.nuSchowOrderBefore = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.chkBlokkAutoNyomt = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.txtBlokkLogoPath = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuSchowOrderBefore)).BeginInit();
             this.SuspendLayout();
@@ -91,24 +95,37 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.chkBlokkAutoNyomt);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtBlokkLogoPath);
             this.groupBox1.Controls.Add(this.txtLablec3);
             this.groupBox1.Controls.Add(this.txtLablec2);
             this.groupBox1.Controls.Add(this.txtLablec1);
             this.groupBox1.Location = new System.Drawing.Point(12, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 154);
+            this.groupBox1.Size = new System.Drawing.Size(359, 188);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Blokk paraméterek";
             // 
-            // txtLablec1
+            // chkBlokkAutoNyomt
             // 
-            this.txtLablec1.Location = new System.Drawing.Point(25, 69);
-            this.txtLablec1.Name = "txtLablec1";
-            this.txtLablec1.Size = new System.Drawing.Size(312, 20);
-            this.txtLablec1.TabIndex = 0;
+            this.chkBlokkAutoNyomt.AutoSize = true;
+            this.chkBlokkAutoNyomt.Location = new System.Drawing.Point(9, 19);
+            this.chkBlokkAutoNyomt.Name = "chkBlokkAutoNyomt";
+            this.chkBlokkAutoNyomt.Size = new System.Drawing.Size(176, 17);
+            this.chkBlokkAutoNyomt.TabIndex = 2;
+            this.chkBlokkAutoNyomt.Text = "Blokkk automatikus nyomtatása";
+            this.chkBlokkAutoNyomt.UseVisualStyleBackColor = true;
+            // 
+            // txtLablec3
+            // 
+            this.txtLablec3.Location = new System.Drawing.Point(25, 121);
+            this.txtLablec3.Name = "txtLablec3";
+            this.txtLablec3.Size = new System.Drawing.Size(312, 20);
+            this.txtLablec3.TabIndex = 0;
             // 
             // txtLablec2
             // 
@@ -117,12 +134,12 @@
             this.txtLablec2.Size = new System.Drawing.Size(312, 20);
             this.txtLablec2.TabIndex = 0;
             // 
-            // txtLablec3
+            // txtLablec1
             // 
-            this.txtLablec3.Location = new System.Drawing.Point(25, 121);
-            this.txtLablec3.Name = "txtLablec3";
-            this.txtLablec3.Size = new System.Drawing.Size(312, 20);
-            this.txtLablec3.TabIndex = 0;
+            this.txtLablec1.Location = new System.Drawing.Point(25, 69);
+            this.txtLablec1.Name = "txtLablec1";
+            this.txtLablec1.Size = new System.Drawing.Size(312, 20);
+            this.txtLablec1.TabIndex = 0;
             // 
             // nuSchowOrderBefore
             // 
@@ -149,19 +166,9 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "nappal előtte";
             // 
-            // chkBlokkAutoNyomt
-            // 
-            this.chkBlokkAutoNyomt.AutoSize = true;
-            this.chkBlokkAutoNyomt.Location = new System.Drawing.Point(9, 19);
-            this.chkBlokkAutoNyomt.Name = "chkBlokkAutoNyomt";
-            this.chkBlokkAutoNyomt.Size = new System.Drawing.Size(176, 17);
-            this.chkBlokkAutoNyomt.TabIndex = 2;
-            this.chkBlokkAutoNyomt.Text = "Blokkk automatikus nyomtatása";
-            this.chkBlokkAutoNyomt.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(122, 239);
+            this.button1.Location = new System.Drawing.Point(122, 269);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -171,7 +178,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(402, 239);
+            this.button2.Location = new System.Drawing.Point(403, 269);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 23);
             this.button2.TabIndex = 4;
@@ -188,6 +195,37 @@
             this.button3.Text = "Reload data from DB";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtBlokkLogoPath
+            // 
+            this.txtBlokkLogoPath.Location = new System.Drawing.Point(25, 162);
+            this.txtBlokkLogoPath.Name = "txtBlokkLogoPath";
+            this.txtBlokkLogoPath.Size = new System.Drawing.Size(277, 20);
+            this.txtBlokkLogoPath.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(0, 146);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(151, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Blokkon megjelenő logó helye:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(301, 160);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(36, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmParams2
             // 
@@ -234,6 +272,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBlokkLogoPath;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
 
 
     }

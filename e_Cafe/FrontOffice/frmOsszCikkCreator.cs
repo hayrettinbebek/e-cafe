@@ -460,7 +460,7 @@ namespace e_Cafe.FrontOffice
             int Parent_cikk_id = (int)((DataRowView)rECEPTBindingSource.Current)["OSSZ_CIKK_ID"];
             int load_cikk_id = (int)((DataRowView)rECEPTBindingSource.Current)["OSSZ_CIKK_TARTOZEK_ID"];
 
-            decimal menny = InputText.getInt2(true);
+            decimal menny = InputText.getInt2(false);
 
             receptTableAdapter1.Delete(Parent_cikk_id, load_cikk_id);
             receptTableAdapter1.Insert(Parent_cikk_id, load_cikk_id, menny);

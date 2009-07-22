@@ -30,6 +30,7 @@ namespace e_Cafe.Admin
                 chkBlokkAutoNyomt.Checked = true;
             }
             else { chkBlokkAutoNyomt.Checked = false; }
+            txtBlokkLogoPath.Text = Syspar2.GetValue(ParamCodes.BLOKK_LOGO_PATH).ToString();
         }
 
         private void SaveAndInsertData()
@@ -41,6 +42,8 @@ namespace e_Cafe.Admin
             Syspar2.SetValues(ParamCodes.BLOKK_LABLEC3, txtLablec3.Text);
             Syspar2.SetValues(ParamCodes.CEG_NEV, txtCegNev.Text);
             Syspar2.SetValues(ParamCodes.SHOW_ORDER_BEFORE, nuSchowOrderBefore.Value);
+            Syspar2.SetValues(ParamCodes.BLOKK_LOGO_PATH, txtBlokkLogoPath.Text);
+
             if (chkBlokkAutoNyomt.Checked)
             {
                 Syspar2.SetValues(ParamCodes.AUTO_PRINT_BLOKK, 1);
@@ -67,6 +70,25 @@ namespace e_Cafe.Admin
         private void button3_Click(object sender, EventArgs e)
         {
             loadAndFillData();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (txtBlokkLogoPath.Text != "")
+            {
+                openFileDialog1.InitialDirectory = txtBlokkLogoPath.Text;
+            }
+            else
+            {
+                openFileDialog1.InitialDirectory = @"..\";
+            }
+            openFileDialog1.ShowDialog();
+            txtBlokkLogoPath.Text = openFileDialog1.FileName;
         }
     }
 }

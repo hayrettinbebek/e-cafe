@@ -75,7 +75,14 @@ namespace e_Cafe.Reports
             box.HorizontalAlignment = HorizontalAlignment.Center;
             // box.VerticalAlignment = VerticalAlignment.Bottom;
             //box.Border = reportDocument.NormalPen;
-            SectionImage image = new SectionImage(global::GUI.Properties.Resources.logo);
+            SectionImage image;
+            try {
+                 image = new SectionImage(Image.FromFile((string)Syspar2.GetValue(ParamCodes.BLOKK_LOGO_PATH)));
+            } catch (Exception ix) {
+                 image = new SectionImage(global::GUI.Properties.Resources.logo);
+            }
+            
+            
             //image.Transparency = 50;
             //image.PreserveAspectRatio = false;
             box.AddSection(image);

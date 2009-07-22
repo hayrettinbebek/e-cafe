@@ -78,6 +78,13 @@ namespace e_Cafe.Torzsek
                 {
                     cikkArBindingSource.Add(a);
                 }
+
+
+                cikkBeszallitoBindingSource.Clear();
+                foreach (var b in aktCikk.lBESZALLITOK)
+                {
+                    cikkBeszallitoBindingSource.Add(b);
+                }
             }
         }
         private void cIKKBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -381,6 +388,14 @@ namespace e_Cafe.Torzsek
         {
             aktCikkfilter.FILTER_ROVID_NEV = filter_RovidNev.Text;
             cIKKBindingSource.Filter = aktCikkfilter.getResult();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            foreach (var b in cikkBeszallitoBindingSource)
+            {
+                ((CikkBeszallito)b).Save();
+            }
         }
 
 
