@@ -378,6 +378,13 @@ namespace e_Cafe
             ck.Show();
         }
 
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbout ck = new frmAbout();
+            ck.MdiParent = this;
+            ck.Show();
+        }
+
 
 
 

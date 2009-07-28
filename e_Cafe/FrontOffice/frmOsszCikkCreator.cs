@@ -464,6 +464,9 @@ namespace e_Cafe.FrontOffice
 
             receptTableAdapter1.Delete(Parent_cikk_id, load_cikk_id);
             receptTableAdapter1.Insert(Parent_cikk_id, load_cikk_id, menny);
+
+            rECEPTTableAdapter.Fill(dsReceptCikkek.RECEPT, AktSzerkesztettCikk.CIKK_ID);
+
         }
 
     }
