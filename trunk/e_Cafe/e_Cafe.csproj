@@ -637,6 +637,9 @@
       <DependentUpon>AdminTools.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\frmKimentBlokkok.resx">
       <DependentUpon>frmKimentBlokkok.cs</DependentUpon>
       <SubType>Designer</SubType>
