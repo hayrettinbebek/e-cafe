@@ -153,8 +153,15 @@ namespace e_Cafe
         }
         private string DisplaySong()
         {
-            return WinampLib.GetCurrentSongTitle() +"    "+ Math.Round(TimeSpanUtils.ConvertMillisecondsToMinutes(WinampLib.GetTrackPosition()))+
-                        ":"+Math.Round(TimeSpanUtils.ConvertMillisecondsToSeconds(WinampLib.GetTrackPosition())%60);
+            try
+            {
+                return WinampLib.GetCurrentSongTitle() + "    " + Math.Round(TimeSpanUtils.ConvertMillisecondsToMinutes(WinampLib.GetTrackPosition())) +
+                            ":" + Math.Round(TimeSpanUtils.ConvertMillisecondsToSeconds(WinampLib.GetTrackPosition()) % 60);
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
         }
 
         private void MMenu_Load(object sender, EventArgs e)

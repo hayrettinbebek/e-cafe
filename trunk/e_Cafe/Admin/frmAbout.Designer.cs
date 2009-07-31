@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblVer = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblBuild = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -57,30 +57,31 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Adatbázis verziószám:";
+            this.label2.Text = "Build NR.:";
             // 
-            // label3
+            // lblBuild
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "v. 252";
+            this.lblBuild.AutoSize = true;
+            this.lblBuild.Location = new System.Drawing.Point(129, 105);
+            this.lblBuild.Name = "lblBuild";
+            this.lblBuild.Size = new System.Drawing.Size(37, 13);
+            this.lblBuild.TabIndex = 0;
+            this.lblBuild.Text = "v. 252";
             // 
             // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 225);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblBuild);
             this.Controls.Add(this.lblVer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmAbout";
             this.Text = "About";
+            this.Load += new System.EventHandler(this.frmAbout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,6 +92,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblVer;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblBuild;
     }
 }
