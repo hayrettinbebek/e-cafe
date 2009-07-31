@@ -37,7 +37,7 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.ucVolume = new GUI.ucVolumeControl();
-
+            this.playList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnUp
@@ -162,12 +162,24 @@
             // 
             this.ucVolume.BackColor = System.Drawing.Color.Transparent;
             this.ucVolume.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucVolume.Location = new System.Drawing.Point(45, 263);
+            this.ucVolume.Location = new System.Drawing.Point(244, 83);
             this.ucVolume.Name = "ucVolume";
             this.ucVolume.Size = new System.Drawing.Size(361, 21);
             this.ucVolume.TabIndex = 6;
             this.ucVolume.VOLUME = 40;
-            
+            // 
+            // playList
+            // 
+            this.playList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.playList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.playList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.playList.FormattingEnabled = true;
+            this.playList.ItemHeight = 25;
+            this.playList.Location = new System.Drawing.Point(15, 191);
+            this.playList.Name = "playList";
+            this.playList.Size = new System.Drawing.Size(659, 325);
+            this.playList.TabIndex = 7;
+            this.playList.DoubleClick += new System.EventHandler(this.playList_DoubleClick);
             // 
             // frmMediaPlayer
             // 
@@ -178,6 +190,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(686, 574);
             this.ControlBox = false;
+            this.Controls.Add(this.playList);
             this.Controls.Add(this.ucVolume);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.btnDown);
@@ -186,14 +199,12 @@
             this.Controls.Add(this.btnFW);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.btnUp);
- 
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMediaPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Load += new System.EventHandler(this.frmMediaPlayer_Load);
-
             this.ResumeLayout(false);
 
         }
@@ -208,6 +219,7 @@
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button button12;
         private GUI.ucVolumeControl ucVolume;
+        private System.Windows.Forms.ListBox playList;
 
     }
 }

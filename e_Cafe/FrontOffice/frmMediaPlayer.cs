@@ -36,8 +36,14 @@ namespace e_Cafe.FrontOffice
 
         private void GetStatus()
         {
-            
+
             ucVolume.VOLUME = WinampLib.GetVolume();
+            playList.Items.Clear();
+            foreach (var ps in WinampLib.getPlaylist())
+            {
+                playList.Items.Add(ps);
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -81,6 +87,13 @@ namespace e_Cafe.FrontOffice
         private void frmMediaPlayer_Load(object sender, EventArgs e)
         {
             GetStatus();
+        }
+
+        private void playList_DoubleClick(object sender, EventArgs e)
+        {
+            WinampLib.SetPlaylistPosition(playList.SelectedIndex);
+            WinampLib.Stop();
+            WinampLib.Play();
         }
     }
 }
