@@ -121,6 +121,7 @@
             // 
             this.txtCikkszam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCikkszam.Location = new System.Drawing.Point(86, 61);
+            this.txtCikkszam.MaxLength = 50;
             this.txtCikkszam.Name = "txtCikkszam";
             this.txtCikkszam.Size = new System.Drawing.Size(123, 20);
             this.txtCikkszam.TabIndex = 13;
@@ -139,6 +140,7 @@
             // 
             this.txtMegnevezes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMegnevezes.Location = new System.Drawing.Point(86, 6);
+            this.txtMegnevezes.MaxLength = 50;
             this.txtMegnevezes.Name = "txtMegnevezes";
             this.txtMegnevezes.Size = new System.Drawing.Size(254, 20);
             this.txtMegnevezes.TabIndex = 11;
@@ -188,6 +190,7 @@
             // 
             this.txtGyorskod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGyorskod.Location = new System.Drawing.Point(298, 62);
+            this.txtGyorskod.MaxLength = 10;
             this.txtGyorskod.Name = "txtGyorskod";
             this.txtGyorskod.Size = new System.Drawing.Size(123, 20);
             this.txtGyorskod.TabIndex = 17;
@@ -214,6 +217,7 @@
             // 
             this.txtEAN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEAN.Location = new System.Drawing.Point(298, 117);
+            this.txtEAN.MaxLength = 28;
             this.txtEAN.Name = "txtEAN";
             this.txtEAN.Size = new System.Drawing.Size(151, 20);
             this.txtEAN.TabIndex = 23;
@@ -223,6 +227,7 @@
             this.txtSZJ.AcceptsReturn = true;
             this.txtSZJ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSZJ.Location = new System.Drawing.Point(298, 88);
+            this.txtSZJ.MaxLength = 30;
             this.txtSZJ.Name = "txtSZJ";
             this.txtSZJ.Size = new System.Drawing.Size(151, 20);
             this.txtSZJ.TabIndex = 24;
@@ -580,6 +585,7 @@
             // 
             this.txtROVID_NEV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtROVID_NEV.Location = new System.Drawing.Point(86, 32);
+            this.txtROVID_NEV.MaxLength = 20;
             this.txtROVID_NEV.Name = "txtROVID_NEV";
             this.txtROVID_NEV.Size = new System.Drawing.Size(123, 20);
             this.txtROVID_NEV.TabIndex = 11;

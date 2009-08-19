@@ -711,8 +711,8 @@ namespace BusinessLogic
 
             SqlConnection c = new SqlConnection(DEFS.ConSTR);
             c.Open();
-            SqlCommand gk = new SqlCommand("select TOP 1 NETTO_ERTEK / MENNY as NETTO_AR, " +
-                                           " BRUTTO_ERTEK / MENNY as BRUTTO_AR " +
+            SqlCommand gk = new SqlCommand("select TOP 1 case when MENNY >0 then NETTO_ERTEK / MENNY else 0 end as NETTO_AR, " +
+                                           " case when MENNY >0 then BRUTTO_ERTEK / MENNY else 0 end  as BRUTTO_AR " +
                                            " from bevetel_sor " +
                                            " where CIKK_ID = " + pCikk.ToString() + " order by SOR_ID DESC ", c);
             gk.CommandType = CommandType.Text;
