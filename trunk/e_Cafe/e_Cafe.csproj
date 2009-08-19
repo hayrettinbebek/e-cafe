@@ -928,6 +928,7 @@
     <ProjectReference Include="..\WinampFrontEndLib\WinampFrontEndLib.csproj">
       <Project>{0FA619A7-6266-4677-A439-43A7E0316353}</Project>
       <Name>WinampFrontEndLib</Name>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -2,19 +2,19 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="e_Cafe.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="PrinterName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ADDDDAAA</Value>
+    <Setting Name="DefaultHely" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="ECAFEConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=ERNIE-HOME\SQLEXPRESS;Initial Catalog=ECAFE_0407;Persist Security Info=True;User ID=sa;Password=x&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=ERNIE-HOME\SQLEXPRESS;Initial Catalog=E_CAFE;Persist Security Info=True;User ID=sa;Password=x&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=ERNIE-HOME\SQLEXPRESS;Initial Catalog=ECAFE_0407;Persist Security Info=True;User ID=sa;Password=x</Value>
+      <Value Profile="(Default)">Data Source=ERNIE-HOME\SQLEXPRESS;Initial Catalog=E_CAFE;Persist Security Info=True;User ID=sa;Password=x</Value>
     </Setting>
-    <Setting Name="DefaultHely" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1</Value>
+    <Setting Name="PrinterName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Microsoft Office Document Image Writer</Value>
     </Setting>
   </Settings>
 </SettingsFile>
