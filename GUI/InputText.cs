@@ -10,7 +10,8 @@ namespace GUI
     public enum InputType
     {
         Number,
-        String
+        String,
+        Double
     }
     public abstract class InputText
     {
@@ -110,6 +111,38 @@ namespace GUI
             }
 
             return (tmpInt);
+
+        }
+
+        public static double getDouble(bool req)
+        {
+            // Paramtéer TRUE = Kötelezően nem lehet 0 hosszú
+            double tmpD = 0;
+            frmTouchNumKeyboard ft = new frmTouchNumKeyboard(InputType.Double);
+
+            if (req)
+            {
+                while (tmpD == 0)
+                {
+                    ft.ShowDialog();
+                    if (ft.DialogResult == DialogResult.OK)
+                    {
+                        tmpD = Convert.ToDouble(ft.ResultString);
+
+                    }
+                }
+            }
+            else
+            {
+                ft.ShowDialog();
+                if (ft.DialogResult == DialogResult.OK)
+                {
+                    tmpD = Convert.ToDouble(ft.ResultString);
+
+                }
+            }
+
+            return (tmpD);
 
         }
         /*

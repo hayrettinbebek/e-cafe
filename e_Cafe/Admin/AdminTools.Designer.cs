@@ -515,6 +515,7 @@
             this.szövegelemekToolStripMenuItem.Name = "szövegelemekToolStripMenuItem";
             this.szövegelemekToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.szövegelemekToolStripMenuItem.Text = "Szövegelemek";
+            this.szövegelemekToolStripMenuItem.Visible = false;
             // 
             // riportokToolStripMenuItem
             // 
@@ -612,7 +613,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
