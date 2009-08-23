@@ -22,7 +22,7 @@ namespace GUI.billentyu
             numericKeyboar1.it = t;
             numericKeyboar1.txtRet.Text = defaultValue;
             numericKeyboar1.btnRet.Click += doWhat;
-
+            numericKeyboar1.btnVesszo.Visible = (t == InputType.Double);
         }
 
 

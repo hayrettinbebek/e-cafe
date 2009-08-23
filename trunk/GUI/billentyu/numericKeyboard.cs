@@ -20,6 +20,8 @@ namespace GUI.billentyu
         public numericKeyboar()
         {
             InitializeComponent();
+
+            
         }
 
         private void button_Click(object sender, EventArgs e)

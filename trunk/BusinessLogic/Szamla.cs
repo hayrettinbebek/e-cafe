@@ -176,7 +176,7 @@ namespace BusinessLogic
 
                 if (t.RENDELSOR._LitKiszId > 0)
                 {
-                    nev = t.CIKK.KISZ_MEGN + " " + t.CIKK.MEGNEVEZES;
+                    nev = t.CIKK.MEGNEVEZES + " " + t.RENDELSOR._Cikk.KISZ_MEGN  ;
                 }
                 else
                 {

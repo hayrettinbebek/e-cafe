@@ -42,6 +42,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRet = new System.Windows.Forms.Button();
+            this.btnVesszo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtRet
@@ -271,6 +272,24 @@
             this.btnRet.UseVisualStyleBackColor = false;
             this.btnRet.Click += new System.EventHandler(this.button11_Click);
             // 
+            // btnVesszo
+            // 
+            this.btnVesszo.BackColor = System.Drawing.Color.Transparent;
+            this.btnVesszo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVesszo.BackgroundImage")));
+            this.btnVesszo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVesszo.FlatAppearance.BorderSize = 0;
+            this.btnVesszo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnVesszo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVesszo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVesszo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVesszo.Location = new System.Drawing.Point(161, 42);
+            this.btnVesszo.Name = "btnVesszo";
+            this.btnVesszo.Size = new System.Drawing.Size(40, 42);
+            this.btnVesszo.TabIndex = 60;
+            this.btnVesszo.Tag = ",";
+            this.btnVesszo.UseVisualStyleBackColor = false;
+            this.btnVesszo.Click += new System.EventHandler(this.button_Click);
+            // 
             // numericKeyboar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +304,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnVesszo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -314,5 +334,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button btnRet;
+        public System.Windows.Forms.Button btnVesszo;
     }
 }

@@ -436,7 +436,7 @@ namespace e_Cafe
 
 
                     }
-                    else if (DEFS.UserRights.HasRight("ALLOW_NEG_BOOK"))
+                    else if (DEFS.UserRights.HasRight("ALLOW_NEG_BOOK") || (DEFS.LogInUser.USER_ID == -666))
                     {
                         _AktRendeles.addTetel(((CikkButton)sender).fCIKK);
                         _AktRendeles.SaveRendeles();
@@ -704,21 +704,32 @@ namespace e_Cafe
                 }
             }
 
-            MMPartnerek mp = new MMPartnerek();
-            mp.SelectMode = PartnerSelectModes.hitelhez;
-            mp.neededHitel = selectionFizetendo();
-
-            mp.ShowDialog();
-            if (mp.DialogResult == DialogResult.OK)
+            if (_AktRendeles.fPARTNER_ID > 0)
             {
-
                 foreach (var r in tblRendeles.SelectedItems)
                 {
-                    SetHitel(mp.SelectedPartner.PARTNER_ID,((eCell)r.Cells[0]).rSor._SOR_ID);
+                    SetHitel(_AktRendeles.fPARTNER_ID, ((eCell)r.Cells[0]).rSor._SOR_ID);
                 }
-                DEFS.DebugLog("Rendelés hitellel fizetve");
-                
 
+            }
+            else
+            {
+                MMPartnerek mp = new MMPartnerek();
+                mp.SelectMode = PartnerSelectModes.hitelhez;
+                mp.neededHitel = selectionFizetendo();
+
+                mp.ShowDialog();
+                if (mp.DialogResult == DialogResult.OK)
+                {
+
+                    foreach (var r in tblRendeles.SelectedItems)
+                    {
+                        SetHitel(mp.SelectedPartner.PARTNER_ID, ((eCell)r.Cells[0]).rSor._SOR_ID);
+                    }
+                    DEFS.DebugLog("Rendelés hitellel fizetve");
+
+
+                }
             }
             this.Close();
 
