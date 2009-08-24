@@ -31,6 +31,8 @@ namespace e_Cafe.Admin
             }
             else { chkBlokkAutoNyomt.Checked = false; }
             txtBlokkLogoPath.Text = Syspar2.GetValue(ParamCodes.BLOKK_LOGO_PATH).ToString();
+            rbOldal.Checked = Syspar2.GetValue(ParamCodes.CIKK_GORGET_MODE).ToString() == "O";
+            rbSor.Checked = Syspar2.GetValue(ParamCodes.CIKK_GORGET_MODE).ToString() == "S";
         }
 
         private void SaveAndInsertData()
@@ -49,6 +51,10 @@ namespace e_Cafe.Admin
                 Syspar2.SetValues(ParamCodes.AUTO_PRINT_BLOKK, 1);
             }
             else { Syspar2.SetValues(ParamCodes.AUTO_PRINT_BLOKK, 99); }
+
+            if (rbOldal.Checked) { Syspar2.SetValues(ParamCodes.CIKK_GORGET_MODE, "O"); }
+            if (rbSor.Checked) { Syspar2.SetValues(ParamCodes.CIKK_GORGET_MODE, "S"); }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

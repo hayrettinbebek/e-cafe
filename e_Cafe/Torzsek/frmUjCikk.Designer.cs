@@ -124,7 +124,7 @@
             this.txtCikkszam.MaxLength = 50;
             this.txtCikkszam.Name = "txtCikkszam";
             this.txtCikkszam.Size = new System.Drawing.Size(123, 20);
-            this.txtCikkszam.TabIndex = 13;
+            this.txtCikkszam.TabIndex = 4;
             // 
             // label1
             // 
@@ -143,7 +143,7 @@
             this.txtMegnevezes.MaxLength = 50;
             this.txtMegnevezes.Name = "txtMegnevezes";
             this.txtMegnevezes.Size = new System.Drawing.Size(254, 20);
-            this.txtMegnevezes.TabIndex = 11;
+            this.txtMegnevezes.TabIndex = 1;
             // 
             // label2
             // 
@@ -163,7 +163,7 @@
             this.cmdCikkcsop.Location = new System.Drawing.Point(86, 87);
             this.cmdCikkcsop.Name = "cmdCikkcsop";
             this.cmdCikkcsop.Size = new System.Drawing.Size(123, 21);
-            this.cmdCikkcsop.TabIndex = 15;
+            this.cmdCikkcsop.TabIndex = 6;
             this.cmdCikkcsop.ValueMember = "CIKKCSOPORT_ID";
             this.cmdCikkcsop.SelectedIndexChanged += new System.EventHandler(this.cmdCikkcsop_SelectedIndexChanged);
             // 
@@ -193,7 +193,7 @@
             this.txtGyorskod.MaxLength = 10;
             this.txtGyorskod.Name = "txtGyorskod";
             this.txtGyorskod.Size = new System.Drawing.Size(123, 20);
-            this.txtGyorskod.TabIndex = 17;
+            this.txtGyorskod.TabIndex = 5;
             // 
             // label7
             // 
@@ -220,7 +220,7 @@
             this.txtEAN.MaxLength = 28;
             this.txtEAN.Name = "txtEAN";
             this.txtEAN.Size = new System.Drawing.Size(151, 20);
-            this.txtEAN.TabIndex = 23;
+            this.txtEAN.TabIndex = 9;
             // 
             // txtSZJ
             // 
@@ -230,7 +230,7 @@
             this.txtSZJ.MaxLength = 30;
             this.txtSZJ.Name = "txtSZJ";
             this.txtSZJ.Size = new System.Drawing.Size(151, 20);
-            this.txtSZJ.TabIndex = 24;
+            this.txtSZJ.TabIndex = 8;
             // 
             // cmbDefRakt
             // 
@@ -240,7 +240,7 @@
             this.cmbDefRakt.Location = new System.Drawing.Point(123, 19);
             this.cmbDefRakt.Name = "cmbDefRakt";
             this.cmbDefRakt.Size = new System.Drawing.Size(123, 21);
-            this.cmbDefRakt.TabIndex = 22;
+            this.cmbDefRakt.TabIndex = 11;
             this.cmbDefRakt.ValueMember = "RAKTAR_ID";
             // 
             // rAKTARBindingSource
@@ -270,7 +270,7 @@
             this.cmbOTF.Location = new System.Drawing.Point(86, 114);
             this.cmbOTF.Name = "cmbOTF";
             this.cmbOTF.Size = new System.Drawing.Size(123, 21);
-            this.cmbOTF.TabIndex = 20;
+            this.cmbOTF.TabIndex = 7;
             this.cmbOTF.ValueMember = "OTHER_FILTER_ID";
             // 
             // cIKCSOPOTHERFILTERBindingSource1
@@ -334,7 +334,7 @@
             this.groupBox1.Location = new System.Drawing.Point(4, 165);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(678, 74);
-            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Készlet adatok";
             // 
@@ -382,7 +382,7 @@
             this.txtOptKeszl.Location = new System.Drawing.Point(572, 20);
             this.txtOptKeszl.Name = "txtOptKeszl";
             this.txtOptKeszl.Size = new System.Drawing.Size(92, 20);
-            this.txtOptKeszl.TabIndex = 11;
+            this.txtOptKeszl.TabIndex = 13;
             this.txtOptKeszl.Text = "0";
             // 
             // txtMinKeszl
@@ -391,7 +391,7 @@
             this.txtMinKeszl.Location = new System.Drawing.Point(383, 20);
             this.txtMinKeszl.Name = "txtMinKeszl";
             this.txtMinKeszl.Size = new System.Drawing.Size(92, 20);
-            this.txtMinKeszl.TabIndex = 11;
+            this.txtMinKeszl.TabIndex = 12;
             this.txtMinKeszl.Text = "0";
             // 
             // chkMegKulZaras
@@ -430,7 +430,7 @@
             this.cmdMe.Location = new System.Drawing.Point(86, 141);
             this.cmdMe.Name = "cmdMe";
             this.cmdMe.Size = new System.Drawing.Size(76, 21);
-            this.cmdMe.TabIndex = 20;
+            this.cmdMe.TabIndex = 10;
             this.cmdMe.ValueMember = "MEGYS_ID";
             // 
             // mEGYSBindingSource
@@ -514,7 +514,7 @@
             this.chkOsszetett.Location = new System.Drawing.Point(346, 8);
             this.chkOsszetett.Name = "chkOsszetett";
             this.chkOsszetett.Size = new System.Drawing.Size(90, 17);
-            this.chkOsszetett.TabIndex = 34;
+            this.chkOsszetett.TabIndex = 2;
             this.chkOsszetett.Text = "Összetet cikk";
             this.chkOsszetett.UseVisualStyleBackColor = true;
             // 
@@ -588,7 +588,7 @@
             this.txtROVID_NEV.MaxLength = 20;
             this.txtROVID_NEV.Name = "txtROVID_NEV";
             this.txtROVID_NEV.Size = new System.Drawing.Size(123, 20);
-            this.txtROVID_NEV.TabIndex = 11;
+            this.txtROVID_NEV.TabIndex = 3;
             // 
             // label16
             // 

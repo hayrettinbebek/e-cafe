@@ -41,6 +41,7 @@ namespace e_Cafe.Torzsek
             this.aFABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eCAFEDataSetAFA = new e_Cafe.SQL.DataSets.ECAFEDataSetAFA();
             this.aFATableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetAFATableAdapters.AFATableAdapter();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aFABindingSource)).BeginInit();
@@ -50,7 +51,8 @@ namespace e_Cafe.Torzsek
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(367, 25);
@@ -65,7 +67,6 @@ namespace e_Cafe.Torzsek
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(46, 22);
             this.toolStripButton1.Text = "Mentés";
-            
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // dataGridView1
@@ -115,6 +116,15 @@ namespace e_Cafe.Torzsek
             // 
             this.aFATableAdapter.ClearBeforeFill = true;
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(196, 22);
+            this.toolStripButton2.Text = "Áfa változás átvezetése a cikkeken";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // frmAFA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,5 +156,6 @@ namespace e_Cafe.Torzsek
         private System.Windows.Forms.DataGridViewTextBoxColumn aFAKODDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aFANEVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aFAERTEKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

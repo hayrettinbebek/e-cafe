@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using BusinessLogic;
 
 
 namespace e_Cafe.Torzsek
@@ -28,6 +23,11 @@ namespace e_Cafe.Torzsek
         {
             aFATableAdapter.Update(eCAFEDataSetAFA);
 
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            DEFS.updateAfaSzazalekokOnCikkek();
         }
 
 

@@ -398,6 +398,17 @@ namespace e_Cafe.Torzsek
             }
         }
 
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (cIKKBindingSource.Current != null)
+            {
+                frmUjCikk fu = new frmUjCikk();
+                fu.CikkID = (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"];
+                fu.ShowDialog();
+                refreshDataset();
+            }
+        }
+
 
     }
 }

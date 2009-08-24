@@ -34,7 +34,10 @@
             this.txtCegCim = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.chkBlokkAutoNyomt = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBlokkLogoPath = new System.Windows.Forms.TextBox();
             this.txtLablec3 = new System.Windows.Forms.TextBox();
             this.txtLablec2 = new System.Windows.Forms.TextBox();
             this.txtLablec1 = new System.Windows.Forms.TextBox();
@@ -44,12 +47,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.txtBlokkLogoPath = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button4 = new System.Windows.Forms.Button();
+            this.rbSor = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbOldal = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuSchowOrderBefore)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCegNev
@@ -110,6 +114,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Blokk paraméterek";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(301, 160);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(36, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // chkBlokkAutoNyomt
             // 
             this.chkBlokkAutoNyomt.AutoSize = true;
@@ -119,6 +133,23 @@
             this.chkBlokkAutoNyomt.TabIndex = 2;
             this.chkBlokkAutoNyomt.Text = "Blokkk automatikus nyomtatása";
             this.chkBlokkAutoNyomt.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(0, 146);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(151, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Blokkon megjelenő logó helye:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // txtBlokkLogoPath
+            // 
+            this.txtBlokkLogoPath.Location = new System.Drawing.Point(25, 162);
+            this.txtBlokkLogoPath.Name = "txtBlokkLogoPath";
+            this.txtBlokkLogoPath.Size = new System.Drawing.Size(277, 20);
+            this.txtBlokkLogoPath.TabIndex = 0;
             // 
             // txtLablec3
             // 
@@ -196,42 +227,51 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // txtBlokkLogoPath
-            // 
-            this.txtBlokkLogoPath.Location = new System.Drawing.Point(25, 162);
-            this.txtBlokkLogoPath.Name = "txtBlokkLogoPath";
-            this.txtBlokkLogoPath.Size = new System.Drawing.Size(277, 20);
-            this.txtBlokkLogoPath.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(0, 146);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Blokkon megjelenő logó helye:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button4
+            // rbSor
             // 
-            this.button4.Location = new System.Drawing.Point(301, 160);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(36, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.rbSor.AutoSize = true;
+            this.rbSor.Location = new System.Drawing.Point(12, 18);
+            this.rbSor.Name = "rbSor";
+            this.rbSor.Size = new System.Drawing.Size(74, 17);
+            this.rbSor.TabIndex = 6;
+            this.rbSor.TabStop = true;
+            this.rbSor.Tag = "2";
+            this.rbSor.Text = "Soronként";
+            this.rbSor.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbOldal);
+            this.groupBox2.Controls.Add(this.rbSor);
+            this.groupBox2.Location = new System.Drawing.Point(377, 58);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(223, 42);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Cikk görgetés módja";
+            // 
+            // rbOldal
+            // 
+            this.rbOldal.AutoSize = true;
+            this.rbOldal.Location = new System.Drawing.Point(109, 19);
+            this.rbOldal.Name = "rbOldal";
+            this.rbOldal.Size = new System.Drawing.Size(82, 17);
+            this.rbOldal.TabIndex = 0;
+            this.rbOldal.TabStop = true;
+            this.rbOldal.Tag = "2";
+            this.rbOldal.Text = "Oldalanként";
+            this.rbOldal.UseVisualStyleBackColor = true;
             // 
             // frmParams2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 304);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -249,6 +289,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuSchowOrderBefore)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,6 +318,9 @@
         private System.Windows.Forms.TextBox txtBlokkLogoPath;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.RadioButton rbSor;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rbOldal;
 
 
     }
