@@ -1184,7 +1184,11 @@ namespace e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM CIKKCSOPORT\r\nWHERE     (CIKKCSOPORT_ID = @CIKKCSOPORT_ID)";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM CIKKCSOPORT
+WHERE     (CIKKCSOPORT_ID = @CIKKCSOPORT_ID) AND (NOT EXISTS
+                          (SELECT     CIKK_ID
+                            FROM          CIKK
+                            WHERE      (CIKKCSOPORT_ID = @CIKKCSOPORT_ID) AND (AKTIV = 1)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CIKKCSOPORT_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CIKKCSOPORT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();

@@ -22,7 +22,7 @@ namespace BusinessLogic
         public static Font f2 = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
         public static Font fRendelInfo = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
         public static Font fFoglalasokInfo = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-        public static Size CIKK_BTN_SIZE = new Size(150, 75);
+        public static Size CIKK_BTN_SIZE = new Size(350, 175);
         
         public static int NyitNap_EV;
         public static int NyitNap_HO;
@@ -327,7 +327,24 @@ namespace BusinessLogic
         }
         #endregion 
 
+        public static void updateAfaSzazalekokOnCikkek()
+        {
+            SqlConnection c = new SqlConnection(ConSTR);
+            SqlCommand cmd = new SqlCommand();
 
+            cmd.Connection = c;
+
+            cmd.CommandType = CommandType.Text;
+
+
+            cmd.CommandText = "update cikk  set cikk.eladasi_ar_netto = cikk.eladasi_ar*100/(100+a.afa_ertek) from cikk  " +
+                               " inner join cikkcsoport cs on cikk.cikkcsoport_id = cs.cikkcsoport_id inner join afa a on cs.afa_kod = a.afa_kod " +
+                               " where isnull(cikk.eladasi_ar_netto,0) > 0";
+            c.Open();
+            cmd.ExecuteNonQuery();
+
+            c.Close();
+        }
 
         public static int GetDBVER()
         {

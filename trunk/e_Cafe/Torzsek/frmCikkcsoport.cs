@@ -33,7 +33,16 @@ namespace e_Cafe
             dataGridView1.EndEdit();
             cIKKCSOPORTBindingSource.EndEdit();
             cIKKCSOPORTBindingSource.MoveFirst();
-            cIKKCSOPORTTableAdapter.Update(eCAFEDataSet);
+            try
+            {
+                cIKKCSOPORTTableAdapter.Update(eCAFEDataSet);
+            }
+            catch (DBConcurrencyException ex)
+            {
+                DEFS.SendSaveErrMessage("A cikkcsoport használatban van kérem előbb törölje a hozzá tartozó cikkekből!");
+                cIKKCSOPORTTableAdapter.Fill(this.eCAFEDataSet.CIKKCSOPORT);
+                DEFS.ExLog(ex.StackTrace);
+            }
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)

@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCikk));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -153,6 +153,11 @@
             this.btnUjAr = new System.Windows.Forms.Button();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.ERVENBYES_TOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.KISZERELES_MEGYS_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -193,10 +198,6 @@
             this.lIT_KISZTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
             this.kESZLET_FEJTableAdapter = new e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter();
             this.kESZLET_SORTableAdapter = new e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.rAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kESZLETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kESZLETERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -206,11 +207,10 @@
             this.eRVENYESIGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eLADASIARNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cikkArBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cikkBeszallitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sZALLITONEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bESZARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kISZMENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KISZERELES_MEGYS_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cikkBeszallitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -246,12 +246,12 @@
             this.panel4.SuspendLayout();
             this.pnlUjArSor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.toolStrip2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cikkArBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBeszallitoBindingSource)).BeginInit();
@@ -275,7 +275,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(109, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(102, 22);
             this.toolStripButton2.Text = "Új cikk felvétele";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -284,7 +284,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(168, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(153, 22);
             this.toolStripButton1.Text = "Cikk adatainak módosítása";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
@@ -293,7 +293,7 @@
             this.btnDelete.Image = global::e_Cafe.Properties.Resources.ERROR_ICON;
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(59, 22);
+            this.btnDelete.Size = new System.Drawing.Size(56, 22);
             this.btnDelete.Text = "Törlés";
             this.btnDelete.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -302,7 +302,7 @@
             this.btnAktiv.Image = global::e_Cafe.OtherImages.OK_ICON;
             this.btnAktiv.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAktiv.Name = "btnAktiv";
-            this.btnAktiv.Size = new System.Drawing.Size(63, 22);
+            this.btnAktiv.Size = new System.Drawing.Size(59, 22);
             this.btnAktiv.Text = "Aktivál";
             this.btnAktiv.Click += new System.EventHandler(this.btnAktiv_Click);
             // 
@@ -1073,16 +1073,16 @@
             // KESZLET_NYITO
             // 
             this.KESZLET_NYITO.DataPropertyName = "KESZLET_NYITO";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.KESZLET_NYITO.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.KESZLET_NYITO.DefaultCellStyle = dataGridViewCellStyle1;
             this.KESZLET_NYITO.HeaderText = "Napi nyitó készlet";
             this.KESZLET_NYITO.Name = "KESZLET_NYITO";
             // 
             // KESZLET_NAPI
             // 
             this.KESZLET_NAPI.DataPropertyName = "KESZLET_NAPI";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.KESZLET_NAPI.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.KESZLET_NAPI.DefaultCellStyle = dataGridViewCellStyle2;
             this.KESZLET_NAPI.HeaderText = "Készlet változás";
             this.KESZLET_NAPI.Name = "KESZLET_NAPI";
             // 
@@ -1176,8 +1176,8 @@
             // BEVETEL
             // 
             this.BEVETEL.DataPropertyName = "BEVETEL";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(230)))), ((int)(((byte)(196)))));
-            this.BEVETEL.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(230)))), ((int)(((byte)(196)))));
+            this.BEVETEL.DefaultCellStyle = dataGridViewCellStyle3;
             this.BEVETEL.HeaderText = "Készlet nökedés";
             this.BEVETEL.Name = "BEVETEL";
             this.BEVETEL.ReadOnly = true;
@@ -1186,8 +1186,8 @@
             // KIADAS
             // 
             this.KIADAS.DataPropertyName = "KIADAS";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.KIADAS.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.KIADAS.DefaultCellStyle = dataGridViewCellStyle4;
             this.KIADAS.HeaderText = "Csökkenés";
             this.KIADAS.Name = "KIADAS";
             this.KIADAS.ReadOnly = true;
@@ -1496,6 +1496,62 @@
             this.ERVENBYES_TOL.Name = "ERVENBYES_TOL";
             this.ERVENBYES_TOL.Width = 140;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.panel5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(986, 301);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Szállítók";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button8);
+            this.panel5.Controls.Add(this.dataGridView7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(654, 301);
+            this.panel5.TabIndex = 2;
+            // 
+            // button8
+            // 
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(392, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Mentés";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.AllowUserToAddRows = false;
+            this.dataGridView7.AllowUserToDeleteRows = false;
+            this.dataGridView7.AutoGenerateColumns = false;
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sZALLITONEVDataGridViewTextBoxColumn,
+            this.bESZARDataGridViewTextBoxColumn,
+            this.kISZMENNYDataGridViewTextBoxColumn,
+            this.KISZERELES_MEGYS_NEV});
+            this.dataGridView7.DataSource = this.cikkBeszallitoBindingSource;
+            this.dataGridView7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView7.Location = new System.Drawing.Point(0, 32);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.Size = new System.Drawing.Size(654, 269);
+            this.dataGridView7.TabIndex = 0;
+            // 
+            // KISZERELES_MEGYS_NEV
+            // 
+            this.KISZERELES_MEGYS_NEV.DataPropertyName = "KISZERELES_MEGYS_NEV";
+            this.KISZERELES_MEGYS_NEV.HeaderText = "Mértékegység";
+            this.KISZERELES_MEGYS_NEV.Name = "KISZERELES_MEGYS_NEV";
+            this.KISZERELES_MEGYS_NEV.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
@@ -1542,6 +1598,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(994, 215);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_RowValidating);
             // 
             // mEGNEVEZESDataGridViewTextBoxColumn
@@ -1745,7 +1802,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(75, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(71, 22);
             this.toolStripLabel2.Text = "Megnevezés:";
             // 
             // filterMegnevezes
@@ -1757,7 +1814,7 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(59, 22);
+            this.toolStripLabel5.Size = new System.Drawing.Size(55, 22);
             this.toolStripLabel5.Text = "Rövid név";
             // 
             // filter_RovidNev
@@ -1769,7 +1826,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(70, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(62, 22);
             this.toolStripLabel3.Text = "Cikkcsoport";
             // 
             // filterCikkcsop
@@ -1781,7 +1838,7 @@
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(58, 22);
+            this.toolStripLabel4.Size = new System.Drawing.Size(52, 22);
             this.toolStripLabel4.Text = "Alcsoport";
             // 
             // filterAlcsoport
@@ -1813,55 +1870,6 @@
             // kESZLET_SORTableAdapter
             // 
             this.kESZLET_SORTableAdapter.ClearBeforeFill = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.panel5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(986, 301);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Szállítók";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button8);
-            this.panel5.Controls.Add(this.dataGridView7);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(654, 301);
-            this.panel5.TabIndex = 2;
-            // 
-            // button8
-            // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(392, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Mentés";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.AllowUserToAddRows = false;
-            this.dataGridView7.AllowUserToDeleteRows = false;
-            this.dataGridView7.AutoGenerateColumns = false;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sZALLITONEVDataGridViewTextBoxColumn,
-            this.bESZARDataGridViewTextBoxColumn,
-            this.kISZMENNYDataGridViewTextBoxColumn,
-            this.KISZERELES_MEGYS_NEV});
-            this.dataGridView7.DataSource = this.cikkBeszallitoBindingSource;
-            this.dataGridView7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView7.Location = new System.Drawing.Point(0, 32);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(654, 269);
-            this.dataGridView7.TabIndex = 0;
             // 
             // rAKTARDataGridViewTextBoxColumn
             // 
@@ -1924,10 +1932,6 @@
             // 
             this.cikkArBindingSource.DataSource = typeof(BusinessLogic.CikkAr);
             // 
-            // cikkBeszallitoBindingSource
-            // 
-            this.cikkBeszallitoBindingSource.DataSource = typeof(BusinessLogic.CikkBeszallito);
-            // 
             // sZALLITONEVDataGridViewTextBoxColumn
             // 
             this.sZALLITONEVDataGridViewTextBoxColumn.DataPropertyName = "SZALLITO_NEV";
@@ -1951,12 +1955,9 @@
             this.kISZMENNYDataGridViewTextBoxColumn.Name = "kISZMENNYDataGridViewTextBoxColumn";
             this.kISZMENNYDataGridViewTextBoxColumn.Width = 120;
             // 
-            // KISZERELES_MEGYS_NEV
+            // cikkBeszallitoBindingSource
             // 
-            this.KISZERELES_MEGYS_NEV.DataPropertyName = "KISZERELES_MEGYS_NEV";
-            this.KISZERELES_MEGYS_NEV.HeaderText = "Mértékegység";
-            this.KISZERELES_MEGYS_NEV.Name = "KISZERELES_MEGYS_NEV";
-            this.KISZERELES_MEGYS_NEV.ReadOnly = true;
+            this.cikkBeszallitoBindingSource.DataSource = typeof(BusinessLogic.CikkBeszallito);
             // 
             // frmCikk
             // 
@@ -2013,13 +2014,13 @@
             this.pnlUjArSor.ResumeLayout(false);
             this.pnlUjArSor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cikkArBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cikkBeszallitoBindingSource)).EndInit();

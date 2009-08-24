@@ -185,7 +185,16 @@ namespace e_Cafe
             resetCounter();
             if (Cikkek_needScroll < Cikkek_MaxScroll)
             {
-                Cikkek_ScrollPos -= ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
+                if (Syspar2.GetValue(ParamCodes.CIKK_GORGET_MODE).ToString() == "S") {
+                    Cikkek_ScrollPos -= ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
+
+                }
+
+                if (Syspar2.GetValue(ParamCodes.CIKK_GORGET_MODE).ToString() == "O")
+                {
+                    Cikkek_ScrollPos -= ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width) * ((flpCikkek.Height - 10) / DEFS.CIKK_BTN_SIZE.Height);
+
+                } 
 
                 Cikkek_ScrollPos = Math.Max(Cikkek_ScrollPos, 0);
                 if (LastCikkcsopMenu != null) { VCikkcsopMenuClick(LastCikkcsopMenu, LastOtherFilterMenu, true, null); }
@@ -197,8 +206,17 @@ namespace e_Cafe
             resetCounter();
             if (Cikkek_needScroll < Cikkek_MaxScroll)
             {
-                Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
+                if (Syspar2.GetValue(ParamCodes.CIKK_GORGET_MODE).ToString() == "S")
+                {
+                    Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width);
 
+                }
+
+                if (Syspar2.GetValue(ParamCodes.CIKK_GORGET_MODE).ToString() == "O")
+                {
+                    Cikkek_ScrollPos += ((flpCikkek.Width - 10) / DEFS.CIKK_BTN_SIZE.Width) * ((flpCikkek.Height - 10) / DEFS.CIKK_BTN_SIZE.Height);
+
+                } 
                 Cikkek_ScrollPos = Math.Min(Cikkek_ScrollPos, Cikkek_MaxScroll - Cikkek_needScroll);
                 if (LastCikkcsopMenu != null) { VCikkcsopMenuClick(LastCikkcsopMenu, LastOtherFilterMenu, true, null); }
             }

@@ -223,6 +223,10 @@ namespace BusinessLogic
             {
                 return (ParamTypes.szoveg);
             }
+            else if (cc == ParamCodes.CIKK_GORGET_MODE)
+            {
+                return (ParamTypes.szoveg);
+            }
             else
             {
                 return ParamTypes.egesz;
@@ -292,7 +296,8 @@ namespace BusinessLogic
         AUTO_PRINT_BLOKK,
         LELTAR_KOROK_SZAMA,
         OSSZ_REPORT_FORMAT,
-        BLOKK_LOGO_PATH
+        BLOKK_LOGO_PATH,
+        CIKK_GORGET_MODE
 
     }
     
