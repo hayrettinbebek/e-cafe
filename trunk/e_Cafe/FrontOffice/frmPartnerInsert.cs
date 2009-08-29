@@ -18,14 +18,15 @@ namespace e_Cafe
     public partial class frmPartnerInsert : Form
     {
         int partner_id = -1;
+        string _partner_type;
         Vevo v;
 
-        public frmPartnerInsert(int pId)
+        public frmPartnerInsert(int pId, string PartnerType)
         {
             partner_id = pId;
             InitializeComponent();
             loadPartner();
-
+            _partner_type = PartnerType;
             dynComboBindingSource.Add(new DynCombo("Vevő", "V"));
             dynComboBindingSource.Add(new DynCombo("Törzsvendég", "T"));
             dynComboBindingSource.Add(new DynCombo("Dolgozó", "D"));
@@ -84,7 +85,9 @@ namespace e_Cafe
             bool ok2;
             foreach (var k in vevoBindingSource.List)
             {
-                
+                if (_partner_type == "D") {
+                    ((Vevo)k).P_TIPUS = "D";
+                }
                 partner_id = ((Vevo)k).Save(out ok2);
                 txtNormalCimPartnerId.Text = partner_id.ToString();
                 txtNormalCimPartnerId2.Text = partner_id.ToString();

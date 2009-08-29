@@ -36,12 +36,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.checkBox2 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.RadioButton();
+            this.chkDolgozok = new System.Windows.Forms.RadioButton();
+            this.chkTorzs = new System.Windows.Forms.RadioButton();
             this.checkBox3 = new System.Windows.Forms.RadioButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPartnerNelkul = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -129,8 +129,8 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.checkBox2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.chkDolgozok, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.chkTorzs, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBox3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 55);
@@ -143,45 +143,45 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(126, 485);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // checkBox2
+            // chkDolgozok
             // 
-            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBox2.BackgroundImage")));
-            this.checkBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox2.FlatAppearance.BorderSize = 0;
-            this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.Location = new System.Drawing.Point(3, 123);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(120, 54);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Tag = "D";
-            this.checkBox2.Text = "Dolgozók";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.chkDolgozok.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkDolgozok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkDolgozok.BackgroundImage")));
+            this.chkDolgozok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chkDolgozok.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkDolgozok.FlatAppearance.BorderSize = 0;
+            this.chkDolgozok.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.chkDolgozok.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.chkDolgozok.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.chkDolgozok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkDolgozok.Location = new System.Drawing.Point(3, 123);
+            this.chkDolgozok.Name = "chkDolgozok";
+            this.chkDolgozok.Size = new System.Drawing.Size(120, 54);
+            this.chkDolgozok.TabIndex = 8;
+            this.chkDolgozok.Tag = "D";
+            this.chkDolgozok.Text = "Dolgozók";
+            this.chkDolgozok.UseVisualStyleBackColor = true;
+            this.chkDolgozok.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
-            // checkBox1
+            // chkTorzs
             // 
-            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkBox1.BackgroundImage")));
-            this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox1.FlatAppearance.BorderSize = 0;
-            this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(3, 63);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(120, 54);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Tag = "T";
-            this.checkBox1.Text = "Törzsvendégek";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.chkTorzs.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkTorzs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkTorzs.BackgroundImage")));
+            this.chkTorzs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.chkTorzs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkTorzs.FlatAppearance.BorderSize = 0;
+            this.chkTorzs.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.chkTorzs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.chkTorzs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.chkTorzs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkTorzs.Location = new System.Drawing.Point(3, 63);
+            this.chkTorzs.Name = "chkTorzs";
+            this.chkTorzs.Size = new System.Drawing.Size(120, 54);
+            this.chkTorzs.TabIndex = 7;
+            this.chkTorzs.Tag = "T";
+            this.chkTorzs.Text = "Törzsvendégek";
+            this.chkTorzs.UseVisualStyleBackColor = true;
+            this.chkTorzs.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -212,6 +212,14 @@
             this.panel6.Size = new System.Drawing.Size(28, 485);
             this.panel6.TabIndex = 5;
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 55);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(21, 485);
+            this.panel2.TabIndex = 5;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
@@ -220,14 +228,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(175, 55);
             this.panel5.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 55);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(21, 485);
-            this.panel2.TabIndex = 5;
             // 
             // panel1
             // 
@@ -309,8 +309,8 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.RadioButton checkBox2;
-        private System.Windows.Forms.RadioButton checkBox1;
+        private System.Windows.Forms.RadioButton chkDolgozok;
+        private System.Windows.Forms.RadioButton chkTorzs;
         private System.Windows.Forms.RadioButton checkBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPartnerNelkul;
