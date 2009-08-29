@@ -20,6 +20,7 @@ namespace e_Cafe
     public partial class frmShadowLayer : Form
     {
         public int param;
+        public string s_PARAM;
         private UsingForms mode;
         public KedvezmenyErtek ke = null;
 
@@ -37,7 +38,8 @@ namespace e_Cafe
                 case UsingForms.PartnerInsert:
                     {
                         if (param == 0) { Close(); }
-                        frmPartnerInsert p = new frmPartnerInsert(param);
+                        frmPartnerInsert p = new frmPartnerInsert(param, s_PARAM);
+                        
                         p.ShowDialog();
                         Close();
                         break;

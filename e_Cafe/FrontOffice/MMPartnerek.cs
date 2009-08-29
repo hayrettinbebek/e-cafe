@@ -103,6 +103,7 @@ namespace e_Cafe
                             PartnerButton pb = new PartnerButton();
                             pb.fPARTNER = (Partner)pl.lVevok[i];
                             pb.Click += ShowPartner;
+                          
                             if (((Partner)pl.lVevok[i]).RENDELES_ID > 0)
                             {
                                 pb.VAN_RENDEL = true;
@@ -113,7 +114,29 @@ namespace e_Cafe
                         }
 
                         break;
-                    }       
+                    }
+
+                case "D":
+                    {
+                        for (int i = 0; i < pl.lVevok.Count; i++)
+                        {
+                            if (((Partner)pl.lVevok[i]).P_TIPUS == pPartnerType)
+                            {
+                                PartnerButton pb = new PartnerButton();
+                                pb.fPARTNER = (Partner)pl.lVevok[i];
+                                pb.Click += ShowPartner;
+                                pb.pnlRendel.Click += RendelToPartner;
+                                if (((Partner)pl.lVevok[i]).RENDELES_ID > 0)
+                                {
+                                    pb.VAN_RENDEL = true;
+                                }
+                                flpPartner.Controls.Add(pb);
+                            }
+
+                        }
+
+                        break;
+                    }  
 
             }
 
@@ -174,6 +197,15 @@ namespace e_Cafe
         private void button1_Click(object sender, EventArgs e)
         {
             frmShadowLayer p = new frmShadowLayer(UsingForms.PartnerInsert);
+            if (chkDolgozok.Checked)
+            {
+                p.s_PARAM = "D";
+            }
+            else if (chkTorzs.Checked)
+            {
+                p.s_PARAM = "T";
+            }
+            else { p.s_PARAM = "V"; }
             p.param = -1;
             p.ShowDialog();
 

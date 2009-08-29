@@ -1208,6 +1208,12 @@ namespace BusinessLogic
                             lVevok.Add(t);
                             break;
                         }
+                    case "D":
+                        {
+                            Vevo t = new Vevo((int)rdr["PARTNER_ID"]);
+                            lVevok.Add(t);
+                            break;
+                        }
                     case "":
                         {
 

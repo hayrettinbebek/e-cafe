@@ -31,7 +31,7 @@ namespace e_Cafe.Torzsek
             
 
             // TODO: This line of code loads data into the 'eCAFEDataSetCIKK.CIKK' table. You can move, or remove it, as needed.
-            refreshDataset();
+            refreshDataset(-1);
             if (recept != 1)
             {
                 //tpRecept.Show();
@@ -146,24 +146,30 @@ namespace e_Cafe.Torzsek
 
             frmUjCikk fu = new frmUjCikk();
             fu.ShowDialog();
-            refreshDataset();
+            refreshDataset(-1);
 
         }
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
+            int tmp_cikk_id;
             if (cIKKBindingSource.Current != null)
             {
                 frmUjCikk fu = new frmUjCikk();
+                tmp_cikk_id = (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"];
                 fu.CikkID = (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"];
                 fu.ShowDialog();
-                refreshDataset();
+                refreshDataset(tmp_cikk_id);
             }
         }
 
-        private void refreshDataset()
+        private void refreshDataset(int id)
         {
             this.cIKKTableAdapter.Fill(this.eCAFEDataSetCIKK.CIKK, recept, aktiv);
+            if (id > 0)
+            {
+                cIKKBindingSource.Position = cIKKBindingSource.Find("CIKK_ID", id);
+            }
         }
 
         private void btnKiszerelések_Click(object sender, EventArgs e)
@@ -245,7 +251,7 @@ namespace e_Cafe.Torzsek
                     Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], true);
                     c.AKTIV = 0;
                     c.Save();
-                    refreshDataset();
+                    refreshDataset(-1);
                 }
             }
         }
@@ -257,7 +263,7 @@ namespace e_Cafe.Torzsek
                 Cikk c = new Cikk((int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"], true);
                 c.AKTIV = 1;
                 c.Save();
-                refreshDataset();
+                refreshDataset(-1);
             }
         }
 
@@ -400,12 +406,14 @@ namespace e_Cafe.Torzsek
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            int tmp_cikk_id;
             if (cIKKBindingSource.Current != null)
             {
                 frmUjCikk fu = new frmUjCikk();
+                tmp_cikk_id = (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"];
                 fu.CikkID = (int)((DataRowView)cIKKBindingSource.Current)["CIKK_ID"];
                 fu.ShowDialog();
-                refreshDataset();
+                refreshDataset(tmp_cikk_id);
             }
         }
 
