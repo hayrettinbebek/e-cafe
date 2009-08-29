@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPartnerDelete));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tsNameFilter = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tsNameFilter = new System.Windows.Forms.ToolStripTextBox();
             this.tsbAction = new System.Windows.Forms.ToolStripButton();
-            this.pARTNERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsPartnerek = new e_Cafe.SQL.DataSets.dsPartnerek();
-            this.pARTNERTableAdapter = new e_Cafe.SQL.DataSets.dsPartnerekTableAdapters.PARTNERTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pARTNERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pTIPUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pNEV2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pNEV3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aKTIVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pARTNERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsPartnerek = new e_Cafe.SQL.DataSets.dsPartnerek();
+            this.pARTNERTableAdapter = new e_Cafe.SQL.DataSets.dsPartnerekTableAdapters.PARTNERTableAdapter();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pARTNERBindingSource)).BeginInit();
@@ -58,9 +58,31 @@
             this.tsbAction});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(708, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(681, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(40, 22);
+            this.toolStripLabel1.Text = "Kereső";
+            // 
+            // tsNameFilter
+            // 
+            this.tsNameFilter.BackColor = System.Drawing.Color.White;
+            this.tsNameFilter.Name = "tsNameFilter";
+            this.tsNameFilter.Size = new System.Drawing.Size(150, 25);
+            this.tsNameFilter.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
+            // 
+            // tsbAction
+            // 
+            this.tsbAction.Image = ((System.Drawing.Image)(resources.GetObject("tsbAction.Image")));
+            this.tsbAction.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAction.Name = "tsbAction";
+            this.tsbAction.Size = new System.Drawing.Size(51, 22);
+            this.tsbAction.Text = "Töröl";
+            this.tsbAction.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // dataGridView1
             // 
@@ -79,45 +101,8 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(708, 190);
+            this.dataGridView1.Size = new System.Drawing.Size(681, 459);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // tsNameFilter
-            // 
-            this.tsNameFilter.BackColor = System.Drawing.Color.White;
-            this.tsNameFilter.Name = "tsNameFilter";
-            this.tsNameFilter.Size = new System.Drawing.Size(150, 25);
-            this.tsNameFilter.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(42, 22);
-            this.toolStripLabel1.Text = "Kereső";
-            // 
-            // tsbAction
-            // 
-            this.tsbAction.Image = ((System.Drawing.Image)(resources.GetObject("tsbAction.Image")));
-            this.tsbAction.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAction.Name = "tsbAction";
-            this.tsbAction.Size = new System.Drawing.Size(55, 22);
-            this.tsbAction.Text = "Töröl";
-            this.tsbAction.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // pARTNERBindingSource
-            // 
-            this.pARTNERBindingSource.AllowNew = false;
-            this.pARTNERBindingSource.DataMember = "PARTNER";
-            this.pARTNERBindingSource.DataSource = this.dsPartnerek;
-            // 
-            // dsPartnerek
-            // 
-            this.dsPartnerek.DataSetName = "dsPartnerek";
-            this.dsPartnerek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pARTNERTableAdapter
-            // 
-            this.pARTNERTableAdapter.ClearBeforeFill = true;
             // 
             // pARTNERIDDataGridViewTextBoxColumn
             // 
@@ -160,11 +145,26 @@
             this.aKTIVDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.aKTIVDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // pARTNERBindingSource
+            // 
+            this.pARTNERBindingSource.AllowNew = false;
+            this.pARTNERBindingSource.DataMember = "PARTNER";
+            this.pARTNERBindingSource.DataSource = this.dsPartnerek;
+            // 
+            // dsPartnerek
+            // 
+            this.dsPartnerek.DataSetName = "dsPartnerek";
+            this.dsPartnerek.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pARTNERTableAdapter
+            // 
+            this.pARTNERTableAdapter.ClearBeforeFill = true;
+            // 
             // frmPartnerDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 215);
+            this.ClientSize = new System.Drawing.Size(681, 484);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmPartnerDelete";
