@@ -7,6 +7,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using e_Cafe.SQL.DataSets;
+using e_Cafe.Reports;
 
 using BusinessLogic;
 
@@ -146,7 +148,7 @@ namespace e_Cafe.Keszlet
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            foreach (var m in aktMegr.getSorok())
+            foreach (var m in aktMegr.lMegrendelesSorok)
             {
                 m.Save();
             }
@@ -159,6 +161,17 @@ namespace e_Cafe.Keszlet
                 aktMegr.LEZART = 1;
                 aktMegr.Save();
             }
+            rMegrendeles rMegr = new rMegrendeles();
+
+            rMegr.SetParameterValue("ID", aktMegr.MEGRENDELES_FEJ_ID);
+            rMegr.SetDatabaseLogon("sa", "x");
+            rMegr.PrintOptions.PrinterName = DEFS.getdefaultprinter();
+
+            frmReportViewer fr = new frmReportViewer(rMegr);
+            fr.ShowDialog();
+
+
+
             DEFS.SendInfoMessage("Formátum még nincs kialakítva!");
         }
 

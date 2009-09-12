@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using e_Cafe.Reports;
+using e_Cafe.SQL.DataSets;
 using BusinessLogic;
 using GUI;
+using System.Data.OleDb;
 using System.IO;
+using CrystalDecisions.Shared;
+
+using System.Collections;
 
 
 
@@ -34,7 +40,7 @@ namespace ReportDebugger
             try
             {
                 DEFS.createLogger();
-                DEFS.ConSTR = @"Data Source=ERNIE-NB\SQLEXPRESS;Initial Catalog=ECAFE_0407;Persist Security Info=True;User ID=sa;Password=x";
+                DEFS.ConSTR = @"Data Source=ERNIE-HOME\SQLEXPRESS;Initial Catalog=E_CAFE;Persist Security Info=True;User ID=sa;Password=x";
                 DEFS.DefProgramLocation = AppDomain.CurrentDomain.BaseDirectory;
                 //DEFS.R_SYSPAR = new SysParList();
                 DEFS.LoadNyitottNap();
@@ -73,5 +79,20 @@ namespace ReportDebugger
         {
              
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            rMegrendeles rMegr = new rMegrendeles();
+
+            rMegr.SetParameterValue("ID",textBox1.Text);
+            rMegr.SetDatabaseLogon("sa", "x");
+            rMegr.PrintOptions.PrinterName = DEFS.getdefaultprinter();
+            crystalReportViewer1.ReportSource = rMegr;
+          
+        }
+
+
     }
+
+
 }

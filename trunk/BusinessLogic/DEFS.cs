@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using NSpring.Logging;
 using NSpring.Logging.EventFormatters;
+using System.Drawing.Printing;
 
 
 namespace BusinessLogic
@@ -687,6 +688,15 @@ namespace BusinessLogic
         }
 
         #endregion
+
+
+        public static string getdefaultprinter()
+        {
+            string printername;
+            PrintDocument getprintername = new PrintDocument();
+            printername = getprintername.PrinterSettings.PrinterName;
+            return printername;
+        }
 
     }
 
