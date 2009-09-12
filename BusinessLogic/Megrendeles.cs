@@ -244,7 +244,7 @@ namespace BusinessLogic
 
         public bool ReadyForBook()
         {
-            lMegrendelesSorok = getSorok();
+            //lMegrendelesSorok = getSorok();
             bool ok = true;
             var exists_cikk =
                 from c in lMegrendelesSorok

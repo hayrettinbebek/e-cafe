@@ -151,7 +151,6 @@
             this.btnKilep.Name = "btnKilep";
             this.btnKilep.Size = new System.Drawing.Size(51, 57);
             this.btnKilep.TabIndex = 3;
-            this.btnKilep.Text = "Kilépés";
             this.btnKilep.UseVisualStyleBackColor = true;
             this.btnKilep.Click += new System.EventHandler(this.btnKilep_Click);
             // 
@@ -550,7 +549,7 @@
             this.toolStripButton1.Image = global::e_Cafe.Properties.Resources.floppy_icon;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(66, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
             this.toolStripButton1.Text = "Mentés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -560,7 +559,7 @@
             this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.Printer_24x24;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(74, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(68, 22);
             this.toolStripButton2.Text = "Nyomtat";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -569,7 +568,7 @@
             this.tsKilep.Image = global::e_Cafe.Properties.Resources.ERROR_ICON;
             this.tsKilep.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsKilep.Name = "tsKilep";
-            this.tsKilep.Size = new System.Drawing.Size(64, 22);
+            this.tsKilep.Size = new System.Drawing.Size(60, 22);
             this.tsKilep.Text = "Kilépés";
             this.tsKilep.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
