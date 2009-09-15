@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMegrendelesKeszites));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpFej = new System.Windows.Forms.TabPage();
             this.pnlLezart = new System.Windows.Forms.Panel();
@@ -80,6 +81,7 @@
             this.tsKilep = new System.Windows.Forms.ToolStripButton();
             this.mEGRENDELES_FEJTableAdapter = new e_Cafe.SQL.DataSets.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter();
             this.pARTNERTableAdapter = new e_Cafe.SQL.DataSets.dsPartnerekTableAdapters.PARTNERTableAdapter();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tpFej.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -535,7 +537,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.tsKilep});
+            this.tsKilep,
+            this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(3, 3);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(722, 25);
@@ -579,6 +582,15 @@
             // pARTNERTableAdapter
             // 
             this.pARTNERTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(88, 22);
+            this.toolStripButton3.Text = "E-Mail küldés";
             // 
             // frmMegrendelesKeszites
             // 
@@ -669,5 +681,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblOsszMegrendeles;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
