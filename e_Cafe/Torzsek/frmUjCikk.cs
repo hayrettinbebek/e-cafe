@@ -124,7 +124,7 @@ namespace e_Cafe
                         newCikk.OPTIMALIS_KESZLET = Convert.ToDouble(txtOptKeszl.Text);
                     }
                     newCikk.ELADASI_AR = Convert.ToDouble(txtEladAr.Text);
-                    newCikk.NETTO_AR = Convert.ToDouble(txtEladArNet.Text);
+                    //newCikk.NETTO_AR = Convert.ToDouble(txtEladArNet.Text);
                     newCikk.MEGKULONB_ZARAS = chkMegKulZaras.Checked;
                     newCikk.MEGJEGYZES = txtMegjegyzes.Text;
                     newCikk.AUTO_MEGRENDELO = chkAutoRendGen.Checked;

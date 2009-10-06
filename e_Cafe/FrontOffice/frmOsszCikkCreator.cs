@@ -407,7 +407,7 @@ namespace e_Cafe.FrontOffice
             if (AktSzerkesztettCikk != null)
             {
                 AktSzerkesztettCikk.ELADASI_AR = Convert.ToDouble(textBox2.Text);
-                AktSzerkesztettCikk.NETTO_AR = DEFS.getNetto(Convert.ToDouble(textBox2.Text), 20);
+                //AktSzerkesztettCikk.NETTO_AR = DEFS.getNetto(Convert.ToDouble(textBox2.Text), 20);
 
                 AktSzerkesztettCikk.Save();
 

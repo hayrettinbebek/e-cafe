@@ -135,6 +135,11 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.rAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kESZLETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kESZLETERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aTLAGARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cikkKeszletBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -152,12 +157,20 @@
             this.btnCikArSave = new System.Windows.Forms.Button();
             this.btnUjAr = new System.Windows.Forms.Button();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.cIKKARAKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ERVENBYES_TOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eRVENYESIGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eLADASIARNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cikkArBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.sZALLITONEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bESZARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kISZMENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KISZERELES_MEGYS_NEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cikkBeszallitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -198,19 +211,6 @@
             this.lIT_KISZTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter();
             this.kESZLET_FEJTableAdapter = new e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter();
             this.kESZLET_SORTableAdapter = new e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter();
-            this.rAKTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kESZLETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kESZLETERTEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aTLAGARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cikkKeszletBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cIKKARAKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eRVENYESIGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eLADASIARNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cikkArBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sZALLITONEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bESZARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kISZMENNYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cikkBeszallitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -241,20 +241,20 @@
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlUjArSor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkArBindingSource)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkBeszallitoBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkArBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkBeszallitoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -409,6 +409,7 @@
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(123, 20);
             this.textBox13.TabIndex = 11;
+            this.textBox13.Visible = false;
             // 
             // label21
             // 
@@ -418,6 +419,7 @@
             this.label21.Size = new System.Drawing.Size(80, 13);
             this.label21.TabIndex = 13;
             this.label21.Text = "Eladási ár nettó";
+            this.label21.Visible = false;
             this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // checkBox1
@@ -1306,6 +1308,43 @@
             this.dataGridView3.Size = new System.Drawing.Size(382, 89);
             this.dataGridView3.TabIndex = 16;
             // 
+            // rAKTARDataGridViewTextBoxColumn
+            // 
+            this.rAKTARDataGridViewTextBoxColumn.DataPropertyName = "RAKTAR";
+            this.rAKTARDataGridViewTextBoxColumn.HeaderText = "Raktár";
+            this.rAKTARDataGridViewTextBoxColumn.Name = "rAKTARDataGridViewTextBoxColumn";
+            this.rAKTARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rAKTARDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // kESZLETDataGridViewTextBoxColumn
+            // 
+            this.kESZLETDataGridViewTextBoxColumn.DataPropertyName = "KESZLET";
+            this.kESZLETDataGridViewTextBoxColumn.HeaderText = "Készlet";
+            this.kESZLETDataGridViewTextBoxColumn.Name = "kESZLETDataGridViewTextBoxColumn";
+            this.kESZLETDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kESZLETDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // kESZLETERTEKDataGridViewTextBoxColumn
+            // 
+            this.kESZLETERTEKDataGridViewTextBoxColumn.DataPropertyName = "KESZLET_ERTEK";
+            this.kESZLETERTEKDataGridViewTextBoxColumn.HeaderText = "Érték";
+            this.kESZLETERTEKDataGridViewTextBoxColumn.Name = "kESZLETERTEKDataGridViewTextBoxColumn";
+            this.kESZLETERTEKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kESZLETERTEKDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // aTLAGARDataGridViewTextBoxColumn
+            // 
+            this.aTLAGARDataGridViewTextBoxColumn.DataPropertyName = "ATLAGAR";
+            this.aTLAGARDataGridViewTextBoxColumn.HeaderText = "Átlagár";
+            this.aTLAGARDataGridViewTextBoxColumn.Name = "aTLAGARDataGridViewTextBoxColumn";
+            this.aTLAGARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aTLAGARDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // cikkKeszletBindingSource
+            // 
+            this.cikkKeszletBindingSource.DataSource = typeof(BusinessLogic.CikkKeszlet);
+            this.cikkKeszletBindingSource.CurrentChanged += new System.EventHandler(this.cikkKeszletBindingSource_CurrentChanged);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button5);
@@ -1489,12 +1528,36 @@
             this.dataGridView6.Size = new System.Drawing.Size(470, 230);
             this.dataGridView6.TabIndex = 0;
             // 
+            // cIKKARAKIDDataGridViewTextBoxColumn
+            // 
+            this.cIKKARAKIDDataGridViewTextBoxColumn.DataPropertyName = "CIKK_ARAK_ID";
+            this.cIKKARAKIDDataGridViewTextBoxColumn.HeaderText = "CIKK_ARAK_ID";
+            this.cIKKARAKIDDataGridViewTextBoxColumn.Name = "cIKKARAKIDDataGridViewTextBoxColumn";
+            this.cIKKARAKIDDataGridViewTextBoxColumn.Visible = false;
+            // 
             // ERVENBYES_TOL
             // 
             this.ERVENBYES_TOL.DataPropertyName = "ERVENYES_TOL";
             this.ERVENBYES_TOL.HeaderText = "Érvényesség kezdete";
             this.ERVENBYES_TOL.Name = "ERVENBYES_TOL";
             this.ERVENBYES_TOL.Width = 140;
+            // 
+            // eRVENYESIGDataGridViewTextBoxColumn
+            // 
+            this.eRVENYESIGDataGridViewTextBoxColumn.DataPropertyName = "ERVENYES_IG";
+            this.eRVENYESIGDataGridViewTextBoxColumn.HeaderText = "Érvényesség vége";
+            this.eRVENYESIGDataGridViewTextBoxColumn.Name = "eRVENYESIGDataGridViewTextBoxColumn";
+            this.eRVENYESIGDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // eLADASIARNDataGridViewTextBoxColumn
+            // 
+            this.eLADASIARNDataGridViewTextBoxColumn.DataPropertyName = "ELADASI_AR_N";
+            this.eLADASIARNDataGridViewTextBoxColumn.HeaderText = "Eladási ár";
+            this.eLADASIARNDataGridViewTextBoxColumn.Name = "eLADASIARNDataGridViewTextBoxColumn";
+            // 
+            // cikkArBindingSource
+            // 
+            this.cikkArBindingSource.DataSource = typeof(BusinessLogic.CikkAr);
             // 
             // tabPage5
             // 
@@ -1545,12 +1608,39 @@
             this.dataGridView7.Size = new System.Drawing.Size(654, 269);
             this.dataGridView7.TabIndex = 0;
             // 
+            // sZALLITONEVDataGridViewTextBoxColumn
+            // 
+            this.sZALLITONEVDataGridViewTextBoxColumn.DataPropertyName = "SZALLITO_NEV";
+            this.sZALLITONEVDataGridViewTextBoxColumn.HeaderText = "Szállító megnevezése";
+            this.sZALLITONEVDataGridViewTextBoxColumn.Name = "sZALLITONEVDataGridViewTextBoxColumn";
+            this.sZALLITONEVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sZALLITONEVDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // bESZARDataGridViewTextBoxColumn
+            // 
+            this.bESZARDataGridViewTextBoxColumn.DataPropertyName = "BESZ_AR";
+            this.bESZARDataGridViewTextBoxColumn.HeaderText = "Utolsó beszerzési ár";
+            this.bESZARDataGridViewTextBoxColumn.Name = "bESZARDataGridViewTextBoxColumn";
+            this.bESZARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bESZARDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // kISZMENNYDataGridViewTextBoxColumn
+            // 
+            this.kISZMENNYDataGridViewTextBoxColumn.DataPropertyName = "KISZ_MENNY";
+            this.kISZMENNYDataGridViewTextBoxColumn.HeaderText = "Rendelési egység";
+            this.kISZMENNYDataGridViewTextBoxColumn.Name = "kISZMENNYDataGridViewTextBoxColumn";
+            this.kISZMENNYDataGridViewTextBoxColumn.Width = 120;
+            // 
             // KISZERELES_MEGYS_NEV
             // 
             this.KISZERELES_MEGYS_NEV.DataPropertyName = "KISZERELES_MEGYS_NEV";
             this.KISZERELES_MEGYS_NEV.HeaderText = "Mértékegység";
             this.KISZERELES_MEGYS_NEV.Name = "KISZERELES_MEGYS_NEV";
             this.KISZERELES_MEGYS_NEV.ReadOnly = true;
+            // 
+            // cikkBeszallitoBindingSource
+            // 
+            this.cikkBeszallitoBindingSource.DataSource = typeof(BusinessLogic.CikkBeszallito);
             // 
             // panel1
             // 
@@ -1871,94 +1961,6 @@
             // 
             this.kESZLET_SORTableAdapter.ClearBeforeFill = true;
             // 
-            // rAKTARDataGridViewTextBoxColumn
-            // 
-            this.rAKTARDataGridViewTextBoxColumn.DataPropertyName = "RAKTAR";
-            this.rAKTARDataGridViewTextBoxColumn.HeaderText = "Raktár";
-            this.rAKTARDataGridViewTextBoxColumn.Name = "rAKTARDataGridViewTextBoxColumn";
-            this.rAKTARDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAKTARDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // kESZLETDataGridViewTextBoxColumn
-            // 
-            this.kESZLETDataGridViewTextBoxColumn.DataPropertyName = "KESZLET";
-            this.kESZLETDataGridViewTextBoxColumn.HeaderText = "Készlet";
-            this.kESZLETDataGridViewTextBoxColumn.Name = "kESZLETDataGridViewTextBoxColumn";
-            this.kESZLETDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kESZLETDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // kESZLETERTEKDataGridViewTextBoxColumn
-            // 
-            this.kESZLETERTEKDataGridViewTextBoxColumn.DataPropertyName = "KESZLET_ERTEK";
-            this.kESZLETERTEKDataGridViewTextBoxColumn.HeaderText = "Érték";
-            this.kESZLETERTEKDataGridViewTextBoxColumn.Name = "kESZLETERTEKDataGridViewTextBoxColumn";
-            this.kESZLETERTEKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kESZLETERTEKDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // aTLAGARDataGridViewTextBoxColumn
-            // 
-            this.aTLAGARDataGridViewTextBoxColumn.DataPropertyName = "ATLAGAR";
-            this.aTLAGARDataGridViewTextBoxColumn.HeaderText = "Átlagár";
-            this.aTLAGARDataGridViewTextBoxColumn.Name = "aTLAGARDataGridViewTextBoxColumn";
-            this.aTLAGARDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aTLAGARDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // cikkKeszletBindingSource
-            // 
-            this.cikkKeszletBindingSource.DataSource = typeof(BusinessLogic.CikkKeszlet);
-            this.cikkKeszletBindingSource.CurrentChanged += new System.EventHandler(this.cikkKeszletBindingSource_CurrentChanged);
-            // 
-            // cIKKARAKIDDataGridViewTextBoxColumn
-            // 
-            this.cIKKARAKIDDataGridViewTextBoxColumn.DataPropertyName = "CIKK_ARAK_ID";
-            this.cIKKARAKIDDataGridViewTextBoxColumn.HeaderText = "CIKK_ARAK_ID";
-            this.cIKKARAKIDDataGridViewTextBoxColumn.Name = "cIKKARAKIDDataGridViewTextBoxColumn";
-            this.cIKKARAKIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // eRVENYESIGDataGridViewTextBoxColumn
-            // 
-            this.eRVENYESIGDataGridViewTextBoxColumn.DataPropertyName = "ERVENYES_IG";
-            this.eRVENYESIGDataGridViewTextBoxColumn.HeaderText = "Érvényesség vége";
-            this.eRVENYESIGDataGridViewTextBoxColumn.Name = "eRVENYESIGDataGridViewTextBoxColumn";
-            this.eRVENYESIGDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // eLADASIARNDataGridViewTextBoxColumn
-            // 
-            this.eLADASIARNDataGridViewTextBoxColumn.DataPropertyName = "ELADASI_AR_N";
-            this.eLADASIARNDataGridViewTextBoxColumn.HeaderText = "Eladási ár";
-            this.eLADASIARNDataGridViewTextBoxColumn.Name = "eLADASIARNDataGridViewTextBoxColumn";
-            // 
-            // cikkArBindingSource
-            // 
-            this.cikkArBindingSource.DataSource = typeof(BusinessLogic.CikkAr);
-            // 
-            // sZALLITONEVDataGridViewTextBoxColumn
-            // 
-            this.sZALLITONEVDataGridViewTextBoxColumn.DataPropertyName = "SZALLITO_NEV";
-            this.sZALLITONEVDataGridViewTextBoxColumn.HeaderText = "Szállító megnevezése";
-            this.sZALLITONEVDataGridViewTextBoxColumn.Name = "sZALLITONEVDataGridViewTextBoxColumn";
-            this.sZALLITONEVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sZALLITONEVDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // bESZARDataGridViewTextBoxColumn
-            // 
-            this.bESZARDataGridViewTextBoxColumn.DataPropertyName = "BESZ_AR";
-            this.bESZARDataGridViewTextBoxColumn.HeaderText = "Utolsó beszerzési ár";
-            this.bESZARDataGridViewTextBoxColumn.Name = "bESZARDataGridViewTextBoxColumn";
-            this.bESZARDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bESZARDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // kISZMENNYDataGridViewTextBoxColumn
-            // 
-            this.kISZMENNYDataGridViewTextBoxColumn.DataPropertyName = "KISZ_MENNY";
-            this.kISZMENNYDataGridViewTextBoxColumn.HeaderText = "Rendelési egység";
-            this.kISZMENNYDataGridViewTextBoxColumn.Name = "kISZMENNYDataGridViewTextBoxColumn";
-            this.kISZMENNYDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // cikkBeszallitoBindingSource
-            // 
-            this.cikkBeszallitoBindingSource.DataSource = typeof(BusinessLogic.CikkBeszallito);
-            // 
             // frmCikk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2007,6 +2009,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -2014,16 +2017,15 @@
             this.pnlUjArSor.ResumeLayout(false);
             this.pnlUjArSor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkArBindingSource)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cikkBeszallitoBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkKeszletBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkArBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cikkBeszallitoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
