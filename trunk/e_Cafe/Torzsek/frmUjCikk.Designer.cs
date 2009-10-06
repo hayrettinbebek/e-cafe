@@ -305,7 +305,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 339);
+            this.label9.Location = new System.Drawing.Point(9, 296);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 28;
@@ -315,7 +315,7 @@
             // 
             this.txtMegjegyzes.AcceptsReturn = true;
             this.txtMegjegyzes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMegjegyzes.Location = new System.Drawing.Point(86, 334);
+            this.txtMegjegyzes.Location = new System.Drawing.Point(86, 291);
             this.txtMegjegyzes.Multiline = true;
             this.txtMegjegyzes.Name = "txtMegjegyzes";
             this.txtMegjegyzes.Size = new System.Drawing.Size(363, 54);
@@ -407,7 +407,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 276);
+            this.label12.Location = new System.Drawing.Point(10, 257);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 13);
             this.label12.TabIndex = 31;
@@ -416,7 +416,7 @@
             // txtEladAr
             // 
             this.txtEladAr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEladAr.Location = new System.Drawing.Point(101, 272);
+            this.txtEladAr.Location = new System.Drawing.Point(99, 253);
             this.txtEladAr.Name = "txtEladAr";
             this.txtEladAr.Size = new System.Drawing.Size(60, 20);
             this.txtEladAr.TabIndex = 30;
@@ -465,7 +465,7 @@
             this.cmbErtTip.DataSource = this.dynComboBindingSource;
             this.cmbErtTip.DisplayMember = "DISPLAY_MEMBER";
             this.cmbErtTip.FormattingEnabled = true;
-            this.cmbErtTip.Location = new System.Drawing.Point(326, 272);
+            this.cmbErtTip.Location = new System.Drawing.Point(324, 253);
             this.cmbErtTip.Name = "cmbErtTip";
             this.cmbErtTip.Size = new System.Drawing.Size(123, 21);
             this.cmbErtTip.TabIndex = 22;
@@ -478,7 +478,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(228, 276);
+            this.label14.Location = new System.Drawing.Point(226, 257);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 13);
             this.label14.TabIndex = 13;
@@ -488,7 +488,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(243, 394);
+            this.button3.Location = new System.Drawing.Point(243, 351);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 33;
@@ -500,7 +500,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(162, 394);
+            this.btnCancel.Location = new System.Drawing.Point(162, 351);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 32;
@@ -538,42 +538,46 @@
             // txtEladArNet
             // 
             this.txtEladArNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEladArNet.Location = new System.Drawing.Point(101, 298);
+            this.txtEladArNet.Location = new System.Drawing.Point(576, 274);
             this.txtEladArNet.Name = "txtEladArNet";
             this.txtEladArNet.Size = new System.Drawing.Size(60, 20);
             this.txtEladArNet.TabIndex = 30;
             this.txtEladArNet.Text = "0";
+            this.txtEladArNet.Visible = false;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 300);
+            this.label15.Location = new System.Drawing.Point(487, 276);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(80, 13);
             this.label15.TabIndex = 31;
             this.label15.Text = "Eladási ár nettó";
+            this.label15.Visible = false;
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // netToBrut
             // 
             this.netToBrut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.netToBrut.Location = new System.Drawing.Point(167, 298);
+            this.netToBrut.Location = new System.Drawing.Point(642, 274);
             this.netToBrut.Name = "netToBrut";
             this.netToBrut.Size = new System.Drawing.Size(33, 23);
             this.netToBrut.TabIndex = 35;
             this.netToBrut.Text = "->b";
             this.netToBrut.UseVisualStyleBackColor = true;
+            this.netToBrut.Visible = false;
             this.netToBrut.Click += new System.EventHandler(this.netToBrut_Click);
             // 
             // bruttoToNetto
             // 
             this.bruttoToNetto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bruttoToNetto.Location = new System.Drawing.Point(167, 271);
+            this.bruttoToNetto.Location = new System.Drawing.Point(642, 247);
             this.bruttoToNetto.Name = "bruttoToNetto";
             this.bruttoToNetto.Size = new System.Drawing.Size(33, 23);
             this.bruttoToNetto.TabIndex = 35;
             this.bruttoToNetto.Text = "->n";
             this.bruttoToNetto.UseVisualStyleBackColor = true;
+            this.bruttoToNetto.Visible = false;
             this.bruttoToNetto.Click += new System.EventHandler(this.button2_Click);
             // 
             // cIKKCSOPORTBindingSource1
@@ -635,7 +639,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 462);
+            this.ClientSize = new System.Drawing.Size(687, 392);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bruttoToNetto);

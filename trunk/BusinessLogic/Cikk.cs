@@ -214,8 +214,8 @@ namespace BusinessLogic
         }
         public double NETTO_AR
         {
-            get { return (fELADASI_AR_NETTO); }
-            set { fELADASI_AR_NETTO = value; }
+            get { return (DEFS.getNetto(fELADASI_AR, AFA_SZAZ)); }
+            //set { fELADASI_AR_NETTO = value; }
         }
         public double AFA_SZAZ
         {
@@ -433,7 +433,7 @@ namespace BusinessLogic
                 OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
                 LIT_KISZ_ID = (int)rdr["LIT_KISZ_ID"];
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
-                NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
+                //NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
                 fVIRTUAL = (int)rdr["VIRTUAL"];
                 fROVID_NEV = (string)rdr["ROVID_NEV"];
@@ -488,7 +488,7 @@ namespace BusinessLogic
                 MINIMUM_KESZLET = (double)rdr["MINIMUM_KESZLET"];
                 OPTIMALIS_KESZLET = (double)rdr["OPTIMALIS_KESZLET"];
                 ELADASI_AR = (double)rdr["ELADASI_AR"];
-                NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
+                //NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                 AFA_SZAZ = (double)rdr["AFA_SZAZ"];
                 fMEGKULONB_ZARAS = (int)rdr["SPEC_ZARAS"];
                 fAUTO_MEGRENDELO = (int)rdr["AUTO_MEGRENDELO"];
@@ -1192,12 +1192,12 @@ namespace BusinessLogic
                                 if ((string)rdr["ERT_TIPUS"] == "L")
                                 {
                                     t.ELADASI_AR = (double)rdr["KISZ_ELADASI_AR"];
-                                    t.NETTO_AR = DEFS.getNetto((double)rdr["KISZ_ELADASI_AR"], (double)rdr["AFA_SZAZ"]);
+                                    //t.NETTO_AR = DEFS.getNetto((double)rdr["KISZ_ELADASI_AR"], (double)rdr["AFA_SZAZ"]);
                                 }
                                 else
                                 {
                                     t.ELADASI_AR = (double)rdr["ELADASI_AR"];
-                                    t.NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
+                                    //t.NETTO_AR = (double)rdr["ELADASI_AR_NETTO"];
                                 }
 
                                 t.AFA_SZAZ = (double)rdr["AFA_SZAZ"];
