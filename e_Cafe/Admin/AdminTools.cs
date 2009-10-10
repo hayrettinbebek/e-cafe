@@ -4,23 +4,18 @@ using BusinessLogic;
 using e_Cafe.Admin;
 using e_Cafe.Keszlet;
 using e_Cafe.Torzsek;
+using System.IO;
+using DevExpress.XtraBars;
 
 namespace e_Cafe
 {
-    public partial class AdminTools : Form
+    public partial class AdminTools : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         
         public AdminTools()
         {
             InitializeComponent();
         }
-
-        //public AdminTools(TBLObj bl)
-        //{
-        //    InitializeComponent();
-        //    //admBlObj = bl;
-        //}
-
 
         private void ShowNewForm(object sender, EventArgs e)
         {
@@ -94,23 +89,12 @@ namespace e_Cafe
 
         private void cikkekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCikk ck = new frmCikk();
-            ck.recept = 0;
-            ck.aktiv = 1;
-            ck.MdiParent = this;
-            ck.Show();
+
         }
 
         private void asztalokToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void ttBevetelezes_Click(object sender, EventArgs e)
-        {
-            Bevetelezes f = new Bevetelezes();
-            f.MdiParent = this;
-            f.Show();
         }
 
         private void cikkcsoportokToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,23 +104,17 @@ namespace e_Cafe
 
         private void áfaKódokToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmAFA f = new frmAFA();
-            f.MdiParent = this;
-            f.Show();
+
         }
 
         private void cikkcsoportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCikkcsoport f = new frmCikkcsoport();
-            f.MdiParent = this;
-            f.Show();
+
         }
 
         private void alcsoportToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmOtherFilter f = new frmOtherFilter();
-            f.MdiParent = this;
-            f.Show();
+
         }
 
         private void AdminTools_Load(object sender, EventArgs e)
@@ -146,23 +124,17 @@ namespace e_Cafe
 
         private void helyekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHelyek f = new frmHelyek();
-            f.MdiParent = this;
-            f.Show();
+
         }
 
         private void mmRaktar_Click(object sender, EventArgs e)
         {
-            frmRaktar f = new frmRaktar();
-            f.MdiParent = this;
-            f.Show();
+
         }
 
         private void mmSzallitok_Click(object sender, EventArgs e)
         {
-            frmSzallito f = new frmSzallito();
-            f.MdiParent = this;
-            f.Show();
+
         }
 
         private void adatbázisFrissítésToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,11 +144,10 @@ namespace e_Cafe
 
         private void logokKüldéseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string[] s = System.IO.Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory+ @"log");
-            EmailSending x = new EmailSending();
-            x.sendLogs(s);
+            var s = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory + @"log");
+            (new EmailSending()).sendLogs(s);
 
-            System.IO.Directory.Move(AppDomain.CurrentDomain.BaseDirectory + @"log", AppDomain.CurrentDomain.BaseDirectory + @"old_log"+ DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.Year + "_" +
+            Directory.Move(AppDomain.CurrentDomain.BaseDirectory + @"log", AppDomain.CurrentDomain.BaseDirectory + @"old_log"+ DateTime.Now.Month + "_" + DateTime.Now.Day + "_" + DateTime.Now.Year + "_" +
                                                     DateTime.Now.Hour + "_" + DateTime.Now.Minute + "_" + DateTime.Now.Second);
 
 
@@ -184,101 +155,68 @@ namespace e_Cafe
 
         private void mmBevetel2_Click(object sender, EventArgs e)
         {
-            frmBevetel f = new frmBevetel();
-            f.MdiParent = this;
-            f.Show();
+
         }
 
         private void mennyiségiEgységekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHelyek f = new frmHelyek();
-            f.MdiParent = this;
-            f.Show();
+
         }
 
         private void felhasználókToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmUser fu = new frmUser();
-            fu.MdiParent = this;
-            fu.Show();
+
         }
 
         private void készletÁtvezetésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAtvezetes fa = new frmAtvezetes();
-            fa.MdiParent = this;
-            fa.Show();
+
         }
 
         private void rendszerparaméterekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmParams2 fa = new frmParams2();
-            fa.MdiParent = this;
-            fa.Show();
+
         }
 
         private void mmNapiZaras_Click(object sender, EventArgs e)
         {
-            frmNapiZaras nz = new frmNapiZaras();
-            //nz.MdiParent = this;
-            nz.ShowDialog();
+
             
         }
 
         private void blokkokVisszakereséseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            frmKimentBlokkok nz = new frmKimentBlokkok();
-            nz.MdiParent = this;
-            nz.Show();
         }
 
         private void receptekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCikk ck = new frmCikk();
-            ck.recept = 1;
-            ck.aktiv = 1;
-            ck.MdiParent = this;
-            ck.Show();
+
         }
 
         private void partnerTörléseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPartnerDelete pd = new frmPartnerDelete();
-            pd.del = 1;
-            pd.MdiParent = this;
-            pd.Show();
+
         }
 
         private void töröltPartnerVisszaállításaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPartnerDelete pd = new frmPartnerDelete();
-            pd.del = 0;
-            pd.MdiParent = this;
-            pd.Show();
+
         }
 
         private void inaktívCikkekKezeléseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCikk ck = new frmCikk();
-            ck.recept = 0;
-            ck.aktiv = 0;
-            ck.MdiParent = this;
-            ck.Show();
+
         }
 
         private void jogosultságokToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRights rg = new frmRights();
-            rg.MdiParent = this;
-            rg.Show();
+
         }
 
         private void mmOsszevontLista_Click(object sender, EventArgs e)
         {
-            frmOsszevontLista rg = new frmOsszevontLista();
-            rg.MdiParent = this;
-            rg.Show();
+
         }
 
         private void cikkListaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -299,18 +237,103 @@ namespace e_Cafe
 
         }
 
-        private void készletkartonToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mmAltKedvezmeny_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void asztalokToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmMegrendelesKeszites mr = new frmMegrendelesKeszites();
+            mr.MdiParent = this;
+            mr.Show();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmMegrendelesArchivum fa = new frmMegrendelesArchivum();
+            fa.LoadType = LoadTypes.archive;
+            fa.ShowDialog();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmBevetel f = new frmBevetel();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Bevetelezes f = new Bevetelezes();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void barSubItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmMegrendelesArchivum fa = new frmMegrendelesArchivum();
+            fa.LoadType = LoadTypes.select;
+            fa.ShowDialog();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmKeszletKarton fa = new frmKeszletKarton();
             fa.MdiParent = this;
             fa.Show();
         }
 
-        private void selejtezésToolStripMenuItem_Click(object sender, EventArgs e)
+        private void barSubItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmSelejtez fa = new frmSelejtez();
-            fa.MdiParent = this;
+
+        }
+
+        private void barSubItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmSelejtezesInfo().ShowDialog();
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmAtvezetes fa = new frmAtvezetes { MdiParent = this };
             fa.Show();
+        }
+
+        private void barSubItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmLeltarozas fl = new frmLeltarozas();
+            fl.MdiParent = this;
+            fl.Show();
+        }
+
+        private void barSubItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmLeltarozas fl = new frmLeltarozas();
+            fl.MdiParent = this;
+            fl.Show();
+        }
+
+        private void barSubItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmLeltarSelect ls = new frmLeltarSelect();
+            ls.MdiParent = this;
+            ls.Show();
         }
 
         private void régiZárásokÁttekintéseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -318,71 +341,164 @@ namespace e_Cafe
 
         }
 
-        private void újLeltárívToolStripMenuItem_Click(object sender, EventArgs e)
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmLeltarozas fl = new frmLeltarozas();
-            fl.MdiParent = this;
-            fl.Show();
 
         }
 
-        private void meglévőLeltárFolytatásaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmLeltarSelect ls = new frmLeltarSelect();
-            ls.MdiParent = this;
-            ls.Show();
+            frmCikk ck = new frmCikk { recept = 0, aktiv = 1, MdiParent = this };
+            ck.Show();
         }
 
-        private void újMegrendelésToolStripMenuItem_Click(object sender, EventArgs e)
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmMegrendelesKeszites mr = new frmMegrendelesKeszites();
-            mr.MdiParent = this;
-            mr.Show();
+            frmCikk ck = new frmCikk { recept = 1, aktiv = 1, MdiParent = this };
+            ck.Show();
         }
 
-
-
-
-
-        private void archivumToolStripMenuItem_Click(object sender, EventArgs e)
+        private void barSubItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmMegrendelesArchivum fa = new frmMegrendelesArchivum();
-            fa.LoadType = LoadTypes.archive;
-            fa.ShowDialog();
-        }
-
-        private void selejtezésekVisszanézéseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmSelejtezesInfo si = new frmSelejtezesInfo();
-            si.ShowDialog();
-        }
-
-        private void mmMegrendelBeerkez_Click(object sender, EventArgs e)
-        {
-            frmMegrendelesArchivum fa = new frmMegrendelesArchivum();
-            fa.LoadType = LoadTypes.select;
-            fa.ShowDialog();
-        }
-
-        private void mmAltKedvezmeny_Click(object sender, EventArgs e)
-        {
-            frmAltKedvezm f = new frmAltKedvezm();
+            frmCikkcsoport f = new frmCikkcsoport();
             f.MdiParent = this;
             f.Show();
         }
 
-        private void asztalokToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void barSubItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AsztalSetup ck = new AsztalSetup();
-            ck.MdiParent = this;
+            frmOtherFilter f = new frmOtherFilter();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmCikk ck = new frmCikk { recept = 0, aktiv = 0, MdiParent = this };
             ck.Show();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmAbout ck = new frmAbout();
-            ck.MdiParent = this;
+            AsztalSetup ck = new AsztalSetup { MdiParent = this };
             ck.Show();
+        }
+
+        private void akciókToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSzallito f = new frmSzallito();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmPartnerDelete pd = new frmPartnerDelete();
+            pd.del = 1;
+            pd.MdiParent = this;
+            pd.Show();
+        }
+
+        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new frmPartnerDelete { del = 0, MdiParent = this }).Show();
+        }
+
+        private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new frmAFA { MdiParent = this }).Show();
+        }
+
+        private void barButtonItem17_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmHelyek f = new frmHelyek { MdiParent = this };
+            f.Show();
+        }
+
+        private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new frmRaktar { MdiParent = this }).Show();
+        }
+
+        private void barButtonItem20_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new frmAltKedvezm { MdiParent = this }).Show();
+        }
+
+        private void barButtonItem19_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem21_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new frmUser { MdiParent = this }).Show();
+        }
+
+        private void barButtonItem22_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+            (new frmRights { MdiParent = this }).Show();
+        }
+
+        private void szövegelemekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem23_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new frmParams2 { MdiParent = this }).Show();
+        }
+
+        private void barButtonItem24_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            (new frmKimentBlokkok { MdiParent = this }).Show();
+        }
+
+        private void barButtonItem25_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new frmOsszevontLista { MdiParent = this }).Show();
+        }
+
+        private void barButtonItem28_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DEFS.SendInfoMessage("Nincs adat");
+        }
+
+        private void barButtonItem27_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DEFS.SendInfoMessage("Nincs adat");
+        }
+
+        private void barButtonItem26_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DEFS.SendInfoMessage("Nincs adat");
+        }
+
+        private void barButtonItem30_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new frmAbout { MdiParent = this }).Show();
+        }
+
+        private void barButtonItem31_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmNapiZaras nz = new frmNapiZaras();
+            //nz.MdiParent = this;
+            nz.ShowDialog();
+        }
+
+        private void barSubItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmSelejtez fa = new frmSelejtez();
+            fa.MdiParent = this;
+            fa.Show();
         }
 
 
