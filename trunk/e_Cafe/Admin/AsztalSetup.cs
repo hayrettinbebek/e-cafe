@@ -192,23 +192,13 @@ namespace e_Cafe
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = sc;
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into ASZTAL (ASZTAL_SZAM, " +
-                                                    " ASZTAL_TIPUS_ID, " +
-                                                    " ASZTAL_POS_X, " +
-                                                    " ASZTAL_POS_Y, " +
-                                                    " HELY_ID, " +
-                                                    " ASZTAL_ROTATE) " +
-                                        " SELECT (SELECT MAX(ASZTAL_SZAM)+1 FROM ASZTAL), " +
-                                                    " 11, " +
-                                                    " 20, " +
-                                                    " 20, " +
-                                                    " " + ((Hely)cmbHelyek.Items[cmbHelyek.SelectedIndex]).fHELY_ID.ToString() + ", " +
-                                                    " 0";
+                cmd.CommandText = String.Format("insert into ASZTAL (ASZTAL_SZAM,  ASZTAL_TIPUS_ID,  ASZTAL_POS_X,  ASZTAL_POS_Y,  HELY_ID,  ASZTAL_ROTATE)  SELECT (SELECT MAX(ASZTAL_SZAM)+1 FROM ASZTAL),  11,  20,  20,  {0},  0", ((Hely)cmbHelyek.Items[cmbHelyek.SelectedIndex]).fHELY_ID);
 
                 cmd.ExecuteNonQuery();
                 a.RefreshAsztalok(true);
+                return;
             }
-            else { DEFS.SendInfoMessage("Kérem válasszon helységet!"); }
+            DEFS.SendInfoMessage("Kérem válasszon helységet!");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -220,7 +210,7 @@ namespace e_Cafe
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = sc;
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "DELETE FROM ASZTAL WHERE ASZTAL_ID = " + AktAsztal.fASZTAL_ID.ToString();
+                cmd.CommandText = String.Format("DELETE FROM ASZTAL WHERE ASZTAL_ID = {0}", AktAsztal.fASZTAL_ID);
 
                 cmd.ExecuteNonQuery();
                 a.RefreshAsztalok(true);
