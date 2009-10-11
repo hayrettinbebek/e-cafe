@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace e_Cafe.Admin
 {
-    public partial class frmRights : Form
+    public partial class frmRights :  DevExpress.XtraEditors.XtraForm
     {
         public frmRights()
         {
