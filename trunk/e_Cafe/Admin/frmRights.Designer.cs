@@ -61,7 +61,7 @@
             this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.floppy_icon;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(66, 22);
             this.toolStripButton2.Text = "Mentés";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -70,7 +70,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(64, 22);
             this.toolStripButton1.Text = "Kilépés";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -120,8 +120,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 257);
+            this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frmRights";
             this.ShowInTaskbar = false;
             this.Text = "Jogok karbantartása";

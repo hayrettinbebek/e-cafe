@@ -247,12 +247,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="RibbonForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RibbonForm1.Designer.cs">
-      <DependentUpon>RibbonForm1.cs</DependentUpon>
-    </Compile>
     <Compile Include="SQL\DataSets\dsALTALANOS_KEDVEZMENY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

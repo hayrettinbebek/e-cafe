@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminTools));
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -156,7 +157,7 @@
             this.rpParams,
             this.rpRiports,
             this.rpSupport});
-            this.ribbonControl1.SelectedPage = this.rpKeszlet;
+            this.ribbonControl1.SelectedPage = this.rpRiports;
             this.ribbonControl1.Size = new System.Drawing.Size(1123, 143);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
@@ -169,6 +170,7 @@
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "Új";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 5;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -177,6 +179,7 @@
             // barButtonItem3
             // 
             this.barButtonItem3.Caption = "Archivum";
+            this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
             this.barButtonItem3.Id = 6;
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -185,6 +188,7 @@
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "Új";
+            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
             this.barButtonItem4.Id = 9;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)));
@@ -192,7 +196,8 @@
             // 
             // barButtonItem5
             // 
-            this.barButtonItem5.Caption = "Könyvelés";
+            this.barButtonItem5.Caption = "Elküldés";
+            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
             this.barButtonItem5.Id = 10;
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -201,6 +206,7 @@
             // barSubItem1
             // 
             this.barSubItem1.Caption = "Megrendelés beérkeztetése";
+            this.barSubItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.Glyph")));
             this.barSubItem1.Id = 11;
             this.barSubItem1.Name = "barSubItem1";
             this.barSubItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -209,6 +215,7 @@
             // barButtonItem6
             // 
             this.barButtonItem6.Caption = "Megtekintés";
+            this.barButtonItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.Glyph")));
             this.barButtonItem6.Id = 12;
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
@@ -218,6 +225,7 @@
             // barButtonItem7
             // 
             this.barButtonItem7.Caption = "Átvezetés";
+            this.barButtonItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.Glyph")));
             this.barButtonItem7.Id = 13;
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -226,6 +234,7 @@
             // barSubItem2
             // 
             this.barSubItem2.Caption = "Selejtezés";
+            this.barSubItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem2.Glyph")));
             this.barSubItem2.Id = 15;
             this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4),
@@ -252,6 +261,7 @@
             // barSubItem3
             // 
             this.barSubItem3.Caption = "Leltár";
+            this.barSubItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem3.Glyph")));
             this.barSubItem3.Id = 16;
             this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem6),
@@ -295,6 +305,7 @@
             // barButtonItem10
             // 
             this.barButtonItem10.Caption = "Recept";
+            this.barButtonItem10.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.Glyph")));
             this.barButtonItem10.Id = 23;
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -333,6 +344,7 @@
             // barButtonItem12
             // 
             this.barButtonItem12.Caption = "Tervezés";
+            this.barButtonItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.Glyph")));
             this.barButtonItem12.Id = 28;
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -341,6 +353,7 @@
             // barButtonItem13
             // 
             this.barButtonItem13.Caption = "Szállítók";
+            this.barButtonItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.Glyph")));
             this.barButtonItem13.Id = 31;
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -349,6 +362,7 @@
             // barButtonItem14
             // 
             this.barButtonItem14.Caption = "Visszaállítás";
+            this.barButtonItem14.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.Glyph")));
             this.barButtonItem14.Id = 32;
             this.barButtonItem14.Name = "barButtonItem14";
             this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
@@ -356,6 +370,7 @@
             // barButtonItem15
             // 
             this.barButtonItem15.Caption = "Törlés";
+            this.barButtonItem15.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.Glyph")));
             this.barButtonItem15.Id = 33;
             this.barButtonItem15.Name = "barButtonItem15";
             this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
@@ -363,6 +378,7 @@
             // barButtonItem16
             // 
             this.barButtonItem16.Caption = "Áfa";
+            this.barButtonItem16.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.Glyph")));
             this.barButtonItem16.Id = 35;
             this.barButtonItem16.Name = "barButtonItem16";
             this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
@@ -370,6 +386,7 @@
             // barButtonItem17
             // 
             this.barButtonItem17.Caption = "Hely";
+            this.barButtonItem17.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.Glyph")));
             this.barButtonItem17.Id = 36;
             this.barButtonItem17.Name = "barButtonItem17";
             this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
@@ -377,6 +394,7 @@
             // barButtonItem18
             // 
             this.barButtonItem18.Caption = "Raktár";
+            this.barButtonItem18.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.Glyph")));
             this.barButtonItem18.Id = 37;
             this.barButtonItem18.Name = "barButtonItem18";
             this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
@@ -391,6 +409,7 @@
             // barButtonItem20
             // 
             this.barButtonItem20.Caption = "Kedvezmények";
+            this.barButtonItem20.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.Glyph")));
             this.barButtonItem20.Id = 39;
             this.barButtonItem20.Name = "barButtonItem20";
             this.barButtonItem20.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem20_ItemClick);
@@ -398,6 +417,7 @@
             // barButtonItem21
             // 
             this.barButtonItem21.Caption = "Felhasználók";
+            this.barButtonItem21.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.Glyph")));
             this.barButtonItem21.Id = 40;
             this.barButtonItem21.Name = "barButtonItem21";
             this.barButtonItem21.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -406,6 +426,7 @@
             // barButtonItem22
             // 
             this.barButtonItem22.Caption = "Jogosulstágok";
+            this.barButtonItem22.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.Glyph")));
             this.barButtonItem22.Id = 41;
             this.barButtonItem22.Name = "barButtonItem22";
             this.barButtonItem22.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -414,6 +435,7 @@
             // barButtonItem23
             // 
             this.barButtonItem23.Caption = "Rendszer";
+            this.barButtonItem23.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.Glyph")));
             this.barButtonItem23.Id = 42;
             this.barButtonItem23.Name = "barButtonItem23";
             this.barButtonItem23.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -466,6 +488,7 @@
             // barButtonItem30
             // 
             this.barButtonItem30.Caption = "Info";
+            this.barButtonItem30.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem30.Glyph")));
             this.barButtonItem30.Id = 49;
             this.barButtonItem30.Name = "barButtonItem30";
             this.barButtonItem30.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -608,6 +631,7 @@
             // 
             // ribbonPageGroup12
             // 
+            this.ribbonPageGroup12.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup12.Glyph")));
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem26);
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem27);
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem28);
