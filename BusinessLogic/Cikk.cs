@@ -447,7 +447,7 @@ namespace BusinessLogic
                                  CommandText = "SELECT CIKK_ID, MEGNEVEZES, CIKK_TIPUS, CIKKCSOPORT_ID, isnull(CIKKSZAM,'') as CIKKSZAM, isnull(OTHER_FILTER_ID,-1) as OTHER_FILTER_ID," + " isnull(DEFAULT_RAKTAR,-1) as DEFAULT_RAKTAR, isnull(ERTEKESITES_TIPUSA,'D') as ERT_TIPUS," + " isnull(GYORSKOD,'') as GYORSKOD , isnull(EAN_KOD,'') as EAN_KOD,isnull(SZJ_SZAM,'') as SZJ_SZAM , " + " isnull(MINIMUM_KESZLET,0) as MINIMUM_KESZLET , isnull(OPTIMALIS_KESZLET,0) as OPTIMALIS_KESZLET , isnull(ELADASI_AR,0) as ELADASI_AR , isnull(MEGJEGYZES,'') as MEGJEGYZES ,isnull(MEGYS_ID,-1) as MEGYS_ID,  " + " isnull(ELADASI_AR_NETTO,0) as ELADASI_AR_NETTO, isnull(dbo.fn_get_AfaSzaz(cikk_id),20) as AFA_SZAZ, " + " isnull(SPEC_ZARAS,0) as SPEC_ZARAS, isnull(AUTO_MEGRENDELO,0) as AUTO_MEGRENDELO, AKTIV, VIRTUAL, " + " isnull(CIKK_ROVID_NEV,'') as ROVID_NEV, CIKK_TOP_LIST, CIKKCSOP_PREFER " + " FROM CIKK WHERE CIKK_ID =" + pCikkId.ToString() };
 
             SqlDataReader rdr = cmd.ExecuteReader();
-            while (cmd.ExecuteReader().Read())
+            while (rdr.Read())
             {
                 #region Fill Fields
                 fCIKK_ID = (int)rdr["CIKK_ID"];
