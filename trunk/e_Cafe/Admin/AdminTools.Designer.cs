@@ -157,7 +157,7 @@
             this.rpParams,
             this.rpRiports,
             this.rpSupport});
-            this.ribbonControl1.SelectedPage = this.rpRiports;
+            this.ribbonControl1.SelectedPage = this.rpKeszlet;
             this.ribbonControl1.Size = new System.Drawing.Size(1123, 143);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
@@ -196,7 +196,7 @@
             // 
             // barButtonItem5
             // 
-            this.barButtonItem5.Caption = "Elküldés";
+            this.barButtonItem5.Caption = "Folytatás";
             this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
             this.barButtonItem5.Id = 10;
             this.barButtonItem5.Name = "barButtonItem5";
@@ -522,8 +522,8 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup2.ItemLinks.Add(this.barSubItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Bevételezés";
