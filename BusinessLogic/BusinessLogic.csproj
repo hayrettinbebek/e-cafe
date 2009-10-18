@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4423B230-FAEA-458A-94FC-F8D912C2709A}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -71,6 +71,10 @@
     <Compile Include="Asztal.cs" />
     <Compile Include="Bevetelezes.cs" />
     <Compile Include="Cikk.cs" />
+    <Compile Include="CimTipus.cs" />
+    <Compile Include="DynCombo.cs" />
+    <Compile Include="ertTip.cs" />
+    <Compile Include="Fizmond.cs" />
     <Compile Include="frmKerdes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,7 +101,11 @@
     <Compile Include="Leltar.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Megrendeles.cs" />
+    <Compile Include="MegrendelesAllapot.cs" />
+    <Compile Include="MobilTipus.cs" />
     <Compile Include="NapZaras.cs" />
+    <Compile Include="OpenDay.cs" />
+    <Compile Include="OpenDayCombo.cs" />
     <Compile Include="P2Type.cs" />
     <Compile Include="Partner.cs" />
     <Compile Include="PartnerHitel.cs" />
