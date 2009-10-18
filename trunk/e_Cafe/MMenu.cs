@@ -160,6 +160,7 @@ namespace e_Cafe
             }
             catch (Exception ex)
             {
+                DEFS.ExLog(ex.Message + "\n" + ex.StackTrace);
                 return "";
             }
         }
