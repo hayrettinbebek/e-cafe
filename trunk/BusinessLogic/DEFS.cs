@@ -332,17 +332,19 @@ namespace BusinessLogic
         {
             SqlConnection c = new SqlConnection(ConSTR);
             SqlCommand cmd = new SqlCommand();
-
-            cmd.Connection = c;
-
-            cmd.CommandType = CommandType.Text;
-
-
-            cmd.CommandText = "update cikk  set cikk.eladasi_ar_netto = cikk.eladasi_ar*100/(100+a.afa_ertek) from cikk  " +
-                               " inner join cikkcsoport cs on cikk.cikkcsoport_id = cs.cikkcsoport_id inner join afa a on cs.afa_kod = a.afa_kod " +
-                               " where isnull(cikk.eladasi_ar_netto,0) > 0";
-            c.Open();
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.Connection = c;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "update cikk  set cikk.eladasi_ar_netto = cikk.eladasi_ar*100/(100+a.afa_ertek) from cikk  " + " inner join cikkcsoport cs on cikk.cikkcsoport_id = cs.cikkcsoport_id inner join afa a on cs.afa_kod = a.afa_kod " + " where isnull(cikk.eladasi_ar_netto,0) > 0";
+                c.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (cmd != null)
+                    cmd.Dispose();
+            }
 
             c.Close();
         }
@@ -438,9 +440,17 @@ namespace BusinessLogic
             log(Level.Exception, s + t);
 
             frmInfoMessage1 fi = new frmInfoMessage1();
-            fi.lblMessage.Text = s + t;
-            fi.tmrTime.Enabled = false;
-            fi.ShowDialog();
+            try
+            {
+                fi.lblMessage.Text = s + t;
+                fi.tmrTime.Enabled = false;
+                fi.ShowDialog();
+            }
+            finally
+            {
+                if (fi != null)
+                    fi.Dispose();
+            }
             
 
         }
@@ -462,16 +472,19 @@ namespace BusinessLogic
             // true-t ad vissza ha IGEN-t választottunk.
             log(Level.Info, kerdes_szoveg);
             frmKerdes fi = new frmKerdes();
-            fi.lblMessage.Text = kerdes_szoveg;
-             
-            fi.ShowDialog();
-            if (fi.DialogResult == DialogResult.OK)
+            try
             {
-                return (true);
+                fi.lblMessage.Text = kerdes_szoveg;
+                fi.ShowDialog();
+                if (fi.DialogResult == DialogResult.OK)
+                    return (true);
+                else
+                    return (false);
             }
-            else
+            finally
             {
-                return (false);
+                if (fi != null)
+                    fi.Dispose();
             }
 
 
@@ -692,10 +705,7 @@ namespace BusinessLogic
 
         public static string getdefaultprinter()
         {
-            string printername;
-            PrintDocument getprintername = new PrintDocument();
-            printername = getprintername.PrinterSettings.PrinterName;
-            return printername;
+            return new PrintDocument().PrinterSettings.PrinterName;
         }
 
     }
