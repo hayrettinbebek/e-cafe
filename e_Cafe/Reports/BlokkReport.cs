@@ -79,6 +79,7 @@ namespace e_Cafe.Reports
             try {
                  image = new SectionImage(Image.FromFile((string)Syspar2.GetValue(ParamCodes.BLOKK_LOGO_PATH)));
             } catch (Exception ix) {
+                 DEFS.ExLog(ix.Message + "\n" + ix.StackTrace);
                  image = new SectionImage(global::GUI.Properties.Resources.logo);
             }
             
