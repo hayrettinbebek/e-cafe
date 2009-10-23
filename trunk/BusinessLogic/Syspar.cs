@@ -227,6 +227,10 @@ namespace BusinessLogic
             {
                 return (ParamTypes.szoveg);
             }
+            else if (cc == ParamCodes.SKIN_NAME)
+            {
+                return (ParamTypes.szoveg);
+            }
             else
             {
                 return ParamTypes.egesz;
@@ -297,7 +301,8 @@ namespace BusinessLogic
         LELTAR_KOROK_SZAMA,
         OSSZ_REPORT_FORMAT,
         BLOKK_LOGO_PATH,
-        CIKK_GORGET_MODE
+        CIKK_GORGET_MODE,
+        SKIN_NAME
 
     }
     

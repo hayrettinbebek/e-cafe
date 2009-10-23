@@ -7,10 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
+using DevExpress.Skins;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraTabbedMdi;
 
 namespace e_Cafe.Admin
 {
-    public partial class frmParams2 : Form
+    public partial class frmParams2 : UserControls.UserForm
     {
         public frmParams2()
         {
@@ -25,6 +30,15 @@ namespace e_Cafe.Admin
             txtLablec2.Text = Syspar2.GetValue(ParamCodes.BLOKK_LABLEC2).ToString();
             txtLablec3.Text = Syspar2.GetValue(ParamCodes.BLOKK_LABLEC3).ToString();
             nuSchowOrderBefore.Value = (int)Syspar2.GetValue(ParamCodes.SHOW_ORDER_BEFORE);
+            foreach (DevExpress.Skins.SkinContainer cnt in DevExpress.Skins.SkinManager.Default.Skins)
+            {
+                
+                iSkinCombo.Properties.Items.Add(cnt.SkinName);
+                
+            }
+
+            iSkinCombo.SelectedText = Syspar2.GetValue(ParamCodes.SKIN_NAME).ToString();
+
             if ((int)Syspar2.GetValue(ParamCodes.AUTO_PRINT_BLOKK) == 1)
             {
                 chkBlokkAutoNyomt.Checked = true;
@@ -54,6 +68,8 @@ namespace e_Cafe.Admin
 
             if (rbOldal.Checked) { Syspar2.SetValues(ParamCodes.CIKK_GORGET_MODE, "O"); }
             if (rbSor.Checked) { Syspar2.SetValues(ParamCodes.CIKK_GORGET_MODE, "S"); }
+
+            Syspar2.SetValues(ParamCodes.SKIN_NAME, iSkinCombo.SelectedText);
             
         }
 
@@ -65,7 +81,9 @@ namespace e_Cafe.Admin
         private void button1_Click(object sender, EventArgs e)
         {
             SaveAndInsertData();
+            ((AdminTools)MdiParent).defaultLookAndFeel1.LookAndFeel.SetSkinStyle(Syspar2.GetValue(ParamCodes.SKIN_NAME).ToString());
             this.Close();
+
         }
 
         private void frmParams2_Load(object sender, EventArgs e)

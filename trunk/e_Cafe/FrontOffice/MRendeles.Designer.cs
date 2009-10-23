@@ -76,6 +76,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlAlsoGombok = new System.Windows.Forms.Panel();
             this.pnlFunctions = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,7 +94,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
             this.pnlRendeles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblRendeles)).BeginInit();
             this.panel3.SuspendLayout();
@@ -338,7 +338,7 @@
             this.tblRendeles.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tblRendeles.SelectionForeColor = System.Drawing.Color.Black;
             this.tblRendeles.SelectionStyle = XPTable.Models.SelectionStyle.Grid;
-            this.tblRendeles.Size = new System.Drawing.Size(293, 384);
+            this.tblRendeles.Size = new System.Drawing.Size(293, 197);
             this.tblRendeles.TabIndex = 1;
             this.tblRendeles.Text = "table1";
             this.tblRendeles.CellClick += new XPTable.Events.CellMouseEventHandler(this.tblRendeles_CellClick);
@@ -658,6 +658,16 @@
             this.pnlFunctions.Size = new System.Drawing.Size(835, 111);
             this.pnlFunctions.TabIndex = 13;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(715, 6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(77, 78);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "egyedi Cikk";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Transparent;
@@ -899,16 +909,6 @@
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Asztalok";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(715, 6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(77, 78);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "egyedi Cikk";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // MRendeles
             // 
