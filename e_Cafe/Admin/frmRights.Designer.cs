@@ -29,77 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRights));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.jOGIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jOGNEVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jOGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsJOG = new e_Cafe.SQL.DataSets.dsJOG();
             this._JOGTableAdapter = new e_Cafe.SQL.DataSets.dsJOGTableAdapters._JOGTableAdapter();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colJOG_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colJOG_NEV = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsJOG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton2,
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(554, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::e_Cafe.Properties.Resources.floppy_icon;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(66, 22);
-            this.toolStripButton2.Text = "Mentés";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(64, 22);
-            this.toolStripButton1.Text = "Kilépés";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.jOGIDDataGridViewTextBoxColumn,
-            this.jOGNEVDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.jOGBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(554, 232);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // jOGIDDataGridViewTextBoxColumn
-            // 
-            this.jOGIDDataGridViewTextBoxColumn.DataPropertyName = "JOG_ID";
-            this.jOGIDDataGridViewTextBoxColumn.HeaderText = "Kód";
-            this.jOGIDDataGridViewTextBoxColumn.Name = "jOGIDDataGridViewTextBoxColumn";
-            // 
-            // jOGNEVDataGridViewTextBoxColumn
-            // 
-            this.jOGNEVDataGridViewTextBoxColumn.DataPropertyName = "JOG_NEV";
-            this.jOGNEVDataGridViewTextBoxColumn.HeaderText = "Leírás";
-            this.jOGNEVDataGridViewTextBoxColumn.Name = "jOGNEVDataGridViewTextBoxColumn";
-            this.jOGNEVDataGridViewTextBoxColumn.Width = 300;
             // 
             // jOGBindingSource
             // 
@@ -115,39 +56,69 @@
             // 
             this._JOGTableAdapter.ClearBeforeFill = true;
             // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.jOGBindingSource;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(705, 268);
+            this.gridControl1.TabIndex = 4;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colJOG_ID,
+            this.colJOG_NEV});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // colJOG_ID
+            // 
+            this.colJOG_ID.Caption = "Azonosító";
+            this.colJOG_ID.FieldName = "JOG_ID";
+            this.colJOG_ID.Name = "colJOG_ID";
+            this.colJOG_ID.Visible = true;
+            this.colJOG_ID.VisibleIndex = 0;
+            // 
+            // colJOG_NEV
+            // 
+            this.colJOG_NEV.Caption = "Megnevezés";
+            this.colJOG_NEV.FieldName = "JOG_NEV";
+            this.colJOG_NEV.Name = "colJOG_NEV";
+            this.colJOG_NEV.Visible = true;
+            this.colJOG_NEV.VisibleIndex = 1;
+            // 
             // frmRights
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 257);
-            this.ControlBox = false;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.toolStrip1);
+            this.ClientSize = new System.Drawing.Size(705, 268);
+            this.Controls.Add(this.gridControl1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frmRights";
             this.ShowInTaskbar = false;
             this.Text = "Jogok karbantartása";
             this.Load += new System.EventHandler(this.frmRights_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jOGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsJOG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private e_Cafe.SQL.DataSets.dsJOG dsJOG;
         private System.Windows.Forms.BindingSource jOGBindingSource;
         private e_Cafe.SQL.DataSets.dsJOGTableAdapters._JOGTableAdapter _JOGTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jOGIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jOGNEVDataGridViewTextBoxColumn;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colJOG_ID;
+        private DevExpress.XtraGrid.Columns.GridColumn colJOG_NEV;
     }
 }

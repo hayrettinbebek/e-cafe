@@ -4,8 +4,12 @@ using BusinessLogic;
 using e_Cafe.Admin;
 using e_Cafe.Keszlet;
 using e_Cafe.Torzsek;
+using e_Cafe.UserControls;
 using System.IO;
+using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars;
+
+
 
 namespace e_Cafe
 {
@@ -15,7 +19,56 @@ namespace e_Cafe
         public AdminTools()
         {
             InitializeComponent();
+            defaultLookAndFeel1.LookAndFeel.SetSkinStyle(Syspar2.GetValue(ParamCodes.SKIN_NAME).ToString());
         }
+
+        UserForm CurrentForm
+        {
+            get
+            {
+                if (this.ActiveMdiChild == null) return null;
+                try
+                {
+                    return this.ActiveMdiChild as UserForm;
+                }
+                catch { return null; }
+            }
+        }
+
+
+        void InitSpeedBar()
+        {
+            ShowHideDataCategory();
+            if (CurrentForm != null)
+            {
+                iSave.Enabled = CurrentForm.isEditForm;
+                
+            }
+        }
+
+        void SaveCurrentForm()
+        {
+             
+            if (CurrentForm != null)
+            {
+                CurrentForm.Save();
+
+            }
+        }
+
+        public void ShowHideDataCategory()
+        {
+            RibbonPageCategory selectionCategory = Ribbon.PageCategories[0] as RibbonPageCategory;
+            if (selectionCategory == null) return;
+            if (CurrentForm == null)
+                selectionCategory.Visible = false;
+            else if (CurrentForm.isEditForm)
+                     selectionCategory.Visible = true;
+                else selectionCategory.Visible = false;
+
+            if (selectionCategory.Visible) Ribbon.SelectedPage = selectionCategory.Pages[0];
+        }
+
 
         private void ShowNewForm(object sender, EventArgs e)
         {
@@ -454,6 +507,7 @@ namespace e_Cafe
         private void barButtonItem23_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             (new frmParams2 { MdiParent = this }).Show();
+
         }
 
         private void barButtonItem24_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -499,6 +553,21 @@ namespace e_Cafe
             frmSelejtez fa = new frmSelejtez();
             fa.MdiParent = this;
             fa.Show();
+        }
+
+        private void AdminTools_MdiChildActivate(object sender, EventArgs e)
+        {
+            InitSpeedBar();
+        }
+
+        private void iSave_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SaveCurrentForm();
+        }
+
+        private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SaveCurrentForm();
         }
 
 

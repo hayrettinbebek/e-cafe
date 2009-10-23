@@ -33,6 +33,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -74,6 +75,13 @@
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
+            this.iSave = new DevExpress.XtraBars.BarButtonItem();
+            this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
+            this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpKeszlet = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -93,7 +101,12 @@
             this.rpSupport = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection3)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonStatusBar1
@@ -106,6 +119,7 @@
             // ribbonControl1
             // 
             this.ribbonControl1.ApplicationIcon = null;
+            this.ribbonControl1.Images = this.imageCollection2;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1,
             this.barButtonItem2,
@@ -147,19 +161,31 @@
             this.barButtonItem28,
             this.barButtonItem29,
             this.barButtonItem30,
-            this.barButtonItem31});
+            this.barButtonItem31,
+            this.iSave,
+            this.barMdiChildrenListItem1,
+            this.barButtonItem32});
+            this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 51;
+            this.ribbonControl1.MaxItemId = 54;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
+            this.ribbonPageCategory1});
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpKeszlet,
             this.rpTorzsek,
             this.rpParams,
             this.rpRiports,
             this.rpSupport});
-            this.ribbonControl1.SelectedPage = this.rpKeszlet;
+            this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(1123, 143);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
+            this.ribbonControl1.Toolbar.ItemLinks.Add(this.iSave);
+            this.ribbonControl1.Toolbar.ItemLinks.Add(this.barMdiChildrenListItem1);
+            // 
+            // imageCollection2
+            // 
+            this.imageCollection2.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection2.ImageStream")));
             // 
             // barButtonItem1
             // 
@@ -502,6 +528,57 @@
             this.barButtonItem31.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem31.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem31_ItemClick);
             // 
+            // iSave
+            // 
+            this.iSave.Caption = "barButtonItem32";
+            this.iSave.Enabled = false;
+            this.iSave.Id = 51;
+            this.iSave.ImageIndex = 10;
+            this.iSave.Name = "iSave";
+            this.iSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iSave_ItemClick);
+            // 
+            // barMdiChildrenListItem1
+            // 
+            this.barMdiChildrenListItem1.Caption = "barMdiChildrenListItem1";
+            this.barMdiChildrenListItem1.Id = 52;
+            this.barMdiChildrenListItem1.ImageIndex = 27;
+            this.barMdiChildrenListItem1.Name = "barMdiChildrenListItem1";
+            // 
+            // barButtonItem32
+            // 
+            this.barButtonItem32.Caption = "Mentés";
+            this.barButtonItem32.Id = 53;
+            this.barButtonItem32.LargeImageIndex = 7;
+            this.barButtonItem32.Name = "barButtonItem32";
+            this.barButtonItem32.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem32.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem32_ItemClick);
+            // 
+            // imageCollection1
+            // 
+            this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
+            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            // 
+            // ribbonPageCategory1
+            // 
+            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
+            this.ribbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1});
+            this.ribbonPageCategory1.Text = "Műveletek";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup15});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Adatok";
+            this.ribbonPage1.Visible = false;
+            // 
+            // ribbonPageGroup15
+            // 
+            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem32);
+            this.ribbonPageGroup15.Name = "ribbonPageGroup15";
+            this.ribbonPageGroup15.Text = "Műveletek";
+            // 
             // rpKeszlet
             // 
             this.rpKeszlet.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -661,6 +738,11 @@
             this.ribbonPageGroup14.ShowCaptionButton = false;
             this.ribbonPageGroup14.Text = "Zárás";
             // 
+            // imageCollection3
+            // 
+            this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
+            this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
+            // 
             // AdminTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -675,7 +757,11 @@
             this.Text = "Adminisztrátori funkciók";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminTools_Load);
+            this.MdiChildActivate += new System.EventHandler(this.AdminTools_MdiChildActivate);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -744,6 +830,16 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem31;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.BarButtonItem iSave;
+        private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
+        private DevExpress.Utils.ImageCollection imageCollection2;
+        private DevExpress.Utils.ImageCollection imageCollection1;
+        private DevExpress.Utils.ImageCollection imageCollection3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem32;
+        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+        public DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }
 

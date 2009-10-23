@@ -9,7 +9,7 @@ using e_Cafe.SQL;
 
 namespace e_Cafe.Torzsek
 {
-    public partial class frmCikk : Form
+    public partial class frmCikk : DevExpress.XtraEditors.XtraForm
     {
         //private Cikk_list cikkList = null;
 

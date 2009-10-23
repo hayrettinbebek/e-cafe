@@ -51,16 +51,23 @@
             this.rbSor = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbOldal = new System.Windows.Forms.RadioButton();
+            this.bar6 = new DevExpress.XtraBars.Bar();
+            this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
+            this.iSkinCombo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuSchowOrderBefore)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iSkinCombo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCegNev
             // 
             this.txtCegNev.Location = new System.Drawing.Point(91, 6);
             this.txtCegNev.Name = "txtCegNev";
-            this.txtCegNev.Size = new System.Drawing.Size(157, 20);
+            this.txtCegNev.Size = new System.Drawing.Size(157, 21);
             this.txtCegNev.TabIndex = 0;
             // 
             // label1
@@ -68,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cég neve:";
             // 
@@ -77,7 +84,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Cég címe:";
             // 
@@ -85,7 +92,7 @@
             // 
             this.txtCegCim.Location = new System.Drawing.Point(91, 32);
             this.txtCegCim.Name = "txtCegCim";
-            this.txtCegCim.Size = new System.Drawing.Size(157, 20);
+            this.txtCegCim.Size = new System.Drawing.Size(157, 21);
             this.txtCegCim.TabIndex = 0;
             // 
             // label3
@@ -93,7 +100,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 13);
+            this.label3.Size = new System.Drawing.Size(153, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Láblécen megjelenő szövegek:";
             // 
@@ -148,35 +155,35 @@
             // 
             this.txtBlokkLogoPath.Location = new System.Drawing.Point(25, 162);
             this.txtBlokkLogoPath.Name = "txtBlokkLogoPath";
-            this.txtBlokkLogoPath.Size = new System.Drawing.Size(277, 20);
+            this.txtBlokkLogoPath.Size = new System.Drawing.Size(277, 21);
             this.txtBlokkLogoPath.TabIndex = 0;
             // 
             // txtLablec3
             // 
             this.txtLablec3.Location = new System.Drawing.Point(25, 121);
             this.txtLablec3.Name = "txtLablec3";
-            this.txtLablec3.Size = new System.Drawing.Size(312, 20);
+            this.txtLablec3.Size = new System.Drawing.Size(312, 21);
             this.txtLablec3.TabIndex = 0;
             // 
             // txtLablec2
             // 
             this.txtLablec2.Location = new System.Drawing.Point(25, 95);
             this.txtLablec2.Name = "txtLablec2";
-            this.txtLablec2.Size = new System.Drawing.Size(312, 20);
+            this.txtLablec2.Size = new System.Drawing.Size(312, 21);
             this.txtLablec2.TabIndex = 0;
             // 
             // txtLablec1
             // 
             this.txtLablec1.Location = new System.Drawing.Point(25, 69);
             this.txtLablec1.Name = "txtLablec1";
-            this.txtLablec1.Size = new System.Drawing.Size(312, 20);
+            this.txtLablec1.Size = new System.Drawing.Size(312, 21);
             this.txtLablec1.TabIndex = 0;
             // 
             // nuSchowOrderBefore
             // 
             this.nuSchowOrderBefore.Location = new System.Drawing.Point(471, 6);
             this.nuSchowOrderBefore.Name = "nuSchowOrderBefore";
-            this.nuSchowOrderBefore.Size = new System.Drawing.Size(41, 20);
+            this.nuSchowOrderBefore.Size = new System.Drawing.Size(41, 21);
             this.nuSchowOrderBefore.TabIndex = 3;
             // 
             // label4
@@ -184,7 +191,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(345, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 13);
+            this.label4.Size = new System.Drawing.Size(132, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Asztalfoglalások mutatása";
             // 
@@ -193,7 +200,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(518, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "nappal előtte";
             // 
@@ -266,11 +273,33 @@
             this.rbOldal.Text = "Oldalanként";
             this.rbOldal.UseVisualStyleBackColor = true;
             // 
+            // bar6
+            // 
+            this.bar6.BarName = "PaintStyle";
+            this.bar6.DockCol = 2;
+            this.bar6.DockRow = 1;
+            this.bar6.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar6.Offset = 515;
+            this.bar6.OptionsBar.AllowQuickCustomization = false;
+            this.bar6.OptionsBar.RotateWhenVertical = false;
+            this.bar6.Text = "PaintStyle";
+            // 
+            // iSkinCombo
+            // 
+            this.iSkinCombo.Location = new System.Drawing.Point(389, 124);
+            this.iSkinCombo.Name = "iSkinCombo";
+            this.iSkinCombo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.iSkinCombo.Properties.DropDownRows = 15;
+            this.iSkinCombo.Size = new System.Drawing.Size(121, 20);
+            this.iSkinCombo.TabIndex = 17;
+            // 
             // frmParams2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 304);
+            this.ClientSize = new System.Drawing.Size(650, 361);
+            this.Controls.Add(this.iSkinCombo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -283,6 +312,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCegCim);
             this.Controls.Add(this.txtCegNev);
+            this.Controls.Add(this.barDockControl1);
+            this.Controls.Add(this.barDockControl2);
+            this.Controls.Add(this.barDockControl3);
+            this.Controls.Add(this.barDockControl4);
             this.Name = "frmParams2";
             this.Text = "Rendszerparaméterek";
             this.Load += new System.EventHandler(this.frmParams2_Load);
@@ -291,6 +324,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nuSchowOrderBefore)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iSkinCombo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,6 +355,12 @@
         private System.Windows.Forms.RadioButton rbSor;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rbOldal;
+        private DevExpress.XtraBars.Bar bar6;
+        private DevExpress.XtraBars.BarDockControl barDockControl1;
+        private DevExpress.XtraBars.BarDockControl barDockControl2;
+        private DevExpress.XtraBars.BarDockControl barDockControl3;
+        private DevExpress.XtraBars.BarDockControl barDockControl4;
+        private DevExpress.XtraEditors.ComboBoxEdit iSkinCombo;
 
 
     }
