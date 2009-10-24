@@ -2,6 +2,7 @@
 {
     using System.Runtime.InteropServices;
     using System;
+    using System.ComponentModel;
     using System.Windows.Forms;
     using System.Drawing;
     using System.Drawing.Drawing2D;
@@ -15,6 +16,7 @@
         reserved = 2 // foglalás vn az asztalra
     }
 
+    [ToolboxItem(false)] 
     public class Asztal_Button : System.Windows.Forms.ButtonBase
     {
         // Import the CreateRoundRectRgn function from the GDI32.DLL 
@@ -225,7 +227,7 @@
             return bmp;
         }
     }
-
+    [ToolboxItem(false)]
     public class e_TextBox : System.Windows.Forms.TextBox
     {
         private string _eFieldName;

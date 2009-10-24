@@ -889,6 +889,7 @@
     <Content Include="asztal\pult\pult_off.png" />
     <Content Include="asztal\pult\pult_on.png" />
     <Content Include="asztal\pult\pult_over.png" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="tesztuzem.bmp" />
     <None Include="Resources\on02.png" />
     <None Include="Resources\zold.png" />

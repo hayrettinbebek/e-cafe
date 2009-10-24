@@ -39,11 +39,11 @@ namespace e_Cafe.Admin
             txtLablec2.Text = Syspar2.GetValue(ParamCodes.BLOKK_LABLEC2).ToString();
             txtLablec3.Text = Syspar2.GetValue(ParamCodes.BLOKK_LABLEC3).ToString();
             nuSchowOrderBefore.Value = (int)Syspar2.GetValue(ParamCodes.SHOW_ORDER_BEFORE);
-            foreach (DevExpress.Skins.SkinContainer cnt in DevExpress.Skins.SkinManager.Default.Skins)
+            foreach (SkinContainer cnt in SkinManager.Default.Skins)
             {
-                
+
                 iSkinCombo.Properties.Items.Add(cnt.SkinName);
-                
+
             }
 
             iSkinCombo.SelectedText = Syspar2.GetValue(ParamCodes.SKIN_NAME).ToString();

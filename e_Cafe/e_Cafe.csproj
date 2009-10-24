@@ -1517,6 +1517,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\DataSources\BusinessLogic.CikkAr.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.CikkBeszallito.datasource" />
     <None Include="Properties\DataSources\BusinessLogic.KeszletSor.datasource" />

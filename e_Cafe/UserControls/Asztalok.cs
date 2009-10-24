@@ -13,7 +13,7 @@ using BusinessLogic;
 namespace e_Cafe
 {
 
-
+    [ToolboxItem(false)] 
     public partial class Asztalok : UserControl
     {
         Asztal_Button tmp_m;

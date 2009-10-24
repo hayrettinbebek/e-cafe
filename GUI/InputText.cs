@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Text;
 using GUI.billentyu;
+using System.ComponentModel;
 
 
 namespace GUI
@@ -13,6 +14,7 @@ namespace GUI
         String,
         Double
     }
+    
     public abstract class InputText
     {
         public static string getString(bool req, string def)

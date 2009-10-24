@@ -2,10 +2,11 @@
 using System.Windows.Forms;
 using System.Drawing;
 using System.Data;
-using System.Collections;
+using System.ComponentModel;
 
 namespace GUI
 {
+    [ToolboxItem(false)]
     public class DataGridComboBoxColumn : DataGridColumnStyle
     {
         private int _xMargin = 2;

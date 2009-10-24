@@ -20,7 +20,8 @@ namespace ReportPrinting
 	/// and the PrintControlToolbar control.
 	/// See the RichTextEdit sample for an example of using it.
 	/// </remarks>
-	[DefaultProperty("Document"), DefaultEvent("Printing")]
+	[DefaultProperty("Document"), DefaultEvent("Printing"), ToolboxItem(false)]
+    
 	public class PrintLogic : System.ComponentModel.Component
 	{
 
