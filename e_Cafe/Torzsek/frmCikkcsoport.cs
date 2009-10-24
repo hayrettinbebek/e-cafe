@@ -1,41 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using e_Cafe.UserControls;
 using BusinessLogic;
+using DevExpress.XtraGrid.Views.Grid;
 
 
 namespace e_Cafe
 {
-    public partial class frmCikkcsoport : Form
+    public partial class frmCikkcsoport : UserForm
     {
         public frmCikkcsoport()
         {
             InitializeComponent();
+            
+            
         }
+        GridView currentGrid;
+
+        
 
         private void frmCikkcsoport_Load(object sender, EventArgs e)
         {
+
             // TODO: This line of code loads data into the 'eCAFEDataSetAFA.AFA' table. You can move, or remove it, as needed.
             this.aFATableAdapter.Fill(this.eCAFEDataSetAFA.AFA);
             // TODO: This line of code loads data into the 'eCAFEDataSet.CIKKCSOPORT' table. You can move, or remove it, as needed.
             cIKKCSOPORTTableAdapter.Fill(this.eCAFEDataSet.CIKKCSOPORT);
+            // TODO: This line of code loads data into the 'eCAFEDataSet.CIKCSOP_OTHER_FILTER' table. You can move, or remove it, as needed.
+            this.cIKCSOP_OTHER_FILTERTableAdapter.FillAlcsop(this.eCAFEDataSet.CIKCSOP_OTHER_FILTER);
+
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        public override void Save()
         {
-         //   eCAFEDataSet.AcceptChanges();
-            dataGridView1.EndEdit();
+            base.Save();
+            //   eCAFEDataSet.AcceptChanges();
+            
             cIKKCSOPORTBindingSource.EndEdit();
             cIKKCSOPORTBindingSource.MoveFirst();
             try
             {
                 cIKKCSOPORTTableAdapter.Update(eCAFEDataSet);
+                cIKCSOP_OTHER_FILTERTableAdapter.Update(eCAFEDataSet);
             }
             catch (DBConcurrencyException ex)
             {
@@ -43,11 +51,6 @@ namespace e_Cafe
                 cIKKCSOPORTTableAdapter.Fill(this.eCAFEDataSet.CIKKCSOPORT);
                 DEFS.ExLog(ex.StackTrace);
             }
-        }
-
-        private void toolStripLabel1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cIKKCSOPORTBindingSource_DataError(object sender, BindingManagerDataErrorEventArgs e)
@@ -58,6 +61,33 @@ namespace e_Cafe
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             DEFS.SendValidatingMessage("Megnevezés vagy Áfa", "A mező értéke nem lehet üres"+e.Exception.Message);
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public override void AddNew()
+        {
+            base.AddNew();
+            if (currentGrid != null)
+                currentGrid.AddNewRow();
+        }
+
+        private void gridView1_GotFocus(object sender, EventArgs e)
+        {
+            currentGrid = gridView1;
+        }
+
+        private void gridView3_GotFocus(object sender, EventArgs e)
+        {
+            currentGrid = gridView3;
+        }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            gridView3.AddNewRow();
         }
     }
 }
