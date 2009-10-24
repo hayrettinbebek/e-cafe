@@ -38,7 +38,7 @@ namespace e_Cafe.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ERNIE-HOME\\SQLEXPRESS;Initial Catalog=E_CAFE;Persist Security Info=Tr" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ERNIE-HOME\\SQL2K5;Initial Catalog=E_CAFE;Persist Security Info=Tr" +
             "ue;User ID=sa;Password=x")]
         public string ECAFEConnectionString {
             get {

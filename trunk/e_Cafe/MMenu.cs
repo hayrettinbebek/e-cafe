@@ -481,8 +481,7 @@ namespace e_Cafe
         #region Főmenük
         private void button2_Click(object sender, EventArgs e)
         {
-            AdminTools adm = new AdminTools();
-            adm.ShowDialog();// = true;
+            (new AdminTools()).ShowDialog();// = true;
 
         }
 
