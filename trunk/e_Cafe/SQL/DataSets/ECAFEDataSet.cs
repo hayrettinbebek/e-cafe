@@ -8,7 +8,7 @@ namespace e_Cafe.SQL.DataSets
     }
 }
 
-namespace e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters
+namespace e_Cafe.ECAFEDataSetTableAdapters
 {
     
     
