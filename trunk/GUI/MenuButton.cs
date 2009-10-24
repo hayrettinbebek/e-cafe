@@ -8,12 +8,13 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using BusinessLogic;
 using System.Runtime.InteropServices ;
-
+using System.ComponentModel;
 
 namespace GUI
 {
 
 
+    [ToolboxItem(false)]
     public class CikkcsopButton : System.Windows.Forms.RadioButton
     {
 
@@ -51,7 +52,7 @@ namespace GUI
         }
      
     }
-
+    [ToolboxItem(false)]
     public class HelyButton : System.Windows.Forms.RadioButton
     {
         // Import the CreateRoundRectRgn function from the GDI32.DLL 
@@ -108,6 +109,7 @@ namespace GUI
 
     }
 
+    [ToolboxItem(false)]
     public class OtherFButton : System.Windows.Forms.RadioButton
     {
         public OTF _OTF;
@@ -164,6 +166,7 @@ namespace GUI
         
     }
 
+    [ToolboxItem(false)]
     public class CikkButton : System.Windows.Forms.RadioButton
     {
         int rg;
@@ -352,6 +355,7 @@ namespace GUI
        
     }
 
+    [ToolboxItem(false)]
     public class PartnerButton : System.Windows.Forms.RadioButton
     {
         int rg;
@@ -515,6 +519,7 @@ namespace GUI
 
     }
 
+    [ToolboxItem(false)]
     public class UserButton : System.Windows.Forms.RadioButton
     {
         int rg;
@@ -634,6 +639,7 @@ namespace GUI
 
     }
 
+    [ToolboxItem(false)]
     public class KedvezmenyButton : System.Windows.Forms.RadioButton
     {
         int rg;

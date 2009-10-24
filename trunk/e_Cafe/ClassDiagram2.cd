@@ -1,0 +1,1053 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="e_Cafe.AdminTools" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>pDACFCkT/CcJgAMhiaCEgKOGJJwDAEBCMCRhQycUvIY=</HashCode>
+      <FileName>Admin\AdminTools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.AsztalSetup" Collapsed="true">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAIAQACCALABCEAACCQgRCAEA4AAAgAHBIQQAgAAA=</HashCode>
+      <FileName>Admin\AsztalSetup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.CikkSelector" Collapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABDKAQQAACAAgBEAAICAgIASBBgIAECAVCAIQAAAAAk=</HashCode>
+      <FileName>CikkSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.frmAsztalSelect" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAACAAACAABAACACCAgACCCAIACAAiAAAAgQAAAAA=</HashCode>
+      <FileName>frmAsztalSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.frmLogin" Collapsed="true">
+    <Position X="18" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAAAAIAgCAAABABAICAACACKMw7AQAggAAQQYgAAQw=</HashCode>
+      <FileName>FrontOffice\frmLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.frmPartnerInsert" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8yAAAECAQaAgAFCSVACCCkBSJAAYABEgEXAQAQFHAIA=</HashCode>
+      <FileName>FrontOffice\frmPartnerInsert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.frmShadowLayer" Collapsed="true">
+    <Position X="25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAACACAACAAACEAAACAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>FrontOffice\frmShadowLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.MMPartnerek" Collapsed="true">
+    <Position X="14.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACACAIYAUAAACAAAACAAAYAgAiAGAAAQUFgCA=</HashCode>
+      <FileName>FrontOffice\MMPartnerek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.MRendeles" Collapsed="true">
+    <Position X="16.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CDZNg6MAEvCwAHArAICAghZaCN378VA47noeIQsnySQ=</HashCode>
+      <FileName>FrontOffice\MRendeles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Bevetelezes" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IGiAgBQgICBYgQAFsGmARFgKhBgQYiAEwNAAAeAABAI=</HashCode>
+      <FileName>Keszlet\Bevetelezes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.frmBevetel" Collapsed="true">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAoCEJggACNAoREBMAmIlEACgMn7IADQwnAfBUAgAII=</HashCode>
+      <FileName>Keszlet\frmBevetel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.frmBevetelSor" Collapsed="true">
+    <Position X="19.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACEAAgACIAABAAAAGABAASgAE4AAgAAHAQBAAgAEA=</HashCode>
+      <FileName>Keszlet\frmBevetelSor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.MMenu" Collapsed="true">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AWAAAKgBACAABBASACGEYQaGCgJgIoAiAGSYgQAUCAU=</HashCode>
+      <FileName>MMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.OtherImages" Collapsed="true">
+    <Position X="21.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAABIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.PartnerSelector" Collapsed="true">
+    <Position X="23.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAiQAAAAACAAKBAEAACAAAASAIgIAAAAEEAQAEAAEAA=</HashCode>
+      <FileName>PartnerSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Program" Collapsed="true">
+    <Position X="26.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAIAAAQAABEAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.frmCikkcsoport" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiBQAICAAPBAQAA4gASAAAADVEBGAIAICAAAABgEJAA=</HashCode>
+      <FileName>Torzsek\frmCikkcsoport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.frmUjCikk" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9wAAEAEAAKSATDMImxTCBE0KEEIpCAAIKLAygAAElAg=</HashCode>
+      <FileName>Torzsek\frmUjCikk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.AsztalInfo" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAABAAAACAAAACBAAIIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\AsztalInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Asztalok" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACIAADEQAACIBQBCAAAAAEAAgEAAAAAAEAA=</HashCode>
+      <FileName>UserControls\Asztalok.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.ChooseKeszletek" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAAAAACAAEBCCgBCAAAAKCAAYAAEAAGAAAQAAAAA=</HashCode>
+      <FileName>UserControls\ChooseKeszletek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.MainMenuBtn" Collapsed="true">
+    <Position X="26.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\MainMenuBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmAbout" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACAAAhAAAACAAAACAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Admin\frmAbout.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmKimentBlokkok" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAoAmIIEQCBAiRACxCCIAEADBFgBIEAAEEgCiAgAABA=</HashCode>
+      <FileName>Admin\frmKimentBlokkok.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmNapiZaras" Collapsed="true">
+    <Position X="25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CASFAAKCACAAABAAIACAAAACEoAKIAAAQMgwAUAgAIA=</HashCode>
+      <FileName>Admin\frmNapiZaras.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmNegkeszletInfo" Collapsed="true">
+    <Position X="26.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACACgAAAAACAAAACBAgIAAAAQEAAQAAgAAg=</HashCode>
+      <FileName>Admin\frmNegkeszletInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmOsszevontLista" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAABAgAIiAAAAyQAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Admin\frmOsszevontLista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmParams2" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAIQAACBAABAIAQCAQAACAPAhAQgEAPAIACJgCAE=</HashCode>
+      <FileName>Admin\frmParams2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmPartnerDelete" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAgQAAAAADAACAAAIECAgCACAAhAAAAAAABYCAAAAAA=</HashCode>
+      <FileName>Admin\frmPartnerDelete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmRights" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIqAACAAAAAAMACAAACCAAAAAAAACAgAAAAAAAA=</HashCode>
+      <FileName>Admin\frmRights.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmSyspar" Collapsed="true">
+    <Position X="26.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAACAAAAqAAAACAoMGAREgCAAgIEAAQEEAAAQAAACA=</HashCode>
+      <FileName>Admin\frmSyspar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmUjUser" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAQBACAGAAEBAAAJCAAAACAAAZAgAABGACAAAAIAA=</HashCode>
+      <FileName>Admin\frmUjUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmUser" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAEACAAAAACoEWgAFMCIAgAAAAAAIAALIgAAAA=</HashCode>
+      <FileName>Admin\frmUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Admin.frmUserJogok" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAoEACAQAAAIIFGAQEgGAAgYAAAAAGgAAAAAAAA=</HashCode>
+      <FileName>Admin\frmUserJogok.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmAsztalInfo" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAACAAAAAAAACIAAAiAAAIIAAAAAAAAQAAAAA=</HashCode>
+      <FileName>FrontOffice\frmAsztalInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmFoglalas" Collapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8w8IoYQAiCDECBACRACgJAACAEi4AAAoJHABAQQQACQ=</HashCode>
+      <FileName>FrontOffice\frmFoglalas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmHitelReszletezo" Collapsed="true">
+    <Position X="28.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAQAAACCQAABBAQICAgAACAIR5AGAgiFARAAMAgAA=</HashCode>
+      <FileName>FrontOffice\frmHitelReszletezo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmKedevemenyChoice" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIADAQAACAAABQCBICgAAAGAAgIASAgAEARAQCDAAA=</HashCode>
+      <FileName>FrontOffice\frmKedevemenyChoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmMediaPlayer" Collapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAQCAGABAADAAACIIAAGAIAAEAMgAEAQAEgAAAQ=</HashCode>
+      <FileName>FrontOffice\frmMediaPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmOsszCikkCreator" Collapsed="true">
+    <Position X="28.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASYJgwQAALC0ADEJAICEKgpbml1ICAggPEIcIQsvCAA=</HashCode>
+      <FileName>FrontOffice\frmOsszCikkCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmOsszCikkView" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASQBAAAAACAAANACBACEAAhDAIAAAAQgEAAQAABAAAA=</HashCode>
+      <FileName>FrontOffice\frmOsszCikkView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmPartnerValaszt" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FrontOffice\frmPartnerValaszt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.FrontOffice.frmUzenetek" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAAAAAAAACAAAACAAAIAAAAAFAAAAAAAAA=</HashCode>
+      <FileName>FrontOffice\frmUzenetek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmAtvezetes" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABCAAAFQQAACABBCDgAA5AAAAEHAYAAAAAAA=</HashCode>
+      <FileName>Keszlet\frmAtvezetes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmBeszerzesSzallitoCikkei" Collapsed="true">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAgACAAAAAAAACAAAACAAgYAAABQWAAAAAAEAA=</HashCode>
+      <FileName>Keszlet\frmBeszerzesSzallitoCikkei.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmKeszletKarton" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgRAABAAADgAgAAAAQCAgABCgRAAAAgACAEIAAAAQAA=</HashCode>
+      <FileName>Keszlet\frmKeszletKarton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmLeltarIv" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAABQAAoEWAAFgCAAAAAAAAAgAAAAAAAgA=</HashCode>
+      <FileName>Keszlet\frmLeltarIv.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmLeltarozas" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAEAAAACgAQBAAAAGABAACEEAwABAAIDAQAAAABAA=</HashCode>
+      <FileName>Keszlet\frmLeltarozas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmLeltarSelect" Collapsed="true">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAACCAAEAAAIEGgEEhCgCgAAAAACAAAAQAAAAE=</HashCode>
+      <FileName>Keszlet\frmLeltarSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmMegrendelesArchivum" Collapsed="true">
+    <Position X="21.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAACgQQCAACBAAAAiCAAQCgBgAAAAAAAQAQwBAABA=</HashCode>
+      <FileName>Keszlet\frmMegrendelesArchivum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmMegrendelesKeszites" Collapsed="true">
+    <Position X="23.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAgAACgAQjQAkTQApNmgAFgG9tx9AAAAA3AOEUhAxBA=</HashCode>
+      <FileName>Keszlet\frmMegrendelesKeszites.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmSelejtez" Collapsed="true">
+    <Position X="21.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABCAAAFQQAACABBADgAA5AAAAEHAYAAAAAAA=</HashCode>
+      <FileName>Keszlet\frmSelejtez.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Keszlet.frmSelejtezesInfo" Collapsed="true">
+    <Position X="23.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADEAABASAACAAABCgAgIAAAAEEAAQAAAABA=</HashCode>
+      <FileName>Keszlet\frmSelejtezesInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Properties.Resources" Collapsed="true">
+    <Position X="14.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgCAAAAAAAAABEAABAQAAAAAgAAABABQAAIQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Properties.Settings" Collapsed="true">
+    <Position X="19.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAIAAAAAABABAAAAAQAEAACAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Reports.BlokkReport" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\BlokkReport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="e_Cafe.Reports.doPrinting" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAQAAAAAgAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\doPrinting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Reports.frmReportViewer" Collapsed="true">
+    <Position X="19.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAEAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\frmReportViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Reports.OsszesitoReport" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAIAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\OsszesitoReport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="e_Cafe.Reports.OsszesitoReportSmall" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAIAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\OsszesitoReport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="e_Cafe.Reports.LeltarIv" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Reports\OsszesitoReport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="e_Cafe.Reports.rMegrendeles" Collapsed="true">
+    <Position X="16.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJEAAQAQAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+      <FileName>Reports\rMegrendeles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Reports.CachedrMegrendeles" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reports\rMegrendeles.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.deSelejtezInfo" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAwAAAAJABAAQQAAAAAgCQBgABAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsALTALANOS_KEDVEZMENY" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAAAAAACFADBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsFOGLALAS" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJEBAAEQAAAAAgCQBgIAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsJOG" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwEAAAJABAAAQAAAAAgCQBgAAIAAAAEABDA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsKeszletInfo" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAECwAAAAJABAAAQAAAAAgCUBgABgEAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsLeltar" Collapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgkAAAIwBAAAJABIAAQIJAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsMegrendeles" Collapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgAAAAEwAAAAJIBAAAQAAAAggSQBgACAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsOsszevontLista" Collapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwEAAAJABAAAQAAAAAgCQBgAAIAAAAEABDA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsPartnerek" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAwAgAAJABAAAQAAAAAgCQBgAAAAAAAEEBBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsReceptCikkek" Collapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgCAABAAAEABFA=</HashCode>
+      <FileName>SQL\DataSets\dsReceptCikkek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsReceptText" Collapsed="true">
+    <Position X="26.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAwAAAAJABAAAQAAAAAwCQBgAAAAAAAEAhBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsRepSzamla" Collapsed="true">
+    <Position X="28.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAAAAAkwAAAAJABgAAQAAAAAgiQBgAIAAQAAFAFBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsSYSPAR" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJIBAAAQAAAAAgCQBgAAAQAAAEAhBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsUserJog" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACwAAAAJABAAAQgAAAAgCRBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsSZAMLAZAS" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAQAgAgwAAAAJABgAAQAAAAAhCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSet" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAEAwBAEALABAAISIIAAEgCQBgAAAAEAAEABBA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetAFA" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAISAAAAAgCQBgAAAAEAAEABBA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSetAFA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZES" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABACAAAwAAAAJABAAgRAAAAAgKQBgAAAAAAAkABBA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSetBEVETELEZES.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetCIKK" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAwAAAApABAAAQAAAAAwCQBgAAAAAAAEAhBA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSetCIKK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetHELY" Collapsed="true">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEyAAAAJAhAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSetHELY.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetMEGYS" Collapsed="true">
+    <Position X="21.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABACAQAAAAAgCQBkAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetOTHER_FILTER" Collapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAwAAEAJABAAAQAAAAEgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetRAKTAR" Collapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIwAAAAJABIAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ReceptMentes" Collapsed="true">
+    <Position X="9.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgCAABAAAEABFA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.deSelejtezInfoTableAdapters.SELEJTEZESTableAdapter" Collapsed="true">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.deSelejtezInfoTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="12.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsALTALANOS_KEDVEZMENYTableAdapters.ALTALANOS_KEDVEZMENYTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsALTALANOS_KEDVEZMENYTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="28.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAgCgAAAAAQAAABABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsFOGLALASTableAdapters.FOGLALASTableAdapter" Collapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsFOGLALASTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="18" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAIAABABAEBAAAAsAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsJOGTableAdapters._JOGTableAdapter" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAABAIAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsJOGTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="16.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACIAAABABAEBAAAAMAAgAAACgAAAAgQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_FEJTableAdapter" Collapsed="true">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.KESZLET_SORTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsKeszletInfoTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="12.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAACAAAABABAEBIAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsLeltarTableAdapters.CIKKCSOPORTTableAdapter" Collapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsLeltarTableAdapters.LELTAR_FEJTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsLeltarTableAdapters.RAKTARTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsLeltarTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="11" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAIAABABAEBAAAAMgQgAAACgAAQAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsMegrendelesTableAdapters.MEGRENDELES_FEJTableAdapter" Collapsed="true">
+    <Position X="28.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACCAGAAEAAAAAcAMAAAAAAAACgICAAAABAAAQAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsMegrendelesTableAdapters.MEGRENDELES_SORTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsMegrendelesTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="18" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsOsszevontListaTableAdapters._JOGTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsOsszevontListaTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsPartnerekTableAdapters.PARTNERTableAdapter" Collapsed="true">
+    <Position X="25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIgBAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsPartnerekTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="19.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBgAAAMAAgABACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.RECEPTTableAdapter" Collapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsReceptCikkekTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="23.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACwAAAAAQAAAAEBAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsReceptTextTableAdapters.CIKKTableAdapter" Collapsed="true">
+    <Position X="26.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsReceptTextTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="28.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACEAAABABAEBAAAIMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsRepSzamlaTableAdapters.BLOKK_TETELTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsRepSzamlaTableAdapters.SZAMLA_FEJTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsRepSzamlaTableAdapters._CEGTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsRepSzamlaTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="26.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsSYSPARTableAdapters.SYSPARTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsSYSPARTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="9.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACEAAABABAEBAAAAMAAgAAACgAAAAAQAAAIABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsUserJogTableAdapters._USER_JOGTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsUserJogTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="7.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAA8AAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsSZAMLAZASTableAdapters.SZAMLA_FEJTableAdapter" Collapsed="true">
+    <Position X="25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsSZAMLAZASTableAdapters.SZAMLA_TETELTableAdapter" Collapsed="true">
+    <Position X="26.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.dsSZAMLAZASTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="21.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAABAMAAgAAADgEBAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter" Collapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.AFATableAdapter" Collapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAAAAAAAcAICAAAAAAACEICAAAAEAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="23.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAIAABABgEBAAAAMgQgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetAFATableAdapters.AFATableAdapter" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSetAFA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetAFATableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="19.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAgCgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_FEJTableAdapter" Collapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSetBEVETELEZES.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZESTableAdapters.BEVETEL_SORTableAdapter" Collapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZESTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="21.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.LIT_KISZTableAdapter" Collapsed="true">
+    <Position X="25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+      <FileName>SQL\DataSets\ECAFEDataSetCIKK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.CIKKTableAdapter" Collapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetCIKKTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="11" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAEAMAAgAAACgAAAAIQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetHELYTableAdapters.HELYTableAdapter" Collapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAQAAAARBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetHELYTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="14.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBCAAAMAAgAAACgAAAAgQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetMEGYSTableAdapters.MEGYSTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetMEGYSTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="9.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAwAAAAARAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetOTHER_FILTERTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter" Collapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetOTHER_FILTERTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="7.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABgEBAAAAMgAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.RAKTARTableAdapter" Collapsed="true">
+    <Position X="28.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ECAFEDataSetRAKTARTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="16.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMgAgAAACgAAQAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.RECEPTTableAdapter" Collapsed="true">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.SQL.DataSets.ReceptMentesTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="14.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACwAAAAAQAAAAEBAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Torzsek.frmAFA" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAKAAAAACIEGABEgCBAgAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Torzsek\frmAFA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Torzsek.frmAltKedvezm" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAACAAAAAAMECAAEACAQgAAAQAAAAAABAAAAA=</HashCode>
+      <FileName>Torzsek\frmAltKedvezm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Torzsek.frmCikk" Collapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/yirURNJoXDO8PKM/unIJn5itP078J5mmHKNaUXRFPQ=</HashCode>
+      <FileName>Torzsek\frmCikk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Torzsek.frmCikkReceptAd" Collapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAQAAAICIAQBAAAACAQAADgAg4AAAAAHAEBAAIAAA=</HashCode>
+      <FileName>Torzsek\frmCikkReceptAd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Torzsek.frmHelyek" Collapsed="true">
+    <Position X="26.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAEAAASAAAQAIIECAAEACAAoBAAAgEAAABAAAAAg=</HashCode>
+      <FileName>Torzsek\frmHelyek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Torzsek.frmOtherFilter" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAACACAgQACAuESAAEACEEkAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Torzsek\frmOtherFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Torzsek.frmRaktar" Collapsed="true">
+    <Position X="18" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAQCAACAAAIACABAACAAgAAABACAAQAAAAAAA=</HashCode>
+      <FileName>Torzsek\frmRaktar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.Torzsek.frmSzallito" Collapsed="true">
+    <Position X="28.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4TgQCBCBgSBBDBKIAECiUDhiIPoASAAMEAQQQSAEAIE=</HashCode>
+      <FileName>Torzsek\frmSzallito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.UserControls.MMenuButton" Collapsed="true">
+    <Position X="12.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\MMenuButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="e_Cafe.UserControls.UserForm" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABIAAAGAAAAAACBCAgAACACEBAAAAAAAAAAAACAA=</HashCode>
+      <FileName>UserControls\UserForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="e_Cafe.UsingForms" Collapsed="true">
+    <Position X="11" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAACAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FrontOffice\frmShadowLayer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="e_Cafe.PartnerSelectModes" Collapsed="true">
+    <Position X="9.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAAA=</HashCode>
+      <FileName>FrontOffice\MMPartnerek.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="e_Cafe.Keszlet.LoadTypes" Collapsed="true">
+    <Position X="7.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Keszlet\frmMegrendelesArchivum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

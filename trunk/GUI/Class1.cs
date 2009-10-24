@@ -15,6 +15,7 @@ namespace GUI
     // one empty cell, into which the user can slide an adjacent
     // tile with a drag-and-drop operation. Tiles that are eligible 
     // for moving are highlighted.
+    [System.ComponentModel.ToolboxItem(false)]
     public class GridStrip : ToolStrip
     {
         // The button that is the drag source.

@@ -10,6 +10,7 @@ using GUI;
 
 namespace GUI.billentyu
 {
+    [ToolboxItem(false)]
     public partial class keyb2 : UserControl
     {
         public TextBox OutTxtBox;

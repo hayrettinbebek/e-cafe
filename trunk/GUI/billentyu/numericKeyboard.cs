@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace GUI.billentyu
 {
+    [ToolboxItem(false)]
     public partial class numericKeyboar : UserControl
     {
         public TextBox OutTxtBox;

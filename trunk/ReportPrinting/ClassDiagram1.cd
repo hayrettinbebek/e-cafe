@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ReportPrinting.BorderPens" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAACAAIAAAEAAAgAAQAAAAAAAIAQAAGEDkAAAAAEA=</HashCode>
+      <FileName>BorderPens.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.FormatColumnEventArgs" Collapsed="true">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAQAAAAAAEAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>FormatColumnEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.UpdateMathEventArgs" Collapsed="true">
+    <Position X="23.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAABAAAQAQAAAAEACAAAAAACAAAAAw=</HashCode>
+      <FileName>FormatColumnEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.FormatSummaryRowEventArgs" Collapsed="true">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAgAA=</HashCode>
+      <FileName>FormatColumnEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.LayeredSections" Collapsed="true">
+    <Position X="14.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>LayeredSections.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.LinearRepeatableSections" Collapsed="true">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAAAAAAAAAAAgAAAAAABAAAgAQAAAA=</HashCode>
+      <FileName>LinearRepeatableSections.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.LinearSections" Collapsed="true">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAJAAAACAAgAAAAIAEAAAAIAAAgAAAAAA=</HashCode>
+      <FileName>LinearSections.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.PrintControl" Collapsed="true">
+    <Position X="27" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIoAAABBBiAAAAEAAICAgEASAAAFAEACAAQAAQAUAAA=</HashCode>
+      <FileName>PrintControls\PrintControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.PrintControlToolBar" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIoAAABBhiQAAAAAAIHAgEACAEAFAAACAASAhAEUIAA=</HashCode>
+      <FileName>PrintControls\PrintControlToolBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.PrintDataGrid" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkEACASAQAAEAAAAAiBASAAgQEAAEAAAADQAAAAlAAI=</HashCode>
+      <FileName>PrintControls\PrintDataGrid.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ReportPrinting.PrintLogic" Collapsed="true">
+    <Position X="27" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAICAADABgAAQAQAAEQAgAQAQIIEAAACAAQAAAAEAgA=</HashCode>
+      <FileName>PrintControls\PrintLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.PrinterMarginInfo" Collapsed="true">
+    <Position X="25.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAQAAAAB4AAAAAAAAAAAAAAAAACAACAAAAEABAAAA=</HashCode>
+      <FileName>PrinterMarginInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.RepeatableTextSection" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAIEAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>RepeatableTextSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.ReportBoolColumn" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEABAAAAAAAAAAQAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ReportBoolColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.ReportBuilder" Collapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RABCAECCMAkCKIAHAAAEUAbKIJI5SyJdAgKmUQAB4gQ=</HashCode>
+      <FileName>ReportBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.ReportBuilderException" Collapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReportBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.ReportDataColumn" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAKIBQABIAECApAwRAIBFEQwAABGAiBABABgFAIpkFQ=</HashCode>
+      <FileName>ReportDataColumn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ReportPrinting.ReportDocument" Collapsed="true">
+    <Position X="25.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAABiwQEICAECAASARiBACAWARAgBAFAIAAgAgABAJs=</HashCode>
+      <FileName>ReportDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.ReportImageColumn" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAQAAAAAgAAAAAAAAEBAAA=</HashCode>
+      <FileName>ReportImageColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.ReportSection" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQiAQoAIjgjiAAiIAIQiAAAMBtEAEIChABmAIEEBA=</HashCode>
+      <FileName>ReportSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.SectionBox" Collapsed="true">
+    <Position X="12.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYJAAAADCQBJCQgREBCEORAQBSEQCkACAIggAAIoAA=</HashCode>
+      <FileName>SectionBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.SectionBreak" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAoCAABAAAAAAAACABACAEAQAAAAABgAAAAAA=</HashCode>
+      <FileName>SectionBreak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.SectionContainer" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAJAABAAAAAAAAAIAAQAgAAAAgAAAAAIA=</HashCode>
+      <FileName>SectionContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.SectionImage" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAQAAAAAgAABAAAAAAAACAAEACEABAAAAAAgAGAABA=</HashCode>
+      <FileName>SectionImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.SectionLine" Collapsed="true">
+    <Position X="19.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEALAAAAGgAACBAAwAGAgCAAQAAgAAAAAA=</HashCode>
+      <FileName>SectionLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.SectionRichText" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgBAAAAAAAACAAAAAEAAIAAAgQgAAAEAA=</HashCode>
+      <FileName>SectionRichText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.SectionTable" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAK4QAiAAQCqBoxMkWMAQldCQYAMASgwDmCl4AYIEAA=</HashCode>
+      <FileName>SectionTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.SectionText" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAIABgBIghBKAIgIAggCAAIABECMAIAEogyABKIAg=</HashCode>
+      <FileName>SectionText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.TextStyle" Collapsed="true">
+    <Position X="21.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MCAAixhgAihRmaIABIC0CiAAOAhoACAAAAAgKAAIAQE=</HashCode>
+      <FileName>TextStyle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportPrinting.Properties.Settings" Collapsed="true">
+    <Position X="27" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ReportPrinting.Bounds" Collapsed="true">
+    <Position X="21.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAgABAgAAAAkgAAAAUAAAAACAIAAEAAAAAQgAiA=</HashCode>
+      <FileName>Bounds.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="ReportPrinting.IDataColumn" Collapsed="true">
+    <Position X="21.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIIAQAAAAAAABAABAIAAEACAAAEAAAAAAAgRAABABA=</HashCode>
+      <FileName>IDataColumn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ReportPrinting.IReportMaker" Collapsed="true">
+    <Position X="23.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IReportMaker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ReportPrinting.VerticalAlignment" Collapsed="true">
+    <Position X="27" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Alignments.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReportPrinting.HorizontalAlignment" Collapsed="true">
+    <Position X="23.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAIAAA=</HashCode>
+      <FileName>Alignments.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReportPrinting.Direction" Collapsed="true">
+    <Position X="21.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinearSections.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ReportPrinting.PageOrientation" Collapsed="true">
+    <Position X="25.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgA=</HashCode>
+      <FileName>ReportDocument.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="ReportPrinting.FormatColumnHandler" Collapsed="true">
+    <Position X="21.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>FormatColumnEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="ReportPrinting.UpdateMathHandler" Collapsed="true">
+    <Position X="25.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormatColumnEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="ReportPrinting.FormatSummaryRowHandler" Collapsed="true">
+    <Position X="23.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormatColumnEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

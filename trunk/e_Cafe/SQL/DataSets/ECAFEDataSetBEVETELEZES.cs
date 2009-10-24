@@ -1,7 +1,7 @@
 ﻿namespace e_Cafe.SQL.DataSets
 {
-    
-    
+
+   
     public partial class ECAFEDataSetBEVETELEZES {
         partial class BEVETEL_SORDataTable
         {
@@ -30,7 +30,7 @@
 
 namespace e_Cafe.SQL.DataSets.ECAFEDataSetBEVETELEZESTableAdapters
 {
-    
+
     
     public partial class BEVETEL_FEJTableAdapter {
     }

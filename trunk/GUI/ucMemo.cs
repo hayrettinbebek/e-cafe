@@ -14,6 +14,7 @@ using BusinessLogic;
 namespace GUI
 {
 
+    [ToolboxItem(false)]
     public partial class ucMemo : UserControl
     {
         private bool _moove = false;
