@@ -77,7 +77,11 @@
             this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
             this.iSave = new DevExpress.XtraBars.BarButtonItem();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
-            this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
+            this.iBigSave = new DevExpress.XtraBars.BarButtonItem();
+            this.iBigNew = new DevExpress.XtraBars.BarButtonItem();
+            this.iNew = new DevExpress.XtraBars.BarButtonItem();
+            this.iDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.iBigDelete = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -164,10 +168,14 @@
             this.barButtonItem31,
             this.iSave,
             this.barMdiChildrenListItem1,
-            this.barButtonItem32});
+            this.iBigSave,
+            this.iBigNew,
+            this.iNew,
+            this.iDelete,
+            this.iBigDelete});
             this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 54;
+            this.ribbonControl1.MaxItemId = 58;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -180,6 +188,8 @@
             this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(1123, 143);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
+            this.ribbonControl1.Toolbar.ItemLinks.Add(this.iNew);
+            this.ribbonControl1.Toolbar.ItemLinks.Add(this.iDelete);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.iSave);
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.barMdiChildrenListItem1);
             // 
@@ -268,7 +278,6 @@
             this.barSubItem2.Name = "barSubItem2";
             this.barSubItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barSubItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSubItem2_ItemClick);
             // 
             // barSubItem4
             // 
@@ -318,7 +327,6 @@
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // barButtonItem9
             // 
@@ -430,7 +438,6 @@
             this.barButtonItem19.Caption = "Mennyiségi egység";
             this.barButtonItem19.Id = 38;
             this.barButtonItem19.Name = "barButtonItem19";
-            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
             // 
             // barButtonItem20
             // 
@@ -544,14 +551,49 @@
             this.barMdiChildrenListItem1.ImageIndex = 27;
             this.barMdiChildrenListItem1.Name = "barMdiChildrenListItem1";
             // 
-            // barButtonItem32
+            // iBigSave
             // 
-            this.barButtonItem32.Caption = "Mentés";
-            this.barButtonItem32.Id = 53;
-            this.barButtonItem32.LargeImageIndex = 7;
-            this.barButtonItem32.Name = "barButtonItem32";
-            this.barButtonItem32.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barButtonItem32.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem32_ItemClick);
+            this.iBigSave.Caption = "Mentés";
+            this.iBigSave.Id = 53;
+            this.iBigSave.LargeImageIndex = 7;
+            this.iBigSave.Name = "iBigSave";
+            this.iBigSave.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.iBigSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem32_ItemClick);
+            // 
+            // iBigNew
+            // 
+            this.iBigNew.Caption = "Beszúrás";
+            this.iBigNew.Id = 54;
+            this.iBigNew.LargeImageIndex = 0;
+            this.iBigNew.Name = "iBigNew";
+            this.iBigNew.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.iBigNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem33_ItemClick);
+            // 
+            // iNew
+            // 
+            this.iNew.Caption = "barButtonItem34";
+            this.iNew.Id = 55;
+            this.iNew.ImageIndex = 6;
+            this.iNew.Name = "iNew";
+            this.iNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem34_ItemClick);
+            // 
+            // iDelete
+            // 
+            this.iDelete.Caption = "barButtonItem35";
+            this.iDelete.Id = 56;
+            this.iDelete.ImageIndex = 22;
+            this.iDelete.Name = "iDelete";
+            this.iDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem35_ItemClick);
+            // 
+            // iBigDelete
+            // 
+            this.iBigDelete.Caption = "Törlés";
+            this.iBigDelete.Id = 57;
+            this.iBigDelete.ImageIndex = 22;
+            this.iBigDelete.LargeImageIndex = 1;
+            this.iBigDelete.Name = "iBigDelete";
+            this.iBigDelete.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.iBigDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem36_ItemClick);
             // 
             // imageCollection1
             // 
@@ -575,7 +617,9 @@
             // 
             // ribbonPageGroup15
             // 
-            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem32);
+            this.ribbonPageGroup15.ItemLinks.Add(this.iBigNew);
+            this.ribbonPageGroup15.ItemLinks.Add(this.iBigSave);
+            this.ribbonPageGroup15.ItemLinks.Add(this.iBigDelete, true);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             this.ribbonPageGroup15.Text = "Műveletek";
             // 
@@ -756,7 +800,6 @@
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Adminisztrátori funkciók";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.AdminTools_Load);
             this.MdiChildActivate += new System.EventHandler(this.AdminTools_MdiChildActivate);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).EndInit();
@@ -835,11 +878,15 @@
         private DevExpress.Utils.ImageCollection imageCollection2;
         private DevExpress.Utils.ImageCollection imageCollection1;
         private DevExpress.Utils.ImageCollection imageCollection3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem32;
+        private DevExpress.XtraBars.BarButtonItem iBigSave;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
         public DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraBars.BarButtonItem iBigNew;
+        private DevExpress.XtraBars.BarButtonItem iNew;
+        private DevExpress.XtraBars.BarButtonItem iDelete;
+        private DevExpress.XtraBars.BarButtonItem iBigDelete;
     }
 }
 
