@@ -44,8 +44,6 @@
             this.nuSchowOrderBefore = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.rbSor = new System.Windows.Forms.RadioButton();
@@ -57,6 +55,7 @@
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
             this.iSkinCombo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuSchowOrderBefore)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -204,26 +203,6 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "nappal előtte";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(122, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Mentés";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(403, 269);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Kilépés mentés nélkül";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(486, 34);
@@ -241,7 +220,7 @@
             // rbSor
             // 
             this.rbSor.AutoSize = true;
-            this.rbSor.Location = new System.Drawing.Point(12, 18);
+            this.rbSor.Location = new System.Drawing.Point(26, 18);
             this.rbSor.Name = "rbSor";
             this.rbSor.Size = new System.Drawing.Size(74, 17);
             this.rbSor.TabIndex = 6;
@@ -256,7 +235,7 @@
             this.groupBox2.Controls.Add(this.rbSor);
             this.groupBox2.Location = new System.Drawing.Point(377, 58);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(223, 42);
+            this.groupBox2.Size = new System.Drawing.Size(244, 42);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cikk görgetés módja";
@@ -264,7 +243,7 @@
             // rbOldal
             // 
             this.rbOldal.AutoSize = true;
-            this.rbOldal.Location = new System.Drawing.Point(109, 19);
+            this.rbOldal.Location = new System.Drawing.Point(141, 19);
             this.rbOldal.Name = "rbOldal";
             this.rbOldal.Size = new System.Drawing.Size(82, 17);
             this.rbOldal.TabIndex = 0;
@@ -272,6 +251,7 @@
             this.rbOldal.Tag = "2";
             this.rbOldal.Text = "Oldalanként";
             this.rbOldal.UseVisualStyleBackColor = true;
+            this.rbOldal.CheckedChanged += new System.EventHandler(this.rbOldal_CheckedChanged);
             // 
             // bar6
             // 
@@ -286,7 +266,7 @@
             // 
             // iSkinCombo
             // 
-            this.iSkinCombo.Location = new System.Drawing.Point(389, 124);
+            this.iSkinCombo.Location = new System.Drawing.Point(500, 110);
             this.iSkinCombo.Name = "iSkinCombo";
             this.iSkinCombo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -294,16 +274,23 @@
             this.iSkinCombo.Size = new System.Drawing.Size(121, 20);
             this.iSkinCombo.TabIndex = 17;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(386, 113);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(108, 13);
+            this.labelControl1.TabIndex = 22;
+            this.labelControl1.Text = "Admin menü színséma:";
+            // 
             // frmParams2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 361);
+            this.ClientSize = new System.Drawing.Size(644, 277);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.iSkinCombo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.nuSchowOrderBefore);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -345,8 +332,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chkBlokkAutoNyomt;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBlokkLogoPath;
@@ -361,6 +346,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControl3;
         private DevExpress.XtraBars.BarDockControl barDockControl4;
         private DevExpress.XtraEditors.ComboBoxEdit iSkinCombo;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
 
 
     }

@@ -20,6 +20,15 @@ namespace e_Cafe.Admin
         public frmParams2()
         {
             InitializeComponent();
+            _isEdit = true;
+        }
+
+        public override void Save()
+        {
+            base.Save();
+            SaveAndInsertData();
+            ((AdminTools)MdiParent).defaultLookAndFeel1.LookAndFeel.SetSkinStyle(Syspar2.GetValue(ParamCodes.SKIN_NAME).ToString());
+            this.Close();
         }
 
         private void loadAndFillData()
@@ -75,14 +84,12 @@ namespace e_Cafe.Admin
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveAndInsertData();
-            ((AdminTools)MdiParent).defaultLookAndFeel1.LookAndFeel.SetSkinStyle(Syspar2.GetValue(ParamCodes.SKIN_NAME).ToString());
-            this.Close();
+
 
         }
 
@@ -113,6 +120,11 @@ namespace e_Cafe.Admin
             }
             openFileDialog1.ShowDialog();
             txtBlokkLogoPath.Text = openFileDialog1.FileName;
+        }
+
+        private void rbOldal_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
