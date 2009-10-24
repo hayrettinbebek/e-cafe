@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinampFrontEndLib", "Winamp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODBCMngr", "ODBCMgr\ODBCMngr.csproj", "{DE5A5D82-C478-455B-8312-05BDA6064B4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminModeTester", "AdminModeTester\AdminModeTester.csproj", "{EB9397E3-BA85-48EE-A72E-D7EB467F1FEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,12 @@ Global
 		{DE5A5D82-C478-455B-8312-05BDA6064B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE5A5D82-C478-455B-8312-05BDA6064B4B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE5A5D82-C478-455B-8312-05BDA6064B4B}.Release|x86.ActiveCfg = Release|Any CPU
+		{EB9397E3-BA85-48EE-A72E-D7EB467F1FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9397E3-BA85-48EE-A72E-D7EB467F1FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9397E3-BA85-48EE-A72E-D7EB467F1FEF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EB9397E3-BA85-48EE-A72E-D7EB467F1FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9397E3-BA85-48EE-A72E-D7EB467F1FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9397E3-BA85-48EE-A72E-D7EB467F1FEF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
