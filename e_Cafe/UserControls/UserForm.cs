@@ -15,10 +15,21 @@ namespace e_Cafe.UserControls
         {
             InitializeComponent();
         }
-        internal bool _isEdit = false;
-        internal bool _isModified = false;
+        internal bool _isEdit;
+        internal bool _isModified;
 
-        public bool isEditForm { get { return _isEdit; } }
+        internal bool _InsertAndDelete;
+
+        public bool _isEditForm
+        {
+            get { return _isEdit; }
+            set { _isEdit = value; }
+        }
+        public bool _isInsertAndDelete
+        {
+            get { return _InsertAndDelete; }
+            set { _InsertAndDelete = value; }
+        }
 
 
         public bool Modified { get { return _isModified; } }
@@ -27,6 +38,22 @@ namespace e_Cafe.UserControls
         {
 
 
+        }
+
+        public virtual void AddNew()
+        {
+
+
+        }
+
+        public virtual void DeleteRow()
+        {
+
+        }
+
+        private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ((AdminTools)MdiParent).InitSpeedBar();
         }
     }
 }
