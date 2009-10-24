@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GridStringId.FileIsNotFoundError" xml:space="preserve">
+    <value>קובץ {0} לא נמצא</value>
+    <comment>File {0} is not found</comment>
+  </data>
+  <data name="GridStringId.ColumnViewExceptionMessage" xml:space="preserve">
+    <value>האם ברצונך לשנות את הערך?</value>
+    <comment>Do you want to correct the value ?</comment>
+  </data>
+  <data name="GridStringId.CustomizationCaption" xml:space="preserve">
+    <value>התאמה</value>
+    <comment>Customization</comment>
+  </data>
+  <data name="GridStringId.CustomizationColumns" xml:space="preserve">
+    <value>עמודות</value>
+    <comment>Columns</comment>
+  </data>
+  <data name="GridStringId.CustomizationBands" xml:space="preserve">
+    <value>שורות</value>
+    <comment>Bands</comment>
+  </data>
+  <data name="GridStringId.PopupFilterAll" xml:space="preserve">
+    <value>(הכל)</value>
+    <comment>(All)</comment>
+  </data>
+  <data name="GridStringId.PopupFilterCustom" xml:space="preserve">
+    <value>(מתאם)</value>
+    <comment>(Custom)</comment>
+  </data>
+  <data name="GridStringId.PopupFilterBlanks" xml:space="preserve">
+    <value>(ריק)</value>
+    <comment>(Blanks)</comment>
+  </data>
+  <data name="GridStringId.PopupFilterNonBlanks" xml:space="preserve">
+    <value>(לא ריק)</value>
+    <comment>(Non blanks)</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogFormCaption" xml:space="preserve">
+    <value>התאמה של פילטר אוטומטי</value>
+    <comment>Custom AutoFilter</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCaption" xml:space="preserve">
+    <value>הצג שורות:</value>
+    <comment>Show rows where:</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioAnd" xml:space="preserve">
+    <value>&amp;וגם</value>
+    <comment>&amp;And</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioOr" xml:space="preserve">
+    <value>א&amp;ו</value>
+    <comment>O&amp;r</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogOkButton" xml:space="preserve">
+    <value>&amp;אישור</value>
+    <comment>&amp;OK</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogClearFilter" xml:space="preserve">
+    <value>נקה סינון</value>
+    <comment>C&amp;lear Filter</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCancelButton" xml:space="preserve">
+    <value>&amp;ביטול</value>
+    <comment>&amp;Cancel</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialog2FieldCheck" xml:space="preserve">
+    <value>שדה</value>
+    <comment>Field</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionEQU" xml:space="preserve">
+    <value>שווה</value>
+    <comment>equals</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNEQ" xml:space="preserve">
+    <value>שונה מ</value>
+    <comment>does not equal</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGT" xml:space="preserve">
+    <value>גדול מ</value>
+    <comment>is greater than</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGTE" xml:space="preserve">
+    <value>גדול מ או שווה ל</value>
+    <comment>is greater than or equal to</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLT" xml:space="preserve">
+    <value>פחות מ</value>
+    <comment>is less than</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLTE" xml:space="preserve">
+    <value>פחות מ או שווה ל</value>
+    <comment>is less than or equal to</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionBlanks" xml:space="preserve">
+    <value>ריקים</value>
+    <comment>blanks</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNonBlanks" xml:space="preserve">
+    <value>לא ריקים</value>
+    <comment>non blanks</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLike" xml:space="preserve">
+    <value>דומה</value>
+    <comment>like</comment>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNotLike" xml:space="preserve">
+    <value>לא דומה</value>
+    <comment>not like</comment>
+  </data>
+  <data name="GridStringId.MenuFooterSum" xml:space="preserve">
+    <value>Sum</value>
+    <comment>Sum</comment>
+  </data>
+  <data name="GridStringId.MenuFooterMin" xml:space="preserve">
+    <value>Min</value>
+    <comment>Min</comment>
+  </data>
+  <data name="GridStringId.MenuFooterMax" xml:space="preserve">
+    <value>Max</value>
+    <comment>Max</comment>
+  </data>
+  <data name="GridStringId.MenuFooterCount" xml:space="preserve">
+    <value>ספירה</value>
+    <comment>Count</comment>
+  </data>
+  <data name="GridStringId.MenuFooterAverage" xml:space="preserve">
+    <value>ממוצע</value>
+    <comment>Average</comment>
+  </data>
+  <data name="GridStringId.MenuFooterNone" xml:space="preserve">
+    <value>ללא</value>
+    <comment>None</comment>
+  </data>
+  <data name="GridStringId.MenuFooterSumFormat" xml:space="preserve">
+    <value>SUM={0:#.##}</value>
+    <comment>SUM={0:#.##}</comment>
+  </data>
+  <data name="GridStringId.MenuFooterMinFormat" xml:space="preserve">
+    <value>MIN={0}</value>
+    <comment>MIN={0}</comment>
+  </data>
+  <data name="GridStringId.MenuFooterMaxFormat" xml:space="preserve">
+    <value>MAX={0}</value>
+    <comment>MAX={0}</comment>
+  </data>
+  <data name="GridStringId.MenuFooterCountFormat" xml:space="preserve">
+    <value>{0}</value>
+    <comment>{0}</comment>
+  </data>
+  <data name="GridStringId.MenuFooterCountGroupFormat" xml:space="preserve">
+    <value>Count={0}</value>
+    <comment>Count={0}</comment>
+  </data>
+  <data name="GridStringId.MenuFooterAverageFormat" xml:space="preserve">
+    <value>AVG={0:#.##}</value>
+    <comment>AVG={0:#.##}</comment>
+  </data>
+  <data name="GridStringId.MenuFooterCustomFormat" xml:space="preserve">
+    <value>Custom={0}</value>
+    <comment>Custom={0}</comment>
+  </data>
+  <data name="GridStringId.MenuColumnSortAscending" xml:space="preserve">
+    <value>מיון עולה</value>
+    <comment>Sort Ascending</comment>
+  </data>
+  <data name="GridStringId.MenuColumnSortDescending" xml:space="preserve">
+    <value>מיון יורד</value>
+    <comment>Sort Descending</comment>
+  </data>
+  <data name="GridStringId.MenuColumnClearSorting" xml:space="preserve">
+    <value>נקה מיון</value>
+    <comment>Clear Sorting</comment>
+  </data>
+  <data name="GridStringId.MenuColumnGroup" xml:space="preserve">
+    <value>קבץ באמצעות עמודה זו</value>
+    <comment>Group By This Column</comment>
+  </data>
+  <data name="GridStringId.FilterPanelCustomizeButton" xml:space="preserve">
+    <value>עריכת הסינון</value>
+    <comment>Edit Filter</comment>
+  </data>
+  <data name="GridStringId.MenuColumnUnGroup" xml:space="preserve">
+    <value>לפרק</value>
+    <comment>UnGroup</comment>
+  </data>
+  <data name="GridStringId.MenuColumnColumnCustomization" xml:space="preserve">
+    <value>בחירת עמודה</value>
+    <comment>Column Chooser</comment>
+  </data>
+  <data name="GridStringId.MenuColumnBestFit" xml:space="preserve">
+    <value>התאמה מיטבית</value>
+    <comment>Best Fit</comment>
+  </data>
+  <data name="GridStringId.MenuColumnFilter" xml:space="preserve">
+    <value>ניתן לסנן</value>
+    <comment>Can Filter</comment>
+  </data>
+  <data name="GridStringId.MenuColumnFilterEditor" xml:space="preserve">
+    <value>עורך סינון</value>
+    <comment>Filter Editor</comment>
+  </data>
+  <data name="GridStringId.MenuColumnClearFilter" xml:space="preserve">
+    <value>נקה סינון</value>
+    <comment>Clear Filter</comment>
+  </data>
+  <data name="GridStringId.MenuColumnBestFitAllColumns" xml:space="preserve">
+    <value>(התאמה מיטבית (כל העמודות</value>
+    <comment>Best Fit (all columns)</comment>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullExpand" xml:space="preserve">
+    <value>הרחבה מקסימאלית</value>
+    <comment>Full Expand</comment>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullCollapse" xml:space="preserve">
+    <value>קריסה מלאה</value>
+    <comment>Full Collapse</comment>
+  </data>
+  <data name="GridStringId.MenuGroupPanelClearGrouping" xml:space="preserve">
+    <value>נקה קבוצה</value>
+    <comment>Clear Grouping</comment>
+  </data>
+  <data name="GridStringId.PrintDesignerBandedView" xml:space="preserve">
+    <value>(הדפס אפשרויות (תצוגה מאחדת</value>
+    <comment>Print Settings (Banded View)</comment>
+  </data>
+  <data name="GridStringId.PrintDesignerGridView" xml:space="preserve">
+    <value>(הדפס אפשרויות (תצוגה טבלה</value>
+    <comment>Print Settings (Grid View)</comment>
+  </data>
+  <data name="GridStringId.PrintDesignerCardView" xml:space="preserve">
+    <value>(הדפס אפשרויות (תצוגה כרטיס </value>
+    <comment>Print Settings (Card View)</comment>
+  </data>
+  <data name="GridStringId.PrintDesignerBandHeader" xml:space="preserve">
+    <value>כותרת עליונה</value>
+    <comment>BandHeader</comment>
+  </data>
+  <data name="GridStringId.PrintDesignerDescription" xml:space="preserve">
+    <value>הגדרת אפשרויות הדפסה לתצוגה הנוכחית</value>
+    <comment>Set up various printing options for the current view.</comment>
+  </data>
+  <data name="GridStringId.MenuColumnGroupBox" xml:space="preserve">
+    <value>קבץ באמצעות תא</value>
+    <comment>Group By Box</comment>
+  </data>
+  <data name="GridStringId.CardViewNewCard" xml:space="preserve">
+    <value>כרטיס חדש</value>
+    <comment>New Card</comment>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButton" xml:space="preserve">
+    <value>התאמה אישית</value>
+    <comment>Customize</comment>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonFilter" xml:space="preserve">
+    <value>סינון</value>
+    <comment>Filter</comment>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonSort" xml:space="preserve">
+    <value>מיון</value>
+    <comment>Sort:</comment>
+  </data>
+  <data name="GridStringId.GridGroupPanelText" xml:space="preserve">
+    <value>גרור כותרות הנה כדי לקבץ לפי עמודות</value>
+    <comment>Drag a column header here to group by that column</comment>
+  </data>
+  <data name="GridStringId.GridNewRowText" xml:space="preserve">
+    <value>לחץ כאן כדי להוסיף שורה חדשה</value>
+    <comment>Click here to add a new row</comment>
+  </data>
+  <data name="GridStringId.FilterBuilderOkButton" xml:space="preserve">
+    <value>&amp;אישור</value>
+    <comment>&amp;OK</comment>
+  </data>
+  <data name="GridStringId.FilterBuilderCancelButton" xml:space="preserve">
+    <value>&amp;ביטול</value>
+    <comment>&amp;Cancel</comment>
+  </data>
+  <data name="GridStringId.FilterBuilderApplyButton" xml:space="preserve">
+    <value>&amp;החל</value>
+    <comment>&amp;Apply</comment>
+  </data>
+  <data name="GridStringId.FilterBuilderCaption" xml:space="preserve">
+    <value>יצירת סינון</value>
+    <comment>Filter Builder</comment>
+  </data>
+  <data name="GridStringId.GridOutlookIntervals" xml:space="preserve">
+    <value>ישן;חודש קודם;חודש הבא;לפני שלושה שבועות;לפני שבועיים;שבוע שעבר;;;;;;;;אתמול;היום;מחר;בעוד שבועיים;בעוד שלושה שבועות;חודש קודם;חודש הבא;אחרי חודש הבא</value>
+    <comment>Older;Last Month;Earlier this Month;Three Weeks Ago;Two Weeks Ago;Last Week;;;;;;;;Yesterday;Today;Tomorrow;;;;;;;;Next Week;Two Weeks Away;Three Weeks Away;Later this Month;Next Month;Beyond Next Month;</comment>
+  </data>
+  <data name="GridStringId.CustomizationFormColumnHint" xml:space="preserve">
+    <value>גרור לכאן עמודות כדי להוסיף לתצוגה</value>
+    <comment>Drag and drop columns here to customize layout</comment>
+  </data>
+  <data name="GridStringId.CustomizationFormBandHint" xml:space="preserve">
+    <value>גרור לכאן שורות כדי להוסיף לתצוגה</value>
+    <comment>Drag and drop bands here to customize layout</comment>
+  </data>
+  <data name="GridStringId.LayoutViewCloseZoomBtnHintClose" xml:space="preserve">
+    <value>שיחזור תצוגה</value>
+    <comment>Restore View</comment>
+  </data>
+  <data name="GridStringId.LayoutViewCloseZoomBtnHintZoom" xml:space="preserve">
+    <value>נתון מקיסימאלי</value>
+    <comment>Maximize Detail</comment>
+  </data>
+  <data name="GridStringId.LayoutViewColumnModeBtnHint" xml:space="preserve">
+    <value>עמודה אחת</value>
+    <comment>One Column</comment>
+  </data>
+  <data name="GridStringId.LayoutViewMultiColumnModeBtnHint" xml:space="preserve">
+    <value>ריבוי עמודות</value>
+    <comment>Multiple Columns</comment>
+  </data>
+  <data name="GridStringId.LayoutViewMultiRowModeBtnHint" xml:space="preserve">
+    <value>ריבוי שורות</value>
+    <comment>Multiple Rows</comment>
+  </data>
+  <data name="GridStringId.LayoutViewPanBtnHint" xml:space="preserve">
+    <value>ממתין</value>
+    <comment>Panning</comment>
+  </data>
+  <data name="GridStringId.LayoutViewRowModeBtnHint" xml:space="preserve">
+    <value>שורה אחת</value>
+    <comment>One Row</comment>
+  </data>
+  <data name="GridStringId.LayoutViewSingleModeBtnHint" xml:space="preserve">
+    <value>כרטיס אחד</value>
+    <comment>One Card</comment>
+  </data>
+  <data name="GridStringId.LayoutViewCarouselModeBtnHint" xml:space="preserve">
+    <value>סיבוב</value>
+    <comment>Carousel Mode</comment>
+  </data>
+</root>
