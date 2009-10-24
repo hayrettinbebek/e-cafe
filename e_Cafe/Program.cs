@@ -15,6 +15,12 @@ namespace e_Cafe
         [STAThread]
         static void Main()
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture =
+                    new System.Globalization.CultureInfo("hu-HU");
+
+            // The following line provides localization for the application's user interface.
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+                    new System.Globalization.CultureInfo("hu-HU");
 
             Application.ThreadException += new ThreadExceptionEventHandler(Form1_UIThreadException);
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
@@ -24,6 +30,7 @@ namespace e_Cafe
             // Add the event handler for handling non-UI thread exceptions to the event. 
             AppDomain.CurrentDomain.UnhandledException +=
                 new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+
 
             
             Application.EnableVisualStyles();

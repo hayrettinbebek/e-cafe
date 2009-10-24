@@ -52,16 +52,12 @@ namespace e_Cafe
             this.colNEM_ELADO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.advBandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.eCAFEDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eCAFEDataSetAFABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aFATableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetAFATableAdapters.AFATableAdapter();
             this.cIKKCSOPORTTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKKCSOPORTTableAdapter();
             this.cIKCSOPOTHERFILTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cIKCSOP_OTHER_FILTERTableAdapter = new e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -74,8 +70,6 @@ namespace e_Cafe
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).BeginInit();
@@ -92,7 +86,9 @@ namespace e_Cafe
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridView3.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView3.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView3.OptionsView.ShowViewCaption = true;
+            this.gridView3.PreviewFieldName = "OTHER_NAME";
             this.gridView3.ViewCaption = "Alcsoportok";
             this.gridView3.GotFocus += new System.EventHandler(this.gridView3_GotFocus);
             // 
@@ -140,12 +136,12 @@ namespace e_Cafe
             // gridControl1
             // 
             this.gridControl1.DataSource = this.cIKKCSOPORTBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             gridLevelNode1.LevelTemplate = this.gridView3;
             gridLevelNode1.RelationName = "CIKKCSOPORT_CIKCSOP_OTHER_FILTER";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl1.Location = new System.Drawing.Point(0, 25);
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -153,12 +149,11 @@ namespace e_Cafe
             this.repositoryItemCheckEdit2,
             this.repositoryItemComboBox1,
             this.repositoryItemGridLookUpEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(784, 356);
+            this.gridControl1.ShowOnlyPredefinedDetails = true;
+            this.gridControl1.Size = new System.Drawing.Size(1075, 528);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
-            this.gridView2,
-            this.advBandedGridView1,
             this.gridView3});
             // 
             // cIKKCSOPORTBindingSource
@@ -265,25 +260,6 @@ namespace e_Cafe
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
-            // gridView2
-            // 
-            this.gridView2.ChildGridLevelName = "Alcsoportok";
-            this.gridView2.GridControl = this.gridControl1;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.ViewCaption = "CIKCSOP_OTHER_FILTER";
-            // 
-            // advBandedGridView1
-            // 
-            this.advBandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand1});
-            this.advBandedGridView1.GridControl = this.gridControl1;
-            this.advBandedGridView1.Name = "advBandedGridView1";
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "gridBand1";
-            this.gridBand1.Name = "gridBand1";
-            // 
             // eCAFEDataSetBindingSource
             // 
             this.eCAFEDataSetBindingSource.AllowNew = true;
@@ -312,23 +288,13 @@ namespace e_Cafe
             // 
             this.cIKCSOP_OTHER_FILTERTableAdapter.ClearBeforeFill = true;
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(239, 15);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "simpleButton1";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
-            // 
             // frmCikkcsoport
             // 
             this._isEditForm = true;
             this._isInsertAndDelete = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 381);
-            this.Controls.Add(this.simpleButton1);
+            this.ClientSize = new System.Drawing.Size(1075, 528);
             this.Controls.Add(this.gridControl1);
             this.Name = "frmCikkcsoport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -346,8 +312,6 @@ namespace e_Cafe
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eCAFEDataSetAFABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cIKCSOPOTHERFILTERBindingSource)).EndInit();
@@ -371,7 +335,6 @@ namespace e_Cafe
         private DevExpress.XtraGrid.Columns.GridColumn colCIKKCSOPORT_NEV;
         private DevExpress.XtraGrid.Columns.GridColumn colAFA_KOD;
         private DevExpress.XtraGrid.Columns.GridColumn colNEM_ELADO;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private System.Windows.Forms.BindingSource cIKCSOPOTHERFILTERBindingSource;
         private e_Cafe.SQL.DataSets.ECAFEDataSetTableAdapters.CIKCSOP_OTHER_FILTERTableAdapter cIKCSOP_OTHER_FILTERTableAdapter;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
@@ -381,11 +344,8 @@ namespace e_Cafe
         private DevExpress.XtraGrid.Columns.GridColumn colCIKKCSOPORT_ID1;
         private DevExpress.XtraGrid.Columns.GridColumn colAKTIV;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
-        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView advBandedGridView1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
