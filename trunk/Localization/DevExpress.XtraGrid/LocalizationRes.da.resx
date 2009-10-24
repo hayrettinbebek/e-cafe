@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GridStringId.FileIsNotFoundError">
+    <value>Filen {0} ikke fundet</value>
+  </data>
+  <data name="GridStringId.ColumnViewExceptionMessage">
+    <value>Ønsker du at ændre værdien ?</value>
+  </data>
+  <data name="GridStringId.CustomizationCaption">
+    <value>Tilpasning</value>
+  </data>
+  <data name="GridStringId.CustomizationColumns">
+    <value>Kolonner</value>
+  </data>
+  <data name="GridStringId.CustomizationBands">
+    <value>Bånd</value>
+  </data>
+  <data name="GridStringId.PopupFilterAll">
+    <value>(Alle)</value>
+  </data>
+  <data name="GridStringId.PopupFilterCustom">
+    <value>(Brugerdefineret)</value>
+  </data>
+  <data name="GridStringId.PopupFilterBlanks">
+    <value>(Tom)</value>
+  </data>
+  <data name="GridStringId.PopupFilterNonBlanks">
+    <value>(Udfyldte)</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogFormCaption">
+    <value>Brugerdefineret autofilter</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCaption">
+    <value>Vis linjer her:</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioAnd">
+    <value>&amp;Og</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioOr">
+    <value>&amp;Eller</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogOkButton">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogClearFilter">
+    <value>&amp;Slet filter</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCancelButton">
+    <value>&amp;Annuller</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialog2FieldCheck">
+    <value>Felt</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionEQU">
+    <value>er lig med</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNEQ">
+    <value>er forskellig fra</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGT">
+    <value>er større end</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGTE">
+    <value>er større end eller lig med</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLT">
+    <value>er mindre end</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLTE">
+    <value>er mindre end eller lig med</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionBlanks">
+    <value>tom</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNonBlanks">
+    <value>udfyldt</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLike">
+    <value>ligner</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNotLike">
+    <value>ligner ikke</value>
+  </data>
+  <data name="GridStringId.MenuFooterSum">
+    <value>Sum</value>
+  </data>
+  <data name="GridStringId.MenuFooterMin">
+    <value>Min</value>
+  </data>
+  <data name="GridStringId.MenuFooterMax">
+    <value>Max</value>
+  </data>
+  <data name="GridStringId.MenuFooterCount">
+    <value>Antal</value>
+  </data>
+  <data name="GridStringId.MenuFooterAverage">
+    <value>Gennemsnit</value>
+  </data>
+  <data name="GridStringId.MenuFooterNone">
+    <value>Ingen</value>
+  </data>
+  <data name="GridStringId.MenuFooterSumFormat">
+    <value>SUM={0:#.##}</value>
+  </data>
+  <data name="GridStringId.MenuFooterMinFormat">
+    <value>MIN={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterMaxFormat">
+    <value>MAX={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCountFormat">
+    <value>{0}</value>
+  </data>
+	<data name="GridStringId.MenuFooterCountGroupFormat">
+		<value>Antal={0}</value>
+	</data>
+  <data name="GridStringId.MenuFooterAverageFormat">
+    <value>Gennemsnit={0:#.##}</value>
+  </data>
+	<data name="GridStringId.MenuFooterCustomFormat">
+		<value>Brugerdefineret={0}</value>
+	</data>
+  <data name="GridStringId.MenuColumnSortAscending">
+    <value>Sorter stigende</value>
+  </data>
+  <data name="GridStringId.MenuColumnSortDescending">
+    <value>Sorter faldende</value>
+  </data>
+  <data name="GridStringId.MenuColumnClearSorting">
+    <value>Ophæv sortering</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroup">
+    <value>Grupper efter dette felt</value>
+  </data>
+	<data name="GridStringId.FilterPanelCustomizeButton">
+		<value>Rediger filter</value>
+	</data>
+  <data name="GridStringId.MenuColumnUnGroup">
+    <value>Ophæv gruppering</value>
+  </data>
+  <data name="GridStringId.MenuColumnColumnCustomization">
+    <value>Kolonnevælger</value>
+  </data>
+  <data name="GridStringId.MenuColumnBestFit">
+    <value>Optimal bredde</value>
+  </data>
+  <data name="GridStringId.MenuColumnFilter">
+    <value>Kan filtreres</value>
+  </data>
+	<data name="GridStringId.MenuColumnFilterEditor">
+		<value>Filter redigering</value>
+	</data>
+  <data name="GridStringId.MenuColumnClearFilter">
+    <value>Ophæv filter</value>
+  </data>
+  <data name="GridStringId.MenuColumnBestFitAllColumns">
+    <value>Optimal bredde (alle kolonner)</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullExpand">
+    <value>Åben alle niveauer</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullCollapse">
+    <value>Luk alle niveauer</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelClearGrouping">
+    <value>Ophæv gruppering</value>
+  </data>
+  <data name="GridStringId.PrintDesignerBandedView">
+    <value>Udskriftsindstillinger (Rækkevisning)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerGridView">
+    <value>Udskriftsindstillinger (Gittervisning)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerCardView">
+    <value>Udskriftsindstillinger (kortvisning)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerBandHeader">
+    <value>Rækkehoved</value>
+  </data>
+  <data name="GridStringId.PrintDesignerDescription">
+    <value>Rediger udskriftsindstillinger for aktuel visning</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroupBox">
+    <value>Grupper efter</value>
+  </data>
+  <data name="GridStringId.CardViewNewCard">
+    <value>Nyt kort</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButton">
+    <value>Tilpas</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonFilter">
+    <value>Filter</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonSort">
+    <value>Sortering:</value>
+  </data>
+  <data name="GridStringId.GridGroupPanelText">
+    <value>Træk en kolonneoverskift hertil for at gruppere efter denne kolonne</value>
+  </data>
+  <data name="GridStringId.GridNewRowText">
+    <value>Klik her for at tilføje en række</value>
+  </data>
+	<data name="GridStringId.FilterBuilderOkButton">
+		<value>&amp;OK</value>
+	</data>
+	<data name="GridStringId.FilterBuilderCancelButton">
+		<value>&amp;Annuller</value>
+	</data>
+	<data name="GridStringId.FilterBuilderApplyButton">
+		<value>&amp;Anvend</value>
+	</data>
+	<data name="GridStringId.FilterBuilderCaption">
+		<value>Filteropbygning</value>
+	</data>
+  <data name="GridStringId.GridOutlookIntervals">
+	  <value>Ældre;Sidste måned;Tidligere denne måned;Tre uger siden;To uger siden;Sidste uge;;;;;;;;I går;I dag;I morgen;;;;;;;;Næste uge;Om to uger;Om tre uger;Senere denne måned;Næste måned;Efter næste måned;</value>
+  </data>
+</root>

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GridStringId.FileIsNotFoundError" xml:space="preserve">
+    <value>Fitxer {0} no trobat</value>
+  </data>
+  <data name="GridStringId.ColumnViewExceptionMessage" xml:space="preserve">
+    <value>Voleu corregir el valor?</value>
+  </data>
+  <data name="GridStringId.CustomizationCaption" xml:space="preserve">
+    <value>Personalitzar</value>
+  </data>
+  <data name="GridStringId.CustomizationColumns" xml:space="preserve">
+    <value>Columnes</value>
+  </data>
+  <data name="GridStringId.CustomizationBands" xml:space="preserve">
+    <value>Capçaleres</value>
+  </data>
+  <data name="GridStringId.PopupFilterAll" xml:space="preserve">
+    <value>(Tots)</value>
+  </data>
+  <data name="GridStringId.PopupFilterCustom" xml:space="preserve">
+    <value>(Personalitzat)</value>
+  </data>
+  <data name="GridStringId.PopupFilterBlanks" xml:space="preserve">
+    <value>(Nuls)</value>
+  </data>
+  <data name="GridStringId.PopupFilterNonBlanks" xml:space="preserve">
+    <value>(No Nuls)</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogFormCaption" xml:space="preserve">
+    <value>AutoFiltre personalitzat</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCaption" xml:space="preserve">
+    <value>Mostrar files on:</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioAnd" xml:space="preserve">
+    <value>&amp;I</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioOr" xml:space="preserve">
+    <value>&amp;O</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogOkButton" xml:space="preserve">
+    <value>&amp;Acceptar</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogClearFilter" xml:space="preserve">
+    <value>Treure fi&amp;ltre</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCancelButton" xml:space="preserve">
+    <value>&amp;Cancel·lar</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialog2FieldCheck" xml:space="preserve">
+    <value>Camp</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionEQU" xml:space="preserve">
+    <value>Igual a</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNEQ" xml:space="preserve">
+    <value>No és igual</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGT" xml:space="preserve">
+    <value>És major que</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGTE" xml:space="preserve">
+    <value>És major o igual que</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLT" xml:space="preserve">
+    <value>És menor que</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLTE" xml:space="preserve">
+    <value>És menor o igual que</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionBlanks" xml:space="preserve">
+    <value>Nuls</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNonBlanks" xml:space="preserve">
+    <value>No nuls</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLike" xml:space="preserve">
+    <value>Com</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNotLike" xml:space="preserve">
+    <value>No com</value>
+  </data>
+  <data name="GridStringId.MenuFooterSum" xml:space="preserve">
+    <value>Suma</value>
+  </data>
+  <data name="GridStringId.MenuFooterMin" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="GridStringId.MenuFooterMax" xml:space="preserve">
+    <value>Màx</value>
+  </data>
+  <data name="GridStringId.MenuFooterCount" xml:space="preserve">
+    <value>Recompte</value>
+  </data>
+  <data name="GridStringId.MenuFooterAverage" xml:space="preserve">
+    <value>Promig</value>
+  </data>
+  <data name="GridStringId.MenuFooterNone" xml:space="preserve">
+    <value>Cap</value>
+  </data>
+  <data name="GridStringId.MenuFooterSumFormat" xml:space="preserve">
+    <value>SUM={0:#.##}</value>
+  </data>
+  <data name="GridStringId.MenuFooterMinFormat" xml:space="preserve">
+    <value>MÍN={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterMaxFormat" xml:space="preserve">
+    <value>MÀX={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCountFormat" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCountGroupFormat" xml:space="preserve">
+    <value>Recompte={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterAverageFormat" xml:space="preserve">
+    <value>PRO={0:#.##}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCustomFormat" xml:space="preserve">
+    <value>Personalitzat={0}</value>
+  </data>
+  <data name="GridStringId.MenuColumnSortAscending" xml:space="preserve">
+    <value>Ordenació ascendent</value>
+  </data>
+  <data name="GridStringId.MenuColumnSortDescending" xml:space="preserve">
+    <value>Ordenació descendent</value>
+  </data>
+  <data name="GridStringId.MenuColumnClearSorting" xml:space="preserve">
+    <value>Desfer ordenació</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroup" xml:space="preserve">
+    <value>Agrupar per aquesta columna</value>
+  </data>
+  <data name="GridStringId.FilterPanelCustomizeButton" xml:space="preserve">
+    <value>Editar filtre</value>
+  </data>
+  <data name="GridStringId.MenuColumnUnGroup" xml:space="preserve">
+    <value>Desagrupar</value>
+  </data>
+  <data name="GridStringId.MenuColumnColumnCustomization" xml:space="preserve">
+    <value>Selector columnes</value>
+  </data>
+  <data name="GridStringId.MenuColumnBestFit" xml:space="preserve">
+    <value>Ample automàtic</value>
+  </data>
+  <data name="GridStringId.MenuColumnFilter" xml:space="preserve">
+    <value>Pot filtrar</value>
+  </data>
+  <data name="GridStringId.MenuColumnFilterEditor" xml:space="preserve">
+    <value>Editor de filtres</value>
+  </data>
+  <data name="GridStringId.MenuColumnClearFilter" xml:space="preserve">
+    <value>Treure filtre</value>
+  </data>
+  <data name="GridStringId.MenuColumnBestFitAllColumns" xml:space="preserve">
+    <value>Ample automàtic (totes les columnes)</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullExpand" xml:space="preserve">
+    <value>Expandir tot</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullCollapse" xml:space="preserve">
+    <value>Contraure tot</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelClearGrouping" xml:space="preserve">
+    <value>Treure agrupar</value>
+  </data>
+  <data name="GridStringId.PrintDesignerBandedView" xml:space="preserve">
+    <value>Configuració impressió (vista reixa amb capçaleres)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerGridView" xml:space="preserve">
+    <value>Configuració impressió (vista reixa)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerCardView" xml:space="preserve">
+    <value>Configuració impressió (vista fitxes)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerBandHeader" xml:space="preserve">
+    <value>Capçalera</value>
+  </data>
+  <data name="GridStringId.PrintDesignerDescription" xml:space="preserve">
+    <value>Configurar varies opcions d'impressió de la vista actual.</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroupBox" xml:space="preserve">
+    <value>Panel agrupar</value>
+  </data>
+  <data name="GridStringId.CardViewNewCard" xml:space="preserve">
+    <value>Nova Fitxa</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButton" xml:space="preserve">
+    <value>Personalitzar</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonFilter" xml:space="preserve">
+    <value>Filtre</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonSort" xml:space="preserve">
+    <value>Ordenació:</value>
+  </data>
+  <data name="GridStringId.GridGroupPanelText" xml:space="preserve">
+    <value>Arrossegueu una columna aquí per agrupar per aquesta columna</value>
+  </data>
+  <data name="GridStringId.GridNewRowText" xml:space="preserve">
+    <value>Feu clic aquí per afegir una nova línea</value>
+  </data>
+  <data name="GridStringId.FilterBuilderOkButton" xml:space="preserve">
+    <value>&amp;Acceptar</value>
+  </data>
+  <data name="GridStringId.FilterBuilderCancelButton" xml:space="preserve">
+    <value>&amp;Cancel·lar</value>
+  </data>
+  <data name="GridStringId.FilterBuilderApplyButton" xml:space="preserve">
+    <value>&amp;Aplicar</value>
+  </data>
+  <data name="GridStringId.FilterBuilderCaption" xml:space="preserve">
+    <value>Editor de filtres</value>
+  </data>
+  <data name="GridStringId.GridOutlookIntervals" xml:space="preserve">
+    <value>Antics;mes Passat;fa Tres setmanes;fa dues setmanes;setmana passada;;;;;;;;ahir;avui;demà;;;;;…. propera  setmana;dins de 2 setmanes;dins de 3 setmanes;mes que ve;futurs;</value>
+  </data>
+</root>

@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GridStringId.LayoutViewLabelCardArrangeRule" xml:space="preserve">
+    <value>Kural Düzenle</value>
+  </data>
+  <data name="GridStringId.FileIsNotFoundError" xml:space="preserve">
+    <value>{0} dosyası bulunamadı</value>
+  </data>
+  <data name="GridStringId.ColumnViewExceptionMessage" xml:space="preserve">
+    <value>Değeri düzeltmek ister misin?</value>
+  </data>
+  <data name="GridStringId.CustomizationCaption" xml:space="preserve">
+    <value>Özelleştirme</value>
+  </data>
+  <data name="GridStringId.CustomizationColumns" xml:space="preserve">
+    <value>Kolonlar</value>
+  </data>
+  <data name="GridStringId.PopupFilterAll" xml:space="preserve">
+    <value>(Hepsi)</value>
+  </data>
+  <data name="GridStringId.PopupFilterCustom" xml:space="preserve">
+    <value>(Özel)</value>
+  </data>
+  <data name="GridStringId.PopupFilterBlanks" xml:space="preserve">
+    <value>(Boş alanlar)</value>
+  </data>
+  <data name="GridStringId.PopupFilterNonBlanks" xml:space="preserve">
+    <value>(Boş olmayan alanlar)</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCaption" xml:space="preserve">
+    <value>Sıraları göster:</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioAnd" xml:space="preserve">
+    <value>&amp;Ve</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioOr" xml:space="preserve">
+    <value>&amp;Ya da</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogOkButton" xml:space="preserve">
+    <value>&amp;Tamam</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogClearFilter" xml:space="preserve">
+    <value>Filtreyi &amp;Sıfırla</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCancelButton" xml:space="preserve">
+    <value>&amp;İptal</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialog2FieldCheck" xml:space="preserve">
+    <value>Alan</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionEQU" xml:space="preserve">
+    <value>eşittir</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNEQ" xml:space="preserve">
+    <value>eşit değildir</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGT" xml:space="preserve">
+    <value>büyüktür</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGTE" xml:space="preserve">
+    <value>büyük ya da eşittir</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLT" xml:space="preserve">
+    <value>küçüktür</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLTE" xml:space="preserve">
+    <value>küçük ya da eşittir</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionBlanks" xml:space="preserve">
+    <value>boş alanlar</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNonBlanks" xml:space="preserve">
+    <value>boş olmayan alanlar</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLike" xml:space="preserve">
+    <value>benzer</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNotLike" xml:space="preserve">
+    <value>benzemez</value>
+  </data>
+  <data name="GridStringId.MenuFooterSum" xml:space="preserve">
+    <value>Toplam</value>
+  </data>
+  <data name="GridStringId.MenuFooterMin" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="GridStringId.MenuFooterMax" xml:space="preserve">
+    <value>Maks</value>
+  </data>
+  <data name="GridStringId.MenuFooterCount" xml:space="preserve">
+    <value>Adet</value>
+  </data>
+  <data name="GridStringId.MenuFooterAverage" xml:space="preserve">
+    <value>Ortalama</value>
+  </data>
+  <data name="GridStringId.MenuFooterNone" xml:space="preserve">
+    <value>Hiçbiri</value>
+  </data>
+  <data name="GridStringId.MenuFooterSumFormat" xml:space="preserve">
+    <value>TOPLAM={0:#-##}</value>
+  </data>
+  <data name="GridStringId.MenuFooterMinFormat" xml:space="preserve">
+    <value>MIN={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterMaxFormat" xml:space="preserve">
+    <value>MAKS={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCountFormat" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCountGroupFormat" xml:space="preserve">
+    <value>Adet={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterAverageFormat" xml:space="preserve">
+    <value>ORT={0:#-##}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCustomFormat" xml:space="preserve">
+    <value>Özel={0}</value>
+  </data>
+  <data name="GridStringId.MenuColumnSortAscending" xml:space="preserve">
+    <value>Artarak Sıralat</value>
+  </data>
+  <data name="GridStringId.MenuColumnSortDescending" xml:space="preserve">
+    <value>Azalarak Sıralat</value>
+  </data>
+  <data name="GridStringId.MenuColumnClearSorting" xml:space="preserve">
+    <value>Sıralamayı Temizle</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroup" xml:space="preserve">
+    <value>Bu Kolona göre Grupla</value>
+  </data>
+  <data name="GridStringId.FilterPanelCustomizeButton" xml:space="preserve">
+    <value>Filtreyi Düzenle</value>
+  </data>
+  <data name="GridStringId.MenuColumnUnGroup" xml:space="preserve">
+    <value>Grubu Dağıt</value>
+  </data>
+  <data name="GridStringId.MenuColumnColumnCustomization" xml:space="preserve">
+    <value>Kolon Seçici</value>
+  </data>
+  <data name="GridStringId.MenuColumnBestFit" xml:space="preserve">
+    <value>En uygun</value>
+  </data>
+  <data name="GridStringId.MenuColumnFilter" xml:space="preserve">
+    <value>Filtre edebilir</value>
+  </data>
+  <data name="GridStringId.MenuColumnFilterEditor" xml:space="preserve">
+    <value>Filtre Düzenleyici</value>
+  </data>
+  <data name="GridStringId.MenuColumnClearFilter" xml:space="preserve">
+    <value>Filtreyi Temizle</value>
+  </data>
+  <data name="GridStringId.MenuColumnBestFitAllColumns" xml:space="preserve">
+    <value>En uygun (tüm kolonlar)</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullExpand" xml:space="preserve">
+    <value>Tamamen genişlet</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullCollapse" xml:space="preserve">
+    <value>Tamamen daralt</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelClearGrouping" xml:space="preserve">
+    <value>Gruplamayı Temizle</value>
+  </data>
+  <data name="GridStringId.PrintDesignerBandedView" xml:space="preserve">
+    <value>Yazdırma Seçenekleri</value>
+  </data>
+  <data name="GridStringId.PrintDesignerGridView" xml:space="preserve">
+    <value>Yazdırma Seçenekleri</value>
+  </data>
+  <data name="GridStringId.PrintDesignerCardView" xml:space="preserve">
+    <value>Yazdırma Seçenekleri</value>
+  </data>
+  <data name="GridStringId.PrintDesignerDescription" xml:space="preserve">
+    <value>Geçerli görünüm için değişik yazdırma seçenekleri kur.</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroupBox" xml:space="preserve">
+    <value>Kutuya göre Grupla</value>
+  </data>
+  <data name="GridStringId.CardViewNewCard" xml:space="preserve">
+    <value>Yeni Kart</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButton" xml:space="preserve">
+    <value>Özelleştir</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonFilter" xml:space="preserve">
+    <value>Filtre</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonSort" xml:space="preserve">
+    <value>Sırala:</value>
+  </data>
+  <data name="GridStringId.GridGroupPanelText" xml:space="preserve">
+    <value>Bir kolona göre gruplamak için o kolonun başlığını buraya taşı</value>
+  </data>
+  <data name="GridStringId.GridNewRowText" xml:space="preserve">
+    <value>Yeni bir satır eklemek için buraya tıkla</value>
+  </data>
+  <data name="GridStringId.FilterBuilderOkButton" xml:space="preserve">
+    <value>&amp;Tamam</value>
+  </data>
+  <data name="GridStringId.FilterBuilderCancelButton" xml:space="preserve">
+    <value>&amp;İptal</value>
+  </data>
+  <data name="GridStringId.FilterBuilderApplyButton" xml:space="preserve">
+    <value>&amp;Uygula</value>
+  </data>
+  <data name="GridStringId.FilterBuilderCaption" xml:space="preserve">
+    <value>Filtre Oluşturucu</value>
+  </data>
+  <data name="GridStringId.GridOutlookIntervals" xml:space="preserve">
+    <value>Daha Eski;Geçen Ay;Bu Ayın Başında;Üç Hafta Önce;İki Hafta Önce;Geçen Hafta;;;;;;;;;;Dün;Bugün;Yarın;;;;;;;;;;Haftaya;İki Hafta Sonra;Üç Hafta Sonra;Bu Ayın Sonunda;Öbür Ayda;Öbür Ayın İllerisinde;</value>
+  </data>
+  <data name="GridStringId.CustomizationFormColumnHint" xml:space="preserve">
+    <value>Düzeni özelleştirmek için kolonları buraya taşı bırak</value>
+  </data>
+  <data name="GridStringId.CustomizationFormBandHint" xml:space="preserve">
+    <value>Düzeni özelleştirmek için bantları buraya taşı bırak</value>
+  </data>
+  <data name="GridStringId.LayoutViewCloseZoomBtnHintClose" xml:space="preserve">
+    <value>Görünümü Geri Yükle</value>
+  </data>
+  <data name="GridStringId.LayoutViewCloseZoomBtnHintZoom" xml:space="preserve">
+    <value>Detayı Çoğalt</value>
+  </data>
+  <data name="GridStringId.LayoutViewColumnModeBtnHint" xml:space="preserve">
+    <value>Bir Kolon</value>
+  </data>
+  <data name="GridStringId.LayoutViewMultiColumnModeBtnHint" xml:space="preserve">
+    <value>Birçok Kolon</value>
+  </data>
+  <data name="GridStringId.LayoutViewMultiRowModeBtnHint" xml:space="preserve">
+    <value>Birçok Satır</value>
+  </data>
+  <data name="GridStringId.LayoutViewPanBtnHint" xml:space="preserve">
+    <value>Kaydırarak</value>
+  </data>
+  <data name="GridStringId.LayoutViewRowModeBtnHint" xml:space="preserve">
+    <value>Bir Satır</value>
+  </data>
+  <data name="GridStringId.LayoutViewSingleModeBtnHint" xml:space="preserve">
+    <value>Bir Kart</value>
+  </data>
+  <data name="GridStringId.LayoutViewCustomizeBtnHint" xml:space="preserve">
+    <value>Özelleştirme</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonApply" xml:space="preserve">
+    <value>&amp;Uygula</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonCustomizeHide" xml:space="preserve">
+    <value>Özelleştirmeyi &amp;Gizle</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonCustomizeShow" xml:space="preserve">
+    <value>Özelleştirmeyi G&amp;öster</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonLoadLayout" xml:space="preserve">
+    <value>Düzeni &amp;Yükle...</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonPreview" xml:space="preserve">
+    <value>Daha &amp;Fazla Kart Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonReset" xml:space="preserve">
+    <value>Şablon Kartını &amp;Sıfırla</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonSaveLayout" xml:space="preserve">
+    <value>Düzeni &amp;Kaydet...</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonShrinkToMinimum" xml:space="preserve">
+    <value>Şablon Kartını Kü&amp;çült</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupCards" xml:space="preserve">
+    <value>Kartlar</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupFields" xml:space="preserve">
+    <value>Alanlar</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupCaptions" xml:space="preserve">
+    <value>Başlık</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupCustomization" xml:space="preserve">
+    <value>Özelleştirme</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupHiddenItems" xml:space="preserve">
+    <value>Gizli Nesneler</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupIndents" xml:space="preserve">
+    <value>Girintiler</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupIntervals" xml:space="preserve">
+    <value>Aralıklar</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelCaptionLocation" xml:space="preserve">
+    <value>Alan Başlığı Yeri:</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelCardEdgeAlignment" xml:space="preserve">
+    <value>Kart Kenarı Sıralaması:</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelGroupCaptionLocation" xml:space="preserve">
+    <value>Baş Yer Gruplama:</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelHorizontal" xml:space="preserve">
+    <value>Yatay Aralık</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowCardBorder" xml:space="preserve">
+    <value>Kenar Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowCardCaption" xml:space="preserve">
+    <value>Başlık Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowCardExpandButton" xml:space="preserve">
+    <value>Genişleme Düğmesini Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowFieldBorder" xml:space="preserve">
+    <value>Kenar Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowFieldHint" xml:space="preserve">
+    <value>İpucu Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowFilterPanel" xml:space="preserve">
+    <value>Filtre Panelini Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowHeaderPanel" xml:space="preserve">
+    <value>Başlık Panelini Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowLines" xml:space="preserve">
+    <value>Satırları Göster</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelSpacing" xml:space="preserve">
+    <value>Aralık</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelTextAlignment" xml:space="preserve">
+    <value>Alan Başlığı Metin Hizalaması:</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelTextIndent" xml:space="preserve">
+    <value>Metin Girintileri</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelVertical" xml:space="preserve">
+    <value>Dikey Aralık</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelViewMode" xml:space="preserve">
+    <value>Görünüm Biçimi:</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupLayout" xml:space="preserve">
+    <value>Düzen</value>
+  </data>
+  <data name="GridStringId.LayoutViewPageTemplateCard" xml:space="preserve">
+    <value>Şablon Kartı</value>
+  </data>
+  <data name="GridStringId.LayoutViewPageViewLayout" xml:space="preserve">
+    <value>Görünüm Düzeni</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupView" xml:space="preserve">
+    <value>Görünüm</value>
+  </data>
+  <data name="GridStringId.PrintDesignerLayoutView" xml:space="preserve">
+    <value>Yazdırma Seçenekleri (Düzen Görünümü)</value>
+  </data>
+  <data name="GridStringId.LayoutViewGroupPropertyGrid" xml:space="preserve">
+    <value>Özellik Tablosu</value>
+  </data>
+  <data name="GridStringId.LayoutViewCustomizationFormCaption" xml:space="preserve">
+    <value>Düzen Görünümü Özelleştirmesi</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonCancel" xml:space="preserve">
+    <value>&amp;İptal</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonOk" xml:space="preserve">
+    <value>&amp;Tamam</value>
+  </data>
+  <data name="GridStringId.LayoutViewCustomizationFormDescription" xml:space="preserve">
+    <value>Kart düzenini ve özelleştirme menüsünü taşıyıp bırakarak özelleştir. Veriyi Görünüm Düzeni sayfasında önizle.</value>
+  </data>
+  <data name="GridStringId.LayoutModifiedWarning" xml:space="preserve">
+    <value>Düzen değişti. Değişiklikleri kaydetmek ister misin?</value>
+  </data>
+</root>

@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GridStringId.FileIsNotFoundError" xml:space="preserve">
+    <value>Filen {0} kan inte hittas</value>
+  </data>
+  <data name="GridStringId.ColumnViewExceptionMessage" xml:space="preserve">
+    <value>Vill du ändra värdet?</value>
+  </data>
+  <data name="GridStringId.CustomizationCaption" xml:space="preserve">
+    <value>Anpassa</value>
+  </data>
+  <data name="GridStringId.CustomizationColumns" xml:space="preserve">
+    <value>Kolumner</value>
+  </data>
+  <data name="GridStringId.CustomizationBands" xml:space="preserve">
+    <value>Band</value>
+  </data>
+  <data name="GridStringId.PopupFilterAll" xml:space="preserve">
+    <value>(Alla)</value>
+  </data>
+  <data name="GridStringId.PopupFilterCustom" xml:space="preserve">
+    <value>(Anpassa)</value>
+  </data>
+  <data name="GridStringId.PopupFilterBlanks" xml:space="preserve">
+    <value>(Tom)</value>
+  </data>
+  <data name="GridStringId.PopupFilterNonBlanks" xml:space="preserve">
+    <value>(Inte tom)</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogFormCaption" xml:space="preserve">
+    <value>Anpassat autofilter</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCaption" xml:space="preserve">
+    <value>Visa rader där:</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioAnd" xml:space="preserve">
+    <value>&amp;och</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogRadioOr" xml:space="preserve">
+    <value>&amp;eller</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogOkButton" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogClearFilter" xml:space="preserve">
+    <value>Rensa filter</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogCancelButton" xml:space="preserve">
+    <value>&amp;Avbryt</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialog2FieldCheck" xml:space="preserve">
+    <value>Fält</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionEQU" xml:space="preserve">
+    <value>är lika med</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNEQ" xml:space="preserve">
+    <value>är inte lika med</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGT" xml:space="preserve">
+    <value>är större än</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionGTE" xml:space="preserve">
+    <value>är större än eller lika med</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLT" xml:space="preserve">
+    <value>är mindre än</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLTE" xml:space="preserve">
+    <value>är mindre än eller lika med</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionBlanks" xml:space="preserve">
+    <value>är tom</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNonBlanks" xml:space="preserve">
+    <value>är inte tom</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionLike" xml:space="preserve">
+    <value>innehåller</value>
+  </data>
+  <data name="GridStringId.CustomFilterDialogConditionNotLike" xml:space="preserve">
+    <value>innehåller inte</value>
+  </data>
+  <data name="GridStringId.MenuFooterSum" xml:space="preserve">
+    <value>Sum</value>
+  </data>
+  <data name="GridStringId.MenuFooterMin" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="GridStringId.MenuFooterMax" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="GridStringId.MenuFooterCount" xml:space="preserve">
+    <value>Antal</value>
+  </data>
+  <data name="GridStringId.MenuFooterAverage" xml:space="preserve">
+    <value>Medelvärde</value>
+  </data>
+  <data name="GridStringId.MenuFooterNone" xml:space="preserve">
+    <value>Ingen</value>
+  </data>
+  <data name="GridStringId.MenuFooterSumFormat" xml:space="preserve">
+    <value>SUM={0:#.##}</value>
+  </data>
+  <data name="GridStringId.MenuFooterMinFormat" xml:space="preserve">
+    <value>MIN={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterMaxFormat" xml:space="preserve">
+    <value>MAX={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCountFormat" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCountGroupFormat" xml:space="preserve">
+    <value>Antal={0}</value>
+  </data>
+  <data name="GridStringId.MenuFooterAverageFormat" xml:space="preserve">
+    <value>AVR={0:#.##}</value>
+  </data>
+  <data name="GridStringId.MenuFooterCustomFormat" xml:space="preserve">
+    <value>Anpassa={0}</value>
+  </data>
+  <data name="GridStringId.MenuColumnSortAscending" xml:space="preserve">
+    <value>Sortering stigande</value>
+  </data>
+  <data name="GridStringId.MenuColumnSortDescending" xml:space="preserve">
+    <value>Sortering fallande</value>
+  </data>
+  <data name="GridStringId.MenuColumnClearSorting" xml:space="preserve">
+    <value>Rensa sortering</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroup" xml:space="preserve">
+    <value>Gruppera på denna kolumn</value>
+  </data>
+  <data name="GridStringId.FilterPanelCustomizeButton" xml:space="preserve">
+    <value>Editera filter</value>
+  </data>
+  <data name="GridStringId.MenuColumnUnGroup" xml:space="preserve">
+    <value>Rensa gruppering</value>
+  </data>
+  <data name="GridStringId.MenuColumnColumnCustomization" xml:space="preserve">
+    <value>Välj kolumn</value>
+  </data>
+  <data name="GridStringId.MenuColumnBestFit" xml:space="preserve">
+    <value>Automatisk kolumnbredd</value>
+  </data>
+  <data name="GridStringId.MenuColumnFilter" xml:space="preserve">
+    <value>Kan filtrera</value>
+  </data>
+  <data name="GridStringId.MenuColumnFilterEditor" xml:space="preserve">
+    <value>Filtereditor</value>
+  </data>
+  <data name="GridStringId.MenuColumnClearFilter" xml:space="preserve">
+    <value>Rensa filter</value>
+  </data>
+  <data name="GridStringId.MenuColumnBestFitAllColumns" xml:space="preserve">
+    <value>Automatisk kolumnbredd (alla kolumner)</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullExpand" xml:space="preserve">
+    <value>Öppna alla</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelFullCollapse" xml:space="preserve">
+    <value>Stäng alla</value>
+  </data>
+  <data name="GridStringId.MenuGroupPanelClearGrouping" xml:space="preserve">
+    <value>Rensa gruppering</value>
+  </data>
+  <data name="GridStringId.PrintDesignerBandedView" xml:space="preserve">
+    <value>Utskriftsinställningar (Bandvisning)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerGridView" xml:space="preserve">
+    <value>Utskriftsinställningar (Tabellvisning)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerCardView" xml:space="preserve">
+    <value>Utskriftsinställningar  (Kortvisning)</value>
+  </data>
+  <data name="GridStringId.PrintDesignerBandHeader" xml:space="preserve">
+    <value>Bandhuvud</value>
+  </data>
+  <data name="GridStringId.PrintDesignerDescription" xml:space="preserve">
+    <value>Utskriftsinställningar för aktuell visning.</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroupBox" xml:space="preserve">
+    <value>Gruppera på box</value>
+  </data>
+  <data name="GridStringId.CardViewNewCard" xml:space="preserve">
+    <value>Nytt kort</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButton" xml:space="preserve">
+    <value>Anpassa</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonFilter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="GridStringId.CardViewQuickCustomizationButtonSort" xml:space="preserve">
+    <value>Sortera:</value>
+  </data>
+  <data name="GridStringId.GridGroupPanelText" xml:space="preserve">
+    <value>För att gruppera, flytta kolumnrubrik hit</value>
+  </data>
+  <data name="GridStringId.GridNewRowText" xml:space="preserve">
+    <value>Klicka här för att lägga till ny rad</value>
+  </data>
+  <data name="GridStringId.GridOutlookIntervals" xml:space="preserve">
+    <value>Äldre;Förra månaden;Tidigare den här månaden;Tre veckor sedan;Två veckor sedan;Förra veckan;;;;;;;;Igår;Idag;Imorgon;;;;;;;;Nästa vecka;Två veckor framåt;Tre veckor framåt;Senare den är månaden;Nästa månad;Efter nästa månad;</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowFieldHint" xml:space="preserve">
+    <value>Visa tips</value>
+  </data>
+  <data name="GridStringId.LayoutViewRowModeBtnHint" xml:space="preserve">
+    <value>En rad</value>
+  </data>
+  <data name="GridStringId.MenuColumnGroupSummarySortFormat" xml:space="preserve">
+    <value>{1} av - '{0}' - {2}</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowLines" xml:space="preserve">
+    <value>Visa linjer</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonCancel" xml:space="preserve">
+    <value>&amp;Avbryt</value>
+  </data>
+  <data name="GridStringId.MenuColumnAverageSummaryTypeDescription" xml:space="preserve">
+    <value>Medelvärde</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowCardCaption" xml:space="preserve">
+    <value>Visa rubrik</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowFieldBorder" xml:space="preserve">
+    <value>Visa kantlinje</value>
+  </data>
+  <data name="GridStringId.MenuColumnSortGroupBySummaryMenu" xml:space="preserve">
+    <value>Summa för sortering</value>
+  </data>
+  <data name="GridStringId.MenuColumnShowColumn" xml:space="preserve">
+    <value>Visa kolumnen</value>
+  </data>
+  <data name="GridStringId.LayoutViewSingleModeBtnHint" xml:space="preserve">
+    <value>Ett kort</value>
+  </data>
+  <data name="GridStringId.FilterBuilderCancelButton" xml:space="preserve">
+    <value>&amp;Avbryt</value>
+  </data>
+  <data name="GridStringId.FilterBuilderApplyButton" xml:space="preserve">
+    <value>&amp;Verkställ</value>
+  </data>
+  <data name="GridStringId.LayoutViewLabelShowCardBorder" xml:space="preserve">
+    <value>Visa kantlinje</value>
+  </data>
+  <data name="GridStringId.MenuColumnCountSummaryTypeDescription" xml:space="preserve">
+    <value>Antal</value>
+  </data>
+  <data name="GridStringId.MenuColumnResetGroupSummarySort" xml:space="preserve">
+    <value>Rensa summa för sortering</value>
+  </data>
+  <data name="GridStringId.MenuColumnRemoveColumn" xml:space="preserve">
+    <value>Ta bort kolumnen</value>
+  </data>
+  <data name="GridStringId.LayoutViewButtonApply" xml:space="preserve">
+    <value>&amp;Verkställ</value>
+  </data>
+</root>
