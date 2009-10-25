@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="pgrProofing.Text" xml:space="preserve">
+    <value>Comprobar ortográfia</value>
+  </data>
+  <data name="chkReminder.Properties.Caption" xml:space="preserve">
+    <value>&amp;Recordatorio</value>
+  </data>
+  <data name="btnSave.Caption" xml:space="preserve">
+    <value>&amp;Guardar</value>
+  </data>
+  <data name="toolTipTitleItem3.Text" xml:space="preserve">
+    <value>Mostrar Como</value>
+  </data>
+  <data name="toolTipItem1.Text" xml:space="preserve">
+    <value>Guardar este elemento y cerrar la ventana.</value>
+  </data>
+  <data name="pgrActions.Text" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <data name="ribPageAppointment.Text" xml:space="preserve">
+    <value>Cita</value>
+  </data>
+  <data name="toolTipItem2.Text" xml:space="preserve">
+    <value>Eliminar este elemento.</value>
+  </data>
+  <data name="toolTipItem6.Text" xml:space="preserve">
+    <value>Comprobar la ortografía y la gramática del documento.</value>
+  </data>
+  <data name="toolTipItem4.Text" xml:space="preserve">
+    <value>Etiquetar este elemento</value>
+  </data>
+  <data name="layoutResource.Text" xml:space="preserve">
+    <value>Recurso:</value>
+  </data>
+  <data name="layoutSubject.Text" xml:space="preserve">
+    <value>Asunto:</value>
+  </data>
+  <data name="toolTipTitleItem5.Text" xml:space="preserve">
+    <value>Repetición (Ctrl+G)</value>
+  </data>
+  <data name="toolTipTitleItem4.Text" xml:space="preserve">
+    <value>Etiqueta</value>
+  </data>
+  <data name="barEditLabelAs.Caption" xml:space="preserve">
+    <value>Etiquetar Como:</value>
+  </data>
+  <data name="btnSaveAndClose.Caption" xml:space="preserve">
+    <value>&amp;Guardar y Cerrar</value>
+  </data>
+  <data name="toolTipItem3.Text" xml:space="preserve">
+    <value>Cambiar como se muestra este 
+elemento en su agenda.</value>
+  </data>
+  <data name="toolTipTitleItem2.Text" xml:space="preserve">
+    <value>Eliminar (Ctrl+D)</value>
+  </data>
+  <data name="toolTipItem7.Text" xml:space="preserve">
+    <value>Cerrar (Alt+F4)</value>
+  </data>
+  <data name="pgrOptions.Text" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="layoutResources.Text" xml:space="preserve">
+    <value>Recurso:</value>
+  </data>
+  <data name="toolTipTitleItem6.Text" xml:space="preserve">
+    <value>Ortografía y Gramática (F7)</value>
+  </data>
+  <data name="edtResources.EditValue" xml:space="preserve">
+    <value>(Ninguno)</value>
+  </data>
+  <data name="toolTipTitleItem1.Text" xml:space="preserve">
+    <value>Guardar y Cerrar</value>
+  </data>
+  <data name="layoutLocation.Text" xml:space="preserve">
+    <value>&amp;Lugar:</value>
+  </data>
+  <data name="btnDelete.Caption" xml:space="preserve">
+    <value>&amp;Eliminar</value>
+  </data>
+  <data name="toolTipItem5.Text" xml:space="preserve">
+    <value>Convertir este elemento en repetible, o editar el patrón de recurrencia.
+
+Un elemento recurrente se repite según una planificación.</value>
+  </data>
+  <data name="toolTipItem8.Text" xml:space="preserve">
+    <value>Guardar (Ctrl+S)</value>
+  </data>
+  <data name="btnClose.Caption" xml:space="preserve">
+    <value>&amp;Cerrar</value>
+  </data>
+  <data name="btnRecurrence.Caption" xml:space="preserve">
+    <value>Re&amp;petición</value>
+  </data>
+  <data name="layoutStartDate.Text" xml:space="preserve">
+    <value>Hora Inicio:</value>
+  </data>
+  <data name="btnSpelling.Caption" xml:space="preserve">
+    <value>Ortografía</value>
+  </data>
+  <data name="layoutEndDate.Text" xml:space="preserve">
+    <value>Hora Finalización:</value>
+  </data>
+  <data name="chkAllDay.Properties.Caption" xml:space="preserve">
+    <value>Acontecimiento de todo el día</value>
+  </data>
+  <data name="barEditShowTimeAs.Caption" xml:space="preserve">
+    <value>Mostrar Como:</value>
+  </data>
+</root>
