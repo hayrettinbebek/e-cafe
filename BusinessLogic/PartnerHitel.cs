@@ -1,14 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-
-using XPTable;
 using XPTable.Models;
-using XPTable.Renderers;
 
 namespace BusinessLogic
 {

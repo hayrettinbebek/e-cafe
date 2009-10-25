@@ -1,10 +1,5 @@
 using System;
-using System.Data;
-using System.Drawing;
-using System.Collections;
 using System.Windows.Forms;
-using System.Globalization;
-using System.ComponentModel;
 
 namespace GridExtensions.GridFilters
 {

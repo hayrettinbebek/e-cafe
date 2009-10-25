@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Globalization;
+using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+using System.Globalization;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using BusinessLogic;
-using System.Runtime.InteropServices ;
-using System.ComponentModel;
 
 namespace GUI
 {

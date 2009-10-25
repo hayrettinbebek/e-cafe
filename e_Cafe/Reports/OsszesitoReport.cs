@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using ReportPrinting;
 using System.Data;
+using System.Drawing;
 using BusinessLogic;
+using ReportPrinting;
 
 namespace e_Cafe.Reports
 {

@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using e_Cafe.Reports;
-using XPTable;
-using XPTable.Models;
-using XPTable.Renderers;
-using GUI;
-
 using BusinessLogic;
+using e_Cafe.Reports;
+using GUI;
+using XPTable.Renderers;
 
 namespace e_Cafe.FrontOffice
 {

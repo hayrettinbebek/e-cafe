@@ -1,11 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 using BusinessLogic;
 using e_Cafe.Keszlet;
-using e_Cafe.SQL;
 
 namespace e_Cafe.Torzsek
 {

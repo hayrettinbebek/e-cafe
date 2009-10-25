@@ -4,9 +4,6 @@
 
 using System;
 using System.Drawing;
-using System.Drawing.Printing;
-using System.Collections;
-using System.Diagnostics;
 
 namespace ReportPrinting
 {

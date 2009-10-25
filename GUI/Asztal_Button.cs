@@ -1,11 +1,11 @@
 ﻿namespace GUI
 {
-    using System.Runtime.InteropServices;
     using System;
     using System.ComponentModel;
-    using System.Windows.Forms;
     using System.Drawing;
     using System.Drawing.Drawing2D;
+    using System.Runtime.InteropServices;
+    using System.Windows.Forms;
     using BusinessLogic;
 
     public enum  Asztal_colors : int

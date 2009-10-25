@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Text;
 using GUI.billentyu;
-using System.ComponentModel;
 
 
 namespace GUI

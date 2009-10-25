@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Windows.Forms;
-using System.Drawing;
-using BusinessLogic;
-using System.IO;
 using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace e_Cafe.Admin
 {

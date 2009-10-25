@@ -2,9 +2,7 @@
 // See License.txt that should have been included with this source file.
 // or see http://www.mag37.com/projects/Printing/
 
-using System;
 using System.Drawing;
-using System.Diagnostics;
 
 namespace ReportPrinting
 {

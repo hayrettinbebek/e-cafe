@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using e_Cafe.SQL.DataSets;
-using e_Cafe.Reports;
-
 using BusinessLogic;
+using e_Cafe.Reports;
+using e_Cafe.SQL.DataSets;
 
 namespace e_Cafe.Keszlet
 {
