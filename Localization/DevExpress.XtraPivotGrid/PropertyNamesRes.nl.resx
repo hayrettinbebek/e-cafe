@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.VerticalContentSplitting" xml:space="preserve">
+    <value>Verticale gegevens-scheiding</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintHorzLines" xml:space="preserve">
+    <value>Print horizontale lijnen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintVertLines" xml:space="preserve">
+    <value>Print verticale lijnen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintDataHeaders" xml:space="preserve">
+    <value>Print gegevenskoppen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintFilterHeaders" xml:space="preserve">
+    <value>Print filterkoppen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintColumnHeaders" xml:space="preserve">
+    <value>Print kolomkoppen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintRowHeaders" xml:space="preserve">
+    <value>Print rijkoppen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintHeadersOnEveryPage" xml:space="preserve">
+    <value>Print koppen op elke pagina</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.UsePrintAppearance" xml:space="preserve">
+    <value>Gebruik printweergave</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.ColumnFieldValueSeparator" xml:space="preserve">
+    <value>Kolom-veldwaarde scheiding</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.RowFieldValueSeparator" xml:space="preserve">
+    <value>Rij-veldwaarde scheiding</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.MergeColumnFieldValues" xml:space="preserve">
+    <value>Veldwaarden in kolommen samenvoegen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.MergeRowFieldValues" xml:space="preserve">
+    <value>Veldwaarden in rijen samenvoegen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintUnusedFilterFields" xml:space="preserve">
+    <value>Print ongebruikte filtervelden</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PageSettings" xml:space="preserve">
+    <value>Pagina instellingen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperKind" xml:space="preserve">
+    <value>Papiertype</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperWidth" xml:space="preserve">
+    <value>Papierbreedte</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperHeight" xml:space="preserve">
+    <value>Papierhoogte</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.Landscape" xml:space="preserve">
+    <value>Liggend</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.Margins" xml:space="preserve">
+    <value>Marges</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.HeaderWidthOffset" xml:space="preserve">
+    <value>Header Width Offset</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.HeaderHeightOffset" xml:space="preserve">
+    <value>Header Height Offset</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowColumnTotals" xml:space="preserve">
+    <value>Toon totalen voor kolommen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowRowTotals" xml:space="preserve">
+    <value>Toon totalen voor tijen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowColumnGrandTotals" xml:space="preserve">
+    <value>Toon eindtotalen voor kolommen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowRowGrandTotals" xml:space="preserve">
+    <value>Toon eindtotalen voor rijen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.TotalsLocation" xml:space="preserve">
+    <value>Locatie van Totalen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowTotalsForSingleValues" xml:space="preserve">
+    <value>Toon totalen voor enkele waarden</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowCustomTotalsForSingleValues" xml:space="preserve">
+    <value>Toon aangepaste totalen voor enkele waarden</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowGrandTotalsForSingleValues" xml:space="preserve">
+    <value>Toon eindtotalen voor enkele waarden</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowHorzLines" xml:space="preserve">
+    <value>Toon horizontale lijnen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowVertLines" xml:space="preserve">
+    <value>Toon verticale lijnen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowDataHeaders" xml:space="preserve">
+    <value>Toon gegevenskoppen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowFilterHeaders" xml:space="preserve">
+    <value>Toon filterkoppen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowColumnHeaders" xml:space="preserve">
+    <value>Toon kolomkoppen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowRowHeaders" xml:space="preserve">
+    <value>Toon rijkoppen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.DrawFocusedCellRect" xml:space="preserve">
+    <value>Toon focus-rechthoek</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowFilterSeparatorBar" xml:space="preserve">
+    <value>Toon filter-scheidingsbalk</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.HeaderFilterButtonShowMode" xml:space="preserve">
+    <value>Header Filter Button Show Mode</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.GroupFieldsInCustomizationWindow" xml:space="preserve">
+    <value>Group Fields in the Customization Window</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.FilterSeparatorBarPadding" xml:space="preserve">
+    <value>Filter Separator Bar Padding</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.AreaIndex" xml:space="preserve">
+    <value>Area Index</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.RowHeaderWidth" xml:space="preserve">
+    <value>Row Header Width</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Caption" xml:space="preserve">
+    <value>Caption</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.FieldNaming" xml:space="preserve">
+    <value>Field Naming</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.CaseSensitive" xml:space="preserve">
+    <value>Case Sensitive</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.AllowCrossGroupVariation" xml:space="preserve">
+    <value>Allow Cross-Group Variation</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.DrillDownMaxRowCount" xml:space="preserve">
+    <value>Drill Down Max Row Count</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.ColumnArea" xml:space="preserve">
+    <value>Kolom-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.RowArea" xml:space="preserve">
+    <value>Rij-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldNaming.FieldName" xml:space="preserve">
+    <value>Veldnaam</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldNaming.Name" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsLocation.Near" xml:space="preserve">
+    <value>Before Values</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsLocation.Far" xml:space="preserve">
+    <value>After Values</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortOrder.Ascending" xml:space="preserve">
+    <value>Oplopend</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortOrder.Descending" xml:space="preserve">
+    <value>Aflopend</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.RowArea" xml:space="preserve">
+    <value>Rij-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.ColumnArea" xml:space="preserve">
+    <value>Kolom-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.FilterArea" xml:space="preserve">
+    <value>Filter-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.DataArea" xml:space="preserve">
+    <value>Gegevens-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.DisplayText" xml:space="preserve">
+    <value>Display Text</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Key" xml:space="preserve">
+    <value>OLAP Key</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.None" xml:space="preserve">
+    <value>OLAP None</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsVisibility.AutomaticTotals" xml:space="preserve">
+    <value>Automatic Totals</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsVisibility.CustomTotals" xml:space="preserve">
+    <value>Custom Totals</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsVisibility.None" xml:space="preserve">
+    <value>No Totals</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTopValueType.Absolute" xml:space="preserve">
+    <value>Absoluut</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTopValueType.Percent" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Default" xml:space="preserve">
+    <value>Standaard</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateDay" xml:space="preserve">
+    <value>Dag</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateDayOfWeek" xml:space="preserve">
+    <value>Weekdag</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateDayOfYear" xml:space="preserve">
+    <value>Dag van jaar</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateWeekOfMonth" xml:space="preserve">
+    <value>Week van maand</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateWeekOfYear" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth" xml:space="preserve">
+    <value>Maand</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateQuarter" xml:space="preserve">
+    <value>Kwartaal</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear" xml:space="preserve">
+    <value>Jaar</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.YearAge" xml:space="preserve">
+    <value>Ouderdom jaren</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.MonthAge" xml:space="preserve">
+    <value>Ouderdom maanden</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.WeekAge" xml:space="preserve">
+    <value>Ouderdom weken</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DayAge" xml:space="preserve">
+    <value>Ouderdom dagen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Alphabetical" xml:space="preserve">
+    <value>Alphabetical</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Numeric" xml:space="preserve">
+    <value>Numeriek</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Hour" xml:space="preserve">
+    <value>Uur</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.AllowHideFieldsType.Never" xml:space="preserve">
+    <value>Nooit</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.AllowHideFieldsType.Always" xml:space="preserve">
+    <value>Altijd</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.AllowHideFieldsType.WhenCustomizationFormVisible" xml:space="preserve">
+    <value>Als aanpassingsvenster zichtbaar</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.All" xml:space="preserve">
+    <value>Alle gebieden</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea" xml:space="preserve">
+    <value>Rij-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea" xml:space="preserve">
+    <value>Kolom-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea" xml:space="preserve">
+    <value>Filter-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.DataArea" xml:space="preserve">
+    <value>Gegevens-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PrefilterBase.Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PrefilterBase.CriteriaString" xml:space="preserve">
+    <value>Criteria As String</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Prefilter.Criteria" xml:space="preserve">
+    <value>Criteria</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Name" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.AreaIndex" xml:space="preserve">
+    <value>Area Index</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Visible" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.AllowedAreas" xml:space="preserve">
+    <value>Allowed Areas</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.RunningTotal" xml:space="preserve">
+    <value>Lopend totaal</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.GroupInterval" xml:space="preserve">
+    <value>Groepeer-interval</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.GroupIntervalNumericRange" xml:space="preserve">
+    <value>Group Interval Numeric Range</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Options" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.FieldName" xml:space="preserve">
+    <value>Data Column Name</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.UnboundFieldName" xml:space="preserve">
+    <value>Unbound Field Name</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.UnboundType" xml:space="preserve">
+    <value>Unbound Type</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Caption" xml:space="preserve">
+    <value>Caption</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.EmptyCellText" xml:space="preserve">
+    <value>Empty Cell Text</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.EmptyValueText" xml:space="preserve">
+    <value>Empty Value Text</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.GrandTotalText" xml:space="preserve">
+    <value>Grand Total Text</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SummaryType" xml:space="preserve">
+    <value>Samenvatting type</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SummaryDisplayType" xml:space="preserve">
+    <value>Samenvatting weergavetype</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SortBySummaryInfo" xml:space="preserve">
+    <value>Sorteer op samenvatting</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TopValueCount" xml:space="preserve">
+    <value>Top Value Count</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TopValueType" xml:space="preserve">
+    <value>Top Value Type</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TopValueShowOthers" xml:space="preserve">
+    <value>Top Value Show Others</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TotalsVisibility" xml:space="preserve">
+    <value>Totals Visibility</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SortOrder" xml:space="preserve">
+    <value>Sorteervolgorde</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SortMode" xml:space="preserve">
+    <value>Sorteermodus</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.MinWidth" xml:space="preserve">
+    <value>Min breedte</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.CellFormat" xml:space="preserve">
+    <value>Cell Format</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TotalCellFormat" xml:space="preserve">
+    <value>Total Cell Format</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.GrandTotalCellFormat" xml:space="preserve">
+    <value>Grand Total Cell Format</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.ValueFormat" xml:space="preserve">
+    <value>Value Format</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TotalValueFormat" xml:space="preserve">
+    <value>Total Value Format</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Tag" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.UseNativeFormat" xml:space="preserve">
+    <value>Export As Numbers To Excel</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.ExpandedInFieldsGroup" xml:space="preserve">
+    <value>Expanded In Fields Group</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.OLAPDrillDownColumnName" xml:space="preserve">
+    <value>OLAP Drill Down Column Name</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.KPIType" xml:space="preserve">
+    <value>KPI Type</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.KPIGraphic" xml:space="preserve">
+    <value>KPI Graphic</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.CustomTotals" xml:space="preserve">
+    <value>Custom Totals</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.AllowEdit" xml:space="preserve">
+    <value>Allow Edit</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.ReadOnly" xml:space="preserve">
+    <value>Read Only</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.ShowButtonMode" xml:space="preserve">
+    <value>Show Button Mode</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.RowValueLineCount" xml:space="preserve">
+    <value>Row Value Line Count</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.FieldEdit" xml:space="preserve">
+    <value>Cell Editor</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.ImageIndex" xml:space="preserve">
+    <value>Image Index</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.ToolTips" xml:space="preserve">
+    <value>Tool Tips</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.ColumnValueLineCount" xml:space="preserve">
+    <value>Column Value Line Count</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Count" xml:space="preserve">
+    <value>Aantal</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Sum" xml:space="preserve">
+    <value>Som</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Min" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Average" xml:space="preserve">
+    <value>Gemiddelde</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.StdDev" xml:space="preserve">
+    <value>Standaarddeviatie</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.StdDevp" xml:space="preserve">
+    <value>Standaarddeviatie voor hele populatie</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Var" xml:space="preserve">
+    <value>Verschil</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Varp" xml:space="preserve">
+    <value>Verschil op hele populatie</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Custom" xml:space="preserve">
+    <value>Aangepast</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.Default" xml:space="preserve">
+    <value>Aantal</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.AbsoluteVariation" xml:space="preserve">
+    <value>Absoluut verschil</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentVariation" xml:space="preserve">
+    <value>Relatief verschil</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfColumn" xml:space="preserve">
+    <value>Percentage van kolom</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfRow" xml:space="preserve">
+    <value>Percentage van rij</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowSort" xml:space="preserve">
+    <value>Allow Sort</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowFilter" xml:space="preserve">
+    <value>Allow Filter</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowDrag" xml:space="preserve">
+    <value>Allow Drag</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowExpand" xml:space="preserve">
+    <value>Allow Expand</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowSortBySummary" xml:space="preserve">
+    <value>Allow Sort By Summary</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowRunTimeSummaryChange" xml:space="preserve">
+    <value>Allow Run Time Summary Change</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowInCustomizationForm" xml:space="preserve">
+    <value>Show In Customization Form</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowGrandTotal" xml:space="preserve">
+    <value>Show Grand Total</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowTotals" xml:space="preserve">
+    <value>Show Totals</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowValues" xml:space="preserve">
+    <value>Show Values</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowCustomTotals" xml:space="preserve">
+    <value>Show Custom Totals</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowSummaryTypeName" xml:space="preserve">
+    <value>Show Summary Type Name</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Goal" xml:space="preserve">
+    <value>Goal</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Trend" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ServerDefined" xml:space="preserve">
+    <value>Server Defined</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Shapes" xml:space="preserve">
+    <value>Shapes</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.TrafficLights" xml:space="preserve">
+    <value>Traffic Lights</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.RoadSigns" xml:space="preserve">
+    <value>Road Signs</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Gauge" xml:space="preserve">
+    <value>Gauge</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedGauge" xml:space="preserve">
+    <value>Reversed Gauge</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Thermometer" xml:space="preserve">
+    <value>Thermometer</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedThermometer" xml:space="preserve">
+    <value>Reversed Thermometer</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Cylinder" xml:space="preserve">
+    <value>Cylinder</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedCylinder" xml:space="preserve">
+    <value>Reversed Cylinder</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Faces" xml:space="preserve">
+    <value>Faces</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.VarianceArrow" xml:space="preserve">
+    <value>Variance Arrow</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.StandardArrow" xml:space="preserve">
+    <value>Standard Arrow</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.StatusArrow" xml:space="preserve">
+    <value>Status Arrow</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedStatusArrow" xml:space="preserve">
+    <value>Reversed Status Arrow</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldToolTips.HeaderText" xml:space="preserve">
+    <value>Header Text</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldToolTips.ValueFormat" xml:space="preserve">
+    <value>Value Format</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldToolTips.ValueText" xml:space="preserve">
+    <value>Value Text</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OptionsLayoutPivotGrid.AddNewGroups" xml:space="preserve">
+    <value>Nieuwe groep toevoegen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.Cell" xml:space="preserve">
+    <value>Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FieldHeader" xml:space="preserve">
+    <value>Field Header</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.TotalCell" xml:space="preserve">
+    <value>Total Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.GrandTotalCell" xml:space="preserve">
+    <value>Grand Total Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.CustomTotalCell" xml:space="preserve">
+    <value>Custom Total Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FieldValue" xml:space="preserve">
+    <value>Field Value</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FieldValueTotal" xml:space="preserve">
+    <value>Field Value Total</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FieldValueGrandTotal" xml:space="preserve">
+    <value>Field Value Grand Total</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.Lines" xml:space="preserve">
+    <value>Lines</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FilterSeparator" xml:space="preserve">
+    <value>Filter Separator</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.HeaderGroupLine" xml:space="preserve">
+    <value>Header Group Line</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.FocusedCell" xml:space="preserve">
+    <value>Actieve cel</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.SelectedCell" xml:space="preserve">
+    <value>Geselecteerde cel</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.HeaderArea" xml:space="preserve">
+    <value>Kop-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.ColumnHeaderArea" xml:space="preserve">
+    <value>Kolomkop-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.RowHeaderArea" xml:space="preserve">
+    <value>Rijkop gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.FilterHeaderArea" xml:space="preserve">
+    <value>Filterkop-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.DataHeaderArea" xml:space="preserve">
+    <value>Gegevenskop-gebied</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.Empty" xml:space="preserve">
+    <value>Leeg</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.ExpandButton" xml:space="preserve">
+    <value>Uitklap-knop</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.HeaderFilterButton" xml:space="preserve">
+    <value>Kop-filterknop</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.HeaderFilterButtonActive" xml:space="preserve">
+    <value>Kop-filterknop actief</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.PrefilterPanel" xml:space="preserve">
+    <value>Prefilter paneel</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.SortByColumnIndicatorImage" xml:space="preserve">
+    <value>Sort By Column Indicator Image</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotalBase.SummaryType" xml:space="preserve">
+    <value>Samenvattingstype</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotalBase.Format" xml:space="preserve">
+    <value>Opmaak</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotalBase.CellFormat" xml:space="preserve">
+    <value>Celopmaak</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotalBase.Tag" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.Field" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.Conditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.FieldName" xml:space="preserve">
+    <value>Field Name</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.SummaryType" xml:space="preserve">
+    <value>Summary Type</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Field" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.OLAPUniqueMemberName" xml:space="preserve">
+    <value>OLAP Unique Member Name</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PrefilterBase.Criteria" xml:space="preserve">
+    <value>Criteria</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.Caption" xml:space="preserve">
+    <value>Caption</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.VisibleCount" xml:space="preserve">
+    <value>Visible Count</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowSort" xml:space="preserve">
+    <value>Allow Sort</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowFilter" xml:space="preserve">
+    <value>Allow Filter</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowDrag" xml:space="preserve">
+    <value>Allow Drag</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowExpand" xml:space="preserve">
+    <value>Allow Expand</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowSortBySummary" xml:space="preserve">
+    <value>Allow Sort By Summary</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowHideFields" xml:space="preserve">
+    <value>Allow Hide Fields</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ChartDataVertical" xml:space="preserve">
+    <value>Grafiekgegevens verticaal</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowColumnGrandTotals" xml:space="preserve">
+    <value>Toon eindtotalen voor kolommen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowRowGrandTotals" xml:space="preserve">
+    <value>Toon eindtotalen voor rijen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowColumnTotals" xml:space="preserve">
+    <value>Toon totalen voor kolommen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowRowTotals" xml:space="preserve">
+    <value>Toon totalen voor rijen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowColumnCustomTotals" xml:space="preserve">
+    <value>Toon aangepaste totalen voor kolommen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowRowCustomTotals" xml:space="preserve">
+    <value>Toon aangepaste totalen voor rijen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotal.Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehavior.ApplyBestFitOnFieldDragging" xml:space="preserve">
+    <value>Apply Best Fit On Field Dragging</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehavior.CopyToClipboardWithFieldValues" xml:space="preserve">
+    <value>Copy To Clipboard With Field Values</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehavior.HorizontalScrolling" xml:space="preserve">
+    <value>Horizontal Scrolling</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsChartDataSource.SelectionOnly" xml:space="preserve">
+    <value>Selection Only</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsHint.ShowCellHints" xml:space="preserve">
+    <value>Show Cell Hints</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsHint.ShowValueHints" xml:space="preserve">
+    <value>Show Value Hints</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsHint.ShowHeaderHints" xml:space="preserve">
+    <value>Show Header Hints</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsMenu.EnableHeaderMenu" xml:space="preserve">
+    <value>Enable Header Menu</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsMenu.EnableHeaderAreaMenu" xml:space="preserve">
+    <value>Enable Header Area Menu</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsMenu.EnableFieldValueMenu" xml:space="preserve">
+    <value>Enable Field Value Menu</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.CellSelection" xml:space="preserve">
+    <value>Cell Selection</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.EnableAppearanceFocusedCell" xml:space="preserve">
+    <value>Enable Appearance Focused Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.MaxWidth" xml:space="preserve">
+    <value>Max Width</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.MaxHeight" xml:space="preserve">
+    <value>Max Height</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.MultiSelect" xml:space="preserve">
+    <value>Multi Select</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.FocusedCell" xml:space="preserve">
+    <value>Actieve cel</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.Selection" xml:space="preserve">
+    <value>Selectie</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.MultiSelection" xml:space="preserve">
+    <value>Multiselect</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.ColumnCount" xml:space="preserve">
+    <value>Aantal kolommen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.RowCount" xml:space="preserve">
+    <value>Aantal rijen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomizationEx.AllowPrefilter" xml:space="preserve">
+    <value>Allow Prefilter</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.Field" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.ApplyToCell" xml:space="preserve">
+    <value>Apply To Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.ApplyToTotalCell" xml:space="preserve">
+    <value>Apply To Total Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.ApplyToGrandTotalCell" xml:space="preserve">
+    <value>Apply To Grand Total Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.ApplyToCustomTotalCell" xml:space="preserve">
+    <value>Apply To Custom Total Cell</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridScrolling.CellsArea" xml:space="preserve">
+    <value>CellsArea</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridScrolling.Control" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.ShowButtonMode" xml:space="preserve">
+    <value>Show Button Mode</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataFieldEx.ColumnValueLineCount" xml:space="preserve">
+    <value>Column Value Line Count</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataFieldEx.RowValueLineCount" xml:space="preserve">
+    <value>Row Value Line Count</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.ShowAlways" xml:space="preserve">
+    <value>Show Always</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.ShowForFocusedCell" xml:space="preserve">
+    <value>Show For The Focused Cell Only</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.ShowOnlyInEditor" xml:space="preserve">
+    <value>Show When Editor Is Active</value>
+  </data>
+</root>

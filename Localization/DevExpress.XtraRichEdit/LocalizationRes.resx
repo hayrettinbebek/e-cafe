@@ -1,0 +1,1651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1"></xsd:attribute>
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+  <data name="XtraRichEditStringId.Msg_IsNotValid">
+    <value>'{0}' is not a valid value for '{1}'</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InternalError">
+    <value>An internal error occurred</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedStyleError">
+    <value>Error: using deleted style</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedParagraphError">
+    <value>Error: using deleted paragraph</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedFieldError">
+    <value>Error: using field paragraph</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedSectionError">
+    <value>Error: using deleted section</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidParagraphProperties">
+    <value>Error: paragraph properties are no longer valid</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidCharacterProperties">
+    <value>Error: character properties are no longer valid</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnsupportedFormatException">
+    <value>File format is not supported</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_PrintingUnavailable">
+    <value>Printing is not available. Check if the following assemblies are installed:
+{0}
+{1}</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleView">
+    <value>Simple View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftView">
+    <value>Draft View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingView">
+    <value>Reading View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintView">
+    <value>Print View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleViewDescription">
+    <value>Simple View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftViewDescription">
+    <value>Draft View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingViewDescription">
+    <value>Reading View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintViewDescription">
+    <value>Print View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Zoom">
+    <value>Zoom</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomDescription">
+    <value>Zoom</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomIn">
+    <value>Zoom In</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomInDescription">
+    <value>Zoom In</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOut">
+    <value>Zoom Out</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOutDescription">
+    <value>Zoom Out</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Undo">
+    <value>Undo</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UndoDescription">
+    <value>Undo</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Redo">
+    <value>Redo</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_RedoDescription">
+    <value>Redo</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDown">
+    <value>Scroll Down</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDownDescription">
+    <value>Scroll Down</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVertically">
+    <value>EnsureCaretVisibleVertically</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVerticallyDescription">
+    <value>EnsureCaretVisibleVertically</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontally">
+    <value>EnsureCaretVisibleHorizontally</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontallyDescription">
+    <value>EnsureCaretVisibleHorizontally</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForward">
+    <value>MoveForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForwardDescription">
+    <value>MoveForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackward">
+    <value>MoveBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackwardDescription">
+    <value>MoveBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLine">
+    <value>MoveToBeginOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLineDescription">
+    <value>MoveToBeginOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLine">
+    <value>MoveToEndOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLineDescription">
+    <value>MoveToEndOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUp">
+    <value>MoveLineUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUpDescription">
+    <value>MoveLineUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDown">
+    <value>MoveLineDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDownDescription">
+    <value>MoveLineDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraph">
+    <value>MovePreviousParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraphDescription">
+    <value>MovePreviousParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraph">
+    <value>MoveNextParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraphDescription">
+    <value>MoveNextParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWord">
+    <value>MovePreviousWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWordDescription">
+    <value>MovePreviousWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWord">
+    <value>MoveNextWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWordDescription">
+    <value>MoveNextWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPage">
+    <value>MovePreviousPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPageDescription">
+    <value>MovePreviousPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPage">
+    <value>MoveNextPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPageDescription">
+    <value>MoveNextPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocument">
+    <value>MoveToBeginBeginOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocumentDescription">
+    <value>MoveToBeginBeginOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocument">
+    <value>MoveToEndOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocumentDescription">
+    <value>MoveToEndOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUp">
+    <value>MoveScreenUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUpDescription">
+    <value>MoveScreenUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDown">
+    <value>MoveScreenDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDownDescription">
+    <value>MoveScreenDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAll">
+    <value>SelectAll</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAllDescription">
+    <value>SelectAll</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraph">
+    <value>InsertParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraphDescription">
+    <value>InsertParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreak">
+    <value>InsertLineBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreakDescription">
+    <value>InsertLineBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertText">
+    <value>InsertText</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTextDescription">
+    <value>InsertText</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletList">
+    <value>Bullets</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletListDescription">
+    <value>Start a bulleted list.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelList">
+    <value>Multilevel list</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelListDescription">
+    <value>Start a multilevel list.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleList">
+    <value>Numbering</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleListDescription">
+    <value>Start a numbering list.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertField">
+    <value>InsertField</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertFieldDescription">
+    <value>InsertField</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMergeField">
+    <value>InsertMergeField</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMergeFieldDescription">
+    <value>InsertMergeFieldDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowInsertMergeFieldForm">
+    <value>Insert Merge Field</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowInsertMergeFieldFormDescription">
+    <value>Add a field from a list of recipients or from a data table to the document.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraph">
+    <value>DeleteNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraphDescription">
+    <value>DeleteNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraph">
+    <value>IncrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraphDescription">
+    <value>IncrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraph">
+    <value>DecrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraphDescription">
+    <value>DecrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKey">
+    <value>TabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKeyDescription">
+    <value>TabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKey">
+    <value>ShiftTabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKeyDescription">
+    <value>ShiftTabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKey">
+    <value>BackSpaceKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKeyDescription">
+    <value>BackSpaceKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTab">
+    <value>InsertTab</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTabDescription">
+    <value>InsertTab</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreak">
+    <value>Page Break</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreakDescription">
+    <value>Start the next page at the current position.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpace">
+    <value>InsertNonBreakingSpace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpaceDescription">
+    <value>InsertNonBreakingSpace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreak">
+    <value>InsertColumnBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreakDescription">
+    <value>InsertColumnBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDash">
+    <value>InsertEnDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDashDescription">
+    <value>InsertEnDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDash">
+    <value>InsertEmDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDashDescription">
+    <value>InsertEmDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbol">
+    <value>InsertCopyrightSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbolDescription">
+    <value>InsertCopyrightSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbol">
+    <value>InsertRegisteredTrademark Symbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbolDescription">
+    <value>InsertRegisteredTrademark Symbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbol">
+    <value>InsertTrademarkSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbolDescription">
+    <value>InsertTrademarkSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsis">
+    <value>InsertEllipsis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsisDescription">
+    <value>InsertEllipsis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMark">
+    <value>InsertOpeningSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMarkDescription">
+    <value>InsertOpeningSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMark">
+    <value>InsertClosingSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMarkDescription">
+    <value>InsertClosingSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMark">
+    <value>InsertOpeningDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMarkDescription">
+    <value>InsertOpeningDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMark">
+    <value>InsertClosingDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMarkDescription">
+    <value>InsertClosingDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPicture">
+    <value>Insert Picture from File</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPictureDescription">
+    <value>Insert a picture from a file.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBold">
+    <value>Bold</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBoldDescription">
+    <value>Make the selected text bold.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalic">
+    <value>Italic</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalicDescription">
+    <value>Italicize the selected text.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleHiddenText">
+    <value>Hidden</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleHiddenTextDescription">
+    <value>Hidden.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderline">
+    <value>Underline</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderlineDescription">
+    <value>Underline the selected text.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderline">
+    <value>Double Underline</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderlineDescription">
+    <value>Double underline</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeout">
+    <value>Strikethrough</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeoutDescription">
+    <value>Draw a line through the middle of the selected text.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeout">
+    <value>Double Strikethrough</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeoutDescription">
+    <value>Double strikethrough</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSize">
+    <value>IncrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSizeDescription">
+    <value>IncrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSize">
+    <value>DecrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSizeDescription">
+    <value>DecrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColor">
+    <value>Font Color</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColorDescription">
+    <value>Change the font color.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightText">
+    <value>Text Highlight Color</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightTextDescription">
+    <value>Make text look like it was marked with a highlighter pen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontName">
+    <value>Font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontNameDescription">
+    <value>Change the font face.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSize">
+    <value>Font Size</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSizeDescription">
+    <value>Change the font size.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyle">
+    <value>Quick Styles</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyleDescription">
+    <value>Format titles, quotes, and other text using this gallery of styles.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCount">
+    <value>Columns</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCountDescription">
+    <value>Columns</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSize">
+    <value>Grow Font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSizeDescription">
+    <value>Increase the font size.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSize">
+    <value>Shrink Font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSizeDescription">
+    <value>Decrease the font size.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscript">
+    <value>Superscript</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscriptDescription">
+    <value>Create small letters above the line of text.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscript">
+    <value>Subscript</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscriptDescription">
+    <value>Create small letters below the text baseline.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeft">
+    <value>Align Text Left</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeftDescription">
+    <value>Align text to the left.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenter">
+    <value>Center</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenterDescription">
+    <value>Center text.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRight">
+    <value>Align Text Right</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRightDescription">
+    <value>Align text to the right.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustify">
+    <value>Justify</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustifyDescription">
+    <value>Align text to both left and right margins, adding extra space between words as necessary.
+
+This creates a clean look along the left and right side of the page.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacing">
+    <value>SetSingleParagraphSpacing</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacingDescription">
+    <value>SetSingleParagraphSpacing</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Delete">
+    <value>Delete</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteDescription">
+    <value>Delete</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteCore">
+    <value>DeleteCore</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteCoreDescription">
+    <value>DeleteCoreDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBack">
+    <value>DeleteBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackDescription">
+    <value>DeleteBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackCore">
+    <value>DeleteBackCore</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackCoreDescription">
+    <value>DeleteBackCoreDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWord">
+    <value>DeleteWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordDescription">
+    <value>DeleteWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordCore">
+    <value>DeleteWordCore</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordCoreDescription">
+    <value>DeleteWordCoreDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBack">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackDescription">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackCore">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackCoreDescription">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelection">
+    <value>Copy</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelectionDescription">
+    <value>Copy the selection and put it on the Clipboard.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Paste">
+    <value>Paste</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PasteDescription">
+    <value>Paste the contents of the Clipboard.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelection">
+    <value>Cut</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelectionDescription">
+    <value>Cut the selection from the document and put it on the Clipboard.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespace">
+    <value>Show/Hide ¶</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespaceDescription">
+    <value>Show paragraph marks and other hidden formatting symbols.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectForward">
+    <value>FindAndSelectForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectForwardDescription">
+    <value>FindAndSelectForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectBackward">
+    <value>FindAndSelectBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectBackwardDescription">
+    <value>FindAndSelectBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForward">
+    <value>ReplaceForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForwardDescription">
+    <value>ReplaceForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackward">
+    <value>ReplaceBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackwardDescription">
+    <value>ReplaceBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindNext">
+    <value>Find Next</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindNextDescription">
+    <value>Repeats the last search forward.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindPrev">
+    <value>Find Prev</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindPrevDescription">
+    <value>Repeats the last search backward.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocument">
+    <value>New</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocumentDescription">
+    <value>Create a new document.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocument">
+    <value>Open</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocumentDescription">
+    <value>Open</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocument">
+    <value>Save</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentDescription">
+    <value>Save</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAs">
+    <value>Save As</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAsDescription">
+    <value>Save As</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontForm">
+    <value>Font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontFormDescription">
+    <value>Show the Font dialog box.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphForm">
+    <value>Paragraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphFormDescription">
+    <value>Show the Paragraph dialog box.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsForm">
+    <value>Tabs</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsFormDescription">
+    <value>Tabs</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndent">
+    <value>ChangeIndent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndentDescription">
+    <value>ChangeIndentDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndent">
+    <value>IncrementParagraphLeftIndent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndentDescription">
+    <value>IncrementParagraphLeftIndentDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndent">
+    <value>Increase Indent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndentDescription">
+    <value>Increase the indent level of the paragraph.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndent">
+    <value>DecrementParagraphLeftIndent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndentDescription">
+    <value>DecrementParagraphLeftIndentDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndent">
+    <value>Decrease Indent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndentDescription">
+    <value>Decrease the indent level of the paragraph.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyle">
+    <value>ChangeParagraphStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyleDescription">
+    <value>ChangeParagraphStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPoint">
+    <value>PlaceCaretToPhysicalPoint</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPointDescription">
+    <value>PlaceCaretToPhysicalPoint</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyle">
+    <value>ChangeCharacterStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyleDescription">
+    <value>ChangeCharacterStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Find">
+    <value>Find</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindDescription">
+    <value>Find text in the document.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Replace">
+    <value>Replace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceDescription">
+    <value>Replace text in the document.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceText">
+    <value>ReplaceText</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceTextDescription">
+    <value>ReplaceTextDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForward">
+    <value>ReplaceAllForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForwardDescription">
+    <value>ReplaceAllForwardDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackward">
+    <value>ReplaceAllBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackwardDescription">
+    <value>ReplaceAllBackwardDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPage">
+    <value>ScrollToPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPageDescription">
+    <value>ScrollToPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Print">
+    <value>&amp;Print</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintDescription">
+    <value>Select a printer, number of copies, and other printing options before printing.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrint">
+    <value>&amp;Quick Print</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrintDescription">
+    <value>Send the document directly to the default printer without making changes.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreview">
+    <value>Print Pre&amp;view</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreviewDescription">
+    <value>Preview and make changes to pages before printing.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeMistakenWord">
+    <value>(no spelling suggestions)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeMistakenWordDescription">
+    <value>(no spelling suggestions)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ClearFormatting">
+    <value>Clear Formatting</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ClearFormattingDescription">
+    <value>Clear all the formatting from the selection, leaving only plain text.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CreateField">
+    <value>Create Field</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CreateFieldDescription">
+    <value>Create Field</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UpdateField">
+    <value>Update Field</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UpdateFieldDescription">
+    <value>Update Field</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFieldCodes">
+    <value>Toggle Field Codes</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFieldCodesDescription">
+    <value>Toggle Field Codes</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldResults">
+    <value>Show All Field Results</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldResultsDescription">
+    <value>Show All Field Results</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldCodes">
+    <value>Show All Field Codes</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldCodesDescription">
+    <value>Show All Field Codes</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleViewMergedData">
+    <value>View Merged Data</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleViewMergedDataDescription">
+    <value>Replaces the merge fields in your document with actual data from your recipient list so you can see what it looks like.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldNextToCaret">
+    <value>SelectFieldNextToCaret</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldNextToCaretDescription">
+    <value>SelectFieldNextToCaretDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldPrevToCaret">
+    <value>SelectFieldPrevToCaret</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldPrevToCaretDescription">
+    <value>SelectFieldPrevToCaretDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginInit">
+    <value>Error: call to BeginInit inside BeginUpdate</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndInit">
+    <value>Error: call to EndInit or CancelInit without BeginInit or inside BeginUpdate</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginUpdate">
+    <value>Error: call to BeginUpdate inside BeginInit</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndUpdate">
+    <value>Error: call to EndUpdate or CancelUpate without BeginUpdate or inside BeginInit</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetCharacterProperties">
+    <value>Error: cannot set properties without BeginInit or without adding object to document</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetParagraphProperties">
+    <value>Error: cannot set properties without BeginInit or without adding object to document</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParentStyle">
+    <value>Error: invalid parent style assignment caused circular reference</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidDocumentModel">
+    <value>Error: document models are different</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_TableIntegrityError">
+    <value>Error: broken table integrity</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParagraphContainNumbering">
+    <value>Error: paragraph already contains numbering</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidCopyFromDocumentModel">
+    <value>Error: source and destination document models are different</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidNumber">
+    <value>This is not a valid number.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidFontSize">
+    <value>The number must be between {0} and {1}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidValueRange">
+    <value>The value must be between {0} and {1}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UsedWrongUnit">
+    <value>The unit of measurement is incorrectly specified.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidTabStop">
+    <value>This is not a valid tab stop.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchComplete">
+    <value>The search is complete.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInForwardDirectionComplete">
+    <value>The end of the document has been reached.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInBackwardDirectionComplete">
+    <value>The beginning of the document has been reached.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_StyleAlreadyLinked">
+    <value>Error: style already contains a linked style</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ErrorLinkDeletedStyle">
+    <value>Error: cannot link deleted style</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchItemNotFound">
+    <value>The search item was not found.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInSelectionComplete">
+    <value>The search in the selection is finished.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromBeginningQuestion">
+    <value>Do you want to start the search from the beginning of the document?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromEndQuestion">
+    <value>Do you want to start the search from the end of the document?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchInRemainderQuestion">
+    <value>Do you want to search the remainder of the document?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ReplacementsCount">
+    <value>{0} replacements were made.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidStyleName">
+    <value>Invalid style name</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_IncorrectNumericFieldFormat">
+    <value>Error: number cannot be represented in the specified format.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SyntaxErrorInFieldPattern">
+    <value>Syntax Error, {0}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnmatchedQuotesInFieldPattern">
+    <value>Error: pattern string contains unmatched quotes.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnknownSwitchArgument">
+    <value>Error! Unknown switch argument.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnexpectedEndOfFormula">
+    <value>!Unexpected end of formula.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_MissingOperator">
+    <value>!Missing operator.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ZeroDivide">
+    <value>!Zero divide.</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllFiles">
+    <value>All Files</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllSupportedFiles">
+    <value>All Supported Files</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_HtmlFiles">
+    <value>HyperText Markup Language Format</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_MhtFiles">
+    <value>Web Archive, single file</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_RtfFiles">
+    <value>Rich Text Format</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_TextFiles">
+    <value>Text Files</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_OpenXmlFiles">
+    <value>Word 2007 Document</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_BitmapFiles">
+    <value>Bitmap</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_JPEGFiles">
+    <value>JPEG File Interchange Format</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_PNGFiles">
+    <value>Portable Network Graphics</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Normal">
+    <value>Normal</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading1">
+    <value>heading 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading2">
+    <value>heading 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading3">
+    <value>heading 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading4">
+    <value>heading 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading5">
+    <value>heading 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading6">
+    <value>heading 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading7">
+    <value>heading 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading8">
+    <value>heading 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading9">
+    <value>heading 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index1">
+    <value>index 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index2">
+    <value>index 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index3">
+    <value>index 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index4">
+    <value>index 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index5">
+    <value>index 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index6">
+    <value>index 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index7">
+    <value>index 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index8">
+    <value>index 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index9">
+    <value>index 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc1">
+    <value>toc 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc2">
+    <value>toc 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc3">
+    <value>toc 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc4">
+    <value>toc 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc5">
+    <value>toc 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc6">
+    <value>toc 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc7">
+    <value>toc 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc8">
+    <value>toc 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc9">
+    <value>toc 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalIndent">
+    <value>Normal Indent</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotetext">
+    <value>footnote text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationtext">
+    <value>annotation text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_header">
+    <value>header</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footer">
+    <value>footer</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_indexheading">
+    <value>index heading</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_caption">
+    <value>caption</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableoffigures">
+    <value>table of figures</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopeaddress">
+    <value>envelope address</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopereturn">
+    <value>envelope return</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotereference">
+    <value>footnote reference</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationreference">
+    <value>annotation reference</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_linenumber">
+    <value>line number</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_pagenumber">
+    <value>page number</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotereference">
+    <value>endnote reference</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotetext">
+    <value>endnote text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableofauthorities">
+    <value>table of authorities</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_macrotoaheading">
+    <value>macro to a heading</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List">
+    <value>List</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List2">
+    <value>List 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List3">
+    <value>List 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List4">
+    <value>List 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List5">
+    <value>List 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet">
+    <value>List Bullet</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet2">
+    <value>List Bullet 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet3">
+    <value>List Bullet 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet4">
+    <value>List Bullet 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet5">
+    <value>List Bullet 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber">
+    <value>List Number</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber2">
+    <value>List Number 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber3">
+    <value>List Number 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber4">
+    <value>List Number 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber5">
+    <value>List Number 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Title">
+    <value>Title</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Closing">
+    <value>Closing</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Signature">
+    <value>Signature</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DefaultParagraphFont">
+    <value>Default Paragraph Font</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText">
+    <value>Body Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue">
+    <value>List Continue</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue2">
+    <value>List Continue 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue3">
+    <value>List Continue 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue4">
+    <value>List Continue 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue5">
+    <value>List Continue 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_MessageHeader">
+    <value>Message Header</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Salutation">
+    <value>Salutation</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Date">
+    <value>Date</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent">
+    <value>Body Text First Indent</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent2">
+    <value>Body Text First Indent 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoteHeading">
+    <value>Note Heading</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Subtitle">
+    <value>Subtitle</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText2">
+    <value>Body Text 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText3">
+    <value>Body Text 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent2">
+    <value>Body Text Indent 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent3">
+    <value>Body Text Indent 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BlockText">
+    <value>Block Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkFollowed">
+    <value>HyperlinkFollowed</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkStrongEmphasis">
+    <value>HyperlinkStrongEmphasis</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DocumentMap">
+    <value>Document Map</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_PlainText">
+    <value>Plain Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_EmailSignature">
+    <value>E-mail Signature</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTopofForm">
+    <value>HTML Top of Form</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLBottomofForm">
+    <value>HTML Bottom of Form</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalWeb">
+    <value>Normal (Web)</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAcronym">
+    <value>HTML Acronym</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAddress">
+    <value>HTML Address</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCite">
+    <value>HTML Cite</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCode">
+    <value>HTML Code</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLDefinition">
+    <value>HTML Definition</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLKeyboard">
+    <value>HTML Keyboard</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLPreformatted">
+    <value>HTML Preformatted</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLSample">
+    <value>HTML Sample</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTypewriter">
+    <value>HTML Typewriter</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLVariable">
+    <value>HTML Variable</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalTable">
+    <value>Normal Table</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationsubject">
+    <value>annotation subject</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoList">
+    <value>No List</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList1">
+    <value>Outline List 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList2">
+    <value>Outline List 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList3">
+    <value>Outline List 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple1">
+    <value>Table Simple 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple2">
+    <value>Table Simple 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple3">
+    <value>Table Simple 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic1">
+    <value>Table Classic 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic2">
+    <value>Table Classic 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic3">
+    <value>Table Classic 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic4">
+    <value>Table Classic 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful1">
+    <value>Table Colorful 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful2">
+    <value>Table Colorful 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful3">
+    <value>Table Colorful 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns1">
+    <value>Table Columns 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns2">
+    <value>Table Columns 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns3">
+    <value>Table Columns 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns4">
+    <value>Table Columns 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns5">
+    <value>Table Columns 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid1">
+    <value>Table Grid 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid2">
+    <value>Table Grid 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid3">
+    <value>Table Grid 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid4">
+    <value>Table Grid 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid5">
+    <value>Table Grid 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid6">
+    <value>Table Grid 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid7">
+    <value>Table Grid 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid8">
+    <value>Table Grid 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList1">
+    <value>Table List 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList2">
+    <value>Table List 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList3">
+    <value>Table List 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList4">
+    <value>Table List 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList5">
+    <value>Table List 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList6">
+    <value>Table List 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList7">
+    <value>Table List 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList8">
+    <value>Table List 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects1">
+    <value>Table 3D effects 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects2">
+    <value>Table 3D effects 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects3">
+    <value>Table 3D effects 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableContemporary">
+    <value>Table Contemporary</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableElegant">
+    <value>Table Elegant</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableProfessional">
+    <value>Table Professional</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle1">
+    <value>Table Subtle 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle2">
+    <value>Table Subtle 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb1">
+    <value>Table Web 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb2">
+    <value>Table Web 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb3">
+    <value>Table Web 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BalloonText">
+    <value>Balloon Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid">
+    <value>Table Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.LinkedCharacterStyleFormatString">
+    <value>{0} Char</value>
+  </data>
+  <data name="XtraRichEditStringId.ClearFormatting">
+    <value>Clear Formatting</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Bold">
+    <value>Bold</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Italic">
+    <value>Italic</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Regular">
+    <value>Regular</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Strikeout">
+    <value>Strikeout</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Underline">
+    <value>Underline</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentCenter">
+    <value>Centered</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentJustify">
+    <value>Justified</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentLeft">
+    <value>Left</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentRight">
+    <value>Right</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSingle">
+    <value>Single</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSesquialteral">
+    <value>1.5 lines</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingDouble">
+    <value>Double</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingMultiple">
+    <value>Multiple</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingExactly">
+    <value>Exactly</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingAtLeast">
+    <value>At least</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentNone">
+    <value>(none)</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentIndented">
+    <value>First line</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentHanging">
+    <value>Hanging</value>
+  </data>
+  <data name="XtraRichEditStringId.DialogCaption_InsertSymbol">
+    <value>Symbol</value>
+  </data>
+  <data name="XtraRichEditStringId.TabForm_All">
+    <value>All</value>
+  </data>
+  <data name="XtraRichEditStringId.UnderlineNone">
+    <value>(none)</value>
+  </data>
+  <data name="XtraRichEditStringId.ColorAuto">
+    <value>Auto</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Inch">
+    <value>"</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Centimeter">
+    <value> cm</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Millimeter">
+    <value> mm</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Pica">
+    <value> pc</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Point">
+    <value> pt</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapUniqueId">
+    <value>Unique Identifier</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapTitle">
+    <value>Courtesy Title</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapFirstName">
+    <value>First Name</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapMiddleName">
+    <value>Middle Name</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldLastName">
+    <value>Last Name</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapSuffix">
+    <value>Suffix</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapNickName">
+    <value>Nickname</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapJobTitle">
+    <value>Job Title</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCompany">
+    <value>Company</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress1">
+    <value>Address 1</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress2">
+    <value>Address 2</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCity">
+    <value>City</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapState">
+    <value>State</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPostalCode">
+    <value>Postal Code</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCountry">
+    <value>Country or Region</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapBusinessPhone">
+    <value>Business Phone</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapBusinessFax">
+    <value>Business Fax</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapHomePhone">
+    <value>Home Phone</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapHomeFax">
+    <value>Home Fax</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapEMailAddress">
+    <value>E-mail Address</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapWebPage">
+    <value>Web Page</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerTitle">
+    <value>Spouse/Partner Courtesy Title</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerFirstName">
+    <value>Spouse/Partner First Name</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerMiddleName">
+    <value>Spouse/Partner Middle Name</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerLastName">
+    <value>Spouse/Partner Last Name</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerNickName">
+    <value>Spouse/Partner Nickname</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPhoneticGuideFirstName">
+    <value>Phonetic Guide for First Name</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPhoneticGuideLastName">
+    <value>Phonetic Guide for Last Name</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress3">
+    <value>Address 3</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapDepartment">
+    <value>Department</value>
+  </data>
+</root>

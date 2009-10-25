@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace">
+    </xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute ref="xml:space">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4">
+              </xsd:attribute>
+              <xsd:attribute ref="xml:space">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </assembly>
+  <data name="xtraTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </assembly>
+  <data name="xtraTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="cbFndSearchString.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 10</value>
+  </data>
+  <data name="cbFndSearchString.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </assembly>
+  <data name="cbFndSearchString.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cbFndSearchString.Name" xml:space="preserve">
+    <value>cbFndSearchString</value>
+  </data>
+  <data name="&gt;&gt;cbFndSearchString.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;cbFndSearchString.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblSeparatorFind.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="lblSeparatorFind.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 153</value>
+  </data>
+  <data name="lblSeparatorFind.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 19</value>
+  </data>
+  <data name="lblSeparatorFind.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lblSeparatorFind.Name" xml:space="preserve">
+    <value>lblSeparatorFind</value>
+  </data>
+  <data name="&gt;&gt;lblSeparatorFind.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;lblSeparatorFind.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnFindCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnFindCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 175</value>
+  </data>
+  <data name="btnFindCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnFindCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnFindCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnFindCancel.Name" xml:space="preserve">
+    <value>btnFindCancel</value>
+  </data>
+  <data name="&gt;&gt;btnFindCancel.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;btnFindCancel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnFindNext.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnFindNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 175</value>
+  </data>
+  <data name="btnFindNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnFindNext.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnFindNext.Text" xml:space="preserve">
+    <value>&amp;Find Next</value>
+  </data>
+  <data name="&gt;&gt;btnFindNext.Name" xml:space="preserve">
+    <value>btnFindNext</value>
+  </data>
+  <data name="&gt;&gt;btnFindNext.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;btnFindNext.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbFndFindDirection.EditValue" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="cbFndFindDirection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 73</value>
+  </data>
+  <data name="cbFndFindDirection.Properties.Items" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="cbFndFindDirection.Properties.Items1" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="cbFndFindDirection.Properties.Items2" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="cbFndFindDirection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="cbFndFindDirection.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbFndFindDirection.Name" xml:space="preserve">
+    <value>cbFndFindDirection</value>
+  </data>
+  <data name="&gt;&gt;cbFndFindDirection.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;cbFndFindDirection.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblFindSearchString.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblFindSearchString.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="lblFindSearchString.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblFindSearchString.Text" xml:space="preserve">
+    <value>Fi&amp;nd what:</value>
+  </data>
+  <data name="&gt;&gt;lblFindSearchString.Name" xml:space="preserve">
+    <value>lblFindSearchString</value>
+  </data>
+  <data name="&gt;&gt;lblFindSearchString.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;lblFindSearchString.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="chbFndMatchCase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 98</value>
+  </data>
+  <data name="chbFndMatchCase.Properties.Caption" xml:space="preserve">
+    <value>Matc&amp;h case</value>
+  </data>
+  <data name="chbFndMatchCase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="chbFndMatchCase.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chbFndMatchCase.Name" xml:space="preserve">
+    <value>chbFndMatchCase</value>
+  </data>
+  <data name="&gt;&gt;chbFndMatchCase.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;chbFndMatchCase.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chbFndFindWholeWord.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 123</value>
+  </data>
+  <data name="chbFndFindWholeWord.Properties.Caption" xml:space="preserve">
+    <value>Find whole words onl&amp;y</value>
+  </data>
+  <data name="chbFndFindWholeWord.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 19</value>
+  </data>
+  <data name="chbFndFindWholeWord.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chbFndFindWholeWord.Name" xml:space="preserve">
+    <value>chbFndFindWholeWord</value>
+  </data>
+  <data name="&gt;&gt;chbFndFindWholeWord.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;chbFndFindWholeWord.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblFindDirection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 76</value>
+  </data>
+  <data name="lblFindDirection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="lblFindDirection.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblFindDirection.Text" xml:space="preserve">
+    <value>Search&amp;:</value>
+  </data>
+  <data name="&gt;&gt;lblFindDirection.Name" xml:space="preserve">
+    <value>lblFindDirection</value>
+  </data>
+  <data name="&gt;&gt;lblFindDirection.Parent" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;lblFindDirection.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="pgFind.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 207</value>
+  </data>
+  <data name="pgFind.Text" xml:space="preserve">
+    <value>Fin&amp;d</value>
+  </data>
+  <data name="&gt;&gt;pgFind.Name" xml:space="preserve">
+    <value>pgFind</value>
+  </data>
+  <data name="&gt;&gt;pgFind.Parent" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;pgFind.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>393, 238</value>
+  </data>
+  <data name="xtraTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbRplReplaceString.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 36</value>
+  </data>
+  <data name="cbRplReplaceString.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 20</value>
+  </data>
+  <data name="cbRplReplaceString.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cbRplReplaceString.Name" xml:space="preserve">
+    <value>cbRplReplaceString</value>
+  </data>
+  <data name="&gt;&gt;cbRplReplaceString.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;cbRplReplaceString.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbRplSearchString.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 10</value>
+  </data>
+  <data name="cbRplSearchString.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 20</value>
+  </data>
+  <data name="cbRplSearchString.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cbRplSearchString.Name" xml:space="preserve">
+    <value>cbRplSearchString</value>
+  </data>
+  <data name="&gt;&gt;cbRplSearchString.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;cbRplSearchString.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblSeparatorReplace.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="lblSeparatorReplace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 153</value>
+  </data>
+  <data name="lblSeparatorReplace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 19</value>
+  </data>
+  <data name="lblSeparatorReplace.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lblSeparatorReplace.Name" xml:space="preserve">
+    <value>lblSeparatorReplace</value>
+  </data>
+  <data name="&gt;&gt;lblSeparatorReplace.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;lblSeparatorReplace.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnReplaceAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnReplaceAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 175</value>
+  </data>
+  <data name="btnReplaceAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 23</value>
+  </data>
+  <data name="btnReplaceAll.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnReplaceAll.Text" xml:space="preserve">
+    <value>Replace &amp;All</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceAll.Name" xml:space="preserve">
+    <value>btnReplaceAll</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceAll.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceAll.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbRplFindDirection.EditValue" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="cbRplFindDirection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 73</value>
+  </data>
+  <data name="cbRplFindDirection.Properties.Items" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="cbRplFindDirection.Properties.Items1" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="cbRplFindDirection.Properties.Items2" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="cbRplFindDirection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="cbRplFindDirection.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbRplFindDirection.Name" xml:space="preserve">
+    <value>cbRplFindDirection</value>
+  </data>
+  <data name="&gt;&gt;cbRplFindDirection.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;cbRplFindDirection.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnReplaceFindNext.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnReplaceFindNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 175</value>
+  </data>
+  <data name="btnReplaceFindNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnReplaceFindNext.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnReplaceFindNext.Text" xml:space="preserve">
+    <value>&amp;Find Next</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceFindNext.Name" xml:space="preserve">
+    <value>btnReplaceFindNext</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceFindNext.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceFindNext.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="chbRplMatchCase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 98</value>
+  </data>
+  <data name="chbRplMatchCase.Properties.Caption" xml:space="preserve">
+    <value>Matc&amp;h case</value>
+  </data>
+  <data name="chbRplMatchCase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="chbRplMatchCase.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chbRplMatchCase.Name" xml:space="preserve">
+    <value>chbRplMatchCase</value>
+  </data>
+  <data name="&gt;&gt;chbRplMatchCase.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;chbRplMatchCase.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chbRplFindWholeWord.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 123</value>
+  </data>
+  <data name="chbRplFindWholeWord.Properties.Caption" xml:space="preserve">
+    <value>Find whole words onl&amp;y</value>
+  </data>
+  <data name="chbRplFindWholeWord.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 19</value>
+  </data>
+  <data name="chbRplFindWholeWord.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chbRplFindWholeWord.Name" xml:space="preserve">
+    <value>chbRplFindWholeWord</value>
+  </data>
+  <data name="&gt;&gt;chbRplFindWholeWord.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;chbRplFindWholeWord.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblReplaceSearchString.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblReplaceSearchString.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="lblReplaceSearchString.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblReplaceSearchString.Text" xml:space="preserve">
+    <value>Fi&amp;nd what:</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceSearchString.Name" xml:space="preserve">
+    <value>lblReplaceSearchString</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceSearchString.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceSearchString.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblReplaceReplaceString.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 37</value>
+  </data>
+  <data name="lblReplaceReplaceString.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="lblReplaceReplaceString.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblReplaceReplaceString.Text" xml:space="preserve">
+    <value>Replace w&amp;ith:</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceReplaceString.Name" xml:space="preserve">
+    <value>lblReplaceReplaceString</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceReplaceString.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceReplaceString.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblReplaceDirection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 76</value>
+  </data>
+  <data name="lblReplaceDirection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="lblReplaceDirection.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblReplaceDirection.Text" xml:space="preserve">
+    <value>Search&amp;:</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceDirection.Name" xml:space="preserve">
+    <value>lblReplaceDirection</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceDirection.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;lblReplaceDirection.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnReplaceNext.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnReplaceNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 175</value>
+  </data>
+  <data name="btnReplaceNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 23</value>
+  </data>
+  <data name="btnReplaceNext.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnReplaceNext.Text" xml:space="preserve">
+    <value>&amp;Replace</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceNext.Name" xml:space="preserve">
+    <value>btnReplaceNext</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceNext.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceNext.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnReplaceCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnReplaceCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 175</value>
+  </data>
+  <data name="btnReplaceCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnReplaceCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnReplaceCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceCancel.Name" xml:space="preserve">
+    <value>btnReplaceCancel</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceCancel.Parent" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;btnReplaceCancel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="pgReplace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 207</value>
+  </data>
+  <data name="pgReplace.Text" xml:space="preserve">
+    <value>Re&amp;place</value>
+  </data>
+  <data name="&gt;&gt;pgReplace.Name" xml:space="preserve">
+    <value>pgReplace</value>
+  </data>
+  <data name="&gt;&gt;pgReplace.Parent" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;pgReplace.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl.Name" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>400, 245</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>416, 281</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 2, 2</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Find and Replace</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SearchTextForm</value>
+  </data>
+</root>

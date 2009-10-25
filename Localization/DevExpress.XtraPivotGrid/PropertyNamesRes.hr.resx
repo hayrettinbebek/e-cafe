@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.RowHeaderWidth" xml:space="preserve">
+    <value>Redak širina naslova</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowFilter" xml:space="preserve">
+    <value>Dozvoli filtriranje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.ColumnCount" xml:space="preserve">
+    <value>Broj stupaca</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.Field" xml:space="preserve">
+    <value>Polje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Hour" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.RowArea" xml:space="preserve">
+    <value>Područje redka</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortOrder.Ascending" xml:space="preserve">
+    <value>Uzlazno</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Custom" xml:space="preserve">
+    <value>Prilagođeno</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.ColumnHeaderArea" xml:space="preserve">
+    <value>Područje zaglavlja stupca</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear" xml:space="preserve">
+    <value>Godina</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.RowHeaderArea" xml:space="preserve">
+    <value>Područje zaglavlja redka</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.Empty" xml:space="preserve">
+    <value>Prazno</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Field" xml:space="preserve">
+    <value>Polje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Options" xml:space="preserve">
+    <value>Mogućnosti</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowFilter" xml:space="preserve">
+    <value>Dozvoli filtriranje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OptionsLayoutPivotGrid.AddNewGroups" xml:space="preserve">
+    <value>Dodaj novu grupu</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.FilterArea" xml:space="preserve">
+    <value>Područje filtera</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowDrag" xml:space="preserve">
+    <value>Dozvoli povlaćenje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.Caption" xml:space="preserve">
+    <value>Naslov</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowSort" xml:space="preserve">
+    <value>Dozvoli sortiranje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Width" xml:space="preserve">
+    <value>Širina</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.DataArea" xml:space="preserve">
+    <value>Područje podataka</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.RowArea" xml:space="preserve">
+    <value>Područje redka</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowSort" xml:space="preserve">
+    <value>Dozvoli sortiranje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowDrag" xml:space="preserve">
+    <value>Dozvoli povlaćenje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Area" xml:space="preserve">
+    <value>Područje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.Count" xml:space="preserve">
+    <value>Izbrojano</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.ColumnArea" xml:space="preserve">
+    <value>Područje stupca</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.Cell" xml:space="preserve">
+    <value>Ćelija</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Area" xml:space="preserve">
+    <value>Područje</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Average" xml:space="preserve">
+    <value>Prosječno</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Custom" xml:space="preserve">
+    <value>Prilagođeno</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea" xml:space="preserve">
+    <value>Područje filtera</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.AllowedAreas" xml:space="preserve">
+    <value>Dozvoljena područja</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataFieldEx.ColumnValueLineCount" xml:space="preserve">
+    <value>Stupac vrijednosti broja linija</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.Default" xml:space="preserve">
+    <value>Zadano</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.Default" xml:space="preserve">
+    <value>Izbrojano</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea" xml:space="preserve">
+    <value>Područje stupca</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataFieldEx.RowValueLineCount" xml:space="preserve">
+    <value>Redak vrijednosti broja linija</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Caption" xml:space="preserve">
+    <value>Naslov</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintColumnHeaders" xml:space="preserve">
+    <value>Ispiši zaglavlje stupca</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.Field" xml:space="preserve">
+    <value>Polje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.DataArea" xml:space="preserve">
+    <value>Područje podataka</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.HeaderArea" xml:space="preserve">
+    <value>Područje zaglavlja</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Default" xml:space="preserve">
+    <value>Zadano</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.AllowEdit" xml:space="preserve">
+    <value>Dozvoli uređivanje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.RowCount" xml:space="preserve">
+    <value>Broj redova</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowExpand" xml:space="preserve">
+    <value>Dozvoli proširivanje</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.ColumnValueLineCount" xml:space="preserve">
+    <value>Stupac vrijednosti broja linija</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea" xml:space="preserve">
+    <value>Područje redka</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.FieldName" xml:space="preserve">
+    <value>Naziv polja</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.FilterHeaderArea" xml:space="preserve">
+    <value>Područje zaglavlja filtera</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.ColumnFieldValueSeparator" xml:space="preserve">
+    <value>Stupac separator vrijednosti polja</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.RowValueLineCount" xml:space="preserve">
+    <value>Redak vrijednosti broja linija</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.RowFieldValueSeparator" xml:space="preserve">
+    <value>Redak separator vrijednosti polja</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldNaming.FieldName" xml:space="preserve">
+    <value>Naziv polja</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowExpand" xml:space="preserve">
+    <value>Dozvoli proširivanje</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Count" xml:space="preserve">
+    <value>Izbrojano</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Caption" xml:space="preserve">
+    <value>Naslov</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.DataHeaderArea" xml:space="preserve">
+    <value>Područje zaglavlja podataka</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Default" xml:space="preserve">
+    <value>Zadano</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.All" xml:space="preserve">
+    <value>Sva područja</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Custom" xml:space="preserve">
+    <value>Prilagođeno</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.ColumnArea" xml:space="preserve">
+    <value>Područje stupca</value>
+  </data>
+</root>

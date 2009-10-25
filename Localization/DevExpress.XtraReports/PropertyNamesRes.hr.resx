@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.FieldHeader" xml:space="preserve">
+    <value>Zaglavlje polja</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PageHeaderBand" xml:space="preserve">
+    <value>Zaglavlje stranice</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupFooterUnion.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn.ColumnWidth" xml:space="preserve">
+    <value>Širina stupca</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PageBreak.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRShape.Angle" xml:space="preserve">
+    <value>Kut</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ReportHeaderBand" xml:space="preserve">
+    <value>Zaglavlje izvješća</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FormattingRule.Condition" xml:space="preserve">
+    <value>Uvijet</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupUnion.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnLocationChanged" xml:space="preserve">
+    <value>Mjesto promjenjeno</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts.OnPrintHeader" xml:space="preserve">
+    <value>Zaglavlje ispisa</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Custom" xml:space="preserve">
+    <value>Prilagođeno</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Avg" xml:space="preserve">
+    <value>Prosječno</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending" xml:space="preserve">
+    <value>Uzlazno</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlPrintMode.Default" xml:space="preserve">
+    <value>Zadano</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.WordWrap" xml:space="preserve">
+    <value>Prelomi tekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPictureBox.Image" xml:space="preserve">
+    <value>Slika</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryRunning.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.Angle" xml:space="preserve">
+    <value>Kut</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupField.FieldName" xml:space="preserve">
+    <value>Naziv polja</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.Borders" xml:space="preserve">
+    <value>Obrubi</value>
+  </data>
+  <data name="DevExpress.XtraReports.Design.GroupSort.GroupSortReflectItem.ShowHeader" xml:space="preserve">
+    <value>Prikaži zaglavlje</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.Alignment" xml:space="preserve">
+    <value>Poravnanje</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.BorderWidth" xml:space="preserve">
+    <value>Obrub vidljiv</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Borders" xml:space="preserve">
+    <value>Obrubi</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumnMode.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn.ColumnCount" xml:space="preserve">
+    <value>Broj stupaca</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Width" xml:space="preserve">
+    <value>Širina</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.PreviewRowCount" xml:space="preserve">
+    <value>Broj redaka za predpregled</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Count" xml:space="preserve">
+    <value>Izbrojano</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupHeaderBand" xml:space="preserve">
+    <value>Zaglavlje grupe</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn.ColumnSpacing" xml:space="preserve">
+    <value>Prored stupca</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSummaryEvents.OnRowChanged" xml:space="preserve">
+    <value>Redak promjenjen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.Fields" xml:space="preserve">
+    <value>Polja</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.BorderWidth" xml:space="preserve">
+    <value>Obrub vidljiv</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRDockStyle.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.BorderColor" xml:space="preserve">
+    <value>Boja obruba</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Location" xml:space="preserve">
+    <value>Mjesto</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCheckBox.Checked" xml:space="preserve">
+    <value>Uključeno</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.Cell" xml:space="preserve">
+    <value>Ćelija</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ExportOptions" xml:space="preserve">
+    <value>Mogućnosti izvoza</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.BorderColor" xml:space="preserve">
+    <value>Boja obruba</value>
+  </data>
+</root>

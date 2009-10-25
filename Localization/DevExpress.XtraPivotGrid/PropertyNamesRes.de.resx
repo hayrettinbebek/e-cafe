@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintHorzLines" xml:space="preserve">
+    <value>Horizontale Linien</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintVertLines" xml:space="preserve">
+    <value>Vertikale Linien</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintDataHeaders" xml:space="preserve">
+    <value>Datenkopfzeilen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintFilterHeaders" xml:space="preserve">
+    <value>Filterkopfzeilen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintColumnHeaders" xml:space="preserve">
+    <value>Spaltenkopfzeile</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintRowHeaders" xml:space="preserve">
+    <value>Zeilenkopfzeile</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintHeadersOnEveryPage" xml:space="preserve">
+    <value>Kopzeilen auf jeder Seite</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.UsePrintAppearance" xml:space="preserve">
+    <value>Druckaussehen benutzen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.ColumnFieldValueSeparator" xml:space="preserve">
+    <value>Spaltenseperator</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.RowFieldValueSeparator" xml:space="preserve">
+    <value>Zeilenseperator</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.MergeColumnFieldValues" xml:space="preserve">
+    <value>Spaltenfelder verbinden</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.MergeRowFieldValues" xml:space="preserve">
+    <value>Zeilenfelder verbinden</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintUnusedFilterFields" xml:space="preserve">
+    <value>Unbenutzte Filterfelder</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PageSettings" xml:space="preserve">
+    <value>Papiereinstellungen</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperKind" xml:space="preserve">
+    <value>Papierart</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperWidth" xml:space="preserve">
+    <value>Papierbereite</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperHeight" xml:space="preserve">
+    <value>Papierhöhe</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.Landscape" xml:space="preserve">
+    <value>Querformat</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.Margins" xml:space="preserve">
+    <value>Ränder</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.HeaderFilterButtonShowMode" xml:space="preserve">
+    <value>Zeige Filterschaltfläche</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.GroupFieldsInCustomizationWindow" xml:space="preserve">
+    <value>Gruppiere Felder im Feldfenster</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.FilterSeparatorBarPadding" xml:space="preserve">
+    <value>Abstand Filterzeile</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Area" xml:space="preserve">
+    <value>Bereich</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.AreaIndex" xml:space="preserve">
+    <value>Bereichsindex</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.RowHeaderWidth" xml:space="preserve">
+    <value>Breite Zeilenkopf</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Caption" xml:space="preserve">
+    <value>Beschriftung</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.FieldNaming" xml:space="preserve">
+    <value>Feldbenamung</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.CaseSensitive" xml:space="preserve">
+    <value>Groß-/Kleinschreibung</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.None" xml:space="preserve">
+    <value>Keine</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.ColumnArea" xml:space="preserve">
+    <value>Spaltenbereich</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.RowArea" xml:space="preserve">
+    <value>Zeilenbereich</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldNaming.FieldName" xml:space="preserve">
+    <value>Feldname</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldNaming.Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.VerticalContentSplitting" xml:space="preserve">
+    <value>Vertikaler Umbruch</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.AllowCrossGroupVariation" xml:space="preserve">
+    <value>Erlaube gruppenübergreifende Variation</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Prefilter.Criteria" xml:space="preserve">
+    <value>Kriterium</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.DrillDownMaxRowCount" xml:space="preserve">
+    <value>Maximal Anzahl Zeilen</value>
+  </data>
+</root>
