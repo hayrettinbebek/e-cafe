@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1"></xsd:attribute>
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AccStringId.ActionPress">
+		<value>Press</value>
+	</data>
+	<data name="AccStringId.NameScroll">
+		<value>scroll bar</value>
+	</data>
+	<data name="AccStringId.NameScrollIndicator">
+		<value>Position</value>
+	</data>
+	<data name="AccStringId.NameScrollLineUp">
+		<value>Line Up</value>
+	</data>
+	<data name="AccStringId.NameScrollLineDown">
+		<value>Line Down</value>
+	</data>
+	<data name="AccStringId.NameScrollColumnLeft">
+		<value>Column Left</value>
+	</data>
+	<data name="AccStringId.NameScrollColumnRight">
+		<value>Column Right</value>
+	</data>
+	<data name="AccStringId.NameScrollAreaUp">
+		<value>Page Up</value>
+	</data>
+	<data name="AccStringId.NameScrollAreaDown">
+		<value>Page Down</value>
+	</data>
+	<data name="AccStringId.NameScrollAreaLeft">
+		<value>Page Left</value>
+	</data>
+	<data name="AccStringId.NameScrollAreaRight">
+		<value>Page Right</value>
+	</data>
+	<data name="AccStringId.DescScrollLineUp">
+		<value>Moves the vertical position up one line</value>
+	</data>
+	<data name="AccStringId.DescScrollLineDown">
+		<value>Moves the vertical position down one line</value>
+	</data>
+	<data name="AccStringId.DescScrollAreaUp">
+		<value>Moves the vertical position up a couple of lines</value>
+	</data>
+	<data name="AccStringId.DescScrollAreaDown">
+		<value>Moves the vertical position down a couple of lines</value>
+	</data>
+	<data name="AccStringId.DescScrollVertIndicator">
+		<value>Indicates the current vertical position, and can be dragged to change it directly</value>
+	</data>
+	<data name="AccStringId.DescScrollColumnLeft">
+		<value>Moves the horizontal position left one column</value>
+	</data>
+	<data name="AccStringId.DescScrollColumnRight">
+		<value>Moves the horizontal position right one column</value>
+	</data>
+	<data name="AccStringId.DescScrollAreaLeft">
+		<value>Moves the horizontal position left a couple of columns</value>
+	</data>
+	<data name="AccStringId.DescScrollAreaRight">
+		<value>Moves the horizontal position right a couple of columns</value>
+	</data>
+	<data name="AccStringId.DescScrollHorzIndicator">
+		<value>Indicates the current horizontal position, and can be dragged to change it directly</value>
+	</data>
+	<data name="AccStringId.ButtonPush">
+		<value>Press</value>
+	</data>
+	<data name="AccStringId.ButtonOpen">
+		<value>Open</value>
+	</data>
+	<data name="AccStringId.ButtonClose">
+		<value>Close</value>
+	</data>
+	<data name="AccStringId.MouseDoubleClick">
+		<value>Double Click</value>
+	</data>
+	<data name="AccStringId.OpenKeyboardShortcut">
+		<value>Alt+Down</value>
+	</data>
+	<data name="AccStringId.CheckEditCheck">
+		<value>Check</value>
+	</data>
+	<data name="AccStringId.CheckEditUncheck">
+		<value>Uncheck</value>
+	</data>
+	<data name="AccStringId.TabSwitch">
+		<value>Switch</value>
+	</data>
+	<data name="AccStringId.SpinBox">
+		<value>Spinner</value>
+	</data>
+	<data name="AccStringId.SpinUpButton">
+		<value>Up</value>
+	</data>
+	<data name="AccStringId.SpinDownButton">
+		<value>Down</value>
+	</data>
+	<data name="AccStringId.SpinLeftButton">
+		<value>Left</value>
+	</data>
+	<data name="AccStringId.SpinRightButton">
+		<value>Right</value>
+	</data>
+	<data name="AccStringId.GridNewItemRow">
+		<value>NewItem Row</value>
+	</data>
+	<data name="AccStringId.GridFilterRow">
+		<value>Filter Row</value>
+	</data>
+	<data name="AccStringId.GridHeaderPanel">
+		<value>Header Panel</value>
+	</data>
+	<data name="AccStringId.GridDataPanel">
+		<value>Data Panel</value>
+	</data>
+	<data name="AccStringId.GridCell">
+		<value>cell</value>
+	</data>
+	<data name="AccStringId.GridRow">
+		<value>Row {0}</value>
+	</data>
+	<data name="AccStringId.GridRowExpand">
+		<value>Expand</value>
+	</data>
+	<data name="AccStringId.GridRowCollapse">
+		<value>Collapse</value>
+	</data>
+	<data name="AccStringId.GridCardExpand">
+		<value>Expand</value>
+	</data>
+	<data name="AccStringId.GridCardCollapse">
+		<value>Collapse</value>
+	</data>
+	<data name="AccStringId.GridRowActivate">
+		<value>Activate</value>
+	</data>
+	<data name="AccStringId.GridCellEdit">
+		<value>Edit</value>
+	</data>
+	<data name="AccStringId.GridCellFocus">
+		<value>Focus</value>
+	</data>
+	<data name="AccStringId.GridDataRowExpand">
+		<value>Expand detail</value>
+	</data>
+	<data name="AccStringId.GridDataRowCollapse">
+		<value>Collapse detail</value>
+	</data>
+	<data name="AccStringId.GridColumnSortAscending">
+		<value>Sort ascending</value>
+	</data>
+	<data name="AccStringId.GridColumnSortDescending">
+		<value>Sort descending</value>
+	</data>
+	<data name="AccStringId.GridColumnSortNone">
+		<value>Remove sorting</value>
+	</data>
+	<data name="AccStringId.BarLinkCaption">
+		<value>Item</value>
+	</data>
+	<data name="AccStringId.BarLinkClick">
+		<value>Press</value>
+	</data>
+	<data name="AccStringId.BarLinkMenuOpen">
+		<value>Open</value>
+	</data>
+	<data name="AccStringId.BarLinkMenuClose">
+		<value>Close</value>
+	</data>
+	<data name="AccStringId.BarLinkStatic">
+		<value>Static</value>
+	</data>
+	<data name="AccStringId.BarLinkEdit">
+		<value>Edit</value>
+	</data>
+	<data name="AccStringId.BarDockControlTop">
+		<value>Dock Top</value>
+	</data>
+	<data name="AccStringId.BarDockControlLeft">
+		<value>Dock Left</value>
+	</data>
+	<data name="AccStringId.BarDockControlBottom">
+		<value>Dock Bottom</value>
+	</data>
+	<data name="AccStringId.BarDockControlRight">
+		<value>Dock Right</value>
+	</data>
+	<data name="AccStringId.NavBarGroupExpand">
+		<value>Expand</value>
+	</data>
+	<data name="AccStringId.NavBarGroupCollapse">
+		<value>Collapse</value>
+	</data>
+	<data name="AccStringId.NavBarItemClick">
+		<value>Press</value>
+	</data>
+	<data name="AccStringId.NavBarScrollUp">
+		<value>Scroll Up</value>
+	</data>
+	<data name="AccStringId.NavBarScrollDown">
+		<value>Scroll Down</value>
+	</data>
+	<data name="AccStringId.TreeListNodeCollapse">
+		<value>Collapse</value>
+	</data>
+	<data name="AccStringId.TreeListNodeExpand">
+		<value>Expand</value>
+	</data>
+	<data name="AccStringId.TreeListNode">
+		<value>Node</value>
+	</data>
+	<data name="AccStringId.TreeListNodeCell">
+		<value>cell</value>
+	</data>
+	<data name="AccStringId.TreeListColumnSortAscending">
+		<value>Sort ascending</value>
+	</data>
+	<data name="AccStringId.TreeListColumnSortDescending">
+		<value>Sort descending</value>
+	</data>
+	<data name="AccStringId.TreeListColumnSortNone">
+		<value>Remove sorting</value>
+	</data>
+	<data name="AccStringId.TreeListHeaderPanel">
+		<value>Header panel</value>
+	</data>
+	<data name="AccStringId.TreeListDataPanel">
+		<value>Data Panel</value>
+	</data>
+	<data name="AccStringId.TreeListCellEdit">
+		<value>Edit</value>
+	</data>
+	<data name="AccStringId.TreelistRowActivate">
+		<value>Activate</value>
+	</data>
+	<data name="AccStringId.ScrollableControlDefaultAction">
+		<value>Default Action</value>
+	</data>
+	<data name="AccStringId.ScrollableControlDescription">
+		<value>ScrollableControl</value>
+	</data>
+</root>

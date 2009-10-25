@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlreadyUsedObjectSpace" xml:space="preserve">
+    <value>ObjectSpace уже связан с другим корневым представлением: '{0}'</value>
+  </data>
+  <data name="AnErrorHasOccurredWhileLoadingTheModel" xml:space="preserve">
+    <value>Ошибка при загрузке модели. Источник: '{0}'</value>
+  </data>
+  <data name="AnErrorHasOccurredWhileProcessingAShortcut" xml:space="preserve">
+    <value>Ошибка при  работе с ярлыком: {0}</value>
+  </data>
+  <data name="AnErrorHasOccurredWithContext" xml:space="preserve">
+    <value>Ошибка, контекст: {0}</value>
+  </data>
+  <data name="AnUnsavedObjectCannotBeShown" xml:space="preserve">
+    <value>Невозможно отобразить несохраненный объект</value>
+  </data>
+  <data name="ApplicationIsNotStarted" xml:space="preserve">
+    <value>Приложение не стартовало</value>
+  </data>
+  <data name="AttributeModifyingFailed" xml:space="preserve">
+    <value>Изменение атрибута завершилось неудачей</value>
+  </data>
+  <data name="AttributeShouldStartWithSymbol" xml:space="preserve">
+    <value>Атрибут '{0}' должен начинаться с символа '@': '{1}'</value>
+  </data>
+  <data name="AutoCreateOptionIs" xml:space="preserve">
+    <value>UpdatingReadOnlyDataStore.AutoCreateOption = {0}</value>
+  </data>
+  <data name="CannotAddCollectionProperty" xml:space="preserve">
+    <value>Невозможно добавить коллекцию в колонку выбора</value>
+  </data>
+  <data name="CannotAddDuplicateProperty" xml:space="preserve">
+    <value>Невозможно добавить дубликат редактора свойств</value>
+  </data>
+  <data name="CannotAddToEmptySingleton" xml:space="preserve">
+    <value>Невозможно добавить в пустой одиночный объект. Создайте новый экземпляр коллекции</value>
+  </data>
+  <data name="CannotCreateAppropriateDetailItem" xml:space="preserve">
+    <value>Невозможно создать подходящий подробный элемент для '{0}'</value>
+  </data>
+  <data name="CannotCreateAppropriatePropertyEditorForTheProperty" xml:space="preserve">
+    <value>Невозможно создать подходящий PropertyEditor для свойства '{0}.{1}'</value>
+  </data>
+  <data name="CannotCreateSchemaForAttribute" xml:space="preserve">
+    <value>Невозможно изменить схему для атрибута</value>
+  </data>
+  <data name="CannotCreateTemplateByName" xml:space="preserve">
+    <value>Невозможно создать шаблон по имени: '{0}'</value>
+  </data>
+  <data name="CannotFindListViewWithId" xml:space="preserve">
+    <value>Невозможно найти ListView с ID='{0}'</value>
+  </data>
+  <data name="CannotFindThePropertyWithinTheClass" xml:space="preserve">
+    <value>Невозможно найти свойство '{0}' в классе '{1}'</value>
+  </data>
+  <data name="CannotGenerateContent" xml:space="preserve">
+    <value>Невозможно сгенерировать содержимое: атрибут 'ClassName' пустой</value>
+  </data>
+  <data name="CannotObtainTheEditingObject" xml:space="preserve">
+    <value>Невозможно получить редактируемый объект</value>
+  </data>
+  <data name="CannotProcessTheRequestedUrl" xml:space="preserve">
+    <value>Невозможно обработать запрошенный url</value>
+  </data>
+  <data name="CannotProcessTheRequestedUrlActionItemWasNotFound" xml:space="preserve">
+    <value>Невозможно обработать запрошенный url, ActionItem '{0}' не найдет</value>
+  </data>
+  <data name="CannotReadDictionaryFromResource" xml:space="preserve">
+    <value>Невозможно прочесть словарь из ресурса '{0}' сборки '{1}'</value>
+  </data>
+  <data name="CannotSetEditValueAvailableValues" xml:space="preserve">
+    <value>Невозможно установить текст '{0}'  в EditValue, возможные значения:\r\n{1}</value>
+  </data>
+  <data name="CannotSetEditValueListIsEmpty" xml:space="preserve">
+    <value>Невозможно установить текст '{0}'  в EditValue, список пуст</value>
+  </data>
+  <data name="CannotShowViewUnknownContext" xml:space="preserve">
+    <value>Невозможно отобразить представление, неизвестный контекст: '{0}'</value>
+  </data>
+  <data name="CannotShowViewUnknownTarget" xml:space="preserve">
+    <value>Невозможно отобразить представление, неизвестная цель: '{0}'</value>
+  </data>
+  <data name="ClassDoesntImplementInterface" xml:space="preserve">
+    <value>Класс '{0}' не наследует интерфейс '{1}'</value>
+  </data>
+  <data name="ConfigFileDoesNotExists" xml:space="preserve">
+    <value>.config-файл {0} не существует</value>
+  </data>
+  <data name="ConfigFileHasNoModuleNames" xml:space="preserve">
+    <value>Узел 'add\[@key="Modules"]' должен содержать список модулей, .config-файл '{0}'</value>
+  </data>
+  <data name="CurrentObjectIsNotSet" xml:space="preserve">
+    <value>Невозможно установить '{0}' свойство. Текущий объект не определен</value>
+  </data>
+  <data name="DataLayerAlreadyExists" xml:space="preserve">
+    <value>Слой данных уже существует: '{0}'</value>
+  </data>
+  <data name="DictionaryPathItemParsingFailed" xml:space="preserve">
+    <value>Ошибка разбора пути элемента словаря. Синтаксическая ошибка в выражении '{0}'</value>
+  </data>
+  <data name="DictionaryPathParsingFailed" xml:space="preserve">
+    <value>Синтаксичесткая ошибка в выражении '{0}'</value>
+  </data>
+  <data name="DuplicateComponentIdentifier" xml:space="preserve">
+    <value>Дублирование идентификатора компонента '{0}'</value>
+  </data>
+  <data name="ErrorOccursWhileAddingTheCustomProperty" xml:space="preserve">
+    <value>Ошибка при добавлении пользовательского реквизита '{2}' ('{0}' тип реквизита)  к  типу '{1}' : '{3}'</value>
+  </data>
+  <data name="ExceptionDialogLabel" xml:space="preserve">
+    <value>Ошибка:</value>
+  </data>
+  <data name="GridColumnDoesNotExist" xml:space="preserve">
+    <value>Колонка '{0}' не существует в таблице</value>
+  </data>
+  <data name="GridColumnExists" xml:space="preserve">
+    <value>Колонка '{0}' уже присутствует в сетке</value>
+  </data>
+  <data name="GridControlIsAlreadyCreated" xml:space="preserve">
+    <value>Невозможно установить свойство EditMode. GridControl уже создан</value>
+  </data>
+  <data name="IncompatibleParametersCombinationOnViewChanged" xml:space="preserve">
+    <value>Несовместимая комбинация параметров. PopupWindow имеет тот же ObjectSpace, что и main View. Однако, свойство SaveOnAccept контроллера DialogController класса Popup Window установлено в True. Используйте новый ObjectSpace для вызванного Popup Window или установите свойство DialogController.SaveOnAccept в False.</value>
+  </data>
+  <data name="IncorrectConfigFile" xml:space="preserve">
+    <value>Переданный файл конфигурации '{0}' не содержит узла '&lt;add key=\"Modules\"' </value>
+  </data>
+  <data name="InfiniteRecursionDetected" xml:space="preserve">
+    <value>Обнаружена бесконечная рекурсия: карточная форма  \"{0}\" была создана {1} раз</value>
+  </data>
+  <data name="InvalidApplicationVersion" xml:space="preserve">
+    <value>Неверная версия приложения '{0}'</value>
+  </data>
+  <data name="IsNotValidNamespacePrefixDescription" xml:space="preserve">
+    <value>'{0}' неверное описание префикса в пространстве имен</value>
+  </data>
+  <data name="ItsImpossibleToFindPathForNode" xml:space="preserve">
+    <value>Невозможно найти путь='{0}' для узла '{1}'</value>
+  </data>
+  <data name="ItsImpossibleToFindSourceNode" xml:space="preserve">
+    <value>Невозможно найти SourceNode='{0}\\{1}'</value>
+  </data>
+  <data name="LayoutControlInvalidCount" xml:space="preserve">
+    <value>Неверное число: '{0}'</value>
+  </data>
+  <data name="ListEditorShouldImplement" xml:space="preserve">
+    <value>ListEditor должен наследовать интерфейс IDXPopupMenuHolder</value>
+  </data>
+  <data name="MethodShouldBeUsed" xml:space="preserve">
+    <value>Метод '{0}' должен использоваться</value>
+  </data>
+  <data name="ModulesHasAlreadyBeenLoaded" xml:space="preserve">
+    <value>Модули уже загружены</value>
+  </data>
+  <data name="NameAndValueCollectionsShouldHaveEqualLengths" xml:space="preserve">
+    <value>Имена и значения коллекций должны иметь равную длину</value>
+  </data>
+  <data name="NodeContainsDuplicatedChildNodes" xml:space="preserve">
+    <value>Узел '{0}' содержит два дочерних узла со значением '{1}' в ключевом атрибуте. \r\n  Узел1: '{2}'\r\n  Узел2: '{3}'</value>
+  </data>
+  <data name="NodeWasNotFound" xml:space="preserve">
+    <value>Узел  '{0}' не найден</value>
+  </data>
+  <data name="PageCanOnlyContainOneInstanceOfControl" xml:space="preserve">
+    <value>Страница может содержать только один экземпляр '{0}' контрола</value>
+  </data>
+  <data name="PassedObjectBelongsToAnotherObjectSpace" xml:space="preserve">
+    <value>Переданный объект принадлежит другому ObjectSpace</value>
+  </data>
+  <data name="PermissionIsDenied" xml:space="preserve">
+    <value>В разрешении отказано</value>
+  </data>
+  <data name="ProcessWasAborted" xml:space="preserve">
+    <value>Процесс прерван</value>
+  </data>
+  <data name="ResourceItemWithNameIsNotFound" xml:space="preserve">
+    <value>Ресурс с именем '{0}' не найден</value>
+  </data>
+  <data name="RuleSetClearingIsDenied" xml:space="preserve">
+    <value>Очистка установленных правил запрещена</value>
+  </data>
+  <data name="SourceAttributeExpressionShouldStartWith" xml:space="preserve">
+    <value>Выражение атрибута источника должно начинаться '{0}': '{1}'</value>
+  </data>
+  <data name="SourceAttributePathShouldConsistOf" xml:space="preserve">
+    <value>Путь исходного атрибута должен состоять из одного или более имен узлов и заканчиваться именем атрибута, которые разделяются символами '\\'  : '{0}'</value>
+  </data>
+  <data name="SourceNodeExpressionShouldStartWith" xml:space="preserve">
+    <value>Выражение узла источника должно начинаться с '{0}': '{1}'</value>
+  </data>
+  <data name="TheAspectIsNotPresentInAspectsCollection" xml:space="preserve">
+    <value>Аспект '{0}' не представлен в коллекции аспектов</value>
+  </data>
+  <data name="TheAssemblyDoesntReferAssembly" xml:space="preserve">
+    <value>Сборка '{0}' не ссылается на сборку {1} ({2})</value>
+  </data>
+  <data name="TheClassIsNotFoundInBOModel" xml:space="preserve">
+    <value>Класс '{0}' не найден в BOModel</value>
+  </data>
+  <data name="TheClassNameAttributeIsEmpty" xml:space="preserve">
+    <value>Атрибут ClassName, ссылающийся на вид узла, пуст:</value>
+  </data>
+  <data name="TheClassNameAttributeRefersToADifferentType" xml:space="preserve">
+    <value>Атрибут ClassName ссылаемого узла ссылается на другой тип. \r\nТип объекта ссылки: {0}\r\nТип объекта узла View: {1}</value>
+  </data>
+  <data name="TheCreateApplicationModulesManagerReturnsNull" xml:space="preserve">
+    <value>Метод CreateApplicationModulesManager возвращает null</value>
+  </data>
+  <data name="TheExpressionShouldConsistOf" xml:space="preserve">
+    <value>Выражение должно состоять из выражения поиска и исходного имени атрибута, разделенных ';' символ: '{0}'</value>
+  </data>
+  <data name="TheExpressionStringContainsANumberOfExpressions" xml:space="preserve">
+    <value> 'expressionString' строка состоит из {0} выражений</value>
+  </data>
+  <data name="ThePassedFileIsNotADllOrConfig" xml:space="preserve">
+    <value>Переданный файл  '{0}' не *.dll и не *.config file</value>
+  </data>
+  <data name="ThereIsAlreadyRegisteredCreatorForFormat" xml:space="preserve">
+    <value>Уже существует зарегистрированный создатель формата '{0}'</value>
+  </data>
+  <data name="TheSourceNodeCannotAddressToSeveralNodes" xml:space="preserve">
+    <value>SourceNode='{0}\{1}' может ссылаться на несколько узлов '{1}'</value>
+  </data>
+  <data name="TheTypeAttributeCannotBeEmpty" xml:space="preserve">
+    <value>Атрибут 'Type' не может быть пустым</value>
+  </data>
+  <data name="TheTypeIsNotDescendantOf" xml:space="preserve">
+    <value>'{0}' не потомок '{1}'</value>
+  </data>
+  <data name="TheValueWasLocked" xml:space="preserve">
+    <value>Значение заблокировано</value>
+  </data>
+  <data name="TypeDoesNotContainTheMember" xml:space="preserve">
+    <value>Тип '{0}'не содержит член '{1}'</value>
+  </data>
+  <data name="TypeIsNotAEnum" xml:space="preserve">
+    <value>Тип '{0}' не перечисление</value>
+  </data>
+  <data name="UnableToCast" xml:space="preserve">
+    <value>Невозможно привести объект типа '{0}' к типу '{1}'</value>
+  </data>
+  <data name="UnableToChangeChildrenOfNodeDueItIsLocked" xml:space="preserve">
+    <value>Невозможно изменить дочерние узлы '{0}', узел заблокирован.</value>
+  </data>
+  <data name="UnableToChangeConnectionString" xml:space="preserve">
+    <value>Невозможно изменить строку подключения. Соединение не закрыто</value>
+  </data>
+  <data name="UnableToChangeValueOfAttributeDueItIsLocked" xml:space="preserve">
+    <value>Невозможно изменить значение '{0}', атрибут заблокирован</value>
+  </data>
+  <data name="UnableToCreateObjectSpace" xml:space="preserve">
+    <value>Невозможно создать ObjectSpace. Слой данных не указан или строка подключения пуста</value>
+  </data>
+  <data name="UnableToCreateUpdateSessionAutoCreateOption" xml:space="preserve">
+    <value>Невозможно создать UpdatingSession. DataLayer.AutoCreateOption {0}</value>
+  </data>
+  <data name="UnableToCreateUpdateSessionDataLayerIsNull" xml:space="preserve">
+    <value>Невозможно создать UpdatingSession. Слой данных не указан или строка подключения пуста</value>
+  </data>
+  <data name="UnableToCreateUpdatingReadonlySessionAutoCreateOption" xml:space="preserve">
+    <value>Невозможно создать UpdatingReadOnlySession. DataLayer.AutoCreateOption {0}</value>
+  </data>
+  <data name="UnableToExecuteDisabledOrInactiveAction" xml:space="preserve">
+    <value>Невозможно выполнить недоступное или неактивное действие. Причины недоступности: {0}, причины неактивности: {1}</value>
+  </data>
+  <data name="UnableToAssignDisabledActionItem" xml:space="preserve">
+    <value>Невозможно назначить недоступный элемент. Действие: {0}. Элемент: {1}. Причины недоступности: {2}  </value>
+  </data>
+  <data name="UnableToAssignInvisibleActionItem" xml:space="preserve">
+    <value>Невозможно назначить невидимый элемент. Действие: {0}. Элемент: {1}. Причины невидимости: {2}  </value>
+  </data>
+  <data name="UnableToFindADetailViewForType" xml:space="preserve">
+    <value>Невозможно найти детальное представление '{0}' типа объекта</value>
+  </data>
+  <data name="UnableToFindAListViewForType" xml:space="preserve">
+    <value>Невозможно найти списоковое представление '{0}' типа объекта</value>
+  </data>
+  <data name="UnableToFindPropertyInType" xml:space="preserve">
+    <value>Свойство '{0}' в типе '{1}' не найдено</value>
+  </data>
+  <data name="UnableToFindType" xml:space="preserve">
+    <value>Невозможно найти тип '{0}'</value>
+  </data>
+  <data name="UnableToInitializeFileDataProperty" xml:space="preserve">
+    <value>Невозможно проинициализировать свойство FileData  '{0}' в объекте '{1}' </value>
+  </data>
+  <data name="UnableToSetReadOnlyProperty" xml:space="preserve">
+    <value>Невозможно установить значение для свойства  '{0}' предназначенного только для чтения</value>
+  </data>
+  <data name="UnknownException" xml:space="preserve">
+    <value>Возникло неизвестное исключение. Невозможно получить подробную информацию об ошибке.</value>
+  </data>
+  <data name="UnknownValue" xml:space="preserve">
+    <value>Неизвестное значение: '{0}'</value>
+  </data>
+  <data name="UnknownViewNodeName" xml:space="preserve">
+    <value>Неизвестное имя узла представления: '{0}'\r\nДопустимые имена: '{1}', '{2}'</value>
+  </data>
+  <data name="ValueCannotBeStoredIntoTheProperty" xml:space="preserve">
+    <value>Значение '{1}' не может быть занесено в свойство '{0}' </value>
+  </data>
+  <data name="WindowWasNotFound" xml:space="preserve">
+    <value>Окно не найдено по id '{0}'. Зарегистрированные окна: '{1}'</value>
+  </data>
+  <data name="XPDictionaryIsNull" xml:space="preserve">
+    <value>XPDictionary пуст</value>
+  </data>
+  <data name="YouCannotChangeCurrentAspect" xml:space="preserve">
+    <value>Вы не можете изменить текущий аспект. Он зависит от культуры текущего потока</value>
+  </data>
+  <data name="ActionMethodShouldBeNonGeneric" xml:space="preserve">
+    <value>Невозможно создать действие для метода {0} класса {1}. Метод действия не может быть параметризован</value>
+  </data>
+  <data name="ActionMethodShouldBeParameterless" xml:space="preserve">
+    <value>Невозможно создать действие для метода {0} класса {1}. Метод действия должен быть без параметров</value>
+  </data>
+  <data name="ValidationMessageTemplateHasInvalidFormat" xml:space="preserve">
+    <value>Шаблон сообщения проверки данных имеет неверный формат: '{0}'</value>
+  </data>
+  <data name="InvalidParametrizedActionValueType" xml:space="preserve">
+    <value>Неверный тип значения в {0} параметризованного Действия. Установите вместо него тип Int, String или DateTime</value>
+  </data>
+  <data name="ObjectFormatterFormatStringIsInvalid" xml:space="preserve">
+    <value>Объект не может быть форматирован, так как указанная строка формата неверна: '{0}' </value>
+  </data>
+  <data name="NotRegisteredReadOnlyParameterException" xml:space="preserve">
+    <value>Параметр только для чтения '{0}' не зарегистрирован в ParametersFactory.</value>
+  </data>
+  <data name="ParameterConflictsWithPropertyException" xml:space="preserve">
+    <value>Критерий содержит параметр только для чтения '{0}', конфликтующий с свойством '{0}' в классе '{1}'. Для ссылки на параметр только для чтения, используйте синтаксис '@@{0}'. Для ссылки на свойство, используйте синтаксис '@this.{0}'.</value>
+  </data>
+  <data name="RequiresCurrentObjectException" xml:space="preserve">
+    <value>Невозможно обновить CriteriaWrapper, т.к. критерий использует динамические параметры, не определенные в текущем объекте. Для обновления CriteriaWrapper, вызовите метод UpdateParametersValues(Object currentObject) и используйте текущий объект как параметр.</value>
+  </data>
+  <data name="GridColumnDoesNotExists" xml:space="preserve">
+    <value>Колонка '{0}' отсутствует в сетке</value>
+  </data>
+</root>

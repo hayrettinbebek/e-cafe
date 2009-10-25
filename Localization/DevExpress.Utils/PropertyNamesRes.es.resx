@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraPrinting.PdfExportOptions" xml:space="preserve">
+    <value>Opciones de exportación PDF</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptions" xml:space="preserve">
+    <value>Opciones de exportación XLS</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextExportOptions" xml:space="preserve">
+    <value>Opciones de exportación de texto</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.CsvExportOptions" xml:space="preserve">
+    <value>Opciones de exportación CSV</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportOptions" xml:space="preserve">
+    <value>Opciones de exportación de imagen</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportOptions" xml:space="preserve">
+    <value>Opciones de exportación HTML</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.MhtExportOptions" xml:space="preserve">
+    <value>Opciones de exportación MHT</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.RtfExportOptions" xml:space="preserve">
+    <value>Opciones de exportación RTF</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.NativeFormatOptions" xml:space="preserve">
+    <value>Opciones de formato nativo</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfDocumentOptions" xml:space="preserve">
+    <value>Opciones del documento PDF</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.BorderSide.None" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.BorderSide.Left" xml:space="preserve">
+    <value>Izquierdo</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.BorderSide.Top" xml:space="preserve">
+    <value>Superior</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.BorderSide.Right" xml:space="preserve">
+    <value>Derecho</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.BorderSide.Bottom" xml:space="preserve">
+    <value>Inferior</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.BorderSide.All" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.RtfExportMode.SingleFile" xml:space="preserve">
+    <value>Único archivo</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.RtfExportMode.SingleFilePageByPage" xml:space="preserve">
+    <value>Único archivo (página a página)</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportMode.SingleFile" xml:space="preserve">
+    <value>Único archivo</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportMode.SingleFilePageByPage" xml:space="preserve">
+    <value>Único archivo (página a página)</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportMode.DifferentFiles" xml:space="preserve">
+    <value>Diferentes archivos</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportMode.SingleFile" xml:space="preserve">
+    <value>Único archivo</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportMode.SingleFilePageByPage" xml:space="preserve">
+    <value>Único archivo (página a página)</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportMode.DifferentFiles" xml:space="preserve">
+    <value>Diferentes archivos</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfJpegImageQuality.Lowest" xml:space="preserve">
+    <value>Mínima</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfJpegImageQuality.Low" xml:space="preserve">
+    <value>Baja</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfJpegImageQuality.Medium" xml:space="preserve">
+    <value>Mediana</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfJpegImageQuality.High" xml:space="preserve">
+    <value>Alta</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfJpegImageQuality.Highest" xml:space="preserve">
+    <value>Máxima</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.EncodingType.Default" xml:space="preserve">
+    <value>Por defecto</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.EncodingType.ASCII" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.EncodingType.Unicode" xml:space="preserve">
+    <value>Unicode</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.EncodingType.BigEndianUnicode" xml:space="preserve">
+    <value>BigEndianUnicode</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.EncodingType.UTF7" xml:space="preserve">
+    <value>UTF7</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.EncodingType.UTF8" xml:space="preserve">
+    <value>UTF8</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.EncodingType.UTF32" xml:space="preserve">
+    <value>UTF32</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.TopLeft" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.TopCenter" xml:space="preserve">
+    <value>Arriba centrado</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.TopRight" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.MiddleLeft" xml:space="preserve">
+    <value>Medio izquierda</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.MiddleCenter" xml:space="preserve">
+    <value>Medio centrado</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.MiddleRight" xml:space="preserve">
+    <value>Medio derecha</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.BottomLeft" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.BottomCenter" xml:space="preserve">
+    <value>Abajo centrado</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.BottomRight" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.TopJustify" xml:space="preserve">
+    <value>Arriba justificado</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.MiddleJustify" xml:space="preserve">
+    <value>Medio justificado</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextAlignment.BottomJustify" xml:space="preserve">
+    <value>Abajo justificado</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.LineDirection.Slant" xml:space="preserve">
+    <value>Diagonal arriba</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.LineDirection.BackSlant" xml:space="preserve">
+    <value>Diagonal abajo</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.LineDirection.Horizontal" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.LineDirection.Vertical" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageSizeMode.Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageSizeMode.StretchImage" xml:space="preserve">
+    <value>Estirar imagen</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageSizeMode.AutoSize" xml:space="preserve">
+    <value>Tamaño automático</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageSizeMode.CenterImage" xml:space="preserve">
+    <value>Centrar imagen</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageSizeMode.ZoomImage" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PageInfo.None" xml:space="preserve">
+    <value>Ninguna</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PageInfo.Number" xml:space="preserve">
+    <value>Número de página</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PageInfo.NumberOfTotal" xml:space="preserve">
+    <value>Actual sobre el total de páginas</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PageInfo.RomLowNumber" xml:space="preserve">
+    <value>Número de página (num. romana, min.)</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PageInfo.RomHiNumber" xml:space="preserve">
+    <value>Número de página (num. romana, may.)</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PageInfo.DateTime" xml:space="preserve">
+    <value>Fecha y hora actual</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PageInfo.UserName" xml:space="preserve">
+    <value>Nombre de usuario</value>
+  </data>
+  <data name="System.Drawing.Drawing2D.DashStyle.Solid" xml:space="preserve">
+    <value>Sólido</value>
+  </data>
+  <data name="System.Drawing.Drawing2D.DashStyle.Dash" xml:space="preserve">
+    <value>Rayas</value>
+  </data>
+  <data name="System.Drawing.Drawing2D.DashStyle.Dot" xml:space="preserve">
+    <value>Puntos</value>
+  </data>
+  <data name="System.Drawing.Drawing2D.DashStyle.DashDot" xml:space="preserve">
+    <value>Raya-Punto</value>
+  </data>
+  <data name="System.Drawing.Drawing2D.DashStyle.DashDotDot" xml:space="preserve">
+    <value>Raya-Punto-Punto</value>
+  </data>
+  <data name="System.Drawing.Drawing2D.DashStyle.Custom" xml:space="preserve">
+    <value>Personalizado</value>
+  </data>
+  <data name="System.Windows.Forms.CheckState.Unchecked" xml:space="preserve">
+    <value>Sin marcar</value>
+  </data>
+  <data name="System.Windows.Forms.CheckState.Checked" xml:space="preserve">
+    <value>Marcado</value>
+  </data>
+  <data name="System.Windows.Forms.CheckState.Indeterminate" xml:space="preserve">
+    <value>Indeterminado</value>
+  </data>
+  <data name="DevExpress.XtraEditors.Controls.FilterButtonShowMode.Default" xml:space="preserve">
+    <value>Por defecto</value>
+  </data>
+  <data name="DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button" xml:space="preserve">
+    <value>Botón</value>
+  </data>
+  <data name="DevExpress.XtraEditors.Controls.FilterButtonShowMode.SmartTag" xml:space="preserve">
+    <value>Etiqueta inteligente</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.NativeFormatOptions.Compressed" xml:space="preserve">
+    <value>Comprimido</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.NativeFormatOptions.ShowOptionsBeforeSave" xml:space="preserve">
+    <value>Mostar opciones antes de salir</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfExportOptions.ShowPrintDialogOnOpen" xml:space="preserve">
+    <value>Mostrar diálogo de impresión al abrir</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfExportOptions.DocumentOptions" xml:space="preserve">
+    <value>Opciones de documento</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfExportOptions.Compressed" xml:space="preserve">
+    <value>Comprimido</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfExportOptions.NeverEmbeddedFonts" xml:space="preserve">
+    <value>No incrustar nunca las fuentes</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfExportOptions.DefaultResourceFile" xml:space="preserve">
+    <value>Archivo de recursos por defecto</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfExportOptions.ImageQuality" xml:space="preserve">
+    <value>Calidad de imagen</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfDocumentOptions.Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfDocumentOptions.Application" xml:space="preserve">
+    <value>Aplicación</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfDocumentOptions.Title" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfDocumentOptions.Subject" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PdfDocumentOptions.Keywords" xml:space="preserve">
+    <value>Palabras clave</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptions.UseNativeFormat" xml:space="preserve">
+    <value>Usar formato nativo</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptions.ShowGridLines" xml:space="preserve">
+    <value>Mostrar líneas de rejilla</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptions.SheetName" xml:space="preserve">
+    <value>Nombre de hoja</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportOptions.PageBorderColor" xml:space="preserve">
+    <value>Color de borde de página</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportOptions.PageBorderWidth" xml:space="preserve">
+    <value>Ancho de borde de página</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportOptions.ExportMode" xml:space="preserve">
+    <value>Modo de exportación</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportOptions.PageRange" xml:space="preserve">
+    <value>Rango de páginas</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportOptions.Format" xml:space="preserve">
+    <value>Formato</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.ImageExportOptions.Resolution" xml:space="preserve">
+    <value>Resolución</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.RtfExportOptions.ExportMode" xml:space="preserve">
+    <value>Modo de exportación</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.RtfExportOptions.ExportWatermarks" xml:space="preserve">
+    <value>Exportar marca de agua</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.RtfExportOptions.PageRange" xml:space="preserve">
+    <value>Rango de páginas</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptions.ExportHyperlinks" xml:space="preserve">
+    <value>Exportar enlaces</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PageByPageExportOptionsBase.PageRange" xml:space="preserve">
+    <value>Rango de páginas</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextExportOptionsBase.Encoding" xml:space="preserve">
+    <value>Codificación</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextExportOptionsBase.Separator" xml:space="preserve">
+    <value>Separador</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.TextExportOptionsBase.QuoteStringsWithSeparators" xml:space="preserve">
+    <value>Encomillar cadenas con separadores</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportOptionsBase.PageBorderColor" xml:space="preserve">
+    <value>Color de borde de página</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportOptionsBase.PageBorderWidth" xml:space="preserve">
+    <value>Ancho de borde de página</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportOptionsBase.ExportMode" xml:space="preserve">
+    <value>Modo de exportación</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportOptionsBase.PageRange" xml:space="preserve">
+    <value>Rango de páginas</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportOptionsBase.CharacterSet" xml:space="preserve">
+    <value>Juego de caracteres</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportOptionsBase.Title" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.HtmlExportOptionsBase.RemoveSecondarySymbols" xml:space="preserve">
+    <value>Quitar saltos de línea</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptions.Ignore256ColumnsLimit" xml:space="preserve">
+    <value>Ignore 256 Columns Limit</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptions.Ignore65536RowsLimit" xml:space="preserve">
+    <value>Ignore 65536 Rows Limit</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.Options" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.BackColor2" xml:space="preserve">
+    <value>Color de Fondo2</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.Image" xml:space="preserve">
+    <value>Imagen</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.TextOptions" xml:space="preserve">
+    <value>Opciones de Texto</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.GradientMode" xml:space="preserve">
+    <value>Modo Gradiente</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.ForeColor" xml:space="preserve">
+    <value>Color de Frente</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.BorderColor" xml:space="preserve">
+    <value>Color del Marco</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.BackColor" xml:space="preserve">
+    <value>Color de Fondo</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObject.Font" xml:space="preserve">
+    <value>Fuente</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceOptions.UseForeColor" xml:space="preserve">
+    <value>Usar Color de Frente</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceOptions.UseTextOptions" xml:space="preserve">
+    <value>Usar Opciones de Texto</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceOptions.UseBorderColor" xml:space="preserve">
+    <value>Usar Color del Marco</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceOptions.UseBackColor" xml:space="preserve">
+    <value>Usar Color de Fondo</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceOptions.UseImage" xml:space="preserve">
+    <value>Usar Imagen</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceOptions.UseFont" xml:space="preserve">
+    <value>Usar Fuente</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceOptionsEx.HighPriority" xml:space="preserve">
+    <value>Alta Prioridad</value>
+  </data>
+  <data name="DevExpress.Utils.TextOptions.WordWrap" xml:space="preserve">
+    <value>Doblar Líneas</value>
+  </data>
+  <data name="DevExpress.Utils.TextOptions.HotkeyPrefix" xml:space="preserve">
+    <value>Prefijo Tecla de Atajo</value>
+  </data>
+  <data name="DevExpress.Utils.TextOptions.HAlignment" xml:space="preserve">
+    <value>Alineamiento Hoizontal</value>
+  </data>
+  <data name="DevExpress.Utils.TextOptions.VAlignment" xml:space="preserve">
+    <value>Alineamiento Vertical</value>
+  </data>
+  <data name="DevExpress.Utils.TextOptions.Trimming" xml:space="preserve">
+    <value>Recorte</value>
+  </data>
+  <data name="DevExpress.Utils.AppearanceObjectEx.Options" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="DevExpress.Utils.OptionsColumnLayout.RemoveOldColumns" xml:space="preserve">
+    <value>Quitar Antiguas Columnas</value>
+  </data>
+  <data name="DevExpress.Utils.OptionsColumnLayout.AddNewColumns" xml:space="preserve">
+    <value>Añadir Nuevas Columnas</value>
+  </data>
+  <data name="DevExpress.Utils.OptionsColumnLayout.StoreLayout" xml:space="preserve">
+    <value>Guardar Distribución</value>
+  </data>
+  <data name="DevExpress.Utils.OptionsColumnLayout.StoreAppearance" xml:space="preserve">
+    <value>Guardar Apariencia</value>
+  </data>
+  <data name="DevExpress.Utils.OptionsColumnLayout.StoreAllOptions" xml:space="preserve">
+    <value>Guardar todas las Opciones</value>
+  </data>
+  <data name="DevExpress.XtraEditors.StyleFormatConditionBase.Appearance" xml:space="preserve">
+    <value>Apariencia</value>
+  </data>
+  <data name="DevExpress.XtraEditors.StyleFormatConditionBase.Condition" xml:space="preserve">
+    <value>Condición</value>
+  </data>
+  <data name="DevExpress.XtraEditors.StyleFormatConditionBase.Value1" xml:space="preserve">
+    <value>Valor1</value>
+  </data>
+  <data name="DevExpress.XtraEditors.StyleFormatConditionBase.Value2" xml:space="preserve">
+    <value>Valor2</value>
+  </data>
+  <data name="DevExpress.XtraEditors.StyleFormatConditionBase.Tag" xml:space="preserve">
+    <value>Etiqueta</value>
+  </data>
+  <data name="DevExpress.Utils.WordWrap.Default" xml:space="preserve">
+    <value>Por defecto</value>
+  </data>
+  <data name="DevExpress.Utils.WordWrap.NoWrap" xml:space="preserve">
+    <value>Sin Doblar</value>
+  </data>
+  <data name="DevExpress.Utils.WordWrap.Wrap" xml:space="preserve">
+    <value>Doblar</value>
+  </data>
+  <data name="DevExpress.Utils.Trimming.Default" xml:space="preserve">
+    <value>Por defecto</value>
+  </data>
+  <data name="DevExpress.Utils.Trimming.None" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="DevExpress.Utils.Trimming.Character" xml:space="preserve">
+    <value>Charácter</value>
+  </data>
+  <data name="DevExpress.Utils.Trimming.Word" xml:space="preserve">
+    <value>Palabra</value>
+  </data>
+  <data name="DevExpress.Utils.Trimming.EllipsisCharacter" xml:space="preserve">
+    <value>Carácter Elipsis</value>
+  </data>
+  <data name="DevExpress.Utils.Trimming.EllipsisWord" xml:space="preserve">
+    <value>Palabra Elipsis</value>
+  </data>
+  <data name="DevExpress.Utils.Trimming.EllipsisPath" xml:space="preserve">
+    <value>Camino Elipsis</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.None" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.Equal" xml:space="preserve">
+    <value>Igual</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.NotEqual" xml:space="preserve">
+    <value>NoIgual</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.Between" xml:space="preserve">
+    <value>Entre</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.NotBetween" xml:space="preserve">
+    <value>NoEntre</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.Less" xml:space="preserve">
+    <value>Menor</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.Greater" xml:space="preserve">
+    <value>Mayor</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.GreaterOrEqual" xml:space="preserve">
+    <value>MayorIgual</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.LessOrEqual" xml:space="preserve">
+    <value>MenorIgual</value>
+  </data>
+  <data name="DevExpress.Utils.HKeyPrefix.Default" xml:space="preserve">
+    <value>Por defecto</value>
+  </data>
+  <data name="DevExpress.Utils.HKeyPrefix.None" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="DevExpress.Utils.HKeyPrefix.Show" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="DevExpress.Utils.HKeyPrefix.Hide" xml:space="preserve">
+    <value>Ocultar</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PaddingInfo.Top" xml:space="preserve">
+    <value>Superior</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptionsBase.ExportHyperlinks" xml:space="preserve">
+    <value>ExportarHipervínculos</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PaddingInfo.Bottom" xml:space="preserve">
+    <value>Inferior</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsxExportOptions" xml:space="preserve">
+    <value>Opciones de Exportación XLSx</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PaddingInfo.Right" xml:space="preserve">
+    <value>Derecha</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptionsBase.SheetName" xml:space="preserve">
+    <value>NombreHoja</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.PaddingInfo.Left" xml:space="preserve">
+    <value>Izquierda</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptionsBase.ShowGridLines" xml:space="preserve">
+    <value>MostrarLineasRejilla</value>
+  </data>
+  <data name="DevExpress.XtraPrinting.XlsExportOptionsBase.UseNativeFormat" xml:space="preserve">
+    <value>UsarFormatoNativo</value>
+  </data>
+  <data name="DevExpress.XtraEditors.StyleFormatConditionBase.Expression" xml:space="preserve">
+    <value>Expresión</value>
+  </data>
+  <data name="DevExpress.XtraGrid.FormatConditionEnum.Expression" xml:space="preserve">
+    <value>Expresión</value>
+  </data>
+</root>
