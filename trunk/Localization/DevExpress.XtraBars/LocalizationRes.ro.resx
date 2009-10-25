@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarString.AddOrRemove" xml:space="preserve">
+    <value>&amp;Adăugare sau Ştergere butoane</value>
+    <comment>&amp;Add or Remove Buttons</comment>
+  </data>
+  <data name="BarString.ResetBar" xml:space="preserve">
+    <value>Sunteţi sigur că doriţi să resetaţi modificările făcute barei  '{0}'</value>
+    <comment>Are you sure you want to reset the changes made to the '{0}' toolbar?</comment>
+  </data>
+  <data name="BarString.ResetBarCaption" xml:space="preserve">
+    <value>Personalizare</value>
+    <comment>Customize</comment>
+  </data>
+  <data name="BarString.ResetButton" xml:space="preserve">
+    <value>&amp;Resetare bară</value>
+    <comment>&amp;Reset Toolbar</comment>
+  </data>
+  <data name="BarString.CustomizeButton" xml:space="preserve">
+    <value>&amp;Personalizare ...</value>
+    <comment>&amp;Customize ...</comment>
+  </data>
+  <data name="BarString.ToolBarMenu" xml:space="preserve">
+    <value>&amp;Resetare$Ş&amp;tergere$!N&amp;ume$!Stil imp&amp;licit$&amp;Numai text (Totdeauna)$Numai Text (în meniuri)$Imagine ş&amp;i Text$!Început de &amp;Grup nou$&amp;Vizibil$&amp;Cele mai recent folosite</value>
+    <comment>&amp;Reset$&amp;Delete$!&amp;Name$!Defau&amp;lt style$&amp;Text Only (Always)$Text &amp;Only (in Menus)$Image &amp;and Text$!Begin a &amp;Group$&amp;Visible$&amp;Most recently used</comment>
+  </data>
+  <data name="BarString.NewToolbarCustomNameFormat" xml:space="preserve">
+    <value>Propriu  {0}</value>
+    <comment>Custom {0}</comment>
+  </data>
+  <data name="BarString.NewToolbarCaption" xml:space="preserve">
+    <value>Bara nouă</value>
+    <comment>New Toolbar</comment>
+  </data>
+  <data name="BarString.RenameToolbarCaption" xml:space="preserve">
+    <value>Redenumire bară</value>
+    <comment>Rename Toolbar</comment>
+  </data>
+  <data name="BarString.CustomizeWindowCaption" xml:space="preserve">
+    <value>Personalizare</value>
+    <comment>Customization</comment>
+  </data>
+  <data name="BarString.MenuAnimationSystem" xml:space="preserve">
+    <value>(Implicit sistem)</value>
+    <comment>(System default)</comment>
+  </data>
+  <data name="BarString.MenuAnimationNone" xml:space="preserve">
+    <value>Nedefinit</value>
+    <comment>None</comment>
+  </data>
+  <data name="BarString.MenuAnimationSlide" xml:space="preserve">
+    <value>Glisare</value>
+    <comment>Slide</comment>
+  </data>
+  <data name="BarString.MenuAnimationFade" xml:space="preserve">
+    <value>Pierdere</value>
+    <comment>Fade</comment>
+  </data>
+  <data name="BarString.MenuAnimationUnfold" xml:space="preserve">
+    <value>Desfacere</value>
+    <comment>Unfold</comment>
+  </data>
+  <data name="BarString.MenuAnimationRandom" xml:space="preserve">
+    <value>Aleator</value>
+    <comment>Random</comment>
+  </data>
+  <data name="BarString.ToolbarNameCaption" xml:space="preserve">
+    <value>N&amp;ume bară:</value>
+    <comment>&amp;Toolbar Name:</comment>
+  </data>
+  <data name="BarString.RibbonToolbarBelow" xml:space="preserve">
+    <value>&amp;Poziţionare bară de acces rapid sub panglică</value>
+    <comment>&amp;Place Quick Access Toolbar below the Ribbon</comment>
+  </data>
+  <data name="BarString.RibbonToolbarAbove" xml:space="preserve">
+    <value>&amp;Poziţionare bară de acces rapid deasupra de panglică</value>
+    <comment>&amp;Place Quick Access Toolbar above the Ribbon</comment>
+  </data>
+  <data name="BarString.RibbonToolbarRemove" xml:space="preserve">
+    <value>Ş&amp;tergere bară de acces rapid</value>
+    <comment>&amp;Remove from Quick Access Toolbar</comment>
+  </data>
+  <data name="BarString.RibbonToolbarAdd" xml:space="preserve">
+    <value>&amp;Adăugare bară de acces rapid</value>
+    <comment>&amp;Add to Quick Access Toolbar</comment>
+  </data>
+  <data name="BarString.CloseButton" xml:space="preserve">
+    <value>Închidere</value>
+  </data>
+  <data name="BarString.BarAllItems" xml:space="preserve">
+    <value>(Toate elementele)</value>
+  </data>
+  <data name="BarString.PopupMenuEditor" xml:space="preserve">
+    <value>Editor pentru meniul contextul</value>
+  </data>
+  <data name="BarString.RibbonUnassignedPages" xml:space="preserve">
+    <value>(Pagini neatribuite)</value>
+  </data>
+  <data name="BarString.NewMenuName" xml:space="preserve">
+    <value>Meniu principal</value>
+  </data>
+  <data name="BarString.BarUnassignedItems" xml:space="preserve">
+    <value>(Elementele neatribuite)</value>
+  </data>
+  <data name="BarString.RibbonGalleryFilter" xml:space="preserve">
+    <value>Toate grupurile</value>
+  </data>
+  <data name="BarString.MinimizeButton" xml:space="preserve">
+    <value>Minimizare</value>
+  </data>
+  <data name="BarString.RibbonGalleryFilterNone" xml:space="preserve">
+    <value>Nimic</value>
+  </data>
+  <data name="BarString.RibbonAllPages" xml:space="preserve">
+    <value>(Toate paginile)</value>
+  </data>
+  <data name="BarString.NewToolbarName" xml:space="preserve">
+    <value>Instrumente</value>
+  </data>
+  <data name="BarString.HelpButton" xml:space="preserve">
+    <value>Ajutor</value>
+  </data>
+  <data name="BarString.NewStatusBarName" xml:space="preserve">
+    <value>Bara de stare</value>
+  </data>
+  <data name="BarString.MaximizeButton" xml:space="preserve">
+    <value>Maximizare</value>
+  </data>
+  <data name="BarString.RibbonToolbarMinimizeRibbon" xml:space="preserve">
+    <value>Minimizare bandă</value>
+  </data>
+</root>

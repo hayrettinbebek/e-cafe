@@ -1,0 +1,1039 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.LineStyle" xml:space="preserve">
+    <value>Styl linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesLabel.Position" xml:space="preserve">
+    <value>Pozycja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideBarSeriesView.EqualBarWidth" xml:space="preserve">
+    <value>Belki o równej szerokości</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SimpleDiagram.Margins" xml:space="preserve">
+    <value>Marginesy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BubbleLabelValueToDisplay.Value" xml:space="preserve">
+    <value>Wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesView3DColorEachSupportBase.ColorEach" xml:space="preserve">
+    <value>Koloruj każdy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DataFilter.Condition" xml:space="preserve">
+    <value>Warunek</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.TextColor" xml:space="preserve">
+    <value>Kolor tekstu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNMode.Count" xml:space="preserve">
+    <value>Ilość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FillMode3D.Solid" xml:space="preserve">
+    <value>Pełny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ReductionStockOptions.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel3DPosition.Top" xml:space="preserve">
+    <value>Do góry</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.Shadow" xml:space="preserve">
+    <value>Cień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram3DSeriesViewBase.Transparency" xml:space="preserve">
+    <value>Przeźroczystość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TrendLine.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Margins.Right" xml:space="preserve">
+    <value>Do prawej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RangeBarLabelPosition.Center" xml:space="preserve">
+    <value>Wyśrodkowany</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RectangleGradientMode.BottomToTop" xml:space="preserve">
+    <value>Z dołu do góry</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesLabelPosition.Tangent" xml:space="preserve">
+    <value>Tangens</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarSeriesViewBase.ColorEach" xml:space="preserve">
+    <value>Koloruj każdy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DashStyle.Empty" xml:space="preserve">
+    <value>Pusty</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SplineAreaSeriesView.LineTensionPercent" xml:space="preserve">
+    <value>Procent napięcia linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SortingMode.Descending" xml:space="preserve">
+    <value>Malejąco</value>
+  </data>
+  <data name="DevExpress.XtraCharts.MarkerKind.Square" xml:space="preserve">
+    <value>Kwadrat</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollBarOptions.BackColor" xml:space="preserve">
+    <value>Kolor tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BaseMarker.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DashStyle.Dot" xml:space="preserve">
+    <value>Kropka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.BorderVisible" xml:space="preserve">
+    <value>Ramka widoczna</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FullStackedSplineAreaSeriesView.LineTensionPercent" xml:space="preserve">
+    <value>Procent napięcia linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendAlignmentVertical.Center" xml:space="preserve">
+    <value>Wyśrodkowany</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideBarSeriesLabel.Position" xml:space="preserve">
+    <value>Pozycja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.MarkerKind.Cross" xml:space="preserve">
+    <value>Krzyż</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AreaSeriesViewBase.Transparency" xml:space="preserve">
+    <value>Przeźroczystość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesLabel.Position" xml:space="preserve">
+    <value>Pozycja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Bar3DSeriesView.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.MarkerKind.Circle" xml:space="preserve">
+    <value>Okrąg</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.Font" xml:space="preserve">
+    <value>Czcionka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesBase.View" xml:space="preserve">
+    <value>Widok</value>
+  </data>
+  <data name="DevExpress.XtraCharts.MarkerKind.Diamond" xml:space="preserve">
+    <value>Diament</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.Font" xml:space="preserve">
+    <value>Czcionka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesBase.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.Weight" xml:space="preserve">
+    <value>Waga</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendDirection.BottomToTop" xml:space="preserve">
+    <value>Z dołu do góry</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SimpleDiagramSeriesViewBase.Titles" xml:space="preserve">
+    <value>Tytuły</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisY.Thickness" xml:space="preserve">
+    <value>Grubość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.MaxValue" xml:space="preserve">
+    <value>Maksymalna wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.MarkerKind.Hexagon" xml:space="preserve">
+    <value>Sześciokąt</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FillMode.Solid" xml:space="preserve">
+    <value>Pełny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.None" xml:space="preserve">
+    <value>Żaden</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StackedSplineArea3DSeriesView.LineTensionPercent" xml:space="preserve">
+    <value>Procent napięcia linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BorderBase.Thickness" xml:space="preserve">
+    <value>Grubość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisAlignment.Near" xml:space="preserve">
+    <value>Bliski</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PaneLayoutDirection.Vertical" xml:space="preserve">
+    <value>Pionowy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Strip.LegendText" xml:space="preserve">
+    <value>Tekst legendy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendDirection.TopToBottom" xml:space="preserve">
+    <value>Z góry w dół</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RectangleGradientMode.LeftToRight" xml:space="preserve">
+    <value>Z lewej do prawej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DataFilter.Value" xml:space="preserve">
+    <value>Wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BubbleLabelPosition.Outside" xml:space="preserve">
+    <value>Na zewnątrz</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Tickmarks" xml:space="preserve">
+    <value>Oznaczenia znaczników</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RectangleGradientFillOptions.GradientMode" xml:space="preserve">
+    <value>Typ gradientu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideRangeBarSeriesView.BarDistanceFixed" xml:space="preserve">
+    <value>Stały odstęp pomiędzy belkami</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesLabelPosition.Radial" xml:space="preserve">
+    <value>Radialny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeFormat.Custom" xml:space="preserve">
+    <value>Niestandardowy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesLabelPosition.Right" xml:space="preserve">
+    <value>Do prawej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Margins.Top" xml:space="preserve">
+    <value>Do góry</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StackedSplineAreaSeriesView.LineTensionPercent" xml:space="preserve">
+    <value>Procent napięcia linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Title" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Shadow.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.MarkerKind.Triangle" xml:space="preserve">
+    <value>Trójkąt</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Diagram3D.ZoomPercent" xml:space="preserve">
+    <value>Procent przybliżenia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ConstantLine.LineStyle" xml:space="preserve">
+    <value>Styl linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BorderBase.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideBarSeriesView.BarDistanceFixed" xml:space="preserve">
+    <value>Stały odstęp pomiędzy belkami</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BarSeriesView.Shadow" xml:space="preserve">
+    <value>Cień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesNameTemplate.BeginText" xml:space="preserve">
+    <value>Początek tekstu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesPoint.Values" xml:space="preserve">
+    <value>Wartości</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesPointFilter.Condition" xml:space="preserve">
+    <value>Warunek</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeMeasurementUnit.Hour" xml:space="preserve">
+    <value>Godzina</value>
+  </data>
+  <data name="DevExpress.XtraCharts.MarkerKind.Pentagon" xml:space="preserve">
+    <value>Pięciobok</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollBarAlignment.Far" xml:space="preserve">
+    <value>Daleki</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Margins.Bottom" xml:space="preserve">
+    <value>W dołu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PaneLayoutDirection.Horizontal" xml:space="preserve">
+    <value>Poziomy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNOptions.ThresholdValue" xml:space="preserve">
+    <value>Wartość progowa</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BackgroundImage.Image" xml:space="preserve">
+    <value>Obraz</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendAlignmentHorizontal.Right" xml:space="preserve">
+    <value>Do prawej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollBarAlignment.Near" xml:space="preserve">
+    <value>Bliski</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BaseMarker.BorderColor" xml:space="preserve">
+    <value>Kolor ramki</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Marker.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Title.Text" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PointView.Values" xml:space="preserve">
+    <value>Wartości</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesLabelPosition.Center" xml:space="preserve">
+    <value>Wyśrodkowany</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.BackColor" xml:space="preserve">
+    <value>Kolor tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FullStackedSplineArea3DSeriesView.LineTensionPercent" xml:space="preserve">
+    <value>Procent napięcia linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram3D.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StockType.Close" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel3DPosition.Auto" xml:space="preserve">
+    <value>Automatyczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TitleBase.Font" xml:space="preserve">
+    <value>Czcionka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Series.Tag" xml:space="preserve">
+    <value>Znacznik</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideGanttSeriesView.BarDistanceFixed" xml:space="preserve">
+    <value>Stały odstęp pomiędzy belkami</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideBar3DSeriesView.BarDistanceFixed" xml:space="preserve">
+    <value>Stały odstęp pomiędzy belkami</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BarSeriesView.Border" xml:space="preserve">
+    <value>Ramka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BorderBase.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TickmarksBase.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendDirection.LeftToRight" xml:space="preserve">
+    <value>Z lewej do prawej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesView.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PointSeriesViewBase.Shadow" xml:space="preserve">
+    <value>Cień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.Shadow" xml:space="preserve">
+    <value>Cień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel3DPosition.Right" xml:space="preserve">
+    <value>Do prawej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.BackColor" xml:space="preserve">
+    <value>Kolor tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesView.Border" xml:space="preserve">
+    <value>Ramka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisY.Label" xml:space="preserve">
+    <value>Etykieta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram3D.BackImage" xml:space="preserve">
+    <value>Obraz tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollBarOptions.XAxisScrollBarVisible" xml:space="preserve">
+    <value>Widoczny pasek przesówania osi X</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SplineArea3DSeriesView.LineTensionPercent" xml:space="preserve">
+    <value>Procent napięcia linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Shadow.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FibonacciIndicator.Label" xml:space="preserve">
+    <value>Etykiety</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesLabelPosition.Inside" xml:space="preserve">
+    <value>Wewnątrz</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideBar3DSeriesView.EqualBarWidth" xml:space="preserve">
+    <value>Belki o równej szerokości</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollBarOptions.XAxisScrollBarAlignment" xml:space="preserve">
+    <value>Pozycja paska przesówania osi X</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisRange.MinValue" xml:space="preserve">
+    <value>Minimalna wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RegressionLine.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisY.Tickmarks" xml:space="preserve">
+    <value>Oznaczenia znaczników</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollingRange.Auto" xml:space="preserve">
+    <value>Automatyczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.BorderColor" xml:space="preserve">
+    <value>Kolor ramki</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FibonacciIndicator.LineStyle" xml:space="preserve">
+    <value>Styl linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SortingMode.Ascending" xml:space="preserve">
+    <value>Rosnąco</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ConstantLine.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Strip.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Strip.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesLabelPosition.Outside" xml:space="preserve">
+    <value>Na zewnątrz</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScaleType.Qualitative" xml:space="preserve">
+    <value>Jakościowy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesPoint.Tag" xml:space="preserve">
+    <value>Znacznik</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BubbleSeriesLabel.Position" xml:space="preserve">
+    <value>Pozycja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TaskLinkOptions.Thickness" xml:space="preserve">
+    <value>Grubość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideRangeBarSeriesView.EqualBarWidth" xml:space="preserve">
+    <value>Belki o równej szerokości</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.Shadow" xml:space="preserve">
+    <value>Cień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Shadow.Size" xml:space="preserve">
+    <value>Rozmiar</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesLabelPosition.Left" xml:space="preserve">
+    <value>Do lewej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StockLevel.Open" xml:space="preserve">
+    <value>Otwórz</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RangeBarSeriesLabel.Kind" xml:space="preserve">
+    <value>Rodzaj</value>
+  </data>
+  <data name="DevExpress.XtraCharts.NumericFormat.Number" xml:space="preserve">
+    <value>Numer</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNMode.ThresholdPercent" xml:space="preserve">
+    <value>Procent progu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Series.Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AutoScaleBreaks.Enabled" xml:space="preserve">
+    <value>Włączony</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ChartElementNamed.Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisX.Label" xml:space="preserve">
+    <value>Etykieta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LineStyle.Thickness" xml:space="preserve">
+    <value>Grubość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollBarOptions.BorderColor" xml:space="preserve">
+    <value>Kolor ramki</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisAlignment.Far" xml:space="preserve">
+    <value>Daleki</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SimpleMarker.Size" xml:space="preserve">
+    <value>Rozmiar</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNOptions.Enabled" xml:space="preserve">
+    <value>Włączony</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AreaSeriesViewBase.Border" xml:space="preserve">
+    <value>Ramka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.CustomAxisLabel.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FibonacciIndicator.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisY.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TaskLinkOptions.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ReductionStockOptions.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideRangeBarSeriesView.BarDistance" xml:space="preserve">
+    <value>Odstęp belek</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesView.Border" xml:space="preserve">
+    <value>Ramka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Spline3DSeriesView.LineTensionPercent" xml:space="preserve">
+    <value>Procent napięcia linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram.AxisX" xml:space="preserve">
+    <value>Oś X</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ResolveOverlappingMode.None" xml:space="preserve">
+    <value>Żaden</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StockType.Both" xml:space="preserve">
+    <value>Obie</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagramDrawingStyle.Circle" xml:space="preserve">
+    <value>Okrąg</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.TextColor" xml:space="preserve">
+    <value>Kolor tekstu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram.Panes" xml:space="preserve">
+    <value>Obszary</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Label" xml:space="preserve">
+    <value>Etykieta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LayoutDirection.Vertical" xml:space="preserve">
+    <value>Pionowy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendAlignmentHorizontal.Center" xml:space="preserve">
+    <value>Wyśrodkowany</value>
+  </data>
+  <data name="DevExpress.XtraCharts.NumericFormat.Percent" xml:space="preserve">
+    <value>Procent</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.Margins" xml:space="preserve">
+    <value>Marginesy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SortingMode.None" xml:space="preserve">
+    <value>Żaden</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RangeBarLabelPosition.Outside" xml:space="preserve">
+    <value>Na zewnątrz</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisBase.GridLines" xml:space="preserve">
+    <value>Linie siatki</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.Border" xml:space="preserve">
+    <value>Ramka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisRange.MaxValue" xml:space="preserve">
+    <value>Maksymalna wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendAlignmentVertical.Top" xml:space="preserve">
+    <value>Do góry</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BarSeriesLabelPosition.Top" xml:space="preserve">
+    <value>Do góry</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TickmarksBase.Thickness" xml:space="preserve">
+    <value>Grubość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BubbleLabelValueToDisplay.Weight" xml:space="preserve">
+    <value>Waga</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SplineSeriesView.LineTensionPercent" xml:space="preserve">
+    <value>Procent napięcia linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisY.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesViewBase.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendAlignmentVertical.Bottom" xml:space="preserve">
+    <value>W dołu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesPointFilter.Value" xml:space="preserve">
+    <value>Wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TitleBase.TextColor" xml:space="preserve">
+    <value>Kolor tekstu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ResolveOverlappingMode.Default" xml:space="preserve">
+    <value>Domyślny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideGanttSeriesView.BarDistance" xml:space="preserve">
+    <value>Odstęp belek</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarPointSeriesView.Shadow" xml:space="preserve">
+    <value>Cień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Thickness" xml:space="preserve">
+    <value>Grubość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisXLabelTextDirection.Radial" xml:space="preserve">
+    <value>Radialny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RegressionLine.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.All" xml:space="preserve">
+    <value>Wszystko</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FillStyleBase.Options" xml:space="preserve">
+    <value>Opcje</value>
+  </data>
+  <data name="DevExpress.XtraCharts.GridLines.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BarSeriesView.Transparency" xml:space="preserve">
+    <value>Przeźroczystość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.BackImage" xml:space="preserve">
+    <value>Obraz tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesView.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AreaSeriesViewBase.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideGanttSeriesView.EqualBarWidth" xml:space="preserve">
+    <value>Belki o równej szerokości</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LayoutDirection.Horizontal" xml:space="preserve">
+    <value>Poziomy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RegressionLine.LineStyle" xml:space="preserve">
+    <value>Styl linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PolygonGradientMode.LeftToRight" xml:space="preserve">
+    <value>Z lewej do prawej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram3D.BackColor" xml:space="preserve">
+    <value>Kolor tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScaleBreak.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollingRange.MinValue" xml:space="preserve">
+    <value>Minimalna wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BaseMarker.Kind" xml:space="preserve">
+    <value>Rodzaj</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FillMode3D.Empty" xml:space="preserve">
+    <value>Pusty</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.BorderVisible" xml:space="preserve">
+    <value>Ramka widoczna</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StockType.Open" xml:space="preserve">
+    <value>Otwórz</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisXLabelTextDirection.LeftToRight" xml:space="preserve">
+    <value>Z lewej do prawej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.GridLines.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LineSeriesView.LineStyle" xml:space="preserve">
+    <value>Styl linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TitleBase.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeMeasurementUnit.Day" xml:space="preserve">
+    <value>Dzień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.MarkerKind.Star" xml:space="preserve">
+    <value>Gwiazda</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel3DPosition.Bottom" xml:space="preserve">
+    <value>W dołu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.GridLines.LineStyle" xml:space="preserve">
+    <value>Styl linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Series.Points" xml:space="preserve">
+    <value>Punkty</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.BackColor" xml:space="preserve">
+    <value>Kolor tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeFormat.General" xml:space="preserve">
+    <value>Ogólne</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisTitle.Alignment" xml:space="preserve">
+    <value>Wyrównanie</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.BackColor" xml:space="preserve">
+    <value>Kolor tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PolygonGradientMode.TopToBottom" xml:space="preserve">
+    <value>Z góry w dół</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FibonacciIndicator.Kind" xml:space="preserve">
+    <value>Rodzaj</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StockLevel.Close" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.AxisY" xml:space="preserve">
+    <value>Oś Y</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.Border" xml:space="preserve">
+    <value>Ramka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PolygonGradientMode.BottomToTop" xml:space="preserve">
+    <value>Z dołu do góry</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FinancialSeriesViewBase.Shadow" xml:space="preserve">
+    <value>Cień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramSeriesViewBase.AxisY" xml:space="preserve">
+    <value>Oś Y</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BubbleSeriesView.Transparency" xml:space="preserve">
+    <value>Przeźroczystość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram3D.AxisX" xml:space="preserve">
+    <value>Oś X</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScaleBreakOptions.Style" xml:space="preserve">
+    <value>Styl</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ConstantLine.Title" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeMeasurementUnit.Year" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisXLabelTextDirection.TopToBottom" xml:space="preserve">
+    <value>Z góry w dół</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TrendLine.LineStyle" xml:space="preserve">
+    <value>Styl linii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesBase.SummaryFunction" xml:space="preserve">
+    <value>Funkcja podsumowania</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNOptions.ThresholdPercent" xml:space="preserve">
+    <value>Procent progu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.MinValue" xml:space="preserve">
+    <value>Minimalna wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BarSeriesLabelPosition.Center" xml:space="preserve">
+    <value>Wyśrodkowany</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.AxisX" xml:space="preserve">
+    <value>Oś X</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel3DPosition.Left" xml:space="preserve">
+    <value>Do lewej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideBar3DSeriesView.BarDistance" xml:space="preserve">
+    <value>Odstęp belek</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisXLabelTextDirection.Tangent" xml:space="preserve">
+    <value>Tangens</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesView.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BubbleLabelPosition.Center" xml:space="preserve">
+    <value>Wyśrodkowany</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram.Margins" xml:space="preserve">
+    <value>Marginesy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel.BeginText" xml:space="preserve">
+    <value>Początek tekstu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FillMode.Empty" xml:space="preserve">
+    <value>Pusty</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Alignment" xml:space="preserve">
+    <value>Wyrównanie</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SideBySideBarSeriesView.BarDistance" xml:space="preserve">
+    <value>Odstęp belek</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollingRange.MaxValue" xml:space="preserve">
+    <value>Maksymalna wartość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram.AxisY" xml:space="preserve">
+    <value>Oś Y</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScaleBreakOptions.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramSeriesViewBase.AxisX" xml:space="preserve">
+    <value>Oś X</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DashStyle.Solid" xml:space="preserve">
+    <value>Pełny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarLineSeriesView.Closed" xml:space="preserve">
+    <value>Zamknięty</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesBase.LegendText" xml:space="preserve">
+    <value>Tekst legendy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RangeBarLabelPosition.Inside" xml:space="preserve">
+    <value>Wewnątrz</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.BorderColor" xml:space="preserve">
+    <value>Kolor ramki</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RangeBarSeriesLabel.Position" xml:space="preserve">
+    <value>Pozycja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LegendAlignmentHorizontal.Left" xml:space="preserve">
+    <value>Do lewej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel3D.Position" xml:space="preserve">
+    <value>Pozycja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TaskLinkOptions.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNOptions.Count" xml:space="preserve">
+    <value>Ilość</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesBase.Label" xml:space="preserve">
+    <value>Etykieta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Marker.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.NumericFormat.Currency" xml:space="preserve">
+    <value>Waluta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram3D.AxisY" xml:space="preserve">
+    <value>Oś Y</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesViewColorEachSupportBase.ColorEach" xml:space="preserve">
+    <value>Koloruj każdy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisXLabelTextDirection.BottomToTop" xml:space="preserve">
+    <value>Z dołu do góry</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BackgroundImage.Stretch" xml:space="preserve">
+    <value>Rozciągnij</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.Shadow" xml:space="preserve">
+    <value>Cień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PolygonGradientFillOptions.GradientMode" xml:space="preserve">
+    <value>Typ gradientu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.BackImage" xml:space="preserve">
+    <value>Obraz tła</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Margins.Left" xml:space="preserve">
+    <value>Do lewej</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BarSeriesView.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisRange.Auto" xml:space="preserve">
+    <value>Automatyczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ConstantLine.LegendText" xml:space="preserve">
+    <value>Tekst legendy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesView.FillStyle" xml:space="preserve">
+    <value>Styl wypełnienia</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis3D.Label" xml:space="preserve">
+    <value>Etykieta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Strip.Color" xml:space="preserve">
+    <value>Kolor</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeMeasurementUnit.Week" xml:space="preserve">
+    <value>Tydzień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeMeasurementUnit.Month" xml:space="preserve">
+    <value>Miesiąc</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RectangleGradientMode.TopToBottom" xml:space="preserve">
+    <value>Z góry w dół</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNMode.ThresholdValue" xml:space="preserve">
+    <value>Wartość progowa</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScaleType.Numerical" xml:space="preserve">
+    <value>Numeryczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ConstantLine.Visible" xml:space="preserve">
+    <value>Widoczny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BaseMarker.BorderVisible" xml:space="preserve">
+    <value>Ramka widoczna</value>
+  </data>
+  <data name="DevExpress.XtraCharts.NumericFormat.General" xml:space="preserve">
+    <value>Ogólne</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.Others" xml:space="preserve">
+    <value>Inne</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeFormat.ShortDate" xml:space="preserve">
+    <value>Krótka data</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PointView.SeriesName" xml:space="preserve">
+    <value>Nazwy serii</value>
+  </data>
+  <data name="DevExpress.XtraCharts.OverlappingOptions.Mode" xml:space="preserve">
+    <value>Tryb</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.UsePoints" xml:space="preserve">
+    <value>Używaj punktów</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.UseFilters" xml:space="preserve">
+    <value>Używaj filtrów</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RangeBarLabelKind.OneLabel" xml:space="preserve">
+    <value>Jedna etykieta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeFormat.MonthAndYear" xml:space="preserve">
+    <value>Miesiąc i rok</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisRange.AlwaysShowZeroLevel" xml:space="preserve">
+    <value>Zawsze pokazuj poziom zerowy</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Diagram3D.RotationType" xml:space="preserve">
+    <value>Typ obrotu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisBase.Range" xml:space="preserve">
+    <value>Zakres</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeMeasurementUnit.Minute" xml:space="preserve">
+    <value>Minuta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNOptions.Mode" xml:space="preserve">
+    <value>Tryb</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PointView.Undefined" xml:space="preserve">
+    <value>Niezdefiniowany</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisY.TopLevel" xml:space="preserve">
+    <value>Górny poziom</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeFormat.MonthAndDay" xml:space="preserve">
+    <value>Miesiąc i dzień</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RangeBarLabelKind.TwoLabels" xml:space="preserve">
+    <value>Dwie etykiety</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ConstantLine.ShowInLegend" xml:space="preserve">
+    <value>Pokaż w legendzie</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeFormat.ShortTime" xml:space="preserve">
+    <value>Krótki czas</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns" xml:space="preserve">
+    <value>Dwie kolumny</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagram.Rotated" xml:space="preserve">
+    <value>Obrócony</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeScaleMode.Manual" xml:space="preserve">
+    <value>Ręcznie</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Strip.ShowInLegend" xml:space="preserve">
+    <value>Pokaż w legendzie</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesBase.PointOptions" xml:space="preserve">
+    <value>Ustawienia punktu</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Reverse" xml:space="preserve">
+    <value>Odwrócony</value>
+  </data>
+</root>

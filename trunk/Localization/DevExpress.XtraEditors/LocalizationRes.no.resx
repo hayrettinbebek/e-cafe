@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StringId.CaptionError">
+    <value>Feil</value>
+  </data>
+  <data name="StringId.InvalidValueText">
+    <value>Ugyldig verdi</value>
+  </data>
+  <data name="StringId.CheckChecked">
+    <value>Valgt</value>
+  </data>
+  <data name="StringId.CheckUnchecked">
+    <value>Ikke valgt</value>
+  </data>
+  <data name="StringId.CheckIndeterminate">
+    <value>Ubestemt</value>
+  </data>
+  <data name="StringId.DateEditToday">
+    <value>I dag</value>
+  </data>
+  <data name="StringId.DateEditClear">
+    <value>Slett</value>
+  </data>
+  <data name="StringId.OK">
+    <value>&amp;OK</value>
+  </data>
+  <data name="StringId.Cancel">
+    <value>&amp;Avbryt</value>
+  </data>
+  <data name="StringId.NavigatorFirstButtonHint">
+    <value>Første</value>
+  </data>
+  <data name="StringId.NavigatorPreviousButtonHint">
+    <value>Forrige</value>
+  </data>
+  <data name="StringId.NavigatorPreviousPageButtonHint">
+    <value>Forrige side</value>
+  </data>
+  <data name="StringId.NavigatorNextButtonHint">
+    <value>Neste</value>
+  </data>
+  <data name="StringId.NavigatorNextPageButtonHint">
+    <value>Neste side</value>
+  </data>
+  <data name="StringId.NavigatorLastButtonHint">
+    <value>Siste</value>
+  </data>
+  <data name="StringId.NavigatorAppendButtonHint">
+    <value>Tilføy</value>
+  </data>
+  <data name="StringId.NavigatorRemoveButtonHint">
+    <value>Slett</value>
+  </data>
+  <data name="StringId.NavigatorEditButtonHint">
+    <value>Rediger</value>
+  </data>
+  <data name="StringId.NavigatorEndEditButtonHint">
+    <value>Avslutt redigering</value>
+  </data>
+  <data name="StringId.NavigatorCancelEditButtonHint">
+    <value>Avbryte endring</value>
+  </data>
+  <data name="StringId.NavigatorTextStringFormat">
+    <value>Linje {0} av {1}</value>
+  </data>
+  <data name="StringId.PictureEditMenuCut">
+    <value>Klipp</value>
+  </data>
+  <data name="StringId.PictureEditMenuCopy">
+    <value>Kopier</value>
+  </data>
+  <data name="StringId.PictureEditMenuPaste">
+    <value>Lim inn</value>
+  </data>
+  <data name="StringId.PictureEditMenuDelete">
+    <value>Slett</value>
+  </data>
+  <data name="StringId.PictureEditMenuLoad">
+    <value>Hent</value>
+  </data>
+  <data name="StringId.PictureEditMenuSave">
+    <value>Lagre</value>
+  </data>
+  <data name="StringId.PictureEditOpenFileTitle">
+    <value>Åpne</value>
+  </data>
+  <data name="StringId.PictureEditSaveFileTitle">
+    <value>Lagre som</value>
+  </data>
+  <data name="StringId.PictureEditOpenFileError">
+    <value>Feil bildeformat</value>
+  </data>
+  <data name="StringId.PictureEditOpenFileErrorCaption">
+    <value>Feil ved åpning</value>
+  </data>
+  <data name="StringId.LookUpEditValueIsNull">
+    <value>[Verdien av redigeringen er null]</value>
+  </data>
+  <data name="StringId.LookUpInvalidEditValueType">
+    <value>Ugyldig verdi for LookUpEdit.</value>
+  </data>
+  <data name="StringId.LookUpColumnDefaultName">
+    <value>Navn</value>
+  </data>
+  <data name="StringId.PictureEditOpenFileFilter">
+    <value>Bitmapfiler (*.bmp)|*.bmp|Graphics Interchange Format (*.gif)|*.gif|JPEG File Interchange Format (*.jpg;*.jpeg)|*.jpg;*.jpeg|Icon Files (*.ico)|*.ico|Alle grafikkfiler |*.bmp;*.gif;*.jpg;*.jpeg;*.ico;*.png;*.tif|Alle filer |*.*</value>
+  </data>
+  <data name="StringId.PictureEditSaveFileFilter">
+    <value>Bitmapfiler (*.bmp)|*.bmp|Graphics Interchange Format (*.gif)|*.gif|JPEG File Interchange Format (*.jpg)|*.jpg</value>
+  </data>
+  <data name="StringId.MaskBoxValidateError">
+    <value>Verdien er ikke ferdigredigert. Fortsett redigering? 
+	
+	Ja - returner til editoren og korriger verdien.
+	Nei - la verdien være som den er.
+	Avbryt - gå tilbake til forrige verdi.
+	</value>
+  </data>
+  <data name="StringId.UnknownPictureFormat">
+    <value>Ukjent grafikkformat</value>
+  </data>
+  <data name="StringId.DataEmpty">
+    <value>Filen er tom</value>
+  </data>
+  <data name="StringId.NotValidArrayLength">
+    <value>Ikke gyldig matriselengde.</value>
+  </data>
+  <data name="StringId.ImagePopupEmpty">
+    <value>(Tom)</value>
+  </data>
+  <data name="StringId.ImagePopupPicture">
+    <value>(Bilde)</value>
+  </data>
+  <data name="StringId.ColorTabCustom">
+    <value>Valg</value>
+  </data>
+  <data name="StringId.ColorTabWeb">
+    <value>Web</value>
+  </data>
+  <data name="StringId.ColorTabSystem">
+    <value>System</value>
+  </data>
+  <data name="StringId.CalcButtonMC">
+    <value>MC</value>
+  </data>
+  <data name="StringId.CalcButtonMR">
+    <value>MR</value>
+  </data>
+  <data name="StringId.CalcButtonMS">
+    <value>MS</value>
+  </data>
+  <data name="StringId.CalcButtonMx">
+    <value>M+</value>
+  </data>
+  <data name="StringId.CalcButtonSqrt">
+    <value>sqrt</value>
+  </data>
+  <data name="StringId.CalcButtonBack">
+    <value>Tilbake</value>
+  </data>
+  <data name="StringId.CalcButtonCE">
+    <value>CE</value>
+  </data>
+  <data name="StringId.CalcButtonC">
+    <value>C</value>
+  </data>
+  <data name="StringId.CalcError">
+    <value>Kalkulasjonsfeil</value>
+  </data>
+  <data name="StringId.TabHeaderButtonPrev">
+    <value>Forrige</value>
+  </data>
+  <data name="StringId.TabHeaderButtonNext">
+    <value>Neste</value>
+  </data>
+  <data name="StringId.TabHeaderButtonClose">
+    <value>Lukk</value>
+  </data>
+  <data name="StringId.XtraMessageBoxOkButtonText">
+    <value>&amp;OK</value>
+  </data>
+  <data name="StringId.XtraMessageBoxCancelButtonText">
+    <value>&amp;Avbryt</value>
+  </data>
+  <data name="StringId.XtraMessageBoxYesButtonText">
+    <value>&amp;Ja</value>
+  </data>
+  <data name="StringId.XtraMessageBoxNoButtonText">
+    <value>&amp;Nei</value>
+  </data>
+  <data name="StringId.XtraMessageBoxAbortButtonText">
+    <value>&amp;Avbryt</value>
+  </data>
+  <data name="StringId.XtraMessageBoxRetryButtonText">
+    <value>&amp;Prøv igjen</value>
+  </data>
+  <data name="StringId.XtraMessageBoxIgnoreButtonText">
+    <value>&amp;Ignorer</value>
+  </data>
+  <data name="StringId.TextEditMenuUndo">
+    <value>&amp;Angre</value>
+  </data>
+  <data name="StringId.TextEditMenuCut">
+    <value>Kl&amp;ipp</value>
+  </data>
+  <data name="StringId.TextEditMenuCopy">
+    <value>&amp;Kopier</value>
+  </data>
+  <data name="StringId.TextEditMenuPaste">
+    <value>&amp;Lim inn</value>
+  </data>
+  <data name="StringId.TextEditMenuDelete">
+    <value>&amp;Slett</value>
+  </data>
+  <data name="StringId.TextEditMenuSelectAll">
+    <value>Marker &amp;alt</value>
+  </data>
+</root>

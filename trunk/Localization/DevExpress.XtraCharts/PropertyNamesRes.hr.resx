@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraCharts.BaseMarker.BorderVisible" xml:space="preserve">
+    <value>Obrub vidljiv</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Legend.Border" xml:space="preserve">
+    <value>Obrub</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FibonacciIndicator.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesPoint.Item" xml:space="preserve">
+    <value>Stavka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DashStyle.DashDotDot" xml:space="preserve">
+    <value>Crta Točka Točka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel3DPosition.Auto" xml:space="preserve">
+    <value>Automatski</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeMeasurementUnit.Year" xml:space="preserve">
+    <value>Godina</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DashStyle.DashDot" xml:space="preserve">
+    <value>Crta Točka</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FillMode.Empty" xml:space="preserve">
+    <value>Prazno</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PointSeriesLabel.Angle" xml:space="preserve">
+    <value>Kut</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DashStyle.Empty" xml:space="preserve">
+    <value>Prazno</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisLabel.Angle" xml:space="preserve">
+    <value>Kut</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ResolveOverlappingMode.Default" xml:space="preserve">
+    <value>Zadano</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BorderBase.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DataFilter.ColumnName" xml:space="preserve">
+    <value>Naziv stupca</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.BorderColor" xml:space="preserve">
+    <value>Boja obruba</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Alignment" xml:space="preserve">
+    <value>Poravnanje</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisAlignment.Far" xml:space="preserve">
+    <value>Dalje</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BaseMarker.BorderColor" xml:space="preserve">
+    <value>Boja obruba</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.BorderVisible" xml:space="preserve">
+    <value>Obrub vidljiv</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeFormat.General" xml:space="preserve">
+    <value>Općenito</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FillStyleBase.Options" xml:space="preserve">
+    <value>Mogućnosti</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ResolveOverlappingMode.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Shadow.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesView.Border" xml:space="preserve">
+    <value>Obrub</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeFormat.Custom" xml:space="preserve">
+    <value>Prilagođeno</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StockLevel.Close" xml:space="preserve">
+    <value>Zatvori</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarAxisY.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollingRange.Auto" xml:space="preserve">
+    <value>Automatski</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DashStyle.Dash" xml:space="preserve">
+    <value>Crta</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScaleBreakOptions.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AreaSeriesViewBase.Border" xml:space="preserve">
+    <value>Obrub</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BarSeriesView.Border" xml:space="preserve">
+    <value>Obrub</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TrendLine.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DataFilter.Condition" xml:space="preserve">
+    <value>Uvijet</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Axis.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.XYDiagramPaneBase.BorderColor" xml:space="preserve">
+    <value>Boja obruba</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SortingMode.None" xml:space="preserve">
+    <value>Ništa</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DateTimeMeasurementUnit.Hour" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisRange.Auto" xml:space="preserve">
+    <value>Automatski</value>
+  </data>
+  <data name="DevExpress.XtraCharts.StockType.Close" xml:space="preserve">
+    <value>Zatvori</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarLineSeriesView.Closed" xml:space="preserve">
+    <value>Zatvoreno</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesLabelBase.Border" xml:space="preserve">
+    <value>Obrub</value>
+  </data>
+  <data name="DevExpress.XtraCharts.LineStyle.DashStyle" xml:space="preserve">
+    <value>Stil crte</value>
+  </data>
+  <data name="DevExpress.XtraCharts.BackgroundImage.Image" xml:space="preserve">
+    <value>Slika</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNOptions.Count" xml:space="preserve">
+    <value>Izbrojano</value>
+  </data>
+  <data name="DevExpress.XtraCharts.GridLines.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieExplodeMode.All" xml:space="preserve">
+    <value>Sve</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Strip.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.AxisTitle.Alignment" xml:space="preserve">
+    <value>Poravnanje</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesLabel.ColumnIndent" xml:space="preserve">
+    <value>Uvlaka stupca</value>
+  </data>
+  <data name="DevExpress.XtraCharts.Marker.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesView.Border" xml:space="preserve">
+    <value>Obrub</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RadarDiagram.BorderVisible" xml:space="preserve">
+    <value>Obrub vidljiv</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SortingMode.Ascending" xml:space="preserve">
+    <value>Uzlazno</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollBarOptions.BorderColor" xml:space="preserve">
+    <value>Boja obruba</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ConstantLine.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesViewBase.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TaskLinkOptions.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FillMode3D.Empty" xml:space="preserve">
+    <value>Prazno</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ScrollBarAlignment.Far" xml:space="preserve">
+    <value>Dalje</value>
+  </data>
+  <data name="DevExpress.XtraCharts.SeriesPointFilter.Condition" xml:space="preserve">
+    <value>Uvijet</value>
+  </data>
+  <data name="DevExpress.XtraCharts.ReductionStockOptions.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.DataFilterCondition.GreaterThan" xml:space="preserve">
+    <value>Veće od</value>
+  </data>
+  <data name="DevExpress.XtraCharts.PieSeriesView.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.FunnelSeriesView.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.TopNMode.Count" xml:space="preserve">
+    <value>Izbrojano</value>
+  </data>
+  <data name="DevExpress.XtraCharts.RegressionLine.Color" xml:space="preserve">
+    <value>Boja</value>
+  </data>
+  <data name="DevExpress.XtraCharts.NumericFormat.General" xml:space="preserve">
+    <value>Općenito</value>
+  </data>
+</root>

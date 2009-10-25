@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChartStringId.WizDataFiltersDisabled" xml:space="preserve">
+    <value>(няма)</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent20" xml:space="preserve">
+    <value>Процент20</value>
+  </data>
+  <data name="ChartStringId.PanesVisibilityDialogVisibleColumn" xml:space="preserve">
+    <value>Видим</value>
+  </data>
+  <data name="ChartStringId.MenuItemAdd" xml:space="preserve">
+    <value>Добави</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitDay" xml:space="preserve">
+    <value>Ден</value>
+  </data>
+  <data name="ChartStringId.ValueMember" xml:space="preserve">
+    <value>Стойност</value>
+  </data>
+  <data name="ChartStringId.WizAppearancePageName" xml:space="preserve">
+    <value>Облик</value>
+  </data>
+  <data name="ChartStringId.WizHatchMin" xml:space="preserve">
+    <value>Мин</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelValue" xml:space="preserve">
+    <value>Стойност</value>
+  </data>
+  <data name="ChartStringId.DefaultMaxValue" xml:space="preserve">
+    <value>Макс</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent30" xml:space="preserve">
+    <value>Процент30</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitWeek" xml:space="preserve">
+    <value>Седмица</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent50" xml:space="preserve">
+    <value>Процент50</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelValue_1" xml:space="preserve">
+    <value>Стойност_1</value>
+  </data>
+  <data name="ChartStringId.WizResolveOvarlappingModeDefault" xml:space="preserve">
+    <value>По подр.</value>
+  </data>
+  <data name="ChartStringId.WizHatchVertical" xml:space="preserve">
+    <value>Вертикална</value>
+  </data>
+  <data name="ChartStringId.WizNoBackImage" xml:space="preserve">
+    <value>(Няма)</value>
+  </data>
+  <data name="ChartStringId.StyleColorNumber" xml:space="preserve">
+    <value>Цвят {0}</value>
+  </data>
+  <data name="ChartStringId.WeightMember" xml:space="preserve">
+    <value>Тегло</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent75" xml:space="preserve">
+    <value>Процент75</value>
+  </data>
+  <data name="ChartStringId.WizHatchMax" xml:space="preserve">
+    <value>Макс</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitMonth" xml:space="preserve">
+    <value>Месец</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent25" xml:space="preserve">
+    <value>Процент25</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent10" xml:space="preserve">
+    <value>Процент10</value>
+  </data>
+  <data name="ChartStringId.VerbSaveLayout" xml:space="preserve">
+    <value>Запиши...</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitYear" xml:space="preserve">
+    <value>Година</value>
+  </data>
+  <data name="ChartStringId.MenuItemDelete" xml:space="preserve">
+    <value>Изтрий</value>
+  </data>
+  <data name="ChartStringId.WizDataMemberNoneString" xml:space="preserve">
+    <value>(Няма)</value>
+  </data>
+  <data name="ChartStringId.DefaultMinValue" xml:space="preserve">
+    <value>Мин</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent05" xml:space="preserve">
+    <value>Процент05</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent60" xml:space="preserve">
+    <value>Процент60</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelValue_2" xml:space="preserve">
+    <value>Стойност_2</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent80" xml:space="preserve">
+    <value>Процент80</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent70" xml:space="preserve">
+    <value>Процент70</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent40" xml:space="preserve">
+    <value>Процент40</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent90" xml:space="preserve">
+    <value>Процент90</value>
+  </data>
+</root>

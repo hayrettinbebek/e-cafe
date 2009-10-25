@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MetaData_IncorrectPath">
+    <value>De &apos;{1}&apos; eigendom pad onjuist is voor de &quot;{0}&quot; type</value>
+  </data>
+  <data name="MetaData_IncorrectPathMemberNotExists">
+    <value>De &apos;{1}&apos; eigendom pad onjuist is voor de &quot;{0} &apos;soort omdat het&apos; {2}. {3} &apos;lid bestaat niet</value>
+  </data>
+  <data name="MetaData_IncorrectPathNonPersistentMember">
+    <value>De &apos;{1}&apos; eigendom pad onjuist is voor de &quot;{0} &apos;soort omdat het&apos; {2}. {3} &apos;is geen lid van een aanhoudende</value>
+  </data>
+  <data name="MetaData_IncorrectPathNonReferenceMember">
+    <value>De &apos;{1}&apos; eigendom pad onjuist is voor de &quot;{0} &apos;soort omdat het&apos; {2}. {3} &apos;lid is niet een verwijzing lid</value>
+  </data>
+  <data name="ConnectionProvider_TypeMappingMissing">
+    <value>Databank provider kan het  &apos;{0}&apos; type niet verwerken, want het is niet gekoppeld aan de soorten van een underlayed database. Gebruik een ander type.</value>
+  </data>
+  <data name="ConnectionProvider_UnableToCreateDBObject">
+    <value>Kan niet maken&apos;{0}&apos; &apos;{1}&apos;. Parent: &apos;{2} &quot;. Fout: {3}</value>
+  </data>
+  <data name="Session_TypeNotFound">
+    <value>Kan niet vinden type met id = &apos;{0}&apos;</value>
+  </data>
+  <data name="Session_TypeFieldIsEmpty">
+    <value>&apos;{0}&apos; veld is leeg (base class  &apos;{1}&apos;)</value>
+  </data>
+  <data name="ConnectionProvider_UnableToFillRefType">
+    <value>Kan geen zorgen database-schema voor de &apos;{1} &quot;lid van de&apos; {0} &apos;type. Fout: {2}</value>
+  </data>
+  <data name="ConnectionProvider_SqlExecutionError">
+    <value>SQL &apos;{0}&apos; met parameters &quot;{1} &apos;uitzondering&apos; {2}&quot;</value>
+  </data>
+  <data name="Generator_UnknownCriteriaOperator">
+    <value>De &apos;{0}&apos; exploitant niet gevonden</value>
+  </data>
+  <data name="MetaData_KeyPropertyAbsent">
+    <value>Toets Makelaar voor &apos;{0}&apos; is afwezig</value>
+  </data>
+  <data name="MetaData_DuplicateKeyProperty">
+    <value>Duplicaat sleutel gevonden voor type &apos;{0}&apos;</value>
+  </data>
+  <data name="MetaData_XMLLoadError">
+    <value>XML Woordenboek belasting fout: {0}</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotFindClassinfoType">
+    <value>Kan niet vinden classinfo type</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotFindConstructor">
+    <value>Kan niet vinden constructor</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorModelTagAbsent">
+    <value>Onjuiste XML (De &lt;Model&gt; -tag niet gevonden of onjuiste naamruimte)</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotResolveClassinfoInstanceType">
+    <value>Niet kan oplossen Classinfo bijvoorbeeld type</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotLoadMember">
+    <value>Kan lid [{0}]{1}.{2} niet laden</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorUnknownAttribute">
+    <value>Onbekend kenmerk &apos;{0}&apos;</value>
+  </data>
+  <data name="MetaData_PropertyTypeMismatch">
+    <value>De vereniging &apos;{1} &quot;tussen de klassen&quot; {3}&apos; en &apos;{4}&apos; is ongeldig. De klasse &apos;{3}&apos; bevat de eigenschap &apos;{2} &quot;, die verwijst naar de klas&apos; {4}&apos;. De klasse &apos;{4}&apos; bevat de eigenschap &apos;{0} &quot;, die ten onrechte verwijst naar de klasse&quot; {5}&apos;, maar het moet verwijzen naar de klasse &quot;{3} &apos;</value>
+  </data>
+  <data name="MetaData_PropertyMissing">
+    <value>De &apos;{0}&apos; eigendom bestaat niet binnen de &apos;{1} &quot;type</value>
+  </data>
+  <data name="MetaData_PropertyMissingReferenceType">
+    <value>Verwijzing naar de &apos;{0} &quot;type</value>
+  </data>
+  <data name="MetaData_RequiredInterfaceMissing">
+    <value>De &apos;{0} &quot;type does not support IXPSimpleObject interface</value>
+  </data>
+  <data name="MetaData_AssociationElementTypeMissing">
+    <value>De &apos;{0}&apos; eigenschap specificeert niet de &apos;ElementType&apos; goed binnen de &apos;Vereniging&apos; attribuut</value>
+  </data>
+  <data name="MetaData_RequiredAttributeMissing">
+    <value>De &apos;{0}&apos; eigenschap geeft geen definitie van het &apos;{1}&apos; attribuut</value>
+  </data>
+  <data name="MetaData_PropertyNameMismatch">
+    <value>De &apos;{0}&apos; eigendom mismatch</value>
+  </data>
+  <data name="MetaData_NonPersistentReferenceFound">
+    <value>Terwijl de oplossing van de echte soort object, een verwijzing naar een nonpersistent &apos;{0} &quot;type gevonden</value>
+  </data>
+  <data name="MetaData_RecursiveReferenceFound">
+    <value>Een recursieve verwijzing is gevonden</value>
+  </data>
+  <data name="Session_ObjectCannotBePurged">
+    <value>De &apos;{0}&apos; object met id = &apos;{1}&apos; kan niet worden doorgeblazen. Er zijn voorwerpen die aan haar zijn.</value>
+  </data>
+  <data name="Session_WrongConnectionString">
+    <value>Ongeldige verbindingsreeks vermeld: &apos;{0} &quot;</value>
+  </data>
+  <data name="Session_CannotReloadPurgedObject">
+    <value>Gevraagde objecten kunnen niet worden geladen, omdat ze afwezig zijn in het gegevensarchief. Deze objecten kunnen reeds geschrapt / gespoeld. Als u deze uitzondering opnieuw met dezelfde objecten in de lijst te noteren dat uw gegevens opslaan referentiële integriteit kan worden ingeslagen. In dit geval, neem dan contact op met uw systeembeheerder. ({0})</value>
+  </data>
+  <data name="Session_SessionMixing">
+    <value>De &apos;{0}&apos; object behoort tot een andere sessie</value>
+  </data>
+  <data name="Session_CannotAddObjectToObjectCache">
+    <value>Kan niet toevoegen van de &apos;{0}&apos; object met de sleutel = &apos;{1}&apos; naar het object-cache, omdat een ander object &apos;{2}&apos; met dezelfde sleutel is reeds toegevoegd aan het</value>
+  </data>
+  <data name="Session_LoadedPropertyAssignmentError">
+    <value>Kan niet kent &apos;{1}&apos; eigendom van de &apos;{0}&apos; klasse met geladen gegevens. Reden: {2}</value>
+  </data>
+  <data name="ConnectionProvider_SchemaCorrectionNeeded">
+    <value>Schema moet worden bijgewerkt. Neem contact op met uw systeembeheerder. Sql tekst: {0}</value>
+  </data>
+  <data name="MetaData_SessionCtorAbsent">
+    <value>De {0} type beschikt niet over een specifieke sessie constructor</value>
+  </data>
+  <data name="Paging_PageSizeShouldBeGreaterThanZero">
+    <value>De PageSize moet groter dan nul</value>
+  </data>
+  <data name="Paging_CurrentPageShouldBeGreaterOrEqualZero">
+    <value>De CurrentPage moet groter of gelijk 0</value>
+  </data>
+  <data name="Paging_CurrentPageShouldBeLessThanPageCount">
+    <value>De CurrentPage moet minder dan PageCount</value>
+  </data>
+  <data name="Session_TranSequenceBegin">
+    <value>Kan niet starten meer transacties op deze sessie</value>
+  </data>
+  <data name="Session_TranSequenceCommit">
+    <value>Geen transactie is actief</value>
+  </data>
+  <data name="Session_TranSequenceRollback">
+    <value>Geen transactie is actief</value>
+  </data>
+  <data name="Collections_InvalidCastOnAdd">
+    <value>Unable to add item naar collectie. De &apos;{0}&apos; object is niet een instantie van de &apos;{1} &quot;type</value>
+  </data>
+  <data name="Generator_OneOfBinaryOperatorsOperandsIsNull">
+    <value>Een van BinaryOperator de operanden is null</value>
+  </data>
+  <data name="DataObject_ClassInfoArgumentIncorrect">
+    <value>De waarde van classinfo argument is onjuist. De aanleg van XPDataObjectClassInfo verwacht</value>
+  </data>
+  <data name="Criteria_NotImplementedForFiltering">
+    <value>De {0} is niet uitgevoerd voor het filteren van</value>
+  </data>
+  <data name="ConnectionProvider_KeysAutogenerationNonSupportedTypeException">
+    <value>Toetsen autogeneration alleen ondersteund voor Int32 en Guid datatypes. Klasse Type: &apos;{0} &quot;</value>
+  </data>
+  <data name="Session_CannotLoadInvalidType">
+    <value>Cannot load ongeldig Type  &apos;{0}&apos;</value>
+  </data>
+  <data name="Paging_EnumeratorPositioning">
+    <value>De teller staat voor het eerste element van de collectie of na de laatste element</value>
+  </data>
+  <data name="Paging_EnumeratorObjectModifiedOrDeleted">
+    <value>Een of meer voorwerpen uit het gevraagde assortiment is aangepast of verwijderd. You need to refresh the identiteit waarden lijst</value>
+  </data>
+  <data name="Session_CannotChangePropertyWhenSessionIsConnected">
+    <value>Niet kunt wijzigen {0} bij de sessie is aangesloten</value>
+  </data>
+  <data name="Session_DifferentObjectsWithSameKey">
+    <value>Verschillende objecten met dezelfde toetsen</value>
+  </data>
+  <data name="ConnectionProvider_TableNameTooLong">
+    <value>Unable to create database tabel &quot;{0} &apos;. De naam van de tabel is te lang (meer dan 64 tekens)</value>
+  </data>
+  <data name="ConnectionProvider_ColumnNameTooLong">
+    <value>Unable to create table kolom &apos;{1}&apos; van tafel &apos;{0}&apos;. De naam van de kolom is te lang (meer dan 64 tekens)</value>
+  </data>
+  <data name="ConnectionProvider_AtLeastOneColumnExpected">
+    <value>Ten minste een kolom verwacht</value>
+  </data>
+  <data name="MetaData_CannotResolveClassInfo">
+    <value>Niet kan oplossen ClassInfo voor het type &apos;[{0}] {1} &quot;</value>
+  </data>
+  <data name="Collection_CannotAssignProperty">
+    <value>Kan niet de {0} eigendom wanneer XPCollection is niet in het ontwerp of initialisatiebestand modus</value>
+  </data>
+  <data name="Session_IncompatibleIdType">
+    <value>Doorgegeven id type &quot;{0} &apos;onverenigbaar met&apos; {1}. {2} &apos;toets type&quot; {3}&apos;</value>
+  </data>
+  <data name="MetaData_ReferenceTooComplex">
+    <value>Referentie &apos;{0}. {1}&apos; is te complex</value>
+  </data>
+  <data name="Metadata_SameTableName">
+    <value>Klasse {0} kaarten aan dezelfde tafel als {1}</value>
+  </data>
+  <data name="Metadata_CustomProperties_PersistentAndNonStorableType">
+    <value>Custom member  &apos;{0}.{1}&apos; van het type &apos;{2}&apos;  kan niet persistent zijn</value>
+  </data>
+  <data name="Metadata_CustomProperties_ReferenceOrCollectionInSessionStore">
+    <value>Kan geen aangepaste lid &quot;{1} &apos;van de referentie-of verzameling type omdat&quot; {0}&apos; klasse niet uitvoeren &apos;{2}&apos; interface</value>
+  </data>
+  <data name="XpoDefault_CannotAssignPropertyWhileAnotherIsNotNull">
+    <value>Kan niet toewijzen XpoDefault. {0}, terwijl XpoDefault. {1} is niet nul</value>
+  </data>
+  <data name="ThreadSafeDataLayer_DictionaryModified">
+    <value>Sorry, kunt u het woordenboek niet wijzigen terwijl ze gebruikt door de ThreadSafeDataLayer. Gelieve de sessie aan te roepen.CreateObjectTypeRecords methode in uw installatie / admin toepassing voor gebruik ThreadSafeDataLayer</value>
+  </data>
+  <data name="Metadata_DictionaryMixing">
+    <value>De &apos;{0}&apos; klasse info behoort tot een ander woordenboek</value>
+  </data>
+  <data name="Object_ModifiedInsideCtor">
+    <value>Wijzig uw object niet binnen de constructor. Gebruik in plaats daarvan gebruik van de methode voor het toewijzen AfterConstruction standaard waarden</value>
+  </data>
+  <data name="Metadata_CantPersistGenericType">
+    <value>Kan niet blijven bestaan generieke type. Verwijder PersistentAttribute van de &apos;{0}&apos; type-definitie en een aanhoudende niet-generieke afstammeling (s) in plaats</value>
+  </data>
+  <data name="PersistentAliasExpander_ReferenceOrCollectionExpectedInTheMiddleOfThePath">
+    <value>Onjuiste lid &quot;{0}&quot; in een pad. Een verwijzing eigendom of verzameling vereniging wordt verwacht</value>
+  </data>
+  <data name="XPWeakReference_SavedObjectExpected">
+    <value>Opgeslagen object wordt verwacht</value>
+  </data>
+  <data name="PersistentAliasExpander_NonPersistentCriteria">
+    <value>Kan geen query een gegevensarchief door middel van de &quot;{0}&quot; criterium, omdat het gebruik maakt van de &apos;{1}&apos; nonpersistent eigendom</value>
+  </data>
+  <data name="View_PropertyNotFetched">
+    <value>&apos;{0}&apos; eigendom is niet opgehaald</value>
+  </data>
+  <data name="Session_AlreadyConnected">
+    <value>Sessie is al verbonden</value>
+  </data>
+  <data name="Session_AssociationCollectionWithDisabledLoading">
+    <value>Vereniging collectie de staat is gebroken (LoadingEnabled is niet waar)</value>
+  </data>
+  <data name="Metadata_SeveralClassesWithSameName">
+    <value>Woordenboek bevat reeds klasse info &apos;{1}&apos;. Mogelijke reden: de assemblage &apos;{0}&apos; is geladen tweemaal.</value>
+  </data>
+  <data name="Metadata_PersistentAliasCircular">
+    <value>De &apos;{1}&apos; eigendom van de &apos;{0}&apos; klasse wordt gekenmerkt door PersistentAlias met een onjuiste &apos;{2}&apos; expressie. Dit resulteert in fietsen, omdat het tenslotte referenties naar zichzelf</value>
+  </data>
+  <data name="Collection_CannotSortReference">
+    <value>Gegevens kunnen niet worden gesorteerd door &quot;{0} &apos;kolom waarden, omdat het niet de uitvoering van de IComparable interface</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_AssociationAttributeOnlyForListOrReference">
+    <value>De vereniging kenmerk kan niet worden gebruikt voor de &apos;{1}. {2}&apos; lid. Een verwijzing of lijst wordt verwacht</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_MoreThenOneAssociatedMemberFound">
+    <value>De vereniging &apos;{0}&apos; is dubbelzinnig tussen de &quot;{2} en {3} &apos;leden van de&apos; {1} &apos;klasse</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_NoAssociationListInAssociation">
+    <value>Er is een onjuist vereniging &quot;{0} &apos;tussen&apos; {1}. {2} en {3}. {4} &apos;. Een lijst wordt verwacht op een zijde van de vereniging</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_TwoAssociationListsInAssociation">
+    <value>Er is een onjuist vereniging &quot;{0} &apos;tussen de&apos; {1}. {2} en {3}. {4} &apos;lijsten. Gebruik het ManyToManyAlias attribuut of XPCollection soort lijsten voor many-to-many relaties</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_UseAssociationNameAsIntermediateTableNameMismatch">
+    <value>De UseAssociationNameAsIntermediateTableName waarde moet hetzelfde zijn op beide zijden van de &apos;{0}&apos; associatie tussen &apos;{1}. {2} en {3}. {4}&apos;</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_PropertyTypeMismatch">
+    <value>De vereniging &apos;{0}&apos; tussen de klassen &apos;{1} en {3}&apos; is ongeldig. De klasse &apos;{1}&apos; bevat de eigenschap &apos;{2} &quot;, die verwijst naar de klasse&quot; {3}&apos;. De klasse &apos;{3}&apos; bevat de eigenschap &apos;{4}&apos;, die ten onrechte verwijst naar de klasse &quot;{5} &apos;; het verwacht dat zij verwijzen naar de klas&apos; {1}&quot;</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_NotFound">
+    <value>Er is een onjuist vereniging &apos;{0}&apos;. Niet kunnen vinden van de bijbehorende lid voor &apos;{1}. {2}&apos; in de klasse &quot;{3} &apos;</value>
+  </data>
+  <data name="">
+    <value/>
+  </data>
+  <data name="">
+    <value/>
+  </data>
+  <data name="">
+    <value/>
+  </data>
+  <data name="">
+    <value/>
+  </data>
+</root>

@@ -1,0 +1,225 @@
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GridControlStringId.GridGroupPanelText" xml:space="preserve">
+    <value>Arraste aqui o cabeçalho de uma coluna para agrupar</value>
+  </data>
+  <data name="GridControlStringId.MenuFooterCustomize" xml:space="preserve">
+    <value>Personalizar...</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnSortGroupBySummaryMenu" xml:space="preserve">
+    <value>Sort By Summary</value>
+  </data>
+  <data name="GridControlStringId.SummaryEditorFormCancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatStringInSameColumn_Min" xml:space="preserve">
+    <value>Min={0}</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnShowColumnChooser" xml:space="preserve">
+    <value>Show Column Chooser</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnGroupSummarySortFormat" xml:space="preserve">
+    <value>{1} by '{0}' - {2}</value>
+  </data>
+  <data name="GridControlStringId.MenuGroupPanelFullCollapse" xml:space="preserve">
+    <value>Full Collapse</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnClearSorting" xml:space="preserve">
+    <value>Clear Sorting</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnSortBySummaryDescending" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="GridControlStringId.GridNewRowText" xml:space="preserve">
+    <value>Click here to add a new row</value>
+  </data>
+  <data name="GridControlStringId.MenuFooterAverage" xml:space="preserve">
+    <value>Average</value>
+  </data>
+  <data name="GridControlStringId.MenuFooterMax" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatString_Min" xml:space="preserve">
+    <value>Min of {1} is {0}</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnGroupSummaryEditor" xml:space="preserve">
+    <value>Group Summary Editor...</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatString_Max" xml:space="preserve">
+    <value>Max of {1} is {0}</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnSortBySummaryAscending" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnUnGroup" xml:space="preserve">
+    <value>Ungroup</value>
+  </data>
+  <data name="GridControlStringId.GroupSummaryEditorFormCaption" xml:space="preserve">
+    <value>Group Summaries</value>
+  </data>
+  <data name="GridControlStringId.SummaryEditorFormOrderTabCaption" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatStringInSameColumn_Sum" xml:space="preserve">
+    <value>Sum={0:#.##}</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnResetGroupSummarySort" xml:space="preserve">
+    <value>Clear Summary Sorting</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatString_Sum" xml:space="preserve">
+    <value>Sum of {1} is {0:#.##}</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatStringInSameColumn_Count" xml:space="preserve">
+    <value>Count={0}</value>
+  </data>
+  <data name="GridControlStringId.MenuGroupPanelClearGrouping" xml:space="preserve">
+    <value>Clear Grouping</value>
+  </data>
+  <data name="GridControlStringId.DefaultGroupSummaryFormatString_Max" xml:space="preserve">
+    <value>Max of {1} is {0}</value>
+  </data>
+  <data name="GridControlStringId.PopupFilterBlanks" xml:space="preserve">
+    <value>(Blanks)</value>
+  </data>
+  <data name="GridControlStringId.ColumnChooserCaption" xml:space="preserve">
+    <value>Column Chooser</value>
+  </data>
+  <data name="GridControlStringId.GridOutlookIntervals" xml:space="preserve">
+    <value>Older;Last Month;Earlier this Month;Three Weeks Ago;Two Weeks Ago;Last Week;;;;;;;;Yesterday;Today;Tomorrow;;;;;;;;Next Week;Two Weeks Away;Three Weeks Away;Later this Month;Next Month;Beyond Next Month;</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnGroup" xml:space="preserve">
+    <value>Group By This Column</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatString_Avg" xml:space="preserve">
+    <value>Avg of {1} is {0:#.##}</value>
+  </data>
+  <data name="GridControlStringId.TotalSummaryEditorFormCaption" xml:space="preserve">
+    <value>Totals for '{0}'</value>
+  </data>
+  <data name="GridControlStringId.ColumnChooserDragText" xml:space="preserve">
+    <value>Drag a column here to customize layout</value>
+  </data>
+  <data name="GridControlStringId.DefaultGroupSummaryFormatString_Count" xml:space="preserve">
+    <value>Count={0}</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnHideColumnChooser" xml:space="preserve">
+    <value>Hide Column Chooser</value>
+  </data>
+  <data name="GridControlStringId.SummaryEditorFormItemsTabCaption" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnHideGroupPanel" xml:space="preserve">
+    <value>Hide Group Panel</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatStringInSameColumn_Max" xml:space="preserve">
+    <value>Max={0}</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatString_Count" xml:space="preserve">
+    <value>Count={0}</value>
+  </data>
+  <data name="GridControlStringId.SummaryEditorFormOkButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnSortAscending" xml:space="preserve">
+    <value>Sort Ascending</value>
+  </data>
+  <data name="GridControlStringId.MenuFooterCount" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="GridControlStringId.PopupFilterNonBlanks" xml:space="preserve">
+    <value>(Non blanks)</value>
+  </data>
+  <data name="GridControlStringId.DefaultGroupSummaryFormatString_Avg" xml:space="preserve">
+    <value>Avg of {1} is {0:#.##}</value>
+  </data>
+  <data name="GridControlStringId.PopupFilterAll" xml:space="preserve">
+    <value>(All)</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnShowGroupPanel" xml:space="preserve">
+    <value>Show Group Panel</value>
+  </data>
+  <data name="GridControlStringId.ErrorWindowTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="GridControlStringId.DefaultGroupSummaryFormatString_Sum" xml:space="preserve">
+    <value>Sum of {1} is {0:#.##}</value>
+  </data>
+  <data name="GridControlStringId.MenuFooterSum" xml:space="preserve">
+    <value>Sum</value>
+  </data>
+  <data name="GridControlStringId.InvalidRowExceptionMessage" xml:space="preserve">
+    <value>Do you want to correct the value?</value>
+  </data>
+  <data name="GridControlStringId.DefaultTotalSummaryFormatStringInSameColumn_Avg" xml:space="preserve">
+    <value>Avg={0:#.##}</value>
+  </data>
+  <data name="GridControlStringId.MenuFooterMin" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="GridControlStringId.DefaultGroupSummaryFormatString_Min" xml:space="preserve">
+    <value>Min of {1} is {0}</value>
+  </data>
+  <data name="GridControlStringId.MenuColumnSortDescending" xml:space="preserve">
+    <value>Sort Descending</value>
+  </data>
+  <data name="GridControlStringId.MenuGroupPanelFullExpand" xml:space="preserve">
+    <value>Full Expand</value>
+  </data>
+</root>

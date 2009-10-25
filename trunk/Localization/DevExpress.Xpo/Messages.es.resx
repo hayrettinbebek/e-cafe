@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MetaData_IncorrectPath" xml:space="preserve">
+    <value>El camino de la propiedad '{1}' no es correcto para el tipo '{0}'</value>
+  </data>
+  <data name="MetaData_IncorrectPathMemberNotExists" xml:space="preserve">
+    <value>El camino de la propiedad '{1}' no es correcto para el tipo '{0}' porque el miembro '{2}.{3}' no existe</value>
+  </data>
+  <data name="MetaData_IncorrectPathNonPersistentMember" xml:space="preserve">
+    <value>El camino de la propiedad '{1}' no es correcto para el tipo '{0}' porque el miembro '{2}.{3}' no se persistente</value>
+  </data>
+  <data name="MetaData_IncorrectPathNonReferenceMember" xml:space="preserve">
+    <value>El camino de la propiedad '{1}' no es correcto para el tipo '{0}' el miembro '{2}.{3}' no es un miembro ordenal, cuando se esperaba una referencia a otro objeto</value>
+  </data>
+  <data name="ConnectionProvider_TypeMappingMissing" xml:space="preserve">
+    <value>El proveedor de la base de datos no pudo procesar el tipo '{0}' porque no está mapeado a los tipos de la base de datos subyacente. Por favor, use otro tipo.</value>
+  </data>
+  <data name="ConnectionProvider_UnableToCreateDBObject" xml:space="preserve">
+    <value>No se pudo crear '{0}' '{1}'. Pariente: '{2}'. Error: {3}</value>
+  </data>
+  <data name="Session_TypeNotFound" xml:space="preserve">
+    <value>No se encontró un tipo con id = '{0}'</value>
+  </data>
+  <data name="Session_TypeFieldIsEmpty" xml:space="preserve">
+    <value>'El campo {0}' es nulo (class base '{1}')</value>
+  </data>
+  <data name="ConnectionProvider_UnableToFillRefType" xml:space="preserve">
+    <value>No se pudo asegurar el esquema para la base de datos para el miembro '{1}' del tipo '{0}'. Error: {2}</value>
+  </data>
+  <data name="ConnectionProvider_SqlExecutionError" xml:space="preserve">
+    <value>Ejecutando Sql '{0}' con parámetros '{1}' excepción '{2}'</value>
+  </data>
+  <data name="Generator_UnknownCriteriaOperator" xml:space="preserve">
+    <value>No se encontró el operador '{0}'</value>
+  </data>
+  <data name="MetaData_KeyPropertyAbsent" xml:space="preserve">
+    <value>La propiedad llave para el tipo '{0}' está ausente</value>
+  </data>
+  <data name="MetaData_DuplicateKeyProperty" xml:space="preserve">
+    <value>Llave duplicada encontrada para el tipo '{0}'</value>
+  </data>
+  <data name="MetaData_XMLLoadError" xml:space="preserve">
+    <value>Error de carga del Diccionario XML: {0}</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotFindClassinfoType" xml:space="preserve">
+    <value>No se encuentra el classinfo para el tipo</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotFindConstructor" xml:space="preserve">
+    <value>No se encuentra el constructor</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorModelTagAbsent" xml:space="preserve">
+    <value>El formato del XML no es correcto (La etiqueta &lt;Model&gt; no se encuentra o el espacio de nombre es incorrecto)</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotResolveClassinfoInstanceType" xml:space="preserve">
+    <value>No se podo resolver el Classinfo para tipo de instancia</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotLoadMember" xml:space="preserve">
+    <value>No se puede cargar el miembro [{0}]{1}.{2}</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorUnknownAttribute" xml:space="preserve">
+    <value>Atributo desconocido '{0}'</value>
+  </data>
+  <data name="MetaData_PropertyTypeMismatch" xml:space="preserve">
+    <value>Existe una incoherencia en la propiedad '{0}' con la asociación '{1}'</value>
+  </data>
+  <data name="MetaData_PropertyMissing" xml:space="preserve">
+    <value>La propiedad '{0}' no existe en el tipo '{1}'</value>
+  </data>
+  <data name="MetaData_PropertyMissingReferenceType" xml:space="preserve">
+    <value>Referencia al tipo '{0}'</value>
+  </data>
+  <data name="MetaData_RequiredInterfaceMissing" xml:space="preserve">
+    <value>El tipo '{0}' no soporta el interfaz IXPSimpleObject</value>
+  </data>
+  <data name="MetaData_AssociationElementTypeMissing" xml:space="preserve">
+    <value>La propiedad '{0}' no especifica la propiedad 'ElementType' en su atributo 'Association'</value>
+  </data>
+  <data name="MetaData_RequiredAttributeMissing" xml:space="preserve">
+    <value>La propiedad '{0}' no define el atributo '{1}'</value>
+  </data>
+  <data name="MetaData_PropertyNameMismatch" xml:space="preserve">
+    <value>Incoherencia en la propiedad '{0}'</value>
+  </data>
+  <data name="MetaData_NonPersistentReferenceFound" xml:space="preserve">
+    <value>Mientras se resolvía el tipo de objeto real, se encontró una referencia abstrata a '{0}'</value>
+  </data>
+  <data name="MetaData_RecursiveReferenceFound" xml:space="preserve">
+    <value>Se ha encontrado una referencia circular</value>
+  </data>
+  <data name="Session_ObjectCannotBePurged" xml:space="preserve">
+    <value>El objeto '{0}' con id = '{1}' no se pudo purgar. Existen objetos que hacen referencia a él.</value>
+  </data>
+  <data name="Session_WrongConnectionString" xml:space="preserve">
+    <value>Cadena de conexión no válida: '{0}'</value>
+  </data>
+  <data name="Session_CannotReloadPurgedObject" xml:space="preserve">
+    <value>No se pudo recargar el objeto purgado</value>
+  </data>
+  <data name="Session_SessionMixing" xml:space="preserve">
+    <value>El objeto '{0}' pertenece a una sesión diferente</value>
+  </data>
+  <data name="Session_CannotAddObjectToObjectCache" xml:space="preserve">
+    <value>No se puede añadir el objeto '{0}' con id = '{1}' al cache. Razón: {2}</value>
+  </data>
+  <data name="Session_LoadedPropertyAssignmentError" xml:space="preserve">
+    <value>No se puede asignar la propiedad '{1}' de la class '{0}' con datos. Razón: {2}</value>
+  </data>
+  <data name="ConnectionProvider_SchemaCorrectionNeeded" xml:space="preserve">
+    <value>Se requiere actualizar el esquema. Póngase en contacto con su administrador del sistema. Texto Sql: {0}</value>
+  </data>
+  <data name="MetaData_SessionCtorAbsent" xml:space="preserve">
+    <value>El tipo {0} no tiene con constructor con sesión</value>
+  </data>
+  <data name="Paging_PageSizeShouldBeGreaterThanZero" xml:space="preserve">
+    <value>El PageSize debe ser mayor que cero</value>
+  </data>
+  <data name="Paging_CurrentPageShouldBeGreaterOrEqualZero" xml:space="preserve">
+    <value>El CurrentPage debe ser mayor o igual a cero</value>
+  </data>
+  <data name="Paging_CurrentPageShouldBeLessThanPageCount" xml:space="preserve">
+    <value>El CurrentPage debe ser menor que PageCount</value>
+  </data>
+  <data name="Session_TranSequenceBegin" xml:space="preserve">
+    <value>No se puede iniciar mas transaciones en ésta sesión</value>
+  </data>
+  <data name="Session_TranSequenceCommit" xml:space="preserve">
+    <value>No hay transaciones activas</value>
+  </data>
+  <data name="Session_TranSequenceRollback" xml:space="preserve">
+    <value>No hay ninguna transación activa</value>
+  </data>
+  <data name="Collections_InvalidCastOnAdd" xml:space="preserve">
+    <value>No se puede añadir el elemento a la colección. El objeto '{0}' no es una instancia del tipo '{1}'</value>
+  </data>
+  <data name="Generator_OneOfBinaryOperatorsOperandsIsNull" xml:space="preserve">
+    <value>Uno de los operandos del BinaryOperator es nulo</value>
+  </data>
+  <data name="DataObject_ClassInfoArgumentIncorrect" xml:space="preserve">
+    <value>El valor del argumento classinfo no es correcto. Se esperaba una instancia de XPDataObjectClassInfo</value>
+  </data>
+  <data name="Criteria_NotImplementedForFiltering" xml:space="preserve">
+    <value>El {0} no está implantado para filtrar</value>
+  </data>
+  <data name="ConnectionProvider_KeysAutogenerationNonSupportedTypeException" xml:space="preserve">
+    <value>Llaves autogenerados deben ser del tipo Int32 o Guid. Class Type: '{0}'</value>
+  </data>
+  <data name="Session_CannotLoadInvalidType" xml:space="preserve">
+    <value>No se puede cargar un tipo no válido '{0}'</value>
+  </data>
+  <data name="Paging_EnumeratorPositioning" xml:space="preserve">
+    <value>El enumerador está posicionada antes del primer registro o después del último registro</value>
+  </data>
+  <data name="Paging_EnumeratorObjectModifiedOrDeleted" xml:space="preserve">
+    <value>Uno o mas objetos solicitados ha sido modificado o eliminado. Debe refrescar la lista de valores de las identidades</value>
+  </data>
+  <data name="Session_CannotChangePropertyWhenSessionIsConnected" xml:space="preserve">
+    <value>No se puede cambiar {0} cuando la sesión esta conectada</value>
+  </data>
+  <data name="Session_DifferentObjectsWithSameKey" xml:space="preserve">
+    <value>Objetos diferentes con la misma llave</value>
+  </data>
+  <data name="ConnectionProvider_TableNameTooLong" xml:space="preserve">
+    <value>No se pudo crear la tabla '{0}' en las base de datos. El nombre de la tabla es demasiado largo (excede 64 characteres)</value>
+  </data>
+  <data name="ConnectionProvider_ColumnNameTooLong" xml:space="preserve">
+    <value>No se pudo crear la columna {1} en la tabla '{0}' en las base de datos. El nombre de la columna es demasiado largo (excede 64 characteres)</value>
+  </data>
+  <data name="ConnectionProvider_AtLeastOneColumnExpected" xml:space="preserve">
+    <value>Se esperaba, por lo menos, una columna</value>
+  </data>
+  <data name="MetaData_CannotResolveClassInfo" xml:space="preserve">
+    <value>No se puede resolver ClassInfo para el tipo '[{0}]{1}'"</value>
+  </data>
+  <data name="Collection_CannotAssignProperty" xml:space="preserve">
+    <value>No se puede cambiar la propiedad {0} cuando el XPCollection no está en modo de diseño o inicialización</value>
+  </data>
+  <data name="Session_IncompatibleIdType" xml:space="preserve">
+    <value>Tipo id pasado '{0}' no es compatible con '{1}.{2}' tipo de llave '{3}'</value>
+  </data>
+  <data name="MetaData_ReferenceTooComplex" xml:space="preserve">
+    <value>Referencia '{0}.{1}' es demasiado complejo</value>
+  </data>
+  <data name="Metadata_SameTableName" xml:space="preserve">
+    <value>Class {0} apunta a la misma tabla que {1}</value>
+  </data>
+  <data name="Metadata_CustomProperties_PersistentAndNonStorableType" xml:space="preserve">
+    <value>Miembro personalizado '{0}.{1}' del tipo '{2}' no se puede persistir</value>
+  </data>
+  <data name="Metadata_CustomProperties_ReferenceOrCollectionInSessionStore" xml:space="preserve">
+    <value>No se puede crear el miembro personalizado '{1}' del tipo o colección porque '{0}' la class no implanta el interfaz '{2}'</value>
+  </data>
+  <data name="XpoDefault_CannotAssignPropertyWhileAnotherIsNotNull" xml:space="preserve">
+    <value>No se puede asignar XpoDefault.{0} mientras XpoDefault.{1} no es nulo</value>
+  </data>
+  <data name="ThreadSafeDataLayer_DictionaryModified" xml:space="preserve">
+    <value>Lo sentimos, pero no se puede modificar el diccionario mientras esta en uso por ThreadSafeDataLayer. Por favor, llame al método Session.CreateObjectTypeRecords en la aplicación de administración antes de usar ThreadSafeDataLayer</value>
+  </data>
+  <data name="Metadata_DictionaryMixing" xml:space="preserve">
+    <value>La class '{0}' pertenece a un diccionario diferente</value>
+  </data>
+  <data name="Object_ModifiedInsideCtor" xml:space="preserve">
+    <value>No modifique su objeto en el constructor. En su lugar, use el método AfterConstruction para asignar valores por defecto</value>
+  </data>
+  <data name="Metadata_CantPersistGenericType" xml:space="preserve">
+    <value>No se puede persistir un tipo genérico. Por favor, elimine PersistentAttribute de la definición del tipo '{0}' y crea un descendente persistido que no sea genérico.</value>
+  </data>
+  <data name="PersistentAliasExpander_ReferenceOrCollectionExpectedInTheMiddleOfThePath" xml:space="preserve">
+    <value>Miembro incorecto en el camino '{0}'. Se esperaba una asociación de una propiedad o colección</value>
+  </data>
+  <data name="XPWeakReference_SavedObjectExpected" xml:space="preserve">
+    <value>Se esperaba un objeto salvado</value>
+  </data>
+  <data name="PersistentAliasExpander_NonPersistentCriteria" xml:space="preserve">
+    <value>No se puede consultar una fuente de datos usando el criterio "{0}" porque usa la propiedad, no persistente, '{1}'</value>
+  </data>
+  <data name="View_PropertyNotFetched" xml:space="preserve">
+    <value>'La propiedad {0}' no se recuperó</value>
+  </data>
+  <data name="Session_AlreadyConnected" xml:space="preserve">
+    <value>La Sesión ya esta conectada</value>
+  </data>
+  <data name="Session_AssociationCollectionWithDisabledLoading" xml:space="preserve">
+    <value>El enlace de la Association con la colección esta roto (LoadingEnabled es falso)</value>
+  </data>
+  <data name="Metadata_SeveralClassesWithSameName" xml:space="preserve">
+    <value>El Diccionario ya contiene información de la class '{1}'. Posible razón: el emsamblado '{0}' se ha cargado dos veces.</value>
+  </data>
+  <data name="Metadata_PersistentAliasCircular" xml:space="preserve">
+    <value>La propiedad '{1}' de la clase '{0}' está marcado como PersistentAlias con una expresión '{2}' incorrecta. Tiene el efecto de ser cíclico porque, finalmente, se referencia a si mismo.</value>
+  </data>
+  <data name="Collection_CannotSortReference" xml:space="preserve">
+    <value>No se puede ordenar los datos por la columna '{0}', porque no implanta el interfaz IComparable</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_AssociationAttributeOnlyForListOrReference" xml:space="preserve">
+    <value>El atributo de asocisción no se puede usar para el miembro '{1}.{2}'. Se esperaba una referencia o una lista</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_MoreThenOneAssociatedMemberFound" xml:space="preserve">
+    <value>La asociación '{0}' es ambiguo entre los miembros '{2}' y '{3}' en la class '{1}'</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_NoAssociationListInAssociation" xml:space="preserve">
+    <value>Existe una asociación '{0}' mal formada entre '{1}.{2}' y '{3}.{4}'. Se esperaba una lista en un lado de la asociación</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_NotFound" xml:space="preserve">
+    <value>Existe una asociación '{0}' mal formada. No se encontró el miembro asociado de '{1}.{2}' en la class '{3}'</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_PropertyTypeMismatch" xml:space="preserve">
+    <value>La asociación '{0}' entre las clases '{1}' y '{3}' no es válido. La class '{1}' contiene la propiedad '{2}' que refiere a la class '{3}'. La class '{3}' contienela propiedad '{4}', que refiere, indebidamente, a la class '{5}'; se esperaba que se refiera a la class '{1}'</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_TwoAssociationListsInAssociation" xml:space="preserve">
+    <value>Existe una asociación '{0}' mal formada entre las listas '{1}.{2}' y '{3}.{4}'. Use el atributo ManyToManyAlias o colecciones XPCollection para las relaciones muchos-a-muchos.</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_UseAssociationNameAsIntermediateTableNameMismatch" xml:space="preserve">
+    <value>El valor de UseAssociationNameAsIntermediateTableName debe serigual en ambos lados de la asociación '{0}' entre '{1}.{2}' y '{3}.{4}'</value>
+  </data>
+</root>
