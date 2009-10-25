@@ -1,0 +1,1507 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PreviewStringId.Button_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PageSetup" xml:space="preserve">
+    <value>Pagina-instellingen</value>
+  </data>
+  <data name="PreviewStringId.MPForm_Lbl_Pages" xml:space="preserve">
+    <value>Pagina</value>
+  </data>
+  <data name="PreviewStringId.SB_ZoomFactor" xml:space="preserve">
+    <value>Inzoomen:</value>
+  </data>
+  <!--<data name="PreviewStringId.SB_TotalPageNo" xml:space="preserve">
+    <value>Total Pages: </value>
+  </data>-->
+  <data name="PreviewStringId.TB_TTip_ZoomIn" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_FirstPage" xml:space="preserve">
+    <value>Eerste pagina</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PreviousPage" xml:space="preserve">
+    <value>Vorige pagina</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_NextPage" xml:space="preserve">
+    <value>Volgende pagina</value>
+  </data>
+  <data name="PreviewStringId.Msg_EmptyDocument" xml:space="preserve">
+    <value>Dit document bevat geen pagina's.</value>
+  </data>
+  <data name="PreviewStringId.Msg_CreatingDocument" xml:space="preserve">
+    <value>Aanmaken document...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_MultiplePages" xml:space="preserve">
+    <value>Meerdere pagina's</value>
+  </data>
+  <data name="PreviewStringId.Button_Apply" xml:space="preserve">
+    <value>Toepassen</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_ZoomOut" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <!--<data name="PreviewStringId.SB_CurrentPageNo" xml:space="preserve">
+    <value>Current Page: </value>
+  </data>-->
+  <data name="PreviewStringId.TB_TTip_Zoom" xml:space="preserve">
+    <value>In-/Uitzoomen</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PrintDirect" xml:space="preserve">
+    <value>Direct afdrukken</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Magnifier" xml:space="preserve">
+    <value>Vergrootglas</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Print" xml:space="preserve">
+    <value>Afdrukken</value>
+  </data>
+  <data name="PreviewStringId.Button_Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Close" xml:space="preserve">
+    <value>Afdrukvoorbeeld sluiten</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Backgr" xml:space="preserve">
+    <value>Achtergrond</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_EditPageHF" xml:space="preserve">
+    <value>Koptekst en voettekst</value>
+  </data>
+  <data name="PreviewStringId.Button_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PreviewStringId.SB_PageNone" xml:space="preserve">
+    <value>geen</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_LastPage" xml:space="preserve">
+    <value>Laatste pagina</value>
+  </data>
+  <data name="PreviewStringId.Msg_UnavailableNetPrinter" xml:space="preserve">
+    <value>De netwerkprinter is niet beschikbaar.</value>
+  </data>
+  <data name="PreviewStringId.Msg_NeedPrinter" xml:space="preserve">
+    <value>Geen printers geinstalleerd.</value>
+  </data>
+  <data name="PreviewStringId.Msg_WrongPrinter" xml:space="preserve">
+    <value>Ongeldige printernaam. Controleer de printerinstellingen.</value>
+  </data>
+  <data name="PreviewStringId.Msg_WrongPrinting" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens het printen van het document.</value>
+  </data>
+  <data name="PreviewStringId.Msg_WrongPageSettings" xml:space="preserve">
+    <value>De huidige printer ondersteunt niet het papierformaat.\nWilt u doorgaan met afdrukken?</value>
+  </data>
+  <data name="PreviewStringId.Msg_CustomDrawWarning" xml:space="preserve">
+    <value>Waarschuwing!</value>
+  </data>
+  <data name="PreviewStringId.PreviewForm_Caption" xml:space="preserve">
+    <value>Afdrukvoorbeeld</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Customize" xml:space="preserve">
+    <value>Aanpassen</value>
+  </data>
+  <data name="PreviewStringId.Margin_Inch" xml:space="preserve">
+    <value>Inch</value>
+  </data>
+  <data name="PreviewStringId.Margin_Millimeter" xml:space="preserve">
+    <value>mm</value>
+  </data>
+  <data name="PreviewStringId.Margin_TopMargin" xml:space="preserve">
+    <value>Afstand Boven</value>
+  </data>
+  <data name="PreviewStringId.Margin_BottomMargin" xml:space="preserve">
+    <value>Afstand Onder</value>
+  </data>
+  <data name="PreviewStringId.Margin_LeftMargin" xml:space="preserve">
+    <value>Afstand Links</value>
+  </data>
+  <data name="PreviewStringId.Margin_RightMargin" xml:space="preserve">
+    <value>Afstand Rechts</value>
+  </data>
+  <data name="PreviewStringId.ScrollingInfo_Page" xml:space="preserve">
+    <value>Pagina</value>
+  </data>
+  <data name="PreviewStringId.Msg_PageMarginsWarning" xml:space="preserve">
+    <value>Een of meer afstanden zijn ingesteld buiten het afdrukgebied. Wilt u doorgaan?</value>
+  </data>
+  <data name="PreviewStringId.SB_PageInfo" xml:space="preserve">
+    <value>{0} van {1}</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_HandTool" xml:space="preserve">
+    <value>Handje</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Export" xml:space="preserve">
+    <value>Exporteren document...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Send" xml:space="preserve">
+    <value>Verzenden via e-mail...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Map" xml:space="preserve">
+    <value>Documentindeling</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Search" xml:space="preserve">
+    <value>Zoeken</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Watermark" xml:space="preserve">
+    <value>Watermerk</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_File" xml:space="preserve">
+    <value>&amp;Bestand</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_View" xml:space="preserve">
+    <value>Beel&amp;d</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Background" xml:space="preserve">
+    <value>&amp;Achtergrond</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PageSetup" xml:space="preserve">
+    <value>Pagina-ins&amp;telling...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Print" xml:space="preserve">
+    <value>Af&amp;drukken...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PrintDirect" xml:space="preserve">
+    <value>&amp;Afdrukken</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Export" xml:space="preserve">
+    <value>Ver&amp;zenden naar</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Send" xml:space="preserve">
+    <value>Ver&amp;zenden als</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Exit" xml:space="preserve">
+    <value>&amp;Sluiten</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewToolbar" xml:space="preserve">
+    <value>&amp;Menubalk</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewStatusbar" xml:space="preserve">
+    <value>&amp;Statusbalk</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewContinuous" xml:space="preserve">
+    <value>&amp;Aansluitend</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewFacing" xml:space="preserve">
+    <value>&amp;Naast elkaar</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_BackgrColor" xml:space="preserve">
+    <value>&amp;Kleur...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Watermark" xml:space="preserve">
+    <value>&amp;Watermerk...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PdfDocument" xml:space="preserve">
+    <value>PDF-document</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_TxtDocument" xml:space="preserve">
+    <value>Tekstbestand</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_CsvDocument" xml:space="preserve">
+    <value>CSV-document</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_MhtDocument" xml:space="preserve">
+    <value>MHT-document</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_XlsDocument" xml:space="preserve">
+    <value>Excel-document</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_RtfDocument" xml:space="preserve">
+    <value>RTF-document</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_HtmDocument" xml:space="preserve">
+    <value>HTML-document</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_GraphicDocument" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomPageWidth" xml:space="preserve">
+    <value>Pagina Breedte</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomTextWidth" xml:space="preserve">
+    <value>Tekst Breedte</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomWholePage" xml:space="preserve">
+    <value>Hele pagina</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomTwoPages" xml:space="preserve">
+    <value>Twee pagina´s</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PageLayout" xml:space="preserve">
+    <value>&amp;Pagina weergave</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterPdf" xml:space="preserve">
+    <value>PDF-document</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterTxt" xml:space="preserve">
+    <value>Tekstbestand</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterCsv" xml:space="preserve">
+    <value>CSV-document</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterMht" xml:space="preserve">
+    <value>MHT-document</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterXls" xml:space="preserve">
+    <value>Excel-document</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterRtf" xml:space="preserve">
+    <value>RTF-document</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterHtm" xml:space="preserve">
+    <value>HTML-document</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterBmp" xml:space="preserve">
+    <value>BMP-afbeeldingsformaat</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterGif" xml:space="preserve">
+    <value>GIF-afbeelding (Graphics Interchange Format)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterJpeg" xml:space="preserve">
+    <value>JPEG-afbeelding</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterPng" xml:space="preserve">
+    <value>PNG-afbeelding (Portable Network Graphics)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterTiff" xml:space="preserve">
+    <value>TIFF-afbeelding (Tagged Image File Format)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterEmf" xml:space="preserve">
+    <value>EMF-afbeelding (Enhanced Windows Metafile)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterWmf" xml:space="preserve">
+    <value>WMF-afbeelding (Windows Metafile)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_Title" xml:space="preserve">
+    <value>Opslaan als</value>
+  </data>
+  <data name="PreviewStringId.EMail_From" xml:space="preserve">
+    <value>Van</value>
+  </data>
+  <data name="PreviewStringId.Msg_IncorrectPageRange" xml:space="preserve">
+    <value>Dit is geen geldige pagina interval</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageZoom" xml:space="preserve">
+    <value>In-/uitzoomen</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_Horizontal" xml:space="preserve">
+    <value>Horizontaal</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_Vertical" xml:space="preserve">
+    <value>Verticaal</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_BackwardDiagonal" xml:space="preserve">
+    <value>Terug diagonaal</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_ForwardDiagonal" xml:space="preserve">
+    <value>Vooruit diagonaal</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Bottom" xml:space="preserve">
+    <value>Onder</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Middle" xml:space="preserve">
+    <value>Midden</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Top" xml:space="preserve">
+    <value>Boven</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Left" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Center" xml:space="preserve">
+    <value>Centreren</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Right" xml:space="preserve">
+    <value>Rechts</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PictureDlg_Title" xml:space="preserve">
+    <value>Selecteer afbeelding</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageStretch" xml:space="preserve">
+    <value>Uitrekken</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageClip" xml:space="preserve">
+    <value>Clip</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Asap" xml:space="preserve">
+    <value>ZSM</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Confidential" xml:space="preserve">
+    <value>VERTROUWELIJK</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Copy" xml:space="preserve">
+    <value>KOPIE</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_DoNotCopy" xml:space="preserve">
+    <value>MAAK GEEN KOPIE</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Draft" xml:space="preserve">
+    <value>CONCEPT</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Evaluation" xml:space="preserve">
+    <value>EVALUATIE</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Original" xml:space="preserve">
+    <value>ORIGINEEL</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Personal" xml:space="preserve">
+    <value>PERSOONLIJK</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Sample" xml:space="preserve">
+    <value>VOORBEELD</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_TopSecret" xml:space="preserve">
+    <value>GEHEIM</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Urgent" xml:space="preserve">
+    <value>BELANGRIJK</value>
+  </data>
+  <data name="PreviewStringId.Msg_FontInvalidNumber" xml:space="preserve">
+    <value>Het letterype formaat kan niet negatief zijn</value>
+  </data>
+  <data name="PreviewStringId.Msg_NotSupportedFont" xml:space="preserve">
+    <value>Dit lettertype wordt niet ondersteund</value>
+  </data>
+  <data name="PreviewStringId.Msg_NoDifferentFilesInStream" xml:space="preserve">
+    <value>Een document kan niet naar een stream geexporteerd worden in de DifferentFiles-modus. Gebruik in plaats hiervan de SingleFile of de SingleFilePageByPage modus.</value>
+  </data>
+  <data name="PreviewStringId.Msg_BigFileToCreate" xml:space="preserve">
+    <value>Het uitvoerbestand is te groot. Probeer het aantal pagina's te verminderen, of splits het rapport in meerdere bestanden.</value>
+  </data>
+  <data name="PreviewStringId.Msg_BigFileToCreateJPEG" xml:space="preserve">
+    <value>Het uitvoerbestand is te groot om een JPEG-bestand te maken. Kies een ander bestandsformaat of een andere exportmodus.</value>
+  </data>
+  <data name="PreviewStringId.Msg_BigBitmapToCreate" xml:space="preserve">
+    <value>Het uitvoerbestand is te groot. Probeer de resolutie van de afbeeldingen te verlagen,
+of kies een andere exportmodus.</value>
+  </data>
+  <data name="PreviewStringId.Msg_XlsMoreThanMaxRows" xml:space="preserve">
+    <value>Het gegenereerde xls bestand is te groot voor het xls-formaat, omdat het meer dan 65536 rijen bevat.
+Verminder het aantal rijen, en probeer opnieuw te exporteren.</value>
+  </data>
+  <data name="PreviewStringId.Msg_XlsMoreThanMaxColumns" xml:space="preserve">
+    <value>Het gegenereerde xls bestand is te groot voor het xls-formaat, omdat het meer dan 256 kolommen bevat.
+Verminder het aantal kolommen voor de export, en probeer het opnieuw.</value>
+  </data>
+  <data name="PreviewStringId.Msg_FileDosntHavePrnxExtention" xml:space="preserve">
+    <value>Het opgegeven bestand heeft geen PRNX extensie. Proceed anyway?</value>
+  </data>
+  <data name="PreviewStringId.Msg_FileDosntContainValidXml" xml:space="preserve">
+    <value>Het opgegeven bestand bevat geen geldige XML-gegevens in de PRNX formaat. Laden is gestopt.</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ZOrderRgrItem_InFront" xml:space="preserve">
+    <value>&amp;Voor tekst</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ZOrderRgrItem_Behind" xml:space="preserve">
+    <value>&amp;Achter tekst</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PageRangeRgrItem_All" xml:space="preserve">
+    <value>&amp;Alles</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PageRangeRgrItem_Pages" xml:space="preserve">
+    <value>&amp;Pagina's:</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageNumber" xml:space="preserve">
+    <value>[Pagina #]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageNumberOfTotal" xml:space="preserve">
+    <value>[Pagina # van #]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageDate" xml:space="preserve">
+    <value>[Afdrukdatum]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageTime" xml:space="preserve">
+    <value>[Afdruktijd]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageUserName" xml:space="preserve">
+    <value>[Gebruikersnaam]</value>
+  </data>
+  <data name="PreviewStringId.BarText_Toolbar" xml:space="preserve">
+    <value>Werkbalk</value>
+  </data>
+  <data name="PreviewStringId.BarText_MainMenu" xml:space="preserve">
+    <value>Hoofdmenu</value>
+  </data>
+  <data name="PreviewStringId.BarText_StatusBar" xml:space="preserve">
+    <value>Statusbalk</value>
+  </data>
+  <data name="PreviewStringId.Msg_IncorrectZoomFactor" xml:space="preserve">
+    <value>Het getal moet tussen {0} en {1} liggen.</value>
+  </data>
+  <data name="PreviewStringId.Msg_InvalidMeasurement" xml:space="preserve">
+    <value>Dit is geen geldige waarde.</value>
+  </data>
+  <data name="PreviewStringId.Msg_CannotAccessFile" xml:space="preserve">
+    <value>Het proces kan bestand "{0}" niet openen omdat het bij een ander proces in gebruik is.</value>
+  </data>
+  <data name="PreviewStringId.Msg_FileReadOnly" xml:space="preserve">
+    <value>Bestand "{0}" is alleen-lezen, probeer het opnieuw met een andere bestandsnaam.</value>
+  </data>
+  <data name="PreviewStringId.Msg_OpenFileQuestion" xml:space="preserve">
+    <value>Wilt u dit bestand openen?</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_AdjustTo" xml:space="preserve">
+    <value>Aanpassen naar:</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_FitTo" xml:space="preserve">
+    <value>Passsend maken naar</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_PagesWide" xml:space="preserve">
+    <value>pagina's breed</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_GroupText" xml:space="preserve">
+    <value>Schaal</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_NormalSize" xml:space="preserve">
+    <value>% van normale grootte</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Scale" xml:space="preserve">
+    <value>Schaal</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ActionAfterExport" xml:space="preserve">
+    <value>Actie na exporteren:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ActionAfterExport_None" xml:space="preserve">
+    <value>Niets</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ActionAfterExport_Open" xml:space="preserve">
+    <value>Open het bestand</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ActionAfterExport_AskUser" xml:space="preserve">
+    <value>Vraag de gebruiker</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_DefaultDirectory" xml:space="preserve">
+    <value>Standaard map:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_DefaultFileName" xml:space="preserve">
+    <value>Standaard bestandsnaam:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_SaveMode" xml:space="preserve">
+    <value>Sla een bestand op met:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_SaveMode_UsingDefaultPath" xml:space="preserve">
+    <value>Standaard bestandspad</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_SaveMode_UsingSaveFileDialog" xml:space="preserve">
+    <value>Opslaan-dialoog</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ShowOptionsBeforeExport" xml:space="preserve">
+    <value>Toon instellingen-dialoog voor exporteren</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_RtfExportMode" xml:space="preserve">
+    <value>Exporteermodus:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_RtfExportMode_SingleFile" xml:space="preserve">
+    <value>Enkel bestand</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_RtfExportMode_SingleFilePageByPage" xml:space="preserve">
+    <value>Enkel bestand pagina-voor-pagina</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_RtfPageRange" xml:space="preserve">
+    <value>Pagina-bereik:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_RtfExportWatermarks" xml:space="preserve">
+    <value>Exporteer watermerken</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfPageRange" xml:space="preserve">
+    <value>Pagina-bereik:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfCompressed" xml:space="preserve">
+    <value>Gecomprimeerd</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfShowPrintDialogOnOpen" xml:space="preserve">
+    <value>Toon printer dialoogvenster bij openen</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfNeverEmbeddedFonts" xml:space="preserve">
+    <value>Deze lettertypen niet inbedden:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality" xml:space="preserve">
+    <value>Kwaliteit afbeeldingen:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_Lowest" xml:space="preserve">
+    <value>Laagst</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_Low" xml:space="preserve">
+    <value>Laag</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_Medium" xml:space="preserve">
+    <value>Gemiddeld</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_High" xml:space="preserve">
+    <value>Hoog</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_Highest" xml:space="preserve">
+    <value>Hoogst</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentAuthor" xml:space="preserve">
+    <value>Auteur:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentApplication" xml:space="preserve">
+    <value>Applicatie:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentTitle" xml:space="preserve">
+    <value>Titel:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentSubject" xml:space="preserve">
+    <value>Onderwerp:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentKeywords" xml:space="preserve">
+    <value>Sleutelwoorden:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlExportMode" xml:space="preserve">
+    <value>Exporteermodus:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlExportMode_SingleFile" xml:space="preserve">
+    <value>Enkel bestand</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlExportMode_SingleFilePageByPage" xml:space="preserve">
+    <value>Enkel bestand pagina-voor-pagina</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlExportMode_DifferentFiles" xml:space="preserve">
+    <value>Verschillende bestanden</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlCharacterSet" xml:space="preserve">
+    <value>Karakterset:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlTitle" xml:space="preserve">
+    <value>Titel:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlRemoveSecondarySymbols" xml:space="preserve">
+    <value>Verwijder regelovergangen</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlPageRange" xml:space="preserve">
+    <value>Pagina-bereik:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlPageBorderWidth" xml:space="preserve">
+    <value>Pagina randbreedte:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlPageBorderColor" xml:space="preserve">
+    <value>Pagina randkleur:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextSeparator" xml:space="preserve">
+    <value>Tekst-scheidingsteken:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextEncoding" xml:space="preserve">
+    <value>Codering:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_XlsShowGridLines" xml:space="preserve">
+    <value>Toon rasterlijnen</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_XlsUseNativeFormat" xml:space="preserve">
+    <value>Exporteer waarden met hun formattering</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_XlsExportHyperlinks" xml:space="preserve">
+    <value>Exporteer hyperlinks</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImageExportMode" xml:space="preserve">
+    <value>Exporteermodus:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImageExportMode_SingleFile" xml:space="preserve">
+    <value>Enkel bestand</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImageExportMode_SingleFilePageByPage" xml:space="preserve">
+    <value>Enkel bestand pagina-voor-pagina</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImageExportMode_DifferentFiles" xml:space="preserve">
+    <value>Verschillende bestanden</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImagePageRange" xml:space="preserve">
+    <value>Pagina-bereik:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImagePageBorderWidth" xml:space="preserve">
+    <value>Pagina randbreedte:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImagePageBorderColor" xml:space="preserve">
+    <value>Pagina randkleur:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImageResolution" xml:space="preserve">
+    <value>Resolutie (dpi):</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImageFormat" xml:space="preserve">
+    <value>Bestandsformaat:</value>
+  </data>
+  <data name="PreviewStringId.FolderBrowseDlg_ExportDirectory" xml:space="preserve">
+    <value>Kies een map waar het geëxporteerde bestand moet worden opgeslagen:</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionPdf" xml:space="preserve">
+    <value>Instellingen voor exporteren PDF</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionXls" xml:space="preserve">
+    <value>Instellingen voor exporteren XLS</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionTxt" xml:space="preserve">
+    <value>Instellingen voor exporteren tekstbestand</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionCsv" xml:space="preserve">
+    <value>Instellingen voor exporteren CSV</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionImage" xml:space="preserve">
+    <value>Instellingen voor exporteren afbeelding</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionHtml" xml:space="preserve">
+    <value>Instellingen voor exporteren HTML</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionMht" xml:space="preserve">
+    <value>Instellingen voor exporteren MHT</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionRtf" xml:space="preserve">
+    <value>Instellingen voor exporteren RTF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMargins_Description" xml:space="preserve">
+    <value>Boven:		{0}		Onder:		{1}
+Links:		{2}		Rechts:		{3}</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PaperSize_Description" xml:space="preserve">
+    <value>{0} x {1}</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Print" xml:space="preserve">
+    <value>Afdrukken</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_PageSetup" xml:space="preserve">
+    <value>Pagina-instellingen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Navigation" xml:space="preserve">
+    <value>Navigatie</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Zoom" xml:space="preserve">
+    <value>Uitvergroting</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Background" xml:space="preserve">
+    <value>Pagina-achtergrond</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Export" xml:space="preserve">
+    <value>Exporteer</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_DocumentMap_Caption" xml:space="preserve">
+    <value>Bladwijzers</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Find_Caption" xml:space="preserve">
+    <value>Zoeken</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Pointer_Caption" xml:space="preserve">
+    <value>Aanwijzer</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_HandTool_Caption" xml:space="preserve">
+    <value>Hand-gereedschap</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Customize_Caption" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Print_Caption" xml:space="preserve">
+    <value>Afdrukken</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PrintDirect_Caption" xml:space="preserve">
+    <value>Snel afdrukken</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageSetup_Caption" xml:space="preserve">
+    <value>Aangepaste marges...</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_EditPageHF_Caption" xml:space="preserve">
+    <value>Koptekst/voettekst</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Magnifier_Caption" xml:space="preserve">
+    <value>Vergrootglas</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomOut_Caption" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomIn_Caption" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowFirstPage_Caption" xml:space="preserve">
+    <value>Eerste pagina</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowPrevPage_Caption" xml:space="preserve">
+    <value>Vorige pagina</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowNextPage_Caption" xml:space="preserve">
+    <value>Volgende pagina </value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowLastPage_Caption" xml:space="preserve">
+    <value>Laatste pagina </value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_MultiplePages_Caption" xml:space="preserve">
+    <value>Meerdere pagina's</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_FillBackground_Caption" xml:space="preserve">
+    <value>Paginakleur</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Watermark_Caption" xml:space="preserve">
+    <value>Watermerk</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportFile_Caption" xml:space="preserve">
+    <value>Exporteer naar</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendFile_Caption" xml:space="preserve">
+    <value>E-mail als</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ClosePreview_Caption" xml:space="preserve">
+    <value>Afdrukvoorbeeld sluiten</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Scale_Caption" xml:space="preserve">
+    <value>Schaal</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageOrientation_Caption" xml:space="preserve">
+    <value>Oriëntatie</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PaperSize_Caption" xml:space="preserve">
+    <value>Grootte</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageMargins_Caption" xml:space="preserve">
+    <value>Marges</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Zoom_Caption" xml:space="preserve">
+    <value>Uitvergroting</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_DocumentMap_STipTitle" xml:space="preserve">
+    <value>Document-overzicht</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Find_STipTitle" xml:space="preserve">
+    <value>Zoeken</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Pointer_STipTitle" xml:space="preserve">
+    <value>Muisaanwijzer</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_HandTool_STipTitle" xml:space="preserve">
+    <value>Hand-gereedschap</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Customize_STipTitle" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Print_STipTitle" xml:space="preserve">
+    <value>Afdrukken (Ctrl+P)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PrintDirect_STipTitle" xml:space="preserve">
+    <value>Snel afdrukken</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageSetup_STipTitle" xml:space="preserve">
+    <value>Pagina-instellingen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_EditPageHF_STipTitle" xml:space="preserve">
+    <value>Koptekst en voettekst</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Magnifier_STipTitle" xml:space="preserve">
+    <value>Vergrootglas</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomOut_STipTitle" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomIn_STipTitle" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowFirstPage_STipTitle" xml:space="preserve">
+    <value>Eerste pagina (Ctrl+Home)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowPrevPage_STipTitle" xml:space="preserve">
+    <value>Vorige pagina (PageUp)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowNextPage_STipTitle" xml:space="preserve">
+    <value>Volgende pagina (PageDown)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowLastPage_STipTitle" xml:space="preserve">
+    <value>Laatste pagina (Ctrl+End)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_MultiplePages_STipTitle" xml:space="preserve">
+    <value>Toon meerdere pagina's</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_FillBackground_STipTitle" xml:space="preserve">
+    <value>Achtergrondkleur</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Watermark_STipTitle" xml:space="preserve">
+    <value>Watermerk</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportFile_STipTitle" xml:space="preserve">
+    <value>Exporteer naar...</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendFile_STipTitle" xml:space="preserve">
+    <value>E-mail als...</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ClosePreview_STipTitle" xml:space="preserve">
+    <value>Afdrukvoorbeeld sluiten</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Scale_STipTitle" xml:space="preserve">
+    <value>Schaal</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageOrientation_STipTitle" xml:space="preserve">
+    <value>Pagina-orientatie</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PaperSize_STipTitle" xml:space="preserve">
+    <value>Paginagrootte</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageMargins_STipTitle" xml:space="preserve">
+    <value>Pagina-marges</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Zoom_STipTitle" xml:space="preserve">
+    <value>Uitvergroting</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_PageSetup_STipTitle" xml:space="preserve">
+    <value>Pagina-instellingen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_DocumentMap_STipContent" xml:space="preserve">
+    <value>Open het document-overzicht, dat het mogelijk maakt om door een gestructureerde weergave van het document te navigeren.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Find_STipContent" xml:space="preserve">
+    <value>Toon het zoekdialoog, waarmee u tekst in het document kunt vinden.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Pointer_STipContent" xml:space="preserve">
+    <value>Toon de muisaanwijzer.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_HandTool_STipContent" xml:space="preserve">
+    <value>Gebruik het hand-gereedschap om handmatig door pagina's te bladeren.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Customize_STipContent" xml:space="preserve">
+    <value>Open het venster "Afdrukbare componenten bewerken", waarin u de afdrukinstellingen kunt wijzigen.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Print_STipContent" xml:space="preserve">
+    <value>Selecteer een printer, aantal afdrukken en andere afdrukopties voor het printen.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PrintDirect_STipContent" xml:space="preserve">
+    <value>Druk het document direct af naar de standaardprinter zonder de instellingen te wijzigen.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageSetup_STipContent" xml:space="preserve">
+    <value>Toon het dialoogvenster voor de pagina-instellingen.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_EditPageHF_STipContent" xml:space="preserve">
+    <value>Bewerk de koptekst en voettekst van het document.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Magnifier_STipContent" xml:space="preserve">
+    <value>Gebruik het vergrootglas-gereedschap. 
+
+Eenmaal klikken  op een document zoomt het zo dat een enkele pagina volledig zichtbaar wordt, terwijl op een ander tijdstip zoomt tot 100% van de normale grootte.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomOut_STipContent" xml:space="preserve">
+    <value>Zoom uit om een groter deel van de pagina te zien, met minder details.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomIn_STipContent" xml:space="preserve">
+    <value>Zoom in om het document van dichtbij te bekijken.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowFirstPage_STipContent" xml:space="preserve">
+    <value>Navigeer naar de eerste pagina van het document.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowPrevPage_STipContent" xml:space="preserve">
+    <value>Navigeer naar de vorige pagina in het document.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowNextPage_STipContent" xml:space="preserve">
+    <value>Navigeer naar de volgende pagina in het document.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowLastPage_STipContent" xml:space="preserve">
+    <value>Navigeer naar de laatste pagina van het document.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_MultiplePages_STipContent" xml:space="preserve">
+    <value>Kies de pagina-indeling voor de voorbeeldweergave.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_FillBackground_STipContent" xml:space="preserve">
+    <value>Selecteer een kleur voor de achtergrond van de documentpagina's.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Watermark_STipContent" xml:space="preserve">
+    <value>Voeg een vervaagde tekst of plaatje in achter de inhoud van een pagina.
+
+Dit wordt vaak gebruikt om aan te geven dat een document op een speciale manier behandeld dient te worden.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportFile_STipContent" xml:space="preserve">
+    <value>Exporteer het huidige document naar een bestand in een van de beschikbare formaten.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendFile_STipContent" xml:space="preserve">
+    <value>Exporteer het document in een van de ondersteunde formaten en verstuur het als bijlage bij een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ClosePreview_STipContent" xml:space="preserve">
+    <value>Sluit het afdrukvoorbeeld van het document.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Scale_STipContent" xml:space="preserve">
+    <value>Vergroot of verklein de afdruk naar een percentage van zijn eigenlijke grootte.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageOrientation_STipContent" xml:space="preserve">
+    <value>Wissel tussen portretweergave en landschapweergave.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PaperSize_STipContent" xml:space="preserve">
+    <value>Selecteer de paginagrootte van het document.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageMargins_STipContent" xml:space="preserve">
+    <value>Stel de marges in voor het hele document.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Zoom_STipContent" xml:space="preserve">
+    <value>Verander het niveau van uitvergroting van het afdrukvoorbeeld.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_PageSetup_STipContent" xml:space="preserve">
+    <value>Toon het dialoogvenster voor de pagina-instellingen.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportPdf_Caption" xml:space="preserve">
+    <value>PDF-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportHtm_Caption" xml:space="preserve">
+    <value>HTML-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportMht_Caption" xml:space="preserve">
+    <value>MHT-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportTxt_Caption" xml:space="preserve">
+    <value>Tekstbestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportCsv_Caption" xml:space="preserve">
+    <value>CSV-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXls_Caption" xml:space="preserve">
+    <value>Excel-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportRtf_Caption" xml:space="preserve">
+    <value>RTF-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportGraphic_Caption" xml:space="preserve">
+    <value>Afbeeldingsbestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendPdf_Caption" xml:space="preserve">
+    <value>PDF-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendTxt_Caption" xml:space="preserve">
+    <value>Tekstbestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendCsv_Caption" xml:space="preserve">
+    <value>CSV-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendMht_Caption" xml:space="preserve">
+    <value>MHT-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXls_Caption" xml:space="preserve">
+    <value>Excel-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendRtf_Caption" xml:space="preserve">
+    <value>RTF-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendGraphic_Caption" xml:space="preserve">
+    <value>Afbeelding-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageOrientationPortrait_Caption" xml:space="preserve">
+    <value>Portret</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageOrientationLandscape_Caption" xml:space="preserve">
+    <value>Landschap</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsNormal_Caption" xml:space="preserve">
+    <value>Normaal</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsNarrow_Caption" xml:space="preserve">
+    <value>Smal</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsModerate_Caption" xml:space="preserve">
+    <value>Weinig</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsWide_Caption" xml:space="preserve">
+    <value>Breed</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportPdf_Description" xml:space="preserve">
+    <value>Adobe Portable Document Formaat</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportHtm_Description" xml:space="preserve">
+    <value>Webpagina</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportTxt_Description" xml:space="preserve">
+    <value>Platte tekst</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportCsv_Description" xml:space="preserve">
+    <value>Comma-Separated Values</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportMht_Description" xml:space="preserve">
+    <value>Webpagina in een enkel bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXls_Description" xml:space="preserve">
+    <value>Microsoft Excel werkboek</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportRtf_Description" xml:space="preserve">
+    <value>Rich Text Format</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportGraphic_Description" xml:space="preserve">
+    <value>BMP, GIF, JPEG, PNG, TIFF, EMF, WMF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendPdf_Description" xml:space="preserve">
+    <value>Adobe Portable Document Formaat</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendTxt_Description" xml:space="preserve">
+    <value>Platte tekst</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendCsv_Description" xml:space="preserve">
+    <value>Comma-Separated Values</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendMht_Description" xml:space="preserve">
+    <value>Webpagina in een enkel bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXls_Description" xml:space="preserve">
+    <value>Microsoft Excel werkboek</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendRtf_Description" xml:space="preserve">
+    <value>Rich Text Format</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendGraphic_Description" xml:space="preserve">
+    <value>BMP, GIF, JPEG, PNG, TIFF, EMF, WMF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageOrientationPortrait_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageOrientationLandscape_Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsNormal_Description" xml:space="preserve">
+    <value>Normaal</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsNarrow_Description" xml:space="preserve">
+    <value>Smal</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsModerate_Description" xml:space="preserve">
+    <value>Weinig</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsWide_Description" xml:space="preserve">
+    <value>Breed</value>
+  </data>
+  <data name="PreviewStringId.Msg_OpenFileQuestionCaption" xml:space="preserve">
+    <value>Exporteren</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportPdf_STipTitle" xml:space="preserve">
+    <value>Exporteer naar PDF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportHtm_STipTitle" xml:space="preserve">
+    <value>Exporteer naar HTML</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportTxt_STipTitle" xml:space="preserve">
+    <value>Exporteer naar tekstbestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportCsv_STipTitle" xml:space="preserve">
+    <value>Exporteer naar CSV-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportMht_STipTitle" xml:space="preserve">
+    <value>Exporteer naar MHT</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXls_STipTitle" xml:space="preserve">
+    <value>Exporteer naar XLS</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportRtf_STipTitle" xml:space="preserve">
+    <value>Exporteer naar RTF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportGraphic_STipTitle" xml:space="preserve">
+    <value>Exporteer naar afbeelding-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendPdf_STipTitle" xml:space="preserve">
+    <value>E-mail als PDF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendTxt_STipTitle" xml:space="preserve">
+    <value>E-mail als tekstbestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendCsv_STipTitle" xml:space="preserve">
+    <value>E-mail als CSV</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendMht_STipTitle" xml:space="preserve">
+    <value>E-mail als MHT-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXls_STipTitle" xml:space="preserve">
+    <value>E-mail als XLS</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendRtf_STipTitle" xml:space="preserve">
+    <value>E-mail als RTF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendGraphic_STipTitle" xml:space="preserve">
+    <value>E-mail als afbeelding-bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportPdf_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar een PDF-bestand op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportHtm_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar een HTML-bestand op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportTxt_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar een tekstbestand op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportCsv_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar een CSV-bestand (Comma-Separated Values) op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportMht_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar een MHT-bestand op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXls_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar een XLS-bestand op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportRtf_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar een RTF-bestand op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportGraphic_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar een afbeelding-bestand op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendPdf_STipContent" xml:space="preserve">
+    <value>Exporteer het document als PDF-bestand en verstuur het als bijlage bij een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendTxt_STipContent" xml:space="preserve">
+    <value>Exporteer het document als tekstbestand en verstuur het als bijlage bij een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendCsv_STipContent" xml:space="preserve">
+    <value>Exporteer het document als CSV-bestand en verstuur het als bijlage bij een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendMht_STipContent" xml:space="preserve">
+    <value>Exporteer het document als MHT-bestand en verstuur het als bijlage bij een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXls_STipContent" xml:space="preserve">
+    <value>Exporteer het document als XLS-bestand en verstuur het als bijlage bij een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendRtf_STipContent" xml:space="preserve">
+    <value>Exporteer het document als RTF-bestand en verstuur het als bijlage bij een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendGraphic_STipContent" xml:space="preserve">
+    <value>Exporteer het document als afbeelding-bestand en verstuur het als bijlage bij een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageText" xml:space="preserve">
+    <value>Afdrukvoorbeeld</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomExact_Caption" xml:space="preserve">
+    <value>Precies:</value>
+  </data>
+  <data name="PreviewStringId.Msg_CantFitBarcodeToControlBounds" xml:space="preserve">
+    <value>De grenzen van het control zijn te klein voor de streepjescode</value>
+  </data>
+  <data name="PreviewStringId.Msg_InvalidBarcodeText" xml:space="preserve">
+    <value>De tekst bevat ongeldige tekens</value>
+  </data>
+  <data name="PreviewStringId.Msg_InvalidBarcodeTextFormat" xml:space="preserve">
+    <value>Ongeldig tekstformaat</value>
+  </data>
+  <data name="PreviewStringId.Msg_SearchDialogFinishedSearching" xml:space="preserve">
+    <value>Het doorzoeken van het document is voltooid</value>
+  </data>
+  <data name="PreviewStringId.Msg_SearchDialogTotalFound" xml:space="preserve">
+    <value>Aantal gevonden: </value>
+  </data>
+  <data name="PreviewStringId.Msg_SearchDialogReady" xml:space="preserve">
+    <value>Voltooid</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextSeparator_TabAlias" xml:space="preserve">
+    <value>TAB</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextQuoteStringsWithSeparators" xml:space="preserve">
+    <value>Teksten met scheidingstekens voorzien van aanhalingstekens</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Document" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Save_Caption" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Open_Caption" xml:space="preserve">
+    <value>Openen</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Save_STipTitle" xml:space="preserve">
+    <value>Opslaan (Ctrl + S)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Open_STipTitle" xml:space="preserve">
+    <value>Openen (Ctrl + O)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Save_STipContent" xml:space="preserve">
+    <value>Sla het document op.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Open_STipContent" xml:space="preserve">
+    <value>Open een document.</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterNativeFormat" xml:space="preserve">
+    <value>Eigen formaat</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_NativeFormatCompressed" xml:space="preserve">
+    <value>Gecomprimeerd</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionNativeOptions" xml:space="preserve">
+    <value>Instellingen voor exporteren eigen formaat</value>
+  </data>
+  <data name="PreviewStringId.OpenFileDialog_Filter" xml:space="preserve">
+    <value>Voorbeeldweergave-documenten (*{0})|*{0}|Alle bestanden (*.*)|*.*</value>
+  </data>
+  <data name="PreviewStringId.OpenFileDialog_Title" xml:space="preserve">
+    <value>Openen</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Open" xml:space="preserve">
+    <value>Open een document</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Save" xml:space="preserve">
+    <value>Sla het document op</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_XlsSheetName" xml:space="preserve">
+    <value>Bladnaam:</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Parameters" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Parameters_Caption" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Parameters_STipTitle" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Parameters_STipContent" xml:space="preserve">
+    <value>Open het Parameters paneel, waarmee u de waarden voor rapport parameters kunt invoeren.</value>
+  </data>
+  <data name="PreviewStringId.SB_PageOfPages" xml:space="preserve">
+    <value>Pagina {0} van {1}</value>
+  </data>
+  <data name="PreviewStringId.EmptyString" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PreviewStringId.Msg_Caption" xml:space="preserve">
+    <value>XtraPrinting</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Rectangle" xml:space="preserve">
+    <value>Rechthoek</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Ellipse" xml:space="preserve">
+    <value>Elips</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Arrow" xml:space="preserve">
+    <value>Arrow</value>
+  </data>
+  <data name="PreviewStringId.Shapes_TopArrow" xml:space="preserve">
+    <value>Top Arrow</value>
+  </data>
+  <data name="PreviewStringId.Shapes_BottomArrow" xml:space="preserve">
+    <value>Bottom Pijl</value>
+  </data>
+  <data name="PreviewStringId.Shapes_LeftArrow" xml:space="preserve">
+    <value>Pijl links</value>
+  </data>
+  <data name="PreviewStringId.Shapes_RightArrow" xml:space="preserve">
+    <value>Pijl rechts</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Polygon" xml:space="preserve">
+    <value>Polygon</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Triangle" xml:space="preserve">
+    <value>Driehoek</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Square" xml:space="preserve">
+    <value>Vierkant</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Pentagon" xml:space="preserve">
+    <value>Pentagon</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Hexagon" xml:space="preserve">
+    <value>Hexagon</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Octagon" xml:space="preserve">
+    <value>Octagon</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Star" xml:space="preserve">
+    <value>Ster</value>
+  </data>
+  <data name="PreviewStringId.Shapes_ThreePointStar" xml:space="preserve">
+    <value>3-ster</value>
+  </data>
+  <data name="PreviewStringId.Shapes_FourPointStar" xml:space="preserve">
+    <value>4-ster</value>
+  </data>
+  <data name="PreviewStringId.Shapes_FivePointStar" xml:space="preserve">
+    <value>5-ster</value>
+  </data>
+  <data name="PreviewStringId.Shapes_SixPointStar" xml:space="preserve">
+    <value>6-ster</value>
+  </data>
+  <data name="PreviewStringId.Shapes_EightPointStar" xml:space="preserve">
+    <value>8-ster</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Line" xml:space="preserve">
+    <value>Regel</value>
+  </data>
+  <data name="PreviewStringId.Shapes_SlantLine" xml:space="preserve">
+    <value>Slant Regel</value>
+  </data>
+  <data name="PreviewStringId.Shapes_BackslantLine" xml:space="preserve">
+    <value>Backslant Regel</value>
+  </data>
+  <data name="PreviewStringId.Shapes_HorizontalLine" xml:space="preserve">
+    <value>Horizontale lijn</value>
+  </data>
+  <data name="PreviewStringId.Shapes_VerticalLine" xml:space="preserve">
+    <value>Verticale lijn</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Cross" xml:space="preserve">
+    <value>Kruis</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Brace" xml:space="preserve">
+    <value>Brace</value>
+  </data>
+  <data name="PreviewStringId.Shapes_Bracket" xml:space="preserve">
+    <value>Haakje</value>
+  </data>
+  <data name="PreviewStringId.SB_TTip_Stop" xml:space="preserve">
+    <value>Stoppen</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionXlsx" xml:space="preserve">
+    <value>XLSX Export Opties</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_XlsxDocument" xml:space="preserve">
+    <value>XLSX bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXlsx_Caption" xml:space="preserve">
+    <value>XLSX bestand</value>
+  </data>
+  <data name="PreviewStringId.Msg_XlsxMoreThanMaxColumns" xml:space="preserve">
+    <value>Het gegenereerde XLSX bestand is te groot voor het XLSX-formmat, omdat het meer dan 16.384 kolommen bevat.
+Verminder het aantal kolommen in het rapport en probeer opnieuw te exporteren.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXps_Caption" xml:space="preserve">
+    <value>XPS bestand</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionXps" xml:space="preserve">
+    <value>XPS Export Opties</value>
+  </data>
+  <data name="PreviewStringId.Msg_XlsxMoreThanMaxRows" xml:space="preserve">
+    <value>Het gegenereerde XLSX bestand is te groot voor het XLSX-formmat, omdat het meer dan 1.048.576 rijen bevat.
+Verminder het aantal rijen in het rapport en probeer opnieuw te exporteren.</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextExportMode_Value" xml:space="preserve">
+    <value>Waarde</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextExportMode" xml:space="preserve">
+    <value>Tekst export modus:</value>
+  </data>
+  <data name="PreviewStringId.Msg_InvalidBarcodeData" xml:space="preserve">
+    <value>Binaire data mag niet langer zijn dan 1033 bytes.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXlsx_Description" xml:space="preserve">
+    <value>Microsoft Excel 2007 werkmap</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_XpsPageRange" xml:space="preserve">
+    <value>Pagina reeks</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXlsx_STipTitle" xml:space="preserve">
+    <value>Exporteer naar XLSX</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXlsx_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar XLSX en voeg het als bijlage toe aan een e-mail.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXlsx_STipContent" xml:space="preserve">
+    <value>Exporteer het document naar XLSX en sla het op in een bestand op schijf.</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXlsx_STipTitle" xml:space="preserve">
+    <value>E-mail als XLSX</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextExportMode_Text" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXps_Caption" xml:space="preserve">
+    <value>XPS bestand</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXlsx_Description" xml:space="preserve">
+    <value>Microsoft Excel 2007 Werkmap</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXlsx_Caption" xml:space="preserve">
+    <value>XLSX bestand</value>
+  </data>
+</root>

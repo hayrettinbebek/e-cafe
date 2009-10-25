@@ -1,0 +1,1180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace">
+    </xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute ref="xml:space">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4">
+              </xsd:attribute>
+              <xsd:attribute ref="xml:space">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PreviewStringId.Button_Help" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PageSetup" xml:space="preserve">
+    <value>ページ設定</value>
+  </data>
+  <data name="PreviewStringId.MPForm_Lbl_Pages" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="PreviewStringId.SB_ZoomFactor" xml:space="preserve">
+    <value>ズームファクタ:</value>
+  </data>
+  <data name="PreviewStringId.SB_TotalPageNo" xml:space="preserve">
+    <value>総ページ数:</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_ZoomIn" xml:space="preserve">
+    <value>ズームイン</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_FirstPage" xml:space="preserve">
+    <value>最初のページ</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PreviousPage" xml:space="preserve">
+    <value>前のページ</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_NextPage" xml:space="preserve">
+    <value>次のページ</value>
+  </data>
+  <data name="PreviewStringId.Msg_EmptyDocument" xml:space="preserve">
+    <value>この文書にはページがありません。</value>
+  </data>
+  <data name="PreviewStringId.Msg_CreatingDocument" xml:space="preserve">
+    <value>文書を作成しています...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_MultiplePages" xml:space="preserve">
+    <value>複数ページ</value>
+  </data>
+  <data name="PreviewStringId.Button_Apply" xml:space="preserve">
+    <value>適用</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_ZoomOut" xml:space="preserve">
+    <value>ズームアウト</value>
+  </data>
+  <data name="PreviewStringId.SB_CurrentPageNo" xml:space="preserve">
+    <value>現在のページ番号:</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Zoom" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PrintDirect" xml:space="preserve">
+    <value>クイック印刷</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Magnifier" xml:space="preserve">
+    <value>虫眼鏡</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Print" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="PreviewStringId.Button_Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Close" xml:space="preserve">
+    <value>プレビューを閉じる</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Backgr" xml:space="preserve">
+    <value>背景</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_EditPageHF" xml:space="preserve">
+    <value>ヘッダーとフッター</value>
+  </data>
+  <data name="PreviewStringId.Button_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PreviewStringId.SB_PageNone" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_LastPage" xml:space="preserve">
+    <value>最後のページ</value>
+  </data>
+  <data name="PreviewStringId.Msg_UnavailableNetPrinter" xml:space="preserve">
+    <value>ネットプリンタが使用できません。</value>
+  </data>
+  <data name="PreviewStringId.Msg_NeedPrinter" xml:space="preserve">
+    <value>プリンタがインストールされていません。</value>
+  </data>
+  <data name="PreviewStringId.Msg_WrongPrinter" xml:space="preserve">
+    <value>プリンタ名が無効です。プリンタ設定を確認してください。</value>
+  </data>
+  <data name="PreviewStringId.Msg_WrongPageSettings" xml:space="preserve">
+    <value>現在のプリンタは選択された用紙サイズをサポートしていません。
+印刷を続けますか?</value>
+  </data>
+  <data name="PreviewStringId.Msg_CustomDrawWarning" xml:space="preserve">
+    <value>警告!</value>
+  </data>
+  <data name="PreviewStringId.PreviewForm_Caption" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Customize" xml:space="preserve">
+    <value>カスタマイズ</value>
+  </data>
+  <data name="PreviewStringId.Margin_Inch" xml:space="preserve">
+    <value>インチ</value>
+  </data>
+  <data name="PreviewStringId.Margin_Millimeter" xml:space="preserve">
+    <value>mm</value>
+  </data>
+  <data name="PreviewStringId.Margin_TopMargin" xml:space="preserve">
+    <value>上部の余白</value>
+  </data>
+  <data name="PreviewStringId.Margin_BottomMargin" xml:space="preserve">
+    <value>下部の余白</value>
+  </data>
+  <data name="PreviewStringId.Margin_LeftMargin" xml:space="preserve">
+    <value>左側の余白</value>
+  </data>
+  <data name="PreviewStringId.Margin_RightMargin" xml:space="preserve">
+    <value>右側の余白</value>
+  </data>
+  <data name="PreviewStringId.ScrollingInfo_Page" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="PreviewStringId.Msg_PageMarginsWarning" xml:space="preserve">
+    <value>ページの印刷可能エリアの外側に1つ以上の余白が設定されています。操作を続けますか?</value>
+  </data>
+  <data name="PreviewStringId.SB_PageInfo" xml:space="preserve">
+    <value>{0} / {1}</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_HandTool" xml:space="preserve">
+    <value>ハンドツール</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Export" xml:space="preserve">
+    <value>文書のエクスポート...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Send" xml:space="preserve">
+    <value>電子メールで送信...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Map" xml:space="preserve">
+    <value>文書マップ</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Watermark" xml:space="preserve">
+    <value>透かし</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_File" xml:space="preserve">
+    <value>ファイル(&amp;F)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_View" xml:space="preserve">
+    <value>表示(&amp;V)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Background" xml:space="preserve">
+    <value>背景(&amp;B)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PageSetup" xml:space="preserve">
+    <value>ページ設定(&amp;U)...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Print" xml:space="preserve">
+    <value>印刷(&amp;P)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PrintDirect" xml:space="preserve">
+    <value>印刷(&amp;R)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Export" xml:space="preserve">
+    <value>エクスポート先(&amp;E)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Send" xml:space="preserve">
+    <value>名前を付けて送信(&amp;D)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Exit" xml:space="preserve">
+    <value>終了(&amp;X)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewToolbar" xml:space="preserve">
+    <value>ツールバー(&amp;T)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewStatusbar" xml:space="preserve">
+    <value>ステータスバー(&amp;S)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewContinuous" xml:space="preserve">
+    <value>続行(&amp;C)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewFacing" xml:space="preserve">
+    <value>縁取り(&amp;F)</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_BackgrColor" xml:space="preserve">
+    <value>色(&amp;C)...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Watermark" xml:space="preserve">
+    <value>透かし(&amp;W)...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PdfDocument" xml:space="preserve">
+    <value>PDFファイル</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_TxtDocument" xml:space="preserve">
+    <value>テキストファイル</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_CsvDocument" xml:space="preserve">
+    <value>CSVファイル</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_MhtDocument" xml:space="preserve">
+    <value>MHTファイル</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_XlsDocument" xml:space="preserve">
+    <value>Excelファイル</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_RtfDocument" xml:space="preserve">
+    <value>RTFファイル</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_HtmDocument" xml:space="preserve">
+    <value>HTMLファイル</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_GraphicDocument" xml:space="preserve">
+    <value>画像ファイル</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomPageWidth" xml:space="preserve">
+    <value>ページ幅</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomTextWidth" xml:space="preserve">
+    <value>テキストの幅</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomWholePage" xml:space="preserve">
+    <value>ページ全体</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomTwoPages" xml:space="preserve">
+    <value>2ページ</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PageLayout" xml:space="preserve">
+    <value>ページレイアウト(&amp;P)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterPdf" xml:space="preserve">
+    <value>PDF文書</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterTxt" xml:space="preserve">
+    <value>テキスト文書</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterCsv" xml:space="preserve">
+    <value>CSV文書</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterMht" xml:space="preserve">
+    <value>MHT文書</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterXls" xml:space="preserve">
+    <value>Excel文書</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterRtf" xml:space="preserve">
+    <value>リッチテキスト文書</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterHtm" xml:space="preserve">
+    <value>HTML文書</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterBmp" xml:space="preserve">
+    <value>BMP(ビットマップ)形式</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterGif" xml:space="preserve">
+    <value>GIF(Graphics Interchange Format)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterJpeg" xml:space="preserve">
+    <value>JPEGファイル交換形式</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterPng" xml:space="preserve">
+    <value>PNG(Portable Network Graphics)形式</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterTiff" xml:space="preserve">
+    <value>TIFF(Tag Image File Format)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterEmf" xml:space="preserve">
+    <value>EMF(拡張Windowsメタファイル)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterWmf" xml:space="preserve">
+    <value>WMF(Windowsメタファイル)</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_Title" xml:space="preserve">
+    <value>名前を付けて保存</value>
+  </data>
+  <data name="PreviewStringId.EMail_From" xml:space="preserve">
+    <value>送信者</value>
+  </data>
+  <data name="PreviewStringId.Msg_IncorrectPageRange" xml:space="preserve">
+    <value>これは有効なページ範囲ではありません。</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageZoom" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_Horizontal" xml:space="preserve">
+    <value>水平方向</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_Vertical" xml:space="preserve">
+    <value>垂直方向</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_BackwardDiagonal" xml:space="preserve">
+    <value>BackwardDiagonal</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_ForwardDiagonal" xml:space="preserve">
+    <value>ForwardDiagonal</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Bottom" xml:space="preserve">
+    <value>下寄せ</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Middle" xml:space="preserve">
+    <value>中央寄せ</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Top" xml:space="preserve">
+    <value>上寄せ</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Left" xml:space="preserve">
+    <value>左揃え</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Center" xml:space="preserve">
+    <value>中央揃え</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Right" xml:space="preserve">
+    <value>右揃え</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PictureDlg_Title" xml:space="preserve">
+    <value>画像を選択</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageStretch" xml:space="preserve">
+    <value>伸縮</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageClip" xml:space="preserve">
+    <value>クリップ</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Asap" xml:space="preserve">
+    <value>ASAP</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Confidential" xml:space="preserve">
+    <value>機密事項</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Copy" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_DoNotCopy" xml:space="preserve">
+    <value>コピーしない</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Draft" xml:space="preserve">
+    <value>草稿</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Evaluation" xml:space="preserve">
+    <value>評価</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Original" xml:space="preserve">
+    <value>オリジナル</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Personal" xml:space="preserve">
+    <value>個人用</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Sample" xml:space="preserve">
+    <value>サンプル</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_TopSecret" xml:space="preserve">
+    <value>極秘</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Urgent" xml:space="preserve">
+    <value>至急</value>
+  </data>
+  <data name="PreviewStringId.Msg_FontInvalidNumber" xml:space="preserve">
+    <value>フォントサイズにゼロまたは負の数を設定することはできません。</value>
+  </data>
+  <data name="PreviewStringId.Msg_NotSupportedFont" xml:space="preserve">
+    <value>このフォントは、まだサポートされていません。</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ZOrderRgrItem_InFront" xml:space="preserve">
+    <value>前(&amp;F)</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ZOrderRgrItem_Behind" xml:space="preserve">
+    <value>後ろ(&amp;B)</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PageRangeRgrItem_All" xml:space="preserve">
+    <value>すべて(&amp;A)</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PageRangeRgrItem_Pages" xml:space="preserve">
+    <value>ページ(&amp;P):</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageNumber" xml:space="preserve">
+    <value>[ページ番号]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageNumberOfTotal" xml:space="preserve">
+    <value>[ページ番号のページ番号]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageDate" xml:space="preserve">
+    <value>[印刷した日付]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageTime" xml:space="preserve">
+    <value>[印刷した時刻]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageUserName" xml:space="preserve">
+    <value>[ユーザー名]</value>
+  </data>
+  <data name="PreviewStringId.BarText_Toolbar" xml:space="preserve">
+    <value>ツールバー</value>
+  </data>
+  <data name="PreviewStringId.BarText_MainMenu" xml:space="preserve">
+    <value>メインメニュー</value>
+  </data>
+  <data name="PreviewStringId.BarText_StatusBar" xml:space="preserve">
+    <value>ステータスバー</value>
+  </data>
+  <data name="PreviewStringId.Msg_IncorrectZoomFactor" xml:space="preserve">
+    <value>この数値は{0}から{1}までの値にする必要があります。</value>
+  </data>
+  <data name="PreviewStringId.Msg_InvalidMeasurement" xml:space="preserve">
+    <value>これは有効な測定ではありません。</value>
+  </data>
+  <data name="PreviewStringId.Msg_CannotAccessFile" xml:space="preserve">
+    <value>ファイル「{0}」は別のプロセスによって使用されているため、プロセスはこのファイルにアクセスできません。</value>
+  </data>
+  <data name="PreviewStringId.Msg_OpenFileQuestion" xml:space="preserve">
+    <value>このファイルを開きますか?</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_AdjustTo" xml:space="preserve">
+    <value>調整基準:</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_FitTo" xml:space="preserve">
+    <value>合わせる</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_PagesWide" xml:space="preserve">
+    <value>ページ幅</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_GroupText" xml:space="preserve">
+    <value>スケール</value>
+  </data>
+  <data name="PreviewStringId.ScalePopup_NormalSize" xml:space="preserve">
+    <value>通常サイズの%</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Scale" xml:space="preserve">
+    <value>スケール</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ActionAfterExport" xml:space="preserve">
+    <value>エクスポート後の操作:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ActionAfterExport_None" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ActionAfterExport_Open" xml:space="preserve">
+    <value>ファイルを開く</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ActionAfterExport_AskUser" xml:space="preserve">
+    <value>ユーザーに確認</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_DefaultDirectory" xml:space="preserve">
+    <value>デフォルトのディレクトリ:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_DefaultFileName" xml:space="preserve">
+    <value>デフォルトのファイル名:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_SaveMode" xml:space="preserve">
+    <value>ファイルを保存するモード:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_SaveMode_UsingDefaultPath" xml:space="preserve">
+    <value>デフォルトのファイルパス:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_SaveMode_UsingSaveFileDialog" xml:space="preserve">
+    <value>SaveFileダイアログ</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ShowOptionsBeforeExport" xml:space="preserve">
+    <value>エクスポートする前にオプションのダイアログを表示する</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfPageRange" xml:space="preserve">
+    <value>ページ範囲:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfCompressed" xml:space="preserve">
+    <value>圧縮</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfNeverEmbeddedFonts" xml:space="preserve">
+    <value>これらのフォントは組み込まないでください:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality" xml:space="preserve">
+    <value>画像の品質:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_Lowest" xml:space="preserve">
+    <value>最低</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_Low" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_Medium" xml:space="preserve">
+    <value>標準</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_High" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfImageQuality_Highest" xml:space="preserve">
+    <value>最高</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentAuthor" xml:space="preserve">
+    <value>作成者:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentApplication" xml:space="preserve">
+    <value>アプリケーション:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentTitle" xml:space="preserve">
+    <value>タイトル:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentSubject" xml:space="preserve">
+    <value>課題:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_PdfDocumentKeywords" xml:space="preserve">
+    <value>キーワード:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlExportMode" xml:space="preserve">
+    <value>エクスポートモード:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlExportMode_SingleFile" xml:space="preserve">
+    <value>単一ファイル</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlExportMode_SingleFilePageByPage" xml:space="preserve">
+    <value>単一ファイルのページごと</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlExportMode_DifferentFiles" xml:space="preserve">
+    <value>異なるファイル</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlCharacterSet" xml:space="preserve">
+    <value>文字セット:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlTitle" xml:space="preserve">
+    <value>タイトル:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlRemoveSecondarySymbols" xml:space="preserve">
+    <value>キャリッジリターンの削除</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlPageRange" xml:space="preserve">
+    <value>ページ範囲:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlPageBorderWidth" xml:space="preserve">
+    <value>ページ罫線の幅:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_HtmlPageBorderColor" xml:space="preserve">
+    <value>ページ罫線の色:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextSeparator" xml:space="preserve">
+    <value>テキスト区切り文字:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextEncoding" xml:space="preserve">
+    <value>エンコーディング:</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_XlsShowGridLines" xml:space="preserve">
+    <value>グリッド線の表示</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_XlsUseNativeFormat" xml:space="preserve">
+    <value>値のエクスポートに、その値の形式を使用する</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_ImageFormat" xml:space="preserve">
+    <value>画像形式:</value>
+  </data>
+  <data name="PreviewStringId.FolderBrowseDlg_ExportDirectory" xml:space="preserve">
+    <value>エクスポートした文書の保存先フォルダを選択:</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionPdf" xml:space="preserve">
+    <value>PDFエクスポートオプション</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionXls" xml:space="preserve">
+    <value>XLSエクスポートオプション</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionTxt" xml:space="preserve">
+    <value>テキストエクスポートオプション</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionCsv" xml:space="preserve">
+    <value>CSVエクスポートオプション</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionImage" xml:space="preserve">
+    <value>画像エクスポートオプション</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionHtml" xml:space="preserve">
+    <value>HTMLエクスポートオプション</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionMht" xml:space="preserve">
+    <value>MHTエクスポートオプション</value>
+  </data>
+  <data name="PreviewStringId.ExportOptionsForm_CaptionRtf" xml:space="preserve">
+    <value>RTFエクスポートオプション</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMargins_Description" xml:space="preserve">
+    <value>上:		{0}		下:		{1}
+左:		 {2}		右:		   {3}</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PaperSize_Description" xml:space="preserve">
+    <value>{0} x {1}</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Print" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_PageSetup" xml:space="preserve">
+    <value>ページ設定</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Navigation" xml:space="preserve">
+    <value>ナビゲーション</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Zoom" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Background" xml:space="preserve">
+    <value>ページの背景</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_Export" xml:space="preserve">
+    <value>エクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_DocumentMap_Caption" xml:space="preserve">
+    <value>ブックマーク</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Find_Caption" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Pointer_Caption" xml:space="preserve">
+    <value>ポインタ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_HandTool_Caption" xml:space="preserve">
+    <value>ハンドツール</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Customize_Caption" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Print_Caption" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PrintDirect_Caption" xml:space="preserve">
+    <value>クイック印刷</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageSetup_Caption" xml:space="preserve">
+    <value>カスタム余白...</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_EditPageHF_Caption" xml:space="preserve">
+    <value>ヘッダー/フッター</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Magnifier_Caption" xml:space="preserve">
+    <value>虫眼鏡</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomOut_Caption" xml:space="preserve">
+    <value>ズームアウト</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomIn_Caption" xml:space="preserve">
+    <value>ズームイン</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowFirstPage_Caption" xml:space="preserve">
+    <value>最初のページ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowPrevPage_Caption" xml:space="preserve">
+    <value>前のページ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowNextPage_Caption" xml:space="preserve">
+    <value>次のページ </value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowLastPage_Caption" xml:space="preserve">
+    <value>最後のページ </value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_MultiplePages_Caption" xml:space="preserve">
+    <value>複数のページ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_FillBackground_Caption" xml:space="preserve">
+    <value>ページの色</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Watermark_Caption" xml:space="preserve">
+    <value>透かし</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportFile_Caption" xml:space="preserve">
+    <value>エクスポート先</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendFile_Caption" xml:space="preserve">
+    <value>電子メールで送信</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ClosePreview_Caption" xml:space="preserve">
+    <value>印刷プレビューを閉じる</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Scale_Caption" xml:space="preserve">
+    <value>スケール</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageOrientation_Caption" xml:space="preserve">
+    <value>ページの向き</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PaperSize_Caption" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageMargins_Caption" xml:space="preserve">
+    <value>余白</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Zoom_Caption" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_DocumentMap_STipTitle" xml:space="preserve">
+    <value>文書マップ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Find_STipTitle" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Pointer_STipTitle" xml:space="preserve">
+    <value>マウスポインタ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_HandTool_STipTitle" xml:space="preserve">
+    <value>ハンドツール</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Customize_STipTitle" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Print_STipTitle" xml:space="preserve">
+    <value>印刷(Ctrl+P)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PrintDirect_STipTitle" xml:space="preserve">
+    <value>クイック印刷</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageSetup_STipTitle" xml:space="preserve">
+    <value>ページ設定</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_EditPageHF_STipTitle" xml:space="preserve">
+    <value>ヘッダーとフッター</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Magnifier_STipTitle" xml:space="preserve">
+    <value>虫眼鏡</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomOut_STipTitle" xml:space="preserve">
+    <value>ズームアウト</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomIn_STipTitle" xml:space="preserve">
+    <value>ズームイン</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowFirstPage_STipTitle" xml:space="preserve">
+    <value>最初のページ(Ctrl+Home)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowPrevPage_STipTitle" xml:space="preserve">
+    <value>前のページ(PageUp)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowNextPage_STipTitle" xml:space="preserve">
+    <value>次のページ(PageDown)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowLastPage_STipTitle" xml:space="preserve">
+    <value>最後のページ(Ctrl+End)</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_MultiplePages_STipTitle" xml:space="preserve">
+    <value>複数のページを表示</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_FillBackground_STipTitle" xml:space="preserve">
+    <value>背景の色</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Watermark_STipTitle" xml:space="preserve">
+    <value>透かし</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportFile_STipTitle" xml:space="preserve">
+    <value>エクスポート先...</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendFile_STipTitle" xml:space="preserve">
+    <value>電子メールで送信...</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ClosePreview_STipTitle" xml:space="preserve">
+    <value>印刷プレビューを閉じる</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Scale_STipTitle" xml:space="preserve">
+    <value>スケール</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageOrientation_STipTitle" xml:space="preserve">
+    <value>ページの向き</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PaperSize_STipTitle" xml:space="preserve">
+    <value>ページのサイズ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageMargins_STipTitle" xml:space="preserve">
+    <value>ページの余白</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Zoom_STipTitle" xml:space="preserve">
+    <value>ズーム</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_PageSetup_STipTitle" xml:space="preserve">
+    <value>ページ設定</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_DocumentMap_STipContent" xml:space="preserve">
+    <value>文書マップを開きます。文書マップを使用すると、文書の構造表示を使用した移動が可能になります。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Find_STipContent" xml:space="preserve">
+    <value>文書内のテキストを検索する[検索]ダイアログを表示します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Pointer_STipContent" xml:space="preserve">
+    <value>マウスポインタを表示します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_HandTool_STipContent" xml:space="preserve">
+    <value>ページを手動でスクロールできるハンドツールを起動します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Customize_STipContent" xml:space="preserve">
+    <value>印刷オプションを変更できる[印刷可能なコンポーネントエディタ]ダイアログを開きます。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Print_STipContent" xml:space="preserve">
+    <value>印刷する前に、プリンタ、コピー数、その他の印刷オプションを選択します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PrintDirect_STipContent" xml:space="preserve">
+    <value>文書を変更せずに直接デフォルトのプリンタに送信します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageSetup_STipContent" xml:space="preserve">
+    <value>[ページ設定]ダイアログを表示します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_EditPageHF_STipContent" xml:space="preserve">
+    <value>文書のヘッダーとフッターを編集します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Magnifier_STipContent" xml:space="preserve">
+    <value>[虫眼鏡]ツールを起動します。
+
+文書上を1回クリックすると、単一のページ全体を表示できるように文書がズーム(拡大/縮小)されます。もう一度クリックすると、通常のサイズの100%になるまで文書がズーム(拡大/縮小)されます。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomOut_STipContent" xml:space="preserve">
+    <value>ズームアウトして、ページを縮小サイズで広範囲に表示します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomIn_STipContent" xml:space="preserve">
+    <value>ズームインして、文書をクローズアップ表示します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowFirstPage_STipContent" xml:space="preserve">
+    <value>文書の最初のページに移動します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowPrevPage_STipContent" xml:space="preserve">
+    <value>文書の前のページに移動します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowNextPage_STipContent" xml:space="preserve">
+    <value>文書の次のページに移動します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ShowLastPage_STipContent" xml:space="preserve">
+    <value>文書の最後のページに移動します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_MultiplePages_STipContent" xml:space="preserve">
+    <value>ページレイアウトを選択し、プレビューで文書のページを配置します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_FillBackground_STipContent" xml:space="preserve">
+    <value>文書のページの背景色を選択します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Watermark_STipContent" xml:space="preserve">
+    <value>ページのコンテンツの後ろに透かし文字を挿入します。
+
+これは、通常、特別な取り扱いが必要な文書であることを示す場合に使用します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportFile_STipContent" xml:space="preserve">
+    <value>現在の文書を、使用できる文書形式のいずれかでエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendFile_STipContent" xml:space="preserve">
+    <value>現在の文書を、使用できる文書形式のいずれかでエクスポートし、電子メールに添付します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ClosePreview_STipContent" xml:space="preserve">
+    <value>文書の印刷プレビューを閉じます。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Scale_STipContent" xml:space="preserve">
+    <value>実際のサイズに対する倍率(%)を指定し、印刷出力を拡大または縮小します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageOrientation_STipContent" xml:space="preserve">
+    <value>ページレイアウトの縦方向と横方向を切り替えます。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PaperSize_STipContent" xml:space="preserve">
+    <value>文書の用紙サイズを選択します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageMargins_STipContent" xml:space="preserve">
+    <value>文書全体の余白サイズを選択します。
+
+文書に特定の余白サイズを適用するには、[カスタム余白]をクリックします。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_Zoom_STipContent" xml:space="preserve">
+    <value>文書プレビューのズームレベルを変更します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageGroup_PageSetup_STipContent" xml:space="preserve">
+    <value>[ページ設定]ダイアログを表示します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportPdf_Caption" xml:space="preserve">
+    <value>PDFファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportHtm_Caption" xml:space="preserve">
+    <value>HTMLファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportTxt_Caption" xml:space="preserve">
+    <value>テキストファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportCsv_Caption" xml:space="preserve">
+    <value>CSVファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportMht_Caption" xml:space="preserve">
+    <value>MHTファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXls_Caption" xml:space="preserve">
+    <value>Excelファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportRtf_Caption" xml:space="preserve">
+    <value>RTFファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportGraphic_Caption" xml:space="preserve">
+    <value>画像ファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendPdf_Caption" xml:space="preserve">
+    <value>PDFファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendTxt_Caption" xml:space="preserve">
+    <value>テキストファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendCsv_Caption" xml:space="preserve">
+    <value>CSVファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendMht_Caption" xml:space="preserve">
+    <value>MHTファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXls_Caption" xml:space="preserve">
+    <value>Excelファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendRtf_Caption" xml:space="preserve">
+    <value>RTFファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendGraphic_Caption" xml:space="preserve">
+    <value>画像ファイル</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageOrientationPortrait_Caption" xml:space="preserve">
+    <value>縦方向</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageOrientationLandscape_Caption" xml:space="preserve">
+    <value>横方向</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsNormal_Caption" xml:space="preserve">
+    <value>標準</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsNarrow_Caption" xml:space="preserve">
+    <value>狭くする</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsModerate_Caption" xml:space="preserve">
+    <value>適度に調節</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsWide_Caption" xml:space="preserve">
+    <value>広くする</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportPdf_Description" xml:space="preserve">
+    <value>Adobeポータブルドキュメントフォーマット</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportHtm_Description" xml:space="preserve">
+    <value>Webページ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportTxt_Description" xml:space="preserve">
+    <value>プレーンテキスト</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportCsv_Description" xml:space="preserve">
+    <value>コンマ区切りテキスト</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportMht_Description" xml:space="preserve">
+    <value>単一ファイルのWebページ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXls_Description" xml:space="preserve">
+    <value>Microsoft Excelのブック</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportRtf_Description" xml:space="preserve">
+    <value>リッチテキスト形式</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportGraphic_Description" xml:space="preserve">
+    <value>BMP、GIF、JPEG、PNG、TIFF、EMF、WMF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendPdf_Description" xml:space="preserve">
+    <value>Adobeポータブルドキュメントフォーマット</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendTxt_Description" xml:space="preserve">
+    <value>プレーンテキスト</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendCsv_Description" xml:space="preserve">
+    <value>コンマ区切りテキスト</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendMht_Description" xml:space="preserve">
+    <value>単一ファイルのWebページ</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXls_Description" xml:space="preserve">
+    <value>Microsoft Excelのブック</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendRtf_Description" xml:space="preserve">
+    <value>リッチテキスト形式</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendGraphic_Description" xml:space="preserve">
+    <value>BMP、GIF、JPEG、PNG、TIFF、EMF、WMF</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageOrientationPortrait_Description" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageOrientationLandscape_Description" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsNormal_Description" xml:space="preserve">
+    <value>標準</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsNarrow_Description" xml:space="preserve">
+    <value>狭くする</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsModerate_Description" xml:space="preserve">
+    <value>適度に調節</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_GalleryItem_PageMarginsWide_Description" xml:space="preserve">
+    <value>広くする</value>
+  </data>
+  <data name="PreviewStringId.Msg_OpenFileQuestionCaption" xml:space="preserve">
+    <value>エクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportPdf_STipTitle" xml:space="preserve">
+    <value>PDFにエクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportHtm_STipTitle" xml:space="preserve">
+    <value>HTMLにエクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportTxt_STipTitle" xml:space="preserve">
+    <value>テキストにエクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportCsv_STipTitle" xml:space="preserve">
+    <value>CSVにエクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportMht_STipTitle" xml:space="preserve">
+    <value>MHTにエクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXls_STipTitle" xml:space="preserve">
+    <value>XLSにエクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportRtf_STipTitle" xml:space="preserve">
+    <value>RTFにエクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportGraphic_STipTitle" xml:space="preserve">
+    <value>画像にエクスポート</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendPdf_STipTitle" xml:space="preserve">
+    <value>PDFで電子メールに添付</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendTxt_STipTitle" xml:space="preserve">
+    <value>テキストで電子メールに添付</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendCsv_STipTitle" xml:space="preserve">
+    <value>CSVで電子メールに添付</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendMht_STipTitle" xml:space="preserve">
+    <value>MHTで電子メールに添付</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXls_STipTitle" xml:space="preserve">
+    <value>XLSで電子メールに添付</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendRtf_STipTitle" xml:space="preserve">
+    <value>RTFで電子メールに添付</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendGraphic_STipTitle" xml:space="preserve">
+    <value>画像で電子メールに添付</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportPdf_STipContent" xml:space="preserve">
+    <value>文書をPDF形式にエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportHtm_STipContent" xml:space="preserve">
+    <value>文書をHTML形式にエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportTxt_STipContent" xml:space="preserve">
+    <value>文書をテキスト形式にエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportCsv_STipContent" xml:space="preserve">
+    <value>文書をCSV形式にエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportMht_STipContent" xml:space="preserve">
+    <value>文書をMHT形式にエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportXls_STipContent" xml:space="preserve">
+    <value>文書をXLS形式にエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportRtf_STipContent" xml:space="preserve">
+    <value>文書をRTF形式にエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ExportGraphic_STipContent" xml:space="preserve">
+    <value>文書を画像形式にエクスポートし、ディスク上のファイルに保存します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendPdf_STipContent" xml:space="preserve">
+    <value>文書をPDF形式にエクスポートし、電子メールに添付します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendTxt_STipContent" xml:space="preserve">
+    <value>文書をテキスト形式にエクスポートし、電子メールに添付します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendCsv_STipContent" xml:space="preserve">
+    <value>文書をCSV形式にエクスポートし、電子メールに添付します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendMht_STipContent" xml:space="preserve">
+    <value>文書をMHT形式にエクスポートし、電子メールに添付します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendXls_STipContent" xml:space="preserve">
+    <value>文書をXLS形式にエクスポートし、電子メールに添付します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendRtf_STipContent" xml:space="preserve">
+    <value>文書をRTF形式にエクスポートし、電子メールに添付します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_SendGraphic_STipContent" xml:space="preserve">
+    <value>文書を画像形式にエクスポートし、電子メールに添付します。</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_PageText" xml:space="preserve">
+    <value>印刷プレビュー</value>
+  </data>
+  <data name="PreviewStringId.RibbonPreview_ZoomExact_Caption" xml:space="preserve">
+    <value>ズーム倍率:</value>
+  </data>
+  <data name="PreviewStringId.Msg_CantFitBarcodeToControlBounds" xml:space="preserve">
+    <value>コントロールの境界線が狭すぎて、バーコードを作成できません。</value>
+  </data>
+  <data name="PreviewStringId.Msg_InvalidBarcodeText" xml:space="preserve">
+    <value>テキストに無効な文字が含まれています。</value>
+  </data>
+  <data name="PreviewStringId.Msg_InvalidBarcodeTextFormat" xml:space="preserve">
+    <value>無効なテキスト形式</value>
+  </data>
+  <data name="PreviewStringId.Msg_SearchDialogFinishedSearching" xml:space="preserve">
+    <value>文書全体の検索が終了しました。</value>
+  </data>
+  <data name="PreviewStringId.Msg_SearchDialogTotalFound" xml:space="preserve">
+    <value>総検出数: </value>
+  </data>
+  <data name="PreviewStringId.Msg_SearchDialogReady" xml:space="preserve">
+    <value>使用可</value>
+  </data>
+  <data name="PreviewStringId.ExportOption_TextSeparator_TabAlias" xml:space="preserve">
+    <value>タブ</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Open" xml:space="preserve">
+    <value>ドキュメントを開く</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Save" xml:space="preserve">
+    <value>ドキュメントの保存</value>
+  </data>
+</root>
