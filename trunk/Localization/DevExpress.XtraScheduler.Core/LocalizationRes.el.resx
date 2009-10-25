@@ -1,0 +1,1014 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SchedulerStringId.Msg_IsNotValid" xml:space="preserve">
+    <value>'{0}' δεν είναι έγκυρη τιμή για '{1}'</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidDayOfWeekForDailyRecurrence" xml:space="preserve">
+    <value>Μη έγκυρη ημέρα εβδομάδας για ημερήσια επανάληψη. Μόνο Κάθε μέρα, Καθημερινές και Σαβ/κα είναι έγκυρες τιμές.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InternalError" xml:space="preserve">
+    <value>Εσωτερικό σφάλμα!</value>
+  </data>
+  <data name="SchedulerStringId.Msg_NoMappingForObject" xml:space="preserve">
+    <value>Η εξής απαιτούμενη απεικόνιση του αντικειμένου  
+ {0} δεν έχει καθοριστεί</value>
+  </data>
+  <data name="SchedulerStringId.Msg_XtraSchedulerNotAssigned" xml:space="preserve">
+    <value>Το συστατικό αποθήκευσης χρονοδιαγράμματος δεν έχει καθοριστεί για αυτό το χρονοδιάγραμμα.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidTimeOfDayInterval" xml:space="preserve">
+    <value>Μη έγκυρη τιμή για την εσωτερική ώρα της ημέρας</value>
+  </data>
+  <data name="SchedulerStringId.Msg_OverflowTimeOfDayInterval" xml:space="preserve">
+    <value>Μη έγκυρη τιμή για τον εσωτερικό χρόνο της ημέρας. Η τιμή πρέπει να είναι μικρότερη ή ίση με απο μία ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.Msg_LoadCollectionFromXml" xml:space="preserve">
+    <value>Ο χρονοπρογραμματισμός δεν πρέπει να είναι περιορισμένος για να φορτώσει δεδομένα απο το xml</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_None" xml:space="preserve">
+    <value>Κανένα</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_Important" xml:space="preserve">
+    <value>Σημαντικό</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_Business" xml:space="preserve">
+    <value>Επειχήρηση</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_Personal" xml:space="preserve">
+    <value>Προσωπικό</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_Vacation" xml:space="preserve">
+    <value>Διακοπές</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_MustAttend" xml:space="preserve">
+    <value>Θέλει προσοχή</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_TravelRequired" xml:space="preserve">
+    <value>Επιβολή ταξιδιού</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_NeedsPreparation" xml:space="preserve">
+    <value>Θέλει προετοιμασία</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_Birthday" xml:space="preserve">
+    <value>Γενέθλια</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_Anniversary" xml:space="preserve">
+    <value>Επέτειος</value>
+  </data>
+  <data name="SchedulerStringId.AppointmentLabel_PhoneCall" xml:space="preserve">
+    <value>Τηλεφώνημα</value>
+  </data>
+  <data name="SchedulerStringId.Appointment_StartContinueText" xml:space="preserve">
+    <value>Από {0}</value>
+  </data>
+  <data name="SchedulerStringId.Appointment_EndContinueText" xml:space="preserve">
+    <value>Ως {0}</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidEndDate" xml:space="preserve">
+    <value>Η ημερομηνία που δώσατε είναι πριν την ημερομηνία έναρξης.</value>
+  </data>
+  <data name="SchedulerStringId.Caption_Appointment" xml:space="preserve">
+    <value>{0} - Συνάντηση</value>
+  </data>
+  <data name="SchedulerStringId.Caption_Event" xml:space="preserve">
+    <value>{0} - Γεγονός</value>
+  </data>
+  <data name="SchedulerStringId.Caption_UntitledAppointment" xml:space="preserve">
+    <value>Χωρίς τίτλο</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ReadOnly" xml:space="preserve">
+    <value> [μόνο διάβασμα]</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekDaysEveryDay" xml:space="preserve">
+    <value>Ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekDaysWeekendDays" xml:space="preserve">
+    <value>Ημέρα σαβ/κου</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekDaysWorkDays" xml:space="preserve">
+    <value>Καθημερινή</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekOfMonthFirst" xml:space="preserve">
+    <value>Πρώτη</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekOfMonthSecond" xml:space="preserve">
+    <value>Δεύτερη</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekOfMonthThird" xml:space="preserve">
+    <value>Τρίτη</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekOfMonthFourth" xml:space="preserve">
+    <value>Τέταρτη</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekOfMonthLast" xml:space="preserve">
+    <value>Τελευταία</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidDayCount" xml:space="preserve">
+    <value>Λανθασμένος μετρητής ημερών. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidDayCountValue" xml:space="preserve">
+    <value>Λανθασμένος μετρητής ημερών. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidWeekCount" xml:space="preserve">
+    <value>Λανθασμένος μετρητής εβδομάδας. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidWeekCountValue" xml:space="preserve">
+    <value>Λανθασμένος μετρητής εβδομάδας. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidMonthCount" xml:space="preserve">
+    <value>Λανθασμένος μετρητής μηνών. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidMonthCountValue" xml:space="preserve">
+    <value>Λανθασμένος μετρητής μηνών. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidYearCount" xml:space="preserve">
+    <value>Λανθασμένος μετρητής έτους. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidYearCountValue" xml:space="preserve">
+    <value>Λανθασμένος μετρητής έτους. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidOccurrencesCount" xml:space="preserve">
+    <value>Λανθασμένος μετρητής συμβάντων. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidOccurrencesCountValue" xml:space="preserve">
+    <value>Λανθασμένος μετρητής συμβάντων. Εισάγετε μία θετική ακέραια τιμή .</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidDayNumber" xml:space="preserve">
+    <value>Λανθασμένος μετρητής ημερών. Εισάγετε μία ακέραια τιμή μεταξύ 1 και {0}.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidDayNumberValue" xml:space="preserve">
+    <value>Λανθασμένος αριθμός ημερών. Εισάγετε μία ακέραια τιμή μεταξύ 1 και {0}.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_WarningDayNumber" xml:space="preserve">
+    <value>Μερικοί μήνες έχουν λιγότερες απο {0} ημέρες. Για του μήνες αυτούς, τα συμβάντα θα μετακινηθούν στην τελευταία ημέρα του μήνα.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidDayOfWeek" xml:space="preserve">
+    <value>Δεν επιλέχθηκε ημέρα. Επιλέξτε τουλάχιστον μία ημέρα.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_WarningAppointmentDeleted" xml:space="preserve">
+    <value>Η συνάντηση διεγράφει από άλλο χρήστη.</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_OpenAppointment" xml:space="preserve">
+    <value>&amp;Φόρτωση</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_PrintAppointment" xml:space="preserve">
+    <value>&amp;Εκτύπωση</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_DeleteAppointment" xml:space="preserve">
+    <value>&amp;Διαγραφή</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_EditSeries" xml:space="preserve">
+    <value>&amp;Επεξεργασία Σειράς</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_RestoreOccurrence" xml:space="preserve">
+    <value>&amp;Επαναφορά εξ ορισμού κατάστασης</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_NewAppointment" xml:space="preserve">
+    <value>Νέα &amp;Συνάντηση</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_NewAllDayEvent" xml:space="preserve">
+    <value>Νέο Ημερήσιο &amp;Γεγονός</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_NewRecurringAppointment" xml:space="preserve">
+    <value>Νέα Ε&amp;παναλαμβανόμενη Συνάντηση</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_NewRecurringEvent" xml:space="preserve">
+    <value>Νέο Επα&amp;ναλαμβανόμενο Γεγονός</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_GotoThisDay" xml:space="preserve">
+    <value>Μετακινήσου στην &amp;ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_GotoToday" xml:space="preserve">
+    <value>Μετακινήσου στο &amp;Σήμερα</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_GotoDate" xml:space="preserve">
+    <value>&amp;Πάνε σε ημερομηνία...</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_OtherSettings" xml:space="preserve">
+    <value>Άλλες Ρυ&amp;θμίσεις...</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_CustomizeCurrentView" xml:space="preserve">
+    <value>&amp;Τροποποίση Τρέχουσας Προβολής...</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_CustomizeTimeRuler" xml:space="preserve">
+    <value>Τροποποίηση Χαράκων Ώρων...</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_5Minutes" xml:space="preserve">
+    <value>&amp;5 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_6Minutes" xml:space="preserve">
+    <value>&amp;6 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_10Minutes" xml:space="preserve">
+    <value>10 &amp;Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_15Minutes" xml:space="preserve">
+    <value>&amp;15 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_20Minutes" xml:space="preserve">
+    <value>&amp;20 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_30Minutes" xml:space="preserve">
+    <value>&amp;30 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_60Minutes" xml:space="preserve">
+    <value>6&amp;0 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_SwitchViewMenu" xml:space="preserve">
+    <value>Άλλαξε Προβολή σε</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_SwitchToDayView" xml:space="preserve">
+    <value>&amp;Ημερήσια Προβολή</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_SwitchToWorkWeekView" xml:space="preserve">
+    <value>Εβδομαδιαία Ε&amp;ργασιακή Προβολή</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_SwitchToWeekView" xml:space="preserve">
+    <value>&amp;Εβδομαδιαία Προβολη</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_SwitchToMonthView" xml:space="preserve">
+    <value>&amp;Μηνιαία Προβολή</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_SwitchToTimelineView" xml:space="preserve">
+    <value>&amp;Προθεσμιακή Προβολή</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_TimeScalesMenu" xml:space="preserve">
+    <value>&amp;Κλίμακα Ώρας</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_TimeScaleCaptionsMenu" xml:space="preserve">
+    <value>Ετικέτες &amp;Κλίμακας Ώρας</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_TimeScaleHour" xml:space="preserve">
+    <value>&amp;Ώρα</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_TimeScaleDay" xml:space="preserve">
+    <value>&amp;Ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_TimeScaleWeek" xml:space="preserve">
+    <value>&amp;Εβδομάδα</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_TimeScaleMonth" xml:space="preserve">
+    <value>&amp;Μήνας</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_TimeScaleQuarter" xml:space="preserve">
+    <value>&amp;Τέταρτο</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_TimeScaleYear" xml:space="preserve">
+    <value>&amp;Έτος</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_ShowTimeAs" xml:space="preserve">
+    <value>&amp;Εμφάνισε ώρα ως</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_Free" xml:space="preserve">
+    <value>&amp;Ελεύθερο</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_Busy" xml:space="preserve">
+    <value>&amp;Απασχολημένο</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_Tentative" xml:space="preserve">
+    <value>&amp;Προσωρινό</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_OutOfOffice" xml:space="preserve">
+    <value>&amp;Έξω από γραφείο</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_LabelAs" xml:space="preserve">
+    <value>&amp;Ετικέτα ως</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelNone" xml:space="preserve">
+    <value>&amp;Κανένα</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelImportant" xml:space="preserve">
+    <value>&amp;Σημαντικό</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelBusiness" xml:space="preserve">
+    <value>&amp;Επειχήρηση</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelPersonal" xml:space="preserve">
+    <value>&amp;Προσωπικό</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelVacation" xml:space="preserve">
+    <value>&amp;διακοπές</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelMustAttend" xml:space="preserve">
+    <value>Θέλει Προσοχή</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelTravelRequired" xml:space="preserve">
+    <value>&amp;Απαιτεί Ταξίδι</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelNeedsPreparation" xml:space="preserve">
+    <value>&amp;Θέλει Προετοιμασία</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelBirthday" xml:space="preserve">
+    <value>&amp;Γενέθλια</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelAnniversary" xml:space="preserve">
+    <value>&amp;Επέτειος</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentLabelPhoneCall" xml:space="preserve">
+    <value>Τηλεφώνημα</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentMove" xml:space="preserve">
+    <value>Μετα&amp;κίνηση</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentCopy" xml:space="preserve">
+    <value>&amp;Αντιγραφή</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_AppointmentCancel" xml:space="preserve">
+    <value>Ακύρωση</value>
+  </data>
+  <data name="SchedulerStringId.Caption_5Minutes" xml:space="preserve">
+    <value>5 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.Caption_6Minutes" xml:space="preserve">
+    <value>6 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.Caption_10Minutes" xml:space="preserve">
+    <value>10 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.Caption_15Minutes" xml:space="preserve">
+    <value>15 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.Caption_20Minutes" xml:space="preserve">
+    <value>20 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.Caption_30Minutes" xml:space="preserve">
+    <value>30 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.Caption_60Minutes" xml:space="preserve">
+    <value>60 Λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.Caption_Free" xml:space="preserve">
+    <value>Ελεύθερο</value>
+  </data>
+  <data name="SchedulerStringId.Caption_Busy" xml:space="preserve">
+    <value>Απασχολημένο(ς)</value>
+  </data>
+  <data name="SchedulerStringId.Caption_Tentative" xml:space="preserve">
+    <value>Προσωρινό</value>
+  </data>
+  <data name="SchedulerStringId.Caption_OutOfOffice" xml:space="preserve">
+    <value>Έξω από γραφείο</value>
+  </data>
+  <data name="SchedulerStringId.ViewDisplayName_Day" xml:space="preserve">
+    <value>Ημ/γιο Ημέρας</value>
+  </data>
+  <data name="SchedulerStringId.ViewDisplayName_WorkDays" xml:space="preserve">
+    <value>Ημ/γιο Εργ. Εβδομάδας</value>
+  </data>
+  <data name="SchedulerStringId.ViewDisplayName_Week" xml:space="preserve">
+    <value>Ημ/γιο Εβδομάδας</value>
+  </data>
+  <data name="SchedulerStringId.ViewDisplayName_Month" xml:space="preserve">
+    <value>Ημ/γιο Μήνα</value>
+  </data>
+  <data name="SchedulerStringId.ViewDisplayName_Timeline" xml:space="preserve">
+    <value>Ημ/γιο Προθεσμίας</value>
+  </data>
+  <data name="SchedulerStringId.ViewShortDisplayName_Day" xml:space="preserve">
+    <value>Ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.ViewShortDisplayName_WorkDays" xml:space="preserve">
+    <value>Εργ. Εβδομάδα</value>
+  </data>
+  <data name="SchedulerStringId.ViewShortDisplayName_Week" xml:space="preserve">
+    <value>Εβδομάδα</value>
+  </data>
+  <data name="SchedulerStringId.ViewShortDisplayName_Month" xml:space="preserve">
+    <value>Μήνας</value>
+  </data>
+  <data name="SchedulerStringId.ViewShortDisplayName_Timeline" xml:space="preserve">
+    <value>Προθεσμία</value>
+  </data>
+  <data name="SchedulerStringId.TimeScaleDisplayName_Hour" xml:space="preserve">
+    <value>Ώρα</value>
+  </data>
+  <data name="SchedulerStringId.TimeScaleDisplayName_Day" xml:space="preserve">
+    <value>Ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.TimeScaleDisplayName_Week" xml:space="preserve">
+    <value>Εβδομάδα</value>
+  </data>
+  <data name="SchedulerStringId.TimeScaleDisplayName_Month" xml:space="preserve">
+    <value>Μήνας</value>
+  </data>
+  <data name="SchedulerStringId.TimeScaleDisplayName_Quarter" xml:space="preserve">
+    <value>Τέταρτο</value>
+  </data>
+  <data name="SchedulerStringId.TimeScaleDisplayName_Year" xml:space="preserve">
+    <value>Έτος</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_MinutesShort1" xml:space="preserve">
+    <value>λ</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_MinutesShort2" xml:space="preserve">
+    <value>λ.</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Minute" xml:space="preserve">
+    <value>λεπτό</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Minutes" xml:space="preserve">
+    <value>λεπτά</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_HoursShort" xml:space="preserve">
+    <value>ω</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Hour" xml:space="preserve">
+    <value>ώρα</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Hours" xml:space="preserve">
+    <value>ώρες</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_DaysShort" xml:space="preserve">
+    <value>η</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Day" xml:space="preserve">
+    <value>ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Days" xml:space="preserve">
+    <value>ημέρες</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_WeeksShort" xml:space="preserve">
+    <value>εβδ.</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Week" xml:space="preserve">
+    <value>εβδομάδα</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Weeks" xml:space="preserve">
+    <value>εβδομάδες</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Month" xml:space="preserve">
+    <value>μήνας</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Months" xml:space="preserve">
+    <value>μήνες</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Year" xml:space="preserve">
+    <value>έτος</value>
+  </data>
+  <data name="SchedulerStringId.Abbr_Years" xml:space="preserve">
+    <value>έτη</value>
+  </data>
+  <data name="SchedulerStringId.Caption_Reminder" xml:space="preserve">
+    <value>{0} Υπενθύμιση</value>
+  </data>
+  <data name="SchedulerStringId.Caption_Reminders" xml:space="preserve">
+    <value>{0} Υπενθυμίσεις</value>
+  </data>
+  <data name="SchedulerStringId.Caption_StartTime" xml:space="preserve">
+    <value>Ώρα Έναρξης: {0}</value>
+  </data>
+  <data name="SchedulerStringId.Caption_NAppointmentsAreSelected" xml:space="preserve">
+    <value>{0} συναντήσεις επιλέχθηκαν.</value>
+  </data>
+  <data name="SchedulerStringId.Format_TimeBeforeStart" xml:space="preserve">
+    <value>{0} πριν την εκκίνηση</value>
+  </data>
+  <data name="SchedulerStringId.Msg_Conflict" xml:space="preserve">
+    <value>Μια συνάντηση συμπίπτει με μια ή περισσότερες άλλες συναντήσεις.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidAppointmentDuration" xml:space="preserve">
+    <value>Λανθασμένη τιμή καθορίστηκε για την εσωτερική διάρκεια. Εισάγετε μία θετική τιμή.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidReminderTimeBeforeStart" xml:space="preserve">
+    <value>Μή έγκυρη τιμή καθορίστηκε πριν την υπενθύμιση του γεγονότος. Εισάγετε μία θετική τιμή.</value>
+  </data>
+  <data name="SchedulerStringId.TextDuration_FromTo" xml:space="preserve">
+    <value>από {0} έως {1}</value>
+  </data>
+  <data name="SchedulerStringId.TextDuration_FromForDays" xml:space="preserve">
+    <value>από {0} έως {1} </value>
+  </data>
+  <data name="SchedulerStringId.TextDuration_FromForDaysHours" xml:space="preserve">
+    <value>από {0} για {1} {2}</value>
+  </data>
+  <data name="SchedulerStringId.TextDuration_FromForDaysMinutes" xml:space="preserve">
+    <value>από {0} για {1} {3}</value>
+  </data>
+  <data name="SchedulerStringId.TextDuration_FromForDaysHoursMinutes" xml:space="preserve">
+    <value>από {0} για {1} {2} {3}</value>
+  </data>
+  <data name="SchedulerStringId.TextDuration_ForPattern" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="SchedulerStringId.TextDailyPatternString_EveryDay" xml:space="preserve">
+    <value>κάθε {1} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextDailyPatternString_EveryDays" xml:space="preserve">
+    <value>κάθε {2} {1} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextDailyPatternString_EveryWeekDay" xml:space="preserve">
+    <value>κάθε καθημερινή {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextDailyPatternString_EveryWeekend" xml:space="preserve">
+    <value>κάθε σαβ/κο {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeekly_0Day" xml:space="preserve">
+    <value>μη καθορισμένη ημέρα εβδομάδος</value>
+  </data>
+  <data name="SchedulerStringId.TextWeekly_1Day" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeekly_2Day" xml:space="preserve">
+    <value>{0} και {1}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeekly_3Day" xml:space="preserve">
+    <value>{0}, {1}, και {2}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeekly_4Day" xml:space="preserve">
+    <value>{0}, {1}, {2}, και {3}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeekly_5Day" xml:space="preserve">
+    <value>{0}, {1}, {2}, {3}, και {4}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeekly_6Day" xml:space="preserve">
+    <value>{0}, {1}, {2}, {3}, {4}, και {5}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeekly_7Day" xml:space="preserve">
+    <value>{0}, {1}, {2}, {3}, {4}, {5}, και {6}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeeklyPatternString_EveryWeek" xml:space="preserve">
+    <value>κάθε {3} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextWeeklyPatternString_EveryWeeks" xml:space="preserve">
+    <value>κάθε {1} {2} στις {3} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextMonthlyPatternString_SubPattern" xml:space="preserve">
+    <value>του κάθε {0} {1} {2}</value>
+  </data>
+  <data name="SchedulerStringId.TextMonthlyPatternString1" xml:space="preserve">
+    <value>ημέρα {3} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextMonthlyPatternString2" xml:space="preserve">
+    <value>ο {1} {2} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextYearlyPattern_YearString1" xml:space="preserve">
+    <value>κάθε {3} {4} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextYearlyPattern_YearString2" xml:space="preserve">
+    <value>το {5} {6} από {3} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextYearlyPattern_YearsString1" xml:space="preserve">
+    <value>{3} {4} από κάθε {1} {2} {0}</value>
+  </data>
+  <data name="SchedulerStringId.TextYearlyPattern_YearsString2" xml:space="preserve">
+    <value>το {5} {6} από {3} κάθε {1} {2} {0}</value>
+  </data>
+  <data name="SchedulerStringId.Caption_AllDay" xml:space="preserve">
+    <value>Ολημερίς</value>
+  </data>
+  <data name="SchedulerStringId.Caption_PleaseSeeAbove" xml:space="preserve">
+    <value>Παρακαλώ δείτε παραπάνω</value>
+  </data>
+  <data name="SchedulerStringId.Caption_RecurrenceSubject" xml:space="preserve">
+    <value>Θέμα:</value>
+  </data>
+  <data name="SchedulerStringId.Caption_RecurrenceLocation" xml:space="preserve">
+    <value>Τοποθεσία:</value>
+  </data>
+  <data name="SchedulerStringId.Caption_RecurrenceStartTime" xml:space="preserve">
+    <value>Έναρξη:</value>
+  </data>
+  <data name="SchedulerStringId.Caption_RecurrenceEndTime" xml:space="preserve">
+    <value>Λήξη:</value>
+  </data>
+  <data name="SchedulerStringId.Caption_RecurrenceShowTimeAs" xml:space="preserve">
+    <value>Δείξε Χρόνο ως:</value>
+  </data>
+  <data name="SchedulerStringId.Caption_Recurrence" xml:space="preserve">
+    <value>Επανάληψη:</value>
+  </data>
+  <data name="SchedulerStringId.Caption_RecurrencePattern" xml:space="preserve">
+    <value>Πρότυπο Επανάληψης:</value>
+  </data>
+  <data name="SchedulerStringId.Caption_NoneRecurrence" xml:space="preserve">
+    <value>(κανένα)</value>
+  </data>
+  <data name="SchedulerStringId.MemoPrintDateFormat" xml:space="preserve">
+    <value>{0} {1} {2}</value>
+  </data>
+  <data name="SchedulerStringId.Caption_EmptyResource" xml:space="preserve">
+    <value>(Κάθε)</value>
+  </data>
+  <data name="SchedulerStringId.Caption_DailyPrintStyle" xml:space="preserve">
+    <value>Ημερήσιο στυλ</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeeklyPrintStyle" xml:space="preserve">
+    <value>Εβδομαδιαίο στυλ</value>
+  </data>
+  <data name="SchedulerStringId.Caption_MonthlyPrintStyle" xml:space="preserve">
+    <value>Μηνιαίο στυλ</value>
+  </data>
+  <data name="SchedulerStringId.Caption_TrifoldPrintStyle" xml:space="preserve">
+    <value>Τριπλό στυλ</value>
+  </data>
+  <data name="SchedulerStringId.Caption_CalendarDetailsPrintStyle" xml:space="preserve">
+    <value>Λεπτομέρειες στυλ ημερολογίου</value>
+  </data>
+  <data name="SchedulerStringId.Caption_MemoPrintStyle" xml:space="preserve">
+    <value>Στυλ Σημείωσης</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ColorConverterFullColor" xml:space="preserve">
+    <value>Πλήρες χρώμα</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ColorConverterGrayScale" xml:space="preserve">
+    <value>Γριζοειδές</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ColorConverterBlackAndWhite" xml:space="preserve">
+    <value>Ασπρόμαυρο</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ResourceNone" xml:space="preserve">
+    <value>(κανένα)</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ResourceAll" xml:space="preserve">
+    <value>(Όλαl)</value>
+  </data>
+  <data name="SchedulerStringId.PrintPageSetupFormatTabControlCustomizeShading" xml:space="preserve">
+    <value>&lt;τροποποίηση...&gt;</value>
+  </data>
+  <data name="SchedulerStringId.PrintPageSetupFormatTabControlSizeAndFontName" xml:space="preserve">
+    <value>{0} στ. {1}</value>
+  </data>
+  <data name="SchedulerStringId.PrintRangeControlInvalidDate" xml:space="preserve">
+    <value>Η ημ/νια λήξης πρέπει να είναι μεγαλύτερη ή ίση με την ημ/νια έναρξης.</value>
+  </data>
+  <data name="SchedulerStringId.PrintCalendarDetailsControlDayPeriod" xml:space="preserve">
+    <value>Ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.PrintCalendarDetailsControlWeekPeriod" xml:space="preserve">
+    <value>Εβδομάδα</value>
+  </data>
+  <data name="SchedulerStringId.PrintCalendarDetailsControlMonthPeriod" xml:space="preserve">
+    <value>Μήνας</value>
+  </data>
+  <data name="SchedulerStringId.PrintMonthlyOptControlOnePagePerMonth" xml:space="preserve">
+    <value>1 σελίδα/μήνα</value>
+  </data>
+  <data name="SchedulerStringId.PrintMonthlyOptControlTwoPagesPerMonth" xml:space="preserve">
+    <value>2 σελίδες/μήνα</value>
+  </data>
+  <data name="SchedulerStringId.PrintTimeIntervalControlInvalidDuration" xml:space="preserve">
+    <value>Η διάρκεια πρέπει να είναι μεταξύ μηδενός και μίας ημέρας</value>
+  </data>
+  <data name="SchedulerStringId.PrintTimeIntervalControlInvalidStartEndTime" xml:space="preserve">
+    <value>Η ώρα λήξης πρέπει να είναι μεγαλύτερη από την ώρα έναρξης</value>
+  </data>
+  <data name="SchedulerStringId.PrintTriFoldOptControlDailyCalendar" xml:space="preserve">
+    <value>Ημ/γιο Ημέρας</value>
+  </data>
+  <data name="SchedulerStringId.PrintTriFoldOptControlWeeklyCalendar" xml:space="preserve">
+    <value>Ημ/γιο Εβδομάδας</value>
+  </data>
+  <data name="SchedulerStringId.PrintTriFoldOptControlMonthlyCalendar" xml:space="preserve">
+    <value>Ημ/γιο Μήνα</value>
+  </data>
+  <data name="SchedulerStringId.PrintWeeklyOptControlOneWeekPerPage" xml:space="preserve">
+    <value>1 σελίδα/εβδομάδα</value>
+  </data>
+  <data name="SchedulerStringId.PrintWeeklyOptControlTwoWeekPerPage" xml:space="preserve">
+    <value>2 σελίδες/εβδομάδα</value>
+  </data>
+  <data name="SchedulerStringId.PrintPageSetupFormCaption" xml:space="preserve">
+    <value>Επιλογές Εκτύπωσης: {0}</value>
+  </data>
+  <data name="SchedulerStringId.PrintMoreItemsMsg" xml:space="preserve">
+    <value>Περισσότερα...</value>
+  </data>
+  <data name="SchedulerStringId.PrintNoPrintersInstalled" xml:space="preserve">
+    <value>Δεν υπάρχουν εκτυπωτές εγκατεστημένοι</value>
+  </data>
+  <data name="SchedulerStringId.Caption_FirstVisibleResources" xml:space="preserve">
+    <value>Πρώτο</value>
+  </data>
+  <data name="SchedulerStringId.Caption_PrevVisibleResourcesPage" xml:space="preserve">
+    <value>Προηγούμενη σΣελίδα</value>
+  </data>
+  <data name="SchedulerStringId.Caption_PrevVisibleResources" xml:space="preserve">
+    <value>Προηγούμενο</value>
+  </data>
+  <data name="SchedulerStringId.Caption_NextVisibleResources" xml:space="preserve">
+    <value>Επόνενο</value>
+  </data>
+  <data name="SchedulerStringId.Caption_NextVisibleResourcesPage" xml:space="preserve">
+    <value>Επόμενη Σελίδα</value>
+  </data>
+  <data name="SchedulerStringId.Caption_LastVisibleResources" xml:space="preserve">
+    <value>Τελευταίο</value>
+  </data>
+  <data name="SchedulerStringId.Caption_IncreaseVisibleResourcesCount" xml:space="preserve">
+    <value>Αύξηση ορατών πόρων</value>
+  </data>
+  <data name="SchedulerStringId.Caption_DecreaseVisibleResourcesCount" xml:space="preserve">
+    <value>Μείωση ορατών πόρων</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ShadingApplyToAllDayArea" xml:space="preserve">
+    <value>Για όλη την ημέρα</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ShadingApplyToAppointments" xml:space="preserve">
+    <value>Συναντήσεις</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ShadingApplyToAppointmentStatuses" xml:space="preserve">
+    <value>Συναντήσεις χρησιμ.</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ShadingApplyToHeaders" xml:space="preserve">
+    <value>Κεφαλίδες</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ShadingApplyToTimeRulers" xml:space="preserve">
+    <value>Χάρακας Ώρας</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ShadingApplyToCells" xml:space="preserve">
+    <value>Κελιά</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidSize" xml:space="preserve">
+    <value>Μη έγκυρη τιμή καθορίστηκε για το μέγεθος.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_ApplyToAllStyles" xml:space="preserve">
+    <value>Εφαρμογή ρυθμίσεων εκτύπωσης για όλα τα στυλ;</value>
+  </data>
+  <data name="SchedulerStringId.Msg_MemoPrintNoSelectedItems" xml:space="preserve">
+    <value>Δε μπορεί να γίνει εκτύπωση χωρίς επιλογή αντικειμένου. Επιλέξτε ένα και προσπαθήστε ξανά.</value>
+  </data>
+  <data name="SchedulerStringId.Caption_AllResources" xml:space="preserve">
+    <value>Όλοι οι πόροι</value>
+  </data>
+  <data name="SchedulerStringId.Caption_VisibleResources" xml:space="preserve">
+    <value>Ορατοί πόροι</value>
+  </data>
+  <data name="SchedulerStringId.Caption_OnScreenResources" xml:space="preserve">
+    <value>Πόροι στην Οθόνη</value>
+  </data>
+  <data name="SchedulerStringId.Caption_GroupByNone" xml:space="preserve">
+    <value>Κανένα</value>
+  </data>
+  <data name="SchedulerStringId.Caption_GroupByDate" xml:space="preserve">
+    <value>Ημερομηνία</value>
+  </data>
+  <data name="SchedulerStringId.Caption_GroupByResources" xml:space="preserve">
+    <value>Πόροι</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InvalidInputFile" xml:space="preserve">
+    <value>Το αρχείο φόρτωσης δεν είναι έγκυρο</value>
+  </data>
+  <data name="SchedulerStringId.TextRecurrenceTypeDaily" xml:space="preserve">
+    <value>Καθημερινά</value>
+  </data>
+  <data name="SchedulerStringId.TextRecurrenceTypeWeekly" xml:space="preserve">
+    <value>Εβδομαδιαία</value>
+  </data>
+  <data name="SchedulerStringId.TextRecurrenceTypeMonthly" xml:space="preserve">
+    <value>Μηνιαία</value>
+  </data>
+  <data name="SchedulerStringId.TextRecurrenceTypeYearly" xml:space="preserve">
+    <value>Ετήσια</value>
+  </data>
+  <data name="SchedulerStringId.TextRecurrenceTypeMinutely" xml:space="preserve">
+    <value>Ανά λεπτό</value>
+  </data>
+  <data name="SchedulerStringId.TextRecurrenceTypeHourly" xml:space="preserve">
+    <value>Ωριαία</value>
+  </data>
+  <data name="SchedulerStringId.Msg_Warning" xml:space="preserve">
+    <value>Προειδοποίηση!</value>
+  </data>
+  <data name="SchedulerStringId.Msg_CantFitIntoPage" xml:space="preserve">
+    <value>Είναι αδύνατον να χωρέσει η εκτύπωση σε μονοσέλιδο με βάση τις τρέχουσες ρυθμίσεις εκτύπωσης. Παρακαλώ αυξήστε το ύψος της σελίδας ή μειώστε το χρόνο προς εκτύπωση.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_PrintStyleNameExists" xml:space="preserve">
+    <value>Το όνομα στυλ '{0}' υπάρχει ήδη. Πληκτρολογήστε άλλο όνομα.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_OutlookCalendarNotFound" xml:space="preserve">
+    <value>Το ημερολόγιο '{0}' δεν βρέθηκε.</value>
+  </data>
+  <data name="SchedulerStringId.Caption_PrevAppointment" xml:space="preserve">
+    <value>Προηγούμενη Συνάντηση</value>
+  </data>
+  <data name="SchedulerStringId.Caption_NextAppointment" xml:space="preserve">
+    <value>Επόμενη Συνάντηση</value>
+  </data>
+  <data name="SchedulerStringId.Format_CopyOf" xml:space="preserve">
+    <value>Αντιγραφή από {0}</value>
+  </data>
+  <data name="SchedulerStringId.Format_CopyNOf" xml:space="preserve">
+    <value>Αντιγραφή ({0}) από {1}</value>
+  </data>
+  <data name="SchedulerStringId.Msg_MissingRequiredMapping" xml:space="preserve">
+    <value>Η απαιτούμενη απεικόνιση για την ιδιότητα '{0}' απουσιάζει.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_MissingMappingMember" xml:space="preserve">
+    <value>Λείπει '{1}' μέλος απο την '{0}' ιδιότητα απεικόνισης.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_DuplicateMappingMember" xml:space="preserve">
+    <value>Το '{0}' μέλος απεικόνισης δεν είναι μοναδικό:</value>
+  </data>
+  <data name="SchedulerStringId.Msg_InconsistentRecurrenceInfoMapping" xml:space="preserve">
+    <value>Για την υποστήριξη τηε επανάληψης, πρέπει να αντιστοιχίσετε τα μέλη Type και RecurrenceInfo.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_IncorrectMappingsQuestion" xml:space="preserve">
+    <value>Λάθος απεικονίσεις. Να συνεχίσω?
+Λεπτομέρειες:</value>
+  </data>
+  <data name="SchedulerStringId.Msg_DuplicateCustomFieldMappings" xml:space="preserve">
+    <value>Διπλό όνομα πεδίου. Διορθώστε την απεικόνιση: 
+{0}</value>
+  </data>
+  <data name="SchedulerStringId.Msg_MappingsCheckPassedOk" xml:space="preserve">
+    <value>Ο έλεγχος απεικόνισης είναι ορθός!</value>
+  </data>
+  <data name="SchedulerStringId.Caption_SetupAppointmentMappings" xml:space="preserve">
+    <value>Ρύθμιση Απεικόνισης Συνάντησης</value>
+  </data>
+  <data name="SchedulerStringId.Caption_SetupResourceMappings" xml:space="preserve">
+    <value>Ρύθμιση Απεικόνισης Πόρου</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ModifyAppointmentMappingsTransactionDescription" xml:space="preserve">
+    <value>Τροποποίηση Απεικόνισης Συνάντησης</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ModifyResourceMappingsTransactionDescription" xml:space="preserve">
+    <value>Τροποποίηση Απεικόνισης Πόρων</value>
+  </data>
+  <data name="SchedulerStringId.Caption_MappingsValidation" xml:space="preserve">
+    <value>Έγκριση Απεικόνισης</value>
+  </data>
+  <data name="SchedulerStringId.Caption_MappingsWizard" xml:space="preserve">
+    <value>Μάγος Απεικόνισης...</value>
+  </data>
+  <data name="SchedulerStringId.Caption_CheckMappings" xml:space="preserve">
+    <value>Έλεγος απεικονίσεων</value>
+  </data>
+  <data name="SchedulerStringId.Caption_SetupAppointmentStorage" xml:space="preserve">
+    <value>Ρύθμιση Αποθήκευσης Συνάντησης</value>
+  </data>
+  <data name="SchedulerStringId.Caption_SetupResourceStorage" xml:space="preserve">
+    <value>Ρύθμιση Αποθήκευσης Πόρου</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ModifyAppointmentStorageTransactionDescription" xml:space="preserve">
+    <value>Τροποποίηση Αποθήκευσης Συναντήσεων</value>
+  </data>
+  <data name="SchedulerStringId.Caption_ModifyResourceStorageTransactionDescription" xml:space="preserve">
+    <value>Τροποποίηση Αποθήκευσης Πόρων</value>
+  </data>
+  <data name="SchedulerStringId.Caption_DayViewDescription" xml:space="preserve">
+    <value>Αλλαγή σε Προβολή Ημέρας. Η λεπτομερέστερη προβολή για συναντήσεις συγκεκριμένης ημέρας.</value>
+  </data>
+  <data name="SchedulerStringId.Caption_MonthViewDescription" xml:space="preserve">
+    <value>Αλλαγή σε Προβολή Μήνα(πολυ-εβδομάδα). Ημερολογιακή προβολή για μακρυπρόθεσμα πλάνα.</value>
+  </data>
+  <data name="SchedulerStringId.Caption_TimelineViewDescription" xml:space="preserve">
+    <value>Αλλαγή σε Προβολή Προθεσμίας. Κατάρτηση συναντήσεων σε σχέση με το χρόνο.</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WeekViewDescription" xml:space="preserve">
+    <value>Αλλαγή σε Προβολή Εβδομάδας. Τακτοποίηση συναντήσεων σε συμπαγή φόρμα για συγκεκριμένη εβδομάδα.</value>
+  </data>
+  <data name="SchedulerStringId.Caption_WorkWeekViewDescription" xml:space="preserve">
+    <value>Αλλαγή σε Προβολή Εργασίας Εβδομάδας. Λεπτομερής προβολή καθημερινών για συγκεκριμένη εβδομάδα.</value>
+  </data>
+  <data name="SchedulerStringId.Msg_iCalendar_AppointmentsImportWarning" xml:space="preserve">
+    <value>Κάποιες συναντήσεις δεν μπορούν να εισαχθούν</value>
+  </data>
+  <data name="SchedulerStringId.Msg_iCalendar_NotValidFile" xml:space="preserve">
+    <value>Μη έγκυρο αρχείο Διαδικτυακού Ημερολογίου</value>
+  </data>
+  <data name="SchedulerStringId.DescCmd_GotoToday" xml:space="preserve">
+    <value>Αλλάζει την ημερομηνία που δείχνει η τρέχουσα προβολή στην σημερινή ημερομηνία.</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_NavigateBackward" xml:space="preserve">
+    <value>Πίσω</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_NavigateForward" xml:space="preserve">
+    <value>Εμπρός</value>
+  </data>
+  <data name="SchedulerStringId.DescCmd_NavigateBackward" xml:space="preserve">
+    <value>Χρονική οπισθοδρόμηση όπως προτείνεται απο την τρέχουσα προβολή.</value>
+  </data>
+  <data name="SchedulerStringId.DescCmd_NavigateForward" xml:space="preserve">
+    <value>Χρονική προ-όδευση όπως προτείνεται απο την τρέχουσα προβολή.</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_ViewZoomIn" xml:space="preserve">
+    <value>Προσέγγιση</value>
+  </data>
+  <data name="SchedulerStringId.MenuCmd_ViewZoomOut" xml:space="preserve">
+    <value>Απομάκρυνση</value>
+  </data>
+  <data name="SchedulerStringId.DescCmd_ViewZoomIn" xml:space="preserve">
+    <value>Κλιμακωτή αύξηση λεπτομερειών των εμφανιζόμενων περιεχομένων.</value>
+  </data>
+  <data name="SchedulerStringId.DescCmd_ViewZoomOut" xml:space="preserve">
+    <value>Κλιμακωτή μείωση λεπτομερειών των εμφανιζόμενων περιεχομένων.</value>
+  </data>
+</root>
