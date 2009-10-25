@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ReportStringId.CatAppearance">
+    <value>Fremtoning</value>
+  </data>
+  <data name="ReportStringId.CatData">
+    <value>Data</value>
+  </data>
+  <data name="ReportStringId.CatLayout">
+    <value>Layout</value>
+  </data>
+  <data name="ReportStringId.CatBehavior">
+    <value>Optræden</value>
+  </data>
+  <data name="ReportStringId.Cmd_TopMargin">
+    <value>Topmargen</value>
+  </data>
+  <data name="ReportStringId.Cmd_PageHeader">
+    <value>Sidehoved</value>
+  </data>
+  <data name="ReportStringId.Cmd_ReportHeader">
+    <value>Rapporthoved</value>
+  </data>
+  <data name="ReportStringId.Cmd_GroupHeader">
+    <value>Gruppehoved</value>
+  </data>
+  <data name="ReportStringId.Cmd_GroupFooter">
+    <value>Gruppefod</value>
+  </data>
+  <data name="ReportStringId.Cmd_ReportFooter">
+    <value>Rapportfod</value>
+  </data>
+  <data name="ReportStringId.Cmd_PageFooter">
+    <value>Sidefod</value>
+  </data>
+  <data name="ReportStringId.Cmd_BottomMargin">
+    <value>Bundmargen</value>
+  </data>
+  <data name="ReportStringId.BandDsg_QuantityPerPage">
+    <value>Et bånd pr side</value>
+  </data>
+  <data name="ReportStringId.BandDsg_QuantityPerReport">
+    <value>Et bånd pr rapport</value>
+  </data>
+  <data name="ReportStringId.Msg_CreateReportInstance">
+    <value>Rapporten der redigeres har anden type  end den du prøver at indlæse. &lt;br/&gt;Vil du fortsætte med at skabe en instans af denne rapport?</value>
+  </data>
+  <data name="ReportStringId.Msg_FileCorrupted">
+    <value>Rapport kan ikke indlæses. Filen er måske ødelagt eller rapportopsætningen mangler.</value>
+  </data>
+  <data name="ReportStringId.Msg_FileNotFound">
+    <value>Fil ikke fundet</value>
+  </data>
+  <data name="ReportStringId.Msg_WrongReportClassName">
+    <value>Fejl  - måske forkert klassenavn for rapport</value>
+  </data>
+  <data name="ReportStringId.Msg_InvPropName">
+    <value>Ugyldigt navn på egenskab</value>
+  </data>
+  <data name="ReportStringId.Msg_IncorrectBandType">
+    <value>Ukorrekt båndtype</value>
+  </data>
+  <data name="ReportStringId.UD_ReportDesigner">
+    <value>XtraReport Designer</value>
+  </data>
+  <data name="ReportStringId.UD_Msg_ReportChanged">
+    <value>Rapport ændret. Skal ændringerne gemmes?</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceIncrease">
+    <value>Øg vertikal afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControl">
+    <value>Ens størrelse</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_CenterVertically">
+    <value>Centrer vertikalt</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatItalic">
+    <value>Kursiv</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_CenterHorizontally">
+    <value>Centrer horisontalt</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FileSave">
+    <value>Gem fil</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditCut">
+    <value>Klip</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditCopy">
+    <value>Kopier</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditPaste">
+    <value>Sæt ind</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignHorizontalCenters">
+    <value>Midtjuster horisontalt</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToGrid">
+    <value>Gitterstørrelse</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatAlignLeft">
+    <value>Venstrejuster</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignRight">
+    <value>Højrejuster</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceDecrease">
+    <value>Mindsk horisontal afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignVerticalCenters">
+    <value>Midtjuster vertikalt</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatFontSize">
+    <value>Størrelse på skrifttype</value>
+  </data>
+  <data name="ReportStringId.UD_Trans_Delete">
+    <value>Slet komponenter</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceMakeEqual">
+    <value>Ens vertikal afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignTop">
+    <value>Topjuster</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceDecrease">
+    <value>Mindsk vertikal afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControlWidth">
+    <value>Ens bredde</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignLeft">
+    <value>Venstrejuster</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatFontName">
+    <value>Skrifttype</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatAlignRight">
+    <value>Højrejuster</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FileOpen">
+    <value>Åbn fil</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceMakeEqual">
+    <value>Ens horisontal afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_BringToFront">
+    <value>Placer forrest</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatBold">
+    <value>Fed</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignToGrid">
+    <value>Juster i forhold til gitter</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceConcatenate">
+    <value>Fjern vertikal afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatCenter">
+    <value>Centrer</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatUnderline">
+    <value>Indre linje</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControlHeight">
+    <value>Samme højde</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignBottom">
+    <value>Bundjuster</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SendToBack">
+    <value>Placer bagerst</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceConcatenate">
+    <value>Fjern horisontal afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceIncrease">
+    <value>Øg horisontal afstand</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_CustomGeneral">
+    <value>Generelt format har ingen specifik talformat</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Suffix">
+    <value>Suffiks</value>
+  </data>
+  <data name="ReportStringId.FSForm_Tab_StandardTypes">
+    <value>Standardtyper</value>
+  </data>
+  <data name="ReportStringId.FSForm_Msg_BadSymbol">
+    <value>Forkert symbol</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Prefix">
+    <value>Præfiks</value>
+  </data>
+  <data name="ReportStringId.FSForm_GrBox_Sample">
+    <value>Eksempel</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Category">
+    <value>Kategori</value>
+  </data>
+  <data name="ReportStringId.FSForm_Btn_Delete">
+    <value>Slet</value>
+  </data>
+  <data name="ReportStringId.FSForm_Tab_Custom">
+    <value>Tilpas</value>
+  </data>
+  <data name="ReportStringId.BCForm_Lbl_Property">
+    <value>Egenskab</value>
+  </data>
+  <data name="ReportStringId.BCForm_Lbl_Binding">
+    <value>Binding</value>
+  </data>
+  <data name="ReportStringId.CatNavigation">
+    <value>Navigering</value>
+  </data>
+  <data name="ReportStringId.Msg_IncorrectArgument">
+    <value>Forkert argumentværdi</value>
+  </data>
+  <data name="ReportStringId.Cmd_Detail">
+    <value>Detalje</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertDetailReport">
+    <value>Indsæt detaljerapport</value>
+  </data>
+  <data name="ReportStringId.Cmd_ViewCode">
+    <value>Visningskode</value>
+  </data>
+  <data name="ReportStringId.Cmd_BringToFront">
+    <value>Pla&amp;cer forrest</value>
+  </data>
+  <data name="ReportStringId.Cmd_SendToBack">
+    <value>&amp;Placer bagerst</value>
+  </data>
+  <data name="ReportStringId.Cmd_AlignToGrid">
+    <value>Juster efter &amp;gitter</value>
+  </data>
+  <data name="ReportStringId.Cmd_RtfLoad">
+    <value>Hent fil...</value>
+  </data>
+  <data name="ReportStringId.Cmd_RtfClear">
+    <value>Slet</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsert">
+    <value>&amp;Indsæt</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertRowAbove">
+    <value>Række &amp;over</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertRowBelow">
+    <value>Række &amp;under</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertColumnToLeft">
+    <value>Kolonne til &amp;venste</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertColumnToRight">
+    <value>Kolonne til &amp;højre</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertCell">
+    <value>&amp;Celle</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDelete">
+    <value>S&amp;let</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteRow">
+    <value>&amp;Række</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteColumn">
+    <value>&amp;Kolonne</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteCell">
+    <value>Ce&amp;lle</value>
+  </data>
+  <data name="ReportStringId.Cmd_Cut">
+    <value>Klip</value>
+  </data>
+  <data name="ReportStringId.Cmd_Copy">
+    <value>Kopier</value>
+  </data>
+  <data name="ReportStringId.Cmd_Paste">
+    <value>Sæt ind</value>
+  </data>
+  <data name="ReportStringId.Cmd_Delete">
+    <value>Slet</value>
+  </data>
+  <data name="ReportStringId.Cmd_Properties">
+    <value>Egenskab</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertBand">
+    <value>Indsæt &amp;bånd</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidReportSource">
+    <value>Kan ikke sættes for arving til denne rapport</value>
+  </data>
+  <data name="ReportStringId.SSForm_Caption">
+    <value>Typografiark-editor</value>
+  </data>
+  <data name="ReportStringId.SSForm_Btn_Close">
+    <value>Luk</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_NoStyleSelected">
+    <value>Ingen valgt typografi</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_MoreThanOneStyle">
+    <value>Mere end en typografi valgt</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_SelectedStylesText">
+    <value>Valgte typografier...</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_StyleSheetError">
+    <value>Fejl med typografiark</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_InvalidFileFormat">
+    <value>Ugyldigt filformat</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_StyleNamePreviewPostfix">
+    <value>Typografi</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_FileFilter">
+    <value>Rapporttypografiark-filer (*.repss)|*.repss|Alle filer (*.*)|*.*</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_AddStyle">
+    <value>Ny typografi</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_RemoveStyle">
+    <value>Slet typografi</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_ClearStyles">
+    <value>Fjern typografier</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_PurgeStyles">
+    <value>Slet typografier</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_SaveStyles">
+    <value>Gem typografier i fil</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_LoadStyles">
+    <value>Hent typografier fra fil</value>
+  </data>
+  <data name="ReportStringId.Cmd_DetailReport">
+    <value>Detaljerapport</value>
+  </data>
+  <data name="ReportStringId.Msg_CantFitBarcodeToControlBounds">
+    <value>Kontrol for lille til stregkoden</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidBarcodeText">
+    <value>Ugyldige tegn i stregkode</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidBarcodeTextFormat">
+    <value>Ugyldigt tekstformat</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatBackColor">
+    <value>Baggrundsfarve</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatForeColor">
+    <value>Forgrundsfarve</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatJustify">
+    <value>Juster</value>
+  </data>
+  <data name="ReportStringId.Msg_CreateSomeInstance">
+    <value>Kan ikke lave to instanser af samme klasse på formen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_Undo">
+    <value>Fortryd</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_Redo">
+    <value>Gentag</value>
+  </data>
+  <data name="ReportStringId.FindForm_Msg_FinishedSearching">
+    <value>Søgning i dokument afsluttet</value>
+  </data>
+  <data name="ReportStringId.FindForm_Msg_TotalFound">
+    <value>I alt fundet:</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_HtmlView">
+    <value>HTML-visning</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_Preview">
+    <value>Vis udskrift</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_Designer">
+    <value>Designer</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidMethodCall">
+    <value>Metoden er ugyldig i aktuel tilstand</value>
+  </data>
+  <data name="ReportStringId.Msg_ScriptError">
+    <value>Fejl i script(s):
+{0}</value>
+  </data>
+  <data name="ReportStringId.Msg_DontSupportMulticolumn">
+    <value>Detaljerapport understøtter ikke mutikolonner.</value>
+  </data>
+  <data name="ReportStringId.PanelDesignMsg">
+    <value>Placer kontrol her for at holde dem samlet</value>
+  </data>
+  <data name="ReportStringId.MultiColumnDesignMsg1">
+    <value>Afstand til gentagne kolonner.</value>
+  </data>
+  <data name="ReportStringId.MultiColumnDesignMsg2">
+    <value>Kontroller placeret her udskrives ikke korrekt.</value>
+  </data>
+  <data name="ReportStringId.UD_FormCaption">
+    <value>XtraReport Designer</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertUnboundDetailReport">
+    <value>Ubegrænset</value>
+  </data>
+  <data name="ReportStringId.Msg_FillDataError">
+    <value>Fejl når data hentes. Fejlmeddelelsen var:</value>
+  </data>
+  <data name="ReportStringId.CatPageSettings">
+    <value>Sideopsætning</value>
+  </data>
+  <data name="ReportStringId.Msg_ScriptExecutionError">
+    <value>"Følgende fejl opstod i scriptet i procedure {0}:
+{1}
+Procedure {0} blev udført. Den kaldes ikke igen."</value>
+  </data>
+  <data name="ReportStringId.Msg_CyclicBookmarks">
+    <value>Bogmærker i denne rapport går i ring.</value>
+  </data>
+  <data name="ReportStringId.VS_XtraReportsToolboxCategoryName">
+    <value>Developer Express: Rapporter</value>
+  </data>
+  <data name="ReportStringId.Msg_LargeText">
+    <value>Teksten er for stor</value>
+  </data>
+  <data name="ReportStringId.UD_XtraReportsToolboxCategoryName">
+    <value>Standardkontrol</value>
+  </data>
+</root>

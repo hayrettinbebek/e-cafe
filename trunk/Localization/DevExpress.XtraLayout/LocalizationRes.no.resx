@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LayoutStringId.CustomizationParentName" xml:space="preserve">
+    <value>Tilpasning</value>
+  </data>
+  <data name="LayoutStringId.DefaultItemText" xml:space="preserve">
+    <value>Element</value>
+  </data>
+  <data name="LayoutStringId.DefaultActionText" xml:space="preserve">
+    <value>Standard aksjon</value>
+  </data>
+  <data name="LayoutStringId.DefaultEmptyText" xml:space="preserve">
+    <value>ingen</value>
+  </data>
+  <data name="LayoutStringId.LayoutItemDescription" xml:space="preserve">
+    <value>Layout control element</value>
+  </data>
+  <data name="LayoutStringId.LayoutGroupDescription" xml:space="preserve">
+    <value>Layout control gruppe</value>
+  </data>
+  <data name="LayoutStringId.TabbedGroupDescription" xml:space="preserve">
+    <value>Layout control gruppe med fliker</value>
+  </data>
+  <data name="LayoutStringId.LayoutControlDescription" xml:space="preserve">
+    <value>Layout control</value>
+  </data>
+  <data name="LayoutStringId.CustomizationFormTitle" xml:space="preserve">
+    <value>Tilpasning</value>
+  </data>
+  <data name="LayoutStringId.TreeViewPageTitle" xml:space="preserve">
+    <value>Layout trestruktur</value>
+  </data>
+  <data name="LayoutStringId.HiddenItemsPageTitle" xml:space="preserve">
+    <value>Skjulte elementer</value>
+  </data>
+  <data name="LayoutStringId.RenameSelected" xml:space="preserve">
+    <value>Gi nytt navn til valgt element</value>
+  </data>
+  <data name="LayoutStringId.HideItemMenutext" xml:space="preserve">
+    <value>Skjul element</value>
+  </data>
+  <data name="LayoutStringId.LockItemSizeMenuText" xml:space="preserve">
+    <value>Lås elementstørrelse</value>
+  </data>
+  <data name="LayoutStringId.UnLockItemSizeMenuText" xml:space="preserve">
+    <value>Lås opp elementstørrelse</value>
+  </data>
+  <data name="LayoutStringId.GroupItemsMenuText" xml:space="preserve">
+    <value>Grupper</value>
+  </data>
+  <data name="LayoutStringId.UnGroupItemsMenuText" xml:space="preserve">
+    <value>Løs opp gruppe</value>
+  </data>
+  <data name="LayoutStringId.CreateTabbedGroupMenuText" xml:space="preserve">
+    <value>Lag gruppe med fliker</value>
+  </data>
+  <data name="LayoutStringId.AddTabMenuText" xml:space="preserve">
+    <value>Legg til flik</value>
+  </data>
+  <data name="LayoutStringId.UnGroupTabbedGroupMenuText" xml:space="preserve">
+    <value>Løs opp gruppe med fliker</value>
+  </data>
+  <data name="LayoutStringId.TreeViewRootNodeName" xml:space="preserve">
+    <value>Toppnivå</value>
+  </data>
+  <data name="LayoutStringId.ShowCustomizationFormMenuText" xml:space="preserve">
+    <value>Vis tilpasningsbilde</value>
+  </data>
+  <data name="LayoutStringId.HideCustomizationFormMenuText" xml:space="preserve">
+    <value>Skjul tilpasningsbilde</value>
+  </data>
+  <data name="LayoutStringId.EmptySpaceItemDefaultText" xml:space="preserve">
+    <value>Blankt element</value>
+  </data>
+  <data name="LayoutStringId.ControlGroupDefaultText" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="LayoutStringId.EmptyRootGroupText" xml:space="preserve">
+    <value>Dra elementer hit</value>
+  </data>
+  <data name="LayoutStringId.EmptyTabbedGroupText" xml:space="preserve">
+    <value>Dra og slipp grupper i tittelområdet</value>
+  </data>
+  <data name="LayoutStringId.ResetLayoutMenuText" xml:space="preserve">
+    <value>Tilbakestill layout</value>
+  </data>
+  <data name="LayoutStringId.RenameMenuText" xml:space="preserve">
+    <value>Gi nytt navn</value>
+  </data>
+  <data name="LayoutStringId.TextPositionMenuText" xml:space="preserve">
+    <value>Tekstposisjon</value>
+  </data>
+  <data name="LayoutStringId.TextPositionLeftMenuText" xml:space="preserve">
+    <value>Venstre</value>
+  </data>
+  <data name="LayoutStringId.TextPositionRightMenuText" xml:space="preserve">
+    <value>Høyre</value>
+  </data>
+  <data name="LayoutStringId.TextPositionTopMenuText" xml:space="preserve">
+    <value>Topp</value>
+  </data>
+  <data name="LayoutStringId.TextPositionBottomMenuText" xml:space="preserve">
+    <value>Bunn</value>
+  </data>
+  <data name="LayoutStringId.ShowTextMenuItem" xml:space="preserve">
+    <value>Vis tekst</value>
+  </data>
+  <data name="LayoutStringId.LockSizeMenuItem" xml:space="preserve">
+    <value>Lås størrelse</value>
+  </data>
+  <data name="LayoutStringId.LockWidthMenuItem" xml:space="preserve">
+    <value>Lås bredde</value>
+  </data>
+  <data name="LayoutStringId.LockHeightMenuItem" xml:space="preserve">
+    <value>Lås høyde</value>
+  </data>
+</root>

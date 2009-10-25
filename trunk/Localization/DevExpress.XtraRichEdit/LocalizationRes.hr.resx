@@ -1,0 +1,1496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="XtraRichEditStringId.Msg_IsNotValid" xml:space="preserve">
+    <value>'{0}' nije ispravna vrijednost za '{1}'</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InternalError" xml:space="preserve">
+    <value>Dogodila se interna pogreška</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedStyleError" xml:space="preserve">
+    <value>Pogreška: koristite obrisani stil</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedParagraphError" xml:space="preserve">
+    <value>Pogreška: koristite obrisani odlomak</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedSectionError" xml:space="preserve">
+    <value>Pogreška: koristite obrisanu sekciju</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidParagraphProperties" xml:space="preserve">
+    <value>Pogreška: svojstva odlomka više ne vrijede</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidCharacterProperties" xml:space="preserve">
+    <value>Pogreška: svojstva znaka više ne vrijede</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnsupportedFormatException" xml:space="preserve">
+    <value>Oblik datoteke nije podržan</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleView" xml:space="preserve">
+    <value>Običan izgled</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftView" xml:space="preserve">
+    <value>Skica</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingView" xml:space="preserve">
+    <value>Čitanje preko cijelog zaslona</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintView" xml:space="preserve">
+    <value>Izgled ispisa</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleViewDescription" xml:space="preserve">
+    <value>Običan izgled</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftViewDescription" xml:space="preserve">
+    <value>Skica prikaz.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingViewDescription" xml:space="preserve">
+    <value>Čitanje preko cijelog zaslona</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintViewDescription" xml:space="preserve">
+    <value>Izgled ispisa.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Zoom" xml:space="preserve">
+    <value>Zumiraj</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomDescription" xml:space="preserve">
+    <value>Zumiraj</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomIn" xml:space="preserve">
+    <value>Povećaj</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomInDescription" xml:space="preserve">
+    <value>Povećaj</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOut" xml:space="preserve">
+    <value>Smanji</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOutDescription" xml:space="preserve">
+    <value>Smanji</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Undo" xml:space="preserve">
+    <value>Poništi</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UndoDescription" xml:space="preserve">
+    <value>Poništi</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Redo" xml:space="preserve">
+    <value>Ponovi</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_RedoDescription" xml:space="preserve">
+    <value>Ponovi</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDown" xml:space="preserve">
+    <value>Scroll Down</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDownDescription" xml:space="preserve">
+    <value>Scroll Down</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVertically" xml:space="preserve">
+    <value>EnsureCaretVisibleVertically</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVerticallyDescription" xml:space="preserve">
+    <value>EnsureCaretVisibleVertically</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontally" xml:space="preserve">
+    <value>EnsureCaretVisibleHorizontally</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontallyDescription" xml:space="preserve">
+    <value>EnsureCaretVisibleHorizontally</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForward" xml:space="preserve">
+    <value>Naprijed</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForwardDescription" xml:space="preserve">
+    <value>Pomakni se naprijed.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackward" xml:space="preserve">
+    <value>Natrag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackwardDescription" xml:space="preserve">
+    <value>Pomakni se unatrag.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLine" xml:space="preserve">
+    <value>Početak linije</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLineDescription" xml:space="preserve">
+    <value>Odi na početak linije</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLine" xml:space="preserve">
+    <value>Kraj linije</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLineDescription" xml:space="preserve">
+    <value>Odi na kraj linije.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUp" xml:space="preserve">
+    <value>Gore jednu liniju</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUpDescription" xml:space="preserve">
+    <value>Pomakni se gore za jednu liniju.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDown" xml:space="preserve">
+    <value>Dolje jednu liniju</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDownDescription" xml:space="preserve">
+    <value>Pomakni se dolje za jednu liniju.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraph" xml:space="preserve">
+    <value>Prethodni odlomak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraphDescription" xml:space="preserve">
+    <value>Odi na prethodni odlomak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraph" xml:space="preserve">
+    <value>Slijedeći odlomak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraphDescription" xml:space="preserve">
+    <value>Odi na slijedeći odlomak.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWord" xml:space="preserve">
+    <value>Prethodna riječ</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWordDescription" xml:space="preserve">
+    <value>Odi na prethodnu riječ</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWord" xml:space="preserve">
+    <value>Slijedeća riječ</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWordDescription" xml:space="preserve">
+    <value>Odi na slijedeću riječ</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPage" xml:space="preserve">
+    <value>Predhodna stranica</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPageDescription" xml:space="preserve">
+    <value>Odi na predhodnu stranicu</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPage" xml:space="preserve">
+    <value>Slijedeća stranica</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPageDescription" xml:space="preserve">
+    <value>Odi na slijedeću stranicu.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocument" xml:space="preserve">
+    <value>Početak dokumenta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocumentDescription" xml:space="preserve">
+    <value>Odi na početak dokumenta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocument" xml:space="preserve">
+    <value>Kraj dokumenta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocumentDescription" xml:space="preserve">
+    <value>Odi na kraj dokumenta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUp" xml:space="preserve">
+    <value>Pokazivač gore</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUpDescription" xml:space="preserve">
+    <value>Pomaknite pokazivač ekrana gore.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDown" xml:space="preserve">
+    <value>Pokazivač dolje</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDownDescription" xml:space="preserve">
+    <value>Pomaknite pokazivač ekrana na dolje.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAll" xml:space="preserve">
+    <value>Odaberi sve</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAllDescription" xml:space="preserve">
+    <value>Odaberi sve</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraph" xml:space="preserve">
+    <value>Umetni odlomak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraphDescription" xml:space="preserve">
+    <value>Umetnite novi odlomak.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreak" xml:space="preserve">
+    <value>Prekid linije</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreakDescription" xml:space="preserve">
+    <value>Umetni prekid linije.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertText" xml:space="preserve">
+    <value>Umetni tekst</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTextDescription" xml:space="preserve">
+    <value>Umetnite tekst.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletList" xml:space="preserve">
+    <value>Grafičke oznake (bullet)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletListDescription" xml:space="preserve">
+    <value>Počnite popis sa grafičkim oznakama.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelList" xml:space="preserve">
+    <value>Višerazinski popis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelListDescription" xml:space="preserve">
+    <value>Pokrenite višerazinski popis.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleList" xml:space="preserve">
+    <value>Numeriranje</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleListDescription" xml:space="preserve">
+    <value>Počnite numerirani popis.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraph" xml:space="preserve">
+    <value>Izbriši numeraciju iz odlomka</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraphDescription" xml:space="preserve">
+    <value>Izbrišite numeraciju iz odlomka.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraph" xml:space="preserve">
+    <value>Povećaj numeraciju odlomka</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraphDescription" xml:space="preserve">
+    <value>Povećajte numeraciju odlomka.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraph" xml:space="preserve">
+    <value>Smanji numeraciju odlomka</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraphDescription" xml:space="preserve">
+    <value>Smanjite numeraciju odlomka.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKey" xml:space="preserve">
+    <value>TabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKeyDescription" xml:space="preserve">
+    <value>TabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKey" xml:space="preserve">
+    <value>ShiftTabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKeyDescription" xml:space="preserve">
+    <value>ShiftTabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKey" xml:space="preserve">
+    <value>Povrat</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKeyDescription" xml:space="preserve">
+    <value>Povratna tipka</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTab" xml:space="preserve">
+    <value>Umetni karticu</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTabDescription" xml:space="preserve">
+    <value>Umetnite karticu.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreak" xml:space="preserve">
+    <value>Prijelom stranice</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreakDescription" xml:space="preserve">
+    <value>Započnite sljedeću stranicu od trenutnog položaja.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpace" xml:space="preserve">
+    <value>InsertNonBreakingSpace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpaceDescription" xml:space="preserve">
+    <value>InsertNonBreakingSpace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreak" xml:space="preserve">
+    <value>Prekid stupca</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreakDescription" xml:space="preserve">
+    <value>Umetni prekid stupca</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDash" xml:space="preserve">
+    <value>Umetni EnDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDashDescription" xml:space="preserve">
+    <value>Umetni EnDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDash" xml:space="preserve">
+    <value>Umetni EmDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDashDescription" xml:space="preserve">
+    <value>Umetni EmDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbol" xml:space="preserve">
+    <value>Copyright simbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbolDescription" xml:space="preserve">
+    <value>Umetni simbol za Copyright</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbol" xml:space="preserve">
+    <value>Umetni Registered Trademark simbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbolDescription" xml:space="preserve">
+    <value>Umetnite Registered Trademark simbol.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbol" xml:space="preserve">
+    <value>Umetni Trademark simbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbolDescription" xml:space="preserve">
+    <value>Umetnite Trademark simbol.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsis" xml:space="preserve">
+    <value>Umetni Ellipsis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsisDescription" xml:space="preserve">
+    <value>Umetni Ellipsis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMark" xml:space="preserve">
+    <value>Umetni početni jednostruki znak navoda</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMarkDescription" xml:space="preserve">
+    <value>Umetnite početni jednostruki znak navoda.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMark" xml:space="preserve">
+    <value>Umetni završni jednostruki znak navoda</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMarkDescription" xml:space="preserve">
+    <value>Umetnite završni jednostruki znak navoda.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMark" xml:space="preserve">
+    <value>Umetni početni dvostruki znak navoda</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMarkDescription" xml:space="preserve">
+    <value>Umetnite početni dvostruki znak navoda.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMark" xml:space="preserve">
+    <value>Umetni završni dvostruki znak navoda</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMarkDescription" xml:space="preserve">
+    <value>Umetnite završni dvostruki znak navoda.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPicture" xml:space="preserve">
+    <value>Umetni sliku iz datoteke</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPictureDescription" xml:space="preserve">
+    <value>Umetnite sliku iz datoteke.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBold" xml:space="preserve">
+    <value>Podebljano</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBoldDescription" xml:space="preserve">
+    <value>Podabljajte odabrani tekst.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalic" xml:space="preserve">
+    <value>Kurziv</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalicDescription" xml:space="preserve">
+    <value>Nakosite odabrani tekst</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderline" xml:space="preserve">
+    <value>Podcrtano</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderlineDescription" xml:space="preserve">
+    <value>Podcrtajte odabrani tekst.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderline" xml:space="preserve">
+    <value>Dvostruko podcrtano</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderlineDescription" xml:space="preserve">
+    <value>Dvostruko podcrtano</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeout" xml:space="preserve">
+    <value>Precrtaj</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeoutDescription" xml:space="preserve">
+    <value>Povucite crtu kroz sredinu odabranog teksta.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeout" xml:space="preserve">
+    <value>Dvostruko precrtano</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeoutDescription" xml:space="preserve">
+    <value>Dvostruko precrtano</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSize" xml:space="preserve">
+    <value>Povećaj font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSizeDescription" xml:space="preserve">
+    <value>Povećajte veličinu fonta.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSize" xml:space="preserve">
+    <value>Stisni font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSizeDescription" xml:space="preserve">
+    <value>Smanjite veličinu fonta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColor" xml:space="preserve">
+    <value>Boja fonta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColorDescription" xml:space="preserve">
+    <value>Promijenite boju teksta.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightText" xml:space="preserve">
+    <value>Boja osvjetljenja teksta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightTextDescription" xml:space="preserve">
+    <value>Učinite da tekst izgleda kao da je označen markerom.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontName" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontNameDescription" xml:space="preserve">
+    <value>Promijenite font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSize" xml:space="preserve">
+    <value>Veličina fonta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSizeDescription" xml:space="preserve">
+    <value>Promijenite veličinu fonta.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyle" xml:space="preserve">
+    <value>Stilovi</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyleDescription" xml:space="preserve">
+    <value>Oblikuj naslove, citate i ostali tekst koristeći galeriju stilova</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCount" xml:space="preserve">
+    <value>Stupci</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCountDescription" xml:space="preserve">
+    <value>Stupci</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSize" xml:space="preserve">
+    <value>Povećaj font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSizeDescription" xml:space="preserve">
+    <value>Povećajte veličinu fonta.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSize" xml:space="preserve">
+    <value>Stisni font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSizeDescription" xml:space="preserve">
+    <value>Smanjite veličinu fonta</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscript" xml:space="preserve">
+    <value>Eksponent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscriptDescription" xml:space="preserve">
+    <value>Stvorite mala slova iznad osnovnog retka teksta.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscript" xml:space="preserve">
+    <value>Indeks</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscriptDescription" xml:space="preserve">
+    <value>Stvorite mala slova ispod osnovnog retka teksta.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeft" xml:space="preserve">
+    <value>Poravnaj tekst lijevo</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeftDescription" xml:space="preserve">
+    <value>Poravnajte tekst lijevo.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenter" xml:space="preserve">
+    <value>Sredina</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenterDescription" xml:space="preserve">
+    <value>Centrirajte tekst</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRight" xml:space="preserve">
+    <value>Poravnaj tekst desno</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRightDescription" xml:space="preserve">
+    <value>Poravnajte tekst desno.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustify" xml:space="preserve">
+    <value>Poravnaj obostrano</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustifyDescription" xml:space="preserve">
+    <value>Poravnajte tekst sa lijevom i desnom marginom, po potrebi dodajući dodatni prostor između riječi.
+
+Ovime se stvara čisti izgled uzduž lijeve i desne strane teksta.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacing" xml:space="preserve">
+    <value>SetSingleParagraphSpacing</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacingDescription" xml:space="preserve">
+    <value>SetSingleParagraphSpacing</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Delete" xml:space="preserve">
+    <value>Izbriši</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteDescription" xml:space="preserve">
+    <value>Izbriši</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBack" xml:space="preserve">
+    <value>Izbriši unatrag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackDescription" xml:space="preserve">
+    <value>Izbrišite unatrag.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWord" xml:space="preserve">
+    <value>Izbriši riječ</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordDescription" xml:space="preserve">
+    <value>Izbrišite riječ.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBack" xml:space="preserve">
+    <value>Izbriši riječ unatrag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackDescription" xml:space="preserve">
+    <value>Izbrišite riječ unatrag.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelection" xml:space="preserve">
+    <value>Kopiraj</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelectionDescription" xml:space="preserve">
+    <value>Kopirajte odabir i stavite ga u međuspremnik.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Paste" xml:space="preserve">
+    <value>Zalijepi</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PasteDescription" xml:space="preserve">
+    <value>Zalijepite sadržaj međuspremnika</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelection" xml:space="preserve">
+    <value>Izreži</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelectionDescription" xml:space="preserve">
+    <value>Izrežite odabir iz dokumenta i stavite ga u međuspremnik.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespace" xml:space="preserve">
+    <value>Prikaži/Sakrij ¶</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespaceDescription" xml:space="preserve">
+    <value>Prikažite oznake odlomka i ostale skrivene simbole oblikovanja</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindForward" xml:space="preserve">
+    <value>Traženje naprijed</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindForwardDescription" xml:space="preserve">
+    <value>Traženje naprijed</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindBackward" xml:space="preserve">
+    <value>Traženje unatrag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindBackwardDescription" xml:space="preserve">
+    <value>Traženje unatrag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForward" xml:space="preserve">
+    <value>Zamijeni naprijed</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForwardDescription" xml:space="preserve">
+    <value>Zamijeni naprijed u tekstu.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackward" xml:space="preserve">
+    <value>Zamijeni unatrag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackwardDescription" xml:space="preserve">
+    <value>Zamijeni unatrag u tekstu</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocument" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocumentDescription" xml:space="preserve">
+    <value>Kreirajte novi dokument.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocument" xml:space="preserve">
+    <value>Otvori</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocumentDescription" xml:space="preserve">
+    <value>Otvori</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocument" xml:space="preserve">
+    <value>Spremi</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentDescription" xml:space="preserve">
+    <value>Spremi</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAs" xml:space="preserve">
+    <value>Spremi kao</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAsDescription" xml:space="preserve">
+    <value>Spremi kao</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontForm" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontFormDescription" xml:space="preserve">
+    <value>Prikažite dijaloški okvir Font.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphForm" xml:space="preserve">
+    <value>Odlomak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphFormDescription" xml:space="preserve">
+    <value>Prikažite dijaloški okvir Odlomak.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsForm" xml:space="preserve">
+    <value>Tabulatori</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsFormDescription" xml:space="preserve">
+    <value>Tabulatori</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndent" xml:space="preserve">
+    <value>Promijeni uvlaku</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndentDescription" xml:space="preserve">
+    <value>Promijenite uvlaku u tekstu.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndent" xml:space="preserve">
+    <value>Povećaj lijevo</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndentDescription" xml:space="preserve">
+    <value>Povećajte lijevu uvlaku odlomka.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndent" xml:space="preserve">
+    <value>Povećaj uvlaku</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndentDescription" xml:space="preserve">
+    <value>Povećajte razinu uvlake odlomka.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndent" xml:space="preserve">
+    <value>Smanji lijevo</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndentDescription" xml:space="preserve">
+    <value>Smanji lijevu uvlaku odlomka.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndent" xml:space="preserve">
+    <value>Smanji uvlaku</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndentDescription" xml:space="preserve">
+    <value>Smanjuje razinu uvlake odlomka.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyle" xml:space="preserve">
+    <value>Promijeni stil odlomka</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyleDescription" xml:space="preserve">
+    <value>Promijenite stil odlomka.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPoint" xml:space="preserve">
+    <value>PlaceCaretToPhysicalPoint</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPointDescription" xml:space="preserve">
+    <value>PlaceCaretToPhysicalPoint</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyle" xml:space="preserve">
+    <value>Promijeni stil znakova</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyleDescription" xml:space="preserve">
+    <value>Promijenite stil znakova.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Find" xml:space="preserve">
+    <value>Traženje</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindDescription" xml:space="preserve">
+    <value>Pronađite tekst u dokumentu.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Replace" xml:space="preserve">
+    <value>Zamjena</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceDescription" xml:space="preserve">
+    <value>Zamijenite tekst u dokumentu.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForward" xml:space="preserve">
+    <value>Zamijeni sve naprijed</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForwardDescription" xml:space="preserve">
+    <value>Zamijeni sve naprijed u tekstu.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackward" xml:space="preserve">
+    <value>Zamijeni sve unatrag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackwardDescription" xml:space="preserve">
+    <value>Zamijeni sve unatrag u tekstu.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPage" xml:space="preserve">
+    <value>ScrollToPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPageDescription" xml:space="preserve">
+    <value>ScrollToPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Print" xml:space="preserve">
+    <value>Ispi&amp;ši</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintDescription" xml:space="preserve">
+    <value>Prije ispisa odaberite pisač, broj kopija i druge mogućnosti ispisa.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrint" xml:space="preserve">
+    <value>&amp;Brzi ispis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrintDescription" xml:space="preserve">
+    <value>Pošaljite dokument izravno na zadani pisač bez pravljenja promjena.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreview" xml:space="preserve">
+    <value>Pre&amp;gled prije ispisa</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreviewDescription" xml:space="preserve">
+    <value>Prije ispisa pregledajte stranice i napravite promjene.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginInit" xml:space="preserve">
+    <value>Pogreška: poziv BeginInit unutar BeginUpdate</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndInit" xml:space="preserve">
+    <value>Pogreška: poziv EndInit ili CancelInit bez BeginInit ili unutar BeginUpdate</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginUpdate" xml:space="preserve">
+    <value>Pogreška: poziv BeginUpdate unutar BeginInit</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndUpdate" xml:space="preserve">
+    <value>Pogreška: poziv EndUpdate ili CancelUpate bez BeginUpdate ili unutar BeginInit</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetCharacterProperties" xml:space="preserve">
+    <value>Pogreška: ne možete postaviti svojstva bez BeginInit ili bez dodavanja objekta u dokument</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetParagraphProperties" xml:space="preserve">
+    <value>Pogreška: ne možete postaviti svojstva bez BeginInit ili bez dodavanja objekta u dokument</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParentStyle" xml:space="preserve">
+    <value>Pogreška: pogrešna dodjela stila roditelju prouzročila je kružne reference</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidDocumentModel" xml:space="preserve">
+    <value>Pogreška: modeli dokumenta su različiti</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_TableIntegrityError" xml:space="preserve">
+    <value>Pogreška: razbijen integritet tablice</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParagraphContainNumbering" xml:space="preserve">
+    <value>Pogreška: odlomak već sadrži numeriranje</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidCopyFromDocumentModel" xml:space="preserve">
+    <value>Pogreška: izvor i odredište modela dokumenta su različiti</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidNumber" xml:space="preserve">
+    <value>To nije ispravan broj.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidFontSize" xml:space="preserve">
+    <value>Broj mora biti između {0} i {1}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidValueRange" xml:space="preserve">
+    <value>Vrijednost mora biti između {0} i {1}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UsedWrongUnit" xml:space="preserve">
+    <value>Jedinica mjere je krivo navedena.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidTabStop" xml:space="preserve">
+    <value>This is not a valid tab stop.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchComplete" xml:space="preserve">
+    <value>Pretraga je završena.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInForwardDirectionComplete" xml:space="preserve">
+    <value>Došli ste na kraj dokumenta.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInBackwardDirectionComplete" xml:space="preserve">
+    <value>Došli ste na početak dokumenta.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_StyleAlreadyLinked" xml:space="preserve">
+    <value>Pogreška: stil već sadrži povezan stil</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ErrorLinkDeletedStyle" xml:space="preserve">
+    <value>Pogreška: ne mogu povezati obrisan stil</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchItemNotFound" xml:space="preserve">
+    <value>Tražena stavka nije pronađena.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInSelectionComplete" xml:space="preserve">
+    <value>Pretraga u označenom tekstu je završena.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromBeginningQuestion" xml:space="preserve">
+    <value>Želite li pokrenuti pretraživanje od početka dokumenta?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromEndQuestion" xml:space="preserve">
+    <value>Želite li pokrenuti pretraživanje od kraja dokumenta?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchInRemainderQuestion" xml:space="preserve">
+    <value>Želite li pretraživati ostatak dokumenta?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ReplacementsCount" xml:space="preserve">
+    <value>Napravljeno je {0} zamjena.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidStyleName" xml:space="preserve">
+    <value>Pogrešno ime stila</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_IncorrectNumericFieldFormat" xml:space="preserve">
+    <value>Pogreška: broj ne može biti zastupljen u odabranom formatu.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SyntaxErrorInFieldPattern" xml:space="preserve">
+    <value>Pogreška u sintaksi, {0}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnmatchedQuotesInFieldPattern" xml:space="preserve">
+    <value>Pogreška: uzorak teksta sadrži neusporedive citate</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllFiles" xml:space="preserve">
+    <value>Sve datoteke</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllSupportedFiles" xml:space="preserve">
+    <value>Sve podržane datoteke</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_HtmlFiles" xml:space="preserve">
+    <value>Sve web stranice</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_RtfFiles" xml:space="preserve">
+    <value>Oblik obogaćenog teksta</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_TextFiles" xml:space="preserve">
+    <value>Tekstualne datoteke</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_BitmapFiles" xml:space="preserve">
+    <value>Bitmap</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_JPEGFiles" xml:space="preserve">
+    <value>JPEG File Interchange Format</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_PNGFiles" xml:space="preserve">
+    <value>Portable Network Graphics</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading1" xml:space="preserve">
+    <value>naslov 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading2" xml:space="preserve">
+    <value>naslov 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading3" xml:space="preserve">
+    <value>naslov 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading4" xml:space="preserve">
+    <value>naslov 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading5" xml:space="preserve">
+    <value>naslov 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading6" xml:space="preserve">
+    <value>naslov 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading7" xml:space="preserve">
+    <value>naslov 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading8" xml:space="preserve">
+    <value>naslov 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading9" xml:space="preserve">
+    <value>naslov 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index1" xml:space="preserve">
+    <value>index 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index2" xml:space="preserve">
+    <value>index 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index3" xml:space="preserve">
+    <value>index 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index4" xml:space="preserve">
+    <value>index 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index5" xml:space="preserve">
+    <value>index 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index6" xml:space="preserve">
+    <value>index 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index7" xml:space="preserve">
+    <value>index 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index8" xml:space="preserve">
+    <value>index 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index9" xml:space="preserve">
+    <value>index 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc1" xml:space="preserve">
+    <value>toc 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc2" xml:space="preserve">
+    <value>toc 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc3" xml:space="preserve">
+    <value>toc 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc4" xml:space="preserve">
+    <value>toc 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc5" xml:space="preserve">
+    <value>toc 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc6" xml:space="preserve">
+    <value>toc 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc7" xml:space="preserve">
+    <value>toc 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc8" xml:space="preserve">
+    <value>toc 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc9" xml:space="preserve">
+    <value>toc 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalIndent" xml:space="preserve">
+    <value>Normal Indent</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotetext" xml:space="preserve">
+    <value>footnote text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationtext" xml:space="preserve">
+    <value>annotation text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_header" xml:space="preserve">
+    <value>zaglavlje</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footer" xml:space="preserve">
+    <value>podnožje</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_indexheading" xml:space="preserve">
+    <value>index heading</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_caption" xml:space="preserve">
+    <value>naslov</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableoffigures" xml:space="preserve">
+    <value>table of figures</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopeaddress" xml:space="preserve">
+    <value>envelope address</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopereturn" xml:space="preserve">
+    <value>envelope return</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotereference" xml:space="preserve">
+    <value>footnote reference</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationreference" xml:space="preserve">
+    <value>annotation reference</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_linenumber" xml:space="preserve">
+    <value>line number</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_pagenumber" xml:space="preserve">
+    <value>page number</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotereference" xml:space="preserve">
+    <value>endnote reference</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotetext" xml:space="preserve">
+    <value>endnote text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableofauthorities" xml:space="preserve">
+    <value>table of authorities</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_macrotoaheading" xml:space="preserve">
+    <value>macro to a heading</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List2" xml:space="preserve">
+    <value>List 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List3" xml:space="preserve">
+    <value>List 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List4" xml:space="preserve">
+    <value>List 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List5" xml:space="preserve">
+    <value>List 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet" xml:space="preserve">
+    <value>List Bullet</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet2" xml:space="preserve">
+    <value>List Bullet 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet3" xml:space="preserve">
+    <value>List Bullet 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet4" xml:space="preserve">
+    <value>List Bullet 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet5" xml:space="preserve">
+    <value>List Bullet 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber" xml:space="preserve">
+    <value>List Number</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber2" xml:space="preserve">
+    <value>List Number 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber3" xml:space="preserve">
+    <value>List Number 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber4" xml:space="preserve">
+    <value>List Number 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber5" xml:space="preserve">
+    <value>List Number 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Title" xml:space="preserve">
+    <value>Naslov</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Closing" xml:space="preserve">
+    <value>Zatvaram</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Signature" xml:space="preserve">
+    <value>Potpis</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DefaultParagraphFont" xml:space="preserve">
+    <value>Default Paragraph Font</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText" xml:space="preserve">
+    <value>Body Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue" xml:space="preserve">
+    <value>List Continue</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue2" xml:space="preserve">
+    <value>List Continue 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue3" xml:space="preserve">
+    <value>List Continue 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue4" xml:space="preserve">
+    <value>List Continue 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue5" xml:space="preserve">
+    <value>List Continue 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_MessageHeader" xml:space="preserve">
+    <value>Zaglavlje poruke</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Salutation" xml:space="preserve">
+    <value>Salutation</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent" xml:space="preserve">
+    <value>Body Text First Indent</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent2" xml:space="preserve">
+    <value>Body Text First Indent 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoteHeading" xml:space="preserve">
+    <value>Note Heading</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Subtitle" xml:space="preserve">
+    <value>Podnaslov</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText2" xml:space="preserve">
+    <value>Body Text 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText3" xml:space="preserve">
+    <value>Body Text 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent2" xml:space="preserve">
+    <value>Body Text Indent 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent3" xml:space="preserve">
+    <value>Body Text Indent 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BlockText" xml:space="preserve">
+    <value>Block Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkFollowed" xml:space="preserve">
+    <value>HyperlinkFollowed</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkStrongEmphasis" xml:space="preserve">
+    <value>HyperlinkStrongEmphasis</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DocumentMap" xml:space="preserve">
+    <value>Document Map</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_PlainText" xml:space="preserve">
+    <value>Običan tekst</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_EmailSignature" xml:space="preserve">
+    <value>E-mail potpis</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTopofForm" xml:space="preserve">
+    <value>HTML Top of Form</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLBottomofForm" xml:space="preserve">
+    <value>HTML Bottom of Form</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalWeb" xml:space="preserve">
+    <value>Normal (Web)</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAcronym" xml:space="preserve">
+    <value>HTML Acronym</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAddress" xml:space="preserve">
+    <value>HTML Address</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCite" xml:space="preserve">
+    <value>HTML Cite</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCode" xml:space="preserve">
+    <value>HTML Code</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLDefinition" xml:space="preserve">
+    <value>HTML Definition</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLKeyboard" xml:space="preserve">
+    <value>HTML Keyboard</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLPreformatted" xml:space="preserve">
+    <value>HTML Preformatted</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLSample" xml:space="preserve">
+    <value>HTML Sample</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTypewriter" xml:space="preserve">
+    <value>HTML Typewriter</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLVariable" xml:space="preserve">
+    <value>HTML Variable</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalTable" xml:space="preserve">
+    <value>Normal Table</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationsubject" xml:space="preserve">
+    <value>annotation subject</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoList" xml:space="preserve">
+    <value>No List</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList1" xml:space="preserve">
+    <value>Outline List 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList2" xml:space="preserve">
+    <value>Outline List 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList3" xml:space="preserve">
+    <value>Outline List 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple1" xml:space="preserve">
+    <value>Tablica Simple 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple2" xml:space="preserve">
+    <value>Tablica Simple 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple3" xml:space="preserve">
+    <value>Tablica Simple 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic1" xml:space="preserve">
+    <value>Tablica Classic 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic2" xml:space="preserve">
+    <value>Tablica Classic 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic3" xml:space="preserve">
+    <value>Tablica Classic 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic4" xml:space="preserve">
+    <value>Tablica Classic 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful1" xml:space="preserve">
+    <value>Tablica Colorful 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful2" xml:space="preserve">
+    <value>Tablica Colorful 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful3" xml:space="preserve">
+    <value>Tablica Colorful 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns1" xml:space="preserve">
+    <value>Tablica Columns 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns2" xml:space="preserve">
+    <value>Tablica Columns 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns3" xml:space="preserve">
+    <value>Tablica Columns 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns4" xml:space="preserve">
+    <value>Tablica Columns 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns5" xml:space="preserve">
+    <value>Tablica Columns 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid1" xml:space="preserve">
+    <value>Tablica Grid 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid2" xml:space="preserve">
+    <value>Tablica Grid 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid3" xml:space="preserve">
+    <value>Tablica Grid 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid4" xml:space="preserve">
+    <value>Tablica Grid 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid5" xml:space="preserve">
+    <value>Tablica Grid 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid6" xml:space="preserve">
+    <value>Tablica Grid 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid7" xml:space="preserve">
+    <value>Tablica Grid 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid8" xml:space="preserve">
+    <value>Tablica Grid 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList1" xml:space="preserve">
+    <value>Tablica List 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList2" xml:space="preserve">
+    <value>Tablica List 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList3" xml:space="preserve">
+    <value>Tablica List 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList4" xml:space="preserve">
+    <value>Tablica List 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList5" xml:space="preserve">
+    <value>Tablica List 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList6" xml:space="preserve">
+    <value>Tablica List 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList7" xml:space="preserve">
+    <value>Tablica List 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList8" xml:space="preserve">
+    <value>Tablica List 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects1" xml:space="preserve">
+    <value>Tablica 3D efekti 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects2" xml:space="preserve">
+    <value>Tablica 3D efekti 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects3" xml:space="preserve">
+    <value>Tablica 3D efekti 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableContemporary" xml:space="preserve">
+    <value>Tablica Contemporary</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableElegant" xml:space="preserve">
+    <value>Tablica Elegant</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableProfessional" xml:space="preserve">
+    <value>Tablica Professional</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle1" xml:space="preserve">
+    <value>Tablica Subtle 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle2" xml:space="preserve">
+    <value>Tablica Subtle 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb1" xml:space="preserve">
+    <value>Tablica Web 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb2" xml:space="preserve">
+    <value>Tablica Web 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb3" xml:space="preserve">
+    <value>Tablica Web 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BalloonText" xml:space="preserve">
+    <value>Balloon Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid" xml:space="preserve">
+    <value>Tablica Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.LinkedCharacterStyleFormatString" xml:space="preserve">
+    <value>{0} Znak</value>
+  </data>
+  <data name="XtraRichEditStringId.ClearFormatting" xml:space="preserve">
+    <value>Očisti oblikovanje</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Bold" xml:space="preserve">
+    <value>Podebljano</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Italic" xml:space="preserve">
+    <value>Kurziv</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Regular" xml:space="preserve">
+    <value>Obično</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Strikeout" xml:space="preserve">
+    <value>Precrtano</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Underline" xml:space="preserve">
+    <value>Podcrtano</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentCenter" xml:space="preserve">
+    <value>Sredina</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentJustify" xml:space="preserve">
+    <value>Obostrano</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentLeft" xml:space="preserve">
+    <value>Lijevo</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentRight" xml:space="preserve">
+    <value>Desno</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSingle" xml:space="preserve">
+    <value>Jednostruko</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSesquialteral" xml:space="preserve">
+    <value>1,5 redak</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingDouble" xml:space="preserve">
+    <value>Dvostruko</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingMultiple" xml:space="preserve">
+    <value>Višestruko</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingExactly" xml:space="preserve">
+    <value>Točno</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingAtLeast" xml:space="preserve">
+    <value>Najmanje</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentNone" xml:space="preserve">
+    <value>(ništa)</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentIndented" xml:space="preserve">
+    <value>Prvi redak</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentHanging" xml:space="preserve">
+    <value>Viseće</value>
+  </data>
+  <data name="XtraRichEditStringId.DialogCaption_InsertSymbol" xml:space="preserve">
+    <value>Simbol</value>
+  </data>
+  <data name="XtraRichEditStringId.TabForm_All" xml:space="preserve">
+    <value>Sve</value>
+  </data>
+  <data name="XtraRichEditStringId.UnderlineNone" xml:space="preserve">
+    <value>(ništa)</value>
+  </data>
+  <data name="XtraRichEditStringId.ColorAuto" xml:space="preserve">
+    <value>Automatski</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Inch" xml:space="preserve">
+    <value>"</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Centimeter" xml:space="preserve">
+    <value> cm</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Millimeter" xml:space="preserve">
+    <value> mm</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Pica" xml:space="preserve">
+    <value> pc</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Point" xml:space="preserve">
+    <value> pt</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ZeroDivide" xml:space="preserve">
+    <value>!Djeljenje s nulom.</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapEMailAddress" xml:space="preserve">
+    <value>E-mail adresa</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ClearFormatting" xml:space="preserve">
+    <value>Očisti oblikovanje</value>
+  </data>
+</root>

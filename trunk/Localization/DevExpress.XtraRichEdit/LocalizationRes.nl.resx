@@ -1,0 +1,1415 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="XtraRichEditStringId.Msg_IsNotValid">
+    <value>&apos;{0}&apos; is geen geldige waarde voor &apos;{1}&apos;</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InternalError">
+    <value>Een interne fout opgetreden</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedStyleError">
+    <value>Fout: gebruik van een verwijderde stijl</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedParagraphError">
+    <value>Fout: gebruik van een verwijderde alinea</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedSectionError">
+    <value>Fout: gebruik van een verwijderde sectie</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidParagraphProperties">
+    <value>Fout: alinea eigenschappen zijn niet meer geldig</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidCharacterProperties">
+    <value>Fout: karakter eigenschappen zijn niet meer geldig</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnsupportedFormatException">
+    <value>Bestandtype wordt niet ondersteund</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleView">
+    <value>Eenvoudige weergave</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftView">
+    <value>Conceptweergave</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingView">
+    <value>Leesweergave</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintView">
+    <value>Afdrukweergave</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleViewDescription">
+    <value>Eenvoudige weergave</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftViewDescription">
+    <value>Conceptweergave</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingViewDescription">
+    <value>Leesweergave</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintViewDescription">
+    <value>Afdrukweergave</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Zoom">
+    <value>In-/uitzoomen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomDescription">
+    <value>In-/uitzoomen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomIn">
+    <value>Inzoomen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomInDescription">
+    <value>Inzoomen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOut">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOutDescription">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Undo">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UndoDescription">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Redo">
+    <value>Herhalen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_RedoDescription">
+    <value>Herhalen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDown">
+    <value>Naar beneden scrollen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDownDescription">
+    <value>Naar beneden scrollen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVertically">
+    <value>EnsureCaretVisibleVertically</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVerticallyDescription">
+    <value>EnsureCaretVisibleVertically</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontally">
+    <value>EnsureCaretVisibleHorizontally</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontallyDescription">
+    <value>EnsureCaretVisibleHorizontally</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForward">
+    <value>MoveForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForwardDescription">
+    <value>MoveForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackward">
+    <value>MoveBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackwardDescription">
+    <value>MoveBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLine">
+    <value>MoveToBeginOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLineDescription">
+    <value>MoveToBeginOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLine">
+    <value>MoveToEndOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLineDescription">
+    <value>MoveToEndOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUp">
+    <value>MoveLineUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUpDescription">
+    <value>MoveLineUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDown">
+    <value>MoveLineDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDownDescription">
+    <value>MoveLineDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraph">
+    <value>MovePreviousParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraphDescription">
+    <value>MovePreviousParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraph">
+    <value>MoveNextParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraphDescription">
+    <value>MoveNextParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWord">
+    <value>MovePreviousWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWordDescription">
+    <value>MovePreviousWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWord">
+    <value>MoveNextWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWordDescription">
+    <value>MoveNextWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPage">
+    <value>MovePreviousPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPageDescription">
+    <value>MovePreviousPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPage">
+    <value>MoveNextPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPageDescription">
+    <value>MoveNextPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocument">
+    <value>MoveToBeginBeginOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocumentDescription">
+    <value>MoveToBeginBeginOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocument">
+    <value>MoveToEndOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocumentDescription">
+    <value>MoveToEndOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUp">
+    <value>MoveScreenUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUpDescription">
+    <value>MoveScreenUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDown">
+    <value>MoveScreenDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDownDescription">
+    <value>MoveScreenDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAll">
+    <value>SelectAll</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAllDescription">
+    <value>SelectAll</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraph">
+    <value>InsertParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraphDescription">
+    <value>InsertParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreak">
+    <value>InsertLineBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreakDescription">
+    <value>InsertLineBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertText">
+    <value>InsertText</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTextDescription">
+    <value>InsertText</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletList">
+    <value>Opsommingstekens</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletListDescription">
+    <value>Een lijst met opsommingstekens beginnen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelList">
+    <value>Lijst met meerdere niveaus</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelListDescription">
+    <value>Een lijst met meerdere niveaus beginnen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleList">
+    <value>Nummering</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleListDescription">
+    <value>Een genummerde lijst beginnen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraph">
+    <value>DeleteNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraphDescription">
+    <value>DeleteNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraph">
+    <value>IncrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraphDescription">
+    <value>IncrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraph">
+    <value>DecrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraphDescription">
+    <value>DecrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKey">
+    <value>TabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKeyDescription">
+    <value>TabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKey">
+    <value>ShiftTabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKeyDescription">
+    <value>ShiftTabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKey">
+    <value>BackSpaceKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKeyDescription">
+    <value>BackSpaceKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTab">
+    <value>InsertTab</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTabDescription">
+    <value>InsertTab</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreak">
+    <value>Page Break</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreakDescription">
+    <value>Begin de volgende pagina op de huidige positie.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpace">
+    <value>InsertNonBreakingSpace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpaceDescription">
+    <value>InsertNonBreakingSpace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreak">
+    <value>InsertColumnBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreakDescription">
+    <value>InsertColumnBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDash">
+    <value>InsertEnDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDashDescription">
+    <value>InsertEnDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDash">
+    <value>InsertEmDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDashDescription">
+    <value>InsertEmDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbol">
+    <value>InsertCopyrightSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbolDescription">
+    <value>InsertCopyrightSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbol">
+    <value>InsertRegisteredTrademark Symbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbolDescription">
+    <value>InsertRegisteredTrademark Symbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbol">
+    <value>InsertTrademarkSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbolDescription">
+    <value>InsertTrademarkSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsis">
+    <value>InsertEllipsis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsisDescription">
+    <value>InsertEllipsis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMark">
+    <value>InsertOpeningSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMarkDescription">
+    <value>InsertOpeningSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMark">
+    <value>InsertClosingSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMarkDescription">
+    <value>InsertClosingSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMark">
+    <value>InsertOpeningDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMarkDescription">
+    <value>InsertOpeningDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMark">
+    <value>InsertClosingDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMarkDescription">
+    <value>InsertClosingDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPicture">
+    <value>Afbeelding invoegen uit bestand</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPictureDescription">
+    <value>Een afbeelding uit een bestand invoegen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBold">
+    <value>Vet</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBoldDescription">
+    <value>De geselecteerde tekst vet maken.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalic">
+    <value>Cursief</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalicDescription">
+    <value>De geselecteerde tekst cursief maken.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderline">
+    <value>Onderstrepen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderlineDescription">
+    <value>De geselecteerde tekst onderstrepen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderline">
+    <value>Dubbel onderstrepen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderlineDescription">
+    <value>De geselecteerde tekst dubbel onderstrepen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeout">
+    <value>Doorhalen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeoutDescription">
+    <value>Een streep trekken door het midden van de geselecteerde tekst.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeout">
+    <value>Dubbel doorhalen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeoutDescription">
+    <value>Twee strepen trekken door het midden van de geselecteerde tekst</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSize">
+    <value>IncrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSizeDescription">
+    <value>IncrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSize">
+    <value>DecrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSizeDescription">
+    <value>DecrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColor">
+    <value>Tekstkleur</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColorDescription">
+    <value>De tekstkleur wijzigen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightText">
+    <value>Tekstmarkeringskleur</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightTextDescription">
+    <value>Tekst zodanig bewerken dat het lijkt of een markeerstift is gebruikt.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontName">
+    <value>Lettertype</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontNameDescription">
+    <value>Het letterbeeld wijzigen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSize">
+    <value>Tekengrootte</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSizeDescription">
+    <value>De tekengrootte wijzigen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyle">
+    <value>Snelle stijlen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyleDescription">
+    <value>Maak kop, opmerkingen en andere tekstvormen met gebruik van het stijloverzicht.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCount">
+    <value>Kolommen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCountDescription">
+    <value>Kolommen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSize">
+    <value>Lettertype vergroten</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSizeDescription">
+    <value>De tekengrootte vermeerderen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSize">
+    <value>Lettertype verkleinen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSizeDescription">
+    <value>De tekengrootte verminderen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscript">
+    <value>Superscript</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscriptDescription">
+    <value>Kleine letters maken boven de tekstregel.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscript">
+    <value>Subscript</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscriptDescription">
+    <value>Kleine letters maken boven de basisregel van de tekst.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeft">
+    <value>Tekst links uitlijnen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeftDescription">
+    <value>Tekst links uitlijnen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenter">
+    <value>Centreren</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenterDescription">
+    <value>Tekst centreren.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRight">
+    <value>Tekst rechts uitlijnen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRightDescription">
+    <value>Tekst rechts uitlijnen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustify">
+    <value>Uitvullen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustifyDescription">
+    <value>Tekst uitlijnen op zowel de linker- als rechtermarge. Hierbij wordt de ruimte tussen woorden vergroot wanneer dit nodig is.
+
+De linker- en de rechterzijde van de pagina zien er dan overzichtelijker uit.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacing">
+    <value>SetSingleParagraphSpacing</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacingDescription">
+    <value>SetSingleParagraphSpacing</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Delete">
+    <value>Verwijderen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteDescription">
+    <value>Verwijderen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBack">
+    <value>DeleteBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackDescription">
+    <value>DeleteBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWord">
+    <value>DeleteWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordDescription">
+    <value>DeleteWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBack">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackDescription">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelection">
+    <value>Kopiëren</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelectionDescription">
+    <value>De selectie kopiëren en op het klembord plaatsen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Paste">
+    <value>Plakken</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PasteDescription">
+    <value>De inhoud van het klembord plakken.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelection">
+    <value>Knippen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelectionDescription">
+    <value>De selectie uit het document knippen en op het klembord plaatsen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespace">
+    <value>Toon/Verberg ¶</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespaceDescription">
+    <value>Alineamarkeringen en andere verborgen opmaaksymbolen weergeven.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindForward">
+    <value>FindForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindForwardDescription">
+    <value>FindForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindBackward">
+    <value>FindBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindBackwardDescription">
+    <value>FindBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForward">
+    <value>ReplaceForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForwardDescription">
+    <value>ReplaceForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackward">
+    <value>ReplaceBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackwardDescription">
+    <value>ReplaceBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocument">
+    <value>Nieuw</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocumentDescription">
+    <value>Een nieuw document maken.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocument">
+    <value>Openen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocumentDescription">
+    <value>Openen van een document</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocument">
+    <value>Opslaan</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentDescription">
+    <value>Bewaar het document</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAs">
+    <value>Opslaan als</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAsDescription">
+    <value>Een kopie van het document opslaan</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontForm">
+    <value>Lettertype</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontFormDescription">
+    <value>Toon het lettertype scherm.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphForm">
+    <value>Alinea</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphFormDescription">
+    <value>Toon het alinea scherm.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsForm">
+    <value>Tabs</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsFormDescription">
+    <value>Tabs</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndent">
+    <value>ChangeIndent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndentDescription">
+    <value>ChangeIndentDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndent">
+    <value>IncrementParagraphLeftIndent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndentDescription">
+    <value>IncrementParagraphLeftIndentDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndent">
+    <value>Inspringing vergroten</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndentDescription">
+    <value>Het inspringniveau van de alinea verhogen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndent">
+    <value>DecrementParagraphLeftIndent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndentDescription">
+    <value>DecrementParagraphLeftIndentDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndent">
+    <value>Inspringing verkeinen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndentDescription">
+    <value>Het inspringniveau van de alinea verlagen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyle">
+    <value>ChangeParagraphStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyleDescription">
+    <value>ChangeParagraphStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPoint">
+    <value>PlaceCaretToPhysicalPoint</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPointDescription">
+    <value>PlaceCaretToPhysicalPoint</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyle">
+    <value>ChangeCharacterStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyleDescription">
+    <value>ChangeCharacterStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Find">
+    <value>Zoeken</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindDescription">
+    <value>Tekst zoeken in het document.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Replace">
+    <value>Vervangen</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceDescription">
+    <value>Tekst in het document vervangen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForward">
+    <value>ReplaceAllForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForwardDescription">
+    <value>ReplaceAllForwardDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackward">
+    <value>ReplaceAllBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackwardDescription">
+    <value>ReplaceAllBackwardDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPage">
+    <value>ScrollToPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPageDescription">
+    <value>ScrollToPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Print">
+    <value>Af&amp;dukken</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintDescription">
+    <value>Een printer, het aantal exemplaren en andere afdrukopties selecteren voordat u afdrukt.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrint">
+    <value>S&amp;nel afdrukken</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrintDescription">
+    <value>Het document direct naar de standaardprinter verzenden zonder wijzigingen aan te brengen.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreview">
+    <value>A&amp;fdrukvoorbeeld</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreviewDescription">
+    <value>Een afdrukvoorbeeld weergeven en pagina&apos;s wijzigen voordat u ze afdrukt.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeMistakenWord">
+    <value>(geen spellingsuggesties)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeMistakenWordDescription">
+    <value>(geen spellingsuggesties)</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginInit">
+    <value>Fout: call to BeginInit inside BeginUpdate</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndInit">
+    <value>Fout: call to EndInit or CancelInit without BeginInit or inside BeginUpdate</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginUpdate">
+    <value>Fout: call to BeginUpdate inside BeginInit</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndUpdate">
+    <value>Fout: call to EndUpdate or CancelUpate without BeginUpdate or inside BeginInit</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetCharacterProperties">
+    <value>Fout: cannot set properties without BeginInit or without adding object to document</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetParagraphProperties">
+    <value>Fout: cannot set properties without BeginInit or without adding object to document</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParentStyle">
+    <value>Fout: invalid parent style assignment caused circular reference</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidDocumentModel">
+    <value>Fout: document models are different</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_TableIntegrityError">
+    <value>Fout: broken table integrity</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParagraphContainNumbering">
+    <value>Fout: alinea bevat al nummering</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidCopyFromDocumentModel">
+    <value>Fout: source and destination document models are different</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidNumber">
+    <value>Dit is geen geldige waarde.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidFontSize">
+    <value>De waarde moet liggen tussen {0} en {1}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidValueRange">
+    <value>De waarde moet liggen tussen {0} en {1}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UsedWrongUnit">
+    <value>De meeteenheid is onjuist gespecificeerd.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidTabStop">
+    <value>Dit is geen geldige tabstop.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchComplete">
+    <value>Het zoeken is voltooid.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInForwardDirectionComplete">
+    <value>Het einde van het document is bereikt.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInBackwardDirectionComplete">
+    <value>Het begin van het document is bereikt.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_StyleAlreadyLinked">
+    <value>Fout: style already contains a linked style</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ErrorLinkDeletedStyle">
+    <value>Fout: cannot link deleted style</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchItemNotFound">
+    <value>Het gezochte item is niet gevonden.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInSelectionComplete">
+    <value>Het doorzoeken van de selectie is voltooid.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromBeginningQuestion">
+    <value>Wilt u doorgaan met zoeken vanaf het begin?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromEndQuestion">
+    <value>Wilt u doorgaan met zoeken vanaf het einde?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchInRemainderQuestion">
+    <value>Wilt u de rest van het document doorzoeken?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ReplacementsCount">
+    <value>{0} vervangingen doorgevoerd.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidStyleName">
+    <value>Onjuiste stijlnaam</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_IncorrectNumericFieldFormat">
+    <value>Fout: number cannot be represented in the specified format.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SyntaxErrorInFieldPattern">
+    <value>Syntax Error, {0}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnmatchedQuotesInFieldPattern">
+    <value>Fout: pattern string contains unmatched quotes.</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllFiles">
+    <value>Alle bestanden</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllSupportedFiles">
+    <value>Alle ondersteunde formaten</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_HtmlFiles">
+    <value>HyperText Markup Language Format</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_RtfFiles">
+    <value>Rich Text Format</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_TextFiles">
+    <value>Text Files</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_BitmapFiles">
+    <value>Bitmap</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_JPEGFiles">
+    <value>JPEG File Interchange Format</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_PNGFiles">
+    <value>Portable Network Graphics</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Normal">
+    <value>Standaard</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading1">
+    <value>kop 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading2">
+    <value>kop 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading3">
+    <value>kop 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading4">
+    <value>kop 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading5">
+    <value>kop 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading6">
+    <value>kop 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading7">
+    <value>kop 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading8">
+    <value>kop 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading9">
+    <value>kop 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index1">
+    <value>index 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index2">
+    <value>index 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index3">
+    <value>index 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index4">
+    <value>index 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index5">
+    <value>index 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index6">
+    <value>index 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index7">
+    <value>index 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index8">
+    <value>index 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index9">
+    <value>index 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc1">
+    <value>inhoud 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc2">
+    <value>inhoud 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc3">
+    <value>inhoud 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc4">
+    <value>inhoud 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc5">
+    <value>inhoud 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc6">
+    <value>inhoud 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc7">
+    <value>inhoud 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc8">
+    <value>inhoud 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc9">
+    <value>inhoud 9</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalIndent">
+    <value>Standaard inspringen</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotetext">
+    <value>voetnoot</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationtext">
+    <value>opmerking</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_header">
+    <value>kop</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footer">
+    <value>voet</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_indexheading">
+    <value>index kop</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_caption">
+    <value>titel</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableoffigures">
+    <value>afbeelingentabel</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopeaddress">
+    <value>enveloppe adres</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopereturn">
+    <value>enveloppe terug</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotereference">
+    <value>voetnoot verwijzing</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationreference">
+    <value>opmerking verwijzing</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_linenumber">
+    <value>regel nummer</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_pagenumber">
+    <value>pagina nummer</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotereference">
+    <value>eindnoot verwijzing</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotetext">
+    <value>eindnoot tekst</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableofauthorities">
+    <value>table of authorities</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_macrotoaheading">
+    <value>macro to a heading</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List">
+    <value>Lijst</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List2">
+    <value>Lijst 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List3">
+    <value>Lijst 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List4">
+    <value>Lijst 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List5">
+    <value>Lijst 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet">
+    <value>Opsommingstekens</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet2">
+    <value>Opsommingstekens 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet3">
+    <value>Opsommingstekens 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet4">
+    <value>Opsommingstekens 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet5">
+    <value>Opsommingstekens 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber">
+    <value>Nummering</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber2">
+    <value>Nummering 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber3">
+    <value>Nummering 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber4">
+    <value>Nummering 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber5">
+    <value>Nummering 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Title">
+    <value>Titel</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Closing">
+    <value>Sluiten</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Signature">
+    <value>Handtekening</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DefaultParagraphFont">
+    <value>Standaard alinea lettertype</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText">
+    <value>Body Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue">
+    <value>List Continue</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue2">
+    <value>List Continue 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue3">
+    <value>List Continue 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue4">
+    <value>List Continue 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue5">
+    <value>List Continue 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_MessageHeader">
+    <value>Bericht Header</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Salutation">
+    <value>Aanhef</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Date">
+    <value>Datum</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent">
+    <value>Body Text First Indent</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent2">
+    <value>Body Text First Indent 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoteHeading">
+    <value>Notitie Koptekst</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Subtitle">
+    <value>Subtitel</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText2">
+    <value>Body tekst 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText3">
+    <value>Body Teskt 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent2">
+    <value>Body Tekst Indent 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent3">
+    <value>Body Tekst Indent 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BlockText">
+    <value>Blokkeer Tekst</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkFollowed">
+    <value>HyperlinkFollowed</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkStrongEmphasis">
+    <value>HyperlinkStrongEmphasis</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DocumentMap">
+    <value>Document Map</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_PlainText">
+    <value>Plain Text</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_EmailSignature">
+    <value>E-mail handtekening</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTopofForm">
+    <value>HTML Bovenkant formulier</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLBottomofForm">
+    <value>HTML Onderkant formulier</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalWeb">
+    <value>Normaal (web)</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAcronym">
+    <value>HTML Acroniem</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAddress">
+    <value>HTML-Adres</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCite">
+    <value>HTML Citeer</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCode">
+    <value>HTML-code</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLDefinition">
+    <value>HTML Definitie</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLKeyboard">
+    <value>HTML Keyboard</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLPreformatted">
+    <value>HTML voorgeformatteerd</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLSample">
+    <value>HTML Analysemateriaal</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTypewriter">
+    <value>HTML Typemachine</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLVariable">
+    <value>HTML Variabele</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalTable">
+    <value>Normaal Tabel</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationsubject">
+    <value>annotatie onder</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoList">
+    <value>Geen lijst</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList1">
+    <value>Outline Lijst 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList2">
+    <value>Outline Lijst 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList3">
+    <value>Outline Lijst 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple1">
+    <value>Tabel 1 Gewone</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple2">
+    <value>Eenvoudige tabel 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple3">
+    <value>Eenvoudige tabel 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic1">
+    <value>Tabel Classic 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic2">
+    <value>Tabel 2 Classic</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic3">
+    <value>Tabel Classic 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic4">
+    <value>Tabel Classic 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful1">
+    <value>Kleurrijke Tabel 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful2">
+    <value>Kleurrijke Tabel 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful3">
+    <value>Kleurrijke Tabel 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns1">
+    <value>Tabel kolommen 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns2">
+    <value>Tabel 2 kolommen</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns3">
+    <value>Tabel Kolommen 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns4">
+    <value>Tabel Kolom 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns5">
+    <value>Tabel 5 Columns</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid1">
+    <value>Tabel 1 Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid2">
+    <value>Tabel 2 Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid3">
+    <value>Tabel 3 Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid4">
+    <value>Tabel 4 Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid5">
+    <value>Tabel Grid 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid6">
+    <value>Tabel 6 Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid7">
+    <value>Tabel 7 Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid8">
+    <value>Tabel 8 Grid</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList1">
+    <value>Tabel Lijst 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList2">
+    <value>Tabel Lijst 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList3">
+    <value>Tabel Lijst 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList4">
+    <value>Tabel Lijst 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList5">
+    <value>Tabel Lijst 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList6">
+    <value>Tabel Lijst 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList7">
+    <value>Tabel Lijst 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList8">
+    <value>Tabel Lijst 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects1">
+    <value>Tabel 3D effecten 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects2">
+    <value>Tabel 3D effecten 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects3">
+    <value>3D-effecten Tabel 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableContemporary">
+    <value>Tabel Eigentijds</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableElegant">
+    <value>Tabel Elegant</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableProfessional">
+    <value>Tabel Professional</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle1">
+    <value>Tabel Subtiel 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle2">
+    <value>Tabel Subtiel 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb1">
+    <value>Web Tabel 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb2">
+    <value>Tabel Web 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb3">
+    <value>Tabel Web 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BalloonText">
+    <value>Ballon Tekst</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid">
+    <value>Tabel</value>
+  </data>
+  <data name="XtraRichEditStringId.LinkedCharacterStyleFormatString">
+    <value>{0} Char</value>
+  </data>
+  <data name="XtraRichEditStringId.ClearFormatting">
+    <value>Opmaak verwijderen</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Bold">
+    <value>Vet</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Italic">
+    <value>Cursief</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Regular">
+    <value>Standaard</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Strikeout">
+    <value>Doorhalen</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Underline">
+    <value>Onderstrepen</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentCenter">
+    <value>Centreren</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentJustify">
+    <value>Uitvullen</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentLeft">
+    <value>Links</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentRight">
+    <value>Rechts</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSingle">
+    <value>Enkel</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSesquialteral">
+    <value>1.5 regels</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingDouble">
+    <value>Dubbel</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingMultiple">
+    <value>Meerdere</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingExactly">
+    <value>Exact</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingAtLeast">
+    <value>Ten minste</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentNone">
+    <value>(geen)</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentIndented">
+    <value>Eerste regel</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentHanging">
+    <value>Inspringing</value>
+  </data>
+  <data name="XtraRichEditStringId.DialogCaption_InsertSymbol">
+    <value>Symbool</value>
+  </data>
+  <data name="XtraRichEditStringId.TabForm_All">
+    <value>Alles</value>
+  </data>
+  <data name="XtraRichEditStringId.UnderlineNone">
+    <value>(geen)</value>
+  </data>
+  <data name="XtraRichEditStringId.ColorAuto">
+    <value>Auto</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Inch">
+    <value>"</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Centimeter">
+    <value> cm</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Millimeter">
+    <value> mm</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Pica">
+    <value> pc</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Point">
+    <value> pt</value>
+  </data>
+</root>

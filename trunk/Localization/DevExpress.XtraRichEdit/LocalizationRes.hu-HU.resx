@@ -1,0 +1,1665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLDefinition" xml:space="preserve">
+    <value>HTML-definíció</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns4" xml:space="preserve">
+    <value>Oszlopos táblázat 4</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SyntaxErrorInFieldPattern" xml:space="preserve">
+    <value>Szintaktikai hiba, {0}.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTextDescription" xml:space="preserve">
+    <value>Szöveg beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLKeyboard" xml:space="preserve">
+    <value>HTML-billentyűzet</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue2" xml:space="preserve">
+    <value>Lista folytatása 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent" xml:space="preserve">
+    <value>Szövegtörzs első sora</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber" xml:space="preserve">
+    <value>Számozott lista</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreakDescription" xml:space="preserve">
+    <value>Sortörés beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_TableIntegrityError" xml:space="preserve">
+    <value>Hiba: tábla integritása sérült</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomIn" xml:space="preserve">
+    <value>Nagyítás</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue" xml:space="preserve">
+    <value>Lista folytatása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPage" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocument" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading2" xml:space="preserve">
+    <value>Címsor 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbolDescription" xml:space="preserve">
+    <value>Trademark szimbólum (™) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColor" xml:space="preserve">
+    <value>Betűszín</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRightDescription" xml:space="preserve">
+    <value>Szöveg igazítása jobbra.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ClearFormatting" xml:space="preserve">
+    <value>Formázás törlése</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchInRemainderQuestion" xml:space="preserve">
+    <value>Szeretne a dokumentum hátralévő részében is keresni?</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidParagraphProperties" xml:space="preserve">
+    <value>Hiba: a bekezdés tulajdonságai nem érvényesek</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraphDescription" xml:space="preserve">
+    <value>Bekezdés beszúrása</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalWeb" xml:space="preserve">
+    <value>Normál (Web)</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic1" xml:space="preserve">
+    <value>Klasszikus táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Subtitle" xml:space="preserve">
+    <value>Alcím</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentCenter" xml:space="preserve">
+    <value>Középre</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeMistakenWordDescription" xml:space="preserve">
+    <value>(nincsenek javaslatok)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrint" xml:space="preserve">
+    <value>&amp;Nyomtatás</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerMiddleName" xml:space="preserve">
+    <value>Házastárs/partner középső neve</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapJobTitle" xml:space="preserve">
+    <value>Munka címe</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKey" xml:space="preserve">
+    <value>Tabulátor billentyű</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromEndQuestion" xml:space="preserve">
+    <value>Szeretné a dokumentum végén kezdeni a keresést?</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress2" xml:space="preserve">
+    <value>Cím 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectForward" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InternalError" xml:space="preserve">
+    <value>Belső hiba történt</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_StyleAlreadyLinked" xml:space="preserve">
+    <value>Hiba: a stílus már tartalmaz egy linkelt stílust</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraphDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllSupportedFiles" xml:space="preserve">
+    <value>Összes támogatott fájl</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Strikeout" xml:space="preserve">
+    <value>Áthúzás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAll" xml:space="preserve">
+    <value>Összes kijelölése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColorDescription" xml:space="preserve">
+    <value>Betűszín beállítása.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns2" xml:space="preserve">
+    <value>Oszlopos táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentHanging" xml:space="preserve">
+    <value>Függő</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreakDescription" xml:space="preserve">
+    <value>Kézi oldaltörés beillesztése a kurzor helyére.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustify" xml:space="preserve">
+    <value>Sorkizárás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsisDescription" xml:space="preserve">
+    <value>Kihagyás (...) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index2" xml:space="preserve">
+    <value>Tárgymutató 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKey" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllFiles" xml:space="preserve">
+    <value>Összes fájl</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreak" xml:space="preserve">
+    <value>Oldaltörés</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBack" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidValueRange" xml:space="preserve">
+    <value>Az értéknek {0} és {1} között kell lenni.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMark" xml:space="preserve">
+    <value>Kezdő idézőjel (‚) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTab" xml:space="preserve">
+    <value>Tabulátor beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyle" xml:space="preserve">
+    <value>Stílus beállítása</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginInit" xml:space="preserve">
+    <value>Hiba: BeginInit hívása BeginUpdate közben</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyle" xml:space="preserve">
+    <value>Gyors stílusok</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapFirstName" xml:space="preserve">
+    <value>Keresztnév</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMarkDescription" xml:space="preserve">
+    <value>Kezdő idézőjel (‚) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontFormDescription" xml:space="preserve">
+    <value>Betűtípus beállító ablak megjelenítése.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAcronym" xml:space="preserve">
+    <value>HTML-mozaikszó</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenter" xml:space="preserve">
+    <value>Középre zárás</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedStyleError" xml:space="preserve">
+    <value>Hiba: törölt stílus használata</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingMultiple" xml:space="preserve">
+    <value>Több</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingExactly" xml:space="preserve">
+    <value>Pontosan</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ZeroDivide" xml:space="preserve">
+    <value>!Nullával való osztás.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc4" xml:space="preserve">
+    <value>Címsor 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Closing" xml:space="preserve">
+    <value>Befejezés</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidTabStop" xml:space="preserve">
+    <value>Érvénytelen tabulátor.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects3" xml:space="preserve">
+    <value>Térhatású táblázat 3</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerFirstName" xml:space="preserve">
+    <value>Házastárs/partner keresztneve</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraphDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustifyDescription" xml:space="preserve">
+    <value>Szöveg igazítása mindkét margóhoz, extra betűközök hozzáadása, ahol szükséges.
+A szöveg egyenletesen lesz elosztva a lap jobb és bal széle között.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Replace" xml:space="preserve">
+    <value>Csere</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet5" xml:space="preserve">
+    <value>Felsorolás 5</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderlineDescription" xml:space="preserve">
+    <value>A kijelölt szöveg aláhúzása.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid5" xml:space="preserve">
+    <value>Rácsos táblázat 5</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindPrevDescription" xml:space="preserve">
+    <value>Következő keresése a dokumentumban hátra.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeft" xml:space="preserve">
+    <value>Balra zárás</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapHomePhone" xml:space="preserve">
+    <value>Otthoni telefon</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footer" xml:space="preserve">
+    <value>Élőláb</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordDescription" xml:space="preserve">
+    <value>Szó törlése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPicture" xml:space="preserve">
+    <value>Kép beillesztése fájlból</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText3" xml:space="preserve">
+    <value>Szövegtörzs 3</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapEMailAddress" xml:space="preserve">
+    <value>E-mail cím</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalicDescription" xml:space="preserve">
+    <value>A kijelölt szöveg dőlt betűs lesz.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOut" xml:space="preserve">
+    <value>Kicsinyítés</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInForwardDirectionComplete" xml:space="preserve">
+    <value>A dokumentum átvizsgálása kész.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects1" xml:space="preserve">
+    <value>Térhatású táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPhoneticGuideLastName" xml:space="preserve">
+    <value>Fonetikus leírás a vezetéknévhez</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCountry" xml:space="preserve">
+    <value>Ország vagy térség</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationsubject" xml:space="preserve">
+    <value>Jegyzettárgy</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVerticallyDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWord" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreview" xml:space="preserve">
+    <value>Nyomtatási ké&amp;p</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_MissingOperator" xml:space="preserve">
+    <value>!Hiányzó operátor.</value>
+  </data>
+  <data name="XtraRichEditStringId.DialogCaption_InsertSymbol" xml:space="preserve">
+    <value>Szimbólum</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocument" xml:space="preserve">
+    <value>Megnyitás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndent" xml:space="preserve">
+    <value>Behúzás beállítása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWordDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns1" xml:space="preserve">
+    <value>Oszlopos táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber2" xml:space="preserve">
+    <value>Számozott lista 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns3" xml:space="preserve">
+    <value>Oszlopos táblázat 3</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKeyDescription" xml:space="preserve">
+    <value>Tabulátor billentyű</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSingle" xml:space="preserve">
+    <value>Szimpla</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList8" xml:space="preserve">
+    <value>Listaszerű táblázat 8</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_OpenXmlFiles" xml:space="preserve">
+    <value>Word 2007 dokumentum</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent2" xml:space="preserve">
+    <value>Szövegtörzs behúzással 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndentDescription" xml:space="preserve">
+    <value>Bekezdés behúzásának csökkentése.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscriptDescription" xml:space="preserve">
+    <value>Kisbetű létrehozása a szöveg alatt.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidNumber" xml:space="preserve">
+    <value>Ez nem egy érvényes szám.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc2" xml:space="preserve">
+    <value>Címsor 2</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Bold" xml:space="preserve">
+    <value>Félkövér</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbol" xml:space="preserve">
+    <value>Trademark szimbólum (™) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSize" xml:space="preserve">
+    <value>Betűméret növelése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb1" xml:space="preserve">
+    <value>Webes táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontally" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSizeDescription" xml:space="preserve">
+    <value>Betűméret beállítása.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet4" xml:space="preserve">
+    <value>Felsorolás 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc8" xml:space="preserve">
+    <value>Címsor 8</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid4" xml:space="preserve">
+    <value>Rácsos táblázat 4</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Paste" xml:space="preserve">
+    <value>Beillesztés</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingDouble" xml:space="preserve">
+    <value>Dupla</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraph" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLPreformatted" xml:space="preserve">
+    <value>HTML-ként formázott</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLVariable" xml:space="preserve">
+    <value>HTML-változó</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscript" xml:space="preserve">
+    <value>Alsó index</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Redo" xml:space="preserve">
+    <value>Mégis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndentDescription" xml:space="preserve">
+    <value>Bekezdés behúzásának növelése.</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapBusinessPhone" xml:space="preserve">
+    <value>Üzleti telefon</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraph" xml:space="preserve">
+    <value>Bekezdés beszúrása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAllDescription" xml:space="preserve">
+    <value>Összes kijelölése</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapMiddleName" xml:space="preserve">
+    <value>Középső név</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontNameDescription" xml:space="preserve">
+    <value>Betűtípus beállítása.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CreateFieldDescription" xml:space="preserve">
+    <value>Mező létrehozása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPointDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_TextFiles" xml:space="preserve">
+    <value>Szövegfájlok</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index1" xml:space="preserve">
+    <value>Tárgymutató 1</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUp" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading7" xml:space="preserve">
+    <value>Címsor 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableofauthorities" xml:space="preserve">
+    <value>Engedélylista</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintView" xml:space="preserve">
+    <value>Nyomtatási kép</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindPrev" xml:space="preserve">
+    <value>Előző keresése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb2" xml:space="preserve">
+    <value>Webes táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPageDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentDescription" xml:space="preserve">
+    <value>Dokumentum mentése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List2" xml:space="preserve">
+    <value>Lista 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Signature" xml:space="preserve">
+    <value>Aláírás</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapDepartment" xml:space="preserve">
+    <value>Részleg</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertText" xml:space="preserve">
+    <value>Szöveg beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_MhtFiles" xml:space="preserve">
+    <value>Webarchívum, egyetlen file</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SwitchFieldModeDescription" xml:space="preserve">
+    <value>Mezőkódok váltása</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetParagraphProperties" xml:space="preserve">
+    <value>Hiba: a tulajdonságok beállításához a BeginInit hívása szükséges, vagy az objektumot hozzá kell adni a dokumentumhoz</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndentDescription" xml:space="preserve">
+    <value>Bekezdés behúzásának csökkentése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc7" xml:space="preserve">
+    <value>Címsor 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_pagenumber" xml:space="preserve">
+    <value>Oldalszám</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Normal" xml:space="preserve">
+    <value>Normál</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb3" xml:space="preserve">
+    <value>Webes táblázat 3</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreviewDescription" xml:space="preserve">
+    <value>Előnézet megjelenítése, beállítások módosítása.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ClearFormattingDescription" xml:space="preserve">
+    <value>A kijelölés minden formázásának törlése.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceDescription" xml:space="preserve">
+    <value>Megadott szövegek cseréje a dokumentumban.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAs" xml:space="preserve">
+    <value>Mentés másként</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFieldCodes" xml:space="preserve">
+    <value>Mezőkódok váltása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbolDescription" xml:space="preserve">
+    <value>RegisteredTrademark szimbólum (®) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Zoom" xml:space="preserve">
+    <value>Nagyítás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDownDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber3" xml:space="preserve">
+    <value>Számozott lista 3</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontForm" xml:space="preserve">
+    <value>Betűtípus...</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchItemNotFound" xml:space="preserve">
+    <value>A keresett elem nem található.</value>
+  </data>
+  <data name="XtraRichEditStringId.ColorAuto" xml:space="preserve">
+    <value>Automatikus</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndentDescription" xml:space="preserve">
+    <value>Bekezdés behúzásának növelése</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCompany" xml:space="preserve">
+    <value>Cég</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVertically" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSize" xml:space="preserve">
+    <value>Betűméret növelése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index9" xml:space="preserve">
+    <value>Tárgymutató 9</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackward" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeoutDescription" xml:space="preserve">
+    <value>A kijelölt szöveg áthúzása a középvonalában.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscriptDescription" xml:space="preserve">
+    <value>Kisbetű létrehozása a szöveg felett.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderline" xml:space="preserve">
+    <value>Aláhúzás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeMistakenWord" xml:space="preserve">
+    <value>(nincsenek javaslatok)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelectionDescription" xml:space="preserve">
+    <value>Kijelölés kivágása a vágólapra.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForward" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Salutation" xml:space="preserve">
+    <value>Megszólítás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForwardDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid3" xml:space="preserve">
+    <value>Rácsos táblázat 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BalloonText" xml:space="preserve">
+    <value>Buborékszöveg</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMark" xml:space="preserve">
+    <value>Záró idézőjel (’) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Title" xml:space="preserve">
+    <value>Cím</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList1" xml:space="preserve">
+    <value>Vázlatos lista 1</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UndoDescription" xml:space="preserve">
+    <value>Előző művelet visszavonása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelectionDescription" xml:space="preserve">
+    <value>Kijelölés másolása a vágólapra.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleList" xml:space="preserve">
+    <value>Számozás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUpDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDashDescription" xml:space="preserve">
+    <value>Hosszú gondolatjel (—) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading8" xml:space="preserve">
+    <value>Címsor 8</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightText" xml:space="preserve">
+    <value>Szöveg kiemelés színe</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ReplacementsCount" xml:space="preserve">
+    <value>{0} csere történt.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index5" xml:space="preserve">
+    <value>Tárgymutató 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber4" xml:space="preserve">
+    <value>Számozott lista 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTopofForm" xml:space="preserve">
+    <value>HTML űrlap teteje</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCount" xml:space="preserve">
+    <value>Oszlopok</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Delete" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentJustify" xml:space="preserve">
+    <value>Sorkizárt</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocumentDescription" xml:space="preserve">
+    <value>Új dokumentum létrehozása.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidDocumentModel" xml:space="preserve">
+    <value>Hiba: a dokumentum modellek eltérőek</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle2" xml:space="preserve">
+    <value>Finom táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndentDescription" xml:space="preserve">
+    <value>Behúzás beállítása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreakDescription" xml:space="preserve">
+    <value>Kézi hasábtörés beillesztése a kurzor helyére.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreak" xml:space="preserve">
+    <value>Hasábtörés beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnmatchedQuotesInFieldPattern" xml:space="preserve">
+    <value>Hiba: a minta string nem illeszkedő idézőjelet tartalmaz.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber5" xml:space="preserve">
+    <value>Számozott lista 5</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpace" xml:space="preserve">
+    <value>Nem törhető szóköz beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index7" xml:space="preserve">
+    <value>Tárgymutató 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful1" xml:space="preserve">
+    <value>Tarka táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple1" xml:space="preserve">
+    <value>Egyszerű táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontName" xml:space="preserve">
+    <value>Betűtípus</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List5" xml:space="preserve">
+    <value>Lista 5</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginUpdate" xml:space="preserve">
+    <value>Hiba: BeginUpdate hívása BeginInit közben</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DocumentMap" xml:space="preserve">
+    <value>Dokumentumtérkép</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWordDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUpDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidStyleName" xml:space="preserve">
+    <value>Érvénytelen stílusnév</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelListDescription" xml:space="preserve">
+    <value>Többszintű lista kezdése.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintDescription" xml:space="preserve">
+    <value>Nyomtató kiválasztása, másolatok számának és egyéb nyomtatási beállítások megadása.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreak" xml:space="preserve">
+    <value>Sortörés beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc3" xml:space="preserve">
+    <value>Címsor 3</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDown" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoList" xml:space="preserve">
+    <value>Nem lista</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphFormDescription" xml:space="preserve">
+    <value>Bekezdés beállító ablak megjelenítése.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSizeDescription" xml:space="preserve">
+    <value>Betűméret növelése.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomInDescription" xml:space="preserve">
+    <value>Nagyítás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSize" xml:space="preserve">
+    <value>Betűméret csökkentése</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidCharacterProperties" xml:space="preserve">
+    <value>Hiba: a karakter tulajdonságai nem érvényesek</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapTitle" xml:space="preserve">
+    <value>Név előtag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSize" xml:space="preserve">
+    <value>Betűméret</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_EmailSignature" xml:space="preserve">
+    <value>E-mail aláírás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderlineDescription" xml:space="preserve">
+    <value>A kijelölt szöveg aláhúzása a középvonalában dupla vonallal.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInSelectionComplete" xml:space="preserve">
+    <value>A kijelölés átvizsgálása kész.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkStrongEmphasis" xml:space="preserve">
+    <value>Hiperhivatkozás vastagbetűs szöveg</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDash" xml:space="preserve">
+    <value>Közepes gondolatjel (–) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKeyDescription" xml:space="preserve">
+    <value>Backspace billentyű</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_MessageHeader" xml:space="preserve">
+    <value>Üzenet fejléce</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWord" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDashDescription" xml:space="preserve">
+    <value>Közepes gondolatjel (–) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading4" xml:space="preserve">
+    <value>Címsor 4</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSize" xml:space="preserve">
+    <value>Betűméret csökkentése.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForward" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapNickName" xml:space="preserve">
+    <value>Becenév</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDownDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteDescription" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocumentDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraphDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMarkDescription" xml:space="preserve">
+    <value>Dupla kezdő idézőjel („) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindNextDescription" xml:space="preserve">
+    <value>Következő keresése a dokumentumban előre.</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapBusinessFax" xml:space="preserve">
+    <value>Üzleti fax</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackwardDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBoldDescription" xml:space="preserve">
+    <value>A kijelölt szöveg vastag betűs lesz.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyleDescription" xml:space="preserve">
+    <value>Bekezdés beállítása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLine" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading1" xml:space="preserve">
+    <value>Címsor 1</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForwardDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchComplete" xml:space="preserve">
+    <value>A keresés kész.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_linenumber" xml:space="preserve">
+    <value>Sor száma</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_macrotoaheading" xml:space="preserve">
+    <value>Makró szövege</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpaceDescription" xml:space="preserve">
+    <value>Nem törhető szóköz beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingViewDescription" xml:space="preserve">
+    <value>Olvasási elrendezés</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList3" xml:space="preserve">
+    <value>Vázlatos lista 3</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLine" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPage" xml:space="preserve">
+    <value>Görgetés a laphoz</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontallyDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotetext" xml:space="preserve">
+    <value>Lábjegyzetszöveg</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_caption" xml:space="preserve">
+    <value>Cím</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalIndent" xml:space="preserve">
+    <value>Normál behúzással</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopeaddress" xml:space="preserve">
+    <value>Borítékcím</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectBackwardDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphForm" xml:space="preserve">
+    <value>Bekezdés</value>
+  </data>
+  <data name="XtraRichEditStringId.LinkedCharacterStyleFormatString" xml:space="preserve">
+    <value>{0} karakter</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Find" xml:space="preserve">
+    <value>Keresés</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentLeft" xml:space="preserve">
+    <value>Balra</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ErrorLinkDeletedStyle" xml:space="preserve">
+    <value>Hiba: törölt stílust nem lehet linkelni</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCite" xml:space="preserve">
+    <value>HTML-idézet</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBold" xml:space="preserve">
+    <value>Félkövér</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackwardDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightTextDescription" xml:space="preserve">
+    <value>A kiválasztott szöveg kiemelése a megadott háttérszínnel.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeout" xml:space="preserve">
+    <value>Áthúzás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleListDescription" xml:space="preserve">
+    <value>Számozott lista kezdése.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid1" xml:space="preserve">
+    <value>Rácsos táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetCharacterProperties" xml:space="preserve">
+    <value>Hiba: a tulajdonságok beállításához a BeginInit hívása szükséges, vagy az objektumot hozzá kell adni a dokumentumhoz</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWord" xml:space="preserve">
+    <value>Szó törlése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful2" xml:space="preserve">
+    <value>Tarka táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDown" xml:space="preserve">
+    <value>Görgetés lefelé</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PasteDescription" xml:space="preserve">
+    <value>Vágólap tartalmának beillesztése.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeout" xml:space="preserve">
+    <value>Kettős áthúzás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraph" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkFollowed" xml:space="preserve">
+    <value>Már látott hiperhivatkozás</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationreference" xml:space="preserve">
+    <value>Jegyzethivatkozás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackward" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc9" xml:space="preserve">
+    <value>Címsor 9</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKey" xml:space="preserve">
+    <value>Backspace billentyű</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc6" xml:space="preserve">
+    <value>Címsor 6</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAsDescription" xml:space="preserve">
+    <value>Dokumentum mentése másként</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List4" xml:space="preserve">
+    <value>Lista 4</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentNone" xml:space="preserve">
+    <value>(nincs)</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent3" xml:space="preserve">
+    <value>Szövegtörzs behúzással 3</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldLastName" xml:space="preserve">
+    <value>Vezetéknév</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPostalCode" xml:space="preserve">
+    <value>Irányítószám</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKeyDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleHiddenTextDescription" xml:space="preserve">
+    <value>A kijelölt szöveg elrejtése.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic2" xml:space="preserve">
+    <value>Klasszikus táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalic" xml:space="preserve">
+    <value>Dőlt</value>
+  </data>
+  <data name="XtraRichEditStringId.UnderlineNone" xml:space="preserve">
+    <value>(nincs)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraph" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbolDescription" xml:space="preserve">
+    <value>Copyright szimbólum (©) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomDescription" xml:space="preserve">
+    <value>Nagyítás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UpdateFieldDescription" xml:space="preserve">
+    <value>Mező frissítése</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UsedWrongUnit" xml:space="preserve">
+    <value>A mértékegység nincs megfelelően megadva.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindDescription" xml:space="preserve">
+    <value>Szöveg keresése a dokumentumban.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMarkDescription" xml:space="preserve">
+    <value>Záró idézőjel (’) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid2" xml:space="preserve">
+    <value>Rácsos táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidFontSize" xml:space="preserve">
+    <value>Az számnak {0} és {1} között kell lenni.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespace" xml:space="preserve">
+    <value>Minden látszik ¶</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List3" xml:space="preserve">
+    <value>Lista 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_indexheading" xml:space="preserve">
+    <value>Tárgymutatócím</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index8" xml:space="preserve">
+    <value>Tárgymutató 8</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSizeDescription" xml:space="preserve">
+    <value>Betűméret csökkentése.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index6" xml:space="preserve">
+    <value>Tárgymutató 6</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForwardDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelection" xml:space="preserve">
+    <value>Kivágás</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList5" xml:space="preserve">
+    <value>Listaszerű táblázat 5</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSesquialteral" xml:space="preserve">
+    <value>1.5 sor</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPoint" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeftDescription" xml:space="preserve">
+    <value>Szöveg igazítása balra.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBack" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeoutDescription" xml:space="preserve">
+    <value>A kijelölt szöveg áthúzása a középvonalában dupla vonallal.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletList" xml:space="preserve">
+    <value>Felsorolás</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnknownSwitchArgument" xml:space="preserve">
+    <value>Hiba! Ismeretlen argumentum.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue5" xml:space="preserve">
+    <value>Lista folytatása 5</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPageDescription" xml:space="preserve">
+    <value>Görgetés a laphoz</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotereference" xml:space="preserve">
+    <value>Végjegyzet-hivatkozás</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList7" xml:space="preserve">
+    <value>Listaszerű táblázat 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableProfessional" xml:space="preserve">
+    <value>Profi táblázat</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index3" xml:space="preserve">
+    <value>Tárgymutató 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCode" xml:space="preserve">
+    <value>HTML-kód</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMark" xml:space="preserve">
+    <value>Dupla kezdő idézőjel („) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTypewriter" xml:space="preserve">
+    <value>HTML-írógép</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalTable" xml:space="preserve">
+    <value>Normál táblázat</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapSuffix" xml:space="preserve">
+    <value>Utótag</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Italic" xml:space="preserve">
+    <value>Dőlt</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleHiddenText" xml:space="preserve">
+    <value>Rejtett</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrintDescription" xml:space="preserve">
+    <value>Azonnali nyomtatás az alapértelmezett nyomtatóra a beállítások módosítása nélkül.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Undo" xml:space="preserve">
+    <value>Visszavonás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UpdateField" xml:space="preserve">
+    <value>Mező frissítése</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParagraphContainNumbering" xml:space="preserve">
+    <value>Hiba: a bekezdés már tartalmaz számozást</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyleDescription" xml:space="preserve">
+    <value>Címek, bekezdések és egyéb szövegek formázása a galéria stílusainak segítségével.</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPhoneticGuideFirstName" xml:space="preserve">
+    <value>Fonetikus leírás a keresztnévhez</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableElegant" xml:space="preserve">
+    <value>Elegáns táblázat</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_IsNotValid" xml:space="preserve">
+    <value>'{0}' nem érvényes érték '{1}' számára</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParentStyle" xml:space="preserve">
+    <value>Hiba: az érvénytelen szülő stílus hozzárendelés körkörös hivatkozást okozott</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintViewDescription" xml:space="preserve">
+    <value>Nyomtatási kép</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic3" xml:space="preserve">
+    <value>Klasszikus táblázat 3</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerNickName" xml:space="preserve">
+    <value>Házastárs/partner beceneve</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacing" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderline" xml:space="preserve">
+    <value>Kettős aláhúzás</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle1" xml:space="preserve">
+    <value>Finom táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList2" xml:space="preserve">
+    <value>Listaszerű táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue4" xml:space="preserve">
+    <value>Lista folytatása 4</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Underline" xml:space="preserve">
+    <value>Aláhúzás</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList4" xml:space="preserve">
+    <value>Listaszerű táblázat 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent2" xml:space="preserve">
+    <value>Szövegtörzs első sora 2</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapState" xml:space="preserve">
+    <value>Állapot</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocument" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Print" xml:space="preserve">
+    <value>Nyomt&amp;atás...</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyle" xml:space="preserve">
+    <value>Bekezdés beállítása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingView" xml:space="preserve">
+    <value>Olvasási elrendezés</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableoffigures" xml:space="preserve">
+    <value>Ábrajegyzék</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelection" xml:space="preserve">
+    <value>Másolás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLineDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocumentDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTabDescription" xml:space="preserve">
+    <value>Tabulátor beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsForm" xml:space="preserve">
+    <value>Tabulátorok</value>
+  </data>
+  <data name="XtraRichEditStringId.ClearFormatting" xml:space="preserve">
+    <value>Formázás törlése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotetext" xml:space="preserve">
+    <value>Végjegyzet szövege</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectForwardDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnexpectedEndOfFormula" xml:space="preserve">
+    <value>!Befejezetlen képlet.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndInit" xml:space="preserve">
+    <value>Hiba: EndInit vagy CancelInit hívása BeginInit nélkül vagy BeginUpdate közben</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAddress" xml:space="preserve">
+    <value>HTML-cím</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMark" xml:space="preserve">
+    <value>Dupla záró idézőjel (”) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUp" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress1" xml:space="preserve">
+    <value>Cím 1</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndUpdate" xml:space="preserve">
+    <value>Hiba: EndUpdate vagy CancelUpate hívása BeginUpdate nélkül vagy BeginInit közben</value>
+  </data>
+  <data name="XtraRichEditStringId.TabForm_All" xml:space="preserve">
+    <value>Mind</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleView" xml:space="preserve">
+    <value>Normál nézet</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet" xml:space="preserve">
+    <value>Felsorolás</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPictureDescription" xml:space="preserve">
+    <value>Kép beillesztése fájlból.</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationtext" xml:space="preserve">
+    <value>Jegyzetszöveg</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText" xml:space="preserve">
+    <value>Szövegtörzs</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDown" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftView" xml:space="preserve">
+    <value>Vázlat</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocument" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedSectionError" xml:space="preserve">
+    <value>Hiba: törölt mező használata</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_PlainText" xml:space="preserve">
+    <value>Csak szöveg</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSizeDescription" xml:space="preserve">
+    <value>Betűméret növelése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects2" xml:space="preserve">
+    <value>Térhatású táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_header" xml:space="preserve">
+    <value>Élőfej</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndent" xml:space="preserve">
+    <value>Behúzás növelése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleViewDescription" xml:space="preserve">
+    <value>Normál nézet</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraph" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPageDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDownDescription" xml:space="preserve">
+    <value>Görgetés lefelé</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText2" xml:space="preserve">
+    <value>Szövegtörzs 2</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns5" xml:space="preserve">
+    <value>Oszlopos táblázat 5</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMarkDescription" xml:space="preserve">
+    <value>Dupla záró idézőjel (”) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopereturn" xml:space="preserve">
+    <value>Feladó címe borítékon</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid6" xml:space="preserve">
+    <value>Rácsos táblázat 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid" xml:space="preserve">
+    <value>Rácsos táblázat</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacingDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnsupportedFormatException" xml:space="preserve">
+    <value>A fájlformátum nem támogatott</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLSample" xml:space="preserve">
+    <value>HTML-minta</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue3" xml:space="preserve">
+    <value>Lista folytatása 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc5" xml:space="preserve">
+    <value>Címsor 5</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInBackwardDirectionComplete" xml:space="preserve">
+    <value>A dokumentum átvizsgálása kész (hátra).</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespaceDescription" xml:space="preserve">
+    <value>Bekezdés jelek és egyéb rejtett formázási szimbólumok megjelenítése.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedParagraphError" xml:space="preserve">
+    <value>Hiba: törölt bekezdés használata</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyleDescription" xml:space="preserve">
+    <value>Stílus beállítása</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading5" xml:space="preserve">
+    <value>Címsor 5</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid7" xml:space="preserve">
+    <value>Rácsos táblázat 7</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc1" xml:space="preserve">
+    <value>Címsor 1</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOutDescription" xml:space="preserve">
+    <value>Kicsinyítés</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCountDescription" xml:space="preserve">
+    <value>Oszlopok</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList1" xml:space="preserve">
+    <value>Listaszerű táblázat 1</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Date" xml:space="preserve">
+    <value>Dátum</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRight" xml:space="preserve">
+    <value>Jobbra zárás</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful3" xml:space="preserve">
+    <value>Tarka táblázat 3</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapHomeFax" xml:space="preserve">
+    <value>Otthoni fax</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscript" xml:space="preserve">
+    <value>Felső index</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenterDescription" xml:space="preserve">
+    <value>Szöveg igazítása középre.</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapWebPage" xml:space="preserve">
+    <value>Weblap</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLBottomofForm" xml:space="preserve">
+    <value>HTML űrlap alja</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDash" xml:space="preserve">
+    <value>Hosszú gondolatjel (—) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndent" xml:space="preserve">
+    <value>Bekezdés behúzásának csökkentése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList2" xml:space="preserve">
+    <value>Vázlatos lista 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsFormDescription" xml:space="preserve">
+    <value>Tabulátorok</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList6" xml:space="preserve">
+    <value>Listaszerű táblázat 6</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid8" xml:space="preserve">
+    <value>Rácsos táblázat 8</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoteHeading" xml:space="preserve">
+    <value>Megjegyzésfej</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsis" xml:space="preserve">
+    <value>Kihagyás (...) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelList" xml:space="preserve">
+    <value>Többszintű lista</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index4" xml:space="preserve">
+    <value>Tárgymutató 4</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackward" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromBeginningQuestion" xml:space="preserve">
+    <value>Szeretné a dokumentum elején kezdeni a keresést?</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CreateField" xml:space="preserve">
+    <value>Mező létrehozása</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList3" xml:space="preserve">
+    <value>Listaszerű táblázat 3</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress3" xml:space="preserve">
+    <value>Cím 3</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapUniqueId" xml:space="preserve">
+    <value>Egyedi azonosító</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndent" xml:space="preserve">
+    <value>Behúzás csökkentése</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerTitle" xml:space="preserve">
+    <value>Házastárs/partner név előtag</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletListDescription" xml:space="preserve">
+    <value>Felsorolás kezdése.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForward" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindNext" xml:space="preserve">
+    <value>&amp;Következő</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_RedoDescription" xml:space="preserve">
+    <value>Visszavont művelet újra</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectBackward" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DefaultParagraphFont" xml:space="preserve">
+    <value>Bekezdés alapbetűtípusa</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbol" xml:space="preserve">
+    <value>RegisteredTrademark szimbólum (®) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet3" xml:space="preserve">
+    <value>Felsorolás 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading6" xml:space="preserve">
+    <value>Címsor 6</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocument" xml:space="preserve">
+    <value>Új</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple3" xml:space="preserve">
+    <value>Egyszerű táblázat 3</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic4" xml:space="preserve">
+    <value>Klasszikus táblázat 4</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet2" xml:space="preserve">
+    <value>Felsorolás 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLineDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading9" xml:space="preserve">
+    <value>Címsor 9</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPage" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocumentDescription" xml:space="preserve">
+    <value>Fájl megnyitása</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotereference" xml:space="preserve">
+    <value>Lábjegyzet-hivatkozás</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BlockText" xml:space="preserve">
+    <value>Szövegblokk</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingAtLeast" xml:space="preserve">
+    <value>Legalább</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple2" xml:space="preserve">
+    <value>Egyszerű táblázat 2</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackwardDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftViewDescription" xml:space="preserve">
+    <value>Vázlat</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCity" xml:space="preserve">
+    <value>Város</value>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerLastName" xml:space="preserve">
+    <value>Házastárs/partner vezetékneve</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbol" xml:space="preserve">
+    <value>Copyright szimbólum (©) beillesztése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableContemporary" xml:space="preserve">
+    <value>Modern táblázat</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraphDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidCopyFromDocumentModel" xml:space="preserve">
+    <value>Hiba: a forrás és cél dokumentum modellek eltérőek</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndent" xml:space="preserve">
+    <value>Bekezdés behúzásának növelése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSizeDescription" xml:space="preserve">
+    <value>Betűméret csökkentése</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading3" xml:space="preserve">
+    <value>Címsor 3</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_IncorrectNumericFieldFormat" xml:space="preserve">
+    <value>Hiba: a számot nem lehet a megadott formátumban megjeleníteni.</value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentIndented" xml:space="preserve">
+    <value>Első sor</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_HtmlFiles" xml:space="preserve">
+    <value>HTML fájl</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_RtfFiles" xml:space="preserve">
+    <value>Rich Text formátum</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_JPEGFiles" xml:space="preserve">
+    <value>JPEG képfájl</value>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Regular" xml:space="preserve">
+    <value>Normál</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraphDescription" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentRight" xml:space="preserve">
+    <value>Jobbra</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_PNGFiles" xml:space="preserve">
+    <value>PNG képfájl</value>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_BitmapFiles" xml:space="preserve">
+    <value>BMP képfájl</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraph" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldPrevToCaret" xml:space="preserve">
+    <value>Kurzor előtti mező kiválasztása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldNextToCaret" xml:space="preserve">
+    <value>Kurzor mögötti mező kiválasztása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowInsertMergeFieldForm" xml:space="preserve">
+    <value>Mező beszúrása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertField" xml:space="preserve">
+    <value>Mező beszúrása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleViewMergedData" xml:space="preserve">
+    <value>Beszúrt adatok megjelenítése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordCoreDescription" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowInsertMergeFieldFormDescription" xml:space="preserve">
+    <value>Mező hozzáadása címlistából vagy adattáblából.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackCore" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldPrevToCaretDescription" xml:space="preserve">
+    <value>Kurzor előtti mező kiválasztása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackCoreDescription" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackCoreDescription" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteCoreDescription" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldResults" xml:space="preserve">
+    <value>Összes mezőeredmény megjelenítése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFieldCodesDescription" xml:space="preserve">
+    <value>Váltás a mezőkódok és mezőértékek között</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldNextToCaretDescription" xml:space="preserve">
+    <value>Kurzor mögötti mező kiválasztása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldResultsDescription" xml:space="preserve">
+    <value>A dokumentum összes mezőjének helyén a mezőeredmény megjelenítése</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_PrintingUnavailable" xml:space="preserve">
+    <value>A nyomtatás nem lehetséges. Ellenőrizze, hogy az alábbi szerelvények telepítve vannak-e:
+{0}
+{1}</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordCore" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceTextDescription" xml:space="preserve">
+    <value>Szöveg cseréje</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleViewMergedDataDescription" xml:space="preserve">
+    <value>A dokumentum mezőinek helyén a valós adatok jelennek meg, így azt láthatja, amit a címzettek is fognak.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceText" xml:space="preserve">
+    <value>Csere</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldCodes" xml:space="preserve">
+    <value>Összes mezőkód megjelenítése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertFieldDescription" xml:space="preserve">
+    <value>Mező hozzáadása címlistából vagy adattáblából.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackCore" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldCodesDescription" xml:space="preserve">
+    <value>A dokumentum összes mezőjének helyén a mezőkód megjelenítése</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMergeField" xml:space="preserve">
+    <value>Mező beszúrása</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteCore" xml:space="preserve">
+    <value>
+    </value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedFieldError" xml:space="preserve">
+    <value>Hiba: mező bekezdés használata</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMergeFieldDescription" xml:space="preserve">
+    <value>Mező hozzáadása címlistából vagy adattáblából.</value>
+  </data>
+</root>

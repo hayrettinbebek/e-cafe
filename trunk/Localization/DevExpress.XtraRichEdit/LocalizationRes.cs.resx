@@ -1,0 +1,2102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="XtraRichEditStringId.Msg_IsNotValid" xml:space="preserve">
+    <value>'{0}' není správná hodnota pro '{1}'</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InternalError" xml:space="preserve">
+    <value>Interní chyba</value>
+    <comment>Internal error</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentCenter" xml:space="preserve">
+    <value>Na střed</value>
+    <comment>Centered</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentJustify" xml:space="preserve">
+    <value>Do bloku</value>
+    <comment>Justified</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentLeft" xml:space="preserve">
+    <value>Vlevo</value>
+    <comment>Left</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_AlignmentRight" xml:space="preserve">
+    <value>Vpravo</value>
+    <comment>Right</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentHanging" xml:space="preserve">
+    <value>Předsazení</value>
+    <comment>Hanging</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentIndented" xml:space="preserve">
+    <value>První řádek</value>
+    <comment>First line</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_FirstLineIndentNone" xml:space="preserve">
+    <value>(žádné)</value>
+    <comment>(none)</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingAtLeast" xml:space="preserve">
+    <value>Nejméně</value>
+    <comment>At least</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingDouble" xml:space="preserve">
+    <value>Dvojité</value>
+    <comment>Double</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingExactly" xml:space="preserve">
+    <value>Přesně</value>
+    <comment>Exactly</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingMultiple" xml:space="preserve">
+    <value>Násobky</value>
+    <comment>Multiple</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSesquialteral" xml:space="preserve">
+    <value>1.5 řádku</value>
+    <comment>1.5 lines</comment>
+  </data>
+  <data name="XtraRichEditStringId.Caption_LineSpacingSingle" xml:space="preserve">
+    <value>Jednoduché</value>
+    <comment>Single</comment>
+  </data>
+  <data name="XtraRichEditStringId.ClearFormatting" xml:space="preserve">
+    <value>Zrušit formátování</value>
+    <comment>Clear Formatting</comment>
+  </data>
+  <data name="XtraRichEditStringId.ColorAuto" xml:space="preserve">
+    <value>Automatická</value>
+    <comment>Auto</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationreference" xml:space="preserve">
+    <value>Odkaz na poznámku</value>
+    <comment>annotation reference</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationsubject" xml:space="preserve">
+    <value>Nadpis poznámky</value>
+    <comment>annotation subject</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_annotationtext" xml:space="preserve">
+    <value>Poznámka</value>
+    <comment>annotation text</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BalloonText" xml:space="preserve">
+    <value>Text bubliny</value>
+    <comment>Balloon Text</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BlockText" xml:space="preserve">
+    <value>Text v bloku</value>
+    <comment>Block Text</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText" xml:space="preserve">
+    <value>Základní text</value>
+    <comment>Body text</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText2" xml:space="preserve">
+    <value>Základní text 2</value>
+    <comment>Body Text 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyText3" xml:space="preserve">
+    <value>Základní text 3</value>
+    <comment>Body Text 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent" xml:space="preserve">
+    <value>Základní text - první odsazený</value>
+    <comment>Body Text First Indent</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextFirstIndent2" xml:space="preserve">
+    <value>Základní text - první odsazený 2</value>
+    <comment>Body Text First Indent 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent2" xml:space="preserve">
+    <value>Základní text odsazený 2</value>
+    <comment>Body Text Indent 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent3" xml:space="preserve">
+    <value>Základní text odsazený 3</value>
+    <comment>Body Text Indent 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_caption" xml:space="preserve">
+    <value>Titulek</value>
+    <comment>caption</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Closing" xml:space="preserve">
+    <value>Závěr</value>
+    <comment>Closing</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Date" xml:space="preserve">
+    <value>Datum</value>
+    <comment>Date</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DefaultParagraphFont" xml:space="preserve">
+    <value>Standardní písmo odstavce</value>
+    <comment>Default Paragraph Font</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_DocumentMap" xml:space="preserve">
+    <value>Rozvržení dokumentu</value>
+    <comment>Document Map</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_EmailSignature" xml:space="preserve">
+    <value>Podpis emailu</value>
+    <comment>E-mail Signature</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotereference" xml:space="preserve">
+    <value>Odkaz na vysvětlivky</value>
+    <comment>endnote reference</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_endnotetext" xml:space="preserve">
+    <value>Text vysvětlivek</value>
+    <comment>endnote text</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopeaddress" xml:space="preserve">
+    <value>Adresa na obálku</value>
+    <comment>envelope address</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_envelopereturn" xml:space="preserve">
+    <value>Zpáteční adresa na obálku</value>
+    <comment>envelope return</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footer" xml:space="preserve">
+    <value>Zápatí</value>
+    <comment>footer</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotereference" xml:space="preserve">
+    <value>Odkaz na poznámku pod čarou</value>
+    <comment>footnote reference</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_footnotetext" xml:space="preserve">
+    <value>Text poznámky pod čarou</value>
+    <comment>footnote text</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_header" xml:space="preserve">
+    <value>Záhlaví</value>
+    <comment>header</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading1" xml:space="preserve">
+    <value>Nadpis 1</value>
+    <comment>heading 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading2" xml:space="preserve">
+    <value>Nadpis 2</value>
+    <comment>heading 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading3" xml:space="preserve">
+    <value>Nadpis 3</value>
+    <comment>heading 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading4" xml:space="preserve">
+    <value>Nadpis 4</value>
+    <comment>heading 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading5" xml:space="preserve">
+    <value>Nadpis 5</value>
+    <comment>heading 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading6" xml:space="preserve">
+    <value>Nadpis 6</value>
+    <comment>heading 6</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading7" xml:space="preserve">
+    <value>Nadpis 7</value>
+    <comment>heading 7</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading8" xml:space="preserve">
+    <value>Nadpis 8</value>
+    <comment>heading 8</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_heading9" xml:space="preserve">
+    <value>Nadpis 9</value>
+    <comment>heading 9</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAcronym" xml:space="preserve">
+    <value>Zkratka HTML</value>
+    <comment>HTML Acronym</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLAddress" xml:space="preserve">
+    <value>Adresa HTML</value>
+    <comment>HTML Address</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLBottomofForm" xml:space="preserve">
+    <value>Zápatí HTML</value>
+    <comment>HTML Bottom of Form</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCite" xml:space="preserve">
+    <value>Citát HTML</value>
+    <comment>HTML Cite</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLCode" xml:space="preserve">
+    <value>Kód HTML</value>
+    <comment>HTML Code</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLDefinition" xml:space="preserve">
+    <value>Definice HTML</value>
+    <comment>HTML Definition</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLKeyboard" xml:space="preserve">
+    <value>Klávesnice HTML</value>
+    <comment>HTML Keyboard</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLPreformatted" xml:space="preserve">
+    <value>Formátovaný v HTML</value>
+    <comment>HTML Preformatted</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLSample" xml:space="preserve">
+    <value>Ukázka HTML</value>
+    <comment>HTML Sample</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTopofForm" xml:space="preserve">
+    <value>Záhlaví HTML</value>
+    <comment>HTML Top of Form</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLTypewriter" xml:space="preserve">
+    <value>Psací stroj HTML</value>
+    <comment>HTML Typewriter</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HTMLVariable" xml:space="preserve">
+    <value>Proměná HTML</value>
+    <comment>HTML Variable</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkFollowed" xml:space="preserve">
+    <value>Následující odkaz</value>
+    <comment>HyperlinkFollowed</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_HyperlinkStrongEmphasis" xml:space="preserve">
+    <value>Zdůrazněný odkaz</value>
+    <comment>HyperlinkStrongEmphasis</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index1" xml:space="preserve">
+    <value>Rejstřík 1</value>
+    <comment>index 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index2" xml:space="preserve">
+    <value>Rejstřík 2</value>
+    <comment>index 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index3" xml:space="preserve">
+    <value>Rejstřík 3</value>
+    <comment>index 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index4" xml:space="preserve">
+    <value>Rejstřík 4</value>
+    <comment>index 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index5" xml:space="preserve">
+    <value>Rejstřík 5</value>
+    <comment>index 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index6" xml:space="preserve">
+    <value>Rejstřík 6</value>
+    <comment>index 6</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index7" xml:space="preserve">
+    <value>Rejstřík 7</value>
+    <comment>index 7</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index8" xml:space="preserve">
+    <value>Rejstřík 8</value>
+    <comment>index 8</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_index9" xml:space="preserve">
+    <value>Rejstřík 9</value>
+    <comment>index 9</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_indexheading" xml:space="preserve">
+    <value>Nadpis rejstříku</value>
+    <comment>index heading</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_linenumber" xml:space="preserve">
+    <value>Číslo řádku</value>
+    <comment>line number</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List" xml:space="preserve">
+    <value>Seznam</value>
+    <comment>List</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List2" xml:space="preserve">
+    <value>Seznam 2</value>
+    <comment>List 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List3" xml:space="preserve">
+    <value>Seznam 3</value>
+    <comment>List 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List4" xml:space="preserve">
+    <value>Seznam 4</value>
+    <comment>List 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_List5" xml:space="preserve">
+    <value>Seznam 5</value>
+    <comment>List 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet" xml:space="preserve">
+    <value>Seznam s odrážkami</value>
+    <comment>List Bullet</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet2" xml:space="preserve">
+    <value>Seznam s odrážkami 2</value>
+    <comment>List Bullet 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet3" xml:space="preserve">
+    <value>Seznam s odrážkami 3</value>
+    <comment>List Bullet 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet4" xml:space="preserve">
+    <value>Seznam s odrážkami 4</value>
+    <comment>List Bullet 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListBullet5" xml:space="preserve">
+    <value>Seznam s odrážkami 5</value>
+    <comment>List Bullet 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue" xml:space="preserve">
+    <value>Pokračování seznamu</value>
+    <comment>List Continue</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue2" xml:space="preserve">
+    <value>Pokračování seznamu 2</value>
+    <comment>List Continue 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue3" xml:space="preserve">
+    <value>Pokračování seznamu 3</value>
+    <comment>List Continue 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue4" xml:space="preserve">
+    <value>Pokračování seznamu 4</value>
+    <comment>List Continue 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListContinue5" xml:space="preserve">
+    <value>Pokračování seznamu 5</value>
+    <comment>List Continue 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber" xml:space="preserve">
+    <value>Číslovaný seznam</value>
+    <comment>List Number</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber2" xml:space="preserve">
+    <value>Číslovaný seznam 2</value>
+    <comment>List Number 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber3" xml:space="preserve">
+    <value>Číslovaný seznam 3</value>
+    <comment>List Number 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber4" xml:space="preserve">
+    <value>Číslovaný seznam 4</value>
+    <comment>List Number 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_ListNumber5" xml:space="preserve">
+    <value>Číslovaný seznam 5</value>
+    <comment>List Number 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_macrotoaheading" xml:space="preserve">
+    <value>Záhlaví makra</value>
+    <comment>macro to a heading</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_MessageHeader" xml:space="preserve">
+    <value>Hlavička zprávy</value>
+    <comment>Message Header</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoList" xml:space="preserve">
+    <value>Bez seznamu</value>
+    <comment>No List</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Normal" xml:space="preserve">
+    <value>Normální</value>
+    <comment>Normal</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalIndent" xml:space="preserve">
+    <value>Normální odsazený</value>
+    <comment>Normal Indent</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalTable" xml:space="preserve">
+    <value>Normální tabulka</value>
+    <comment>Normal Table</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NormalWeb" xml:space="preserve">
+    <value>Normální (Web)</value>
+    <comment>Normal (Web)</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_NoteHeading" xml:space="preserve">
+    <value>Záhlaví poznámky</value>
+    <comment>Note Heading</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList1" xml:space="preserve">
+    <value>Seznam osnovy 1</value>
+    <comment>Outline List 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList2" xml:space="preserve">
+    <value>Seznam osnovy 2</value>
+    <comment>Outline List 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_OutlineList3" xml:space="preserve">
+    <value>Seznam osnovy 3</value>
+    <comment>Outline List 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_pagenumber" xml:space="preserve">
+    <value>Číslo stránky</value>
+    <comment>page number</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_PlainText" xml:space="preserve">
+    <value>Prostý text</value>
+    <comment>Plain Text</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Salutation" xml:space="preserve">
+    <value>Oslovení</value>
+    <comment>Salutation</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Signature" xml:space="preserve">
+    <value>Podpis</value>
+    <comment>Signature</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Subtitle" xml:space="preserve">
+    <value>Podtitul</value>
+    <comment>Subtitle</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects1" xml:space="preserve">
+    <value>Tabulka s prostorovými efekty 1</value>
+    <comment>Table 3D effects 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects2" xml:space="preserve">
+    <value>Tabulka s prostorovými efekty 2</value>
+    <comment>Table 3D effects 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Table3Deffects3" xml:space="preserve">
+    <value>Tabulka s prostorovými efekty 3</value>
+    <comment>Table 3D effects 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic1" xml:space="preserve">
+    <value>Klasická tabulka 1</value>
+    <comment>Table Classic 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic2" xml:space="preserve">
+    <value>Klasická tabulka 2</value>
+    <comment>Table Classic 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic3" xml:space="preserve">
+    <value>Klasická tabulka 3</value>
+    <comment>Table Classic 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableClassic4" xml:space="preserve">
+    <value>Klasická tabulka 4</value>
+    <comment>Table Classic 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful1" xml:space="preserve">
+    <value>Barevná tabulka 1</value>
+    <comment>Table Colorful 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful2" xml:space="preserve">
+    <value>Barevná tabulka 2</value>
+    <comment>Table Colorful 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColorful3" xml:space="preserve">
+    <value>Barevná tabulka 3</value>
+    <comment>Table Colorful 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns1" xml:space="preserve">
+    <value>Sloupec tabulky 1</value>
+    <comment>Table Columns 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns2" xml:space="preserve">
+    <value>Sloupec tabulky 2</value>
+    <comment>Table Columns 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns3" xml:space="preserve">
+    <value>Sloupec tabulky 3</value>
+    <comment>Table Columns 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns4" xml:space="preserve">
+    <value>Sloupec tabulky 4</value>
+    <comment>Table Columns 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableColumns5" xml:space="preserve">
+    <value>Sloupec tabulky 5</value>
+    <comment>Table Columns 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableContemporary" xml:space="preserve">
+    <value>Moderní tabulka</value>
+    <comment>Table Contemporary</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableElegant" xml:space="preserve">
+    <value>Elegantní tabulka</value>
+    <comment>Table Elegant</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid" xml:space="preserve">
+    <value>Mřížka tabulky</value>
+    <comment>Table Grid</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid1" xml:space="preserve">
+    <value>Mřížka tabulky 1</value>
+    <comment>Table Grid 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid2" xml:space="preserve">
+    <value>Mřížka tabulky 2</value>
+    <comment>Table Grid 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid3" xml:space="preserve">
+    <value>Mřížka tabulky 3</value>
+    <comment>Table Grid 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid4" xml:space="preserve">
+    <value>Mřížka tabulky 4</value>
+    <comment>Table Grid 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid5" xml:space="preserve">
+    <value>Mřížka tabulky 5</value>
+    <comment>Table Grid 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid6" xml:space="preserve">
+    <value>Mřížka tabulky 6</value>
+    <comment>Table Grid 6</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid7" xml:space="preserve">
+    <value>Mřížka tabulky 7</value>
+    <comment>Table Grid 7</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableGrid8" xml:space="preserve">
+    <value>Mřížka tabulky 8</value>
+    <comment>Table Grid 8</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList1" xml:space="preserve">
+    <value>Tabulka jako seznam 1</value>
+    <comment>Table List 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList2" xml:space="preserve">
+    <value>Tabulka jako seznam 2</value>
+    <comment>Table List 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList3" xml:space="preserve">
+    <value>Tabulka jako seznam 3</value>
+    <comment>Table List 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList4" xml:space="preserve">
+    <value>Tabulka jako seznam 4</value>
+    <comment>Table List 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList5" xml:space="preserve">
+    <value>Tabulka jako seznam 5</value>
+    <comment>Table List 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList6" xml:space="preserve">
+    <value>Tabulka jako seznam 6</value>
+    <comment>Table List 6</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList7" xml:space="preserve">
+    <value>Tabulka jako seznam 7</value>
+    <comment>Table List 7</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableList8" xml:space="preserve">
+    <value>Tabulka jako seznam 8</value>
+    <comment>Table List 8</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableofauthorities" xml:space="preserve">
+    <value>Seznam citací</value>
+    <comment>table of authorities</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_tableoffigures" xml:space="preserve">
+    <value>Seznam obrázků</value>
+    <comment>table of figures</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableProfessional" xml:space="preserve">
+    <value>Profesionální tabulka</value>
+    <comment>Table Professional</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple1" xml:space="preserve">
+    <value>Jednoduchá tabulka 1</value>
+    <comment>Table Simple 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple2" xml:space="preserve">
+    <value>Jednoduchá tabulka 2</value>
+    <comment>Table Simple 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSimple3" xml:space="preserve">
+    <value>Jednoduchá tabulka 3</value>
+    <comment>Table Simple 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle1" xml:space="preserve">
+    <value>Podnadpis tabulky 1</value>
+    <comment>Table Subtle 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableSubtle2" xml:space="preserve">
+    <value>Podnadpis tabulky 2</value>
+    <comment>Table Subtle 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb1" xml:space="preserve">
+    <value>Webová tabulka 1</value>
+    <comment>Table Web 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb2" xml:space="preserve">
+    <value>Webová tabulka 2</value>
+    <comment>Table Web 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_TableWeb3" xml:space="preserve">
+    <value>Webová tabulka 3</value>
+    <comment>Table Web 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_Title" xml:space="preserve">
+    <value>Titulek</value>
+    <comment>Title</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc1" xml:space="preserve">
+    <value>Obsah 1</value>
+    <comment>toc 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc2" xml:space="preserve">
+    <value>Obsah 2</value>
+    <comment>toc 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc3" xml:space="preserve">
+    <value>Obsah 3</value>
+    <comment>toc 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc4" xml:space="preserve">
+    <value>Obsah 4</value>
+    <comment>toc 4</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc5" xml:space="preserve">
+    <value>Obsah 5</value>
+    <comment>toc 5</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc6" xml:space="preserve">
+    <value>Obsah 6</value>
+    <comment>toc 6</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc7" xml:space="preserve">
+    <value>Obsah 7</value>
+    <comment>toc 7</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc8" xml:space="preserve">
+    <value>Obsah 8</value>
+    <comment>toc 8</comment>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_toc9" xml:space="preserve">
+    <value>Obsah 9</value>
+    <comment>toc 9</comment>
+  </data>
+  <data name="XtraRichEditStringId.DialogCaption_InsertSymbol" xml:space="preserve">
+    <value>Symbol</value>
+    <comment>Symbol</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldLastName" xml:space="preserve">
+    <value>Příjmení</value>
+    <comment>Last Name</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress1" xml:space="preserve">
+    <value>Adresa 1</value>
+    <comment>Address 1</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress2" xml:space="preserve">
+    <value>Adresa 2</value>
+    <comment>Address 2</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapAddress3" xml:space="preserve">
+    <value>Adresa 3</value>
+    <comment>Address 3</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapBusinessFax" xml:space="preserve">
+    <value>Fax do zaměstnání</value>
+    <comment>Business Fax</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapBusinessPhone" xml:space="preserve">
+    <value>Telefon do zaměstnání</value>
+    <comment>Business Phone</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCity" xml:space="preserve">
+    <value>Město</value>
+    <comment>City</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCompany" xml:space="preserve">
+    <value>Společnost</value>
+    <comment>Company</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapCountry" xml:space="preserve">
+    <value>Okres</value>
+    <comment>Country or Region</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapDepartment" xml:space="preserve">
+    <value>Oddělení</value>
+    <comment>Department</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapEMailAddress" xml:space="preserve">
+    <value>Elektronická adresa</value>
+    <comment>E-mail Address</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapFirstName" xml:space="preserve">
+    <value>Jméno</value>
+    <comment>First Name</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapHomeFax" xml:space="preserve">
+    <value>Fax domů</value>
+    <comment>Home Fax</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapHomePhone" xml:space="preserve">
+    <value>Telefon domů</value>
+    <comment>Home Phone</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapJobTitle" xml:space="preserve">
+    <value>Profese</value>
+    <comment>Job Title</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapMiddleName" xml:space="preserve">
+    <value>Střední jméno</value>
+    <comment>Middle Name</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapNickName" xml:space="preserve">
+    <value>Přezdívka</value>
+    <comment>Nickname</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerFirstName" xml:space="preserve">
+    <value>Jméno manžela/artnera</value>
+    <comment>Spouse/Partner First Name</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerLastName" xml:space="preserve">
+    <value>Příjmení manžela/partnera</value>
+    <comment>Spouse/Partner Last Name</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerMiddleName" xml:space="preserve">
+    <value>Střední jméno manžela/partnera</value>
+    <comment>Spouse/Partner Middle Name</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerNickName" xml:space="preserve">
+    <value>Přezdívka manžela/partnera</value>
+    <comment>Spouse/Partner Nickname</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPartnerTitle" xml:space="preserve">
+    <value>Titul manžela/partnera</value>
+    <comment>Spouse/Partner Courtesy Title</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPhoneticGuideFirstName" xml:space="preserve">
+    <value>Výslovnost jména</value>
+    <comment>Phonetic Guide for First Name</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPhoneticGuideLastName" xml:space="preserve">
+    <value>Výslovnost příjmení</value>
+    <comment>Phonetic Guide for Last Name</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapPostalCode" xml:space="preserve">
+    <value>PSČ</value>
+    <comment>Postal Code</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapState" xml:space="preserve">
+    <value>Stát</value>
+    <comment>State</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapSuffix" xml:space="preserve">
+    <value>Titul za jménem</value>
+    <comment>Suffix</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapTitle" xml:space="preserve">
+    <value>Titul</value>
+    <comment>Courtesy Title</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapUniqueId" xml:space="preserve">
+    <value>Unikátní identifikátor</value>
+    <comment>Unique Identifier</comment>
+  </data>
+  <data name="XtraRichEditStringId.FieldMapWebPage" xml:space="preserve">
+    <value>Webová stránka</value>
+    <comment>Web Page</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllFiles" xml:space="preserve">
+    <value>Všechny soubory</value>
+    <comment>All Files</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_AllSupportedFiles" xml:space="preserve">
+    <value>Všechny podporované soubory</value>
+    <comment>All Supported Files</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_BitmapFiles" xml:space="preserve">
+    <value>Obrázek ve formátu Windows BMP</value>
+    <comment>Bitmap</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_HtmlFiles" xml:space="preserve">
+    <value>Webová stránka</value>
+    <comment>HyperText Markup Language Format</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_JPEGFiles" xml:space="preserve">
+    <value>Obrázek formátu JPEG</value>
+    <comment>JPEG File Interchange Format</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_MhtFiles" xml:space="preserve">
+    <value>Webová stránka - jediný soubor</value>
+    <comment>Web Archive, single file</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_OpenXmlFiles" xml:space="preserve">
+    <value>Document aplikace Word 2007</value>
+    <comment>Word 2007 Document</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_PNGFiles" xml:space="preserve">
+    <value>Obrázek formátu PNG</value>
+    <comment>Portable Network Graphics</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_RtfFiles" xml:space="preserve">
+    <value>Soubor formátu RTF</value>
+    <comment>Rich Text Format</comment>
+  </data>
+  <data name="XtraRichEditStringId.FileFilterDescription_TextFiles" xml:space="preserve">
+    <value>Textový soubor</value>
+    <comment>Text Files</comment>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Bold" xml:space="preserve">
+    <value>Tučné</value>
+    <comment>Bold</comment>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Italic" xml:space="preserve">
+    <value>Kurzíva</value>
+    <comment>Italic</comment>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Regular" xml:space="preserve">
+    <value>Obyčejné</value>
+    <comment>Regular</comment>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Strikeout" xml:space="preserve">
+    <value>Přeškrtnuté</value>
+    <comment>Strikeout</comment>
+  </data>
+  <data name="XtraRichEditStringId.FontStyle_Underline" xml:space="preserve">
+    <value>Podtržené</value>
+    <comment>Underline</comment>
+  </data>
+  <data name="XtraRichEditStringId.LinkedCharacterStyleFormatString" xml:space="preserve">
+    <value>{0} znak</value>
+    <comment>{0} Char</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKey" xml:space="preserve">
+    <value>BackSpaceKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_BackSpaceKeyDescription" xml:space="preserve">
+    <value>BackSpaceKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyle" xml:space="preserve">
+    <value>ChangeCharacterStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeCharacterStyleDescription" xml:space="preserve">
+    <value>ChangeCharacterStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCount" xml:space="preserve">
+    <value>Sloupce</value>
+    <comment>Columns</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeColumnCountDescription" xml:space="preserve">
+    <value>Počet sloupců</value>
+    <comment>Columns</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColor" xml:space="preserve">
+    <value>Barva písma</value>
+    <comment>Font Color</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontColorDescription" xml:space="preserve">
+    <value>Nastaví barvu písma.</value>
+    <comment>Change the font color.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontName" xml:space="preserve">
+    <value>Písmo</value>
+    <comment>Font</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontNameDescription" xml:space="preserve">
+    <value>Nastavení vzhledu písma.</value>
+    <comment>Change the font face.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSize" xml:space="preserve">
+    <value>Velikost písma</value>
+    <comment>Font Size</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeFontSizeDescription" xml:space="preserve">
+    <value>Nastavení velikost písma.</value>
+    <comment>Change the font size.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndent" xml:space="preserve">
+    <value>ChangeIndent</value>
+    <comment>ChangeIndent</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeIndentDescription" xml:space="preserve">
+    <value>ChangeIndentDescription</value>
+    <comment>ChangeIndentDescription</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeMistakenWord" xml:space="preserve">
+    <value>(no spelling suggestions)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeMistakenWordDescription" xml:space="preserve">
+    <value>(no spelling suggestions)</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyle" xml:space="preserve">
+    <value>ChangeParagraphStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeParagraphStyleDescription" xml:space="preserve">
+    <value>ChangeParagraphStyle</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyle" xml:space="preserve">
+    <value>Rychlé styly</value>
+    <comment>Quick Styles</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ChangeStyleDescription" xml:space="preserve">
+    <value>Nastaví styl nadpisů, textů, odkazů, rejstříků a dalších. </value>
+    <comment>Format titles, quotes, and other text using this gallery of styles.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ClearFormatting" xml:space="preserve">
+    <value>Vymazat formátování</value>
+    <comment>Clear Formatting</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ClearFormattingDescription" xml:space="preserve">
+    <value>Zruší veškeré formátování ve vybrané části a ponechá pouze prostý text.</value>
+    <comment>Clear all the formatting from the selection, leaving only plain text.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelection" xml:space="preserve">
+    <value>Kopírovat</value>
+    <comment>Copy</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CopySelectionDescription" xml:space="preserve">
+    <value>Zkopíruje výběr a umístí ho do schránky.</value>
+    <comment>Copy the selection and put it on the Clipboard.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CreateField" xml:space="preserve">
+    <value>Vitvořit pole</value>
+    <comment>Create Field</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CreateFieldDescription" xml:space="preserve">
+    <value>Umožňuje ytvořit pole</value>
+    <comment>Create Field</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelection" xml:space="preserve">
+    <value>Vyjmout</value>
+    <comment>Cut</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_CutSelectionDescription" xml:space="preserve">
+    <value>Vyjme vybrané položky z dokumentu a vloží je do schránky.</value>
+    <comment>Cut the selection from the document and put it on the Clipboard.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSize" xml:space="preserve">
+    <value>Zmenšit písmo</value>
+    <comment>Shrink Font</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecreaseFontSizeDescription" xml:space="preserve">
+    <value>Zmenší velikost písma.</value>
+    <comment>Decrease the font size.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSize" xml:space="preserve">
+    <value>DecrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementFontSizeDescription" xml:space="preserve">
+    <value>DecrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndent" xml:space="preserve">
+    <value>Zmenšit odsazení</value>
+    <comment>Decrease Indent</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementIndentDescription" xml:space="preserve">
+    <value>Slouží k snížení úrovně odsazení odstavce.</value>
+    <comment>Decrease the indent level of the paragraph.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraph" xml:space="preserve">
+    <value>DecrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementNumerationFromParagraphDescription" xml:space="preserve">
+    <value>DecrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndent" xml:space="preserve">
+    <value>DecrementParagraphLeftIndent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DecrementParagraphLeftIndentDescription" xml:space="preserve">
+    <value>DecrementParagraphLeftIndentDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Delete" xml:space="preserve">
+    <value>Odstanit</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBack" xml:space="preserve">
+    <value>DeleteBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackCore" xml:space="preserve">
+    <value>DeleteBackCore</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackCoreDescription" xml:space="preserve">
+    <value>DeleteBackCoreDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteBackDescription" xml:space="preserve">
+    <value>DeleteBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteCore" xml:space="preserve">
+    <value>DeleteCore</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteCoreDescription" xml:space="preserve">
+    <value>DeleteCoreDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteDescription" xml:space="preserve">
+    <value>Odstraní vybranou část dokumentu.</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraph" xml:space="preserve">
+    <value>DeleteNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteNumerationFromParagraphDescription" xml:space="preserve">
+    <value>DeleteNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWord" xml:space="preserve">
+    <value>DeleteWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBack" xml:space="preserve">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackCore" xml:space="preserve">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackCoreDescription" xml:space="preserve">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordBackDescription" xml:space="preserve">
+    <value>DeleteWordBack</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordCore" xml:space="preserve">
+    <value>DeleteWordCore</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordCoreDescription" xml:space="preserve">
+    <value>DeleteWordCoreDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DeleteWordDescription" xml:space="preserve">
+    <value>DeleteWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftView" xml:space="preserve">
+    <value>Koncept</value>
+    <comment>Draft View</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_DraftViewDescription" xml:space="preserve">
+    <value>Umožňuje zobrazit dokument jako koncept za účelem rychlé úpravy textu.</value>
+    <comment>Draft View</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontally" xml:space="preserve">
+    <value>EnsureCaretVisibleHorizontally</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleHorizontallyDescription" xml:space="preserve">
+    <value>EnsureCaretVisibleHorizontally</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVertically" xml:space="preserve">
+    <value>EnsureCaretVisibleVertically</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_EnsureCaretVisibleVerticallyDescription" xml:space="preserve">
+    <value>EnsureCaretVisibleVertically</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Find" xml:space="preserve">
+    <value>Najít</value>
+    <comment>Find</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectBackward" xml:space="preserve">
+    <value>FindAndSelectBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectBackwardDescription" xml:space="preserve">
+    <value>FindAndSelectBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectForward" xml:space="preserve">
+    <value>FindAndSelectForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindAndSelectForwardDescription" xml:space="preserve">
+    <value>FindAndSelectForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindDescription" xml:space="preserve">
+    <value>Vyhledá text v dokumentu</value>
+    <comment>Find text in the document.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindNext" xml:space="preserve">
+    <value>Najít další</value>
+    <comment>Find Next</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindNextDescription" xml:space="preserve">
+    <value>Vyhledá další výskyt textu v dokumentu.</value>
+    <comment>Repeats the last search forward.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindPrev" xml:space="preserve">
+    <value>Najít předchozí</value>
+    <comment>Find Prev</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FindPrevDescription" xml:space="preserve">
+    <value>Vyhledá předchozí výskyt textu v dokumentu.</value>
+    <comment>Repeats the last search backward.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscript" xml:space="preserve">
+    <value>Dolní index</value>
+    <comment>Subscript</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSubscriptDescription" xml:space="preserve">
+    <value>Umožňuje vytvořit malá písmena pod základní čárou textu.</value>
+    <comment>Create small letters below the text baseline.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscript" xml:space="preserve">
+    <value>Horní index</value>
+    <comment>Superscript</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_FontSuperscriptDescription" xml:space="preserve">
+    <value>Umožňuje vytvořit malá písmena nad základní čárou textu.</value>
+    <comment>Create small letters above the line of text.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightText" xml:space="preserve">
+    <value>Barva zvýraznění textu</value>
+    <comment>Text Highlight Color</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_HighlightTextDescription" xml:space="preserve">
+    <value>Slouží k nastavení barevného pozadí zvýrazněného textu.</value>
+    <comment>Make text look like it was marked with a highlighter pen.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSize" xml:space="preserve">
+    <value>Zvětšit písmo</value>
+    <comment>Grow Font</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncreaseFontSizeDescription" xml:space="preserve">
+    <value>Provede zvětšení písma.</value>
+    <comment>Increase the font size.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSize" xml:space="preserve">
+    <value>IncrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementFontSizeDescription" xml:space="preserve">
+    <value>IncrementFontSize</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndent" xml:space="preserve">
+    <value>Zvětšit odsazení</value>
+    <comment>Increase Indent</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementIndentDescription" xml:space="preserve">
+    <value>Slouží k zvýšení úrovně odsazení odstavce.</value>
+    <comment>Increase the indent level of the paragraph.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraph" xml:space="preserve">
+    <value>IncrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementNumerationFromParagraphDescription" xml:space="preserve">
+    <value>IncrementNumerationFromParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndent" xml:space="preserve">
+    <value>IncrementParagraphLeftIndent</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_IncrementParagraphLeftIndentDescription" xml:space="preserve">
+    <value>IncrementParagraphLeftIndentDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletList" xml:space="preserve">
+    <value>Odrážky</value>
+    <comment>Bullets</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertBulletListDescription" xml:space="preserve">
+    <value>Začne seznam s odrážkami.</value>
+    <comment>Start a bulleted list.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMark" xml:space="preserve">
+    <value>InsertClosingDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingDoubleQuotationMarkDescription" xml:space="preserve">
+    <value>InsertClosingDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMark" xml:space="preserve">
+    <value>InsertClosingSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertClosingSingleQuotationMarkDescription" xml:space="preserve">
+    <value>InsertClosingSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreak" xml:space="preserve">
+    <value>InsertColumnBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertColumnBreakDescription" xml:space="preserve">
+    <value>InsertColumnBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbol" xml:space="preserve">
+    <value>InsertCopyrightSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertCopyrightSymbolDescription" xml:space="preserve">
+    <value>InsertCopyrightSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsis" xml:space="preserve">
+    <value>InsertEllipsis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEllipsisDescription" xml:space="preserve">
+    <value>InsertEllipsis</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDash" xml:space="preserve">
+    <value>InsertEmDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEmDashDescription" xml:space="preserve">
+    <value>InsertEmDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDash" xml:space="preserve">
+    <value>InsertEnDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertEnDashDescription" xml:space="preserve">
+    <value>InsertEnDash</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertField" xml:space="preserve">
+    <value>InsertField</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertFieldDescription" xml:space="preserve">
+    <value>InsertField</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreak" xml:space="preserve">
+    <value>InsertLineBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertLineBreakDescription" xml:space="preserve">
+    <value>InsertLineBreak</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMergeField" xml:space="preserve">
+    <value>InsertMergeField</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMergeFieldDescription" xml:space="preserve">
+    <value>InsertMergeFieldDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelList" xml:space="preserve">
+    <value>Víceúrovňový seznam</value>
+    <comment>Multilevel list</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertMultilevelListDescription" xml:space="preserve">
+    <value>Začne víceúrovňový seznam.</value>
+    <comment>Start a multilevel list.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpace" xml:space="preserve">
+    <value>InsertNonBreakingSpace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertNonBreakingSpaceDescription" xml:space="preserve">
+    <value>InsertNonBreakingSpace</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMark" xml:space="preserve">
+    <value>InsertOpeningDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningDoubleQuotationMarkDescription" xml:space="preserve">
+    <value>InsertOpeningDoubleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMark" xml:space="preserve">
+    <value>InsertOpeningSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertOpeningSingleQuotationMarkDescription" xml:space="preserve">
+    <value>InsertOpeningSingleQuotationMark</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreak" xml:space="preserve">
+    <value>Konec stránky</value>
+    <comment>Page Break</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPageBreakDescription" xml:space="preserve">
+    <value>Začne další stránku na aktuální pozici.</value>
+    <comment>Start the next page at the current position.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraph" xml:space="preserve">
+    <value>InsertParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertParagraphDescription" xml:space="preserve">
+    <value>InsertParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPicture" xml:space="preserve">
+    <value>Obrázek ze souboru</value>
+    <comment>Insert Picture from File</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertPictureDescription" xml:space="preserve">
+    <value>Umožňuje vložit obrázek ze souboru.</value>
+    <comment>Insert a picture from a file.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbol" xml:space="preserve">
+    <value>InsertRegisteredTrademark Symbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertRegisteredTrademarkSymbolDescription" xml:space="preserve">
+    <value>InsertRegisteredTrademark Symbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleList" xml:space="preserve">
+    <value>Číslování</value>
+    <comment>Numbering</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertSimpleListDescription" xml:space="preserve">
+    <value>Začne číslovaný seznam.</value>
+    <comment>Start a numbering list.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTab" xml:space="preserve">
+    <value>Tabulka</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTabDescription" xml:space="preserve">
+    <value>Umožnuje do dokumentu vložit tabulku</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertText" xml:space="preserve">
+    <value>InsertText</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTextDescription" xml:space="preserve">
+    <value>InsertText</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbol" xml:space="preserve">
+    <value>InsertTrademarkSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_InsertTrademarkSymbolDescription" xml:space="preserve">
+    <value>InsertTrademarkSymbol</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocument" xml:space="preserve">
+    <value>Otevřít</value>
+    <comment>Open</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_LoadDocumentDescription" xml:space="preserve">
+    <value>Umožňuje otevřít uložený dokument.</value>
+    <comment>Open</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackward" xml:space="preserve">
+    <value>MoveBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveBackwardDescription" xml:space="preserve">
+    <value>MoveBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForward" xml:space="preserve">
+    <value>MoveForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveForwardDescription" xml:space="preserve">
+    <value>MoveForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDown" xml:space="preserve">
+    <value>MoveLineDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineDownDescription" xml:space="preserve">
+    <value>MoveLineDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUp" xml:space="preserve">
+    <value>MoveLineUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveLineUpDescription" xml:space="preserve">
+    <value>MoveLineUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPage" xml:space="preserve">
+    <value>MoveNextPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextPageDescription" xml:space="preserve">
+    <value>MoveNextPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraph" xml:space="preserve">
+    <value>MoveNextParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextParagraphDescription" xml:space="preserve">
+    <value>MoveNextParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWord" xml:space="preserve">
+    <value>MoveNextWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveNextWordDescription" xml:space="preserve">
+    <value>MoveNextWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPage" xml:space="preserve">
+    <value>MovePreviousPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousPageDescription" xml:space="preserve">
+    <value>MovePreviousPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraph" xml:space="preserve">
+    <value>MovePreviousParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousParagraphDescription" xml:space="preserve">
+    <value>MovePreviousParagraph</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWord" xml:space="preserve">
+    <value>MovePreviousWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MovePreviousWordDescription" xml:space="preserve">
+    <value>MovePreviousWord</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDown" xml:space="preserve">
+    <value>MoveScreenDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenDownDescription" xml:space="preserve">
+    <value>MoveScreenDown</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUp" xml:space="preserve">
+    <value>MoveScreenUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveScreenUpDescription" xml:space="preserve">
+    <value>MoveScreenUp</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocument" xml:space="preserve">
+    <value>MoveToBeginBeginOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToBeginOfDocumentDescription" xml:space="preserve">
+    <value>MoveToBeginBeginOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocument" xml:space="preserve">
+    <value>MoveToEndOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfDocumentDescription" xml:space="preserve">
+    <value>MoveToEndOfDocument</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLine" xml:space="preserve">
+    <value>MoveToEndOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToEndOfLineDescription" xml:space="preserve">
+    <value>MoveToEndOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLine" xml:space="preserve">
+    <value>MoveToBeginOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_MoveToStartOfLineDescription" xml:space="preserve">
+    <value>MoveToBeginOfLine</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocument" xml:space="preserve">
+    <value>Nový</value>
+    <comment>New</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_NewEmptyDocumentDescription" xml:space="preserve">
+    <value>Umožňuje založit nový dokument.</value>
+    <comment>Create a new document.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenter" xml:space="preserve">
+    <value>Zarovnat na střed</value>
+    <comment>Center</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentCenterDescription" xml:space="preserve">
+    <value>Zarovná text na střed.</value>
+    <comment>Center text.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustify" xml:space="preserve">
+    <value>Zarovnat do bloku</value>
+    <comment>Justify</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentJustifyDescription" xml:space="preserve">
+    <value>Zarovná text na levém i pravém okraji stránky a dle potřeby přidá mezi slova mezery navíc.
+
+Vznikne tak úhledný vzhled pravého i levého okraje stránky.</value>
+    <comment>Align text to both left and right margins, adding extra space between words as necessary.
+
+This creates a clean look along the left and right side of the page.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeft" xml:space="preserve">
+    <value>Zarovnat vlevo</value>
+    <comment>Align Text Left</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentLeftDescription" xml:space="preserve">
+    <value>Zarovná text k levému okraji stránky.</value>
+    <comment>Align text to the left.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRight" xml:space="preserve">
+    <value>Zarovnat vpravo</value>
+    <comment>Align Text Right</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ParagraphAlignmentRightDescription" xml:space="preserve">
+    <value>Zarovná text k pravému okraji stránky.</value>
+    <comment>Align text to the right.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Paste" xml:space="preserve">
+    <value>Vložit</value>
+    <comment>Paste</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PasteDescription" xml:space="preserve">
+    <value>Vloží obsah schránky do dokumentu.</value>
+    <comment>Paste the contents of the Clipboard.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPoint" xml:space="preserve">
+    <value>PlaceCaretToPhysicalPoint</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PlaceCaretToPhysicalPointDescription" xml:space="preserve">
+    <value>PlaceCaretToPhysicalPoint</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Print" xml:space="preserve">
+    <value>Tisk</value>
+    <comment>&amp;Print</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintDescription" xml:space="preserve">
+    <value>Umožňuje před tiskem vybrat tiskárnu, počet kopií, a další možnosti tisku.</value>
+    <comment>Select a printer, number of copies, and other printing options before printing.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreview" xml:space="preserve">
+    <value>Náhled</value>
+    <comment>Print Pre&amp;view</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintPreviewDescription" xml:space="preserve">
+    <value>Náhled na dokument před vytištěním.</value>
+    <comment>Preview and make changes to pages before printing.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintView" xml:space="preserve">
+    <value>Tisk zobrazení</value>
+    <comment>Print View</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_PrintViewDescription" xml:space="preserve">
+    <value>Tisk zobrazení</value>
+    <comment>Print View</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrint" xml:space="preserve">
+    <value>Rychlý tisk</value>
+    <comment>&amp;Quick Print</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_QuickPrintDescription" xml:space="preserve">
+    <value>Odešle dokument přímo na výchozí tiskárnu bez možnosti nastavení parametrů tisku.</value>
+    <comment>Send the document directly to the default printer without making changes.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingView" xml:space="preserve">
+    <value>Reading View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReadingViewDescription" xml:space="preserve">
+    <value>Reading View</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Redo" xml:space="preserve">
+    <value>Opakovat</value>
+    <comment>Redo</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_RedoDescription" xml:space="preserve">
+    <value>Opakovat</value>
+    <comment>Redo</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Replace" xml:space="preserve">
+    <value>Nahradit</value>
+    <comment>Replace</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackward" xml:space="preserve">
+    <value>ReplaceAllBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllBackwardDescription" xml:space="preserve">
+    <value>ReplaceAllBackwardDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForward" xml:space="preserve">
+    <value>ReplaceAllForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceAllForwardDescription" xml:space="preserve">
+    <value>ReplaceAllForwardDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackward" xml:space="preserve">
+    <value>ReplaceBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceBackwardDescription" xml:space="preserve">
+    <value>ReplaceBackward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceDescription" xml:space="preserve">
+    <value>Nahradí text v dokumentu.</value>
+    <comment>Replace text in the document.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForward" xml:space="preserve">
+    <value>ReplaceForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceForwardDescription" xml:space="preserve">
+    <value>ReplaceForward</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceText" xml:space="preserve">
+    <value>ReplaceText</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ReplaceTextDescription" xml:space="preserve">
+    <value>ReplaceTextDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocument" xml:space="preserve">
+    <value>Uložit</value>
+    <comment>Save</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAs" xml:space="preserve">
+    <value>Uložit jako</value>
+    <comment>Save As</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentAsDescription" xml:space="preserve">
+    <value>Uloží kopii dokumentu jako nový soibor.</value>
+    <comment>Save As</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SaveDocumentDescription" xml:space="preserve">
+    <value>Uloží dokument.</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDown" xml:space="preserve">
+    <value>Scroll Down</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollDownDescription" xml:space="preserve">
+    <value>Scroll Down</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPage" xml:space="preserve">
+    <value>ScrollToPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ScrollToPageDescription" xml:space="preserve">
+    <value>ScrollToPage</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAll" xml:space="preserve">
+    <value>Vybrat vše</value>
+    <comment>SelectAll</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectAllDescription" xml:space="preserve">
+    <value>Vybrat vše</value>
+    <comment>SelectAll</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldNextToCaret" xml:space="preserve">
+    <value>SelectFieldNextToCaret</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldNextToCaretDescription" xml:space="preserve">
+    <value>SelectFieldNextToCaretDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldPrevToCaret" xml:space="preserve">
+    <value>SelectFieldPrevToCaret</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SelectFieldPrevToCaretDescription" xml:space="preserve">
+    <value>SelectFieldPrevToCaretDescription</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacing" xml:space="preserve">
+    <value>SetSingleParagraphSpacing</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SetSingleParagraphSpacingDescription" xml:space="preserve">
+    <value>SetSingleParagraphSpacing</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKey" xml:space="preserve">
+    <value>ShiftTabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShiftTabKeyDescription" xml:space="preserve">
+    <value>ShiftTabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldCodes" xml:space="preserve">
+    <value>Zdrojové kódy všech polí</value>
+    <comment>Show All Field Codes</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldCodesDescription" xml:space="preserve">
+    <value>Umožňuje zobrazit zdrojové kódy všech polí.</value>
+    <comment>Show All Field Codes</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldResults" xml:space="preserve">
+    <value>Výsledky všech polí</value>
+    <comment>Show All Field Results</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowAllFieldResultsDescription" xml:space="preserve">
+    <value>Umožňuje zobrazit výsledky všech polí.</value>
+    <comment>Show All Field Results</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontForm" xml:space="preserve">
+    <value>Písmo</value>
+    <comment>Font</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowFontFormDescription" xml:space="preserve">
+    <value>Zobrazí dialog pro nastavení vlastností  písma.</value>
+    <comment>Show the Font dialog box.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowInsertMergeFieldForm" xml:space="preserve">
+    <value>Vložit pole</value>
+    <comment>Insert Merge Field</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowInsertMergeFieldFormDescription" xml:space="preserve">
+    <value>Vloží do dokumentu datové pole.</value>
+    <comment>Add a field from a list of recipients or from a data table to the document.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphForm" xml:space="preserve">
+    <value>Odstavec</value>
+    <comment>Paragraph</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowParagraphFormDescription" xml:space="preserve">
+    <value>Zobrazí dialog pro nastavení vlastností odstavce.</value>
+    <comment>Show the Paragraph dialog box.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsForm" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ShowTabsFormDescription" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleView" xml:space="preserve">
+    <value>Jednoduché zobrazení</value>
+    <comment>Simple View</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_SimpleViewDescription" xml:space="preserve">
+    <value>Jednoduché zobrazení</value>
+    <comment>Simple View</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKey" xml:space="preserve">
+    <value>TabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_TabKeyDescription" xml:space="preserve">
+    <value>TabKey</value>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFieldCodes" xml:space="preserve">
+    <value>Přepnout zobrazení polí</value>
+    <comment>Toggle Field Codes</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFieldCodesDescription" xml:space="preserve">
+    <value>Přepnout zobrazení polí</value>
+    <comment>Toggle Field Codes</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBold" xml:space="preserve">
+    <value>Tučně</value>
+    <comment>Bold</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontBoldDescription" xml:space="preserve">
+    <value>Označí vybraný text tučně.</value>
+    <comment>Make the selected text bold.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeout" xml:space="preserve">
+    <value>Dvojité přeškrtnutí</value>
+    <comment>Double Strikethrough</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleStrikeoutDescription" xml:space="preserve">
+    <value>Přeškrtne vybraný text dvojitou čarou.</value>
+    <comment>Double Strikethrough</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderline" xml:space="preserve">
+    <value>Dvojité podtržení</value>
+    <comment>Double Underline</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontDoubleUnderlineDescription" xml:space="preserve">
+    <value>Provede dvojité podtržení vybraného textu.</value>
+    <comment>Double Underline</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalic" xml:space="preserve">
+    <value>Kurzíva</value>
+    <comment>Italic</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontItalicDescription" xml:space="preserve">
+    <value>Označí vybraný text kurzívou.</value>
+    <comment>Italicize the selected text.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeout" xml:space="preserve">
+    <value>Přeškrtnutí</value>
+    <comment>Strikethrough</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontStrikeoutDescription" xml:space="preserve">
+    <value>Přeškrtne vybraný text jednoduchou čarou.</value>
+    <comment>Draw a line through the middle of the selected text.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderline" xml:space="preserve">
+    <value>Podtržení</value>
+    <comment>Underline</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleFontUnderlineDescription" xml:space="preserve">
+    <value>Podtrhne vybraný text jednoduchou čarou.</value>
+    <comment>Underline the selected text.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleHiddenText" xml:space="preserve">
+    <value>Skrytý</value>
+    <comment>Hidden</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleHiddenTextDescription" xml:space="preserve">
+    <value>Skrytý text</value>
+    <comment>Hidden.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleViewMergedData" xml:space="preserve">
+    <value>Zobrazit hodnoty</value>
+    <comment>View Merged Data</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleViewMergedDataDescription" xml:space="preserve">
+    <value>Doplní do datových polí skutečné hodnoty.</value>
+    <comment>Replaces the merge fields in your document with actual data from your recipient list so you can see what it looks like.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespace" xml:space="preserve">
+    <value>Zobrazit/Skrýt ¶</value>
+    <comment>Show/Hide ¶</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ToggleWhitespaceDescription" xml:space="preserve">
+    <value>Zobrazí/skryje veškeré formátovací symboly obsažené v dokumentu.</value>
+    <comment>Show paragraph marks and other hidden formatting symbols.</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Undo" xml:space="preserve">
+    <value>Zpět</value>
+    <comment>Undo</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UndoDescription" xml:space="preserve">
+    <value>Vrátí provedené změny</value>
+    <comment>Undo</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UpdateField" xml:space="preserve">
+    <value>Aktualizace polí</value>
+    <comment>Update Field</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_UpdateFieldDescription" xml:space="preserve">
+    <value>Umožňuje provést aktualizaci datového obsahu polí v dokumentu.</value>
+    <comment>Update Field</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_Zoom" xml:space="preserve">
+    <value>Lupa</value>
+    <comment>Zoom</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomDescription" xml:space="preserve">
+    <value>Lupa</value>
+    <comment>Zoom</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomIn" xml:space="preserve">
+    <value>Zvětšit</value>
+    <comment>Zoom In</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomInDescription" xml:space="preserve">
+    <value>Umožňuje zvýšit úroveň zvětšení zobrazení dokumentu.</value>
+    <comment>Zoom In</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOut" xml:space="preserve">
+    <value>Zmenšit</value>
+    <comment>Zoom Out</comment>
+  </data>
+  <data name="XtraRichEditStringId.MenuCmd_ZoomOutDescription" xml:space="preserve">
+    <value>Umožňuje snížit úroveň zvětšení zobrazení dokumentu.</value>
+    <comment>Zoom Out</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromBeginningQuestion" xml:space="preserve">
+    <value>Chcete začít hledat od začátku dokumentu?</value>
+    <comment>Do you want to start the search from the beginning of the document?</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchFromEndQuestion" xml:space="preserve">
+    <value>Chcete začít hledat od konce dokumentu?</value>
+    <comment>Do you want to start the search from the end of the document?</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ContinueSearchInRemainderQuestion" xml:space="preserve">
+    <value>Chcete prohledat zbytek dokumentu?</value>
+    <comment>Do you want to search the remainder of the document?</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ErrorLinkDeletedStyle" xml:space="preserve">
+    <value>Error: cannot link deleted style</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_IncorrectNumericFieldFormat" xml:space="preserve">
+    <value>Error: number cannot be represented in the specified format.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InternalError1" xml:space="preserve">
+    <value>Došlo k interní chybě</value>
+    <comment>An internal error occurred</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginInit" xml:space="preserve">
+    <value>Error: call to BeginInit inside BeginUpdate</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidBeginUpdate" xml:space="preserve">
+    <value>Error: call to BeginUpdate inside BeginInit</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidCopyFromDocumentModel" xml:space="preserve">
+    <value>Error: source and destination document models are different</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidDocumentModel" xml:space="preserve">
+    <value>Error: document models are different</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndInit" xml:space="preserve">
+    <value>Error: call to EndInit or CancelInit without BeginInit or inside BeginUpdate</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidEndUpdate" xml:space="preserve">
+    <value>Error: call to EndUpdate or CancelUpate without BeginUpdate or inside BeginInit</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidFontSize" xml:space="preserve">
+    <value>Číslo musí být v rozmezí {0} až {1}.</value>
+    <comment>The number must be between {0} and {1}.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidNumber" xml:space="preserve">
+    <value>Hodnota musí být číslo.</value>
+    <comment>This is not a valid number.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParagraphContainNumbering" xml:space="preserve">
+    <value>Error: paragraph already contains numbering</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidParentStyle" xml:space="preserve">
+    <value>Error: invalid parent style assignment caused circular reference</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetCharacterProperties" xml:space="preserve">
+    <value>Error: cannot set properties without BeginInit or without adding object to document</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidSetParagraphProperties" xml:space="preserve">
+    <value>Error: cannot set properties without BeginInit or without adding object to document</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidStyleName" xml:space="preserve">
+    <value>Chybné jméno stylu</value>
+    <comment>Invalid style name</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidTabStop" xml:space="preserve">
+    <value>Nesprávná hodnota odsazení.</value>
+    <comment>This is not a valid tab stop.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_InvalidValueRange" xml:space="preserve">
+    <value>Hodnota musí být mezi {0} a {1}.</value>
+    <comment>The value must be between {0} and {1}.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_MissingOperator" xml:space="preserve">
+    <value>!Chybí operátor.</value>
+    <comment>!Missing operator.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_PrintingUnavailable" xml:space="preserve">
+    <value>Nepodařilo se vytisknout dokument. Zkontroluje prosím instalaci následujících součástí:
+{0}
+{1}</value>
+    <comment>Printing is not available. Check if the following assemblies are installed:
+{0}
+{1}</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ReplacementsCount" xml:space="preserve">
+    <value>Bylo provedeno {0} nahrazení.</value>
+    <comment>{0} replacements were made.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchComplete" xml:space="preserve">
+    <value>Vyhledávání je dokončeno.</value>
+    <comment>The search is complete.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInBackwardDirectionComplete" xml:space="preserve">
+    <value>Při vyhledávání bylo dosaženo začátku dokumentu.</value>
+    <comment>The beginning of the document has been reached.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInForwardDirectionComplete" xml:space="preserve">
+    <value>Při vyhledávání bylo dosaženo konce dokumentu.</value>
+    <comment>The end of the document has been reached.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchInSelectionComplete" xml:space="preserve">
+    <value>Vyhledávání ve výběru bylo dokončeno.</value>
+    <comment>The search in the selection is finished.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SearchItemNotFound" xml:space="preserve">
+    <value>Hledaná položka nebyla nalezena.</value>
+    <comment>The search item was not found.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_StyleAlreadyLinked" xml:space="preserve">
+    <value>Error: style already contains a linked style</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_SyntaxErrorInFieldPattern" xml:space="preserve">
+    <value>Syntax Error, {0}.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_TableIntegrityError" xml:space="preserve">
+    <value>Error: broken table integrity</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnexpectedEndOfFormula" xml:space="preserve">
+    <value>!Unexpected end of formula.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnknownSwitchArgument" xml:space="preserve">
+    <value>Error! Unknown switch argument.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnmatchedQuotesInFieldPattern" xml:space="preserve">
+    <value>Error: pattern string contains unmatched quotes.</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UnsupportedFormatException" xml:space="preserve">
+    <value>Nepodporovaný formát souboru.</value>
+    <comment>File format is not supported</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedFieldError" xml:space="preserve">
+    <value>Error: using field paragraph</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedParagraphError" xml:space="preserve">
+    <value>Error: using deleted paragraph</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedSectionError" xml:space="preserve">
+    <value>Error: using deleted section</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseDeletedStyleError" xml:space="preserve">
+    <value>Error: using deleted style</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UsedWrongUnit" xml:space="preserve">
+    <value>Nesprávné zadání měrné jednotky.</value>
+    <comment>The unit of measurement is incorrectly specified.</comment>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidCharacterProperties" xml:space="preserve">
+    <value>Error: character properties are no longer valid</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_UseInvalidParagraphProperties" xml:space="preserve">
+    <value>Error: paragraph properties are no longer valid</value>
+  </data>
+  <data name="XtraRichEditStringId.Msg_ZeroDivide" xml:space="preserve">
+    <value>!Zero divide.</value>
+  </data>
+  <data name="XtraRichEditStringId.TabForm_All" xml:space="preserve">
+    <value>Vše</value>
+    <comment>All</comment>
+  </data>
+  <data name="XtraRichEditStringId.UnderlineNone" xml:space="preserve">
+    <value>(bez podtržení)</value>
+    <comment>(none)</comment>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Centimeter" xml:space="preserve">
+    <value> cm</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Inch" xml:space="preserve">
+    <value>"</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Millimeter" xml:space="preserve">
+    <value> mm</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Pica" xml:space="preserve">
+    <value> pc</value>
+  </data>
+  <data name="XtraRichEditStringId.UnitAbbriviation_Point" xml:space="preserve">
+    <value> pt</value>
+  </data>
+  <data name="XtraRichEditStringId.DefaultStyleName_BodyTextIndent" xml:space="preserve">
+    <value>Základní text odsazený</value>
+    <comment>Body Text Indent</comment>
+  </data>
+</root>

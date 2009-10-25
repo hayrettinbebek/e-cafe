@@ -1,0 +1,1383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraReports.UI.XRControl.AnchorVertical" xml:space="preserve">
+    <value>Anker Verticaal</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.KeepTogether" xml:space="preserve">
+    <value>Houd Samen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Text" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.NavigateUrl" xml:space="preserve">
+    <value>Navigatie URL</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Target" xml:space="preserve">
+    <value>Navigatie Doel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.TextAlignment" xml:space="preserve">
+    <value>Tekstuitlijning</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.WordWrap" xml:space="preserve">
+    <value>Tekstterugloop</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Bookmark" xml:space="preserve">
+    <value>Bladwijzer</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.BookmarkParent" xml:space="preserve">
+    <value>Oudermotor Bladwijzer</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.DataBindings" xml:space="preserve">
+    <value>Gegevens Bindingen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Size" xml:space="preserve">
+    <value>Punten</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Location" xml:space="preserve">
+    <value>Locatie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Styles" xml:space="preserve">
+    <value>Stijlen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.StylePriority" xml:space="preserve">
+    <value>Stijl Prioriteit</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.ParentStyleUsing" xml:space="preserve">
+    <value>Met behulp van moeder Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Font" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.ForeColor" xml:space="preserve">
+    <value>Voorgrondkleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.BackColor" xml:space="preserve">
+    <value>Achtergrond Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Padding" xml:space="preserve">
+    <value>Padding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.BorderColor" xml:space="preserve">
+    <value>Grens Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Borders" xml:space="preserve">
+    <value>Randen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.BorderWidth" xml:space="preserve">
+    <value>Randdikte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Tag" xml:space="preserve">
+    <value>Markering</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Visible" xml:space="preserve">
+    <value>Zichtbaar</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.CanGrow" xml:space="preserve">
+    <value>Kan groeien</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.CanShrink" xml:space="preserve">
+    <value>Kan Krimpen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.LockedInUserDesigner" xml:space="preserve">
+    <value>Gesloten in de End-User Ontwerper</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnParentChanged" xml:space="preserve">
+    <value>Ouder Changed</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnBeforePrint" xml:space="preserve">
+    <value>Voor Afdrukken</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnAfterPrint" xml:space="preserve">
+    <value>Na het afdrukken</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnPrintOnPage" xml:space="preserve">
+    <value>Afdrukken op Pagina</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnPreviewMouseMove" xml:space="preserve">
+    <value>Beweeg de muis in Preview</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnPreviewMouseDown" xml:space="preserve">
+    <value>Muis Naar beneden in Preview</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnPreviewMouseUp" xml:space="preserve">
+    <value>Muis Omhoog in Preview</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnPreviewClick" xml:space="preserve">
+    <value>Klik in Preview</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnPreviewDoubleClick" xml:space="preserve">
+    <value>Dubbelklik in Voorvertoning</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnDraw" xml:space="preserve">
+    <value>Trekken</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnHtmlItemCreated" xml:space="preserve">
+    <value>HTML Item Gemaakt</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnLocationChanged" xml:space="preserve">
+    <value>Locatie Gewijzigd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnSizeChanged" xml:space="preserve">
+    <value>Grootte Gewijzigd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlEvents.OnTextChanged" xml:space="preserve">
+    <value>Gewijzigde tekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.KeepTogether" xml:space="preserve">
+    <value>Houd Samen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.Multiline" xml:space="preserve">
+    <value>Meerdere regels</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.Lines" xml:space="preserve">
+    <value>Regels</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.Summary" xml:space="preserve">
+    <value>Samenvatting</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.ProcessNullValues" xml:space="preserve">
+    <value>Verwerk Null Waarden</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.ProcessDuplicates" xml:space="preserve">
+    <value>Verwerk Duplicaten</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.Angle" xml:space="preserve">
+    <value>Hoek</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabelScripts.OnSummaryCalculated" xml:space="preserve">
+    <value>Samenvatting Berekend</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabelScripts.OnSummaryGetResult" xml:space="preserve">
+    <value>Samenvatting verkrijg Resultaat</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabelScripts.OnSummaryReset" xml:space="preserve">
+    <value>Samenvatting Reset</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabelScripts.OnSummaryRowChanged" xml:space="preserve">
+    <value>Samenvatting Rij Gewijzigd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupFooterUnion.None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupFooterUnion.WithLastDetail" xml:space="preserve">
+    <value>Met Laatste Detail</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupUnion.None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupUnion.WholePage" xml:space="preserve">
+    <value>Hele pagina</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail" xml:space="preserve">
+    <value>Met Eerste Detail</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ValueSuppressType.Leave" xml:space="preserve">
+    <value>Verlaten</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ValueSuppressType.Suppress" xml:space="preserve">
+    <value>Onderdrukken</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ValueSuppressType.SuppressAndShrink" xml:space="preserve">
+    <value>Onderdrukken en Krimpen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ChartImageType.Metafile" xml:space="preserve">
+    <value>Metabestand</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ChartImageType.Bitmap" xml:space="preserve">
+    <value>Bitmap</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ReportUnit.HundredthsOfAnInch" xml:space="preserve">
+    <value>Honderdsten van een Inch</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter" xml:space="preserve">
+    <value>Tienden van een millimeter</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryRunning.None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryRunning.Group" xml:space="preserve">
+    <value>Groep</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryRunning.Report" xml:space="preserve">
+    <value>Rapport</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryRunning.Page" xml:space="preserve">
+    <value>Pagina</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRDockStyle.None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRDockStyle.Top" xml:space="preserve">
+    <value>Bovenkant</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRDockStyle.Bottom" xml:space="preserve">
+    <value>Onderkant</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRDockStyle.Fill" xml:space="preserve">
+    <value>Vullen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PageBreak.None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PageBreak.BeforeBand" xml:space="preserve">
+    <value>Voor de band</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PageBreak.AfterBand" xml:space="preserve">
+    <value>Na de Band</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPageBreak.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending" xml:space="preserve">
+    <value>Oplopend</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRColumnSortOrder.Descending" xml:space="preserve">
+    <value>Aflopend</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumnMode.None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount" xml:space="preserve">
+    <value>Gebruik Kolom telling</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumnMode.UseColumnWidth" xml:space="preserve">
+    <value>Gebruik Kolombreedte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ColumnDirection.DownThenAcross" xml:space="preserve">
+    <value>Eerst naar beneden, dan Over</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ColumnDirection.AcrossThenDown" xml:space="preserve">
+    <value>Eerst Over, dan naar Beneden</value>
+  </data>
+  <data name="DevExpress.XtraReports.ScriptLanguage.CSharp" xml:space="preserve">
+    <value>C #</value>
+  </data>
+  <data name="DevExpress.XtraReports.ScriptLanguage.VisualBasic" xml:space="preserve">
+    <value>Visual Basic</value>
+  </data>
+  <data name="DevExpress.XtraReports.ScriptLanguage.JScript" xml:space="preserve">
+    <value>J #</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSummary.FormatString" xml:space="preserve">
+    <value>Format string</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSummary.Running" xml:space="preserve">
+    <value>Hardlopen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSummary.Func" xml:space="preserve">
+    <value>Functie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSummary.IgnoreNullValues" xml:space="preserve">
+    <value>Negeer Null Waarden</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DevExpress.XtraReports.Design.DataBinding.FormatString" xml:space="preserve">
+    <value>Format string</value>
+  </data>
+  <data name="DevExpress.XtraReports.Design.DataBinding.Binding" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SubreportBase.ReportSource" xml:space="preserve">
+    <value>Verslag Bron</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SubreportBase.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlContainer.SyncBounds" xml:space="preserve">
+    <value>Synchroniseren Limieten</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlContainer.DrawMethod" xml:space="preserve">
+    <value>Tekening Methode</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlContainer.ImageType" xml:space="preserve">
+    <value>Type afbeelding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlContainer.PrintMode" xml:space="preserve">
+    <value>Print Mode</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.Band.PageBreak" xml:space="preserve">
+    <value>Pagina-einde</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.Band.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportBase.SortFields" xml:space="preserve">
+    <value>Sorteren Velden</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportBase.FilterString" xml:space="preserve">
+    <value>Filter String</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportBase.DataMember" xml:space="preserve">
+    <value>Gegevens Lid</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportBase.DataSource" xml:space="preserve">
+    <value>Gegevensbron</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportBase.DataAdapter" xml:space="preserve">
+    <value>Data Adapter</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportBase.XmlDataPath" xml:space="preserve">
+    <value>XML-data path</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportBase.Bands" xml:space="preserve">
+    <value>Bands</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.Parameters" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.RequestParameters" xml:space="preserve">
+    <value>Verzoek Parameters</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.GridSize" xml:space="preserve">
+    <value>Grid Grootte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ShowDesignerHints" xml:space="preserve">
+    <value>Toon Designer's Tips</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.DataSourceSchema" xml:space="preserve">
+    <value>Gegevensbron Schema's</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ShowExportWarnings" xml:space="preserve">
+    <value>Toon Export Waarschuwingen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ShowPrintingWarnings" xml:space="preserve">
+    <value>Toon Afdruk Waarschuwingen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.SnapToGrid" xml:space="preserve">
+    <value>Magnetisch raster</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.PreviewRowCount" xml:space="preserve">
+    <value>Rij Telling voor Preview</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.DrawGrid" xml:space="preserve">
+    <value>Teken het Grid</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.DefaultPrinterSettingsUsing" xml:space="preserve">
+    <value>Instellingen Met behulp van de Standaard Printer</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ShowPreviewMarginLines" xml:space="preserve">
+    <value>Toon Marge Lines in Voorbeeld</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.VerticalContentSplitting" xml:space="preserve">
+    <value>Verticale Content Splitsing</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ExportOptions" xml:space="preserve">
+    <value>Uitvoer Opties</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ReportUnit" xml:space="preserve">
+    <value>Meet Eenheden</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.Landscape" xml:space="preserve">
+    <value>Liggend</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.Margins" xml:space="preserve">
+    <value>Marges</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.PrinterName" xml:space="preserve">
+    <value>Printernaam</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.PaperKind" xml:space="preserve">
+    <value>Soort papier</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.PaperName" xml:space="preserve">
+    <value>Papier Naam</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.PageWidth" xml:space="preserve">
+    <value>Pagina breedte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.PageHeight" xml:space="preserve">
+    <value>Page Hoogte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.StyleSheet" xml:space="preserve">
+    <value>Opmaakmodel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.StyleSheetPath" xml:space="preserve">
+    <value>Style Sheet's Pad</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.Watermark" xml:space="preserve">
+    <value>Watermerk</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ScriptLanguage" xml:space="preserve">
+    <value>Script Taal</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ScriptReferences" xml:space="preserve">
+    <value>Script Referenties</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.ScriptSecurityPermissions" xml:space="preserve">
+    <value>Script beveiligingsmachtigingen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailBand.KeepTogetherWithDetailReports" xml:space="preserve">
+    <value>Houd Samen met Detail Rapporten</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailBand.PrintOnEmptyDataSource" xml:space="preserve">
+    <value>Print wanneer Gegevensbron leeg is</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailBand.MultiColumn" xml:space="preserve">
+    <value>Meerder-Kolom Opties</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailBand.RepeatCountOnEmptyDataSource" xml:space="preserve">
+    <value>Herhaal Telling wanneer Gegevensbron leeg is</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailBand.SortFields" xml:space="preserve">
+    <value>Sorteren Velden</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ReportFooterBand.PrintAtBottom" xml:space="preserve">
+    <value>Afdrukken op Onderkant</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PageBand.PrintOn" xml:space="preserve">
+    <value>Afdrukken Op</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupBand.Level" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupBand.RepeatEveryPage" xml:space="preserve">
+    <value>Herhaal elke pagina</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupHeaderBand.GroupUnion" xml:space="preserve">
+    <value>Fractie Unie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupHeaderBand.GroupFields" xml:space="preserve">
+    <value>Groep Velden</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupFooterBand.GroupUnion" xml:space="preserve">
+    <value>Fractie Unie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupFooterBand.PrintAtBottom" xml:space="preserve">
+    <value>Afdrukken op Bottom</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRZipCode.SegmentWidth" xml:space="preserve">
+    <value>Segment Breedte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCrossBandControl.StartBand" xml:space="preserve">
+    <value>Start Band</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCrossBandControl.EndBand" xml:space="preserve">
+    <value>Einde Band</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCrossBandControl.StartPoint" xml:space="preserve">
+    <value>Start Punt</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCrossBandControl.EndPoint" xml:space="preserve">
+    <value>End Punt</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCrossBandLine.LineStyle" xml:space="preserve">
+    <value>Lijnstijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLine.LineWidth" xml:space="preserve">
+    <value>Lijndikte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLine.LineDirection" xml:space="preserve">
+    <value>Lijn Richting</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLine.LineStyle" xml:space="preserve">
+    <value>Lijnstijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLine.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRRichTextBase.RtfText" xml:space="preserve">
+    <value>Rich Text</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRRichText.Lines" xml:space="preserve">
+    <value>Regels</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.SeriesTemplate" xml:space="preserve">
+    <value>Serie Sjabloon</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.SeriesNameTemplate" xml:space="preserve">
+    <value>Serie Naam Sjabloon</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.Series" xml:space="preserve">
+    <value>Serie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.Diagram" xml:space="preserve">
+    <value>Diagram</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.Legend" xml:space="preserve">
+    <value>Legenda</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.FillStyle" xml:space="preserve">
+    <value>Vul Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.DataAdapter" xml:space="preserve">
+    <value>Data Adapter</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.DataSource" xml:space="preserve">
+    <value>Gegevensbron</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.DataMember" xml:space="preserve">
+    <value>Gegevens Lid</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.SeriesDataMember" xml:space="preserve">
+    <value>Serie Gegevens Lid</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.SeriesSorting" xml:space="preserve">
+    <value>Serie sorteren</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.AppearanceName" xml:space="preserve">
+    <value>Weergave Naam</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.PaletteName" xml:space="preserve">
+    <value>Palet Naam</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.PaletteBaseColorNumber" xml:space="preserve">
+    <value>Palet's Base Color Aantal</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.Titles" xml:space="preserve">
+    <value>Titels</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.BackImage" xml:space="preserve">
+    <value>Achtergrondafbeelding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.ImageType" xml:space="preserve">
+    <value>Type afbeelding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart.BackColor" xml:space="preserve">
+    <value>Achtergrond Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRRichTextBoxBase.Multiline" xml:space="preserve">
+    <value>Meerdere Regels</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRRichTextBoxBase.Lines" xml:space="preserve">
+    <value>Regels</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRRichTextBoxBase.DetectUrls" xml:space="preserve">
+    <value>Detecteren URL's</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRRichTextBoxBase.Font" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRRichTextBoxBase.BackColor" xml:space="preserve">
+    <value>Achtergrond Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPictureBox.Image" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPictureBox.ImageUrl" xml:space="preserve">
+    <value>Afbeeldings-URL</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPictureBox.Sizing" xml:space="preserve">
+    <value>Sortering</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCheckBox.Checked" xml:space="preserve">
+    <value>Gechecked</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCheckBox.CheckState" xml:space="preserve">
+    <value>Controleer Staat</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.SymbologyId" xml:space="preserve">
+    <value>Symbologie ID</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.Symbology" xml:space="preserve">
+    <value>Symbologie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.Module" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.AutoModule" xml:space="preserve">
+    <value>Auto-Module</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.PaddingInfo" xml:space="preserve">
+    <value>Padding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.Alignment" xml:space="preserve">
+    <value>Uitlijning</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.BarCodeOrientation" xml:space="preserve">
+    <value>Afdrukstand</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode.ShowText" xml:space="preserve">
+    <value>Toon tekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.Appearance" xml:space="preserve">
+    <value>Voorkomen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.DataAdapter" xml:space="preserve">
+    <value>Data Adapter</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.DataMember" xml:space="preserve">
+    <value>Gegevens Lid</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.DataSource" xml:space="preserve">
+    <value>Gegevensbron</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.OLAPConnectionString" xml:space="preserve">
+    <value>OLAP Connection String</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.OptionsPrint" xml:space="preserve">
+    <value>Afdrukopties</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.OptionsView" xml:space="preserve">
+    <value>Bekijk Opties</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.OptionsDataField" xml:space="preserve">
+    <value>Gegevens Veld Opties</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.OptionsData" xml:space="preserve">
+    <value>Gegevens Opties</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.Fields" xml:space="preserve">
+    <value>Velden</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.Prefilter" xml:space="preserve">
+    <value>Prefilter</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRShape.Shape" xml:space="preserve">
+    <value>Vorm</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRShape.LineWidth" xml:space="preserve">
+    <value>Lijndikte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRShape.Angle" xml:space="preserve">
+    <value>Hoek</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRShape.Stretch" xml:space="preserve">
+    <value>Uitrekken</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRShape.FillColor" xml:space="preserve">
+    <value>Vul Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailReportBand.PrintOnEmptyDataSource" xml:space="preserve">
+    <value>Print wanneer Gegevensbron is leeg</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailReportBand.Level" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPageInfo.StartPageNumber" xml:space="preserve">
+    <value>Start Pagina Nummer</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPageInfo.PageInfo" xml:space="preserve">
+    <value>Pagina Informatie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPageInfo.Format" xml:space="preserve">
+    <value>Bestandsindeling</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.CalculatedFields" xml:space="preserve">
+    <value>Berekende velden</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChartScripts.OnCustomDrawSeries" xml:space="preserve">
+    <value>Teken een Serie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChartScripts.OnCustomDrawSeriesPoint" xml:space="preserve">
+    <value>Aangepast Teken een serie Punt</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChartScripts.OnBoundDataChanged" xml:space="preserve">
+    <value>Gebonden gegevens Gewijzigd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChartScripts.OnPieSeriesPointExploded" xml:space="preserve">
+    <value>Taart Serie Punt Geexplodeerd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportScripts.OnBandHeightChanged" xml:space="preserve">
+    <value>Band's Hoogte Gewijzigd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportScripts.OnFillEmptySpace" xml:space="preserve">
+    <value>Vul de lege ruimte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportScripts.OnDataSourceRowChanged" xml:space="preserve">
+    <value>Gegevensbron's Rij Gewijzigd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportScripts.OnParametersRequestBeforeShow" xml:space="preserve">
+    <value>Verzoek Parameters</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportScripts.OnParametersRequestValueChanged" xml:space="preserve">
+    <value>Parameters gewijzigd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportScripts.OnParametersRequestSubmit" xml:space="preserve">
+    <value>Parameters Ingediend</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportScripts.OnPrintProgress" xml:space="preserve">
+    <value>Print Voorgang</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSummaryEvents.OnRowChanged" xml:space="preserve">
+    <value>Rij Gewijzigd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSummaryEvents.OnGetResult" xml:space="preserve">
+    <value>Verkrijg een Uitslag</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSummaryEvents.OnReset" xml:space="preserve">
+    <value>Opnieuw instellen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.Padding" xml:space="preserve">
+    <value>Padding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.Font" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.ForeColor" xml:space="preserve">
+    <value>Voorgrondkleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.BackColor" xml:space="preserve">
+    <value>Achtergrond Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.BorderColor" xml:space="preserve">
+    <value>Grens Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.Borders" xml:space="preserve">
+    <value>Randen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.BorderWidth" xml:space="preserve">
+    <value>Randdikte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.TextAlignment" xml:space="preserve">
+    <value>Tekstuitlijning</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle.StyleUsing" xml:space="preserve">
+    <value>Met behulp van Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing.UseFont" xml:space="preserve">
+    <value>Gebruik Lettertype</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing.UseForeColor" xml:space="preserve">
+    <value>Gebruik Voorgrond Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing.UseBackColor" xml:space="preserve">
+    <value>Gebruik Achtergrondkleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing.UsePadding" xml:space="preserve">
+    <value>Gebruik Padding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing.UseBorderColor" xml:space="preserve">
+    <value>Gebruik Randkleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing.UseBorders" xml:space="preserve">
+    <value>Gebruik Grenzen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing.UseBorderWidth" xml:space="preserve">
+    <value>Gebruik randdikte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing.UseTextAlignment" xml:space="preserve">
+    <value>Gebruik Tekstuitlijning</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority.UseFont" xml:space="preserve">
+    <value>Gebruik Font</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority.UseForeColor" xml:space="preserve">
+    <value>Gebruik Voorgrond Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority.UseBackColor" xml:space="preserve">
+    <value>Gebruik Achtergrondkleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority.UsePadding" xml:space="preserve">
+    <value>Gebruik Padding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority.UseBorderColor" xml:space="preserve">
+    <value>Gebruik Randkleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority.UseBorders" xml:space="preserve">
+    <value>Gebruik Grenzen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority.UseBorderWidth" xml:space="preserve">
+    <value>Gebruik randdikte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority.UseTextAlignment" xml:space="preserve">
+    <value>Gebruik Tekstuitlijning</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReportScripts" xml:space="preserve">
+    <value>Rapport Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLineScripts" xml:space="preserve">
+    <value>Lijn Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabelScripts" xml:space="preserve">
+    <value>Label Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChartScripts" xml:space="preserve">
+    <value>Grafiek Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.BandScripts" xml:space="preserve">
+    <value>Band Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlScripts" xml:space="preserve">
+    <value>Control Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn" xml:space="preserve">
+    <value>Meerdere-Kolom Opties</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StyleUsing" xml:space="preserve">
+    <value>Gebruikmakend van Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.StylePriority" xml:space="preserve">
+    <value>Stijl Prioriteit</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBarCode" xml:space="preserve">
+    <value>Streepjescode</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRChart" xml:space="preserve">
+    <value>Grafiek</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCheckBox" xml:space="preserve">
+    <value>Selectievakje</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCrossBandBox" xml:space="preserve">
+    <value>Multi-band vak</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRCrossBandLine" xml:space="preserve">
+    <value>Multi-band lijn</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLine" xml:space="preserve">
+    <value>Lijn</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPageBreak" xml:space="preserve">
+    <value>Pagina-einde</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPageInfo" xml:space="preserve">
+    <value>Pagina Info</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPanel" xml:space="preserve">
+    <value>Paneel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPictureBox" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid" xml:space="preserve">
+    <value>Draaitabel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRRichText" xml:space="preserve">
+    <value>Rich Text</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRShape" xml:space="preserve">
+    <value>Vorm</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRSubreport" xml:space="preserve">
+    <value>Subrapport</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRTable" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRTableRow" xml:space="preserve">
+    <value>Tabelrij</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRTableCell" xml:space="preserve">
+    <value>Tabelcel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlContainer" xml:space="preserve">
+    <value>Windows Forms Control</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRZipCode" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControlStyle" xml:space="preserve">
+    <value>Control Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.CalculatedField" xml:space="preserve">
+    <value>Cerekend veld</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.Parameter" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.TopMarginBand" xml:space="preserve">
+    <value>Bovenkant Marge</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.BottomMarginBand" xml:space="preserve">
+    <value>Onderkand marge</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ReportHeaderBand" xml:space="preserve">
+    <value>Rapportkoptekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ReportFooterBand" xml:space="preserve">
+    <value>Rapportvoettekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PageHeaderBand" xml:space="preserve">
+    <value>Paginakoptekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PageFooterBand" xml:space="preserve">
+    <value>Voettekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupHeaderBand" xml:space="preserve">
+    <value>Groepskoptekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupFooterBand" xml:space="preserve">
+    <value>Groepsvoettekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailBand" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.DetailReportBand" xml:space="preserve">
+    <value>Detail Verslag</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport" xml:space="preserve">
+    <value>Rapport</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.CalculatedField.FieldType" xml:space="preserve">
+    <value>Veldtype</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.CalculatedField.DisplayName" xml:space="preserve">
+    <value>Weergavenaam</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.CalculatedField.Expression" xml:space="preserve">
+    <value>Expressie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.CalculatedField.DataSource" xml:space="preserve">
+    <value>Gegevensbron</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.CalculatedField.DataMember" xml:space="preserve">
+    <value>Gegevens Lid</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.Parameter.Value" xml:space="preserve">
+    <value>Waarde</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.Parameter.ParameterType" xml:space="preserve">
+    <value>Parameter Type</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.Parameter.Visible" xml:space="preserve">
+    <value>Zichtbaar</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.Parameter.Description" xml:space="preserve">
+    <value>Omschrijving</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn.ColumnCount" xml:space="preserve">
+    <value>Kolom telling</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn.ColumnWidth" xml:space="preserve">
+    <value>Kolombreedte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn.ColumnSpacing" xml:space="preserve">
+    <value>Column Spatiëring</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn.Direction" xml:space="preserve">
+    <value>Richting</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.MultiColumn.Mode" xml:space="preserve">
+    <value>Modus</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.Band.Height" xml:space="preserve">
+    <value>Hoogte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlDrawMethod.UseWMPaint" xml:space="preserve">
+    <value>Gebruik WMPaint Methode</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlDrawMethod.UseWMPrint" xml:space="preserve">
+    <value>Gebruik WMPrint Methode</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlDrawMethod.UseWMPaintRecursive" xml:space="preserve">
+    <value>Gebruik WMPaint recursief</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlDrawMethod.UseWMPrintRecursive" xml:space="preserve">
+    <value>Gebruik WMPrint recursief</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlImageType.Metafile" xml:space="preserve">
+    <value>Metabestand</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlImageType.Bitmap" xml:space="preserve">
+    <value>Bitmap</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlPrintMode.Default" xml:space="preserve">
+    <value>Standaardinstelling</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlPrintMode.AsImage" xml:space="preserve">
+    <value>Als Beeld</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.WinControlPrintMode.AsBricks" xml:space="preserve">
+    <value>Als Stenen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Avg" xml:space="preserve">
+    <value>Gemiddelde</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Count" xml:space="preserve">
+    <value>Telling</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Sum" xml:space="preserve">
+    <value>Som</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.RunningSum" xml:space="preserve">
+    <value>Lopende Samenvatting</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Min" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Median" xml:space="preserve">
+    <value>Mediaan</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Var" xml:space="preserve">
+    <value>Afwijking</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.VarP" xml:space="preserve">
+    <value>Bevolking Variantie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.StdDev" xml:space="preserve">
+    <value>Standaarddeviatie</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.StdDevP" xml:space="preserve">
+    <value>Standaard Bevolking afwijkingslijst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.DAvg" xml:space="preserve">
+    <value>Gemiddelde (Distinct)</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.DCount" xml:space="preserve">
+    <value>Count (Distinct)</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.DSum" xml:space="preserve">
+    <value>Samenvatting (Distinct)</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.DVar" xml:space="preserve">
+    <value>Variatie (Distinct)</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.DVarP" xml:space="preserve">
+    <value>Bevolking Variantie (Distinct)</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.DStdDev" xml:space="preserve">
+    <value>Standaarddeviatie (Distinct)</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.DStdDevP" xml:space="preserve">
+    <value>Standaard Bevolking afwijkingslijst (Distinct)</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.RecordNumber" xml:space="preserve">
+    <value>Record aantal</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.SummaryFunc.Custom" xml:space="preserve">
+    <value>Aangepast</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.Cell" xml:space="preserve">
+    <value>Cel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.FieldHeader" xml:space="preserve">
+    <value>Veld Titel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.TotalCell" xml:space="preserve">
+    <value>Totaal Cel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.GrandTotalCell" xml:space="preserve">
+    <value>Totaal Cel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.CustomTotalCell" xml:space="preserve">
+    <value>Aangepast Totaal Cel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.FieldValue" xml:space="preserve">
+    <value>Veldwaarde</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.FieldValueTotal" xml:space="preserve">
+    <value>Veld Waarde Totaal</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.FieldValueGrandTotal" xml:space="preserve">
+    <value>FieldValueGrandTotal</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.Lines" xml:space="preserve">
+    <value>Lijnen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.FilterSeparator" xml:space="preserve">
+    <value>Filter scheidingsmodules</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances.HeaderGroupLine" xml:space="preserve">
+    <value>Header Groep Lijn</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRAppearanceObject.TextAlignment" xml:space="preserve">
+    <value>Tekstuitlijning</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.XRControlStyles.EvenStyle" xml:space="preserve">
+    <value>Even Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.XRControlStyles.OddStyle" xml:space="preserve">
+    <value>Oneven Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.XRControlStyles.Style" xml:space="preserve">
+    <value>Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.CellStyle" xml:space="preserve">
+    <value>Cel Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.CustomTotalCellStyle" xml:space="preserve">
+    <value>Aangepaste Totaal Cel Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.FieldHeaderStyle" xml:space="preserve">
+    <value>Veld Header Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.FieldValueStyle" xml:space="preserve">
+    <value>Veld Waarde Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.FieldValueGrandTotalStyle" xml:space="preserve">
+    <value>Veld Waarde Totaal Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.FieldValueTotalStyle" xml:space="preserve">
+    <value>Veld Waarde Totaal Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.FilterSeparatorStyle" xml:space="preserve">
+    <value>Filter scheidingsmodules Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.GrandTotalCellStyle" xml:space="preserve">
+    <value>Totaal Cell Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.HeaderGroupLineStyle" xml:space="preserve">
+    <value>Header Groep Lijnstijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.LinesStyle" xml:space="preserve">
+    <value>Lijnen Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.PivotGrid.XRPivotGridStyles.TotalCellStyle" xml:space="preserve">
+    <value>Totaal Cel Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBinding.FormatString" xml:space="preserve">
+    <value>Format string</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBinding.PropertyName" xml:space="preserve">
+    <value>Eigenschapsnaam</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRBinding.DataMember" xml:space="preserve">
+    <value>Gegevens Lid</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupField.SortOrder" xml:space="preserve">
+    <value>Sorteervolgorde</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.GroupField.FieldName" xml:space="preserve">
+    <value>Veldnaam</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.ParameterType.String" xml:space="preserve">
+    <value>Tekenreeks</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.ParameterType.DateTime" xml:space="preserve">
+    <value>DatumTijd</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.ParameterType.Int32" xml:space="preserve">
+    <value>Int32</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.ParameterType.Float" xml:space="preserve">
+    <value>Drijvend</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.ParameterType.Double" xml:space="preserve">
+    <value>Dubbel</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.ParameterType.Decimal" xml:space="preserve">
+    <value>Decimaal</value>
+  </data>
+  <data name="DevExpress.XtraReports.Parameters.ParameterType.Boolean" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.None" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.String" xml:space="preserve">
+    <value>Tekenreeks</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.DateTime" xml:space="preserve">
+    <value>DatumTijd</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.Int32" xml:space="preserve">
+    <value>Int32</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.Float" xml:space="preserve">
+    <value>Drijvend</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.Double" xml:space="preserve">
+    <value>Dubbel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.Decimal" xml:space="preserve">
+    <value>Decimaal</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FieldType.Boolean" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.FormattingRuleSheet" xml:space="preserve">
+    <value>Opmaak Regel Lijst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FormattingRule" xml:space="preserve">
+    <value>Opmaak Regel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FormattingRule.Condition" xml:space="preserve">
+    <value>Toestand</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FormattingRule.Formatting" xml:space="preserve">
+    <value>Formateren</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ConditionFormatting.Visible" xml:space="preserve">
+    <value>Zichtbaar</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.ConditionFormatting.Style" xml:space="preserve">
+    <value>Stijl</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRControl.FormattingRules" xml:space="preserve">
+    <value>Opmaak Regels</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FormattingRule.DataSource" xml:space="preserve">
+    <value>Gegevensbron</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.FormattingRule.DataMember" xml:space="preserve">
+    <value>Gegevens Lid</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRLabel.AutoWidth" xml:space="preserve">
+    <value>Auto Breedte</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.Bookmark" xml:space="preserve">
+    <value>Bladwijzer</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XtraReport.PageColor" xml:space="preserve">
+    <value>Pagina Kleur</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.CalculatedFieldScripts.OnGetValue" xml:space="preserve">
+    <value>Krijg een Waarde</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.CalculatedField.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.Design.GroupSort.GroupSortReflectItem.ShowHeader" xml:space="preserve">
+    <value>Toon Header</value>
+  </data>
+  <data name="DevExpress.XtraReports.Design.GroupSort.GroupSortReflectItem.ShowFooter" xml:space="preserve">
+    <value>Toon Voettekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGrid.Scripts" xml:space="preserve">
+    <value>Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts" xml:space="preserve">
+    <value>PivotGrid Scripts</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts.OnCustomCellDisplayText" xml:space="preserve">
+    <value>Aangepaste Cel Weergave tekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts.OnCustomGroupInterval" xml:space="preserve">
+    <value>Aangepaste Groep Interval</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts.OnCustomSummary" xml:space="preserve">
+    <value>Aangepaste Samenvatting</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts.OnFieldValueDisplayText" xml:space="preserve">
+    <value>Veld Waarde Weergave tekst</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts.OnPrintCell" xml:space="preserve">
+    <value>Print Cel</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts.OnPrintFieldValue" xml:space="preserve">
+    <value>Print Veld Waarde</value>
+  </data>
+  <data name="DevExpress.XtraReports.UI.XRPivotGridScripts.OnPrintHeader" xml:space="preserve">
+    <value>Print Header</value>
+  </data>
+</root>

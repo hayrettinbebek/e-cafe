@@ -1,0 +1,1667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ReportStringId.CatAppearance" xml:space="preserve">
+    <value>Apparenza</value>
+  </data>
+  <data name="ReportStringId.CatData" xml:space="preserve">
+    <value>Dati</value>
+  </data>
+  <data name="ReportStringId.CatLayout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="ReportStringId.CatBehavior" xml:space="preserve">
+    <value>Comportamento</value>
+  </data>
+  <data name="ReportStringId.CatPageSettings" xml:space="preserve">
+    <value>Impostazioni pagina</value>
+  </data>
+  <data name="ReportStringId.Cmd_TopMargin" xml:space="preserve">
+    <value>Margine superiore</value>
+  </data>
+  <data name="ReportStringId.Cmd_PageHeader" xml:space="preserve">
+    <value>Intestazione pagina</value>
+  </data>
+  <data name="ReportStringId.Cmd_ReportHeader" xml:space="preserve">
+    <value>Intestazione report</value>
+  </data>
+  <data name="ReportStringId.Cmd_GroupHeader" xml:space="preserve">
+    <value>Intestazione gruppo</value>
+  </data>
+  <data name="ReportStringId.Cmd_GroupFooter" xml:space="preserve">
+    <value>Piè di pagina gruppo</value>
+  </data>
+  <data name="ReportStringId.Cmd_ReportFooter" xml:space="preserve">
+    <value>Pié di pagina report</value>
+  </data>
+  <data name="ReportStringId.Cmd_PageFooter" xml:space="preserve">
+    <value>Pié di pagina</value>
+  </data>
+  <data name="ReportStringId.Cmd_BottomMargin" xml:space="preserve">
+    <value>Margine inferiore</value>
+  </data>
+  <data name="ReportStringId.BandDsg_QuantityPerPage" xml:space="preserve">
+    <value>un gruppo per pagina</value>
+  </data>
+  <data name="ReportStringId.BandDsg_QuantityPerReport" xml:space="preserve">
+    <value>un gruppo per report</value>
+  </data>
+  <data name="ReportStringId.Msg_CreateReportInstance" xml:space="preserve">
+    <value>Il report è di un tipo diverso rispetto a quello che stai cercando di caricare.
+Vuoi creare un'altro report comunque ?</value>
+  </data>
+  <data name="ReportStringId.Msg_FileCorrupted" xml:space="preserve">
+    <value>Impossibile caricare il report. Il file può essere danneggiato.</value>
+  </data>
+  <data name="ReportStringId.Msg_FileContentCorrupted" xml:space="preserve">
+    <value>Impossibile caricare il report. Il file può essere danneggiato o contiene informazioni errate.</value>
+  </data>
+  <data name="ReportStringId.Msg_FileNotFound" xml:space="preserve">
+    <value>File non trovato.</value>
+  </data>
+  <data name="ReportStringId.Msg_WrongReportClassName" xml:space="preserve">
+    <value>An error occurred during deserialization - possible wrong report class name</value>
+  </data>
+  <data name="ReportStringId.Msg_InvPropName" xml:space="preserve">
+    <value>Nome proprietà non valido</value>
+  </data>
+  <data name="ReportStringId.Msg_IncorrectBandType" xml:space="preserve">
+    <value>Tipo BAND Errata</value>
+  </data>
+  <data name="ReportStringId.UD_ReportDesigner" xml:space="preserve">
+    <value>XtraReport Designer</value>
+  </data>
+  <data name="ReportStringId.UD_Msg_ReportChanged" xml:space="preserve">
+    <value>Il report è stato modificato. Vuoi salvare le modifiche ?</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceIncrease" xml:space="preserve">
+    <value>Aumenta la spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControl" xml:space="preserve">
+    <value>Mantiene il formato</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_CenterVertically" xml:space="preserve">
+    <value>Centrare verticalmente</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatItalic" xml:space="preserve">
+    <value>Corsivo</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_CenterHorizontally" xml:space="preserve">
+    <value>Centrare orizzontalmente</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FileSave" xml:space="preserve">
+    <value>Salva File</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditCut" xml:space="preserve">
+    <value>Taglia</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditCopy" xml:space="preserve">
+    <value>Copia</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditPaste" xml:space="preserve">
+    <value>Incolla</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignHorizontalCenters" xml:space="preserve">
+    <value>Allinea al centro orizzontalmente</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToGrid" xml:space="preserve">
+    <value>Ridimensiona</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatAlignLeft" xml:space="preserve">
+    <value>Allinea a sinistra</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignRight" xml:space="preserve">
+    <value>Allinea a destra</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceDecrease" xml:space="preserve">
+    <value>Diminusce la spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignVerticalCenters" xml:space="preserve">
+    <value>Allinea al centro verticalmente</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatFontSize" xml:space="preserve">
+    <value>Dimensione carattere</value>
+  </data>
+  <data name="ReportStringId.UD_Trans_Delete" xml:space="preserve">
+    <value>Cancella componenti</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceMakeEqual" xml:space="preserve">
+    <value>Identica spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignTop" xml:space="preserve">
+    <value>Allinea in alto</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceDecrease" xml:space="preserve">
+    <value>Diminuisce la spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControlWidth" xml:space="preserve">
+    <value>Stessa larghezza</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignLeft" xml:space="preserve">
+    <value>Allinea a sinistra</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatFontName" xml:space="preserve">
+    <value>Tipo carattere</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatAlignRight" xml:space="preserve">
+    <value>Allinea a destra</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FileOpen" xml:space="preserve">
+    <value>Apri File</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceMakeEqual" xml:space="preserve">
+    <value>Identica spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_BringToFront" xml:space="preserve">
+    <value>Porta in primo piano</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatBold" xml:space="preserve">
+    <value>Grassetto</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignToGrid" xml:space="preserve">
+    <value>Allinea alla griglia</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceConcatenate" xml:space="preserve">
+    <value>Elimina la spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatCenter" xml:space="preserve">
+    <value>Centra</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatUnderline" xml:space="preserve">
+    <value>Interlinea</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControlHeight" xml:space="preserve">
+    <value>Stessa altezza</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignBottom" xml:space="preserve">
+    <value>Allinea in basso</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SendToBack" xml:space="preserve">
+    <value>Porta in secondo piano</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceConcatenate" xml:space="preserve">
+    <value>Elimina la spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceIncrease" xml:space="preserve">
+    <value>Aumenta la spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.UD_FormCaption" xml:space="preserve">
+    <value>XtraReport Designer</value>
+  </data>
+  <data name="ReportStringId.VS_XtraReportsToolboxCategoryName" xml:space="preserve">
+    <value>DX: Reports</value>
+  </data>
+  <data name="ReportStringId.Verb_EditBands" xml:space="preserve">
+    <value>Modifica bande...</value>
+  </data>
+  <data name="ReportStringId.Verb_EditGroupFields" xml:space="preserve">
+    <value>Modifica campi gruppo...</value>
+  </data>
+  <data name="ReportStringId.Verb_Import" xml:space="preserve">
+    <value>Importa...</value>
+  </data>
+  <data name="ReportStringId.Verb_Save" xml:space="preserve">
+    <value>Salva...</value>
+  </data>
+  <data name="ReportStringId.Verb_About" xml:space="preserve">
+    <value>Informazioni su...</value>
+  </data>
+  <data name="ReportStringId.Verb_RTFClear" xml:space="preserve">
+    <value>Pulisce</value>
+  </data>
+  <data name="ReportStringId.Verb_RTFLoad" xml:space="preserve">
+    <value>Carica File...</value>
+  </data>
+  <data name="ReportStringId.Verb_FormatString" xml:space="preserve">
+    <value>Formato stringa...</value>
+  </data>
+  <data name="ReportStringId.Verb_SummaryWizard" xml:space="preserve">
+    <value>Summario...</value>
+  </data>
+  <data name="ReportStringId.Verb_ReportWizard" xml:space="preserve">
+    <value>Lancia il wizard per il report</value>
+  </data>
+  <data name="ReportStringId.Verb_Insert" xml:space="preserve">
+    <value>Inserisce...</value>
+  </data>
+  <data name="ReportStringId.Verb_Delete" xml:space="preserve">
+    <value>Cancella...</value>
+  </data>
+  <data name="ReportStringId.Verb_Bind" xml:space="preserve">
+    <value>Collega</value>
+  </data>
+  <data name="ReportStringId.Verb_EditText" xml:space="preserve">
+    <value>Modifica testo</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_CustomGeneral" xml:space="preserve">
+    <value>Il formato generale non ha un valore nuemrico preciso</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Suffix" xml:space="preserve">
+    <value>Suffisso</value>
+  </data>
+  <data name="ReportStringId.FSForm_Tab_StandardTypes" xml:space="preserve">
+    <value>Tipi Standard</value>
+  </data>
+  <data name="ReportStringId.FSForm_Msg_BadSymbol" xml:space="preserve">
+    <value>Simbolo errato</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Prefix" xml:space="preserve">
+    <value>Prefisso</value>
+  </data>
+  <data name="ReportStringId.FSForm_GrBox_Sample" xml:space="preserve">
+    <value>Esempio</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Category" xml:space="preserve">
+    <value>Categoria </value>
+  </data>
+  <data name="ReportStringId.FSForm_Btn_Delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="ReportStringId.FSForm_Tab_Custom" xml:space="preserve">
+    <value>Personalizzato</value>
+  </data>
+  <data name="ReportStringId.BCForm_Lbl_Property" xml:space="preserve">
+    <value>Proprietà</value>
+  </data>
+  <data name="ReportStringId.BCForm_Lbl_Binding" xml:space="preserve">
+    <value>Unisci</value>
+  </data>
+  <data name="ReportStringId.CatNavigation" xml:space="preserve">
+    <value>Navigazione</value>
+  </data>
+  <data name="ReportStringId.Msg_IncorrectArgument" xml:space="preserve">
+    <value>Valore non corretto</value>
+  </data>
+  <data name="ReportStringId.Cmd_Detail" xml:space="preserve">
+    <value>Dettaglio</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertDetailReport" xml:space="preserve">
+    <value>Inserisci report di dettaglio</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertUnboundDetailReport" xml:space="preserve">
+    <value>Scollegato</value>
+  </data>
+  <data name="ReportStringId.Cmd_ViewCode" xml:space="preserve">
+    <value>Vista &amp;codice</value>
+  </data>
+  <data name="ReportStringId.Cmd_BringToFront" xml:space="preserve">
+    <value>&amp;Porta davanti</value>
+  </data>
+  <data name="ReportStringId.Cmd_SendToBack" xml:space="preserve">
+    <value>&amp;Porta dietro</value>
+  </data>
+  <data name="ReportStringId.Cmd_AlignToGrid" xml:space="preserve">
+    <value>Allinea alla &amp;griglia</value>
+  </data>
+  <data name="ReportStringId.Cmd_RtfLoad" xml:space="preserve">
+    <value>Carica file...</value>
+  </data>
+  <data name="ReportStringId.Cmd_RtfClear" xml:space="preserve">
+    <value>Pulisci</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsert" xml:space="preserve">
+    <value>&amp;Inserisci</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertRowAbove" xml:space="preserve">
+    <value>Riga &amp;sopra</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertRowBelow" xml:space="preserve">
+    <value>Riga s&amp;otto</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertColumnToLeft" xml:space="preserve">
+    <value>Colonna a &amp;sinistra</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertColumnToRight" xml:space="preserve">
+    <value>Colonna a &amp;destra</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertCell" xml:space="preserve">
+    <value>&amp;Cella</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDelete" xml:space="preserve">
+    <value>Can&amp;cella</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteRow" xml:space="preserve">
+    <value>&amp;Riga</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteColumn" xml:space="preserve">
+    <value>&amp;Colonna</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteCell" xml:space="preserve">
+    <value>Ce&amp;lla</value>
+  </data>
+  <data name="ReportStringId.Cmd_Cut" xml:space="preserve">
+    <value>Ta&amp;glia</value>
+  </data>
+  <data name="ReportStringId.Cmd_Copy" xml:space="preserve">
+    <value>Cop&amp;ia</value>
+  </data>
+  <data name="ReportStringId.Cmd_Paste" xml:space="preserve">
+    <value>&amp;Incolla</value>
+  </data>
+  <data name="ReportStringId.Cmd_Delete" xml:space="preserve">
+    <value>&amp;Cancella</value>
+  </data>
+  <data name="ReportStringId.Cmd_Properties" xml:space="preserve">
+    <value>P&amp;roprietà</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertBand" xml:space="preserve">
+    <value>Inserisci &amp;riga</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidReportSource" xml:space="preserve">
+    <value>Can not be set to a descendant of the current report</value>
+  </data>
+  <data name="ReportStringId.SSForm_Caption" xml:space="preserve">
+    <value>Editor stili</value>
+  </data>
+  <data name="ReportStringId.SSForm_Btn_Close" xml:space="preserve">
+    <value>Chiudi</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_NoStyleSelected" xml:space="preserve">
+    <value>Nessuno stile selezionato</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_MoreThanOneStyle" xml:space="preserve">
+    <value>Hai selezionato più di uno stile</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_SelectedStylesText" xml:space="preserve">
+    <value>Stili selezionati...</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_StyleSheetError" xml:space="preserve">
+    <value>Errore stile foglio</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_InvalidFileFormat" xml:space="preserve">
+    <value>Formato file errato</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_StyleNamePreviewPostfix" xml:space="preserve">
+    <value>Stile</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_FileFilter" xml:space="preserve">
+    <value>Report StyleSheet files (*.repss)|*.repss|All files (*.*)|*.*</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_AddStyle" xml:space="preserve">
+    <value>Aggiungi stile</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_RemoveStyle" xml:space="preserve">
+    <value>Rimuovi stile</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_ClearStyles" xml:space="preserve">
+    <value>Pulisci stili</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_PurgeStyles" xml:space="preserve">
+    <value>Elimina stili</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_SaveStyles" xml:space="preserve">
+    <value>Salva stile nel file</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_LoadStyles" xml:space="preserve">
+    <value>Carica stili da files</value>
+  </data>
+  <data name="ReportStringId.Cmd_DetailReport" xml:space="preserve">
+    <value>DetailReport</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatBackColor" xml:space="preserve">
+    <value>Colore sfondo</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatForeColor" xml:space="preserve">
+    <value>Colore primo piano</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatJustify" xml:space="preserve">
+    <value>Giustificato</value>
+  </data>
+  <data name="ReportStringId.Msg_CreateSomeInstance" xml:space="preserve">
+    <value>Impossibile Creare due Istanze da un Singolo form</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_Undo" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_Redo" xml:space="preserve">
+    <value>Ripristina</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_HtmlView" xml:space="preserve">
+    <value>Vista HTML</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_Preview" xml:space="preserve">
+    <value>Anteprima</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_Designer" xml:space="preserve">
+    <value>Designer</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidMethodCall" xml:space="preserve">
+    <value>This method call is invalid for the object's current state</value>
+  </data>
+  <data name="ReportStringId.Msg_ScriptError" xml:space="preserve">
+    <value>Si sono verificati i seguenti errori:
+{0}</value>
+  </data>
+  <data name="ReportStringId.Msg_DontSupportMulticolumn" xml:space="preserve">
+    <value>Il report di dettagli non supporta il multicolonna.</value>
+  </data>
+  <data name="ReportStringId.Msg_IncorrectPadding" xml:space="preserve">
+    <value>Il valore della spaziatura deve essere maggiore o uguale a 0.</value>
+  </data>
+  <data name="ReportStringId.Msg_WarningControlsAreOverlapped" xml:space="preserve">
+    <value>Attenzione: i seguenti controlli risultano sovrapposti e potrebbero essere esportati in modo non corretto - {0}.</value>
+  </data>
+  <data name="ReportStringId.Msg_WarningControlsAreOutOfMargin" xml:space="preserve">
+    <value>Attenzione: i seguenti controlli risultano al di fuori del margine destro di stampa. Questo causerà la stampa di pagine aggiuntive - {0}.</value>
+  </data>
+  <data name="ReportStringId.Msg_ShapeRotationToolTip" xml:space="preserve">
+    <value>Usare Ctrl con il bottone destro del mouse per ruotare la forma</value>
+  </data>
+  <data name="ReportStringId.PanelDesignMsg" xml:space="preserve">
+    <value>Piazzare qui i controlli per tenerli uniti</value>
+  </data>
+  <data name="ReportStringId.MultiColumnDesignMsg1" xml:space="preserve">
+    <value>Spazio per colonne ripetute.</value>
+  </data>
+  <data name="ReportStringId.MultiColumnDesignMsg2" xml:space="preserve">
+    <value>I controlli piazzati qui verranno stampati in modo non corretto.</value>
+  </data>
+  <data name="ReportStringId.Msg_FillDataError" xml:space="preserve">
+    <value>Errore durante il carricamento dei dati.Eccezione:</value>
+  </data>
+  <data name="ReportStringId.Msg_CyclicBoormarks" xml:space="preserve">
+    <value>There are cyclic bookmarks in the report.</value>
+  </data>
+  <data name="ReportStringId.Msg_LargeText" xml:space="preserve">
+    <value>Testo troppo largo.</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_NewReport" xml:space="preserve">
+    <value>&amp;Nuovo</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_NewWizardReport" xml:space="preserve">
+    <value>Nuovo con &amp;Wizard...</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_OpenFile" xml:space="preserve">
+    <value>&amp;Apri...</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SaveFile" xml:space="preserve">
+    <value>&amp;Salva</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SaveFileAs" xml:space="preserve">
+    <value>Salva con &amp;nome...</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Exit" xml:space="preserve">
+    <value>E&amp;sci</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Cut" xml:space="preserve">
+    <value>&amp;Taglia</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Copy" xml:space="preserve">
+    <value>&amp;Copia</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Paste" xml:space="preserve">
+    <value>&amp;Incolla</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Delete" xml:space="preserve">
+    <value>C&amp;ancella</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SelectAll" xml:space="preserve">
+    <value>Seleziona &amp;tutti</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Undo" xml:space="preserve">
+    <value>&amp;Annulla</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Redo" xml:space="preserve">
+    <value>&amp;Ripeti</value>
+  </data>
+  <data name="ReportStringId.UD_Group_File" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Edit" xml:space="preserve">
+    <value>&amp;Modifica</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Format" xml:space="preserve">
+    <value>Fo&amp;rmato</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Font" xml:space="preserve">
+    <value>&amp;Carattere</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Justify" xml:space="preserve">
+    <value>&amp;Giustifica</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Align" xml:space="preserve">
+    <value>&amp;Allinea</value>
+  </data>
+  <data name="ReportStringId.UD_Group_MakeSameSize" xml:space="preserve">
+    <value>Stessa &amp;dimensione</value>
+  </data>
+  <data name="ReportStringId.UD_Group_HorizontalSpacing" xml:space="preserve">
+    <value>Spaziatura &amp;orizzontale</value>
+  </data>
+  <data name="ReportStringId.UD_Group_VerticalSpacing" xml:space="preserve">
+    <value>Spaziatura &amp;verticale</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Order" xml:space="preserve">
+    <value>&amp;Ordine</value>
+  </data>
+  <data name="ReportStringId.UD_Group_CenterInForm" xml:space="preserve">
+    <value>&amp;Centra sulla finestra</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ForegroundColor" xml:space="preserve">
+    <value>Colore &amp;sfondo</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_BackGroundColor" xml:space="preserve">
+    <value>Colore &amp;sfondo</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_FontBold" xml:space="preserve">
+    <value>&amp;Grassetto</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_FontItalic" xml:space="preserve">
+    <value>&amp;Corsivo</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_FontUnderline" xml:space="preserve">
+    <value>&amp;Sottolineato</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_JustifyLeft" xml:space="preserve">
+    <value>&amp;Sinistra</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_JustifyCenter" xml:space="preserve">
+    <value>&amp;Centrato</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_JustifyRight" xml:space="preserve">
+    <value>&amp;Destra</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_JustifyJustify" xml:space="preserve">
+    <value>&amp;Giustificato</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignLefts" xml:space="preserve">
+    <value>a &amp;Sinistra</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignCenters" xml:space="preserve">
+    <value>&amp;Centra</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignRights" xml:space="preserve">
+    <value>a &amp;Destra</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignTops" xml:space="preserve">
+    <value>in &amp;Alto</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignMiddles" xml:space="preserve">
+    <value>nel &amp;Mezzo</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignBottoms" xml:space="preserve">
+    <value>al &amp;Fondo</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignToGrid" xml:space="preserve">
+    <value>alla &amp;Griglia</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MakeSameSizeWidth" xml:space="preserve">
+    <value>&amp;Larghezza</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MakeSameSizeSizeToGrid" xml:space="preserve">
+    <value>Dimensiona alla Gri&amp;glia</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MakeSameSizeHeight" xml:space="preserve">
+    <value>&amp;Altezza</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MakeSameSizeBoth" xml:space="preserve">
+    <value>&amp;Entrambi</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SpacingMakeEqual" xml:space="preserve">
+    <value>Rendi &amp;Uguale</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SpacingIncrease" xml:space="preserve">
+    <value>&amp;Incrementa</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SpacingDecrease" xml:space="preserve">
+    <value>&amp;Decrementa</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SpacingRemove" xml:space="preserve">
+    <value>&amp;Remuovi</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_CenterInFormHorizontally" xml:space="preserve">
+    <value>&amp;Orizzontalmente</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_CenterInFormVertically" xml:space="preserve">
+    <value>&amp;Verticalmente</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_OrderBringToFront" xml:space="preserve">
+    <value>Porta in &amp;primo piano</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_OrderSendToBack" xml:space="preserve">
+    <value>Porta in &amp;secondo piano</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Zoom" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ZoomIn" xml:space="preserve">
+    <value>Zoom +</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ZoomOut" xml:space="preserve">
+    <value>Zoom -</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ZoomFactor" xml:space="preserve">
+    <value>Fattore Zoom: {0}%</value>
+  </data>
+  <data name="ReportStringId.UD_Title_FieldList" xml:space="preserve">
+    <value>Elenco campi</value>
+  </data>
+  <data name="ReportStringId.UD_Title_ReportExplorer" xml:space="preserve">
+    <value>Report Explorer</value>
+  </data>
+  <data name="ReportStringId.UD_Title_PropertyGrid" xml:space="preserve">
+    <value>Proprietà</value>
+  </data>
+  <data name="ReportStringId.UD_Title_ToolBox" xml:space="preserve">
+    <value>Strumenti</value>
+  </data>
+  <data name="ReportStringId.UD_XtraReportsToolboxCategoryName" xml:space="preserve">
+    <value>Controlli standard</value>
+  </data>
+  <data name="ReportStringId.UD_XtraReportsPointerItemCaption" xml:space="preserve">
+    <value>Puntatore</value>
+  </data>
+  <data name="ReportStringId.UD_Group_View" xml:space="preserve">
+    <value>&amp;Visualizza</value>
+  </data>
+  <data name="ReportStringId.UD_Group_ToolbarsList" xml:space="preserve">
+    <value>&amp;Toolbars</value>
+  </data>
+  <data name="ReportStringId.UD_Group_DockPanelsList" xml:space="preserve">
+    <value>&amp;Finestre</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MainMenuName" xml:space="preserve">
+    <value>Menu principale</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ToolbarName" xml:space="preserve">
+    <value>Toolbar</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_LayoutToolbarName" xml:space="preserve">
+    <value>Toolbar Struttura</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_FormattingToolbarName" xml:space="preserve">
+    <value>Toolbar Formattazione</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_StatusBarName" xml:space="preserve">
+    <value>Barra di stato</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ZoomToolbarName" xml:space="preserve">
+    <value>Toolbar Zoom</value>
+  </data>
+  <data name="ReportStringId.CatUserDesigner" xml:space="preserve">
+    <value>Designer</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Text" xml:space="preserve">
+    <value>Testo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_DataBinding" xml:space="preserve">
+    <value>Collegamento</value>
+  </data>
+  <data name="ReportStringId.STag_Name_FormatString" xml:space="preserve">
+    <value>Formato stringa</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ForeColor" xml:space="preserve">
+    <value>Colore primo piano</value>
+  </data>
+  <data name="ReportStringId.STag_Name_BackColor" xml:space="preserve">
+    <value>Colore sfondo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Font" xml:space="preserve">
+    <value>Carattere</value>
+  </data>
+  <data name="ReportStringId.STag_Name_LineDirection" xml:space="preserve">
+    <value>Direzione linea</value>
+  </data>
+  <data name="ReportStringId.STag_Name_LineStyle" xml:space="preserve">
+    <value>Stile linea</value>
+  </data>
+  <data name="ReportStringId.STag_Name_LineWidth" xml:space="preserve">
+    <value>Larghezza linea</value>
+  </data>
+  <data name="ReportStringId.STag_Name_CanGrow" xml:space="preserve">
+    <value>Può crescere</value>
+  </data>
+  <data name="ReportStringId.STag_Name_CanShrink" xml:space="preserve">
+    <value>Può rimpicciolire</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Multiline" xml:space="preserve">
+    <value>Multilinea</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Summary" xml:space="preserve">
+    <value>Sommario</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Symbology" xml:space="preserve">
+    <value>Simbologia</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Module" xml:space="preserve">
+    <value>Modulo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ShowText" xml:space="preserve">
+    <value>Mostra testo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_SegmentWidth" xml:space="preserve">
+    <value>Larghezza segmento</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Checked" xml:space="preserve">
+    <value>Spuntato</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Image" xml:space="preserve">
+    <value>Immagine</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ImageUrl" xml:space="preserve">
+    <value>Url immagine</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ImageSizing" xml:space="preserve">
+    <value>Dimensioni immagine</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ReportSource" xml:space="preserve">
+    <value>Sorgente</value>
+  </data>
+  <data name="ReportStringId.STag_Name_PreviewRowCount" xml:space="preserve">
+    <value>Anteprima conteggio righe</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ShrinkSubReportIconArea" xml:space="preserve">
+    <value>Restringi l'area dell'icona sottoreport</value>
+  </data>
+  <data name="ReportStringId.STag_Name_PageInfo" xml:space="preserve">
+    <value>Formato pagina</value>
+  </data>
+  <data name="ReportStringId.STag_Name_StartPageNumber" xml:space="preserve">
+    <value>Numero pagina iniziale</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Format" xml:space="preserve">
+    <value>Formato</value>
+  </data>
+  <data name="ReportStringId.STag_Name_KeepTogether" xml:space="preserve">
+    <value>Tieni unito</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Bands" xml:space="preserve">
+    <value>Bande</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Height" xml:space="preserve">
+    <value>Altezza</value>
+  </data>
+  <data name="ReportStringId.STag_Name_RepeatEveryPage" xml:space="preserve">
+    <value>Ripeti su ogni pagina</value>
+  </data>
+  <data name="ReportStringId.STag_Name_PrintAtBottom" xml:space="preserve">
+    <value>Stampa al fondo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_GroupFields" xml:space="preserve">
+    <value>Campi raggruppamento</value>
+  </data>
+  <data name="ReportStringId.STag_Name_SortFields" xml:space="preserve">
+    <value>Campi di ordinamento</value>
+  </data>
+  <data name="ReportStringId.STag_Name_GroupUnion" xml:space="preserve">
+    <value>Unione gruppi</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Level" xml:space="preserve">
+    <value>Livello</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnMode" xml:space="preserve">
+    <value>Modalità campo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnCount" xml:space="preserve">
+    <value>Conteggio campi</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnWidth" xml:space="preserve">
+    <value>Larghezza campo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnSpacing" xml:space="preserve">
+    <value>Spaziatura campo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Direction" xml:space="preserve">
+    <value>Direzione</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Watermark" xml:space="preserve">
+    <value>Watermark</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ReportUnit" xml:space="preserve">
+    <value>Unità</value>
+  </data>
+  <data name="ReportStringId.STag_Name_DataSource" xml:space="preserve">
+    <value>Sorgente dati</value>
+  </data>
+  <data name="ReportStringId.STag_Name_DataMember" xml:space="preserve">
+    <value>Membro dati</value>
+  </data>
+  <data name="ReportStringId.STag_Name_DataAdapter" xml:space="preserve">
+    <value>Data Adapter</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Angle" xml:space="preserve">
+    <value>Angolo</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ArrowHeight" xml:space="preserve">
+    <value>Altezza freccia</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ArrowWidth" xml:space="preserve">
+    <value>Larghezza freccia</value>
+  </data>
+  <data name="ReportStringId.STag_Name_TipLength" xml:space="preserve">
+    <value>Lunghezza tip</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Concavity" xml:space="preserve">
+    <value>Concavità</value>
+  </data>
+  <data name="ReportStringId.STag_Name_HorizontalLineWidth" xml:space="preserve">
+    <value>Larghezza linea orizzontale</value>
+  </data>
+  <data name="ReportStringId.STag_Name_VerticalLineWidth" xml:space="preserve">
+    <value>Larghezza linea verticale</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Fillet" xml:space="preserve">
+    <value>Fillet</value>
+  </data>
+  <data name="ReportStringId.STag_Name_NumberOfSides" xml:space="preserve">
+    <value>Numero lati</value>
+  </data>
+  <data name="ReportStringId.STag_Name_StarPointCount" xml:space="preserve">
+    <value>Conteggio star point</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Shape" xml:space="preserve">
+    <value>Forma</value>
+  </data>
+  <data name="ReportStringId.STag_Name_TailLength" xml:space="preserve">
+    <value>Lunghezza coda</value>
+  </data>
+  <data name="ReportStringId.STag_Name_TrapezoidBase" xml:space="preserve">
+    <value>Base trapezoidale</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Stretch" xml:space="preserve">
+    <value>Stretch</value>
+  </data>
+  <data name="ReportStringId.STag_Name_FillColor" xml:space="preserve">
+    <value>Colore riempimento</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_NewReport" xml:space="preserve">
+    <value>Crea un nuovo report vuoto</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_NewWizardReport" xml:space="preserve">
+    <value>Crea un nuovo report usando il Wizard</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_OpenFile" xml:space="preserve">
+    <value>Apre un report</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SaveFile" xml:space="preserve">
+    <value>Salva il report</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SaveFileAs" xml:space="preserve">
+    <value>Salva il report con un altro nome</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Exit" xml:space="preserve">
+    <value>Chiude il designer</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Cut" xml:space="preserve">
+    <value>Copia negli appunti e cancella il controllo</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Copy" xml:space="preserve">
+    <value>Copia negli appunti il controllo</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Paste" xml:space="preserve">
+    <value>Aggiunge i controlli dagli appunti</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Delete" xml:space="preserve">
+    <value>Cancella il controllo</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SelectAll" xml:space="preserve">
+    <value>Seleziona tutti i controlli del report</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Undo" xml:space="preserve">
+    <value>Annulla l'ultima operazione</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Redo" xml:space="preserve">
+    <value>Ripete l'ultima operazione</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ForegroundColor" xml:space="preserve">
+    <value>Imposta il colore di primo piano del controllo</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_BackGroundColor" xml:space="preserve">
+    <value>Imposta il colore di sfondo</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_FontBold" xml:space="preserve">
+    <value>Applica il grassetto al carattere</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_FontItalic" xml:space="preserve">
+    <value>Applica il corsivoal carattere</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_FontUnderline" xml:space="preserve">
+    <value>Applica il sottolineato al carattere</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_JustifyLeft" xml:space="preserve">
+    <value>Allinea il testo del controllo a sinistra</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_JustifyCenter" xml:space="preserve">
+    <value>Allinea il testo del controllo al centro</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_JustifyRight" xml:space="preserve">
+    <value>Allinea il testo del controllo a destra</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_JustifyJustify" xml:space="preserve">
+    <value>Giustifica il testo del controllo</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignLefts" xml:space="preserve">
+    <value>Allinea a sinistra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignCenters" xml:space="preserve">
+    <value>Allinea il centro dei controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignRights" xml:space="preserve">
+    <value>Allinea a destra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignTops" xml:space="preserve">
+    <value>Allinea il margine superiore dei controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignMiddles" xml:space="preserve">
+    <value>Allinea il centro dei controlli selezionati orizzontalmente.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignBottoms" xml:space="preserve">
+    <value>Allinea il fondo dei controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignToGrid" xml:space="preserve">
+    <value>Allinea le posizioni dei controlli selezionati alla griglia.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_MakeSameSizeWidth" xml:space="preserve">
+    <value>Applica la stessa larghezza ai controlli selezionati</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_MakeSameSizeSizeToGrid" xml:space="preserve">
+    <value>Dimensiona i controlli selezionati alla griglia</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_MakeSameSizeHeight" xml:space="preserve">
+    <value>Applica la stessa altezza ai controlli selezionati</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_MakeSameSizeBoth" xml:space="preserve">
+    <value>Applica la stessa dimensione ai controlli selezionati</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SpacingMakeEqual" xml:space="preserve">
+    <value>Applica la stessa spaziatura ai controlli selezionati</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SpacingIncrease" xml:space="preserve">
+    <value>Incrementa la spaziatura tra i controlli selezionati</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SpacingDecrease" xml:space="preserve">
+    <value>Decrementa la spaziatura tra i controlli selezionati</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SpacingRemove" xml:space="preserve">
+    <value>Rimuove la spaziatura tra i controlli selezionati</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_CenterInFormHorizontally" xml:space="preserve">
+    <value>Centra orizzontalmente i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_CenterInFormVertically" xml:space="preserve">
+    <value>Centra verticalmentei controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_OrderBringToFront" xml:space="preserve">
+    <value>Porta i controlli selezionati in primo piano</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_OrderSendToBack" xml:space="preserve">
+    <value>Porta i controlli selezionati in secondo piano</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Zoom" xml:space="preserve">
+    <value>Seleziona o inserisci il fattore di Zoom</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ZoomIn" xml:space="preserve">
+    <value>Aumenta lo zoom</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ZoomOut" xml:space="preserve">
+    <value>Diminuisce lo zoom</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ViewBars" xml:space="preserve">
+    <value>Nasconde o mostra {0}</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ViewDockPanels" xml:space="preserve">
+    <value>Nasconde o mostra la finestra {0}</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ViewTabs" xml:space="preserve">
+    <value>Sposta la scheda {0}</value>
+  </data>
+  <data name="ReportStringId.Msg_ScriptingPermissionErrorMessage" xml:space="preserve">
+    <value>Permessi insufficienti.
+
+Dettagli:
+
+{0}</value>
+  </data>
+  <data name="ReportStringId.Msg_ErrorTitle" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="ReportStringId.Msg_SerializationErrorTitle" xml:space="preserve">
+    <value>Errore di Serializzazione</value>
+  </data>
+  <data name="ReportStringId.Msg_ReportImporting" xml:space="preserve">
+    <value>Importazione struttura report. Prego, attendere...</value>
+  </data>
+  <data name="ReportStringId.Cmd_BandMoveDown" xml:space="preserve">
+    <value>Sposta giù</value>
+  </data>
+  <data name="ReportStringId.Cmd_BandMoveUp" xml:space="preserve">
+    <value>Sposta su</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_RecentFonts_GalleryGroup_Caption" xml:space="preserve">
+    <value>Tipi carattere recenti</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AllFonts_GalleryGroup_Caption" xml:space="preserve">
+    <value>Tutti i tipi carattere</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageText" xml:space="preserve">
+    <value>Report Designer</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlPageText" xml:space="preserve">
+    <value>Vista HTML</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Edit" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Font" xml:space="preserve">
+    <value>Carattere</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Alignment" xml:space="preserve">
+    <value>Allineamento</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_SizeAndLayout" xml:space="preserve">
+    <value>Struttura</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Zoom" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_View" xml:space="preserve">
+    <value>Visualizza</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignToGrid_Caption" xml:space="preserve">
+    <value>Allinea alla griglia</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignLeft_Caption" xml:space="preserve">
+    <value>Allinea a sinistra</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignVerticalCenters_Caption" xml:space="preserve">
+    <value>Allinea al centro</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignRight_Caption" xml:space="preserve">
+    <value>Allinea a destra</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignTop_Caption" xml:space="preserve">
+    <value>Allinea in alto</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignHorizontalCenters_Caption" xml:space="preserve">
+    <value>Allinea in mezzo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignBottom_Caption" xml:space="preserve">
+    <value>Allinea al fondo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlWidth_Caption" xml:space="preserve">
+    <value>Stessa larghezza</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToGrid_Caption" xml:space="preserve">
+    <value>Dimensiona alla griglia</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlHeight_Caption" xml:space="preserve">
+    <value>Stessa altezza</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControl_Caption" xml:space="preserve">
+    <value>Stessa dimensione</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceMakeEqual_Caption" xml:space="preserve">
+    <value>Identica spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceIncrease_Caption" xml:space="preserve">
+    <value>Incrementa spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceDecrease_Caption" xml:space="preserve">
+    <value>Decrementa spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceConcatenate_Caption" xml:space="preserve">
+    <value>Rimuove spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceMakeEqual_Caption" xml:space="preserve">
+    <value>Identica spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceIncrease_Caption" xml:space="preserve">
+    <value>Incrementa spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceDecrease_Caption" xml:space="preserve">
+    <value>Decrementa spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceConcatenate_Caption" xml:space="preserve">
+    <value>Rimuove spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterHorizontally_Caption" xml:space="preserve">
+    <value>Centra orizzontalmente</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterVertically_Caption" xml:space="preserve">
+    <value>Centra verticalmente</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BringToFront_Caption" xml:space="preserve">
+    <value>Porta in primo piano</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SendToBack_Caption" xml:space="preserve">
+    <value>Porta in secondo piano</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontBold_Caption" xml:space="preserve">
+    <value>Grassetto</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontItalic_Caption" xml:space="preserve">
+    <value>Corsivo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontUnderline_Caption" xml:space="preserve">
+    <value>Sottolineato</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ForeColor_Caption" xml:space="preserve">
+    <value>Colore primo piano</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BackColor_Caption" xml:space="preserve">
+    <value>Colore sfondo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyLeft_Caption" xml:space="preserve">
+    <value>Allinea a sinistra</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyCenter_Caption" xml:space="preserve">
+    <value>Centra testo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyRight_Caption" xml:space="preserve">
+    <value>Allinea a destra</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyJustify_Caption" xml:space="preserve">
+    <value>Giustifica</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReport_Caption" xml:space="preserve">
+    <value>Nuovo report</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReportWizard_Caption" xml:space="preserve">
+    <value>Nuovo report con Wizard...</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_OpenFile_Caption" xml:space="preserve">
+    <value>Apri...</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFile_Caption" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFileAs_Caption" xml:space="preserve">
+    <value>Salva con nome...</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Cut_Caption" xml:space="preserve">
+    <value>Taglia</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Copy_Caption" xml:space="preserve">
+    <value>Copia</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Paste_Caption" xml:space="preserve">
+    <value>Incolla</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Undo_Caption" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Redo_Caption" xml:space="preserve">
+    <value>Ripeti</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Zoom_Caption" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomIn_Caption" xml:space="preserve">
+    <value>Zoom +</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomOut_Caption" xml:space="preserve">
+    <value>Zoom -</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomExact_Caption" xml:space="preserve">
+    <value>Estrae:</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignToGrid_STipTitle" xml:space="preserve">
+    <value>Allinea alla griglia</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignLeft_STipTitle" xml:space="preserve">
+    <value>Allinea a sinistra</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignVerticalCenters_STipTitle" xml:space="preserve">
+    <value>Allinea al centro</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignRight_STipTitle" xml:space="preserve">
+    <value>Allinea a destra</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignTop_STipTitle" xml:space="preserve">
+    <value>Allinea in alto</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignHorizontalCenters_STipTitle" xml:space="preserve">
+    <value>Allinea in mezzo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignBottom_STipTitle" xml:space="preserve">
+    <value>Allinea al fondo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlWidth_STipTitle" xml:space="preserve">
+    <value>Stessa larghezza</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToGrid_STipTitle" xml:space="preserve">
+    <value>Dimensiona alla griglia</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlHeight_STipTitle" xml:space="preserve">
+    <value>Stessa altezza</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControl_STipTitle" xml:space="preserve">
+    <value>Stessa dimensione</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceMakeEqual_STipTitle" xml:space="preserve">
+    <value>Identica spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceIncrease_STipTitle" xml:space="preserve">
+    <value>Incrementa spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceDecrease_STipTitle" xml:space="preserve">
+    <value>Decrementa spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceConcatenate_STipTitle" xml:space="preserve">
+    <value>Rimuove spaziatura orizzontale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceMakeEqual_STipTitle" xml:space="preserve">
+    <value>Identica spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceIncrease_STipTitle" xml:space="preserve">
+    <value>Incrementa spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceDecrease_STipTitle" xml:space="preserve">
+    <value>Decrementa spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceConcatenate_STipTitle" xml:space="preserve">
+    <value>Rimuove spaziatura verticale</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterHorizontally_STipTitle" xml:space="preserve">
+    <value>Centra orizzontalmente</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterVertically_STipTitle" xml:space="preserve">
+    <value>Centra verticalmente</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BringToFront_STipTitle" xml:space="preserve">
+    <value>Porta in primo piano</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SendToBack_STipTitle" xml:space="preserve">
+    <value>Porta in secondo piano</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontBold_STipTitle" xml:space="preserve">
+    <value>Grassetto</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontItalic_STipTitle" xml:space="preserve">
+    <value>Corsivo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontUnderline_STipTitle" xml:space="preserve">
+    <value>Sottolineato</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ForeColor_STipTitle" xml:space="preserve">
+    <value>Colore primo piano</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BackColor_STipTitle" xml:space="preserve">
+    <value>Colore sfondo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyLeft_STipTitle" xml:space="preserve">
+    <value>Allinea a sinistra</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyCenter_STipTitle" xml:space="preserve">
+    <value>Centra testo</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyRight_STipTitle" xml:space="preserve">
+    <value>Allinea a destra</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyJustify_STipTitle" xml:space="preserve">
+    <value>Giustifica</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReport_STipTitle" xml:space="preserve">
+    <value>Nuovo report vuoto</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReportWizard_STipTitle" xml:space="preserve">
+    <value>Nuovo report con wizard</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_OpenFile_STipTitle" xml:space="preserve">
+    <value>Apri report</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFile_STipTitle" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFileAs_STipTitle" xml:space="preserve">
+    <value>Salva con nome</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Cut_STipTitle" xml:space="preserve">
+    <value>Taglia</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Copy_STipTitle" xml:space="preserve">
+    <value>Copia</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Paste_STipTitle" xml:space="preserve">
+    <value>Incolla</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Undo_STipTitle" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Redo_STipTitle" xml:space="preserve">
+    <value>Ripeti</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Zoom_STipTitle" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomIn_STipTitle" xml:space="preserve">
+    <value>Zoom +</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomOut_STipTitle" xml:space="preserve">
+    <value>Zoom -</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignToGrid_STipContent" xml:space="preserve">
+    <value>Allinea le posizioni dei controlli selezionati alla griglia.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignLeft_STipContent" xml:space="preserve">
+    <value>Allinea a sinistra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignVerticalCenters_STipContent" xml:space="preserve">
+    <value>Allinea al centro verticalmente i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignRight_STipContent" xml:space="preserve">
+    <value>Allinea a destra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignTop_STipContent" xml:space="preserve">
+    <value>Allinea in alto i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignHorizontalCenters_STipContent" xml:space="preserve">
+    <value>Allinea in mezzo i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignBottom_STipContent" xml:space="preserve">
+    <value>Allinea al fondo i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlWidth_STipContent" xml:space="preserve">
+    <value>Applica la stessa larghezza ai controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToGrid_STipContent" xml:space="preserve">
+    <value>Applica ai controlli selezionati una dimensione che si adatta alla gliglia.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlHeight_STipContent" xml:space="preserve">
+    <value>Applica la stessa altezza ai controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControl_STipContent" xml:space="preserve">
+    <value>Applica la stessa dimensione ai controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceMakeEqual_STipContent" xml:space="preserve">
+    <value>Rende identica la spaziatura orizzontale tra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceIncrease_STipContent" xml:space="preserve">
+    <value>Incrementa la spaziatura orizzontale tra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceDecrease_STipContent" xml:space="preserve">
+    <value>Decrementa la spaziatura orizzontale tra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceConcatenate_STipContent" xml:space="preserve">
+    <value>Rimuove la spaziatura orizzontale tra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceMakeEqual_STipContent" xml:space="preserve">
+    <value>Rende identica la spaziatura verticale tra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceIncrease_STipContent" xml:space="preserve">
+    <value>Incrementa la spaziatura verticale tra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceDecrease_STipContent" xml:space="preserve">
+    <value>Decrementa la spaziatura verticale tra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceConcatenate_STipContent" xml:space="preserve">
+    <value>Rimuove la spaziatura verticale tra i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterHorizontally_STipContent" xml:space="preserve">
+    <value>Centra orizzontalmente i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterVertically_STipContent" xml:space="preserve">
+    <value>Centra verticalmente i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BringToFront_STipContent" xml:space="preserve">
+    <value>Porta i controlli selezionati in primo piano.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SendToBack_STipContent" xml:space="preserve">
+    <value>Porta in secondo piano i controlli selezionati.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontBold_STipContent" xml:space="preserve">
+    <value>Applica il grassetto al testo selezionato.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontItalic_STipContent" xml:space="preserve">
+    <value>Applica il corsivo al testo selezionato.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontUnderline_STipContent" xml:space="preserve">
+    <value>Sottolinea il testo selezionato.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ForeColor_STipContent" xml:space="preserve">
+    <value>Cambia il colore di primo piano.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BackColor_STipContent" xml:space="preserve">
+    <value>Cambia il colore di sfondo del testo.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyLeft_STipContent" xml:space="preserve">
+    <value>Allinea il testo a sinistra.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyCenter_STipContent" xml:space="preserve">
+    <value>Centra il testo.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyRight_STipContent" xml:space="preserve">
+    <value>Allinea il testo a destra.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyJustify_STipContent" xml:space="preserve">
+    <value>Giustifica il testo.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReport_STipContent" xml:space="preserve">
+    <value>Crea un report vuoto sul quale aggiungere controlli e campi.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontName_STipTitle" xml:space="preserve">
+    <value>Tipo carattere</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontSize_STipTitle" xml:space="preserve">
+    <value>Dimensiona carattere</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReportWizard_STipContent" xml:space="preserve">
+    <value>Lancia il wizard di creazione report.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_OpenFile_STipContent" xml:space="preserve">
+    <value>Apre un report.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFile_STipContent" xml:space="preserve">
+    <value>Salva il report.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFileAs_STipContent" xml:space="preserve">
+    <value>Salva il report con un altro nome.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Cut_STipContent" xml:space="preserve">
+    <value>Copia i controlli selezionati negli appunti e poi li elimina.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Copy_STipContent" xml:space="preserve">
+    <value>Copia i controlli selezionati negli appunti.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Paste_STipContent" xml:space="preserve">
+    <value>Incolla il contenuto degli appunti.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Undo_STipContent" xml:space="preserve">
+    <value>Annulla l'ultima operazione.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Redo_STipContent" xml:space="preserve">
+    <value>Ripete l'ultima operazione.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Zoom_STipContent" xml:space="preserve">
+    <value>Cambia il livello di zoom del designer.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomIn_STipContent" xml:space="preserve">
+    <value>Incrementa lo zoom.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomOut_STipContent" xml:space="preserve">
+    <value>Decrementa lo zoom.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontName_STipContent" xml:space="preserve">
+    <value>Cambia il tipo di carattere.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontSize_STipContent" xml:space="preserve">
+    <value>Cambia la dimensione del carattere.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Windows_Caption" xml:space="preserve">
+    <value>Finestre</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Windows_STipTitle" xml:space="preserve">
+    <value>Mostra/Nasconde finestre</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Windows_STipContent" xml:space="preserve">
+    <value>Mostra o nasconde le finestre Strumenti, Report Explorer, Elenco campi e  proprietà.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_HtmlNavigation" xml:space="preserve">
+    <value>Navigazione</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlHome_Caption" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlBackward_Caption" xml:space="preserve">
+    <value>Indietro</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlForward_Caption" xml:space="preserve">
+    <value>Avanti</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlRefresh_Caption" xml:space="preserve">
+    <value>Aggiorna</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlFind_Caption" xml:space="preserve">
+    <value>Trova</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlHome_STipTitle" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlBackward_STipTitle" xml:space="preserve">
+    <value>Indietro</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlForward_STipTitle" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlRefresh_STipTitle" xml:space="preserve">
+    <value>Aggiorna</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlFind_STipTitle" xml:space="preserve">
+    <value>Trova</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlHome_STipContent" xml:space="preserve">
+    <value>Visualizza la home page.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlBackward_STipContent" xml:space="preserve">
+    <value>Va alla pagina precedente.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlForward_STipContent" xml:space="preserve">
+    <value>Va alla pagina successiva.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlRefresh_STipContent" xml:space="preserve">
+    <value>Aggiorna la pagina.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlFind_STipContent" xml:space="preserve">
+    <value>Trova testo sulla pagina.</value>
+  </data>
+  <data name="ReportStringId.XRSubreport_NameInfo" xml:space="preserve">
+    <value>Nome: {0}
+</value>
+  </data>
+  <data name="ReportStringId.XRSubreport_NullReportSourceInfo" xml:space="preserve">
+    <value>Nullo</value>
+  </data>
+  <data name="ReportStringId.XRSubreport_ReportSourceInfo" xml:space="preserve">
+    <value>Sorgente report: {0}
+</value>
+  </data>
+</root>

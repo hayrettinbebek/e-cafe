@@ -1,0 +1,1802 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ReportStringId.CatAppearance" xml:space="preserve">
+    <value>Weergave</value>
+  </data>
+  <data name="ReportStringId.CatData" xml:space="preserve">
+    <value>Gegevens</value>
+  </data>
+  <data name="ReportStringId.CatLayout" xml:space="preserve">
+    <value>Ontwerp</value>
+  </data>
+  <data name="ReportStringId.CatBehavior" xml:space="preserve">
+    <value>Gedrag</value>
+  </data>
+  <data name="ReportStringId.CatPageSettings" xml:space="preserve">
+    <value>Pagina-instelling</value>
+  </data>
+  <data name="ReportStringId.Cmd_TopMargin" xml:space="preserve">
+    <value>Bovenmarge</value>
+  </data>
+  <data name="ReportStringId.Cmd_PageHeader" xml:space="preserve">
+    <value>Paginakop</value>
+  </data>
+  <data name="ReportStringId.Cmd_ReportHeader" xml:space="preserve">
+    <value>Rapportkop</value>
+  </data>
+  <data name="ReportStringId.Cmd_GroupHeader" xml:space="preserve">
+    <value>Groepkop</value>
+  </data>
+  <data name="ReportStringId.Cmd_GroupFooter" xml:space="preserve">
+    <value>Groepvoet</value>
+  </data>
+  <data name="ReportStringId.Cmd_ReportFooter" xml:space="preserve">
+    <value>Rapportvoet</value>
+  </data>
+  <data name="ReportStringId.Cmd_PageFooter" xml:space="preserve">
+    <value>Paginavoet</value>
+  </data>
+  <data name="ReportStringId.Cmd_BottomMargin" xml:space="preserve">
+    <value>Ondermarge</value>
+  </data>
+  <data name="ReportStringId.BandDsg_QuantityPerPage" xml:space="preserve">
+    <value>een band per pagina</value>
+  </data>
+  <data name="ReportStringId.BandDsg_QuantityPerReport" xml:space="preserve">
+    <value>een band per rapport</value>
+  </data>
+  <data name="ReportStringId.Msg_CreateReportInstance" xml:space="preserve">
+    <value>Het rapport wat u aan het bewerken bent is van een een ander type dan u probeert te laden. 
+Wilt u een het rapport toch openen?</value>
+  </data>
+  <data name="ReportStringId.Msg_FileCorrupted" xml:space="preserve">
+    <value>Het rapport kan niet geladen worden. Het bestand is waarschijnlijk corrupt of er is een bestand niet aanwezig.</value>
+  </data>
+  <data name="ReportStringId.Msg_FileContentCorrupted" xml:space="preserve">
+    <value>Kan de rapportindeling niet laden. Het bestand is mogelijk gecorrumpeerd, of het bevat onjuiste informatie.</value>
+  </data>
+  <data name="ReportStringId.Msg_FileNotFound" xml:space="preserve">
+    <value>Bestand niet gevonden.</value>
+  </data>
+  <data name="ReportStringId.Msg_WrongReportClassName" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens deserialization - mogelijk een foute class name</value>
+  </data>
+  <data name="ReportStringId.Msg_InvPropName" xml:space="preserve">
+    <value>Ongeldige property naam</value>
+  </data>
+  <data name="ReportStringId.Msg_IncorrectBandType" xml:space="preserve">
+    <value>Ongeldig band type</value>
+  </data>
+  <data name="ReportStringId.UD_ReportDesigner" xml:space="preserve">
+    <value>Rapport Ontwerper</value>
+  </data>
+  <data name="ReportStringId.UD_Msg_ReportChanged" xml:space="preserve">
+    <value>Rapport is veranderd. Wilt u de veranderingen opslaan?</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceIncrease" xml:space="preserve">
+    <value>Vertikale afstand verhogen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControl" xml:space="preserve">
+    <value>Dezelfde grootte maken</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_CenterVertically" xml:space="preserve">
+    <value>Centreer Vertikaal</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatItalic" xml:space="preserve">
+    <value>Cursief</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_CenterHorizontally" xml:space="preserve">
+    <value>Centreer Horizontaal</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FileSave" xml:space="preserve">
+    <value>Bestand Opslaan</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditCut" xml:space="preserve">
+    <value>Knippen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditCopy" xml:space="preserve">
+    <value>Kopieer</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_EditPaste" xml:space="preserve">
+    <value>Plakken</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignHorizontalCenters" xml:space="preserve">
+    <value>Uitlijnen Midden</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToGrid" xml:space="preserve">
+    <value>Aan grid aanpassen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatAlignLeft" xml:space="preserve">
+    <value>Uitlijnen Links</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignRight" xml:space="preserve">
+    <value>Uitlijnen Rechts</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceDecrease" xml:space="preserve">
+    <value>Horizontale afstand verkleinen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignVerticalCenters" xml:space="preserve">
+    <value>Uitlijnen Midden</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatFontSize" xml:space="preserve">
+    <value>Letterype Grootte</value>
+  </data>
+  <data name="ReportStringId.UD_Trans_Delete" xml:space="preserve">
+    <value>Verwijderen componenten</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceMakeEqual" xml:space="preserve">
+    <value>Maak vertikale afstand gelijk</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignTop" xml:space="preserve">
+    <value>Uitlijnen Boven</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceDecrease" xml:space="preserve">
+    <value>Vertikale afstand verkleinen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControlWidth" xml:space="preserve">
+    <value>Maak zelfde breedtes</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignLeft" xml:space="preserve">
+    <value>Uitlijnen Links</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatFontName" xml:space="preserve">
+    <value>Lettertype Naam</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatAlignRight" xml:space="preserve">
+    <value>Uitlijnen Rechts</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FileOpen" xml:space="preserve">
+    <value>Bestand Openen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceMakeEqual" xml:space="preserve">
+    <value>Maak horizontale afstand gelijk</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_BringToFront" xml:space="preserve">
+    <value>Naar voren brengen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatBold" xml:space="preserve">
+    <value>Vet</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignToGrid" xml:space="preserve">
+    <value>Uitlijnen aan grid</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_VertSpaceConcatenate" xml:space="preserve">
+    <value>Verwijder vertikale afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatCenter" xml:space="preserve">
+    <value>Centreren</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatUnderline" xml:space="preserve">
+    <value>Onderstrepen</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SizeToControlHeight" xml:space="preserve">
+    <value>Maak zelfde hoogte</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_AlignBottom" xml:space="preserve">
+    <value>Uitlijnen Onder</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_SendToBack" xml:space="preserve">
+    <value>Naar achteren</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceConcatenate" xml:space="preserve">
+    <value>Verwijderen horizontale afstand</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_HorizSpaceIncrease" xml:space="preserve">
+    <value>Vergroten horizontale afstand</value>
+  </data>
+  <data name="ReportStringId.UD_FormCaption" xml:space="preserve">
+    <value>Rapport Ontwerper</value>
+  </data>
+  <data name="ReportStringId.VS_XtraReportsToolboxCategoryName" xml:space="preserve">
+    <value>DX.{0}: Rapport Controls</value>
+  </data>
+  <data name="ReportStringId.Verb_EditBands" xml:space="preserve">
+    <value>Banden bewerken...</value>
+  </data>
+  <data name="ReportStringId.Verb_EditGroupFields" xml:space="preserve">
+    <value>Groeperingsvelden bewerken...</value>
+  </data>
+  <data name="ReportStringId.Verb_Import" xml:space="preserve">
+    <value>Importeren...</value>
+  </data>
+  <data name="ReportStringId.Verb_Save" xml:space="preserve">
+    <value>Opslaan...</value>
+  </data>
+  <data name="ReportStringId.Verb_About" xml:space="preserve">
+    <value>Informatie</value>
+  </data>
+  <data name="ReportStringId.Verb_RTFClear" xml:space="preserve">
+    <value>Leegmaken</value>
+  </data>
+  <data name="ReportStringId.Verb_RTFLoad" xml:space="preserve">
+    <value>Laad bestand...</value>
+  </data>
+  <data name="ReportStringId.Verb_FormatString" xml:space="preserve">
+    <value>Formattering-masker...</value>
+  </data>
+  <data name="ReportStringId.Verb_SummaryWizard" xml:space="preserve">
+    <value>Samenvatting...</value>
+  </data>
+  <data name="ReportStringId.Verb_ReportWizard" xml:space="preserve">
+    <value>Start de wizard voor dit rapport...</value>
+  </data>
+  <data name="ReportStringId.Verb_Insert" xml:space="preserve">
+    <value>Invoegen...</value>
+  </data>
+  <data name="ReportStringId.Verb_Delete" xml:space="preserve">
+    <value>Verwijderen...</value>
+  </data>
+  <data name="ReportStringId.Verb_Bind" xml:space="preserve">
+    <value>Koppelen</value>
+  </data>
+  <data name="ReportStringId.Verb_EditText" xml:space="preserve">
+    <value>Tekst wijzigen</value>
+  </data>
+  <data name="ReportStringId.Verb_AddFieldToArea" xml:space="preserve">
+    <value>Veld toevoegen aan Gebied</value>
+  </data>
+  <data name="ReportStringId.Verb_RunDesigner" xml:space="preserve">
+    <value>Ontwerper Uitvoeren...</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_CustomGeneral" xml:space="preserve">
+    <value>Algemeen formaat is niet gespecificeerd</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Suffix" xml:space="preserve">
+    <value>Toevoeging:</value>
+  </data>
+  <data name="ReportStringId.FSForm_Tab_StandardTypes" xml:space="preserve">
+    <value>Standaard Typen</value>
+  </data>
+  <data name="ReportStringId.FSForm_Msg_BadSymbol" xml:space="preserve">
+    <value>Fout Symbool</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Prefix" xml:space="preserve">
+    <value>Voorloop:</value>
+  </data>
+  <data name="ReportStringId.FSForm_GrBox_Sample" xml:space="preserve">
+    <value>Voorbeeld</value>
+  </data>
+  <data name="ReportStringId.FSForm_Lbl_Category" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="ReportStringId.FSForm_Btn_Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="ReportStringId.FSForm_Tab_Custom" xml:space="preserve">
+    <value>Aangepast</value>
+  </data>
+  <data name="ReportStringId.BCForm_Lbl_Property" xml:space="preserve">
+    <value>Eigenschap</value>
+  </data>
+  <data name="ReportStringId.BCForm_Lbl_Binding" xml:space="preserve">
+    <value>Binding</value>
+  </data>
+  <data name="ReportStringId.CatNavigation" xml:space="preserve">
+    <value>Navigatie</value>
+  </data>
+  <data name="ReportStringId.Msg_IncorrectArgument" xml:space="preserve">
+    <value>Ongeldige waarde</value>
+  </data>
+  <data name="ReportStringId.Cmd_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertDetailReport" xml:space="preserve">
+    <value>Toevoegen Detail Report</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertUnboundDetailReport" xml:space="preserve">
+    <value>Niet gebonden</value>
+  </data>
+  <data name="ReportStringId.Cmd_ViewCode" xml:space="preserve">
+    <value>Bekijk &amp;Code</value>
+  </data>
+  <data name="ReportStringId.Cmd_BringToFront" xml:space="preserve">
+    <value>&amp;Naar voren</value>
+  </data>
+  <data name="ReportStringId.Cmd_SendToBack" xml:space="preserve">
+    <value>Naar &amp;achteren</value>
+  </data>
+  <data name="ReportStringId.Cmd_AlignToGrid" xml:space="preserve">
+    <value>Uitlijnen aan &amp;rasterlijnen</value>
+  </data>
+  <data name="ReportStringId.Cmd_RtfLoad" xml:space="preserve">
+    <value>Bestand laden...</value>
+  </data>
+  <data name="ReportStringId.Cmd_RtfClear" xml:space="preserve">
+    <value>Wissen</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsert" xml:space="preserve">
+    <value>&amp;Invoegen</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertRowAbove" xml:space="preserve">
+    <value>Rij &amp;Boven</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertRowBelow" xml:space="preserve">
+    <value>Rij &amp;Onder</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertColumnToLeft" xml:space="preserve">
+    <value>Kolom Naar &amp;Links</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertColumnToRight" xml:space="preserve">
+    <value>Kolom Naar &amp;Rechts</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableInsertCell" xml:space="preserve">
+    <value>&amp;Cel</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDelete" xml:space="preserve">
+    <value>Ver&amp;wijderen</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteRow" xml:space="preserve">
+    <value>&amp;Rij</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteColumn" xml:space="preserve">
+    <value>&amp;Kolom</value>
+  </data>
+  <data name="ReportStringId.Cmd_TableDeleteCell" xml:space="preserve">
+    <value>Ce&amp;l</value>
+  </data>
+  <data name="ReportStringId.Cmd_Cut" xml:space="preserve">
+    <value>Kni&amp;ppen</value>
+  </data>
+  <data name="ReportStringId.Cmd_Copy" xml:space="preserve">
+    <value>Ko&amp;pieer</value>
+  </data>
+  <data name="ReportStringId.Cmd_Paste" xml:space="preserve">
+    <value>&amp;Plakken</value>
+  </data>
+  <data name="ReportStringId.Cmd_Delete" xml:space="preserve">
+    <value>&amp;Verwijderen</value>
+  </data>
+  <data name="ReportStringId.Cmd_Properties" xml:space="preserve">
+    <value>E&amp;igenschappen</value>
+  </data>
+  <data name="ReportStringId.Cmd_InsertBand" xml:space="preserve">
+    <value>Toevoegen &amp;Band</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidReportSource" xml:space="preserve">
+    <value>Kan niet worden afgeleid wan het huidige rapport</value>
+  </data>
+  <data name="ReportStringId.SSForm_Caption" xml:space="preserve">
+    <value>StyleSheet Editor</value>
+  </data>
+  <data name="ReportStringId.SSForm_Btn_Close" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_NoStyleSelected" xml:space="preserve">
+    <value>Geen stijlen geslecteerd</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_MoreThanOneStyle" xml:space="preserve">
+    <value>U heeft meer dan een stijl geselecteerd</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_SelectedStylesText" xml:space="preserve">
+    <value> selecteer stijlen...</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_StyleSheetError" xml:space="preserve">
+    <value>StyleSheet fout</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_InvalidFileFormat" xml:space="preserve">
+    <value>Ongeldige bestandsformaat</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_StyleNamePreviewPostfix" xml:space="preserve">
+    <value> stijl</value>
+  </data>
+  <data name="ReportStringId.SSForm_Msg_FileFilter" xml:space="preserve">
+    <value>Rapport StyleSheet files (*.repss)|*.repss|All files (*.*)|*.*</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_AddStyle" xml:space="preserve">
+    <value>Toevoegen stijl</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_RemoveStyle" xml:space="preserve">
+    <value>Verwijderen stijl</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_ClearStyles" xml:space="preserve">
+    <value>Wissen stijlen</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_PurgeStyles" xml:space="preserve">
+    <value>Volledig verwijderen stijlen</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_SaveStyles" xml:space="preserve">
+    <value>Stijlen opslaan in bestand</value>
+  </data>
+  <data name="ReportStringId.SSForm_TTip_LoadStyles" xml:space="preserve">
+    <value>Stijlen openen van bestand</value>
+  </data>
+  <data name="ReportStringId.SR_Side_Margins" xml:space="preserve">
+    <value>Zijkant marges</value>
+  </data>
+  <data name="ReportStringId.SR_Top_Margin" xml:space="preserve">
+    <value>Bovenkant
+marge</value>
+  </data>
+  <data name="ReportStringId.SR_Vertical_Pitch" xml:space="preserve">
+    <value>Verticale pitch</value>
+  </data>
+  <data name="ReportStringId.SR_Horizontal_Pitch" xml:space="preserve">
+    <value>Horizontale pitch</value>
+  </data>
+  <data name="ReportStringId.SR_Width" xml:space="preserve">
+    <value>Breedte</value>
+  </data>
+  <data name="ReportStringId.SR_Height" xml:space="preserve">
+    <value>Hoogte</value>
+  </data>
+  <data name="ReportStringId.SR_Number_Down" xml:space="preserve">
+    <value>Aantal 
+Down</value>
+  </data>
+  <data name="ReportStringId.SR_Number_Across" xml:space="preserve">
+    <value>Aantal Overdwars</value>
+  </data>
+  <data name="ReportStringId.Cmd_DetailReport" xml:space="preserve">
+    <value>DetailReport</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatBackColor" xml:space="preserve">
+    <value>Achtergrond Kleur</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatForeColor" xml:space="preserve">
+    <value>Voorgrond Kleur</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_FormatJustify" xml:space="preserve">
+    <value>Aanpassen</value>
+  </data>
+  <data name="ReportStringId.Msg_CreateSomeInstance" xml:space="preserve">
+    <value>Kan geen tweee instanties van een class maken op het formulier</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_Undo" xml:space="preserve">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_Redo" xml:space="preserve">
+    <value>Herhalen</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_HtmlView" xml:space="preserve">
+    <value>HTML View</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_Preview" xml:space="preserve">
+    <value>Afdrukvoorbeeld</value>
+  </data>
+  <data name="ReportStringId.RepTabCtl_Designer" xml:space="preserve">
+    <value>Ontwerper</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidMethodCall" xml:space="preserve">
+    <value>Deze methode aanroep is ongeldig voor het object van de huidige status</value>
+  </data>
+  <data name="ReportStringId.Msg_ScriptError" xml:space="preserve">
+    <value>Er zijn de volgende fouten in de script(s):
+{0}</value>
+  </data>
+  <data name="ReportStringId.Msg_DontSupportMulticolumn" xml:space="preserve">
+    <value>Detail rapporten ondersteunen geen meerdere kolommen.</value>
+  </data>
+  <data name="ReportStringId.Msg_IncorrectPadding" xml:space="preserve">
+    <value>De opvulling moet groter of gelijk zijn aan 0.</value>
+  </data>
+  <data name="ReportStringId.Msg_WarningControlsAreOverlapped" xml:space="preserve">
+    <value>Exporteerwaarschuwing; de volgende elementen overlappen en kunnen bij exporteren naar HTML, XLS and RTF incorrect weergegeven worden - {0}.</value>
+  </data>
+  <data name="ReportStringId.Msg_WarningControlsAreOutOfMargin" xml:space="preserve">
+    <value>Afdrukwaarschuwing: de volgende elementen liggen buiten de rechter paginamarge, dit veroorzaakt het afdrukken van extra pagina's - {0}.</value>
+  </data>
+  <data name="ReportStringId.Msg_ShapeRotationToolTip" xml:space="preserve">
+    <value>Gebruik Ctrl en de linkermuisknop om de figuur te roteren</value>
+  </data>
+  <data name="ReportStringId.PanelDesignMsg" xml:space="preserve">
+    <value>Plaats controls hier om ze bij elkaar te houden</value>
+  </data>
+  <data name="ReportStringId.MultiColumnDesignMsg1" xml:space="preserve">
+    <value>Ruimte voor herhalende kolommen.</value>
+  </data>
+  <data name="ReportStringId.MultiColumnDesignMsg2" xml:space="preserve">
+    <value>Controls die hier geplaatst zijn worden fout afgedrukt.</value>
+  </data>
+  <data name="ReportStringId.Msg_ScriptExecutionError" xml:space="preserve">
+    <value>De volgende fout is opgetreden in script in procedure {0}:
+{1}
+Procedure {0} was uitgevoerd, deze zal niet opnieuw aangeroepen worden.</value>
+  </data>
+  <data name="ReportStringId.Msg_FillDataError" xml:space="preserve">
+    <value>Fout opgetreden bij het ophalen van gegevens. De volgende fout is opgetreden:</value>
+  </data>
+  <data name="ReportStringId.Msg_CyclicBoormarks" xml:space="preserve">
+    <value>Er zijn cyclische bookmarks in het rapport.</value>
+  </data>
+  <data name="ReportStringId.Msg_LargeText" xml:space="preserve">
+    <value>Tekst is te groot.</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_NewReport" xml:space="preserve">
+    <value>&amp;Nieuw</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_NewWizardReport" xml:space="preserve">
+    <value>Nieuw met &amp;wizard...</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_OpenFile" xml:space="preserve">
+    <value>&amp;Open...</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SaveFile" xml:space="preserve">
+    <value>O&amp;pslaan</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SaveFileAs" xml:space="preserve">
+    <value>Opslaan &amp;als...</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Exit" xml:space="preserve">
+    <value>&amp;Afsluiten</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Cut" xml:space="preserve">
+    <value>&amp;Knippen</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Copy" xml:space="preserve">
+    <value>Ko&amp;piëren</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Paste" xml:space="preserve">
+    <value>&amp;Plakken</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Delete" xml:space="preserve">
+    <value>P&amp;lakken</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SelectAll" xml:space="preserve">
+    <value>&amp;Alles selecteren</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Undo" xml:space="preserve">
+    <value>O&amp;ngedaan maken</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Redo" xml:space="preserve">
+    <value>&amp;Opnieuw</value>
+  </data>
+  <data name="ReportStringId.UD_Group_File" xml:space="preserve">
+    <value>&amp;Bestand</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Edit" xml:space="preserve">
+    <value>Be&amp;werken</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Format" xml:space="preserve">
+    <value>&amp;Opmaak</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Font" xml:space="preserve">
+    <value>&amp;Lettertype</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Justify" xml:space="preserve">
+    <value>&amp;Uitlijnen</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Align" xml:space="preserve">
+    <value>&amp;Uitlijnen</value>
+  </data>
+  <data name="ReportStringId.UD_Group_MakeSameSize" xml:space="preserve">
+    <value>&amp;Maak even groot</value>
+  </data>
+  <data name="ReportStringId.UD_Group_HorizontalSpacing" xml:space="preserve">
+    <value>&amp;Horizontale afstand</value>
+  </data>
+  <data name="ReportStringId.UD_Group_VerticalSpacing" xml:space="preserve">
+    <value>&amp;Vertikale afstand</value>
+  </data>
+  <data name="ReportStringId.UD_Group_Order" xml:space="preserve">
+    <value>&amp;Volgorde</value>
+  </data>
+  <data name="ReportStringId.UD_Group_CenterInForm" xml:space="preserve">
+    <value>&amp;Centreren op formulier</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ForegroundColor" xml:space="preserve">
+    <value>Voor&amp;grondkleur</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_BackGroundColor" xml:space="preserve">
+    <value>Ach&amp;tergrondkleur</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_FontBold" xml:space="preserve">
+    <value>&amp;Vet</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_FontItalic" xml:space="preserve">
+    <value>&amp;Schuin</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_FontUnderline" xml:space="preserve">
+    <value>&amp;Onderstreept</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_JustifyLeft" xml:space="preserve">
+    <value>&amp;Links</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_JustifyCenter" xml:space="preserve">
+    <value>&amp;Centreer</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_JustifyRight" xml:space="preserve">
+    <value>&amp;Rechts</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_JustifyJustify" xml:space="preserve">
+    <value>&amp;Uitvullen</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignLefts" xml:space="preserve">
+    <value>&amp;Linkerzijdes</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignCenters" xml:space="preserve">
+    <value>&amp;Vertikale middens</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignRights" xml:space="preserve">
+    <value>&amp;Rechterzijdes</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignTops" xml:space="preserve">
+    <value>&amp;Bovenzijdes</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignMiddles" xml:space="preserve">
+    <value>&amp;Horizontale middens</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignBottoms" xml:space="preserve">
+    <value>&amp;Onderzijdes</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_AlignToGrid" xml:space="preserve">
+    <value>aan &amp;raster</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MakeSameSizeWidth" xml:space="preserve">
+    <value>&amp;Breedte</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MakeSameSizeSizeToGrid" xml:space="preserve">
+    <value>&amp;Grootte aanpassen aan raster</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MakeSameSizeHeight" xml:space="preserve">
+    <value>&amp;Hoogte</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MakeSameSizeBoth" xml:space="preserve">
+    <value>&amp;Beide</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SpacingMakeEqual" xml:space="preserve">
+    <value>Maak &amp;gelijk</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SpacingIncrease" xml:space="preserve">
+    <value>Ver&amp;groten</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SpacingDecrease" xml:space="preserve">
+    <value>Ver&amp;kleinen</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_SpacingRemove" xml:space="preserve">
+    <value>&amp;Verwijder</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_CenterInFormHorizontally" xml:space="preserve">
+    <value>&amp;Horizontaal</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_CenterInFormVertically" xml:space="preserve">
+    <value>&amp;Vertikaal</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_OrderBringToFront" xml:space="preserve">
+    <value>&amp;Haal naar voren</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_OrderSendToBack" xml:space="preserve">
+    <value>&amp;Stuur naar achteren</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_Zoom" xml:space="preserve">
+    <value>Uitvergroting</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ZoomIn" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ZoomOut" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ZoomFactor" xml:space="preserve">
+    <value>Uitvergrotingsfactor: {0}%</value>
+  </data>
+  <data name="ReportStringId.UD_Title_FieldList" xml:space="preserve">
+    <value>Lijst met velden</value>
+  </data>
+  <data name="ReportStringId.UD_Title_ReportExplorer" xml:space="preserve">
+    <value>Rapport Verkenner</value>
+  </data>
+  <data name="ReportStringId.UD_Title_PropertyGrid" xml:space="preserve">
+    <value>Eigenschap Grid</value>
+  </data>
+  <data name="ReportStringId.UD_Title_ToolBox" xml:space="preserve">
+    <value>Tool Box</value>
+  </data>
+  <data name="ReportStringId.UD_XtraReportsToolboxCategoryName" xml:space="preserve">
+    <value>Standaardelementen</value>
+  </data>
+  <data name="ReportStringId.UD_XtraReportsPointerItemCaption" xml:space="preserve">
+    <value>Aanwijzer</value>
+  </data>
+  <data name="ReportStringId.UD_Group_View" xml:space="preserve">
+    <value>Weer&amp;gave</value>
+  </data>
+  <data name="ReportStringId.UD_Group_ToolbarsList" xml:space="preserve">
+    <value>&amp;Werkbalken</value>
+  </data>
+  <data name="ReportStringId.UD_Group_DockPanelsList" xml:space="preserve">
+    <value>&amp;Vensters</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_MainMenuName" xml:space="preserve">
+    <value>Hoofdmenu</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ToolbarName" xml:space="preserve">
+    <value>Werkbalk</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_LayoutToolbarName" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_FormattingToolbarName" xml:space="preserve">
+    <value>Opmaak</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_StatusBarName" xml:space="preserve">
+    <value>Statusbalk</value>
+  </data>
+  <data name="ReportStringId.UD_Capt_ZoomToolbarName" xml:space="preserve">
+    <value>Uitvergroting</value>
+  </data>
+  <data name="ReportStringId.CatUserDesigner" xml:space="preserve">
+    <value>Gebruikers-ontwerper</value>
+  </data>
+  <data name="ReportStringId.STag_Name_DataBinding" xml:space="preserve">
+    <value>Gegevenskoppeling</value>
+  </data>
+  <data name="ReportStringId.STag_Name_FormatString" xml:space="preserve">
+    <value>Formattering-masker</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Checked" xml:space="preserve">
+    <value>Aangekruisd</value>
+  </data>
+  <data name="ReportStringId.STag_Name_PreviewRowCount" xml:space="preserve">
+    <value>Regels in voorbeeldweergave</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ShrinkSubReportIconArea" xml:space="preserve">
+    <value>Verklein oppervlak subrapport-icoon</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Bands" xml:space="preserve">
+    <value>Banden</value>
+  </data>
+  <data name="ReportStringId.STag_Name_Height" xml:space="preserve">
+    <value>Hoogte</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnMode" xml:space="preserve">
+    <value>Kolommen-modus</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnCount" xml:space="preserve">
+    <value>Aantal kolommen</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnWidth" xml:space="preserve">
+    <value>Kolombreedte</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnSpacing" xml:space="preserve">
+    <value>Kolommen-tussenruimte</value>
+  </data>
+  <data name="ReportStringId.STag_Name_ColumnDirection" xml:space="preserve">
+    <value>Multi-Column Direction</value>
+  </data>
+  <data name="ReportStringId.STag_Name_FieldArea" xml:space="preserve">
+    <value>Veld Ruimte voor een nieuw veld</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_GroupMain_Caption" xml:space="preserve">
+    <value>Belangrijkste</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_GroupMain_Description" xml:space="preserve">
+    <value>Algemene instellingen (Velden, lay-out).</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_ItemFields_Caption" xml:space="preserve">
+    <value>Velden</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_ItemFields_Description" xml:space="preserve">
+    <value>Beheer velden.</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_ItemLayout_Caption" xml:space="preserve">
+    <value>Indeling</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_ItemLayout_Description" xml:space="preserve">
+    <value>Aanpassen van de huidige XRPivotGrid de lay-out en een voorbeeld zijn gegevens.</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_GroupPrinting_Caption" xml:space="preserve">
+    <value>Aan het afdrukken</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_GroupPrinting_Description" xml:space="preserve">
+    <value>Afdrukken optie beheer van het huidige XRPivotGrid.</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_ItemAppearances_Caption" xml:space="preserve">
+    <value>Optredens</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_ItemAppearances_Description" xml:space="preserve">
+    <value>Stel de print optredens van de huidige XRPivotGrid.</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_ItemSettings_Caption" xml:space="preserve">
+    <value>Afdrukken Instellingen</value>
+  </data>
+  <data name="ReportStringId.PivotGridForm_ItemSettings_Description" xml:space="preserve">
+    <value>Pas de instellingen voor het afdrukken van de huidige XRPivotGrid.</value>
+  </data>
+  <data name="ReportStringId.PivotGridFrame_Fields_ColumnsText" xml:space="preserve">
+    <value>XRPivotGrid Velden</value>
+  </data>
+  <data name="ReportStringId.PivotGridFrame_Fields_DescriptionText1" xml:space="preserve">
+    <value>U kunt toevoegen en verwijderen XRPivotGrid velden en hun instellingen wijzigen.</value>
+  </data>
+  <data name="ReportStringId.PivotGridFrame_Fields_DescriptionText2" xml:space="preserve">
+    <value>Selecteer en sleep het veld naar de PivotGrid velden panel te creëren PivotGrid gebied.</value>
+  </data>
+  <data name="ReportStringId.PivotGridFrame_Layouts_DescriptionText" xml:space="preserve">
+    <value>Wijzig de XRPivotGrid de lay-out (sortering instellingen gebied regeling) en klik op de knop Toepassen om de wijzigingen aan de huidige XRPivotGrid. U kunt ook de lay-out naar een XML-bestand (dit kan worden geladen en toegepast op andere standpunten op ontwerp en uitvoering).</value>
+  </data>
+  <data name="ReportStringId.PivotGridFrame_Layouts_SelectorCaption1" xml:space="preserve">
+    <value>Verberg velden keuzelijst</value>
+  </data>
+  <data name="ReportStringId.PivotGridFrame_Layouts_SelectorCaption2" xml:space="preserve">
+    <value>Toon velden keuzelijst</value>
+  </data>
+  <data name="ReportStringId.PivotGridFrame_Appearances_DescriptionText" xml:space="preserve">
+    <value>Selecteer een of meer van de Weergave aanpassen objecten naar de drukkerij optredens van de bijbehorende visuele elementen.</value>
+  </data>
+  <data name="ReportStringId.STag_Name_TrapezoidBase" xml:space="preserve">
+    <value>Trapezoïde basis</value>
+  </data>
+  <data name="ReportStringId.STag_Capt_Tasks" xml:space="preserve">
+    <value>Taken</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_NewReport" xml:space="preserve">
+    <value>Maak een nieuw, blanco rapport</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_NewWizardReport" xml:space="preserve">
+    <value>Maak een nieuw rapport met de wizard</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_OpenFile" xml:space="preserve">
+    <value>Open een rapport</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SaveFile" xml:space="preserve">
+    <value>Sla het rapport op</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SaveFileAs" xml:space="preserve">
+    <value>Sla het rapport op onder een nieuwe naam</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Exit" xml:space="preserve">
+    <value>Sluit de ontwerper</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Cut" xml:space="preserve">
+    <value>Knip het geselecteerde element uit het document en plaats het op het klembord</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Copy" xml:space="preserve">
+    <value>Kopiëer het geselecteerde element naar het klembord</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Paste" xml:space="preserve">
+    <value>Voeg het element van het klembord in</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Delete" xml:space="preserve">
+    <value>Verwijder het geselecteerde element</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SelectAll" xml:space="preserve">
+    <value>Selecteer alle elementen in het rapport</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Undo" xml:space="preserve">
+    <value>Maak de laatste handeling ongedaan</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Redo" xml:space="preserve">
+    <value>Herhaal de laatste ongedaan gemaakte handeling</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ForegroundColor" xml:space="preserve">
+    <value>Wijzig de voorgrondkleur van het element</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_BackGroundColor" xml:space="preserve">
+    <value>Wijzig de achtergrondkleur van het element</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_FontBold" xml:space="preserve">
+    <value>Maak de tekst vet</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_FontItalic" xml:space="preserve">
+    <value>Maak de tekst schuin</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_FontUnderline" xml:space="preserve">
+    <value>Maak de tekst onderstreept</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_JustifyLeft" xml:space="preserve">
+    <value>Lijn de tekst in het element links uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_JustifyCenter" xml:space="preserve">
+    <value>Centreer de tekst in het element</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_JustifyRight" xml:space="preserve">
+    <value>Lijn de tekst in het element rechts uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_JustifyJustify" xml:space="preserve">
+    <value>Vul de tekst in het element uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignLefts" xml:space="preserve">
+    <value>Lijn de geselecteerde elementen links uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignCenters" xml:space="preserve">
+    <value>Lijn de vertikale middens van de geselecteerde elementen uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignRights" xml:space="preserve">
+    <value>Lijn de geselecteerde elementen rechts uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignTops" xml:space="preserve">
+    <value>Lijn de bovenzijdes van de geselecteerde elementen uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignMiddles" xml:space="preserve">
+    <value>Lijn de horizontale middens van de geselecteerde elementen uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignBottoms" xml:space="preserve">
+    <value>Lijn de onderzijdes van de geselecteerde elementen uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_AlignToGrid" xml:space="preserve">
+    <value>Lijn de geselecteerde elementen uit volgens het raster</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_MakeSameSizeWidth" xml:space="preserve">
+    <value>Maak de geselecteerde elementen even breed</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_MakeSameSizeSizeToGrid" xml:space="preserve">
+    <value>Pas de groottes van de geselecteerde elementen aan aan het raster</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_MakeSameSizeHeight" xml:space="preserve">
+    <value>Maak de geselecteerde elementen even hoog</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_MakeSameSizeBoth" xml:space="preserve">
+    <value>Maak de geselecteerde elementen even groot</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SpacingMakeEqual" xml:space="preserve">
+    <value>Maak de ruimte tussen de geselecteerde elementen gelijk</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SpacingIncrease" xml:space="preserve">
+    <value>Vergroot de ruimte tussen de geselecteerde elementen</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SpacingDecrease" xml:space="preserve">
+    <value>Verklein de ruimte tussen de geselecteerde elementen</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_SpacingRemove" xml:space="preserve">
+    <value>Verwijder de ruimte tussen de geselecteerde elementen</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_CenterInFormHorizontally" xml:space="preserve">
+    <value>Centreer de geselecteerde elementen horizontaal binnen de band</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_CenterInFormVertically" xml:space="preserve">
+    <value>Centreer de geselecteerde elementen vertikaal binnen de band</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_OrderBringToFront" xml:space="preserve">
+    <value>Haal de geselecteerde elementen naar voren</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_OrderSendToBack" xml:space="preserve">
+    <value>Stuur de geselecteerde elementen naar achteren</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_Zoom" xml:space="preserve">
+    <value>Kies de uitvergrotingsfactor</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ZoomIn" xml:space="preserve">
+    <value>Zoom in op het werkvlak</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ZoomOut" xml:space="preserve">
+    <value>Zoom het werkvlak uit</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ViewBars" xml:space="preserve">
+    <value>Verberg of toon de {0}</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ViewDockPanels" xml:space="preserve">
+    <value>Verberg of toon het venster {0}</value>
+  </data>
+  <data name="ReportStringId.UD_Hint_ViewTabs" xml:space="preserve">
+    <value>Wissel naar de tab {0}</value>
+  </data>
+  <data name="ReportStringId.Msg_ScriptingPermissionErrorMessage" xml:space="preserve">
+    <value>U heeft niet voldoende rechten om de scripts in dit rapport uit te voeren.
+
+Details:
+
+{0}</value>
+  </data>
+  <data name="ReportStringId.Msg_ErrorTitle" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="ReportStringId.Msg_ContainsIllegalSymbols" xml:space="preserve">
+    <value>Invoer-formaattekst bevat een of meer niet-toegestane tekens.</value>
+  </data>
+  <data name="ReportStringId.Msg_SerializationErrorTitle" xml:space="preserve">
+    <value>Fout bij het serializeren</value>
+  </data>
+  <data name="ReportStringId.Msg_ReportImporting" xml:space="preserve">
+    <value>Bezig met het importeren van een rapport-layout. Even geduld...</value>
+  </data>
+  <data name="ReportStringId.Cmd_BandMoveDown" xml:space="preserve">
+    <value>Verplaats naar beneden</value>
+  </data>
+  <data name="ReportStringId.Cmd_BandMoveUp" xml:space="preserve">
+    <value>Verplaats naar boven</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_RecentFonts_GalleryGroup_Caption" xml:space="preserve">
+    <value>Recent gebruikte lettertypen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AllFonts_GalleryGroup_Caption" xml:space="preserve">
+    <value>Alle lettertypen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageText" xml:space="preserve">
+    <value>Rapport-ontwerper</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlPageText" xml:space="preserve">
+    <value>HTML-weergave</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Report" xml:space="preserve">
+    <value>Rapport</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Edit" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Font" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Alignment" xml:space="preserve">
+    <value>Uitlijning</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_SizeAndLayout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_Zoom" xml:space="preserve">
+    <value>Uitvergroting</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_View" xml:space="preserve">
+    <value>Weergave</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignToGrid_Caption" xml:space="preserve">
+    <value>Uitlijnen op raster</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignLeft_Caption" xml:space="preserve">
+    <value>Linkerzijdes uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignVerticalCenters_Caption" xml:space="preserve">
+    <value>Middens uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignRight_Caption" xml:space="preserve">
+    <value>Rechterzijdes uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignTop_Caption" xml:space="preserve">
+    <value>Bovenzijdes uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignHorizontalCenters_Caption" xml:space="preserve">
+    <value>Middens uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignBottom_Caption" xml:space="preserve">
+    <value>Onderzijdes uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlWidth_Caption" xml:space="preserve">
+    <value>Maak even breed</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToGrid_Caption" xml:space="preserve">
+    <value>Grootte aan raster aanpassen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlHeight_Caption" xml:space="preserve">
+    <value>Maak even hoog</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControl_Caption" xml:space="preserve">
+    <value>Maak even groot</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceMakeEqual_Caption" xml:space="preserve">
+    <value>Maak horizontale afstand gelijk</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceIncrease_Caption" xml:space="preserve">
+    <value>Vergroot horizontale afstand</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceDecrease_Caption" xml:space="preserve">
+    <value>Verklein horizontale afstand</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceConcatenate_Caption" xml:space="preserve">
+    <value>Verwijder horizontale lege ruimte</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceMakeEqual_Caption" xml:space="preserve">
+    <value>Maak vertikale afstand gelijk</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceIncrease_Caption" xml:space="preserve">
+    <value>Vergroot vertikale afstand</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceDecrease_Caption" xml:space="preserve">
+    <value>Verklein vertikale afstand</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceConcatenate_Caption" xml:space="preserve">
+    <value>Verwijder vertikale lege ruimte</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterHorizontally_Caption" xml:space="preserve">
+    <value>Horizontaal centreren</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterVertically_Caption" xml:space="preserve">
+    <value>Vertikaal centreren</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BringToFront_Caption" xml:space="preserve">
+    <value>Haal naar voren</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SendToBack_Caption" xml:space="preserve">
+    <value>Naar achteren verplaatsen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontBold_Caption" xml:space="preserve">
+    <value>Vet</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontItalic_Caption" xml:space="preserve">
+    <value>Schuin</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontUnderline_Caption" xml:space="preserve">
+    <value>Onderstrepen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ForeColor_Caption" xml:space="preserve">
+    <value>Voorgrondkleur</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BackColor_Caption" xml:space="preserve">
+    <value>Achtergrondkleur</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyLeft_Caption" xml:space="preserve">
+    <value>Links uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyCenter_Caption" xml:space="preserve">
+    <value>Centreer tekst</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyRight_Caption" xml:space="preserve">
+    <value>Rechts uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyJustify_Caption" xml:space="preserve">
+    <value>Uitvullen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReport_Caption" xml:space="preserve">
+    <value>Nieuw rapport</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReportWizard_Caption" xml:space="preserve">
+    <value>Nieuw rapport met wizard...</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_OpenFile_Caption" xml:space="preserve">
+    <value>Open...</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFile_Caption" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFileAs_Caption" xml:space="preserve">
+    <value>Opslaan als...</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Cut_Caption" xml:space="preserve">
+    <value>Knippen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Copy_Caption" xml:space="preserve">
+    <value>Kopiëren</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Paste_Caption" xml:space="preserve">
+    <value>Plakken</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Undo_Caption" xml:space="preserve">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Redo_Caption" xml:space="preserve">
+    <value>Opnieuw</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Zoom_Caption" xml:space="preserve">
+    <value>Uitvergroting</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomIn_Caption" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomOut_Caption" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomExact_Caption" xml:space="preserve">
+    <value>Precies:</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignToGrid_STipTitle" xml:space="preserve">
+    <value>Uitlijnen op raster</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignLeft_STipTitle" xml:space="preserve">
+    <value>Lijkerzijdes uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignVerticalCenters_STipTitle" xml:space="preserve">
+    <value>Middens uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignRight_STipTitle" xml:space="preserve">
+    <value>Rechterzijdes uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignTop_STipTitle" xml:space="preserve">
+    <value>Bovenzijdes uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignHorizontalCenters_STipTitle" xml:space="preserve">
+    <value>Middens uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignBottom_STipTitle" xml:space="preserve">
+    <value>Onderzijdes uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlWidth_STipTitle" xml:space="preserve">
+    <value>Maak even breed</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToGrid_STipTitle" xml:space="preserve">
+    <value>Grootte aan raster aanpassen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlHeight_STipTitle" xml:space="preserve">
+    <value>Maak even hoog</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControl_STipTitle" xml:space="preserve">
+    <value>Maak even groot</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceMakeEqual_STipTitle" xml:space="preserve">
+    <value>Maak horizontale afstand gelijk</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceIncrease_STipTitle" xml:space="preserve">
+    <value>Vergroot horizontale afstand</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceDecrease_STipTitle" xml:space="preserve">
+    <value>Verklein horizontale afstand</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceConcatenate_STipTitle" xml:space="preserve">
+    <value>Verwijder horizontale lege ruimte</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceMakeEqual_STipTitle" xml:space="preserve">
+    <value>Maak vertikale afstand gelijk</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceIncrease_STipTitle" xml:space="preserve">
+    <value>Vergroot vertikale afstand</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceDecrease_STipTitle" xml:space="preserve">
+    <value>Verklein vertikale afstand</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceConcatenate_STipTitle" xml:space="preserve">
+    <value>Verwijder vertikale lege ruimte</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterHorizontally_STipTitle" xml:space="preserve">
+    <value>Horizontaal centreren</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterVertically_STipTitle" xml:space="preserve">
+    <value>Vertikaal centreren</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BringToFront_STipTitle" xml:space="preserve">
+    <value>Haal naar voren</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SendToBack_STipTitle" xml:space="preserve">
+    <value>Naar achteren verplaatsen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontBold_STipTitle" xml:space="preserve">
+    <value>Vet</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontItalic_STipTitle" xml:space="preserve">
+    <value>Schuin</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontUnderline_STipTitle" xml:space="preserve">
+    <value>Onderstrepen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ForeColor_STipTitle" xml:space="preserve">
+    <value>Voorgrondkleur</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BackColor_STipTitle" xml:space="preserve">
+    <value>Achtergrondkleur</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyLeft_STipTitle" xml:space="preserve">
+    <value>Links uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyCenter_STipTitle" xml:space="preserve">
+    <value>Centreer tekst</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyRight_STipTitle" xml:space="preserve">
+    <value>Rechts uitlijnen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyJustify_STipTitle" xml:space="preserve">
+    <value>Uitvullen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReport_STipTitle" xml:space="preserve">
+    <value>Nieuw blanco rapport</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReportWizard_STipTitle" xml:space="preserve">
+    <value>Nieuw rapport met wizard</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_OpenFile_STipTitle" xml:space="preserve">
+    <value>Open rapport</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFile_STipTitle" xml:space="preserve">
+    <value>Rapport opslaan</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFileAs_STipTitle" xml:space="preserve">
+    <value>Rapport opslaan als</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Cut_STipTitle" xml:space="preserve">
+    <value>Knippen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Copy_STipTitle" xml:space="preserve">
+    <value>Kopiëren</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Paste_STipTitle" xml:space="preserve">
+    <value>Plakken</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Undo_STipTitle" xml:space="preserve">
+    <value>Ongedaan maken</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Redo_STipTitle" xml:space="preserve">
+    <value>Opnieuw</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Zoom_STipTitle" xml:space="preserve">
+    <value>Uitvergroting</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomIn_STipTitle" xml:space="preserve">
+    <value>Inzoomen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomOut_STipTitle" xml:space="preserve">
+    <value>Uitzoomen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignToGrid_STipContent" xml:space="preserve">
+    <value>Lijn de posities van de geselecteerde elementen uit op het raster.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignLeft_STipContent" xml:space="preserve">
+    <value>Lijn de linkerzijdes van de geselecteerde elementen uit.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignVerticalCenters_STipContent" xml:space="preserve">
+    <value>Lijn de vertikale middens van de geselecteerde elementen uit.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignRight_STipContent" xml:space="preserve">
+    <value>Lijn de rechterzijdes van de geselecteerde elementen uit.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignTop_STipContent" xml:space="preserve">
+    <value>Lijn de bovenzijdes van de geselecteerde elementen uit.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignHorizontalCenters_STipContent" xml:space="preserve">
+    <value>Lijn de horizontale middens van de geselecteerde elementen uit.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_AlignBottom_STipContent" xml:space="preserve">
+    <value>Lijn de onderzijdes van de geselecteerde elementen uit.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlWidth_STipContent" xml:space="preserve">
+    <value>Maak de geselecteerde elementen even breed.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToGrid_STipContent" xml:space="preserve">
+    <value>Pas de grootte van de geselecteerde elementen aan aan het raster.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControlHeight_STipContent" xml:space="preserve">
+    <value>Maak de geselecteerde elementen even hoog.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SizeToControl_STipContent" xml:space="preserve">
+    <value>Maak de geselecteerde elementen even groot.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceMakeEqual_STipContent" xml:space="preserve">
+    <value>Maak de horizontale afstand tussen de geselecteerde elementen gelijk.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceIncrease_STipContent" xml:space="preserve">
+    <value>Vergroot de horizontale afstand tussen de geselecteerde elementen.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceDecrease_STipContent" xml:space="preserve">
+    <value>Verklein de horizontale afstand tussen de geselecteerde elementen.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HorizSpaceConcatenate_STipContent" xml:space="preserve">
+    <value>Verwijder horizontale lege ruimte tussen de geselecteerde elementen.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceMakeEqual_STipContent" xml:space="preserve">
+    <value>Maak de vertikale afstand tussen de geselecteerde elementen gelijk.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceIncrease_STipContent" xml:space="preserve">
+    <value>Vergroot de vertikale afstand tussen de geselecteerde elementen.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceDecrease_STipContent" xml:space="preserve">
+    <value>Verklein de vertikale afstand tussen de geselecteerde elementen.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_VertSpaceConcatenate_STipContent" xml:space="preserve">
+    <value>Verwijder vertikale lege ruimte tussen de geselecteerde elementen.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterHorizontally_STipContent" xml:space="preserve">
+    <value>Centreer de geselecteerde elementen horizontaal binnen een band.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_CenterVertically_STipContent" xml:space="preserve">
+    <value>Centreer de geselecteerde elementen vertikaal binnen een band.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BringToFront_STipContent" xml:space="preserve">
+    <value>Haal de geselecteerde elementen naar voren.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SendToBack_STipContent" xml:space="preserve">
+    <value>Verplaats de geselecteerde elementen naar achteren.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontBold_STipContent" xml:space="preserve">
+    <value>Maak de geselecteerde tekst vet.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontItalic_STipContent" xml:space="preserve">
+    <value>Maak de geselecteerde tekst schuingedrukt.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontUnderline_STipContent" xml:space="preserve">
+    <value>Maak de geselecteerde tekst onderstreept.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ForeColor_STipContent" xml:space="preserve">
+    <value>Verander de voorgrondkleur van de geselecteerde tekst.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_BackColor_STipContent" xml:space="preserve">
+    <value>Verander de achtergrondkleur.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyLeft_STipContent" xml:space="preserve">
+    <value>Lijn tekst links uit.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyCenter_STipContent" xml:space="preserve">
+    <value>Centreer de geselecteerde tekst.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyRight_STipContent" xml:space="preserve">
+    <value>Lijn tekst rechts uit.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_JustifyJustify_STipContent" xml:space="preserve">
+    <value>Lijn tekst zowel links als rechts uit, voeg hiervoor indien nodig extra ruimte toe tussen woorden.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReport_STipContent" xml:space="preserve">
+    <value>Maak een nieuw, blanco rapport waarop u zelf velden en elementen kunt toevoegen.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontName_STipTitle" xml:space="preserve">
+    <value>Lettertype</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontSize_STipTitle" xml:space="preserve">
+    <value>Lettergrootte</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_NewReportWizard_STipContent" xml:space="preserve">
+    <value>Start de rapport-wizard, die u helpt om eenvoudige, aan uw wensen aangepaste rapporten te maken.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_OpenFile_STipContent" xml:space="preserve">
+    <value>Open een rapport.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFile_STipContent" xml:space="preserve">
+    <value>Sla het rapport op.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_SaveFileAs_STipContent" xml:space="preserve">
+    <value>Sla het rapport op onder een nieuwe naam.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Cut_STipContent" xml:space="preserve">
+    <value>Knip de geselecteerde elementen uit het rapport en plaats ze op het klembord.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Copy_STipContent" xml:space="preserve">
+    <value>Kopiëer de geselecteerde elementen en plaats ze op het klembord.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Paste_STipContent" xml:space="preserve">
+    <value>Plak de inhoud van het klembord.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Undo_STipContent" xml:space="preserve">
+    <value>Maak de laatste handeling ongedaan.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Redo_STipContent" xml:space="preserve">
+    <value>Laatste handeling opnieuw uitvoeren.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Zoom_STipContent" xml:space="preserve">
+    <value>Verander het uitvergrotingsniveau van de rapport-ontwerper.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomIn_STipContent" xml:space="preserve">
+    <value>Zoom in om het rapport van dichtbij te bekijken.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_ZoomOut_STipContent" xml:space="preserve">
+    <value>Zoom uit om meer van het rapport te zien, met minder details.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontName_STipContent" xml:space="preserve">
+    <value>Verander het lettertype.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_FontSize_STipContent" xml:space="preserve">
+    <value>Verander de grootte van het lettertype.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Windows_Caption" xml:space="preserve">
+    <value>Vensters</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Windows_STipTitle" xml:space="preserve">
+    <value>Toon/verberg vensters</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_Windows_STipContent" xml:space="preserve">
+    <value>Toon of verberg de hulpmiddelen, rapport-verkenner, veldenlijst en eigenschappen-vensters.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_PageGroup_HtmlNavigation" xml:space="preserve">
+    <value>Navigatie</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlHome_Caption" xml:space="preserve">
+    <value>Startpagina</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlBackward_Caption" xml:space="preserve">
+    <value>Ga terug</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlForward_Caption" xml:space="preserve">
+    <value>Vooruit</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlRefresh_Caption" xml:space="preserve">
+    <value>Verversen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlFind_Caption" xml:space="preserve">
+    <value>Zoeken</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlHome_STipTitle" xml:space="preserve">
+    <value>Startpagina</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlBackward_STipTitle" xml:space="preserve">
+    <value>Ga terug</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlForward_STipTitle" xml:space="preserve">
+    <value>Vooruit</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlRefresh_STipTitle" xml:space="preserve">
+    <value>Verversen</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlFind_STipTitle" xml:space="preserve">
+    <value>Zoeken</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlHome_STipContent" xml:space="preserve">
+    <value>Geef de startpagina weer.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlBackward_STipContent" xml:space="preserve">
+    <value>Ga terug naar de vorige pagina.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlForward_STipContent" xml:space="preserve">
+    <value>Ga naar de volgende pagina.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlRefresh_STipContent" xml:space="preserve">
+    <value>Ververs deze pagina.</value>
+  </data>
+  <data name="ReportStringId.RibbonXRDesign_HtmlFind_STipContent" xml:space="preserve">
+    <value>Zoek naar tekst op deze pagina.</value>
+  </data>
+  <data name="ReportStringId.XRSubreport_NameInfo" xml:space="preserve">
+    <value>Naam: {0}
+</value>
+  </data>
+  <data name="ReportStringId.XRSubreport_NullReportSourceInfo" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="ReportStringId.XRSubreport_ReportSourceInfo" xml:space="preserve">
+    <value>Rapport-bron: {0}
+</value>
+  </data>
+  <data name="ReportStringId.FSForm_Btn_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ReportStringId.FSForm_Btn_Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="ReportStringId.FSForm_Text" xml:space="preserve">
+    <value>FormatString Editor</value>
+  </data>
+  <data name="ReportStringId.ParametersRequest_Submit" xml:space="preserve">
+    <value>Toepassen</value>
+  </data>
+  <data name="ReportStringId.ParametersRequest_Reset" xml:space="preserve">
+    <value>Herstellen</value>
+  </data>
+  <data name="ReportStringId.ParametersRequest_Caption" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="ReportStringId.CatDesign" xml:space="preserve">
+    <value>Ontwerp</value>
+  </data>
+  <data name="ReportStringId.CatParameters" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="ReportStringId.Cmd_AddCalculatedField" xml:space="preserve">
+    <value>Voeg berekend veld toe</value>
+  </data>
+  <data name="ReportStringId.Cmd_EditCalculatedFields" xml:space="preserve">
+    <value>Bewerk berekend veld...</value>
+  </data>
+  <data name="ReportStringId.Cmd_AddParameter" xml:space="preserve">
+    <value>Voeg parameter toe</value>
+  </data>
+  <data name="ReportStringId.Cmd_EditParameters" xml:space="preserve">
+    <value>Bewerk parameters...</value>
+  </data>
+  <data name="ReportStringId.Cmd_DeleteCalculatedField" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="ReportStringId.Cmd_DeleteParameter" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="ReportStringId.Cmd_EditExpression" xml:space="preserve">
+    <value>Bewerk expressie...</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidExpression" xml:space="preserve">
+    <value>De opgegeven expressie bevat ongeldige tekens (regel {0}, teken {1}).</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_ItemDescription" xml:space="preserve">
+    <value>Drag-and-drop dit item voor het maken van een controle verplicht is; - of - Sleep dit object met de rechter muisknop of SHIFT ingedrukt en selecteer een gebonden controle van de pop-up menu; - of - Gebruik het contextmenu toe te voegen een berekend veld of parameter.</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_TableDescription" xml:space="preserve">
+    <value>Drag-and-drop dit item voor het maken van een tabel met zijn objecten; - of - Sleep dit object met de rechter muisknop of SHIFT om een 'header' tabel met veldnamen; - of - Gebruik het contextmenu toe te voegen een berekende veld of parameter.</value>
+  </data>
+  <data name="ReportStringId.UD_TTip_DataMemberDescription" xml:space="preserve">
+    <value>
+
+DataMember: {0}</value>
+  </data>
+  <data name="ReportStringId.Cmd_ClearCalculatedFields" xml:space="preserve">
+    <value>Alles verwijderen Berekende velden</value>
+  </data>
+  <data name="ReportStringId.Cmd_ClearParameters" xml:space="preserve">
+    <value>Verwijder alle parameters</value>
+  </data>
+  <data name="ReportStringId.Msg_WarningRemoveCalculatedFields" xml:space="preserve">
+    <value>Deze operatie worden alle berekende velden uit alle gegevenstabellen. Wilt u doorgaan?</value>
+  </data>
+  <data name="ReportStringId.Msg_WarningRemoveParameters" xml:space="preserve">
+    <value>Deze operatie worden alle parameters. Wilt u doorgaan?</value>
+  </data>
+  <data name="ReportStringId.PropGrid_TTip_Alphabetical" xml:space="preserve">
+    <value>Alfabetisch</value>
+  </data>
+  <data name="ReportStringId.PropGrid_TTip_Categorized" xml:space="preserve">
+    <value>Gecategoriseerd</value>
+  </data>
+  <data name="ReportStringId.DesignerStatus_Location" xml:space="preserve">
+    <value>Loc</value>
+  </data>
+  <data name="ReportStringId.DesignerStatus_Size" xml:space="preserve">
+    <value>Punten</value>
+  </data>
+  <data name="ReportStringId.UD_Title_FieldList_NonePickerNodeText" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="ReportStringId.UD_Title_FieldList_NoneNodeText" xml:space="preserve">
+    <value>(geen)</value>
+  </data>
+  <data name="ReportStringId.UD_Title_FieldList_ProjectObjectsText" xml:space="preserve">
+    <value>Project Objects</value>
+  </data>
+  <data name="ReportStringId.UD_Title_FieldList_AddNewDataSourceText" xml:space="preserve">
+    <value>Nieuw DataSource</value>
+  </data>
+  <data name="ReportStringId.Msg_InvalidCondition" xml:space="preserve">
+    <value>De conditie moet Boole!</value>
+  </data>
+  <data name="ReportStringId.FRSForm_Caption" xml:space="preserve">
+    <value>Opmaak artikel Fiche Editor</value>
+  </data>
+  <data name="ReportStringId.FRSForm_Msg_NoRuleSelected" xml:space="preserve">
+    <value>Geen opmaak regels zijn geselecteerd</value>
+  </data>
+  <data name="ReportStringId.FRSForm_Msg_MoreThanOneRule" xml:space="preserve">
+    <value>U geselecteerd meer dan een opmaak regel</value>
+  </data>
+  <data name="ReportStringId.FRSForm_TTip_AddRule" xml:space="preserve">
+    <value>Voeg een opmaak regel</value>
+  </data>
+  <data name="ReportStringId.FRSForm_TTip_RemoveRule" xml:space="preserve">
+    <value>Verwijder een formatteringsstrategie regel</value>
+  </data>
+  <data name="ReportStringId.FRSForm_TTip_ClearRules" xml:space="preserve">
+    <value>Duidelijke regels voor</value>
+  </data>
+  <data name="ReportStringId.FRSForm_TTip_PurgeRules" xml:space="preserve">
+    <value>Verwijder ongebruikte opmaak-regels</value>
+  </data>
+  <data name="ReportStringId.Wizard_PageChooseFields_Msg" xml:space="preserve">
+    <value>Moet u de velden voor het verslag voordat u verder</value>
+  </data>
+  <data name="ReportStringId.FSForm_Cat_DateTime" xml:space="preserve">
+    <value>DatumTijd</value>
+  </data>
+  <data name="ReportStringId.FSForm_Cat_Int32" xml:space="preserve">
+    <value>Int32</value>
+  </data>
+  <data name="ReportStringId.FSForm_Cat_Number" xml:space="preserve">
+    <value>Aantal</value>
+  </data>
+  <data name="ReportStringId.FSForm_Cat_Percent" xml:space="preserve">
+    <value>Percentage:</value>
+  </data>
+  <data name="ReportStringId.FSForm_Cat_Currency" xml:space="preserve">
+    <value>Valuta</value>
+  </data>
+  <data name="ReportStringId.FSForm_Cat_Special" xml:space="preserve">
+    <value>Speciale</value>
+  </data>
+  <data name="ReportStringId.FSForm_Cat_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="ReportStringId.CatStructure" xml:space="preserve">
+    <value>Structuur</value>
+  </data>
+  <data name="ReportStringId.UD_Title_GroupAndSort" xml:space="preserve">
+    <value>Groep en Sorteren</value>
+  </data>
+  <data name="ReportStringId.GroupSort_AddGroup" xml:space="preserve">
+    <value>Add a Group</value>
+  </data>
+  <data name="ReportStringId.GroupSort_AddSort" xml:space="preserve">
+    <value>Voeg een Sorteren</value>
+  </data>
+  <data name="ReportStringId.GroupSort_MoveUp" xml:space="preserve">
+    <value>Naar boven</value>
+  </data>
+  <data name="ReportStringId.GroupSort_MoveDown" xml:space="preserve">
+    <value>Naar beneden</value>
+  </data>
+  <data name="ReportStringId.GroupSort_Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="ReportStringId.Msg_GroupSortWarning" xml:space="preserve">
+    <value>De groep kop-of voettekst die u wilt verwijderen niet leeg is. Wilt u deze band samen met de controles?</value>
+  </data>
+  <data name="ReportStringId.Msg_WarningFontNameCantBeEmpty" xml:space="preserve">
+    <value>Het lettertype kan niet leeg zijn.</value>
+  </data>
+  <data name="ReportStringId.Msg_GroupSortNoDataSource" xml:space="preserve">
+    <value>Als u een nieuwe groepering of sorteren niveau, eerst een gegevensbron voor het rapport.</value>
+  </data>
+  <data name="ReportStringId.Msg_WarningControlsAreOverlappedByParentBorder" xml:space="preserve">
+    <value>Export waarschuwing: De volgende controles worden overlapt door de ouders op de grens en kan worden geëxporteerd naar HTML, XLS en RTF onrechte - {0}.</value>
+  </data>
+</root>
