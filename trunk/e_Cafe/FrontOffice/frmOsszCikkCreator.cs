@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using BusinessLogic;
 using GUI;
-using GUI.billentyu;
 using NSpring.Logging;
-using NSpring.Logging.EventFormatters;
 
 
 namespace e_Cafe.FrontOffice

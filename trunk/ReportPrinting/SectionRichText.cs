@@ -3,13 +3,10 @@
 // or see http://www.mag37.com/projects/Printing/
 
 using System;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Windows.Forms;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Collections;
-using System.Diagnostics;
+using System.Drawing;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace ReportPrinting
 {

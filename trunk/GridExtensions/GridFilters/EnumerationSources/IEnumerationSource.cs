@@ -1,4 +1,3 @@
-using System;
 
 namespace GridExtensions.GridFilters.EnumerationSources
 {

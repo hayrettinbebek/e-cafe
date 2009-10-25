@@ -1,11 +1,9 @@
 using System;
 using System.Collections;
 using System.Data;
-using System.Drawing;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
-using GridExtensions.GridFilters.EnumerationSources;
 
 namespace GridExtensions.GridFilters
 {

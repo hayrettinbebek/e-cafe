@@ -1,21 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using e_Cafe.Reports;
-using e_Cafe.SQL.DataSets;
 using BusinessLogic;
+using e_Cafe.Reports;
 using GUI;
-using System.Data.OleDb;
-using System.IO;
-using CrystalDecisions.Shared;
 
-using System.Collections;
 
 
 

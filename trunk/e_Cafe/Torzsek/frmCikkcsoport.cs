@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using e_Cafe.UserControls;
 using BusinessLogic;
 using DevExpress.XtraGrid.Views.Grid;
+using e_Cafe.UserControls;
 
 
 namespace e_Cafe

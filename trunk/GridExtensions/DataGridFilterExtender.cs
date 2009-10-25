@@ -1,12 +1,9 @@
 using System;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Collections;
-using System.Collections.Specialized;
-using System.Diagnostics;
 using System.Windows.Forms;
-using System.ComponentModel;
-
 using GridExtensions.GridFilterFactories;
 
 namespace GridExtensions

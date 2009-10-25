@@ -5,9 +5,8 @@
 using System;
 using System.Collections;
 using System.Data;
-using System.Drawing;
 using System.Diagnostics;
-using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace ReportPrinting
 {

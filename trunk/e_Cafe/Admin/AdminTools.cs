@@ -1,13 +1,13 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using BusinessLogic;
+using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 using e_Cafe.Admin;
 using e_Cafe.Keszlet;
 using e_Cafe.Torzsek;
 using e_Cafe.UserControls;
-using System.IO;
-using DevExpress.XtraBars.Ribbon;
-using DevExpress.XtraBars;
 
 
 

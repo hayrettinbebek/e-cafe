@@ -3,12 +3,9 @@
 // or see http://www.mag37.com/projects/Printing/
 
 using System;
-using System.Collections;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Windows.Forms;
 using System.Drawing.Printing;
+using System.Windows.Forms;
 
 namespace ReportPrinting
 {

@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using BusinessLogic;
 using e_Cafe.FrontOffice;
 using GUI;
-using GUI.billentyu;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using NSpring.Logging;

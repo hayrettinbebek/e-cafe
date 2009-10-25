@@ -3,13 +3,11 @@
 // the "ReportBuilder" class.
 
 using System;
-using System.Collections;
 using System.Data;
-using System.Windows.Forms;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Diagnostics;
-using ReportPrinting;
+using System.Windows.Forms;
 
 namespace ReportPrinting
 {

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using BusinessLogic;
 using System.Windows.Forms;
+using BusinessLogic;
 using e_Cafe.FrontOffice;
 
 namespace e_Cafe

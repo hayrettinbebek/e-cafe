@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using e_Cafe.Keszlet;
 using BusinessLogic;
+using e_Cafe.Keszlet;
 
 namespace e_Cafe
 {
