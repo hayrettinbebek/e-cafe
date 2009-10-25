@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PreviewStringId.Button_Help">
+    <value>Hjælp</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PageSetup">
+    <value>Sideindstilling</value>
+  </data>
+  <data name="PreviewStringId.MPForm_Lbl_Pages">
+    <value>Sider</value>
+  </data>
+  <data name="PreviewStringId.SB_ZoomFactor">
+    <value>Zoom-faktor:</value>
+  </data>
+  <data name="PreviewStringId.SB_TotalPageNo">
+    <value>Total antal sider:</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_ZoomIn">
+    <value>Zoom ind</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_FirstPage">
+    <value>Første side</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PreviousPage">
+    <value>Forrige side</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_NextPage">
+    <value>Næste side</value>
+  </data>
+  <data name="PreviewStringId.Msg_EmptyDocument">
+    <value>Dokument er tomt</value>
+  </data>
+  <data name="PreviewStringId.Msg_CreatingDocument">
+    <value>Skaber dokument...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_MultiplePages">
+    <value>Flere sider</value>
+  </data>
+  <data name="PreviewStringId.Button_Apply">
+    <value>Anvend</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_ZoomOut">
+    <value>Zoom ud</value>
+  </data>
+  <data name="PreviewStringId.SB_CurrentPageNo">
+    <value>Aktuelt sidetal:</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Zoom">
+    <value>Zoom</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_PrintDirect">
+    <value>Udskriv direkte</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Magnifier">
+    <value>Lup</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Print">
+    <value>Udskriv</value>
+  </data>
+  <data name="PreviewStringId.Button_Cancel">
+    <value>Fortryd</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Close">
+    <value>Luk udskriftsvisning</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Backgr">
+    <value>Baggrund</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_EditPageHF">
+    <value>Sidehoved og sidefod</value>
+  </data>
+  <data name="PreviewStringId.Button_Ok">
+    <value>OK</value>
+  </data>
+  <data name="PreviewStringId.SB_PageNone">
+    <value>Ingen</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_LastPage">
+    <value>Sidste side</value>
+  </data>
+  <data name="PreviewStringId.Msg_NeedPrinter">
+    <value>Ingen printer installeret</value>
+  </data>
+  <data name="PreviewStringId.Msg_WrongPageSettings">
+    <value>Printeren understøtter ikke den aktuelle papirstørrelse. \n Fortsæt?</value>
+  </data>
+  <data name="PreviewStringId.Msg_CustomDrawWarning">
+    <value>Advarsel</value>
+  </data>
+  <data name="PreviewStringId.PreviewForm_Caption">
+    <value>Vis udskrift</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Customize">
+    <value>Tilpas</value>
+  </data>
+  <data name="PreviewStringId.Margin_Inch">
+    <value>Tommer</value>
+  </data>
+  <data name="PreviewStringId.Margin_Millimeter">
+    <value>mm</value>
+  </data>
+  <data name="PreviewStringId.Margin_TopMargin">
+    <value>Topmargen</value>
+  </data>
+  <data name="PreviewStringId.Margin_BottomMargin">
+    <value>Bundmargen</value>
+  </data>
+  <data name="PreviewStringId.Margin_LeftMargin">
+    <value>Venstre margen</value>
+  </data>
+  <data name="PreviewStringId.Margin_RightMargin">
+    <value>Højre margen</value>
+  </data>
+  <data name="PreviewStringId.ScrollingInfo_Page">
+    <value>Side</value>
+  </data>
+  <data name="PreviewStringId.Msg_PageMarginsWarning">
+    <value>En eller flere margener ligger udenfor udskrivningsområdet. Fortsæt?</value>
+  </data>
+  <data name="PreviewStringId.SB_PageInfo">
+    <value>{0} af {1}</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_HandTool">
+    <value>Manuelt</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Export">
+    <value>Eksportdokument...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Send">
+    <value>Send e-mail...</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Map">
+    <value>Dokumentfolder</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Search">
+    <value>Søg</value>
+  </data>
+  <data name="PreviewStringId.TB_TTip_Watermark">
+    <value>Vandmærke</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_File">
+    <value>&amp;Fil</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_View">
+    <value>&amp;Vis</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Background">
+    <value>&amp;Baggrund</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PageSetup">
+    <value>Side&amp;opsætning</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Print">
+    <value>&amp;Udskriv...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PrintDirect">
+    <value>Udskriv</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Export">
+    <value>&amp;Eksporter til</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Send">
+    <value>Send som</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Exit">
+    <value>Afslut</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewToolbar">
+    <value>&amp;Værktøjslinje</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewStatusbar">
+    <value>Status&amp;linje</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_BackgrColor">
+    <value>&amp;Farve...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_Watermark">
+    <value>&amp;Vandmærke...</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_PdfDocument">
+    <value>PDF-dokument</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_TxtDocument">
+    <value>Tekstdokument</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_CsvDocument">
+    <value>CSV-dokument</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_MhtDocument">
+    <value>MHT-dokument</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_XlsDocument">
+    <value>Excel-dokument</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_RtfDocument">
+    <value>Rich Text-dokument</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_HtmDocument">
+    <value>HTML-dokument</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_GraphicDocument">
+    <value>Grafisk dokument</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterPdf">
+    <value>PDF-dokument</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterTxt">
+    <value>Tekst-dokument</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterCsv">
+    <value>CSV-dokument</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterMht">
+    <value>MHT-dokument</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterXls">
+    <value>Excel-dokument</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterRtf">
+    <value>Rich Text-dokument</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterHtm">
+    <value>HTML-dokument</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterBmp">
+    <value>BMP Bitmap-format</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterGif">
+    <value>GIF Graphics Interchange Format</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterJpeg">
+    <value>JPEG File Interchange Format</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterPng">
+    <value>PNG Portable Network Graphics Format</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterTiff">
+    <value>TIFF Tag Image File Format</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterEmf">
+    <value>EMF Enhanced Windows Metafile</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_FilterWmf">
+    <value>WMF Windows Metafile</value>
+  </data>
+  <data name="PreviewStringId.SaveDlg_Title">
+    <value>Gem som</value>
+  </data>
+  <data name="PreviewStringId.EMail_From">
+    <value>Fra</value>
+  </data>
+  <data name="PreviewStringId.Msg_IncorrectPageRange">
+    <value>Ikke gyldig sideområde</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageZoom">
+    <value>Zoom billede</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_Horizontal">
+    <value>Horisontal</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_Vertical">
+    <value>Vertikal</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_BackwardDiagonal">
+    <value>Nedad</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Direction_ForwardDiagonal">
+    <value>Opad</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Bottom">
+    <value>Bund</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Middle">
+    <value>Midt</value>
+  </data>
+  <data name="PreviewStringId.WMForm_VertAlign_Top">
+    <value>Top</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Left">
+    <value>Venstre</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Center">
+    <value>Centrer</value>
+  </data>
+  <data name="PreviewStringId.WMForm_HorzAlign_Right">
+    <value>Højre</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PictureDlg_Title">
+    <value>Vælg billede</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageStretch">
+    <value>Stræk</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ImageClip">
+    <value>Klip</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Asap">
+    <value>HURTIGST MULIGT</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Confidential">
+    <value>FORTROLIG</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Copy">
+    <value>KOPI</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_DoNotCopy">
+    <value>MÅ IKKE KOPIERES</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Draft">
+    <value>KLADDE</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Original">
+    <value>ORIGINAL</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Personal">
+    <value>PRIVAT</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Sample">
+    <value>EKSEMPEL</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_TopSecret">
+    <value>FORTROLIGT</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Urgent">
+    <value>HASTER</value>
+  </data>
+  <data name="PreviewStringId.Msg_FontInvalidNumber">
+    <value>Ugyldigt tal</value>
+  </data>
+  <data name="PreviewStringId.Msg_NotSupportedFont">
+    <value>Denne skrifttype understøttes ikke</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ZOrderRgrItem_InFront">
+    <value>&amp;Forrest</value>
+  </data>
+  <data name="PreviewStringId.WMForm_ZOrderRgrItem_Behind">
+    <value>&amp;Bagerst</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PageRangeRgrItem_All">
+    <value>&amp;Alle:</value>
+  </data>
+  <data name="PreviewStringId.WMForm_PageRangeRgrItem_Pages">
+    <value>&amp;Sider:</value>
+  </data>
+  <data name="PreviewStringId.Msg_WrongPrinter">
+    <value>Ugyldig printer. Kontroller printeropsætningen.</value>
+  </data>
+  <data name="PreviewStringId.WMForm_Watermark_Evaluation">
+    <value>EVALUERING</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageNumber">
+    <value>[Side #]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageNumberOfTotal">
+    <value>[Side # af # sider]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageDate">
+    <value>[Udskrevet den]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageTime">
+    <value>[Udskrevet kl.]</value>
+  </data>
+  <data name="PreviewStringId.PageInfo_PageUserName">
+    <value>[Brugernavn]</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomPageWidth">
+    <value>Sidebredde</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ZoomTextWidth">
+    <value>Tekstbredde</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewContinuous">
+    <value>Uafbrudt</value>
+  </data>
+  <data name="PreviewStringId.MenuItem_ViewFacing">
+    <value>Læse-layout</value>
+  </data>
+  <data name="PreviewStringId.Msg_UnavailableNetPrinter">
+    <value>Netprinteren er ikke tilgængelig</value>
+  </data>
+</root>
