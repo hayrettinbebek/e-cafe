@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarString.AddOrRemove">
+    <value>添加或删除按钮(&amp;B)</value>
+  </data>
+  <data name="BarString.ResetBar">
+    <value>是否确实要重置对 “{0}” 工具栏所作的修改？</value>
+  </data>
+  <data name="BarString.ResetBarCaption">
+    <value>自定义</value>
+  </data>
+  <data name="BarString.ResetButton">
+    <value>重新设置工具栏(&amp;R)</value>
+  </data>
+  <data name="BarString.CustomizeButton">
+    <value>自定义(&amp;C)...</value>
+  </data>
+  <data name="BarString.ToolBarMenu">
+    <value>重新设置(&amp;R)$&amp;删除(&amp;D)$!命名(&amp;N)$!标准$总使用文字(immer)$在菜单中只用文字$图像与文本$!&amp;开始一组(&amp;G)$常用的</value>
+  </data>
+  <data name="BarString.NewToolbarCaption">
+    <value>新建工具栏</value>
+  </data>
+  <data name="BarString.RenameToolbarCaption">
+    <value>工具栏重命名</value>
+  </data>
+  <data name="BarString.CustomizeWindowCaption">
+    <value>自定义</value>
+  </data>
+  <data name="BarString.MenuAnimationSystem">
+    <value>(系统默认值)</value>
+  </data>
+  <data name="BarString.MenuAnimationNone">
+    <value>无</value>
+  </data>
+  <data name="BarString.MenuAnimationSlide">
+    <value>滑动</value>
+  </data>
+  <data name="BarString.MenuAnimationFade">
+    <value>淡出</value>
+  </data>
+  <data name="BarString.MenuAnimationUnfold">
+    <value>展开</value>
+  </data>
+  <data name="BarString.MenuAnimationRandom">
+    <value>任意</value>
+  </data>
+  <data name="BarString.ToolbarNameCaption">
+    <value>工具栏名称:</value>
+  </data>
+</root>

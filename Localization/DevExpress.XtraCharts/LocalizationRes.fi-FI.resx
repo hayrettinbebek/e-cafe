@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChartStringId.MsgMinMaxDifferentTypes" xml:space="preserve">
+    <value>MinValue:n ja MaxValuen tyypit eivät ole yhteensopivia.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRange" xml:space="preserve">
+    <value>Akselin ({0}) minimiarvo pitää olla pienempi kuin sen maksimiarvo ({1}).</value>
+  </data>
+  <data name="ChartStringId.SeriesPrefix" xml:space="preserve">
+    <value>Sarjat</value>
+  </data>
+  <data name="ChartStringId.PalettePrefix" xml:space="preserve">
+    <value>Paletti</value>
+  </data>
+  <data name="ChartStringId.ArgumentMember" xml:space="preserve">
+    <value>Muuttuja</value>
+  </data>
+  <data name="ChartStringId.ValueMember" xml:space="preserve">
+    <value>Arvo</value>
+  </data>
+  <data name="ChartStringId.LowValueMember" xml:space="preserve">
+    <value>Matala</value>
+  </data>
+  <data name="ChartStringId.HighValueMember" xml:space="preserve">
+    <value>Korkea</value>
+  </data>
+  <data name="ChartStringId.OpenValueMember" xml:space="preserve">
+    <value>Avaa</value>
+  </data>
+  <data name="ChartStringId.CloseValueMember" xml:space="preserve">
+    <value>Sulje</value>
+  </data>
+  <data name="ChartStringId.AutocreatedSeriesName" xml:space="preserve">
+    <value>Automaattisesti luodut sarjat</value>
+  </data>
+  <data name="ChartStringId.DefaultDataFilterName" xml:space="preserve">
+    <value>Suodatin</value>
+  </data>
+  <data name="ChartStringId.DefaultChartTitle" xml:space="preserve">
+    <value>Taulukon otsikko</value>
+  </data>
+  <data name="ChartStringId.MsgEmptyArrayOfValues" xml:space="preserve">
+    <value>Arvojen taulukko on tyhjä.</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesViewDoesNotExist" xml:space="preserve">
+    <value>{0} näkymää ei ole.</value>
+  </data>
+  <data name="ChartStringId.MsgItemNotInCollection" xml:space="preserve">
+    <value>Kokoelmassa ei ole määritettyä objektia.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectValue" xml:space="preserve">
+    <value>Virheellinen arvo "{0}" muuttujalle "{1}".</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatiblePointType" xml:space="preserve">
+    <value>"{0}" tyyppinen piste ei ole yhteensopiva {1} asteikolla.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleArgumentDataMember" xml:space="preserve">
+    <value>"{0}" tyyppinen muuttuja ei ole yhteensopiva {1} asteikolla.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleValueDataMember" xml:space="preserve">
+    <value>"{0}" tyyppi ei ole yhteensopiva asteikolla {1}.</value>
+  </data>
+  <data name="ChartStringId.MsgDesignTimeOnlySetting" xml:space="preserve">
+    <value>Tätä ominaisuutta ei voi asettaa ajon aikana.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidDataSource" xml:space="preserve">
+    <value>Virheellinen DataSourcen tyyppi ( Rajapintoja ei ole määritetty).</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDataMember" xml:space="preserve">
+    <value> DataSource:ssa ei ole "{0}" nimistä objektia.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidSortingKey" xml:space="preserve">
+    <value>Lajittelukriteeriksi ei voi asettaa arvoa {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidFilterCondition" xml:space="preserve">
+    <value>{0} ehtoa ei voi hyväksyä datalle "{1}".</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDataAdapter" xml:space="preserve">
+    <value>{0} objeksti ei ole data adapteri.</value>
+  </data>
+  <data name="ChartStringId.MsgModifyDefaultPaletteError" xml:space="preserve">
+    <value>Paletti on oletus, eikä sitä voida muokata.</value>
+  </data>
+  <data name="ChartStringId.MsgAddExistingPaletteError" xml:space="preserve">
+    <value>{0} niminen paletti on jo olemassa.</value>
+  </data>
+  <data name="ChartStringId.MsgInternalPropertyChangeError" xml:space="preserve">
+    <value>Ominaisuus on tarkoitettu vain sisäiseen käyttöön. Tätä arvoa ei voi muuttaa.</value>
+  </data>
+  <data name="ChartStringId.MsgPaletteNotFound" xml:space="preserve">
+    <value>Taulukko ei sisällä palettia nimeltä {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgLabelSettingRuntimeError" xml:space="preserve">
+    <value>"Label"-ominaisuutta ei voida asettaa suorituksen aikana.</value>
+  </data>
+  <data name="ChartStringId.MsgPointOptionsSettingRuntimeError" xml:space="preserve">
+    <value>"PointOptions" ominaisuutta ei voi asettaa suorituksen aikana.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectNumericPrecision" xml:space="preserve">
+    <value>Tarkkuuden pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisThickness" xml:space="preserve">
+    <value>Akselin paksuus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBarWidth" xml:space="preserve">
+    <value>Rajan leveys pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBarDepth" xml:space="preserve">
+    <value>Rajan paksuus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBorderThickness" xml:space="preserve">
+    <value>Reunan leveys pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChartTitleIndent" xml:space="preserve">
+    <value>Otsikon sisennys pitää olla suurempi tai yhtä suuri kuin 0 ja alle 1000</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendMarkerSize" xml:space="preserve">
+    <value>Merkin koko pitää olla suurempi kuin 0 ja pienempi kuin 1000.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendSpacingVertical" xml:space="preserve">
+    <value>Arvotaulukon vertical spacing ominaisuus pitää olla suurempi tai yhtä suuri kuin 0 ja pienempi kuin 1000.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendSpacingHorizontal" xml:space="preserve">
+    <value>Arvotaulukon horizontal spacing ominaisuus pitää olla suurempi tai yhtä suuri kuin 0 ja pienempi kuin 1000.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMarkerSize" xml:space="preserve">
+    <value>Merkin koko pitää olla suurempi kuin 1.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMarkerStarPointCount" xml:space="preserve">
+    <value>Pisteitä pitää olla enemmän kuin 3 ja vähemmän kuin 101.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPieSeriesLabelColumnIndent" xml:space="preserve">
+    <value>Sarakkeen sisennys pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectRangeBarSeriesLabelIndent" xml:space="preserve">
+    <value>Sisennys pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPercentPrecision" xml:space="preserve">
+    <value>Prosentin tarkkuus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesLabelLineLength" xml:space="preserve">
+    <value>Viivan pituus pitää olla suurempi tai yhtä suuri kuin 0 ja vähemmän kuin 1000.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripConstructorParameters" xml:space="preserve">
+    <value>	Minimi- ja maksimirajat eivät voi olla samat.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripLimitAxisValue" xml:space="preserve">
+    <value>StripLimit objektin AxisValue ominaisuus ei voi olla null.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripMinLimit" xml:space="preserve">
+    <value>Minimin pitää olla pienempi kuin maksimi.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripMaxLimit" xml:space="preserve">
+    <value>Maksimin pitää olla suurempi kuin minimi.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLineThickness" xml:space="preserve">
+    <value>Viivan paksuus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectShadowSize" xml:space="preserve">
+    <value>Varjon koko pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkThickness" xml:space="preserve">
+    <value>Taustaviivojen paksuus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkLength" xml:space="preserve">
+    <value>Viivan pituus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMinorCount" xml:space="preserve">
+    <value>Minimi määrän pitää olla suurempi kuin 100 ja alle 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkMinorThickness" xml:space="preserve">
+    <value>Pienempien taustaviivojen paksuus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkMinorLength" xml:space="preserve">
+    <value>Pienempien taustaviivojen pituus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPercentValue" xml:space="preserve">
+    <value>Prosentin pitää olla suurempi tai yhtä suuri kuin 0 ja pienempi tai yhtä suuri kuin 100.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSimpleDiagramDimension" xml:space="preserve">
+    <value>Yksinkertaisen diagrammin ulottuvuus pitää olla suurempi kuin 0 ja pienempi kuin 100.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStockLevelLineLengthValue" xml:space="preserve">
+    <value>Vakio pituus pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectReductionColorValue" xml:space="preserve">
+    <value>Vähennysvärin arvo ei voi olla tyhjä.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLabelAngle" xml:space="preserve">
+    <value>Otsikon kulma pitää olla suurempi tai yhtä suuri kuin -360 ja vähemmän tai yhtä suuri kuin 360.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectImageFormat" xml:space="preserve">
+    <value>Ei voi muuntaa taulukkoa määritettyyn kuva muotoon.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectImageBounds" xml:space="preserve">
+    <value>Ei voi tehdä määritellyn kokoista kuvaa.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectUseImageProperty" xml:space="preserve">
+    <value>Kuva-ominaisuutta ei voida käyttää WebChart-kontrollille. Käytä ImageUrl-ominaisuutta.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectUseImageUrlProperty" xml:space="preserve">
+    <value>ImageUrl-ominaisuutta voidaan käyttää vain WebChart-kontrollille. Käytä Image-ominaisuutta.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTaskLinkMinIndent" xml:space="preserve">
+    <value>Minimi sisennys pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectArrowWidth" xml:space="preserve">
+    <value>Nuolen leveys pitää olla pariton ja suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectArrowHeight" xml:space="preserve">
+    <value>Nuolen korkeus pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgEmptyArgument" xml:space="preserve">
+    <value>Tämä muuttuja ei voi olla tyhjä.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectValueDataMemberCount" xml:space="preserve">
+    <value>On pakollista määrittää arvo {0} nykyiselle sarja näkymälle. </value>
+  </data>
+  <data name="ChartStringId.MsgPaletteEditingIsntAllowed" xml:space="preserve">
+    <value>Muokkaus ei ole sallittu!</value>
+  </data>
+  <data name="ChartStringId.MsgPaletteDoubleClickToEdit" xml:space="preserve">
+    <value>Muokkaa tuplaklikkaamalla...</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidPaletteName" xml:space="preserve">
+    <value>Ei voi lisätä palettia, jonka nimi on tyhjä (\"\"). Määrittele paletille nimi.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidScaleType" xml:space="preserve">
+    <value>Määritetty arvo asteikon muuttamiseksi ei ole yhteensopiva asteikon tyypin kanssa.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTransformationMatrix" xml:space="preserve">
+    <value>Väärä muunnosmatriisi.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPerspectiveAngle" xml:space="preserve">
+    <value>Kulman pitää olla suurempi tai yhtä suuri kuin 0 ja pienempi kuin 180.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPieDepth" xml:space="preserve">
+    <value>Piirakan syvyys pitää olla yli 0 ja pienempi tai yhtä suuri kuin 100, kun arvot on prosentteja.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesDistance" xml:space="preserve">
+    <value>Sarjan etäisyys pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesDistanceFixed" xml:space="preserve">
+    <value>Muutettu sarjan etäisyys pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesIndentFixed" xml:space="preserve">
+    <value>Muutettu sarjan sisennys pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPlaneDepthFixed" xml:space="preserve">
+    <value>Tason syvyys pitää olla suurempi tai yhtä suuri kuin 1.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectGridSpacing" xml:space="preserve">
+    <value>Taulukon välin pitää olla suurempi kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectConstantLineAxisValue" xml:space="preserve">
+    <value>ConstantLine objektin AxisValue ei voi olla null.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectCustomAxisLabelAxisValue" xml:space="preserve">
+    <value>CustomAxisLabel objektin AxisValue ei voi olla null.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPadding" xml:space="preserve">
+    <value>Täytön pitää olla suurempi tai yhtä suuri kuin 0.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidZeroAxisAlignment" xml:space="preserve">
+    <value>Tasausta ei voi asettaa Alignment.Zero toissijaiselle akselille.</value>
+  </data>
+  <data name="ChartStringId.MsgNullSeriesViewAxisX" xml:space="preserve">
+    <value>Näkymän X-akseli ei voi olla null.</value>
+  </data>
+  <data name="ChartStringId.MsgNullSeriesViewAxisY" xml:space="preserve">
+    <value>Näkymän Y-akseli ei voi olla null.</value>
+  </data>
+  <data name="ChartStringId.MsgNonExistentSeriesViewAxisX" xml:space="preserve">
+    <value>Ei voi asettaa näkymän X-akselia, koska määritetty toissijainen akseli ei ole diagrammissa.</value>
+  </data>
+  <data name="ChartStringId.MsgNonExistentSeriesViewAxisY" xml:space="preserve">
+    <value>Ei voi asettaa näkymän Y-akselia, koska määritetty toissijainen akseli ei ole diagrammissa.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesViewAxisX" xml:space="preserve">
+    <value>Ei voi asettaa sarjan näkymää X-akselille, koska määritetty akseli ei ole taulukon ensisijainen X-akseli, eikä ollenkaan ensisijainen akseli.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesViewAxisY" xml:space="preserve">
+    <value>Ei voi asettaa sarjan näkymää Y-akselille, koska määritetty akseli ei ole taulukon ensisijainen Y-akseli, eikä ollenkaan ensisijainen akseli.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectParentSeriesPointOwner" xml:space="preserve">
+    <value>Pisteen Owner ei voi olla null ja sen pitää olla tyyppiä Series.</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesViewNotSupportRelations" xml:space="preserve">
+    <value>Tämä näkymä ei tue relaatioita</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChildSeriesPointOwner" xml:space="preserve">
+    <value>Sarjan Owner ei voi olla null ja täytyy olla tyyppiä Series.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChildSeriesPointID" xml:space="preserve">
+    <value>Sarjan pisteiden ID pitää olla positiivinen luku tai 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesOfParentAndChildPoints" xml:space="preserve">
+    <value>Parent ja child pisteiden pitää kuulua samaan sarjaan.</value>
+  </data>
+  <data name="ChartStringId.MsgSelfRelatedSeriesPoint" xml:space="preserve">
+    <value>Pisteellä ei voi olla relaatiota itseensä.</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesPointRelationAlreadyExists" xml:space="preserve">
+    <value>SeriesPointRelations kokoelmassa on jo tämä relaatio</value>
+  </data>
+  <data name="ChartStringId.MsgChildSeriesPointNotExist" xml:space="preserve">
+    <value>Sarjan pistettä ID:llä {0} ei ole</value>
+  </data>
+  <data name="ChartStringId.MsgRelationChildPointIDNotUnique" xml:space="preserve">
+    <value>Relaation ChildPointID pitää olla yksilöllinen.</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesPointIDNotUnique" xml:space="preserve">
+    <value>Pisteen ID pitää olla yksilöllinen</value>
+  </data>
+  <data name="ChartStringId.VerbAbout" xml:space="preserve">
+    <value>Tietoja</value>
+  </data>
+  <data name="ChartStringId.VerbPopulate" xml:space="preserve">
+    <value>Täytä</value>
+  </data>
+  <data name="ChartStringId.VerbSeries" xml:space="preserve">
+    <value>Sarjat...</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesChanged" xml:space="preserve">
+    <value>Sarjat muuttuneet</value>
+  </data>
+  <data name="ChartStringId.TrnDataFiltersChanged" xml:space="preserve">
+    <value>Tiedon suodattimet muuttuneet</value>
+  </data>
+  <data name="ChartStringId.TrnChartTitlesChanged" xml:space="preserve">
+    <value>Taulukon otsikot muuttuneet.</value>
+  </data>
+  <data name="ChartStringId.TrnStripsChanged" xml:space="preserve">
+    <value>Listat muuttuneet</value>
+  </data>
+  <data name="ChartStringId.TrnPalettesChanged" xml:space="preserve">
+    <value>Paletit muuttuneet</value>
+  </data>
+  <data name="ChartStringId.TrnConstantLinesChanged" xml:space="preserve">
+    <value>Vakiorivit muuttuneet</value>
+  </data>
+  <data name="ChartStringId.TrnCustomAxisLabelChanged" xml:space="preserve">
+    <value>Custom-akselin otsikot muuttuneet.</value>
+  </data>
+  <data name="ChartStringId.TrnSecondaryAxesXChanged" xml:space="preserve">
+    <value>Toissijainen X-akseli muuttunut</value>
+  </data>
+  <data name="ChartStringId.TrnSecondaryAxesYChanged" xml:space="preserve">
+    <value>Toissijainen Y-akseli muuttunut</value>
+  </data>
+  <data name="ChartStringId.TrnChartWizard" xml:space="preserve">
+    <value>Taulukkovelhon asetukset hyväksytty</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesDeleted" xml:space="preserve">
+    <value>Sarjat poistettu</value>
+  </data>
+  <data name="ChartStringId.TrnChartTitleDeleted" xml:space="preserve">
+    <value>Taulukon otsikko poistettu.</value>
+  </data>
+  <data name="ChartStringId.TrnConstantLineDeleted" xml:space="preserve">
+    <value>Vakiorivi poistettu</value>
+  </data>
+  <data name="ChartStringId.TrnSecondryAxisXDeleted" xml:space="preserve">
+    <value>Toissijainen X-akseli poistettu</value>
+  </data>
+  <data name="ChartStringId.TrnSecondryAxisYDeleted" xml:space="preserve">
+    <value>Toissijainen Y-akseli poistettu</value>
+  </data>
+  <data name="ChartStringId.AxisXDefaultTitle" xml:space="preserve">
+    <value>Muuttujan akseli</value>
+  </data>
+  <data name="ChartStringId.AxisYDefaultTitle" xml:space="preserve">
+    <value>Arvojen akseli</value>
+  </data>
+  <data name="ChartStringId.MenuItemAdd" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="ChartStringId.MenuItemInsert" xml:space="preserve">
+    <value>Lisää</value>
+  </data>
+  <data name="ChartStringId.MenuItemDelete" xml:space="preserve">
+    <value>Poista</value>
+  </data>
+  <data name="ChartStringId.MenuItemClear" xml:space="preserve">
+    <value>Tyhjennä</value>
+  </data>
+  <data name="ChartStringId.MenuItemMoveUp" xml:space="preserve">
+    <value>Siirrä ylös</value>
+  </data>
+  <data name="ChartStringId.MenuItemMoveDown" xml:space="preserve">
+    <value>Siirrä alas</value>
+  </data>
+  <data name="ChartStringId.WizAutoCreatedSeries" xml:space="preserve">
+    <value>Automaattisesti luodut sarjat</value>
+  </data>
+  <data name="ChartStringId.WizSeriesPointPageName" xml:space="preserve">
+    <value>Pisteet</value>
+  </data>
+  <data name="ChartStringId.WizPositionCenter">
+    <value>Keskellä</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelValue">
+    <value>Arvo</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelLow" xml:space="preserve">
+    <value>Matala</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelHigh" xml:space="preserve">
+    <value>Korkea</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelOpen" xml:space="preserve">
+    <value>Avaa</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelClose" xml:space="preserve">
+    <value>Sulje</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideBar" xml:space="preserve">
+    <value>Raja</value>
+  </data>
+  <data name="ChartStringId.SvnStackedBar" xml:space="preserve">
+    <value>Pinottu raja</value>
+  </data>
+  <data name="ChartStringId.SvnPie" xml:space="preserve">
+    <value>Piirakka</value>
+  </data>
+  <data name="ChartStringId.SvnPoint" xml:space="preserve">
+    <value>Piste</value>
+  </data>
+  <data name="ChartStringId.SvnLine" xml:space="preserve">
+    <value>Viiva</value>
+  </data>
+  <data name="ChartStringId.SvnArea" xml:space="preserve">
+    <value>Alue</value>
+  </data>
+  <data name="ChartStringId.SvnStackedArea" xml:space="preserve">
+    <value>Pinottu alue</value>
+  </data>
+  <data name="ChartStringId.SvnStock" xml:space="preserve">
+    <value>Vakio</value>
+  </data>
+  <data name="ChartStringId.SvnPie3D" xml:space="preserve">
+    <value>Piirakka 3D</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesView" xml:space="preserve">
+    <value>(yhteensopimaton)</value>
+  </data>
+  <data name="ChartStringId.InvisibleSeriesView" xml:space="preserve">
+    <value>(näkymätön)</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesHeader" xml:space="preserve">
+    <value>Sarja on yhteensopimaton</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesMessage" xml:space="preserve">
+    <value>{0} ja "{1}" on yhteensopimattomia</value>
+  </data>
+  <data name="ChartStringId.PrimaryAxisXName" xml:space="preserve">
+    <value>Ensisijainen X akseli</value>
+  </data>
+  <data name="ChartStringId.PrimaryAxisYName" xml:space="preserve">
+    <value>Ensisijainen Y akseli</value>
+  </data>
+  <data name="ChartStringId.IOCaption" xml:space="preserve">
+    <value>Operaatio ei ole sallittu</value>
+  </data>
+  <data name="ChartStringId.IODeleteAxis" xml:space="preserve">
+    <value>Ensisijaista akselia ei voi poistaa. Jos haluat piilottaa akselin, aseta Visible ominaisuus false:ksi.</value>
+  </data>
+  <data name="ChartStringId.FunctionArgumentName" xml:space="preserve">
+    <value>Muuttuja</value>
+  </data>
+</root>

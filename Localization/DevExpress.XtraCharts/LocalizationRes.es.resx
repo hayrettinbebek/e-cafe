@@ -1,0 +1,1478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 1.3
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">1.3</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1">this is my long string</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        [base64 mime encoded serialized .NET Framework object]
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        [base64 mime encoded string representing a byte array form of the .NET Framework object]
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used forserialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChartStringId.MsgMinMaxDifferentTypes">
+    <value>Los tipos de MinValue y MaxValue no coinciden.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRange">
+    <value>El valor mínimo de rango del eje ({0}) debe ser menor que su valor máximo ({1}).</value>
+  </data>
+  <data name="ChartStringId.PalettePrefix">
+    <value>Paleta </value>
+  </data>
+  <data name="ChartStringId.ArgumentMember">
+    <value>Argumento</value>
+  </data>
+  <data name="ChartStringId.ValueMember">
+    <value>Valor</value>
+  </data>
+  <data name="ChartStringId.LowValueMember">
+    <value>Menor</value>
+  </data>
+  <data name="ChartStringId.HighValueMember">
+    <value>Mayor</value>
+  </data>
+  <data name="ChartStringId.OpenValueMember">
+    <value>Abrir</value>
+  </data>
+  <data name="ChartStringId.CloseValueMember">
+    <value>Cerrar</value>
+  </data>
+  <data name="ChartStringId.AutocreatedSeriesName">
+    <value>Serie de auto-creación</value>
+  </data>
+  <data name="ChartStringId.DefaultChartTitle">
+    <value>Título del Gráfico</value>
+  </data>
+  <data name="ChartStringId.MsgEmptyArrayOfValues">
+    <value>El conjunto de valores está vacío.</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesViewDoesNotExist">
+    <value>La SeriesView {0} no existe.</value>
+  </data>
+  <data name="ChartStringId.MsgEquallySpacedItemsNotUsable">
+    <value>Esta propiedad no se puede usar si la propiedad Direction está configurada en {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgItemNotInCollection">
+    <value>La colección no contiene el elemento especificado.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectValue">
+    <value>Valor incorrecto "{0}" para el argumento "{1}".</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatiblePointType">
+    <value>El tipo del punto "{0}" no es compatible con la escala {1}.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleArgumentDataMember">
+    <value>El tipo de datos del argumento "{0}"  no es compatible con la escala {1}.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleValueDataMember">
+    <value>El tipo de datos del valor "{0}" no es compatible con la escala numérica.</value>
+  </data>
+  <data name="ChartStringId.MsgDesignTimeOnlySetting">
+    <value>No se puede establecer esta propiedad en tiempo de ejecución.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidDataSource">
+    <value>Fuente de datos no válido (No implanta ningún interfaz requerido).</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDataMember">
+    <value>La fuente de datos no contiene un miembro con el nombre "{0}".</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidSortingKey">
+    <value>No ha sido posible aplicar la ordenación con el valor {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidFilterCondition">
+    <value>La condición {0} no puede aplicarse a los datos "{1}".</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDataAdapter">
+    <value>El objeto {0} no es un adaptador de datos.</value>
+  </data>
+  <data name="ChartStringId.MsgDataSnapshot">
+    <value>
+      The data snapshot operation is complete. All series data now statically persist in the chart.
+      This also means that now the chart is in unbound mode.
+
+      NOTE: You can undo this operation by pressing Ctrl+Z in the Visual Studio designer.
+    </value>
+  </data>
+  <data name="ChartStringId.MsgModifyDefaultPaletteError">
+    <value>La paleta es la paleta por defecto y no permite modificarse.</value>
+  </data>
+  <data name="ChartStringId.MsgAddExistingPaletteError">
+    <value>Un palete con el nombre {0} ya existe.</value>
+  </data>
+  <data name="ChartStringId.MsgInternalPropertyChangeError">
+    <value>Ésta propiedad es únicamente para uso interno. No se permite cambiar su valor.</value>
+  </data>
+  <data name="ChartStringId.MsgPaletteNotFound">
+    <value>El gráfico no contiene una paleta con el nombre {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgLabelSettingRuntimeError">
+    <value>La propiedad "Label" no se puede establecer en tiempo de ejecución.</value>
+  </data>
+  <data name="ChartStringId.MsgPointOptionsSettingRuntimeError">
+    <value>La propiedad "PointOptions" no se puede establecer en tiempo de ejecución.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectNumericPrecision">
+    <value>La precisión debe ser mayor o igual que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisThickness">
+    <value>El grosor del eje debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBarWidth">
+    <value>El ancho de la barra debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBarDepth">
+    <value>La profundidad de la barra debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLineWidth">
+    <value>El ancho de la línea debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAreaWidth">
+    <value>El ancho del área debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBorderThickness">
+    <value>El ancho del marco debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChartTitleIndent">
+    <value>El desplazamiento del título debe ser mayor o igual que 0 y menor que 1000.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendMarkerSize">
+    <value>El tamaño de la leyenda debe ser entre 0 y 999.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendSpacingVertical">
+    <value>El espaciado vertical de la leyenda debe ser entre 0 y 999.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendSpacingHorizontal">
+    <value>El espaciado horizontal de la leyenda debe ser entre 0 y 999.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMarkerSize">
+    <value>El tamaño del marcador debe ser mayor que 1.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMarkerStarPointCount">
+    <value>El número de puntos de estrella debe ser mayor que 3 y menor que 101.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPieSeriesLabelColumnIndent">
+    <value>El desplazamiento de la columna debe ser mayor o igual que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectRangeBarSeriesLabelIndent">
+    <value>El desplazamiento debe ser mayor o igual que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPercentPrecision">
+    <value>La precisión del porcentaje debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesLabelLineLength">
+    <value>La longitud de la línea debe ser mayor o igual que 0 y meno que 1000.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripConstructorParameters">
+    <value> Los límites mínimo y máximo del Strip no pueden ser iguales.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripLimitAxisValue">
+    <value>La propiedad AxisValue no puede configurarse como nula para el objeto StripLimit.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripMinLimit">
+    <value>El límite inferior de la tira debe ser menor que el límite superior.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripMaxLimit">
+    <value>El límite superior de la tira debe ser mayor que el límite inferior.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLineThickness">
+    <value>El espesor de la línea debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectShadowSize">
+    <value>El tamaño de la sombra debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkThickness">
+    <value>El grosor de la marca debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkLength">
+    <value>La longitud de la marca debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMinorCount">
+    <value>El número del recuento menor debe ser mayor que 0 y menor que 100.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkMinorThickness">
+    <value>El grosor de la marca inferior debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkMinorLength">
+    <value>La longitud de la marca inferior debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPercentValue">
+    <value>El valor del porcentaje debe ser mayor o igual que 0 y menor o igual que 100.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSimpleDiagramDimension">
+    <value>La dimensión del diagrama simple debe ser mayor que 0 y menor que 100.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStockLevelLineLengthValue">
+    <value>La longitud de la línea de nivel de stock debe ser mayor o igual que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectReductionColorValue">
+    <value>El valor de reducción de color no puede estar vacío.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLabelAngle">
+    <value>El ángulo de la etiqueta debe estar entre -360 y 360 grados.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectImageFormat">
+    <value>No es posible exportar el gráfico al formato especificado.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectImageBounds">
+    <value>No se puede crear un imagen con el tamaño especificado.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectUseImageProperty">
+    <value>La propiedad Image no se debe usar para un control WebChartControl. Por favor, use  ImageUrl en su lugar.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectUseImageUrlProperty">
+    <value>La propiedad ImageUrl solamente debe usarse con los controles WebChartControl. Por favor, use Image en su lugar.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTaskLinkMinIndent">
+    <value>La indentación mínima del enlace de la tarea debe ser mayor o igual a 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectArrowWidth">
+    <value>El ancho de la flecha debe ser siempre impar y mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectArrowHeight">
+    <value>La altura de la flecha debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgEmptyArgument">
+    <value>Un argumento no puede estar vacío.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectValueDataMemberCount">
+    <value>Es preciso indicar {0} valores de data para el gráfico de la serie actual.</value>
+  </data>
+  <data name="ChartStringId.MsgPaletteEditingIsntAllowed">
+    <value>¡No se permite editar!</value>
+  </data>
+  <data name="ChartStringId.MsgPaletteDoubleClickToEdit">
+    <value>Clic-doble para editar...</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidPaletteName">
+    <value>No se puede añadir una paleta sin nombre (\"\") al repositorio de paletas. Por favor, especifique un nombre válido.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidScaleType">
+    <value>El valor especificado para convertir la representación de la escala no es compatible con el tipo de escala actual.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTransformationMatrix">
+    <value>Matriz de transformación incorrecta.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPerspectiveAngle">
+    <value>El valor de la perspectiva debe ser mayor o igual que 0 y menor que 180.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPieDepth">
+    <value>La altura del gráfico debe ser mayor que 0 y menor o igual que 100, ya que el valor es un porcentaje.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesDistance">
+    <value>El valor de distancia de las series debe ser mayor o igual que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesDistanceFixed">
+    <value>El valor de distancia fija de las series debe ser mayor o igual que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesIndentFixed">
+    <value>El valor de desplazamiento fijo de las series debe ser mayor o igual que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPlaneDepthFixed">
+    <value>La profundidad del plano fijo debe ser mayor y igual que 1.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectGridSpacing">
+    <value>El espaciado de la grilla debe ser mayor que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleArgumentScaleType">
+    <value>La tipo de escala del argumento {0} es incompatible con la vista de la serie {1}.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleValueScaleType">
+    <value>El tipo de escala {0} es incompatible con la vista de la serie {1}.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectConstantLineAxisValue">
+    <value>AxisValue no puede ser nulo para el objecto ConstantLine.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectCustomAxisLabelAxisValue">
+    <value>AxisValue no puede ser nulo para el objeto CustomAxisLabel.</value>
+  </data>
+  <data name="ChartStringId.Msg3DRotationToolTip">
+    <value>
+      Use Ctrl with the left mouse button
+      to rotate the chart.
+    </value>
+  </data>
+  <data name="ChartStringId.Msg3DScrollingToolTip">
+    <value>
+      Use Ctrl with the center (wheel) mouse button
+      to scroll the chart.
+    </value>
+  </data>
+  <data name="ChartStringId.Msg2DScrollingToolTip">
+    <value>
+      Use Ctrl with the left mouse button
+      to scroll the chart.
+    </value>
+  </data>
+  <data name="ChartStringId.Msg2DPieExplodingToolTip">
+    <value>
+      Use Ctrl with the left mouse button
+      to explode or collapse slices.
+    </value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPadding">
+    <value>El 'padding' debe ser mayor o igual que 0.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidZeroAxisAlignment">
+    <value>La Alineación no puede configurarse en Cero para el eje secundario. </value>
+  </data>
+  <data name="ChartStringId.MsgNullSeriesViewAxisX">
+    <value>El eje X de la vista de la serie no puede configurarse en nulo.   </value>
+  </data>
+  <data name="ChartStringId.MsgNullSeriesViewAxisY">
+    <value>El eje Y de la vista de la serie no puede configurarse en nulo.   </value>
+  </data>
+  <data name="ChartStringId.MsgNonExistentSeriesViewAxisX">
+    <value>El eje X de la vista de la serie no puede configurarse  porque el eje secundario especificado no figura en la colección del diagrama de ejes secundarios X.</value>
+  </data>
+  <data name="ChartStringId.MsgNonExistentSeriesViewAxisY">
+    <value>El eje Y de la vista de la serie no puede configurarse  porque el eje secundario especificado no figura en la colección del diagrama de ejes secundarios Y.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesViewAxisX">
+    <value>El eje X de la vista de la serie no puede configurarse  porque el eje especificado no es el eje X primario del diagrama del gráfico o no es el eje primario en absoluto.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesViewAxisY">
+    <value>El eje Y de la vista de la serie no puede configurarse  porque el eje especificado no es el eje Y primario del diagrama del gráfico o no es el eje primario en absoluto.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectParentSeriesPointOwner">
+    <value>El propietario del punto de la serie padre no puede ser nulo y debe ser del tipo Serie.</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesViewNotSupportRelations">
+    <value>La vista de esta serie no soporta relaciones.  </value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChildSeriesPointOwner">
+    <value>El propietario del "child series point" no puede ser nulo y debe ser del mismo tipo de serie.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChildSeriesPointID">
+    <value>El ID del "child series point" debe ser positivo o cero.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesOfParentAndChildPoints">
+    <value>Los puntos padre e hijo deben pertenecer a la misma serie.</value>
+  </data>
+  <data name="ChartStringId.MsgSelfRelatedSeriesPoint">
+    <value>El punto de la serie no puede tener una relación consigo mismo.</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesPointRelationAlreadyExists">
+    <value>La colección SeriesPointRelations ya contiene esta relación.   </value>
+  </data>
+  <data name="ChartStringId.MsgChildSeriesPointNotExist">
+    <value>No existe un "child series point" con ID igual a {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgRelationChildPointIDNotUnique">
+    <value>El ChildPointID de la relación debe ser único. </value>
+  </data>
+  <data name="ChartStringId.MsgSeriesPointIDNotUnique">
+    <value>El ID del punto de la serie debe ser único.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectFont">
+    <value>La fuente no puede ser nulo</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectScrollBarThickness">
+    <value>El grosor de la barra de desplazamiento debe ser mayor o igual que 3 y menor o igual que 25.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectZoomPercent">
+    <value>El porcentaje del zoom debe ser mayor que 0 y menor o igual que  {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectHorizontalScrollPercent">
+    <value>El porcentaje de desplazamiento horizontal debe ser mayor o igual que -{0} y menor o igual que  {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectVerticalScrollPercent">
+    <value>El porcentaje de desplazamiento vertical debe ser mayor o igual que  -{0} y menor o igual que  {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgUnregisterGroupError">
+    <value>Este grupo ya ha sido desregistrado.</value>
+  </data>
+  <data name="ChartStringId.MsgUnregisterPageError">
+    <value>Esta página ya ha sido desregistrada.</value>
+  </data>
+  <data name="ChartStringId.MsgWizardAbsractPageType">
+    <value>{0} es abstracto y por lo tanto un objeto de este tipo no puede ser instanciado y agregado como página del asistente.</value>
+  </data>
+  <data name="ChartStringId.MsgWizardIncorrectBasePageType">
+    <value>{0} debe heredarse de la clase {1}.</value>
+  </data>
+  <data name="ChartStringId.MsgWizardNonUniquePageType">
+    <value>La página de tipo {0} ya está registrada. No se puede agregar más de una página de un tipo en particular. </value>
+  </data>
+  <data name="ChartStringId.MsgWizardNonUniqueGroupName">
+    <value>El grupo con nombre  {0} ya está registrado.</value>
+  </data>
+  <data name="ChartStringId.MsgOrderArrayLengthMismatch">
+    <value>El largo del arreglo ordenado no es igual al número total de elementos registrados.  </value>
+  </data>
+  <data name="ChartStringId.MsgOrderUnregisteredElementFound">
+    <value>Se encontró el elemento no registrado.</value>
+  </data>
+  <data name="ChartStringId.MsgOrderRepeatedElementFound">
+    <value>El mismo elemento se repite varias veces en el arreglo ordenado.</value>
+  </data>
+  <data name="ChartStringId.MsgAddPresentViewType">
+    <value>El tipo de vista especificado ya está presente en la colección.</value>
+  </data>
+  <data name="ChartStringId.MsgAddLastViewType">
+    <value>No se puede añadir ningún tipo de vista a esta colección, ya que por lo menos un tipo de vista debe estar disponible en el asistente.</value>
+  </data>
+  <data name="ChartStringId.MsgCalcHitInfoNotSupported">
+    <value>Hit testing para tipos de gráficos 3D no está soportado, solamente para gráficos 2D. </value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAppearanceName">
+    <value>El gráfico no contiene una apariencia con el nombre {0}.</value>
+  </data>
+  <data name="ChartStringId.MsgNotChartControl">
+    <value>El objeto especificado no es un ChartControl.</value>
+  </data>
+  <data name="ChartStringId.MsgNotBelongingChart">
+    <value>Este control no contiene el gráfico especificado.  </value>
+  </data>
+  <data name="ChartStringId.MsgInitializeChartNotFound">
+    <value>No se encuentra el ChartControl o existen muchos gráficos en este control. Para resolver el problema debe usar el evento  WizardPage.InitializePage y especificar el gráfico manualmente.   </value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleByViewType">
+    <value>el tipo de vista</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleByArgumentScaleType">
+    <value>el tipo de escala del argumento</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleByValueScaleType">
+    <value>el tipo de escala del valor</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidExplodedSeriesPoint">
+    <value>El punto de serie especificado no pertenece a la colección de puntos de serie de la vista de la serie del gráfico circular actual, por lo tanto no puede agregarse a la colección de puntos explotados.   </value>
+  </data>
+  <data name="ChartStringId.MsgInvalidExplodedModeAdd">
+    <value>Debido a que la vista de la serie del gráfico circular actual despliega la serie creada usando una plantilla de serie, el punto de serie especificado no puede agregarse a la colección de puntos explotados. Debe usar otro Modo de Explotación.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidExplodedModeRemove">
+    <value>Debido a que la vista de la serie del gráfico circular actual despliega la serie creada usando una plantilla de serie, el punto de serie especificado no puede quitarse de la colección de puntos explotados. Debe usar otro Modo de Explotación.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPaletteBaseColorNumber">
+    <value>El número de color base de la paleta debe ser mayor o igual a 0 y menor o igual al número total de colores de la paleta.   </value>
+  </data>
+  <data name="ChartStringId.MsgDenyChangeSeriesPointCollection">
+    <value>No puede cambiar manualmente la colección de puntos de la serie, porque el gráfico está vinculado a datos.</value>
+  </data>
+  <data name="ChartStringId.MsgDenyChangeSeriesPointAgument">
+    <value>No puede cambiar manualmente el argumento de los puntos de la serie, porque el gráfico está vinculado a datos.</value>
+  </data>
+  <data name="ChartStringId.MsgDenyChangeSeriesPointValue">
+    <value>No puede cambiar manualmente el valor de los puntos de la serie, porque el gráfico está vinculado a datos.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStartAngle">
+    <value>El valor del ángulo de inicio debe ser mayor o igual a  -360 y menor o igual a 360 grados.</value>
+  </data>
+  <data name="ChartStringId.MsgPolarAxisXRangeChanged">
+    <value>El rango de un eje X (polar) no puede cambiarse. </value>
+  </data>
+  <data name="ChartStringId.MsgPolarAxisXGridSpacingChanged">
+    <value>El espacio entre las celdas de un eje X (polar) no puede cambiarse. </value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPieArgumentScaleType">
+    <value>No puede especificarse el tipo de escala de argumento {0} porque los filtros del punto explotado existentes no corresponden a este tipo.   </value>
+  </data>
+  <data name="ChartStringId.MsgEmptyChart">
+    <value>
+      There are no visible series to represent in a chart.
+      Try to add new series, or make sure that
+      at least one of them is visible.
+    </value>
+  </data>
+  <data name="ChartStringId.MsgChartLoadingException">
+    <value>
+      The specified XML file can't be opened,
+      because it is either not a supported file type,
+      or because the file has been damaged.
+    </value>
+  </data>
+  <data name="ChartStringId.MsgEmptyPaneTextForVerticalLayout">
+    <value>
+      Assign this pane to the Series.View.Pane property,
+      to show a series on this pane
+    </value>
+  </data>
+  <data name="ChartStringId.MsgEmptyPaneTextForHorizontalLayout">
+    <value>
+      Assign this pane to the
+      Series.View.Pane property,
+      to show a series on this pane
+    </value>
+  </data>
+  <data name="ChartStringId.VerbAbout">
+    <value>Acerca de</value>
+  </data>
+  <data name="ChartStringId.VerbPopulate">
+    <value>Poblar</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesChanged">
+    <value>Series cambiadas</value>
+  </data>
+  <data name="ChartStringId.TrnDataFiltersChanged">
+    <value>Filtros de datos cambiados</value>
+  </data>
+  <data name="ChartStringId.TrnChartTitlesChanged">
+    <value>Títulos de gráfico cambiados</value>
+  </data>
+  <data name="ChartStringId.TrnStripsChanged">
+    <value>Cintas cambiadas</value>
+  </data>
+  <data name="ChartStringId.TrnPalettesChanged">
+    <value>Paletas cambiadas</value>
+  </data>
+  <data name="ChartStringId.TrnConstantLinesChanged">
+    <value>Línea de constante cambiado</value>
+  </data>
+  <data name="ChartStringId.TrnCustomAxisLabelChanged">
+    <value>Título del eje personalizado cambiado</value>
+  </data>
+  <data name="ChartStringId.TrnSecondaryAxesXChanged">
+    <value>Eje secundario X cambiado</value>
+  </data>
+  <data name="ChartStringId.TrnSecondaryAxesYChanged">
+    <value>Eje secundario Y cambiado</value>
+  </data>
+  <data name="ChartStringId.TrnChartWizard">
+    <value>Configuración del asistente aplicado</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesDeleted">
+    <value>Series borradas</value>
+  </data>
+  <data name="ChartStringId.TrnChartTitleDeleted">
+    <value>Título de gráfico borrado</value>
+  </data>
+  <data name="ChartStringId.TrnConstantLineDeleted">
+    <value>Línea de constante borrado</value>
+  </data>
+  <data name="ChartStringId.TrnSecondryAxisXDeleted">
+    <value>Eje secundario X eliminado</value>
+  </data>
+  <data name="ChartStringId.TrnSecondryAxisYDeleted">
+    <value>Eje secundario Y eliminado</value>
+  </data>
+  <data name="ChartStringId.TrnExplodedPoints">
+    <value>Puntos explotados cambiados</value>
+  </data>
+  <data name="ChartStringId.TrnExplodedPointsFilters">
+    <value>ExplodedPointsFilters cambiados</value>
+  </data>
+  <data name="ChartStringId.PieIncorrectValuesText">
+    <value>
+      This view can't represent negative
+      values. All values must be either greater
+      than or equal to zero.
+    </value>
+  </data>
+  <data name="ChartStringId.AxisXDefaultTitle">
+    <value>Eje de argumentos</value>
+  </data>
+  <data name="ChartStringId.AxisYDefaultTitle">
+    <value>Eje de valores</value>
+  </data>
+  <data name="ChartStringId.MenuItemAdd">
+    <value>Añadir</value>
+  </data>
+  <data name="ChartStringId.MenuItemInsert">
+    <value>Insertar</value>
+  </data>
+  <data name="ChartStringId.MenuItemDelete">
+    <value>Eliminar</value>
+  </data>
+  <data name="ChartStringId.MenuItemClear">
+    <value>Vaciar</value>
+  </data>
+  <data name="ChartStringId.MenuItemMoveUp">
+    <value>Mover hacia arriba</value>
+  </data>
+  <data name="ChartStringId.MenuItemMoveDown">
+    <value>Mover hacia abajo</value>
+  </data>
+  <data name="ChartStringId.WizAutoCreatedSeries">
+    <value>Serie de auto-creación</value>
+  </data>
+  <data name="ChartStringId.WizSpecifyDataFilters">
+    <value>Haga clic en el botón de puntos suspensivos ...</value>
+  </data>
+  <data name="ChartStringId.WizDataFiltersEntered">
+    <value>Filtro(s) de datos {0}</value>
+  </data>
+  <data name="ChartStringId.WizDataFiltersDisabled">
+    <value>(ninguno)</value>
+  </data>
+  <data name="ChartStringId.WizBackImageFileNameFilter">
+    <value>Archivos de imagen (*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png|All files(*.*)|*.*</value>
+  </data>
+  <data name="ChartStringId.WizConstructionGroupName">
+    <value>Construcción</value>
+  </data>
+  <data name="ChartStringId.WizPresentationGroupName">
+    <value>Presentación</value>
+  </data>
+  <data name="ChartStringId.WizChartTypePageName">
+    <value>Tipo de gráfico</value>
+  </data>
+  <data name="ChartStringId.WizAppearancePageName">
+    <value>Apariencia</value>
+  </data>
+  <data name="ChartStringId.WizSeriesPageName">
+    <value>Serie</value>
+  </data>
+  <data name="ChartStringId.WizDataPageName">
+    <value>Datos</value>
+  </data>
+  <data name="ChartStringId.WizDiagramPageName">
+    <value>Diagrama</value>
+  </data>
+  <data name="ChartStringId.WizAxesPageName">
+    <value>Ejes</value>
+  </data>
+  <data name="ChartStringId.WizSeriesViewPageName">
+    <value>Vistas de Series</value>
+  </data>
+  <data name="ChartStringId.WizSeriesLabelsPageName">
+    <value>Etiquetas de Puntos</value>
+  </data>
+  <data name="ChartStringId.WizChartTitlesPageName">
+    <value>Títulos de Gráficos</value>
+  </data>
+  <data name="ChartStringId.WizLegendPageName">
+    <value>Leyendas</value>
+  </data>
+  <data name="ChartStringId.WizChartTypePageDescription">
+    <value>Elija el tipo de gráfico que desea usar. Para filtrar los tipos de gráfico por sus grupos use los valores de la casilla desplegable. </value>
+  </data>
+  <data name="ChartStringId.WizAppearancePageDescription">
+    <value>Elija una paleta para dar color a la serie o a sus puntos de datos. Elija también el estilo que especifica la apariencia del gráfico dependiendo de la paleta actual.   </value>
+  </data>
+  <data name="ChartStringId.WizSeriesPageDescription">
+    <value>Cree las series de puntos requeridas para desplegar en el gráfico y personalice sus propiedades primarias.</value>
+  </data>
+  <data name="ChartStringId.WizDataPageDescription">
+    <value>Use la pestaña de Puntos para ingresar manualmente puntos de datos. O use otras pesañas para vincular cada serie a un datasource o a una serie autogenerada de un datasource.   </value>
+  </data>
+  <data name="ChartStringId.WizDiagramPageDescription">
+    <value>Personalice las propiedades del diagrama. </value>
+  </data>
+  <data name="ChartStringId.WizAxesPageDescription">
+    <value>Personalice los ejes X e Y del diagrama. Note que puede seleccionar un eje a ser modificado en la vista previa del gráfico.  </value>
+  </data>
+  <data name="ChartStringId.WizSeriesViewPageDescription">
+    <value>Personalice las propiedades de la vista para la serie seleccionada. Note que puede seleccionar la serie a ser modificada en la vista previa del gráfico.   </value>
+  </data>
+  <data name="ChartStringId.WizChartTitlesPageDescription">
+    <value>Agregue títulos de gráfico a ser desplegados dentro de un gráfico.  </value>
+  </data>
+  <data name="ChartStringId.WizLegendPageDescription">
+    <value>Personalice las propiedades de la leyenda.</value>
+  </data>
+  <data name="ChartStringId.WizFormTitle">
+    <value>Asistente de Gráficos</value>
+  </data>
+  <data name="ChartStringId.WizPositionCenter">
+    <value>Centrar</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelValue">
+    <value>Valor</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelLow">
+    <value>Menor</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelHigh">
+    <value>Mayor</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelOpen">
+    <value>Abrir</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelClose">
+    <value>Cerrar</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideBar">
+    <value>Barras</value>
+  </data>
+  <data name="ChartStringId.WizErrorMessageTitle">
+    <value>Asistente de Gráficos</value>
+  </data>
+  <data name="ChartStringId.SvnStackedBar">
+    <value>Barra Acumulada</value>
+  </data>
+  <data name="ChartStringId.SvnFullStackedBar">
+    <value>Barra Acumulada 100%</value>
+  </data>
+  <data name="ChartStringId.SvnPie">
+    <value>Tarta</value>
+  </data>
+  <data name="ChartStringId.SvnPoint">
+    <value>Puntos</value>
+  </data>
+  <data name="ChartStringId.SvnLine">
+    <value>Línea</value>
+  </data>
+  <data name="ChartStringId.SvnStepLine">
+    <value>Línea Escalonada</value>
+  </data>
+  <data name="ChartStringId.SvnStackedArea">
+    <value>Área Acumulada</value>
+  </data>
+  <data name="ChartStringId.SvnStackedArea3D">
+    <value>Área 3D Acumulada</value>
+  </data>
+  <data name="ChartStringId.SvnCandleStick">
+    <value>Vela</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideRangeBar">
+    <value>Barras de Rango uno a lado de otro</value>
+  </data>
+  <data name="ChartStringId.SvnOverlappedRangeBar">
+    <value>Barra de Rango</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideGantt">
+    <value>Gantt uno a lado de otro</value>
+  </data>
+  <data name="ChartStringId.SvnManhattanBar">
+    <value>Barra Manhattan</value>
+  </data>
+  <data name="ChartStringId.SvnPie3D">
+    <value>Tarta 3D</value>
+  </data>
+  <data name="ChartStringId.SvnLine3D">
+    <value>Línea 3D</value>
+  </data>
+  <data name="ChartStringId.SvnStepLine3D">
+    <value>Línea 3D Escalonada</value>
+  </data>
+  <data name="ChartStringId.SvnRadarPoint">
+    <value>Punto Radar</value>
+  </data>
+  <data name="ChartStringId.SvnRadarLine">
+    <value>Línea Radar</value>
+  </data>
+  <data name="ChartStringId.SvnRadarArea">
+    <value>Área Radar</value>
+  </data>
+  <data name="ChartStringId.SvnPolarPoint">
+    <value>Punto Polar</value>
+  </data>
+  <data name="ChartStringId.SvnPolarLine">
+    <value>Línea Polar</value>
+  </data>
+  <data name="ChartStringId.SvnPolarArea">
+    <value>Área Polar</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesView">
+    <value>(no compatible con vista primaria)</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesHeader">
+    <value>Esta serie es incompatible:
+</value>
+  </data>
+  <data name="ChartStringId.IOCaption">
+    <value>Operación no permitida</value>
+  </data>
+  <data name="ChartStringId.IODeleteAxis">
+    <value>El eje primario no se puede eliminar. Si desea ocultarlo, establezca la propiedad Visible a falso.</value>
+  </data>
+  <data name="ChartStringId.PrintSizeModeNone">
+    <value>
+      None (a chart is printed with the size identical to that shown
+      on the form)
+    </value>
+  </data>
+  <data name="ChartStringId.PrintSizeModeStretch">
+    <value>
+      Stretch (a chart is stretched or shrunk to fit the page
+      on which it is printed)
+    </value>
+  </data>
+  <data name="ChartStringId.PrintSizeModeZoom">
+    <value>
+      Zoom (a chart is resized proportionally (without clipping),
+      so that it best fits the page on which it is printed)
+    </value>
+  </data>
+  <data name="ChartStringId.StyleAllColors">
+    <value>Todos los colores</value>
+  </data>
+  <data name="ChartStringId.FunctionArgumentName">
+    <value>Argumento</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent75" xml:space="preserve">
+    <value>Porcentaje75</value>
+  </data>
+  <data name="ChartStringId.TrnLoadLayout" xml:space="preserve">
+    <value>Distribución del gráfico cargado</value>
+  </data>
+  <data name="ChartStringId.VerbLoadLayout" xml:space="preserve">
+    <value>Cargar...</value>
+  </data>
+  <data name="ChartStringId.FunctionNameCount" xml:space="preserve">
+    <value>RECUENTO</value>
+  </data>
+  <data name="ChartStringId.MsgCantSwapSeries" xml:space="preserve">
+    <value>No es posible intercambiar series autocreados y fijos.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidLogarithmicBase" xml:space="preserve">
+    <value>La base logarítmico debe ser mayor de uno.</value>
+  </data>
+  <data name="ChartStringId.FibonacciArcs" xml:space="preserve">
+    <value>Arcos Fibonacci</value>
+  </data>
+  <data name="ChartStringId.WizChartPageDescription" xml:space="preserve">
+    <value>Personalizar las propiedades del gráfico.</value>
+  </data>
+  <data name="ChartStringId.MsgNullSeriesViewPane" xml:space="preserve">
+    <value>El panel de la vista de la serie no puede ser nulo.</value>
+  </data>
+  <data name="ChartStringId.MsgOverlappingOptionsSettingRuntimeError" xml:space="preserve">
+    <value>Lo propiedad "OverlappingOptions" no puede cambiarse en tiempo de ejecución.</value>
+  </data>
+  <data name="ChartStringId.PanesVisibilityDialogPanesColumn" xml:space="preserve">
+    <value>Panels</value>
+  </data>
+  <data name="ChartStringId.IODeleteDefaultPane" xml:space="preserve">
+    <value>El panel por defecto no se puede eliminar.</value>
+  </data>
+  <data name="ChartStringId.TrnSummaryFunctionChanged" xml:space="preserve">
+    <value>Función de sumario cambiado</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent25" xml:space="preserve">
+    <value>Porcentaje25</value>
+  </data>
+  <data name="ChartStringId.DefaultWizardPageLabel" xml:space="preserve">
+    <value>Página de Asistente</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesTitleChanged" xml:space="preserve">
+    <value>Título de serie cambiado</value>
+  </data>
+  <data name="ChartStringId.FibonacciFans" xml:space="preserve">
+    <value>Abanicos Fibonacci</value>
+  </data>
+  <data name="ChartStringId.TrnLegendPointOptionsReset" xml:space="preserve">
+    <value>LegendPointOptions restablecido</value>
+  </data>
+  <data name="ChartStringId.FunctionNameAverage" xml:space="preserve">
+    <value>PROMEDIO</value>
+  </data>
+  <data name="ChartStringId.WizSeriesLabelsPageDescription" xml:space="preserve">
+    <value>Personalizar las propiedades de las etiquetas de la serie seleccionada. Nota: Se puede seleccionar las etiquetas a modificar en la vista previa del gráfico.</value>
+  </data>
+  <data name="ChartStringId.WizResolveOvarlappingModeJustifyAroundPoint" xml:space="preserve">
+    <value>JustificarAlrededor</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectIndentFromMarker" xml:space="preserve">
+    <value>El valor de sangría debe ser mayor o igual a cero.</value>
+  </data>
+  <data name="ChartStringId.VerbDataSnapshotDescription" xml:space="preserve">
+    <value>Copiar todos los datos al gráfico, luego desatar la fuente de datos.</value>
+  </data>
+  <data name="ChartStringId.TrnTrendLinesChanged" xml:space="preserve">
+    <value>Línea de tendencia cambiada</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectExplodedDistancePercentage" xml:space="preserve">
+    <value>El porcentaje de la distancia de segmentos resaltados debe ser mayor a cero.</value>
+  </data>
+  <data name="ChartStringId.VerbSaveLayoutDescription" xml:space="preserve">
+    <value>Guardar un gráfico en un fichero XML.</value>
+  </data>
+  <data name="ChartStringId.MsgLegendPointOptionsSettingRuntimeError" xml:space="preserve">
+    <value>La propiedad "LegendPointOptions" no se puede cambiar en tiempo de ejecución.</value>
+  </data>
+  <data name="ChartStringId.SvnDoughnut" xml:space="preserve">
+    <value>Donut</value>
+  </data>
+  <data name="ChartStringId.MsgNonExistentSeriesViewPane" xml:space="preserve">
+    <value>No se puede establecer el panel de la vista de la serie, porque el panel indicado no se encuentra en la colección de paneles del gráfico.</value>
+  </data>
+  <data name="ChartStringId.WizScrollBarAlignmentFar" xml:space="preserve">
+    <value>Lejos</value>
+  </data>
+  <data name="ChartStringId.VerbEditPalettes" xml:space="preserve">
+    <value>Paletas...</value>
+  </data>
+  <data name="ChartStringId.WizSeriesDataBindingPageName" xml:space="preserve">
+    <value>Ligar Series</value>
+  </data>
+  <data name="ChartStringId.FibonacciRetracement" xml:space="preserve">
+    <value>Retrazamiento Fibonacci</value>
+  </data>
+  <data name="ChartStringId.TrnPaneDeleted" xml:space="preserve">
+    <value>Panel eliminado</value>
+  </data>
+  <data name="ChartStringId.FunctionNameMin" xml:space="preserve">
+    <value>MÍN</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDoughnutHolePercent" xml:space="preserve">
+    <value>El porcentaje del agujero del donut debe ser mayor o igual a cero y menor o igual a cien.</value>
+  </data>
+  <data name="ChartStringId.SvnFullStackedBar3D" xml:space="preserve">
+    <value>Barras 3D Apiladas 100%</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidPane" xml:space="preserve">
+    <value>El panel especificado no pertenece al gráfico, o no muestra un eje cuya visibilidad se debe cambiar.</value>
+  </data>
+  <data name="ChartStringId.MsgUnsupportedValueLevel" xml:space="preserve">
+    <value>El nivel con valor {0} no está soportado por el {1}.</value>
+  </data>
+  <data name="ChartStringId.VerbResetLegendPointOptionsDescription" xml:space="preserve">
+    <value>Revertir las opciones de los puntos de la leyenda a sus valores por defecto.</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitMillisecond" xml:space="preserve">
+    <value>Milisegundo</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLineTensionPercent" xml:space="preserve">
+    <value>The tensión de la línea debe ser mayor o igual a cero y menor o igual a cien.</value>
+  </data>
+  <data name="ChartStringId.WizChartPageName" xml:space="preserve">
+    <value>Gráfico</value>
+  </data>
+  <data name="ChartStringId.MsgUnsupportedResolveOverlappingMode" xml:space="preserve">
+    <value>La resolución de solapamiento no está soportado para la vista de la serie actual.</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent40" xml:space="preserve">
+    <value>Porcentaje40</value>
+  </data>
+  <data name="ChartStringId.WizAxesAlignmentFar" xml:space="preserve">
+    <value>Lejos</value>
+  </data>
+  <data name="ChartStringId.MsgUnsupportedResolveOverlapping" xml:space="preserve">
+    <value>La resolución de solapamiento no está soportado para la serie actual.</value>
+  </data>
+  <data name="ChartStringId.VerbAboutDescription" xml:space="preserve">
+    <value>Ver información báscia de XtraCharts.</value>
+  </data>
+  <data name="ChartStringId.PrimaryAxisYName" xml:space="preserve">
+    <value>EjeYPrimario</value>
+  </data>
+  <data name="ChartStringId.WizSeriesPointPageName" xml:space="preserve">
+    <value>Puntos</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleSummaryFunction" xml:space="preserve">
+    <value>El sumario '{0}' no es compatible con la escala {1}.</value>
+  </data>
+  <data name="ChartStringId.ExplodedPointsDialogExplodedColumn" xml:space="preserve">
+    <value>Resaltado</value>
+  </data>
+  <data name="ChartStringId.PrimaryAxisXName" xml:space="preserve">
+    <value>EjeXPrimario</value>
+  </data>
+  <data name="ChartStringId.WizAxesAlignmentNear" xml:space="preserve">
+    <value>Cerca</value>
+  </data>
+  <data name="ChartStringId.WizNoBackImage" xml:space="preserve">
+    <value>(Ninguno)</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent10" xml:space="preserve">
+    <value>Porcentaje10</value>
+  </data>
+  <data name="ChartStringId.XYDiagramPanePrefix" xml:space="preserve">
+    <value>Panel</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent70" xml:space="preserve">
+    <value>Porcentaje70</value>
+  </data>
+  <data name="ChartStringId.FunctionNameMax" xml:space="preserve">
+    <value>MÁX</value>
+  </data>
+  <data name="ChartStringId.VerbClearDataSourceDescription" xml:space="preserve">
+    <value>Vaciar la fuente de datos del gráfico.</value>
+  </data>
+  <data name="ChartStringId.WizPanesPageName" xml:space="preserve">
+    <value>Paneles</value>
+  </data>
+  <data name="ChartStringId.WizPanesPageDescription" xml:space="preserve">
+    <value>Personalizar los paneles del gráfico. Nota: Se puede que seleccionar un panel a modificar en la vista previa del gráfico.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleSummaryFunctionDimension" xml:space="preserve">
+    <value>La dimensión del sumario {0} no es compatible con la vista de series {1} ({2} debería ser {3}).</value>
+  </data>
+  <data name="ChartStringId.VerbSaveLayout" xml:space="preserve">
+    <value>Guardar...</value>
+  </data>
+  <data name="ChartStringId.TrnAxisVisibilityChanged" xml:space="preserve">
+    <value>Visibilidad del eje cambiado</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideBar3D" xml:space="preserve">
+    <value>Barras 3D</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPaneWeight" xml:space="preserve">
+    <value>El peso del panel debe ser mayor de cero.</value>
+  </data>
+  <data name="ChartStringId.TrnTrendLineDeleted" xml:space="preserve">
+    <value>Línea de tendencia eliminada</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent20" xml:space="preserve">
+    <value>Porcentaje20</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitSecond" xml:space="preserve">
+    <value>Segundo</value>
+  </data>
+  <data name="ChartStringId.VerbWizard" xml:space="preserve">
+    <value>Ejecutar Asistente...</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent90" xml:space="preserve">
+    <value>Porcentaje90</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPaneDistance" xml:space="preserve">
+    <value>La distencia entre paneles debe ser mayor o igual a cero.</value>
+  </data>
+  <data name="ChartStringId.MsgSummaryFunctionIsNotRegistered" xml:space="preserve">
+    <value>La función de sumario con el nombre '{0}' no está registrada.</value>
+  </data>
+  <data name="ChartStringId.ScaleTypeQualitative" xml:space="preserve">
+    <value>cualitativo</value>
+  </data>
+  <data name="ChartStringId.WizResolveOvarlappingModeJustifyAllAroundPoints" xml:space="preserve">
+    <value>JustificarTodoAlrededor</value>
+  </data>
+  <data name="ChartStringId.DefaultDataFilterName" xml:space="preserve">
+    <value>FiltroDatos</value>
+  </data>
+  <data name="ChartStringId.SvnFullStackedArea" xml:space="preserve">
+    <value>Área Apilada 100%</value>
+  </data>
+  <data name="ChartStringId.WizResolveOvarlappingModeDefault" xml:space="preserve">
+    <value>PorDefecto</value>
+  </data>
+  <data name="ChartStringId.WizAxesAlignmentZero" xml:space="preserve">
+    <value>Cero</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitWeek" xml:space="preserve">
+    <value>Semana</value>
+  </data>
+  <data name="ChartStringId.VerbEditPalettesDescription" xml:space="preserve">
+    <value>Abrir el editor de paletas</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMargins" xml:space="preserve">
+    <value>El margen debe ser mayor o igual a cero.</value>
+  </data>
+  <data name="ChartStringId.OthersArgument" xml:space="preserve">
+    <value>Otros</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitMonth" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="ChartStringId.ScaleTypeDateTime" xml:space="preserve">
+    <value>fecha-hora</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitHour" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitDay" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRangeMaxValue" xml:space="preserve">
+    <value>MaxValor no puede ser nulo.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRangeMinValue" xml:space="preserve">
+    <value>MinValor no puede ser nulo.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTopNCount" xml:space="preserve">
+    <value>El valor de los 'x' mejores elementos debe ser mayor de cero.</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent60" xml:space="preserve">
+    <value>Porcentaje60</value>
+  </data>
+  <data name="ChartStringId.TitleSummaryFunction" xml:space="preserve">
+    <value>Función de Sumario</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesMessage" xml:space="preserve">
+    <value>por {0} con "{1}"</value>
+  </data>
+  <data name="ChartStringId.VerbSeriesDescription" xml:space="preserve">
+    <value>Abrir el Editor de Series</value>
+  </data>
+  <data name="ChartStringId.WizResolveOvarlappingModeHideOverlapping" xml:space="preserve">
+    <value>OcultarSolapados</value>
+  </data>
+  <data name="ChartStringId.MsgUnsupportedTopNOptions" xml:space="preserve">
+    <value>TopNOptions no se puede habilitar para la serie actual, porque ValueScaleType no es numérico o sus puntos de datos contienen mas de un valor.</value>
+  </data>
+  <data name="ChartStringId.MsgPolarAxisXLogarithmic" xml:space="preserve">
+    <value>El PolarAxisX no soporta el modo logarítmico..</value>
+  </data>
+  <data name="ChartStringId.MsgNoPanes" xml:space="preserve">
+    <value>No existen paneles visible en el gráfico. Intente poner la propiedad Diagram.DefaultPane.Visible del gráfico a True, o, mostrar otro panel de la colección Diagram.Panes.</value>
+  </data>
+  <data name="ChartStringId.SvnArea3D" xml:space="preserve">
+    <value>Área 3D</value>
+  </data>
+  <data name="ChartStringId.MsgSummaryFunctionParameterIsNotSpecified" xml:space="preserve">
+    <value>Se tiene que especificar todos los parámetros de una función de sumario.</value>
+  </data>
+  <data name="ChartStringId.SvnArea" xml:space="preserve">
+    <value>Área</value>
+  </data>
+  <data name="ChartStringId.WizHatchCross" xml:space="preserve">
+    <value>Cruzado</value>
+  </data>
+  <data name="ChartStringId.TrendLinePrefix" xml:space="preserve">
+    <value>LíneaTendencias</value>
+  </data>
+  <data name="ChartStringId.MsgSynchronizePointOptionsSettingRuntimeError" xml:space="preserve">
+    <value>Lo propiedad "SynchronizePointOptions" no puede cambiarse en tiempo de ejecución.</value>
+  </data>
+  <data name="ChartStringId.WeightMember" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="ChartStringId.VerbLoadLayoutDescription" xml:space="preserve">
+    <value>Cargar un gráfico desde un fichero XML.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTopNThresholdPercent" xml:space="preserve">
+    <value>El umbral de los 'x' mejores elementos debe ser mayor de cero y menor de cien.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBubbleMinSize" xml:space="preserve">
+    <value>El valor mínimo debe ser mayor o igual a cero, y menor que el tamaño máximo.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTopNThresholdValue" xml:space="preserve">
+    <value>El umbral de los 'x' mejores elementos debe ser mayor de cero.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPercentageAccuracy" xml:space="preserve">
+    <value>El porcentaje de precisión debe ser mayor de cero.</value>
+  </data>
+  <data name="ChartStringId.DefaultPaneName" xml:space="preserve">
+    <value>Panel por Defecto</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitYear" xml:space="preserve">
+    <value>Año</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitMinute" xml:space="preserve">
+    <value>Minuto</value>
+  </data>
+  <data name="ChartStringId.MsgWebInvalidWidthUnit" xml:space="preserve">
+    <value>La anchura del gráfico debe especificarse en pixels.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRangeMaxValueInternal" xml:space="preserve">
+    <value>MaxValorInterno no puede ser NaN o Infinidad.</value>
+  </data>
+  <data name="ChartStringId.DefaultMinValue" xml:space="preserve">
+    <value>Mín</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPropertyValue" xml:space="preserve">
+    <value>Valor no válido "{0}" para la propiedad "{1}".</value>
+  </data>
+  <data name="ChartStringId.DefaultSeriesPointFilterName" xml:space="preserve">
+    <value>FiltroPuntosSeries</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent50" xml:space="preserve">
+    <value>Porcentaje50</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidPaneSizeInPixels" xml:space="preserve">
+    <value>El tamaño en pixels del panel debe ser mayor o igual a cero.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBubbleMaxSize" xml:space="preserve">
+    <value>El valor máximo debe ser mayor que el valor mínimo.</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent30" xml:space="preserve">
+    <value>Porcentaje30</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeMeasureUnitQuarter" xml:space="preserve">
+    <value>Trimestre</value>
+  </data>
+  <data name="ChartStringId.TrnXYDiagramPanesChanged" xml:space="preserve">
+    <value>Panel cambiado</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelValue_2" xml:space="preserve">
+    <value>Valor_2</value>
+  </data>
+  <data name="ChartStringId.DefaultMaxValue" xml:space="preserve">
+    <value>Máx</value>
+  </data>
+  <data name="ChartStringId.ScaleTypeNumerical" xml:space="preserve">
+    <value>numérico</value>
+  </data>
+  <data name="ChartStringId.SvnDoughnut3D" xml:space="preserve">
+    <value>Donut 3D</value>
+  </data>
+  <data name="ChartStringId.SvnFullStackedArea3D" xml:space="preserve">
+    <value>Área 3D Apilada 100%</value>
+  </data>
+  <data name="ChartStringId.VerbWizardDescription" xml:space="preserve">
+    <value>Ejecutar el Asistente de Gráficos, permitiendo editar los valores del gráfico.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRangeMinValueInternal" xml:space="preserve">
+    <value>MinValorInterno no puede ser NaN o Infinidad.</value>
+  </data>
+  <data name="ChartStringId.WizInvalidBackgroundImage" xml:space="preserve">
+    <value>El fichero indicado no es un imagen válido. Por favor, eliga otro.</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesTitleDeleted" xml:space="preserve">
+    <value>Título de serie eliminado</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSummaryFunction" xml:space="preserve">
+    <value>El formato de la función de sumario es incorrecto.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSummaryFunctionParametersCount" xml:space="preserve">
+    <value>El formato de la función de sumario '{0}' requiere {1} parámetros y no {2}.</value>
+  </data>
+  <data name="ChartStringId.MsgNullFinancialIndicatorArgument" xml:space="preserve">
+    <value>El argumento del punto del indicador financiero no puede ser nulo.</value>
+  </data>
+  <data name="ChartStringId.VerbResetLegendPointOptions" xml:space="preserve">
+    <value>Restablecer las opciones de puntos de la leyenda</value>
+  </data>
+  <data name="ChartStringId.WizValueLevelValue_1" xml:space="preserve">
+    <value>Valor_1</value>
+  </data>
+  <data name="ChartStringId.MsgWebInvalidHeightUnit" xml:space="preserve">
+    <value>La altura del gráfico debe especificarse en pixels.</value>
+  </data>
+  <data name="ChartStringId.FunctionNameSum" xml:space="preserve">
+    <value>SUMA</value>
+  </data>
+  <data name="ChartStringId.WizDataMemberNoneString" xml:space="preserve">
+    <value>(Ninguno)</value>
+  </data>
+  <data name="ChartStringId.VerbClearDataSource" xml:space="preserve">
+    <value>Vaciar Data Source</value>
+  </data>
+  <data name="ChartStringId.VerbPopulateDescription" xml:space="preserve">
+    <value>Poblar la fuente de datos del gráfico con datos.</value>
+  </data>
+  <data name="ChartStringId.WizHatchPercent80" xml:space="preserve">
+    <value>Porcentaje80</value>
+  </data>
+  <data name="ChartStringId.VerbDataSnapshot" xml:space="preserve">
+    <value>Instantanea de Datos</value>
+  </data>
+  <data name="ChartStringId.WizScrollBarAlignmentNear" xml:space="preserve">
+    <value>Cerca</value>
+  </data>
+  <data name="ChartStringId.WizGradientToCenterHorizontal" xml:space="preserve">
+    <value>AlCentroHorizontal</value>
+  </data>
+  <data name="ChartStringId.SvnSpline3D" xml:space="preserve">
+    <value>Contorno 3D</value>
+  </data>
+  <data name="ChartStringId.SvnSplineStackedArea" xml:space="preserve">
+    <value>Contorno Área Apilada</value>
+  </data>
+  <data name="ChartStringId.WizGradientTopLeftToBottomRight" xml:space="preserve">
+    <value>SuperiorIzquierdaInferiorDerecha</value>
+  </data>
+  <data name="ChartStringId.WizGradientBottomRightToTopLeft" xml:space="preserve">
+    <value>InferiorDerechaSuperiorIzquierda</value>
+  </data>
+  <data name="ChartStringId.TrnRegressionLineDeleted" xml:space="preserve">
+    <value>Línea de Regresión Eliminada</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDateTimeMeasureUnitPropertyUsing" xml:space="preserve">
+    <value>La propiedad DateTimeMeasureUnit no se puede modificar en el modo escala automática de fecha-hora.</value>
+  </data>
+  <data name="ChartStringId.WizGradientTopRightToBottomLeft" xml:space="preserve">
+    <value>SuperiorDerechaInferiorIzquierda</value>
+  </data>
+  <data name="ChartStringId.WizGradientToCenter" xml:space="preserve">
+    <value>AlCentro</value>
+  </data>
+  <data name="ChartStringId.MsgCanNotSetPropertyValueLevel" xml:space="preserve">
+    <value>No se puede establecer la propiedad ValueLevel para una línea de regresión.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidEdge1" xml:space="preserve">
+    <value>El valor de lateral1 no puede ser nulo.</value>
+  </data>
+  <data name="ChartStringId.SvnSpline3DArea" xml:space="preserve">
+    <value>Contorno Área 3D</value>
+  </data>
+  <data name="ChartStringId.WizPositionLeftColumn" xml:space="preserve">
+    <value>ColumnaIzquierda</value>
+  </data>
+  <data name="ChartStringId.WizGradientLeftToRight" xml:space="preserve">
+    <value>IzquierdaDerecha</value>
+  </data>
+  <data name="ChartStringId.WizGradientRightToLeft" xml:space="preserve">
+    <value>DerechaIzquierda</value>
+  </data>
+  <data name="ChartStringId.WizPositionRightColumn" xml:space="preserve">
+    <value>ColumnaDerecha</value>
+  </data>
+  <data name="ChartStringId.MsgUnsupportedDateTimeScaleModeWithScrollingZooming" xml:space="preserve">
+    <value>El modo automático DateTimeScaleMode no funciona junamente con ampliaciones y desplazamientos.</value>
+  </data>
+  <data name="ChartStringId.SvnStackedBar3D" xml:space="preserve">
+    <value>Barras 3D Apilada</value>
+  </data>
+  <data name="ChartStringId.MsgUnsupportedManualRangeForAutomaticDateTimeScaleMode" xml:space="preserve">
+    <value>No es posible establecer un rango personalizado si DateTimeScaleMode no esta en manual.</value>
+  </data>
+  <data name="ChartStringId.WizGradientToCenterVertical" xml:space="preserve">
+    <value>AlCentroVertical</value>
+  </data>
+  <data name="ChartStringId.WizGradientBottomLeftToTopRight" xml:space="preserve">
+    <value>InferiorIzquierdaSuperiorDerecha</value>
+  </data>
+  <data name="ChartStringId.WizGradientTopToBottom" xml:space="preserve">
+    <value>ArribaAbajo</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectValueLevel" xml:space="preserve">
+    <value>El ValueLevel {0} no es válido para la línea de regresión actual.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectHeightToWidthRatioValue" xml:space="preserve">
+    <value>Valor no válido para la propiedad HeightToWidthRatio. Debe ser entre 0, 1 y 10.</value>
+  </data>
+  <data name="ChartStringId.SvnFunnel" xml:space="preserve">
+    <value>Embudo</value>
+  </data>
+  <data name="ChartStringId.WizScaleBreakStyleStraight" xml:space="preserve">
+    <value>Recto</value>
+  </data>
+  <data name="ChartStringId.SvnSplineAreaFullStacked3D" xml:space="preserve">
+    <value>Contorno Área 3D Apilada 100%</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPointDistance" xml:space="preserve">
+    <value>El valor para la distancia del punto debe ser mayor que cero.</value>
+  </data>
+  <data name="ChartStringId.SvnSplineAreaStacked3D" xml:space="preserve">
+    <value>Contorno Área 3D Apliada</value>
+  </data>
+  <data name="ChartStringId.SvnSplineArea" xml:space="preserve">
+    <value>Contorno Área</value>
+  </data>
+  <data name="ChartStringId.WizGradientBottomToTop" xml:space="preserve">
+    <value>AbajoArriba</value>
+  </data>
+  <data name="ChartStringId.WizScaleBreakStyleWaved" xml:space="preserve">
+    <value>Ondeada</value>
+  </data>
+  <data name="ChartStringId.WizScaleBreakStyleRagged" xml:space="preserve">
+    <value>Fleco</value>
+  </data>
+  <data name="ChartStringId.WizPositionLeft" xml:space="preserve">
+    <value>Izquierda</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDateTimeGridAlignmentPropertyUsing" xml:space="preserve">
+    <value>La propiedad DateTimeGridAlignment no se puede modificar en el modo escala automática de fecha-hora.</value>
+  </data>
+  <data name="ChartStringId.MsgUnsupportedDateTimeScaleModeForGanttDiagram" xml:space="preserve">
+    <value>No se permite DateTimeScaleMode para diagramas GanttDiagram.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidSizeInPixels" xml:space="preserve">
+    <value>El tamaño, en pixels, debe ser mayor o igual que -1 y menor que 50.</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeScaleModeAutomaticAverage" xml:space="preserve">
+    <value>Automática: Promedio</value>
+  </data>
+  <data name="ChartStringId.WizDateTimeScaleModeAutomaticIntegral" xml:space="preserve">
+    <value>Automática: Integral</value>
+  </data>
+  <data name="ChartStringId.WizPositionRight" xml:space="preserve">
+    <value>Derecha</value>
+  </data>
+  <data name="ChartStringId.SvnFunnel3D" xml:space="preserve">
+    <value>Embudo 3D</value>
+  </data>
+  <data name="ChartStringId.SvnSpline" xml:space="preserve">
+    <value>Contorno</value>
+  </data>
+  <data name="ChartStringId.WizGradientFromCenter" xml:space="preserve">
+    <value>DelCentro</value>
+  </data>
+  <data name="ChartStringId.WizGradientFromCenterHorizontal" xml:space="preserve">
+    <value>DelCentroHorizontal</value>
+  </data>
+  <data name="ChartStringId.SvnSplineFullStackedArea" xml:space="preserve">
+    <value>Contorno Área Apilada 100%</value>
+  </data>
+  <data name="ChartStringId.WizGradientFromCenterVertical" xml:space="preserve">
+    <value>DelCentroVertical</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidMaxCount" xml:space="preserve">
+    <value>El recuento máximo debe ser mayor que cero.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidEdge2" xml:space="preserve">
+    <value>El valor de lateral2 no puede ser nulo.</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidGradientMode" xml:space="preserve">
+    <value>Este modo PolygonGradientMode no es compatibe con AreaSeriesView.</value>
+  </data>
+  <data name="ChartStringId.SvnScatterLine" xml:space="preserve">
+    <value>Línea Dispersión</value>
+  </data>
+  <data name="ChartStringId.TrnRegressionLineChanged" xml:space="preserve">
+    <value>Línea de Regresión Cambiada</value>
+  </data>
+  <data name="ChartStringId.TrnScaleBreaksChanged" xml:space="preserve">
+    <value>Escalas Interrumpidas Cambiadas</value>
+  </data>
+</root>

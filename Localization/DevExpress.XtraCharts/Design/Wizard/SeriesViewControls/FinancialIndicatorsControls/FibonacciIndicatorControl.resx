@@ -1,0 +1,1169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace">
+    </xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute ref="xml:space">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4">
+              </xsd:attribute>
+              <xsd:attribute ref="xml:space">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </assembly>
+  <data name="xtraTabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </assembly>
+  <data name="xtraTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="cheAdditionalLevels.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cheAdditionalLevels.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 86</value>
+  </data>
+  <data name="cheAdditionalLevels.Properties.Caption" xml:space="preserve">
+    <value>Additional Levels</value>
+  </data>
+  <data name="cheAdditionalLevels.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 19</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </assembly>
+  <data name="cheAdditionalLevels.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cheAdditionalLevels.Name" xml:space="preserve">
+    <value>cheAdditionalLevels</value>
+  </data>
+  <data name="&gt;&gt;cheAdditionalLevels.Parent" xml:space="preserve">
+    <value>tbcLevels</value>
+  </data>
+  <data name="&gt;&gt;cheAdditionalLevels.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cheLevel100.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cheLevel100.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 67</value>
+  </data>
+  <data name="cheLevel100.Properties.Caption" xml:space="preserve">
+    <value>Level 100%</value>
+  </data>
+  <data name="cheLevel100.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 19</value>
+  </data>
+  <data name="cheLevel100.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;cheLevel100.Name" xml:space="preserve">
+    <value>cheLevel100</value>
+  </data>
+  <data name="&gt;&gt;cheLevel100.Parent" xml:space="preserve">
+    <value>tbcLevels</value>
+  </data>
+  <data name="&gt;&gt;cheLevel100.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cheLevel76_4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cheLevel76_4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 48</value>
+  </data>
+  <data name="cheLevel76_4.Properties.Caption" xml:space="preserve">
+    <value>Level 76.4%</value>
+  </data>
+  <data name="cheLevel76_4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 19</value>
+  </data>
+  <data name="cheLevel76_4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cheLevel76_4.Name" xml:space="preserve">
+    <value>cheLevel76_4</value>
+  </data>
+  <data name="&gt;&gt;cheLevel76_4.Parent" xml:space="preserve">
+    <value>tbcLevels</value>
+  </data>
+  <data name="&gt;&gt;cheLevel76_4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cheLevel23_6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cheLevel23_6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 29</value>
+  </data>
+  <data name="cheLevel23_6.Properties.Caption" xml:space="preserve">
+    <value>Level 23.6%</value>
+  </data>
+  <data name="cheLevel23_6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 19</value>
+  </data>
+  <data name="cheLevel23_6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cheLevel23_6.Name" xml:space="preserve">
+    <value>cheLevel23_6</value>
+  </data>
+  <data name="&gt;&gt;cheLevel23_6.Parent" xml:space="preserve">
+    <value>tbcLevels</value>
+  </data>
+  <data name="&gt;&gt;cheLevel23_6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cheLevel0.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cheLevel0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="cheLevel0.Properties.Caption" xml:space="preserve">
+    <value>Level 0%</value>
+  </data>
+  <data name="cheLevel0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 19</value>
+  </data>
+  <data name="cheLevel0.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cheLevel0.Name" xml:space="preserve">
+    <value>cheLevel0</value>
+  </data>
+  <data name="&gt;&gt;cheLevel0.Parent" xml:space="preserve">
+    <value>tbcLevels</value>
+  </data>
+  <data name="&gt;&gt;cheLevel0.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tbcLevels.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="tbcLevels.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 239</value>
+  </data>
+  <data name="tbcLevels.Text" xml:space="preserve">
+    <value>Levels</value>
+  </data>
+  <data name="&gt;&gt;tbcLevels.Name" xml:space="preserve">
+    <value>tbcLevels</value>
+  </data>
+  <data name="&gt;&gt;tbcLevels.Parent" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;tbcLevels.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 268</value>
+  </data>
+  <data name="xtraTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ficPoints.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ficPoints.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="ficPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="ficPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 171</value>
+  </data>
+  <data name="ficPoints.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ficPoints.Name" xml:space="preserve">
+    <value>ficPoints</value>
+  </data>
+  <data name="&gt;&gt;ficPoints.Parent" xml:space="preserve">
+    <value>tbcData</value>
+  </data>
+  <data name="&gt;&gt;ficPoints.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbcData.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="tbcData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 239</value>
+  </data>
+  <data name="tbcData.Text" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="&gt;&gt;tbcData.Name" xml:space="preserve">
+    <value>tbcData</value>
+  </data>
+  <data name="&gt;&gt;tbcData.Parent" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;tbcData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupControl2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lscBaseLevelLineStyle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lscBaseLevelLineStyle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lscBaseLevelLineStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 47</value>
+  </data>
+  <data name="lscBaseLevelLineStyle.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 5</value>
+  </data>
+  <data name="lscBaseLevelLineStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 53</value>
+  </data>
+  <data name="lscBaseLevelLineStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lscBaseLevelLineStyle.Name" xml:space="preserve">
+    <value>lscBaseLevelLineStyle</value>
+  </data>
+  <data name="&gt;&gt;lscBaseLevelLineStyle.Parent" xml:space="preserve">
+    <value>groupControl2</value>
+  </data>
+  <data name="&gt;&gt;lscBaseLevelLineStyle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chartPanelControl1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="creBaseLevelColor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="creBaseLevelColor.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value>
+    </value>
+  </data>
+  <data name="creBaseLevelColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 5</value>
+  </data>
+  <data name="creBaseLevelColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="creBaseLevelColor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;creBaseLevelColor.Name" xml:space="preserve">
+    <value>creBaseLevelColor</value>
+  </data>
+  <data name="&gt;&gt;creBaseLevelColor.Parent" xml:space="preserve">
+    <value>chartPanelControl1</value>
+  </data>
+  <data name="&gt;&gt;creBaseLevelColor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblBaseLevelColor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblBaseLevelColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="lblBaseLevelColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblBaseLevelColor.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="lblBaseLevelColor.Text" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="&gt;&gt;lblBaseLevelColor.Name" xml:space="preserve">
+    <value>lblBaseLevelColor</value>
+  </data>
+  <data name="&gt;&gt;lblBaseLevelColor.Parent" xml:space="preserve">
+    <value>chartPanelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblBaseLevelColor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chartPanelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="chartPanelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 22</value>
+  </data>
+  <data name="chartPanelControl1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 0</value>
+  </data>
+  <data name="chartPanelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 25</value>
+  </data>
+  <data name="chartPanelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl1.Name" xml:space="preserve">
+    <value>chartPanelControl1</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl1.Parent" xml:space="preserve">
+    <value>groupControl2</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 124</value>
+  </data>
+  <data name="groupControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>7, 7, 7, 7</value>
+  </data>
+  <data name="groupControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 102</value>
+  </data>
+  <data name="groupControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="groupControl2.Text" xml:space="preserve">
+    <value>Base Levels</value>
+  </data>
+  <data name="&gt;&gt;groupControl2.Name" xml:space="preserve">
+    <value>groupControl2</value>
+  </data>
+  <data name="&gt;&gt;groupControl2.Parent" xml:space="preserve">
+    <value>tbcAppearance</value>
+  </data>
+  <data name="&gt;&gt;groupControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pcSeparator.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pcSeparator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 112</value>
+  </data>
+  <data name="pcSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 12</value>
+  </data>
+  <data name="pcSeparator.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pcSeparator.Name" xml:space="preserve">
+    <value>pcSeparator</value>
+  </data>
+  <data name="&gt;&gt;pcSeparator.Parent" xml:space="preserve">
+    <value>tbcAppearance</value>
+  </data>
+  <data name="&gt;&gt;pcSeparator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupControl1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lscLineStyle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lscLineStyle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lscLineStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 47</value>
+  </data>
+  <data name="lscLineStyle.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 5</value>
+  </data>
+  <data name="lscLineStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 53</value>
+  </data>
+  <data name="lscLineStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lscLineStyle.Name" xml:space="preserve">
+    <value>lscLineStyle</value>
+  </data>
+  <data name="&gt;&gt;lscLineStyle.Parent" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;lscLineStyle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chartPanelControl2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="creColor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="creColor.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value>
+    </value>
+  </data>
+  <data name="creColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 5</value>
+  </data>
+  <data name="creColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="creColor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;creColor.Name" xml:space="preserve">
+    <value>creColor</value>
+  </data>
+  <data name="&gt;&gt;creColor.Parent" xml:space="preserve">
+    <value>chartPanelControl2</value>
+  </data>
+  <data name="&gt;&gt;creColor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblColor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="lblColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="lblColor.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="lblColor.Text" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="&gt;&gt;lblColor.Name" xml:space="preserve">
+    <value>lblColor</value>
+  </data>
+  <data name="&gt;&gt;lblColor.Parent" xml:space="preserve">
+    <value>chartPanelControl2</value>
+  </data>
+  <data name="&gt;&gt;lblColor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chartPanelControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="chartPanelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 22</value>
+  </data>
+  <data name="chartPanelControl2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 0</value>
+  </data>
+  <data name="chartPanelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 25</value>
+  </data>
+  <data name="chartPanelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl2.Name" xml:space="preserve">
+    <value>chartPanelControl2</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl2.Parent" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="groupControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>7, 7, 7, 7</value>
+  </data>
+  <data name="groupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 102</value>
+  </data>
+  <data name="groupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupControl1.Text" xml:space="preserve">
+    <value>Levels</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.Name" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.Parent" xml:space="preserve">
+    <value>tbcAppearance</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbcAppearance.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="tbcAppearance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 239</value>
+  </data>
+  <data name="tbcAppearance.Text" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="&gt;&gt;tbcAppearance.Name" xml:space="preserve">
+    <value>tbcAppearance</value>
+  </data>
+  <data name="&gt;&gt;tbcAppearance.Parent" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;tbcAppearance.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="fontEditControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="fontEditControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="fontEditControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 134</value>
+  </data>
+  <data name="fontEditControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;fontEditControl.Name" xml:space="preserve">
+    <value>fontEditControl</value>
+  </data>
+  <data name="&gt;&gt;fontEditControl.Parent" xml:space="preserve">
+    <value>fontEditControlContainer</value>
+  </data>
+  <data name="&gt;&gt;fontEditControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="fontEditControlContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 132</value>
+  </data>
+  <data name="fontEditControlContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 134</value>
+  </data>
+  <data name="fontEditControlContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;fontEditControlContainer.Name" xml:space="preserve">
+    <value>fontEditControlContainer</value>
+  </data>
+  <data name="&gt;&gt;fontEditControlContainer.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;fontEditControlContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 129</value>
+  </data>
+  <data name="panelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 4</value>
+  </data>
+  <data name="panelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panelControl3.Name" xml:space="preserve">
+    <value>panelControl3</value>
+  </data>
+  <data name="&gt;&gt;panelControl3.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;panelControl3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelControl4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtFont.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="txtFont.EditValue" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="txtFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 3</value>
+  </data>
+  <data name="txtFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 20</value>
+  </data>
+  <data name="txtFont.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtFont.Name" xml:space="preserve">
+    <value>txtFont</value>
+  </data>
+  <data name="&gt;&gt;txtFont.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;txtFont.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblFont.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 20</value>
+  </data>
+  <data name="lblFont.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblFont.Text" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="&gt;&gt;lblFont.Name" xml:space="preserve">
+    <value>lblFont</value>
+  </data>
+  <data name="&gt;&gt;lblFont.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;lblFont.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelControl4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 106</value>
+  </data>
+  <data name="panelControl4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 0</value>
+  </data>
+  <data name="panelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 23</value>
+  </data>
+  <data name="panelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panelControl4.Name" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;panelControl4.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;panelControl4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 102</value>
+  </data>
+  <data name="panelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 4</value>
+  </data>
+  <data name="panelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;panelControl2.Name" xml:space="preserve">
+    <value>panelControl2</value>
+  </data>
+  <data name="&gt;&gt;panelControl2.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;panelControl2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chartPanelControl4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="creBaseLevelTextColor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="creBaseLevelTextColor.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value>
+    </value>
+  </data>
+  <data name="creBaseLevelTextColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 3</value>
+  </data>
+  <data name="creBaseLevelTextColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 20</value>
+  </data>
+  <data name="creBaseLevelTextColor.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;creBaseLevelTextColor.Name" xml:space="preserve">
+    <value>creBaseLevelTextColor</value>
+  </data>
+  <data name="&gt;&gt;creBaseLevelTextColor.Parent" xml:space="preserve">
+    <value>chartPanelControl4</value>
+  </data>
+  <data name="&gt;&gt;creBaseLevelTextColor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblTextBaseLevelColor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblTextBaseLevelColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblTextBaseLevelColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="lblTextBaseLevelColor.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="lblTextBaseLevelColor.Text" xml:space="preserve">
+    <value>Base Level Color:</value>
+  </data>
+  <data name="&gt;&gt;lblTextBaseLevelColor.Name" xml:space="preserve">
+    <value>lblTextBaseLevelColor</value>
+  </data>
+  <data name="&gt;&gt;lblTextBaseLevelColor.Parent" xml:space="preserve">
+    <value>chartPanelControl4</value>
+  </data>
+  <data name="&gt;&gt;lblTextBaseLevelColor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chartPanelControl4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="chartPanelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 79</value>
+  </data>
+  <data name="chartPanelControl4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 0</value>
+  </data>
+  <data name="chartPanelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 23</value>
+  </data>
+  <data name="chartPanelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl4.Name" xml:space="preserve">
+    <value>chartPanelControl4</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl4.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 75</value>
+  </data>
+  <data name="panelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 4</value>
+  </data>
+  <data name="panelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Name" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="chartPanelControl3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="creTextColor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="creTextColor.EditValue" type="System.Drawing.Color, System.Drawing">
+    <value>
+    </value>
+  </data>
+  <data name="creTextColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 3</value>
+  </data>
+  <data name="creTextColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 20</value>
+  </data>
+  <data name="creTextColor.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;creTextColor.Name" xml:space="preserve">
+    <value>creTextColor</value>
+  </data>
+  <data name="&gt;&gt;creTextColor.Parent" xml:space="preserve">
+    <value>chartPanelControl3</value>
+  </data>
+  <data name="&gt;&gt;creTextColor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblTextColor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblTextColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblTextColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="lblTextColor.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="lblTextColor.Text" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="&gt;&gt;lblTextColor.Name" xml:space="preserve">
+    <value>lblTextColor</value>
+  </data>
+  <data name="&gt;&gt;lblTextColor.Parent" xml:space="preserve">
+    <value>chartPanelControl3</value>
+  </data>
+  <data name="&gt;&gt;lblTextColor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chartPanelControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="chartPanelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 52</value>
+  </data>
+  <data name="chartPanelControl3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 0</value>
+  </data>
+  <data name="chartPanelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 23</value>
+  </data>
+  <data name="chartPanelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl3.Name" xml:space="preserve">
+    <value>chartPanelControl3</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl3.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;chartPanelControl3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="panelControl5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 48</value>
+  </data>
+  <data name="panelControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 4</value>
+  </data>
+  <data name="panelControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;panelControl5.Name" xml:space="preserve">
+    <value>panelControl5</value>
+  </data>
+  <data name="&gt;&gt;panelControl5.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;panelControl5.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cheTitlesAntialiasing.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cheTitlesAntialiasing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 29</value>
+  </data>
+  <data name="cheTitlesAntialiasing.Properties.Caption" xml:space="preserve">
+    <value>Antialiasing</value>
+  </data>
+  <data name="cheTitlesAntialiasing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 19</value>
+  </data>
+  <data name="cheTitlesAntialiasing.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cheTitlesAntialiasing.Name" xml:space="preserve">
+    <value>cheTitlesAntialiasing</value>
+  </data>
+  <data name="&gt;&gt;cheTitlesAntialiasing.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;cheTitlesAntialiasing.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cheLabelsVisible.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cheLabelsVisible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="cheLabelsVisible.Properties.Caption" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="cheLabelsVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 19</value>
+  </data>
+  <data name="cheLabelsVisible.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cheLabelsVisible.Name" xml:space="preserve">
+    <value>cheLabelsVisible</value>
+  </data>
+  <data name="&gt;&gt;cheLabelsVisible.Parent" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;cheLabelsVisible.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tbcLabels.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="tbcLabels.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 239</value>
+  </data>
+  <data name="tbcLabels.Text" xml:space="preserve">
+    <value>Labels</value>
+  </data>
+  <data name="&gt;&gt;tbcLabels.Name" xml:space="preserve">
+    <value>tbcLabels</value>
+  </data>
+  <data name="&gt;&gt;tbcLabels.Parent" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;tbcLabels.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl.Name" xml:space="preserve">
+    <value>xtraTabControl</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelControl7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="panelControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 12</value>
+  </data>
+  <data name="panelControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panelControl7.Name" xml:space="preserve">
+    <value>panelControl7</value>
+  </data>
+  <data name="&gt;&gt;panelControl7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelControl7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelControl6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbeKind.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cbeKind.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 3</value>
+  </data>
+  <data name="cbeKind.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 20</value>
+  </data>
+  <data name="cbeKind.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbeKind.Name" xml:space="preserve">
+    <value>cbeKind</value>
+  </data>
+  <data name="&gt;&gt;cbeKind.Parent" xml:space="preserve">
+    <value>panelControl6</value>
+  </data>
+  <data name="&gt;&gt;cbeKind.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblKind.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblKind.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblKind.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 20</value>
+  </data>
+  <data name="lblKind.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblKind.Text" xml:space="preserve">
+    <value>Kind:</value>
+  </data>
+  <data name="&gt;&gt;lblKind.Name" xml:space="preserve">
+    <value>lblKind</value>
+  </data>
+  <data name="&gt;&gt;lblKind.Parent" xml:space="preserve">
+    <value>panelControl6</value>
+  </data>
+  <data name="&gt;&gt;lblKind.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelControl6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelControl6.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 0</value>
+  </data>
+  <data name="panelControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 23</value>
+  </data>
+  <data name="panelControl6.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panelControl6.Name" xml:space="preserve">
+    <value>panelControl6</value>
+  </data>
+  <data name="&gt;&gt;panelControl6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelControl6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 303</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FibonacciIndicatorControl</value>
+  </data>
+</root>

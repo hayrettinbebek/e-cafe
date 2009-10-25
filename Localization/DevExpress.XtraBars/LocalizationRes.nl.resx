@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarString.AddOrRemove">
+    <value>&amp;Knoppen toevoegen of verwijderen</value>
+  </data>
+  <data name="BarString.ResetBar">
+    <value>Weet u zeker dat u de wijzigingen die zijn aangebracht in de {0} werkbalk ongedaan wilt maken?</value>
+  </data>
+  <data name="BarString.ResetBarCaption">
+    <value>Aanpassen</value>
+  </data>
+  <data name="BarString.ResetButton">
+    <value>Werkbalk Beginw&amp;aarden</value>
+  </data>
+  <data name="BarString.CustomizeButton">
+    <value>Aan&amp;passen...</value>
+  </data>
+  <data name="BarString.ToolBarMenu">
+    <value>&amp;Beginwaarden$&amp;Verwijderen$!&amp;Naam$!&amp;Standaardstijl$Alleen tekst (altijd)$&amp;Alleen tekst (in Menu's)$A&amp;fbeelding en tekst$!&amp;Groep beginnen$&amp;Zichtbaar$&amp;Onlangs gebruikt</value>
+  </data>
+  <data name="BarString.NewToolbarName">
+    <value>Werkbalk</value>
+  </data>
+  <data name="BarString.NewMenuName">
+    <value>Hoofdmenu</value>
+  </data>
+  <data name="BarString.NewStatusBarName">
+    <value>Statusbalk</value>
+  </data>
+  <data name="BarString.NewToolbarCustomNameFormat">
+    <value>Aangepast {0}</value>
+  </data>
+  <data name="BarString.NewToolbarCaption">
+    <value>Nieuwe werkbalk</value>
+  </data>
+  <data name="BarString.RenameToolbarCaption">
+    <value>Werkbalknaam wijzigen</value>
+  </data>
+  <data name="BarString.CustomizeWindowCaption">
+    <value>Aanpassen</value>
+  </data>
+  <data name="BarString.MenuAnimationSystem">
+    <value>(Systeemstandaard)</value>
+  </data>
+  <data name="BarString.MenuAnimationNone">
+    <value>Geen</value>
+  </data>
+  <data name="BarString.MenuAnimationSlide">
+    <value>Schuiven</value>
+  </data>
+  <data name="BarString.MenuAnimationFade">
+    <value>Vervagen</value>
+  </data>
+  <data name="BarString.MenuAnimationUnfold">
+    <value>Openvouwen</value>
+  </data>
+  <data name="BarString.MenuAnimationRandom">
+    <value>Willekeurig</value>
+  </data>
+  <data name="BarString.PopupMenuEditor">
+    <value>Uitklapmenu-editor</value>
+  </data>
+  <data name="BarString.ToolbarNameCaption">
+    <value>&amp;Werkbalknaam:</value>
+  </data>
+  <data name="BarString.RibbonToolbarBelow">
+    <value>&amp;Toon de werkbalk Snelle toegang onder het Lint</value>
+  </data>
+  <data name="BarString.RibbonToolbarAbove">
+    <value>&amp;Toon de werkbalk Snelle toegang boven het Lint</value>
+  </data>
+  <data name="BarString.RibbonToolbarRemove">
+    <value>&amp;Verwijder van de werkbalk Snelle toegang</value>
+  </data>
+  <data name="BarString.RibbonToolbarAdd">
+    <value>&amp;Voeg toe aan de werkbalk Snelle toegang</value>
+  </data>
+  <data name="BarString.RibbonToolbarMinimizeRibbon">
+    <value>Mi&amp;nimaliseer het Lint</value>
+  </data>
+  <data name="BarString.RibbonGalleryFilter">
+    <value>Alle groepen</value>
+  </data>
+  <data name="BarString.RibbonGalleryFilterNone">
+    <value>Geen</value>
+  </data>
+  <data name="BarString.BarUnassignedItems">
+    <value>(Niet toegewezen elementen)</value>
+  </data>
+  <data name="BarString.BarAllItems">
+    <value>(Alle elementen)</value>
+  </data>
+  <data name="BarString.RibbonUnassignedPages">
+    <value>(Niet toegewezen pagina's)</value>
+  </data>
+  <data name="BarString.RibbonAllPages">
+    <value>(Alle pagina's)</value>
+  </data>
+  <data name="BarString.CloseButton">
+    <value>Sluiten</value>
+  </data>
+  <data name="BarString.MinimizeButton">
+    <value>Minimaliseren</value>
+  </data>
+  <data name="BarString.MaximizeButton">
+    <value>Maximaliseren</value>
+  </data>
+  <data name="BarString.RestoreButton">
+    <value>Restore Down</value>
+  </data>
+  <data name="BarString.HelpButton">
+    <value>Help</value>
+  </data>
+</root>

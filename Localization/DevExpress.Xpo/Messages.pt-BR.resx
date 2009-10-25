@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string">
+              </xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1">
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required">
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MetaData_IncorrectPath">
+    <value>O atalho caracteristicas '{1}' para o tipo '{0}' não esta correto.</value>
+  </data>
+  <data name="MetaData_IncorrectPathMemberNotExists">
+    <value>O atalho caracteristicas '{1}' para o tipo '{0}' não esta correto, porque o elemento '{2},{3} não existe.</value>
+  </data>
+  <data name="MetaData_IncorrectPathNonPersistentMember">
+    <value>O atalho caracteristicas '{1}' para o tipo '{0}' não esta correto, porque o elemento '{2},{3} não é um elemento permanente.</value>
+  </data>
+  <data name="MetaData_IncorrectPathNonReferenceMember">
+    <value>O atalho caracteristicas '{1}' para o tipo '{0}' não esta correto, porque o elemento '{2},{3} não é um elemento de referência.</value>
+  </data>
+  <data name="ConnectionProvider_TypeMappingMissing">
+    <value>O provedor de dados não pode processar o tipo '{0}, pois ele não é exibida no base de dados. Por favor, use um tipo diferente.</value>
+  </data>
+  <data name="ConnectionProvider_UnableToCreateDBObject">
+    <value>Erro ao criar: '{0}' '{1}'.  Subobjecto: '{2}'. Erro: {3}.</value>
+  </data>
+  <data name="Session_TypeNotFound">
+    <value>Não pode acharo tipo com id = '{0}'.</value>
+  </data>
+  <data name="Session_TypeFieldIsEmpty">
+    <value>Campo '{0}' e zero (base classe '{1}')</value>
+  </data>
+  <data name="ConnectionProvider_UnableToFillRefType">
+    <value>Não pode verificar o esquema do base de dados para o elemento '{1}' do tipo '{0}'. Error: {2}</value>
+  </data>
+  <data name="ConnectionProvider_SqlExecutionError">
+    <value>A SQL-ordem '{0}' com os parámetros '{1}' causar exceção '{2}'.</value>
+  </data>
+  <data name="Generator_UnknownCriteriaOperator">
+    <value>Não achou operadora '{0}'.</value>
+  </data>
+  <data name="MetaData_KeyPropertyAbsent">
+    <value>Falta chave caracteristica tipo '{0}'. </value>
+  </data>
+  <data name="MetaData_DuplicateKeyProperty">
+    <value>Achou chave tipo '{0}' dois vezes.</value>
+  </data>
+  <data name="MetaData_XMLLoadError">
+    <value>Error na carrega da XML-descrição: {0}.</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotFindClassinfoType">
+    <value>Não pode achartipo 'ClassInfo'.</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotFindConstructor">
+    <value>Não pode achar o construtor.</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorModelTagAbsent">
+    <value>Error a formatar XML (O&lt;Model&gt; dia não foi encontrado ou error no espaço nome).</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotResolveClassinfoInstanceType">
+    <value>Não pode resolver'Classinfo' tipo instância.</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorCannotLoadMember">
+    <value>Não pode carregar o elemento [{0}]{1}.{2}</value>
+  </data>
+  <data name="MetaData_XMLLoadErrorUnknownAttribute">
+    <value>Atributo desconhecido '{0}'</value>
+  </data>
+  <data name="MetaData_PropertyTypeMismatch">
+    <value>A associação '{1}' entre os classes '{3}' e '{4}' é invalido. O classe '{3}' tem caracteristicas '{2}' que referência a classe '{4}'. A classe '{4}' tem caracteristicas '{0}' que referência incorreto o classe '{5}', que deveria referênciar a classe '{3}'.</value>
+  </data>
+  <data name="MetaData_PropertyMissing">
+    <value>A caracteristica '{0}' não existe no tipo '{1}'. </value>
+  </data>
+  <data name="MetaData_PropertyMissingReferenceType">
+    <value>Referência para o tipo '{0}'. </value>
+  </data>
+  <data name="MetaData_RequiredInterfaceMissing">
+    <value>O tipo '{0}' não suportar IXPSimpleObject interface.</value>
+  </data>
+  <data name="MetaData_AssociationElementTypeMissing">
+    <value>A caracteristica '{0}' não especificar o 'ElementoTipo' dentro do atributo 'Association'.</value>
+  </data>
+  <data name="MetaData_RequiredAttributeMissing">
+    <value>A caracteristica '{0}' não definir o atributo '{1}'.</value>
+  </data>
+  <data name="MetaData_PropertyNameMismatch">
+    <value>A caracteristica '{0}' é incorrecto.</value>
+  </data>
+  <data name="MetaData_NonPersistentReferenceFound">
+    <value>Na dissolução do real tipo do objeto, foi  encontrado uma referência para o resumo tipo '{0}'.</value>
+  </data>
+  <data name="MetaData_RecursiveReferenceFound">
+    <value>Uma referêcia recursiva foi encontrada.</value>
+  </data>
+  <data name="Session_ObjectCannotBePurged">
+    <value>O objecto '{0}' com id = '{1}' não pode ser limpado.Outros objetos referem-se a ele.</value>
+  </data>
+  <data name="Session_WrongConnectionString">
+    <value>Inválido conexão caracteristicas especificadas: '{0}'.</value>
+  </data>
+  <data name="Session_CannotReloadPurgedObject">
+    <value>Os itens solicitados não pode ser carregado, porque os dados não estão disponíveis na memória dos dados.Estes objetos podem ser apagados e removidos. Se você vai ver esta excepção mais uma vez, tem a possibilidade que a integração do banco de dados não existe mais.Neste caso informar o administrador do sistema. ({0})</value>
+  </data>
+  <data name="Session_SessionMixing">
+    <value>O objeto '{0}' pertence a uma outra sessão.</value>
+  </data>
+  <data name="Session_CannotAddObjectToObjectCache">
+    <value>Não pode acrescentar o objeto '{0} com id = '{1}'. Motivo: {2}</value>
+  </data>
+  <data name="Session_LoadedPropertyAssignmentError">
+    <value>A caracteristica '{1}' da classe '{0}' não pode carregar dados. Motivo: {2}</value>
+  </data>
+  <data name="ConnectionProvider_SchemaCorrectionNeeded">
+    <value>O esquema deve ser atualizado. Favor entrar em contato com o administrador do sistema. SQL -instrução: {0}</value>
+  </data>
+  <data name="MetaData_SessionCtorAbsent">
+    <value>O tipo {0} não tem um construtor específicado. </value>
+  </data>
+  <data name="Paging_PageSizeShouldBeGreaterThanZero">
+    <value>A PageSize teve ser maior do que  0.</value>
+  </data>
+  <data name="Paging_CurrentPageShouldBeGreaterOrEqualZero">
+    <value>A CurrentPage teve ser maior ou equal 0.</value>
+  </data>
+  <data name="Paging_CurrentPageShouldBeLessThanPageCount">
+    <value>A CurrentPage teve ser menor do que  PageCount.</value>
+  </data>
+  <data name="Session_TranSequenceBegin">
+    <value>Não pode iniciar mais transacções nesta sessão.</value>
+  </data>
+  <data name="Session_TranSequenceCommit">
+    <value>Nenhuma transação está ativa.</value>
+  </data>
+  <data name="Session_TranSequenceRollback">
+    <value>Nenhuma transação está ativa.</value>
+  </data>
+  <data name="Collections_InvalidCastOnAdd">
+    <value>Error ao adicionar o objeto para a coleção. O objeto '{0}' e não uma instância do tipo '{1}'.</value>
+  </data>
+  <data name="Generator_OneOfBinaryOperatorsOperandsIsNull">
+    <value>Um dos operandos do operador binário é igual a zero.</value>
+  </data>
+  <data name="DataObject_ClassInfoArgumentIncorrect">
+    <value>O valor do 'ClassInfo'-argumento não é correto. Um exemplo do tipo 'XPDataObjectClassInfo' era esperado.</value>
+  </data>
+  <data name="Criteria_NotImplementedForFiltering">
+    <value>{0} é não implementada para filtrar.</value>
+  </data>
+  <data name="ConnectionProvider_KeysAutogenerationNonSupportedTypeException">
+    <value>Gerar chave automático é só apoiado para tipo de dados Int32 e Guid. Tipo de classe: '{0}'.</value>
+  </data>
+  <data name="Session_CannotLoadInvalidType">
+    <value>Tipo '{0}' invalido. Não pode ser carregado.</value>
+  </data>
+  <data name="Paging_EnumeratorPositioning">
+    <value>O enumerador foi posicionado atrás do primeiro ou o último elemento da coleção.</value>
+  </data>
+  <data name="Paging_EnumeratorObjectModifiedOrDeleted">
+    <value>Um ou mais objetos da área requerida foram sido modificado ou eliminado. A lista das identidades deve ser atualizada.</value>
+  </data>
+  <data name="Session_CannotChangePropertyWhenSessionIsConnected">
+    <value>{0} não pode ser alterado quando a sessão está conectada.</value>
+  </data>
+  <data name="Session_DifferentObjectsWithSameKey">
+    <value>Objetos diferentes com o mesmo chave.</value>
+  </data>
+  <data name="ConnectionProvider_TableNameTooLong">
+    <value>Erro ao criar tabela do banco de dados '{0}'. O nome da tabela é muita comprida (superior a 64 caracteres).</value>
+  </data>
+  <data name="ConnectionProvider_ColumnNameTooLong">
+    <value>Erro ao criar a tabela coluna '{1}' da tabela '{0}'. O nome da coluna é muita comprida (superior a 64 caracteres)</value>
+  </data>
+  <data name="ConnectionProvider_AtLeastOneColumnExpected">
+    <value>Pelo menos uma coluna é esperada.</value>
+  </data>
+  <data name="MetaData_CannotResolveClassInfo">
+    <value>Não pode dissolucionar 'ClassInfo' do tipo '[{0}]{1}'"</value>
+  </data>
+  <data name="Collection_CannotAssignProperty">
+    <value>Não pode alterar a caracteristica {0}, enquanto  XPCollection é não no modus disign ou iniciar.</value>
+  </data>
+  <data name="Session_IncompatibleIdType">
+    <value>Apresentado Id-tipo '{0}' é incompatível com o '{1}.{2}' Chave tipo '{3}'.</value>
+  </data>
+  <data name="MetaData_ReferenceTooComplex">
+    <value>Referencia '{0}.{1}' é complexa.</value>
+  </data>
+  <data name="Metadata_SameTableName">
+    <value>Classe {0} mostrar a mesma tabela  como {1}.</value>
+  </data>
+  <data name="Metadata_CustomProperties_PersistentAndNonStorableType">
+    <value>Próprio elemento '{0}.{1}' do tipo '{2}' não pode ser permanente.</value>
+  </data>
+  <data name="Metadata_CustomProperties_ReferenceOrCollectionInSessionStore">
+    <value>Não consegue criar o seu próprio elemento '{1}' da coleção de referência, porque a classe '{0}' não implementar o interface '{2}.</value>
+  </data>
+  <data name="XpoDefault_CannotAssignPropertyWhileAnotherIsNotNull">
+    <value>Não pode definir o XpoDefault.{0} porque XpoDefault.{1} é não zero.</value>
+  </data>
+  <data name="ThreadSafeDataLayer_DictionaryModified">
+    <value>O diretório não pode ser alterado porque  é usado pelo ThreadSafeDataLayer.Favor chamar a secção CreateObjectTypeRecords method no programa da instalação ou administração antes de usar ThreadSafeDataLayer</value>
+  </data>
+  <data name="Metadata_DictionaryMixing">
+    <value>O classe info '{0}' pertence um diretório diferente.</value>
+  </data>
+  <data name="Object_ModifiedInsideCtor">
+    <value>Objeto não pode ser alterado no construtor.Por favor, usar a construção método para atribuir valores padrão.</value>
+  </data>
+  <data name="Metadata_CantPersistGenericType">
+    <value>Tipos genéricos não pode ser permanente. Por favor apagar o PersistentAttribute do tipo definição '{0} e criar um não-genérico descendentes.</value>
+  </data>
+  <data name="PersistentAliasExpander_ReferenceOrCollectionExpectedInTheMiddleOfThePath">
+    <value>Objeto incorrecto  '{0}' em um trilho. Uma caracteristica referência ou uma coleção foi esperado.</value>
+  </data>
+  <data name="XPWeakReference_SavedObjectExpected">
+    <value>Objeto armazenado esperado.</value>
+  </data>
+  <data name="PersistentAliasExpander_NonPersistentCriteria">
+    <value>Não pode verificar a memória com o critério "{0}", porque a caracteristica '{1}' não é permanetnte.</value>
+  </data>
+  <data name="View_PropertyNotFetched">
+    <value>Caracteristica '{0}' não foi carregada.</value>
+  </data>
+  <data name="Session_AlreadyConnected">
+    <value>Sessão é conectado.</value>
+  </data>
+  <data name="Session_AssociationCollectionWithDisabledLoading">
+    <value>A coleção associação é defeito.(LoadingEnabled não é definido)</value>
+  </data>
+  <data name="Metadata_SeveralClassesWithSameName">
+    <value>O diretório já contém a classe '{1}'. Causa possível: A Assembly '{0} tenha sido carregado várias vezes.</value>
+  </data>
+  <data name="Metadata_PersistentAliasCircular">
+    <value>A caracteristica '{1}' do classe '{0}'  é marcado como PersistentAlias com uma expresão '{2}'.O resultado é uma dependência cícilica. </value>
+  </data>
+  <data name="Collection_CannotSortReference">
+    <value>Os dados não podem ser ordenadas sob a coluna '{0}',  porque  o IComparable interface não está implementada.
+suche</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_AssociationAttributeOnlyForListOrReference">
+    <value>A associação atributo não pode ser usado para o membro  '{1}.{2}'. Uma lista ou referência é esperado.</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_MoreThenOneAssociatedMemberFound">
+    <value>A associação '{0}' é ambíguo entre os membros '{2}' e '{3}' do classe '{1}'.</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_NoAssociationListInAssociation">
+    <value>Existe uma associação ilegal '{0}' entre '{1}.{2}' e '{3}.{4}'.Uma lista ao lado da associação é esperada.</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_TwoAssociationListsInAssociation">
+    <value>Existe uma associação ilegal '{0}' entre as listas '{1}.{2}' e '{3}. {4}'. Use o ManyToMany-Attribut ou uma XPCollection para a imagem.</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_UseAssociationNameAsIntermediateTableNameMismatch">
+    <value>O nome da tabela do UseAssociationNameAsIntermediate deve ser o mesmo os dois lados da associação '{0} entre  '{1}.{2}' und '{3}.{4}'.</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_PropertyTypeMismatch">
+    <value>A associação '{0}' entre as classes '{1}' e '{3}' é inválido. A classe '{1}' contém o atributo '{2}', que se baseia na classe '{3}' referenciado. A classe '{3}' contém o atributo '{4}', que é invalido para a classe '{5}', é uma referência para a classe '{1}' é esperado.</value>
+  </data>
+  <data name="Metadata_AssociationInvalid_NotFound">
+    <value>Existe uma associação ilegal '{0}'. Não pode encontrar o membro associado '{1}.{2}' na classe '{3}'. </value>
+  </data>
+</root>

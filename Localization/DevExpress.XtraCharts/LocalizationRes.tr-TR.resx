@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChartStringId.MsgPointOptionsSettingRuntimeError" xml:space="preserve">
+    <value>Nokta opsiyonları özellikleri işlem süresince kurulmuş olamaz!</value>
+  </data>
+  <data name="ChartStringId.TrnSecondryAxisXDeleted" xml:space="preserve">
+    <value>İkincil eksen X silindi</value>
+  </data>
+  <data name="ChartStringId.MsgPaletteEditingIsntAllowed" xml:space="preserve">
+    <value>Düzenleme yapma isteğine izin verilmemiştir!</value>
+  </data>
+  <data name="ChartStringId.DefaultChartTitle" xml:space="preserve">
+    <value>Çizelge Ünvanı</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPlaneDepthFixed" xml:space="preserve">
+    <value>Fixlenmiş düzey derinliği 1'e büyük-eşit olmalıdır</value>
+  </data>
+  <data name="ChartStringId.WizConstructionGroupName" xml:space="preserve">
+    <value>Yapı</value>
+  </data>
+  <data name="ChartStringId.VerbEditPalettes" xml:space="preserve">
+    <value>Paletler…</value>
+  </data>
+  <data name="ChartStringId.MsgOrderArrayLengthMismatch" xml:space="preserve">
+    <value>Düzenli dizinin uzunluğu kayıtlı elementlerin toplam sayısına eşit değildir!</value>
+  </data>
+  <data name="ChartStringId.SvnStepLine3D" xml:space="preserve">
+    <value>3D Basamak hattı</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPercentValue" xml:space="preserve">
+    <value>Yüzdelik değer 0'a büyük-eşit ya da 100'e küçük-eşit olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMarkerSize" xml:space="preserve">
+    <value>İşaretçi ebatı 1'den büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.WizAxesPageName" xml:space="preserve">
+    <value>Eksenler</value>
+  </data>
+  <data name="ChartStringId.SvnArea3D" xml:space="preserve">
+    <value>3D Alanı</value>
+  </data>
+  <data name="ChartStringId.MenuItemMoveDown" xml:space="preserve">
+    <value>Aşağı Taşı</value>
+  </data>
+  <data name="ChartStringId.MsgItemNotInCollection" xml:space="preserve">
+    <value>Koleksiyon belirlenmiş öğeleri içermez!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDoughnutHolePercent" xml:space="preserve">
+    <value>Veri Kaynağı "{0}" isimli bir veri üyesini içermemektedir.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTaskLinkMinIndent" xml:space="preserve">
+    <value>Konu bağlantısının minimum girintisi 0'a büyük-eşit olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectFont" xml:space="preserve">
+    <value>Yazı büyüklüğü 0 olamaz!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPercentPrecision" xml:space="preserve">
+    <value>Yüzdelik değerin hassasiyeti 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.SvnStackedArea" xml:space="preserve">
+    <value>İstiflenmiş alan</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkThickness" xml:space="preserve">
+    <value>İşaretçinin kalınlığı 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgEmptyChart" xml:space="preserve">
+    <value>Grafikte gösterilecek 'görünür seri' yok! Yeri seri eklemeye çalış; ya da en azından birinin görünür olduğundan emin ol!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPieSeriesLabelColumnIndent" xml:space="preserve">
+    <value>Kolon girintisi 0'a büyük-eşit olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgOrderRepeatedElementFound" xml:space="preserve">
+    <value>düzenli bir seride aynı element çok kez tekrarlanır.</value>
+  </data>
+  <data name="ChartStringId.WizDataPageName" xml:space="preserve">
+    <value>Veri</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesPointIDNotUnique" xml:space="preserve">
+    <value>Dizi noktasının kimliği tek olmalıdır!</value>
+  </data>
+  <data name="ChartStringId.VerbDataSnapshot" xml:space="preserve">
+    <value>Veri enstantanesi</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRangeMinValue" xml:space="preserve">
+    <value>Minimum değer, eksen aralığı objesi için sıfıra kurulmuş olamaz!</value>
+  </data>
+  <data name="ChartStringId.WizSeriesViewPageDescription" xml:space="preserve">
+    <value>seçili dizilerden dizi görüntü özelliklerini uyarla</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesMessage" xml:space="preserve">
+    <value>{0} dan "{1}" e</value>
+  </data>
+  <data name="ChartStringId.TrnStripsChanged" xml:space="preserve">
+    <value>Şeritler değiştirildi</value>
+  </data>
+  <data name="ChartStringId.VerbWizard" xml:space="preserve">
+    <value>Sihirbazı Yürüt…</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesDistance" xml:space="preserve">
+    <value>Kaydırma çubuğu kalınlığı 3'büyük - eşit ve 25'ten küçük-eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.VerbPopulateDescription" xml:space="preserve">
+    <value>Veri ile graifiğin veri kaynağını yerleştir</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRange" xml:space="preserve">
+    <value>({0}) eksen aralığının minimum değeri onun maximum değerinden ({1}) daha az olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectValue" xml:space="preserve">
+    <value>"{1}" argümanı için "(0)" hatalı değer!</value>
+  </data>
+  <data name="ChartStringId.WizSeriesDataBindingPageName" xml:space="preserve">
+    <value>Dizi Bağlama</value>
+  </data>
+  <data name="ChartStringId.WizFormTitle" xml:space="preserve">
+    <value>Grafik Sihirbazı</value>
+  </data>
+  <data name="ChartStringId.MsgDataSnapshot" xml:space="preserve">
+    <value>Veri enstantane operasyonu tamamlandı. Tüm serilerin verisi şimdi grafikte statik olarak devam edecek. Bu da şimdi grafiğin çözülmüş modda olduğu anlamına geliyor. Not: Bunu tekrar yapabilirsin.</value>
+  </data>
+  <data name="ChartStringId.WizSeriesPointPageName" xml:space="preserve">
+    <value>Noktalar</value>
+  </data>
+  <data name="ChartStringId.ArgumentMember" xml:space="preserve">
+    <value>Sav</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTransformationMatrix" xml:space="preserve">
+    <value>Hatalı taşıma dizeyi!</value>
+  </data>
+  <data name="ChartStringId.MsgNonExistentSeriesViewAxisX" xml:space="preserve">
+    <value>Dizi görüntüsünü X Eksenine kuramazsınız!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLineTensionPercent" xml:space="preserve">
+    <value>Hat tansiyon yüzdeliği 0'a büyük - eşit ya da 100'e küçük - eşit olmalıdır</value>
+  </data>
+  <data name="ChartStringId.OpenValueMember" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="ChartStringId.DefaultDataFilterName" xml:space="preserve">
+    <value>Veri Süzgeci</value>
+  </data>
+  <data name="ChartStringId.SvnSplineAreaStacked3D" xml:space="preserve">
+    <value>İstiflenmiş eğri cetvel alanı 3D</value>
+  </data>
+  <data name="ChartStringId.SvnSplineAreaFullStacked3D" xml:space="preserve">
+    <value>100% istiflenmiş eğri cetvel alanı 3D</value>
+  </data>
+  <data name="ChartStringId.MsgOrderUnregisteredElementFound" xml:space="preserve">
+    <value>Kayıtlı olmayan bir element bulundu!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendSpacingHorizontal" xml:space="preserve">
+    <value>Efsane ufuksal aralığı 0'a eşit ya da 0'dan büyük ve 1000'den küçük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidZeroAxisAlignment" xml:space="preserve">
+    <value>Hizalama ikincil eksen için 0 hizalamaya kurulmuş olamaz</value>
+  </data>
+  <data name="ChartStringId.MsgUnregisterGroupError" xml:space="preserve">
+    <value>Bu grup hali hazırda kayıtsızdır!</value>
+  </data>
+  <data name="ChartStringId.InvisibleSeriesView" xml:space="preserve">
+    <value>Görünmez</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesChanged" xml:space="preserve">
+    <value>Dizi değiştirildi</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPieArgumentScaleType" xml:space="preserve">
+    <value>0 argüman terazi tipi belirlenmiş olamaz! Çünkü varolan genişletilmiş nokta süzgeci ona bağdaştırılamaz!</value>
+  </data>
+  <data name="ChartStringId.SvnStackedBar" xml:space="preserve">
+    <value>İstiflenmiş çubuk</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideGantt" xml:space="preserve">
+    <value>YanYana Gantt</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesOfParentAndChildPoints" xml:space="preserve">
+    <value>Ebeveyn ve Çocuk noktası aynı diziye ait olmak zorundadır!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSimpleDiagramDimension" xml:space="preserve">
+    <value>Basit diyagramın boyutu 0'dan büyük; 100'den küçük olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectShadowSize" xml:space="preserve">
+    <value>Gölge ebatı 0'dan büyük olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectParentSeriesPointOwner" xml:space="preserve">
+    <value>Ebeveyn dizi noktasının sahibi 0 olamaz ve dizi tipinden olmak zorunludur.</value>
+  </data>
+  <data name="ChartStringId.VerbSaveLayout" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="ChartStringId.MsgDenyChangeSeriesPointCollection" xml:space="preserve">
+    <value>Seri noktasının kolleksiyonunu elle değiştiremezsiniz! Çünkü grafik veriye bağlanmıştır.</value>
+  </data>
+  <data name="ChartStringId.MsgAddLastViewType" xml:space="preserve">
+    <value>Grafiği kaydırmak için farenin merkezindeki tekerleği ile CTRL tuşunu kullan
+Depoda {0} ismi ile hali hazırda bulunan Palet!</value>
+  </data>
+  <data name="ChartStringId.MenuItemInsert" xml:space="preserve">
+    <value>Yerleştir</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesViewAxisY" xml:space="preserve">
+    <value>Dizi görüntüsünü Y Eksenine kuramazsınız!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAppearanceName" xml:space="preserve">
+    <value>Grafik, {0} isimli bir görünüş içermemektedir!</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesPointRelationAlreadyExists" xml:space="preserve">
+    <value>Dizi noktası ilişkilerinin kolleksiyonu bu ilişkiyi barındırır!</value>
+  </data>
+  <data name="ChartStringId.MsgAddPresentViewType" xml:space="preserve">
+    <value>Bu kolleksiyonda herhangi bir görüntü tipi ekleyemezsiniz! Çünkü en azından bir görüntü tipi Sihirbazın içinde ulaşılabilir durumda olmalıdır!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectArrowHeight" xml:space="preserve">
+    <value>Ok yüksekliği 0'dan daha büyük olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStartAngle" xml:space="preserve">
+    <value>Başlangıç açı değeri -360'a büyük-eşit ve 360 dereceye küçük-eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.Msg2DScrollingToolTip" xml:space="preserve">
+    <value>Bölmeleri daraltmak ya da patlatmak için Farenin sol tuşu ile CTRL'yi kullan
+Grafiği kaydırmak için farenin sol tuşu ile CTRL tuşunu kullan</value>
+  </data>
+  <data name="ChartStringId.PrintSizeModeNone" xml:space="preserve">
+    <value>Hiçbiri</value>
+  </data>
+  <data name="ChartStringId.WizAxesPageDescription" xml:space="preserve">
+    <value>Diyagramdan X ve Y eksenlerini uyarla! Grafik önizlemede modifiye edilmiş bir eksen seçebileceğini not et!</value>
+  </data>
+  <data name="ChartStringId.TrnConstantLinesChanged" xml:space="preserve">
+    <value>Sabit hat değiştirildi</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendMarkerSize" xml:space="preserve">
+    <value>Efsane işaretçi ebatı 0'dan büyük, 100'den küçük olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgWizardNonUniqueGroupName" xml:space="preserve">
+    <value>{0} isimli grup şu anda kayıtlıdır!</value>
+  </data>
+  <data name="ChartStringId.MsgRelationChildPointIDNotUnique" xml:space="preserve">
+    <value>İlişkinin çocuk noktası kimliği tek olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleArgumentDataMember" xml:space="preserve">
+    <value>{0} argüman veri üye tipi {1} terazisiyle uyumlu değildir!</value>
+  </data>
+  <data name="ChartStringId.MsgLabelSettingRuntimeError" xml:space="preserve">
+    <value>"Etiket" özelliği işlem esnasında kurulamaz!</value>
+  </data>
+  <data name="ChartStringId.WizSeriesLabelsPageDescription" xml:space="preserve">
+    <value>Seçili dizilerden nokta etiket özelliklerini uyarla</value>
+  </data>
+  <data name="ChartStringId.SvnFullStackedBar3D" xml:space="preserve">
+    <value>100% İstiflenmiş 3D çubuğu</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesDeleted" xml:space="preserve">
+    <value>Dizi silindi</value>
+  </data>
+  <data name="ChartStringId.WizSeriesLabelsPageName" xml:space="preserve">
+    <value>Nokta etiketleri</value>
+  </data>
+  <data name="ChartStringId.Msg2DPieExplodingToolTip" xml:space="preserve">
+    <value>Bölmeleri daraltmak ya da patlatmak için Farenin sol tuşu ile CTRL'yi kullan</value>
+  </data>
+  <data name="ChartStringId.SvnFullStackedBar" xml:space="preserve">
+    <value>100% İstiflenmiş Çubuk</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesIndentFixed" xml:space="preserve">
+    <value>Fixlenmiş dizi uzaklığı 0'a büyük - eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.VerbAbout" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="ChartStringId.MsgNullSeriesViewAxisX" xml:space="preserve">
+    <value>Dizi görüntüsünün x-Ekseni 0'a kurulu olamaz!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisThickness" xml:space="preserve">
+    <value>Eksen kalınlığı 0'dan büyük olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLegendSpacingVertical" xml:space="preserve">
+    <value>Efsane dikey aralığı 0'a eşit ya da 0'dan büyük ve 1000'den küçük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.SvnSpline" xml:space="preserve">
+    <value>Eğri Cetvel</value>
+  </data>
+  <data name="ChartStringId.WizSeriesPageName" xml:space="preserve">
+    <value>Diziler</value>
+  </data>
+  <data name="ChartStringId.PrimaryAxisYName" xml:space="preserve">
+    <value>Öncelikli Yekseni</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesDistanceFixed" xml:space="preserve">
+    <value>Dizi uzaklığı 0'a büyük-eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.SvnCandleStick" xml:space="preserve">
+    <value>Mum Değneği</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectGridSpacing" xml:space="preserve">
+    <value>Izgara boşluğu 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.SvnStackedArea3D" xml:space="preserve">
+    <value>İstiflenmiş 3D alan</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPerspectiveAngle" xml:space="preserve">
+    <value>Perspektif açısı 0'a büyük-eşit ya da 180'en az olmalıdır</value>
+  </data>
+  <data name="ChartStringId.SvnStackedBar3D" xml:space="preserve">
+    <value>İstiflenmiş 3D çubuk</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectExplodedDistancePercentage" xml:space="preserve">
+    <value>Delikli halka yüzdeliği 0'a büyük-eşit ve 100;'e küçük-eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.SvnLine3D" xml:space="preserve">
+    <value>Hat 3D</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleArgumentScaleType" xml:space="preserve">
+    <value>{0} argüman terazi üye tipi {1} seri görünüşü ile uyumsuzdur!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesViewAxisX" xml:space="preserve">
+    <value>Dizi görüntüsünü X Eksenine kuramazsınız!</value>
+  </data>
+  <data name="ChartStringId.MsgInitializeChartNotFound" xml:space="preserve">
+    <value>Grafik kontrolü bulunamadı; ya da bu kontrolde bir çok grafikler var.</value>
+  </data>
+  <data name="ChartStringId.SvnFullStackedArea3D" xml:space="preserve">
+    <value>100% İstiflenmiş 3D alanı</value>
+  </data>
+  <data name="ChartStringId.WizChartTypePageName" xml:space="preserve">
+    <value>Grafik Tipi</value>
+  </data>
+  <data name="ChartStringId.MsgPolarAxisXRangeChanged" xml:space="preserve">
+    <value>X Eksenli bir kutbun aralığı değiştirilemez!</value>
+  </data>
+  <data name="ChartStringId.VerbResetLegendPointOptionsDescription" xml:space="preserve">
+    <value>Efsane nokta opsiyonlarını, varsayım değerlerine döndür!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectUseImageProperty" xml:space="preserve">
+    <value>Görüntü özellikleri WebChartControl için kullanılamaz. Lütfen, ImageUrl özelliklerini kullan!</value>
+  </data>
+  <data name="ChartStringId.DefaultMaxValue" xml:space="preserve">
+    <value>En çok</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideBar3D" xml:space="preserve">
+    <value>Çubuk 3D</value>
+  </data>
+  <data name="ChartStringId.IOCaption" xml:space="preserve">
+    <value>Yasadışı İşlem</value>
+  </data>
+  <data name="ChartStringId.VerbWizardDescription" xml:space="preserve">
+    <value>Grafik sihirbazını yürüt</value>
+  </data>
+  <data name="ChartStringId.Msg3DRotationToolTip" xml:space="preserve">
+    <value>Grafiği döndürmak için  farenin sol tuşu ile CTRL tuşunu kullan</value>
+  </data>
+  <data name="ChartStringId.SvnSplineArea" xml:space="preserve">
+    <value>Eğri Cetvel Alanı</value>
+  </data>
+  <data name="ChartStringId.TrnChartWizard" xml:space="preserve">
+    <value>Grafik sihirbaz ayarları uygulandı</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChildSeriesPointID" xml:space="preserve">
+    <value>Çocuk seri noktasının Kimliği ya 0'a eşit ya da pozitif olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.SvnRadarArea" xml:space="preserve">
+    <value>Radar Alanı</value>
+  </data>
+  <data name="ChartStringId.WizSeriesPageDescription" xml:space="preserve">
+    <value>Grafikte gösterilmiş olan gerekli nokta dizilerini yarat! Onların öncelikli özelliklerini uyarla!</value>
+  </data>
+  <data name="ChartStringId.TrnSecondryAxisYDeleted" xml:space="preserve">
+    <value>İkincil eksen Y silindi</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatiblePointType" xml:space="preserve">
+    <value>{0} noktasının tipi  {1} terazisi ile uyumlu değildir!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStockLevelLineLengthValue" xml:space="preserve">
+    <value>Stok seviye hattının uzunluk değeri 0'a büyük-eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleByArgumentScaleType" xml:space="preserve">
+    <value>Argüman terazi tipi</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBarDepth" xml:space="preserve">
+    <value>Çubuk derinliği 0'dan büyük olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.WizChartTitlesPageName" xml:space="preserve">
+    <value>Grafik unvanları</value>
+  </data>
+  <data name="ChartStringId.MenuItemMoveUp" xml:space="preserve">
+    <value>Yukarı Taşı</value>
+  </data>
+  <data name="ChartStringId.TrnLegendPointOptionsReset" xml:space="preserve">
+    <value>Efsane Noktası opsiyonlarını sıfırlar</value>
+  </data>
+  <data name="ChartStringId.SvnRadarLine" xml:space="preserve">
+    <value>Radar Hattı</value>
+  </data>
+  <data name="ChartStringId.WizDiagramPageName" xml:space="preserve">
+    <value>Diyagram</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectImageBounds" xml:space="preserve">
+    <value>Özelleştirilmiş ebatta bir görüntü yaratılamaz!</value>
+  </data>
+  <data name="ChartStringId.MsgWizardIncorrectBasePageType" xml:space="preserve">
+    <value>{0}, {1} sınıfından miras kalmış olmalıdır!</value>
+  </data>
+  <data name="ChartStringId.HighValueMember" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
+  <data name="ChartStringId.SvnPoint" xml:space="preserve">
+    <value>Nokta</value>
+  </data>
+  <data name="ChartStringId.VerbSeriesDescription" xml:space="preserve">
+    <value>Dizi koleksiyon düzenleyicisini Aç</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripMinLimit" xml:space="preserve">
+    <value>Şeridin minimum limiti maximum limitten küçük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.SvnStepLine" xml:space="preserve">
+    <value>Basamak Hattı</value>
+  </data>
+  <data name="ChartStringId.PrimaryAxisXName" xml:space="preserve">
+    <value>Öncelikli Xekseni</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripMaxLimit" xml:space="preserve">
+    <value>Şeridin maksimum limiti minimum limitten büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.DefaultSeriesPointFilterName" xml:space="preserve">
+    <value>Seri Nokta Süzgeci</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectSeriesLabelLineLength" xml:space="preserve">
+    <value>Hat uzunluğu 0'a büyük -eşit ve 1000'den az olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectHorizontalScrollPercent" xml:space="preserve">
+    <value>Ufuksal kaydırma yüzdesi 0'dan büyük ya da eşit; 0'dan küçük ya da eşit olmalı</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesTitleChanged" xml:space="preserve">
+    <value>Dizi unvanı değiştirildi</value>
+  </data>
+  <data name="ChartStringId.MsgNullSeriesViewAxisY" xml:space="preserve">
+    <value>Dizi görüntüsünün Y-Ekseni 0'a kurulu olamaz!</value>
+  </data>
+  <data name="ChartStringId.MenuItemAdd" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="ChartStringId.VerbClearDataSource" xml:space="preserve">
+    <value>Veri Kaynağını Sil</value>
+  </data>
+  <data name="ChartStringId.SvnPolarPoint" xml:space="preserve">
+    <value>Kutup Noktası</value>
+  </data>
+  <data name="ChartStringId.SvnFullStackedArea" xml:space="preserve">
+    <value>100% İstiflenmiş alan</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkMinorLength" xml:space="preserve">
+    <value>Küçük işaretçinin uzunluğu 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgCalcHitInfoNotSupported" xml:space="preserve">
+    <value>3d Grafik tipleri için Vuruş test etmeler desteklenmemiştir. Bu metod sadece 2D grafik tipleri için desteklenir!</value>
+  </data>
+  <data name="ChartStringId.TrnExplodedPointsFilters" xml:space="preserve">
+    <value>Genişletilmiş noktaların süzgeci değiştirildi</value>
+  </data>
+  <data name="ChartStringId.TrnLoadLayout" xml:space="preserve">
+    <value>Yüklü grafik düzenleme</value>
+  </data>
+  <data name="ChartStringId.VerbSeries" xml:space="preserve">
+    <value>Dizi</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesViewDoesNotExist" xml:space="preserve">
+    <value>0 dizi görüntüsü yoktur.</value>
+  </data>
+  <data name="ChartStringId.PrintSizeModeStretch" xml:space="preserve">
+    <value>Gerilmiş</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleValueDataMember" xml:space="preserve">
+    <value>{0} değer veri üye tipi {1} terazisiyle uyumlu değildir!</value>
+  </data>
+  <data name="ChartStringId.MsgPolarAxisXGridSpacingChanged" xml:space="preserve">
+    <value>X Eksenli bir kutbun ızgara boşluğu değiştirilemez!</value>
+  </data>
+  <data name="ChartStringId.WizSpecifyDataFilters" xml:space="preserve">
+    <value>Elips butona bas…
+</value>
+  </data>
+  <data name="ChartStringId.VerbDataSnapshotDescription" xml:space="preserve">
+    <value>Grafiğe sınır veri kaynağından tüm verileri kopyala; sonra da grafiği çöz</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLabelAngle" xml:space="preserve">
+    <value>Etiketin açısı -360'a eşit ya da ondan büyük ve/veya 360'a eşit ya da ondan az olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.StyleAllColors" xml:space="preserve">
+    <value>Tüm Renkler</value>
+  </data>
+  <data name="ChartStringId.MsgChartLoadingException" xml:space="preserve">
+    <value>Belirlenmiş XML dosyası açılamaz; çünkü ya desteklenmiş bir dosya tipi değildir ya da dosya hasar görmüştür.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectVerticalScrollPercent" xml:space="preserve">
+    <value>Dikey kaydırma yüzdesi 0'a büyük eşit ve 0'dan küçük-eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.SvnPie3D" xml:space="preserve">
+    <value>Pasta 3D</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideRangeBar" xml:space="preserve">
+    <value>Yan Yana Aralık Çubuğu</value>
+  </data>
+  <data name="ChartStringId.VerbLoadLayout" xml:space="preserve">
+    <value>Yükle…</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChartTitleIndent" xml:space="preserve">
+    <value>Unvan girintisi 0'a eşit ya da 0'dan büyük; 1000'den az olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MenuItemDelete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="ChartStringId.WizPresentationGroupName" xml:space="preserve">
+    <value>Sunum</value>
+  </data>
+  <data name="ChartStringId.MsgModifyDefaultPaletteError" xml:space="preserve">
+    <value>Palet varsayımdır ve modifiye edilemez!</value>
+  </data>
+  <data name="ChartStringId.WizAppearancePageDescription" xml:space="preserve">
+    <value>Renk dizisine ya da veri noktalarına bir palet seç. Bir de geçerli palete bağlı olarak grafiğin görüntüsünü belirleyen stili seç</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPieDepth" xml:space="preserve">
+    <value>Pasta derinliği 0'a büyük -eşit ve 100'den küçük- eşit olmalıdır(değeri yüzdelikte ölçülebilir olduğundan itibaren)</value>
+  </data>
+  <data name="ChartStringId.PrintSizeModeZoom" xml:space="preserve">
+    <value>Büyüt</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPaletteBaseColorNumber" xml:space="preserve">
+    <value>Palet esas numarası 0'a büyük-eşit ve palet renklerinin toplam sayısından küçük-eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MenuItemClear" xml:space="preserve">
+    <value>Temizle</value>
+  </data>
+  <data name="ChartStringId.Msg3DScrollingToolTip" xml:space="preserve">
+    <value>Grafiği kaydırmak için farenin merkezindeki tekerleği ile CTRL tuşunu kullan</value>
+  </data>
+  <data name="ChartStringId.MsgEquallySpacedItemsNotUsable" xml:space="preserve">
+    <value>Eğer idare özellikleri {0}'a kurulmuşsa bu özellik kullanılmış olamaz!</value>
+  </data>
+  <data name="ChartStringId.WizChartTypePageDescription" xml:space="preserve">
+    <value>Kullanmak istediğin grafik tipini seç! Grafik tiplerini gruplara göre süzmek için Drop-Down kutusundaki değerleri kullan!</value>
+  </data>
+  <data name="ChartStringId.WizSeriesViewPageName" xml:space="preserve">
+    <value>Dizi görünümleri</value>
+  </data>
+  <data name="ChartStringId.AxisYDefaultTitle" xml:space="preserve">
+    <value>Değerlerin ekseni</value>
+  </data>
+  <data name="ChartStringId.WizChartTitlesPageDescription" xml:space="preserve">
+    <value>Bir grafiğin içinde görülmüş olan grafik isimlerini ekle</value>
+  </data>
+  <data name="ChartStringId.SvnPolarLine" xml:space="preserve">
+    <value>Kutup Hattı</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectChildSeriesPointOwner" xml:space="preserve">
+    <value>Çocuk dizi noktasının sahibi sıfır olamaz! Ve bunun yanı sıra seri tipinde olmalıdır!</value>
+  </data>
+  <data name="ChartStringId.WizLegendPageName" xml:space="preserve">
+    <value>Gösterge</value>
+  </data>
+  <data name="ChartStringId.TrnConstantLineDeleted" xml:space="preserve">
+    <value>Sabit hat silindi</value>
+  </data>
+  <data name="ChartStringId.VerbEditPalettesDescription" xml:space="preserve">
+    <value>Paletlerin düzenleyicisini Aç!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLineThickness" xml:space="preserve">
+    <value>Hat kalınlığı 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.AxisXDefaultTitle" xml:space="preserve">
+    <value>Argümanların ekseni</value>
+  </data>
+  <data name="ChartStringId.TrnSecondaryAxesXChanged" xml:space="preserve">
+    <value>İkincil eksen X değiştirildi</value>
+  </data>
+  <data name="ChartStringId.MsgSelfRelatedSeriesPoint" xml:space="preserve">
+    <value>Dizi noktası, kendisi ile bir ilişkiye sahip olamaz!</value>
+  </data>
+  <data name="ChartStringId.VerbResetLegendPointOptions" xml:space="preserve">
+    <value>Efsane Noktası opsiyonlarını sıfırla</value>
+  </data>
+  <data name="ChartStringId.MsgNotChartControl" xml:space="preserve">
+    <value>Belirlenmiş obje, bir ChartControl değildir!</value>
+  </data>
+  <data name="ChartStringId.SvnRadarPoint" xml:space="preserve">
+    <value>Radar Noktası</value>
+  </data>
+  <data name="ChartStringId.MsgUnregisterPageError" xml:space="preserve">
+    <value>Bu sayfa hali hazırda kayıtsızdır!</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidFilterCondition" xml:space="preserve">
+    <value>0 kondüsyonu 1 verisine başvuramaz!</value>
+  </data>
+  <data name="ChartStringId.SvnArea" xml:space="preserve">
+    <value>Alan</value>
+  </data>
+  <data name="ChartStringId.TrnChartTitleDeleted" xml:space="preserve">
+    <value>Grafik unvanı Silindi!</value>
+  </data>
+  <data name="ChartStringId.SvnManhattanBar" xml:space="preserve">
+    <value>Manhattan Çubuğu</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleValueScaleType" xml:space="preserve">
+    <value>{0} değer terazi üye tipi {1} seri görünüşü ile uyumsuzdur!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectPadding" xml:space="preserve">
+    <value>Dolgu 0'a eşit ya da 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgChildSeriesPointNotExist" xml:space="preserve">
+    <value>{0} a eşit kimlik ile Çocuk Seri noktası yok!</value>
+  </data>
+  <data name="ChartStringId.MsgNonExistentSeriesViewAxisY" xml:space="preserve">
+    <value>Dizi görüntüsünü Y Eksenine kuramazsınız!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectArrowWidth" xml:space="preserve">
+    <value>Ok genişliği daima 0'dan büyük ve tek sayı olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgWizardNonUniquePageType" xml:space="preserve">
+    <value>{0} tipinin sayfası hali hazırda kayıtlıdır. Daha fazlasını ekleyemezsin!</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidDataSource" xml:space="preserve">
+    <value>Geçersiz veri kaynağı tipi</value>
+  </data>
+  <data name="ChartStringId.MsgSeriesViewNotSupportRelations" xml:space="preserve">
+    <value>Dizi görüntüsü ilişkileri desteklemez!</value>
+  </data>
+  <data name="ChartStringId.MsgNotBelongingChart" xml:space="preserve">
+    <value>Bu kontrol belirlenmiş grafikleri barındırmaz!</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidSortingKey" xml:space="preserve">
+    <value>Sınıflandırma anahtarının değeri 0'a kurulmuş olamaz!</value>
+  </data>
+  <data name="ChartStringId.VerbClearDataSourceDescription" xml:space="preserve">
+    <value>Grafiğin veri kaynağını sil</value>
+  </data>
+  <data name="ChartStringId.VerbSaveLayoutDescription" xml:space="preserve">
+    <value>XML Dosyasına bir grafik kaydet</value>
+  </data>
+  <data name="ChartStringId.MsgLegendPointOptionsSettingRuntimeError" xml:space="preserve">
+    <value>"Efsane Noktası Opsiyonları" özellikleri işlem esnasında kurulamaz!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectImageFormat" xml:space="preserve">
+    <value>Bir grafiği özelleştirilmiş görüntü formatına taşımak imkansızdır!</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleByValueScaleType" xml:space="preserve">
+    <value>Argüman terazi tipi</value>
+  </data>
+  <data name="ChartStringId.PalettePrefix" xml:space="preserve">
+    <value>Palet</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAxisRangeMaxValue" xml:space="preserve">
+    <value>Maximum değer, eksen aralığı objesi için sıfıra kurulmuş olamaz!</value>
+  </data>
+  <data name="ChartStringId.SeriesPrefix" xml:space="preserve">
+    <value>Seri</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidScaleType" xml:space="preserve">
+    <value>Belirlenmiş değeri terazinin iç sunumuna döndürmek geçerli terazi tipine uyumlu değildir</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMarkerStarPointCount" xml:space="preserve">
+    <value>Yıldız noktalarının sayısı 3'ten büyük 101'den küçük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.SvnSpline3D" xml:space="preserve">
+    <value>Eğri Cetvel 3D</value>
+  </data>
+  <data name="ChartStringId.SvnDoughnut3D" xml:space="preserve">
+    <value>Delikli Halka 3D</value>
+  </data>
+  <data name="ChartStringId.MsgDesignTimeOnlySetting" xml:space="preserve">
+    <value>Bu özellik çalışma zamanında kurulmuş olamaz!</value>
+  </data>
+  <data name="ChartStringId.MsgInvalidPaletteName" xml:space="preserve">
+    <value>Lütfen Palet için bir isim belirle!</value>
+  </data>
+  <data name="ChartStringId.VerbLoadLayoutDescription" xml:space="preserve">
+    <value>Bir XML dosyasından bir grafik yükle</value>
+  </data>
+  <data name="ChartStringId.MsgSynchronizePointOptionsSettingRuntimeError" xml:space="preserve">
+    <value>Senkronize nokta opsiyonlarının özellikleri işlem sırasında kurulmuş olamaz!</value>
+  </data>
+  <data name="ChartStringId.PieIncorrectValuesText" xml:space="preserve">
+    <value>Bu görüntü negatifi tasvir etmez. Tüm değerler 0'a büyük-eşit olmalıdır!</value>
+  </data>
+  <data name="ChartStringId.WizDataPageDescription" xml:space="preserve">
+    <value>Veri noktaları girmek için nokta kaydırma işlemni kullan.</value>
+  </data>
+  <data name="ChartStringId.SvnSplineFullStackedArea" xml:space="preserve">
+    <value>%100 istiflenmiş eğri cetvel alanı</value>
+  </data>
+  <data name="ChartStringId.TrnChartTitlesChanged" xml:space="preserve">
+    <value>Grafik unvanları Değiştirildi!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectRangeBarSeriesLabelIndent" xml:space="preserve">
+    <value>Girinti 0'a büyük-eşit olamlıdır</value>
+  </data>
+  <data name="ChartStringId.WizDataFiltersDisabled" xml:space="preserve">
+    <value>(Hiçbir şey)</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkLength" xml:space="preserve">
+    <value>İşaret uzunluğu 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgPaletteNotFound" xml:space="preserve">
+    <value>Grafik {0} isimli bir palet içermemektedir.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectAreaWidth" xml:space="preserve">
+    <value>Alan genişliği 0 'dan daha büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.TrnCustomAxisLabelChanged" xml:space="preserve">
+    <value>Özellşetirilmiş Eksen etiketi değiştirildi</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectNumericPrecision" xml:space="preserve">
+    <value>Hassasiyet 0'a eşit ya da 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesView" xml:space="preserve">
+    <value>Uyuşmaz</value>
+  </data>
+  <data name="ChartStringId.TrnExplodedPoints" xml:space="preserve">
+    <value>Genişletilmiş noktalar değiştirildi</value>
+  </data>
+  <data name="ChartStringId.WizAutoCreatedSeries" xml:space="preserve">
+    <value>Otomatik Yaratılmış Seri</value>
+  </data>
+  <data name="ChartStringId.VerbPopulate" xml:space="preserve">
+    <value>Yerleş</value>
+  </data>
+  <data name="ChartStringId.MsgPaletteDoubleClickToEdit" xml:space="preserve">
+    <value>… Düzenlemek için çift tık yapınız</value>
+  </data>
+  <data name="ChartStringId.CloseValueMember" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="ChartStringId.WizDataFiltersEntered" xml:space="preserve">
+    <value>{0} veri süzgeci</value>
+  </data>
+  <data name="ChartStringId.LowValueMember" xml:space="preserve">
+    <value>Düşük</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripConstructorParameters" xml:space="preserve">
+    <value>Minimum ve maksimum şerit değerleri aynı olamaz!</value>
+  </data>
+  <data name="ChartStringId.SvnPolarArea" xml:space="preserve">
+    <value>Kutup Alanı</value>
+  </data>
+  <data name="ChartStringId.SvnSpline3DArea" xml:space="preserve">
+    <value>Eğri Cetvel Alanı 3D</value>
+  </data>
+  <data name="ChartStringId.MsgIncompatibleByViewType" xml:space="preserve">
+    <value>Görüntü tipi</value>
+  </data>
+  <data name="ChartStringId.AutocreatedSeriesName" xml:space="preserve">
+    <value>Otomatik Yaratılmış Seri</value>
+  </data>
+  <data name="ChartStringId.SvnPie" xml:space="preserve">
+    <value>Pasta</value>
+  </data>
+  <data name="ChartStringId.SvnDoughnut" xml:space="preserve">
+    <value>Delikli Halka</value>
+  </data>
+  <data name="ChartStringId.SvnOverlappedRangeBar" xml:space="preserve">
+    <value>Aralık Çubuğu</value>
+  </data>
+  <data name="ChartStringId.MsgEmptyArrayOfValues" xml:space="preserve">
+    <value>Değerlerin sıralanışı boştur!</value>
+  </data>
+  <data name="ChartStringId.WizBackImageFileNameFilter" xml:space="preserve">
+    <value>Görüntü dosyaları(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png|All files(*.*)|*.*</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectDataAdapter" xml:space="preserve">
+    <value>{0} objesi, bir veri bağdaştırıcısı değildir.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectTickmarkMinorThickness" xml:space="preserve">
+    <value>Küçük işaretçinin kalınlığı 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.TrnDataFiltersChanged" xml:space="preserve">
+    <value>Veri süzgeci değiştirildi</value>
+  </data>
+  <data name="ChartStringId.DefaultWizardPageLabel" xml:space="preserve">
+    <value>Sayfa Sihirbazı</value>
+  </data>
+  <data name="ChartStringId.MsgDenyChangeSeriesPointAgument" xml:space="preserve">
+    <value>Seri noktasının argümanını elle değiştiremezsiniz! Çünkü grafik veriye bağlanmıştır.</value>
+  </data>
+  <data name="ChartStringId.IODeleteAxis" xml:space="preserve">
+    <value>Önceki Eksen Silinemez! Eğer onu saklamak istersen, Onun görünmez özelliğini 'Hatalı' durumuna getir.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectValueDataMemberCount" xml:space="preserve">
+    <value>Geçerli seri görüntüleri için {0} değer veri üyelerini belirlemek gereklidir</value>
+  </data>
+  <data name="ChartStringId.TrnSeriesTitleDeleted" xml:space="preserve">
+    <value>Dizi unvanı silindi</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectZoomPercent" xml:space="preserve">
+    <value>zoom yüzdesi 0'dan büyük 0'a küçük-eşit olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.WizDiagramPageDescription" xml:space="preserve">
+    <value>Diyagramın özelliklerini uyarla</value>
+  </data>
+  <data name="ChartStringId.WizAppearancePageName" xml:space="preserve">
+    <value>Görünüş</value>
+  </data>
+  <data name="ChartStringId.MsgDenyChangeSeriesPointValue" xml:space="preserve">
+    <value>Seri noktasının değerini elle değiştiremezsiniz! Çünkü grafik veriye bağlanmıştır.</value>
+  </data>
+  <data name="ChartStringId.MsgEmptyArgument" xml:space="preserve">
+    <value>Bir argüman boş olamaz!</value>
+  </data>
+  <data name="ChartStringId.SvnSplineStackedArea" xml:space="preserve">
+    <value>İstiflenmiş eğri cetvel alanı</value>
+  </data>
+  <data name="ChartStringId.SvnSideBySideBar" xml:space="preserve">
+    <value>Çubuk</value>
+  </data>
+  <data name="ChartStringId.MsgMinMaxDifferentTypes" xml:space="preserve">
+    <value>Minimum ve maksimum değer tipleri eşleşmez!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectReductionColorValue" xml:space="preserve">
+    <value>Azaltma renk değeri boş olamaz!</value>
+  </data>
+  <data name="ChartStringId.StyleColorNumber" xml:space="preserve">
+    <value>Renk {0}</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectUseImageUrlProperty" xml:space="preserve">
+    <value>GörüntüURL özellikleri sadece WebChartControl için kullanılamaz. Lütfen, Görüntü özelliklerini kullan!</value>
+  </data>
+  <data name="ChartStringId.TrnSecondaryAxesYChanged" xml:space="preserve">
+    <value>İkincil eksen Y değiştirildi</value>
+  </data>
+  <data name="ChartStringId.SvnLine" xml:space="preserve">
+    <value>Hat</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectStripLimitAxisValue" xml:space="preserve">
+    <value>Eksen Değer özelliği, şerit limit objesi için o'a kurulu olamaz!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBarWidth" xml:space="preserve">
+    <value>Çubuk genişliği 0'dan büyük olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.IncompatibleSeriesHeader" xml:space="preserve">
+    <value>Bu Seri Uyuşmaz</value>
+  </data>
+  <data name="ChartStringId.VerbAboutDescription" xml:space="preserve">
+    <value>Ekstra Grafiklerdeki basit bilgileri gör!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectLineWidth" xml:space="preserve">
+    <value>Hat genişliği 0'dan büyük olmalıdır</value>
+  </data>
+  <data name="ChartStringId.WizLegendPageDescription" xml:space="preserve">
+    <value>Göstergenin özelliklerini uyarla</value>
+  </data>
+  <data name="ChartStringId.MsgInternalPropertyChangeError" xml:space="preserve">
+    <value>Bu özellik sadece iç kullanım için tasarlanmıştır. O değerleri değiştirmeye izinli değilsiniz!</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectConstantLineAxisValue" xml:space="preserve">
+    <value>Eksen değeri Sabit Hat objesi için sıfıra kurulmuş olamaz!</value>
+  </data>
+  <data name="ChartStringId.DefaultMinValue" xml:space="preserve">
+    <value>En Az</value>
+  </data>
+  <data name="ChartStringId.ValueMember" xml:space="preserve">
+    <value>Değer</value>
+  </data>
+  <data name="ChartStringId.TrnPalettesChanged" xml:space="preserve">
+    <value>Değiştirilmiş paletler</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectBorderThickness" xml:space="preserve">
+    <value>Sınır genişliği 0'dan büyük olmalıdır.</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectMinorCount" xml:space="preserve">
+    <value>küçük hesap numarası 0'dan büyük 100'den az olmalıdır</value>
+  </data>
+  <data name="ChartStringId.MsgIncorrectCustomAxisLabelAxisValue" xml:space="preserve">
+    <value>Eksen değeri Alışveriş eksen etiketi objesi için sıfıra kurulmuş olamaz!</value>
+  </data>
+</root>

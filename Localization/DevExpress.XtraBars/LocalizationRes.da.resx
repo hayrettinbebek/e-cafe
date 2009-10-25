@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarString.AddOrRemove">
+    <value>Tilføj eller fjern &amp;knapper</value>
+  </data>
+  <data name="BarString.ResetBar">
+    <value>Er du sikker på at du vil nulstille ændringer i værktøjslinjen '{0}'?</value>
+  </data>
+  <data name="BarString.ResetBarCaption">
+    <value>Tilpas</value>
+  </data>
+  <data name="BarString.ResetButton">
+    <value>&amp;Nulstil værktøjslinje</value>
+  </data>
+  <data name="BarString.CustomizeButton">
+    <value>&amp;Tilpas ...</value>
+  </data>
+  <data name="BarString.ToolBarMenu">
+    <value>&amp;Nulstil$&amp;Fjern$!N&amp;avn$!Standard&amp;lt stil$&amp;Kun tekst (altid)$Kun &amp;Tekst (i Menuer)$Billed &amp;og tekst$!Start en &amp;gruppe$&amp;Synlig$&amp;Brugt sidst</value>
+  </data>
+	<data name="BarString.NewToolbarCustomNameFormat">
+		<value>Brugerdefineret {0}</value>
+	</data>
+  <data name="BarString.NewToolbarCaption">
+    <value>Ny værktøjslinje</value>
+  </data>
+  <data name="BarString.RenameToolbarCaption">
+    <value>Omdøb værktøjsline</value>
+  </data>
+  <data name="BarString.CustomizeWindowCaption">
+    <value>Tilpasning</value>
+  </data>
+  <data name="BarString.MenuAnimationSystem">
+    <value>(Standard)</value>
+  </data>
+  <data name="BarString.MenuAnimationNone">
+    <value>Ingen</value>
+  </data>
+  <data name="BarString.MenuAnimationSlide">
+    <value>Glidende</value>
+  </data>
+  <data name="BarString.MenuAnimationFade">
+    <value>Udton</value>
+  </data>
+  <data name="BarString.MenuAnimationUnfold">
+    <value>Udfold</value>
+  </data>
+  <data name="BarString.MenuAnimationRandom">
+    <value>Tilfældig</value>
+  </data>
+  <data name="BarString.ToolbarNameCaption">
+    <value>&amp;Navn på værktøjslinje:</value>
+  </data>
+	<data name="BarString.RibbonToolbarBelow">
+		<value>&amp;Vis Lige-ved-hånden menuen under båndet</value>
+	</data>
+	<data name="BarString.RibbonToolbarAbove">
+		<value>&amp;Vis Lige-ved-hånden menuen over båndet</value>
+	</data>
+	<data name="BarString.RibbonToolbarRemove">
+		<value>&amp;Remove from Quick Access Toolbar</value>
+	</data>
+	<data name="BarString.RibbonToolbarAdd">
+		<value>&amp;Add to Quick Access Toolbar</value>
+	</data>
+  <data name="BarString.RibbonToolbarMinimizeRibbon">
+    <value>Mi&amp;nimize the Ribbon</value>
+  </data>
+  <data name="BarString.RibbonGalleryFilter">
+		<value>Alle grupper</value>
+	</data>
+	<data name="BarString.RibbonGalleryFilterNone">
+		<value>Ingen</value>
+	</data>
+  <data name="BarString.NewToolbarCustomNameFormat">
+    <value>Tilpas {0}</value>
+  </data>
+</root>
