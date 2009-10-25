@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccStringId.BarLinkEdit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="AccStringId.NavBarGroupExpand" xml:space="preserve">
+    <value>拡張</value>
+  </data>
+  <data name="AccStringId.DescScrollLineUp" xml:space="preserve">
+    <value>行を上の位置に一行移動します</value>
+  </data>
+  <data name="AccStringId.SpinRightButton" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="AccStringId.GridColumnSortAscending" xml:space="preserve">
+    <value>昇順ソート</value>
+  </data>
+  <data name="AccStringId.GridRowActivate" xml:space="preserve">
+    <value>有効</value>
+  </data>
+  <data name="AccStringId.GridCardCollapse" xml:space="preserve">
+    <value>コラプス</value>
+  </data>
+  <data name="AccStringId.BarLinkCaption" xml:space="preserve">
+    <value>アイテム</value>
+  </data>
+  <data name="AccStringId.DescScrollAreaRight" xml:space="preserve">
+    <value>列を右の位置に数列移動します</value>
+  </data>
+  <data name="AccStringId.DescScrollAreaUp" xml:space="preserve">
+    <value>行を上の位置に数行移動します</value>
+  </data>
+  <data name="AccStringId.GridCellFocus" xml:space="preserve">
+    <value>フォーカス</value>
+  </data>
+  <data name="AccStringId.NameScrollLineUp" xml:space="preserve">
+    <value>ライン アップ</value>
+  </data>
+  <data name="AccStringId.NameScrollAreaUp" xml:space="preserve">
+    <value>ページ アップ</value>
+  </data>
+  <data name="AccStringId.NameScrollColumnLeft" xml:space="preserve">
+    <value>列右</value>
+  </data>
+  <data name="AccStringId.DescScrollColumnLeft" xml:space="preserve">
+    <value>列を左の位置に一列移動します</value>
+  </data>
+  <data name="AccStringId.GridColumnSortNone" xml:space="preserve">
+    <value>ソート削除</value>
+  </data>
+  <data name="AccStringId.GridRow" xml:space="preserve">
+    <value>行 {0}</value>
+  </data>
+  <data name="AccStringId.GridHeaderPanel" xml:space="preserve">
+    <value>ヘッダー パネル</value>
+  </data>
+  <data name="AccStringId.NavBarItemClick" xml:space="preserve">
+    <value>押す</value>
+  </data>
+  <data name="AccStringId.GridDataRowCollapse" xml:space="preserve">
+    <value>コラプス詳細</value>
+  </data>
+  <data name="AccStringId.GridCellEdit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="AccStringId.GridRowExpand" xml:space="preserve">
+    <value>展開</value>
+  </data>
+  <data name="AccStringId.NameScrollAreaLeft" xml:space="preserve">
+    <value>ページ左</value>
+  </data>
+  <data name="AccStringId.NameScrollAreaDown" xml:space="preserve">
+    <value>ページ ダウン</value>
+  </data>
+  <data name="AccStringId.SpinDownButton" xml:space="preserve">
+    <value>ダウン</value>
+  </data>
+  <data name="AccStringId.DescScrollAreaLeft" xml:space="preserve">
+    <value>列を左の位置に数列移動します</value>
+  </data>
+  <data name="AccStringId.DescScrollAreaDown" xml:space="preserve">
+    <value>行を下の位置に数行移動します</value>
+  </data>
+  <data name="AccStringId.GridFilterRow" xml:space="preserve">
+    <value>フィルタ行</value>
+  </data>
+  <data name="AccStringId.GridCell" xml:space="preserve">
+    <value>セル</value>
+  </data>
+  <data name="AccStringId.NameScrollAreaRight" xml:space="preserve">
+    <value>ページ右</value>
+  </data>
+  <data name="AccStringId.MouseDoubleClick" xml:space="preserve">
+    <value>ダブル クリック</value>
+  </data>
+  <data name="AccStringId.DescScrollHorzIndicator" xml:space="preserve">
+    <value>現在の列を直接ドラックして位置を変更できます</value>
+  </data>
+  <data name="AccStringId.BarLinkClick" xml:space="preserve">
+    <value>押す</value>
+  </data>
+  <data name="AccStringId.OpenKeyboardShortcut" xml:space="preserve">
+    <value>Alt+Down</value>
+  </data>
+  <data name="AccStringId.GridRowCollapse" xml:space="preserve">
+    <value>コラプス</value>
+  </data>
+  <data name="AccStringId.ActionPress" xml:space="preserve">
+    <value>押す</value>
+  </data>
+  <data name="AccStringId.DescScrollVertIndicator" xml:space="preserve">
+    <value>現在の行を直接ドラックして位置を変更できます</value>
+  </data>
+  <data name="AccStringId.GridDataPanel" xml:space="preserve">
+    <value>データ パネル</value>
+  </data>
+  <data name="AccStringId.NameScrollColumnRight" xml:space="preserve">
+    <value>列左</value>
+  </data>
+  <data name="AccStringId.NavBarScrollDown" xml:space="preserve">
+    <value>スクロール ダウン</value>
+  </data>
+  <data name="AccStringId.CheckEditCheck" xml:space="preserve">
+    <value>チェック</value>
+  </data>
+  <data name="AccStringId.BarLinkStatic" xml:space="preserve">
+    <value>固定</value>
+  </data>
+  <data name="AccStringId.GridNewItemRow" xml:space="preserve">
+    <value>新規アイテム行</value>
+  </data>
+  <data name="AccStringId.SpinBox" xml:space="preserve">
+    <value>スピナー</value>
+  </data>
+  <data name="AccStringId.DescScrollLineDown" xml:space="preserve">
+    <value>行を下の位置に一行移動します</value>
+  </data>
+  <data name="AccStringId.NavBarScrollUp" xml:space="preserve">
+    <value>スクロール アップ</value>
+  </data>
+  <data name="AccStringId.SpinUpButton" xml:space="preserve">
+    <value>アップ</value>
+  </data>
+  <data name="AccStringId.BarDockControlTop" xml:space="preserve">
+    <value>ドック上</value>
+  </data>
+  <data name="AccStringId.BarDockControlRight" xml:space="preserve">
+    <value>ドッグ右</value>
+  </data>
+  <data name="AccStringId.BarLinkMenuClose" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="AccStringId.GridCardExpand" xml:space="preserve">
+    <value>拡張</value>
+  </data>
+  <data name="AccStringId.BarDockControlBottom" xml:space="preserve">
+    <value>ドック下</value>
+  </data>
+  <data name="AccStringId.TabSwitch" xml:space="preserve">
+    <value>スイッチ</value>
+  </data>
+  <data name="AccStringId.NameScroll" xml:space="preserve">
+    <value>スクロール バー</value>
+  </data>
+  <data name="AccStringId.SpinLeftButton" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="AccStringId.CheckEditUncheck" xml:space="preserve">
+    <value>アンチェック</value>
+  </data>
+  <data name="AccStringId.DescScrollColumnRight" xml:space="preserve">
+    <value>列を右の位置に一列移動します</value>
+  </data>
+  <data name="AccStringId.GridDataRowExpand" xml:space="preserve">
+    <value>詳細拡張</value>
+  </data>
+  <data name="AccStringId.BarDockControlLeft" xml:space="preserve">
+    <value>ドック左</value>
+  </data>
+  <data name="AccStringId.BarLinkMenuOpen" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="AccStringId.NameScrollIndicator" xml:space="preserve">
+    <value>ポジション</value>
+  </data>
+  <data name="AccStringId.GridColumnSortDescending" xml:space="preserve">
+    <value>降順ソート</value>
+  </data>
+  <data name="AccStringId.NavBarGroupCollapse" xml:space="preserve">
+    <value>コラプス</value>
+  </data>
+  <data name="AccStringId.ButtonClose" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="AccStringId.ButtonOpen" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="AccStringId.ButtonPush" xml:space="preserve">
+    <value>押す</value>
+  </data>
+  <data name="AccStringId.NameScrollLineDown" xml:space="preserve">
+    <value>ライン ダウン</value>
+  </data>
+</root>

@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccStringId.ActionPress">
+    <value>Druk</value>
+  </data>
+  <data name="AccStringId.NameScroll">
+    <value>scrollbalk</value>
+  </data>
+  <data name="AccStringId.NameScrollIndicator">
+    <value>Positie</value>
+  </data>
+  <data name="AccStringId.NameScrollLineUp">
+    <value>Regel omhoog</value>
+  </data>
+  <data name="AccStringId.NameScrollLineDown">
+    <value>Regel naar beneden</value>
+  </data>
+  <data name="AccStringId.NameScrollColumnLeft">
+    <value>Kolom naar links</value>
+  </data>
+  <data name="AccStringId.NameScrollColumnRight">
+    <value>Kolom naar rechts</value>
+  </data>
+  <data name="AccStringId.NameScrollAreaUp">
+    <value>Page Up</value>
+  </data>
+  <data name="AccStringId.NameScrollAreaDown">
+    <value>Page Down</value>
+  </data>
+  <data name="AccStringId.NameScrollAreaLeft">
+    <value>Page Left</value>
+  </data>
+  <data name="AccStringId.NameScrollAreaRight">
+    <value>Page Right</value>
+  </data>
+  <data name="AccStringId.DescScrollLineUp">
+    <value>Verplaatst de verticale positie een regel naar boven</value>
+  </data>
+  <data name="AccStringId.DescScrollLineDown">
+    <value>Verplaatst de verticale positie een regel naar beneden</value>
+  </data>
+  <data name="AccStringId.DescScrollAreaUp">
+    <value>Verplaatst de verticale positie een aantal regels naar boven</value>
+  </data>
+  <data name="AccStringId.DescScrollAreaDown">
+    <value>Verplaatst de verticale positie een aantal regels naar beneden</value>
+  </data>
+  <data name="AccStringId.DescScrollVertIndicator">
+    <value>Geeft de huidige verticale positie aan, en kan worden gesleept om de positie direct te wijzigen</value>
+  </data>
+  <data name="AccStringId.DescScrollColumnLeft">
+    <value>Verplaatst de horizontale positie een kolom naar links</value>
+  </data>
+  <data name="AccStringId.DescScrollColumnRight">
+    <value>Verplaatst de horizontale positie een kolom naar rechts</value>
+  </data>
+  <data name="AccStringId.DescScrollAreaLeft">
+    <value>Verplaatst de horizontale positie een aantal kolommen naar links</value>
+  </data>
+  <data name="AccStringId.DescScrollAreaRight">
+    <value>Verplaatst de horizontale positie een aantal kolommen naar rechts</value>
+  </data>
+  <data name="AccStringId.DescScrollHorzIndicator">
+    <value>Geeft de huidige horizontale positie aan, en kan worden gesleept om de positie direct te wijzigen</value>
+  </data>
+  <data name="AccStringId.ButtonPush">
+    <value>Druk</value>
+  </data>
+  <data name="AccStringId.ButtonOpen">
+    <value>Open</value>
+  </data>
+  <data name="AccStringId.ButtonClose">
+    <value>Sluit</value>
+  </data>
+  <data name="AccStringId.MouseDoubleClick">
+    <value>Dubbelklik</value>
+  </data>
+  <data name="AccStringId.OpenKeyboardShortcut">
+    <value>Alt+Omlaag</value>
+  </data>
+  <data name="AccStringId.CheckEditCheck">
+    <value>Selecteer</value>
+  </data>
+  <data name="AccStringId.CheckEditUncheck">
+    <value>Deselecteer</value>
+  </data>
+  <data name="AccStringId.TabSwitch">
+    <value>Wissel</value>
+  </data>
+  <data name="AccStringId.SpinBox">
+    <value>Spinner</value>
+  </data>
+  <data name="AccStringId.SpinUpButton">
+    <value>Omhoog</value>
+  </data>
+  <data name="AccStringId.SpinDownButton">
+    <value>Omlaag</value>
+  </data>
+  <data name="AccStringId.SpinLeftButton">
+    <value>Links</value>
+  </data>
+  <data name="AccStringId.SpinRightButton">
+    <value>Rechts</value>
+  </data>
+  <data name="AccStringId.GridNewItemRow">
+    <value>Nieuw item rij</value>
+  </data>
+  <data name="AccStringId.GridFilterRow">
+    <value>Filter rij</value>
+  </data>
+  <data name="AccStringId.GridHeaderPanel">
+    <value>Kopvak</value>
+  </data>
+  <data name="AccStringId.GridDataPanel">
+    <value>Gegevensvak</value>
+  </data>
+  <data name="AccStringId.GridCell">
+    <value>cel</value>
+  </data>
+  <data name="AccStringId.GridRow">
+    <value>Rij {0}</value>
+  </data>
+  <data name="AccStringId.GridRowExpand">
+    <value>Uitklappen</value>
+  </data>
+  <data name="AccStringId.GridRowCollapse">
+    <value>Inklappen</value>
+  </data>
+  <data name="AccStringId.GridCardExpand">
+    <value>Uitklappen</value>
+  </data>
+  <data name="AccStringId.GridCardCollapse">
+    <value>Inklappen</value>
+  </data>
+  <data name="AccStringId.GridRowActivate">
+    <value>Activeer</value>
+  </data>
+  <data name="AccStringId.GridCellEdit">
+    <value>Bewerken</value>
+  </data>
+  <data name="AccStringId.GridCellFocus">
+    <value>Focus</value>
+  </data>
+  <data name="AccStringId.GridDataRowExpand">
+    <value>Klap detail uit</value>
+  </data>
+  <data name="AccStringId.GridDataRowCollapse">
+    <value>Klap details in</value>
+  </data>
+  <data name="AccStringId.GridColumnSortAscending">
+    <value>Sorteer oplopend</value>
+  </data>
+  <data name="AccStringId.GridColumnSortDescending">
+    <value>Sorteer aflopend</value>
+  </data>
+  <data name="AccStringId.GridColumnSortNone">
+    <value>Sortering opheffen</value>
+  </data>
+  <data name="AccStringId.BarLinkCaption">
+    <value>Item</value>
+  </data>
+  <data name="AccStringId.BarLinkClick">
+    <value>Druk</value>
+  </data>
+  <data name="AccStringId.BarLinkMenuOpen">
+    <value>Open</value>
+  </data>
+  <data name="AccStringId.BarLinkMenuClose">
+    <value>Sluit</value>
+  </data>
+  <data name="AccStringId.BarLinkStatic">
+    <value>Statisch</value>
+  </data>
+  <data name="AccStringId.BarLinkEdit">
+    <value>Bewerk</value>
+  </data>
+  <data name="AccStringId.BarDockControlTop">
+    <value>Dock Bovenkant</value>
+  </data>
+  <data name="AccStringId.BarDockControlLeft">
+    <value>Dock Links</value>
+  </data>
+  <data name="AccStringId.BarDockControlBottom">
+    <value>Dock Onderkant</value>
+  </data>
+  <data name="AccStringId.BarDockControlRight">
+    <value>Dock Rechts</value>
+  </data>
+  <data name="AccStringId.NavBarGroupExpand">
+    <value>Uitklappen</value>
+  </data>
+  <data name="AccStringId.NavBarGroupCollapse">
+    <value>Inklappen</value>
+  </data>
+  <data name="AccStringId.NavBarItemClick">
+    <value>Druk</value>
+  </data>
+  <data name="AccStringId.NavBarScrollUp">
+    <value>Scroll omhoog</value>
+  </data>
+  <data name="AccStringId.NavBarScrollDown">
+    <value>Scroll omlaag</value>
+  </data>
+  <data name="AccStringId.TreeListNodeCollapse">
+    <value>Inklappen</value>
+  </data>
+  <data name="AccStringId.TreeListNodeExpand">
+    <value>Uitklappen</value>
+  </data>
+  <data name="AccStringId.TreeListNode">
+    <value>Node</value>
+  </data>
+  <data name="AccStringId.TreeListNodeCell">
+    <value>cel</value>
+  </data>
+  <data name="AccStringId.TreeListColumnSortAscending">
+    <value>Sorteer oplopend</value>
+  </data>
+  <data name="AccStringId.TreeListColumnSortDescending">
+    <value>Sorteer aflopend</value>
+  </data>
+  <data name="AccStringId.TreeListColumnSortNone">
+    <value>Sortering opheffen</value>
+  </data>
+  <data name="AccStringId.TreeListHeaderPanel">
+    <value>Kopvak</value>
+  </data>
+  <data name="AccStringId.TreeListDataPanel">
+    <value>Gegevensvak</value>
+  </data>
+  <data name="AccStringId.TreeListCellEdit">
+    <value>Bewerk</value>
+  </data>
+  <data name="AccStringId.TreelistRowActivate">
+    <value>Activeren</value>
+  </data>
+  <data name="AccStringId.ScrollableControlDefaultAction">
+    <value>Standaard actie</value>
+  </data>
+  <data name="AccStringId.ScrollableControlDescription">
+    <value>ScrollableControl</value>
+  </data>
+</root>
