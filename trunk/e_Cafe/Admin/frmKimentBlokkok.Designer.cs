@@ -29,380 +29,405 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TIPUS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            this.advBandedGridView2 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colCIKK_MEGNEVEZES = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colMENNYISEG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colEGYSEGAR = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colNETTO = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colAFA_KOD = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colAFA = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colBRUTTO = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colKALK_MENNYISEG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colKEDVEZMENY1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.eCafeSzamlakorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eSZLA = new e_Cafe.SQL.DataSets.eCafe_Szamlakor();
+            this.advBandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colSZAMLA_SORSZAM = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colSZAMLA_DATUMA = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colP_NEV = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colP_NEV2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colOSSZESEN_NETTO = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colOSSZESEN_BRUTTO = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colEV = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colHO = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colNAP = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colSZAMLA_FEJ_ID = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.button6 = new System.Windows.Forms.Button();
-            this.chkMind = new System.Windows.Forms.CheckBox();
-            this.cIKKMEGNEVEZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mENNYISEGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eGYSEGARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nETTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aFADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bRUTTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIKKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rENDELSORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aFAKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mEGJEGYZESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fEJIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tETELIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szamlatetelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sZAMLASORSZAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sZAMLADATUMADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fEJIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pARTNERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rENDELESIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kEDVEZMENYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fIZETESIMODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uSERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szamlaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.szamlatetelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.szamlaBindingSource)).BeginInit();
+            this.szfTA = new e_Cafe.SQL.DataSets.eCafe_SzamlakorTableAdapters.SZAMLA_FEJTableAdapter();
+            this.sztTA = new e_Cafe.SQL.DataSets.eCafe_SzamlakorTableAdapters.SZAMLA_TETELTableAdapter();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCafeSzamlakorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSZLA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // advBandedGridView2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Lekérdezés adott könyvelési napra";
+            this.advBandedGridView2.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand2});
+            this.advBandedGridView2.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.colCIKK_MEGNEVEZES,
+            this.colMENNYISEG,
+            this.colEGYSEGAR,
+            this.colNETTO,
+            this.colAFA,
+            this.colBRUTTO,
+            this.colAFA_KOD,
+            this.colKALK_MENNYISEG,
+            this.colKEDVEZMENY1});
+            this.advBandedGridView2.GridControl = this.gridControl1;
+            this.advBandedGridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NETTO", null, ""),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BRUTTO", null, "")});
+            this.advBandedGridView2.Name = "advBandedGridView2";
+            this.advBandedGridView2.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.advBandedGridView2.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.advBandedGridView2.OptionsBehavior.Editable = false;
+            this.advBandedGridView2.OptionsDetail.EnableDetailToolTip = true;
+            this.advBandedGridView2.OptionsMenu.ShowGroupSummaryEditorItem = true;
+            this.advBandedGridView2.OptionsView.ShowFooter = true;
+            this.advBandedGridView2.ViewCaption = "Tételek";
             // 
-            // dataGridView1
+            // gridBand2
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sZAMLASORSZAMDataGridViewTextBoxColumn,
-            this.sZAMLADATUMADataGridViewTextBoxColumn,
-            this.TIPUS,
-            this.fEJIDDataGridViewTextBoxColumn,
-            this.pARTNERIDDataGridViewTextBoxColumn,
-            this.rENDELESIDDataGridViewTextBoxColumn,
-            this.kEDVEZMENYDataGridViewTextBoxColumn,
-            this.fIZETESIMODDataGridViewTextBoxColumn,
-            this.eVDataGridViewTextBoxColumn,
-            this.hODataGridViewTextBoxColumn,
-            this.nAPDataGridViewTextBoxColumn,
-            this.uSERIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.szamlaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(357, 501);
-            this.dataGridView1.TabIndex = 2;
+            this.gridBand2.Caption = "Tételek";
+            this.gridBand2.Columns.Add(this.colCIKK_MEGNEVEZES);
+            this.gridBand2.Columns.Add(this.colMENNYISEG);
+            this.gridBand2.Columns.Add(this.colEGYSEGAR);
+            this.gridBand2.Columns.Add(this.colNETTO);
+            this.gridBand2.Columns.Add(this.colAFA_KOD);
+            this.gridBand2.Columns.Add(this.colAFA);
+            this.gridBand2.Columns.Add(this.colBRUTTO);
+            this.gridBand2.Columns.Add(this.colKALK_MENNYISEG);
+            this.gridBand2.Columns.Add(this.colKEDVEZMENY1);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.Width = 715;
             // 
-            // TIPUS
+            // colCIKK_MEGNEVEZES
             // 
-            this.TIPUS.DataPropertyName = "TIPUS";
-            this.TIPUS.HeaderText = "Típus";
-            this.TIPUS.Name = "TIPUS";
-            this.TIPUS.ReadOnly = true;
-            this.TIPUS.Width = 90;
+            this.colCIKK_MEGNEVEZES.Caption = "Cikk megnevezés";
+            this.colCIKK_MEGNEVEZES.FieldName = "CIKK_MEGNEVEZES";
+            this.colCIKK_MEGNEVEZES.Name = "colCIKK_MEGNEVEZES";
+            this.colCIKK_MEGNEVEZES.Visible = true;
+            this.colCIKK_MEGNEVEZES.Width = 189;
             // 
-            // dataGridView2
+            // colMENNYISEG
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cIKKMEGNEVEZESDataGridViewTextBoxColumn,
-            this.mENNYISEGDataGridViewTextBoxColumn,
-            this.eGYSEGARDataGridViewTextBoxColumn,
-            this.nETTODataGridViewTextBoxColumn,
-            this.aFADataGridViewTextBoxColumn,
-            this.bRUTTODataGridViewTextBoxColumn,
-            this.cIKKDataGridViewTextBoxColumn,
-            this.rENDELSORDataGridViewTextBoxColumn,
-            this.aFAKODDataGridViewTextBoxColumn,
-            this.mEGJEGYZESDataGridViewTextBoxColumn,
-            this.fEJIDDataGridViewTextBoxColumn1,
-            this.tETELIDDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.szamlatetelBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(378, 50);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(728, 501);
-            this.dataGridView2.TabIndex = 3;
+            this.colMENNYISEG.Caption = "Mennyiség";
+            this.colMENNYISEG.DisplayFormat.FormatString = "# ###";
+            this.colMENNYISEG.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colMENNYISEG.FieldName = "MENNYISEG";
+            this.colMENNYISEG.Name = "colMENNYISEG";
+            this.colMENNYISEG.Visible = true;
+            this.colMENNYISEG.Width = 85;
             // 
-            // dtpFrom
+            // colEGYSEGAR
             // 
-            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom.Location = new System.Drawing.Point(82, 25);
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(102, 20);
-            this.dtpFrom.TabIndex = 4;
-            this.dtpFrom.ValueChanged += new System.EventHandler(this.DatumSelect);
+            this.colEGYSEGAR.Caption = "Egységár";
+            this.colEGYSEGAR.DisplayFormat.FormatString = "c";
+            this.colEGYSEGAR.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colEGYSEGAR.FieldName = "EGYSEGAR";
+            this.colEGYSEGAR.Name = "colEGYSEGAR";
+            this.colEGYSEGAR.Visible = true;
+            this.colEGYSEGAR.Width = 87;
             // 
-            // dtpTo
+            // colNETTO
             // 
-            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo.Location = new System.Drawing.Point(221, 25);
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(102, 20);
-            this.dtpTo.TabIndex = 5;
-            this.dtpTo.ValueChanged += new System.EventHandler(this.DatumSelect);
+            this.colNETTO.Caption = "Nettó";
+            this.colNETTO.DisplayFormat.FormatString = "c";
+            this.colNETTO.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colNETTO.FieldName = "NETTO";
+            this.colNETTO.Name = "colNETTO";
+            this.colNETTO.SummaryItem.DisplayFormat = "Nettó={c}";
+            this.colNETTO.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colNETTO.Visible = true;
+            this.colNETTO.Width = 100;
             // 
-            // label1
+            // colAFA_KOD
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(190, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "-Tól";
+            this.colAFA_KOD.Caption = "Áfa kód";
+            this.colAFA_KOD.FieldName = "AFA_KOD";
+            this.colAFA_KOD.Name = "colAFA_KOD";
+            this.colAFA_KOD.Visible = true;
+            this.colAFA_KOD.Width = 50;
             // 
-            // label3
+            // colAFA
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(329, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "-ig";
+            this.colAFA.Caption = "Áfa";
+            this.colAFA.DisplayFormat.FormatString = "c";
+            this.colAFA.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colAFA.FieldName = "AFA";
+            this.colAFA.Name = "colAFA";
+            this.colAFA.Visible = true;
+            this.colAFA.Width = 94;
+            // 
+            // colBRUTTO
+            // 
+            this.colBRUTTO.Caption = "Bruttó";
+            this.colBRUTTO.DisplayFormat.FormatString = "c";
+            this.colBRUTTO.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colBRUTTO.FieldName = "BRUTTO";
+            this.colBRUTTO.Name = "colBRUTTO";
+            this.colBRUTTO.SummaryItem.DisplayFormat = "Bruttó={c}";
+            this.colBRUTTO.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colBRUTTO.Visible = true;
+            this.colBRUTTO.Width = 110;
+            // 
+            // colKALK_MENNYISEG
+            // 
+            this.colKALK_MENNYISEG.FieldName = "KALK_MENNYISEG";
+            this.colKALK_MENNYISEG.Name = "colKALK_MENNYISEG";
+            this.colKALK_MENNYISEG.Width = 93;
+            // 
+            // colKEDVEZMENY1
+            // 
+            this.colKEDVEZMENY1.FieldName = "KEDVEZMENY";
+            this.colKEDVEZMENY1.Name = "colKEDVEZMENY1";
+            this.colKEDVEZMENY1.Width = 93;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataMember = "SZAMLA_FEJ";
+            this.gridControl1.DataSource = this.eCafeSzamlakorBindingSource;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            gridLevelNode2.LevelTemplate = this.advBandedGridView2;
+            gridLevelNode2.RelationName = "SZAMLA_FEJ_SZAMLA_TETEL";
+            this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode2});
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.advBandedGridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
+            this.gridControl1.ShowOnlyPredefinedDetails = true;
+            this.gridControl1.Size = new System.Drawing.Size(892, 513);
+            this.gridControl1.TabIndex = 22;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.advBandedGridView1,
+            this.advBandedGridView2});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            // 
+            // eCafeSzamlakorBindingSource
+            // 
+            this.eCafeSzamlakorBindingSource.DataSource = this.eSZLA;
+            this.eCafeSzamlakorBindingSource.Position = 0;
+            this.eCafeSzamlakorBindingSource.CurrentChanged += new System.EventHandler(this.eCafeSzamlakorBindingSource_CurrentChanged);
+            // 
+            // eSZLA
+            // 
+            this.eSZLA.DataSetName = "eCafe_Szamlakor";
+            this.eSZLA.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // advBandedGridView1
+            // 
+            this.advBandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand1});
+            this.advBandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.colSZAMLA_DATUMA,
+            this.colSZAMLA_SORSZAM,
+            this.bandedGridColumn1,
+            this.colEV,
+            this.colHO,
+            this.colNAP,
+            this.colP_NEV,
+            this.colP_NEV2,
+            this.colOSSZESEN_NETTO,
+            this.colOSSZESEN_BRUTTO,
+            this.colSZAMLA_FEJ_ID});
+            this.advBandedGridView1.CustomizationFormBounds = new System.Drawing.Rectangle(1304, 540, 223, 236);
+            this.advBandedGridView1.GridControl = this.gridControl1;
+            this.advBandedGridView1.GroupCount = 1;
+            this.advBandedGridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "OSSZESEN_NETTO", null, "Nettó={c2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "OSSZESEN_BRUTTO", null, "Nettó={c2}")});
+            this.advBandedGridView1.Name = "advBandedGridView1";
+            this.advBandedGridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.advBandedGridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.advBandedGridView1.OptionsBehavior.Editable = false;
+            this.advBandedGridView1.OptionsDetail.AllowOnlyOneMasterRowExpanded = true;
+            this.advBandedGridView1.OptionsDetail.EnableDetailToolTip = true;
+            this.advBandedGridView1.OptionsMenu.ShowGroupSummaryEditorItem = true;
+            this.advBandedGridView1.OptionsView.ShowFooter = true;
+            this.advBandedGridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.bandedGridColumn1, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.advBandedGridView1.ViewCaption = "Számlák";
+            this.advBandedGridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.advBandedGridView1_RowClick);
+            this.advBandedGridView1.Click += new System.EventHandler(this.advBandedGridView1_Click);
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Számlák";
+            this.gridBand1.Columns.Add(this.colSZAMLA_SORSZAM);
+            this.gridBand1.Columns.Add(this.bandedGridColumn1);
+            this.gridBand1.Columns.Add(this.colSZAMLA_DATUMA);
+            this.gridBand1.Columns.Add(this.colP_NEV);
+            this.gridBand1.Columns.Add(this.colP_NEV2);
+            this.gridBand1.Columns.Add(this.colOSSZESEN_NETTO);
+            this.gridBand1.Columns.Add(this.colOSSZESEN_BRUTTO);
+            this.gridBand1.Columns.Add(this.colEV);
+            this.gridBand1.Columns.Add(this.colHO);
+            this.gridBand1.Columns.Add(this.colNAP);
+            this.gridBand1.MinWidth = 20;
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.Width = 827;
+            // 
+            // colSZAMLA_SORSZAM
+            // 
+            this.colSZAMLA_SORSZAM.Caption = "Sorszám";
+            this.colSZAMLA_SORSZAM.FieldName = "SZAMLA_SORSZAM";
+            this.colSZAMLA_SORSZAM.Name = "colSZAMLA_SORSZAM";
+            this.colSZAMLA_SORSZAM.SummaryItem.DisplayFormat = "db={0}";
+            this.colSZAMLA_SORSZAM.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
+            this.colSZAMLA_SORSZAM.Visible = true;
+            this.colSZAMLA_SORSZAM.Width = 83;
+            // 
+            // bandedGridColumn1
+            // 
+            this.bandedGridColumn1.Caption = "Könyvelési időszak";
+            this.bandedGridColumn1.FieldName = "bandedGridColumn1";
+            this.bandedGridColumn1.Name = "bandedGridColumn1";
+            this.bandedGridColumn1.UnboundExpression = "ToStr([EV])+ToStr([HO])+ToStr([NAP])";
+            this.bandedGridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.bandedGridColumn1.Visible = true;
+            this.bandedGridColumn1.Width = 130;
+            // 
+            // colSZAMLA_DATUMA
+            // 
+            this.colSZAMLA_DATUMA.Caption = "Számla dátuma";
+            this.colSZAMLA_DATUMA.FieldName = "SZAMLA_DATUMA";
+            this.colSZAMLA_DATUMA.Name = "colSZAMLA_DATUMA";
+            this.colSZAMLA_DATUMA.Visible = true;
+            this.colSZAMLA_DATUMA.Width = 105;
+            // 
+            // colP_NEV
+            // 
+            this.colP_NEV.Caption = "Partner neve";
+            this.colP_NEV.FieldName = "P_NEV";
+            this.colP_NEV.Name = "colP_NEV";
+            this.colP_NEV.Visible = true;
+            this.colP_NEV.Width = 110;
+            // 
+            // colP_NEV2
+            // 
+            this.colP_NEV2.Caption = " ";
+            this.colP_NEV2.FieldName = "P_NEV2";
+            this.colP_NEV2.Name = "colP_NEV2";
+            this.colP_NEV2.Visible = true;
+            this.colP_NEV2.Width = 97;
+            // 
+            // colOSSZESEN_NETTO
+            // 
+            this.colOSSZESEN_NETTO.Caption = "Nettó végősszeg";
+            this.colOSSZESEN_NETTO.DisplayFormat.FormatString = "c";
+            this.colOSSZESEN_NETTO.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colOSSZESEN_NETTO.FieldName = "OSSZESEN_NETTO";
+            this.colOSSZESEN_NETTO.GroupFormat.FormatString = "c";
+            this.colOSSZESEN_NETTO.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colOSSZESEN_NETTO.Name = "colOSSZESEN_NETTO";
+            this.colOSSZESEN_NETTO.SummaryItem.DisplayFormat = "Nettó={c2}";
+            this.colOSSZESEN_NETTO.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colOSSZESEN_NETTO.Visible = true;
+            this.colOSSZESEN_NETTO.Width = 142;
+            // 
+            // colOSSZESEN_BRUTTO
+            // 
+            this.colOSSZESEN_BRUTTO.Caption = "Bruttó végösszeg";
+            this.colOSSZESEN_BRUTTO.DisplayFormat.FormatString = "c";
+            this.colOSSZESEN_BRUTTO.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colOSSZESEN_BRUTTO.FieldName = "OSSZESEN_BRUTTO";
+            this.colOSSZESEN_BRUTTO.GroupFormat.FormatString = "c";
+            this.colOSSZESEN_BRUTTO.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colOSSZESEN_BRUTTO.Name = "colOSSZESEN_BRUTTO";
+            this.colOSSZESEN_BRUTTO.SummaryItem.DisplayFormat = "Brutto={c2}";
+            this.colOSSZESEN_BRUTTO.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colOSSZESEN_BRUTTO.Visible = true;
+            this.colOSSZESEN_BRUTTO.Width = 160;
+            // 
+            // colEV
+            // 
+            this.colEV.Caption = "Év";
+            this.colEV.FieldName = "EV";
+            this.colEV.Name = "colEV";
+            this.colEV.Width = 71;
+            // 
+            // colHO
+            // 
+            this.colHO.Caption = "Hónap";
+            this.colHO.FieldName = "HO";
+            this.colHO.Name = "colHO";
+            this.colHO.Width = 71;
+            // 
+            // colNAP
+            // 
+            this.colNAP.Caption = "Nap";
+            this.colNAP.FieldName = "NAP";
+            this.colNAP.Name = "colNAP";
+            this.colNAP.Width = 71;
+            // 
+            // colSZAMLA_FEJ_ID
+            // 
+            this.colSZAMLA_FEJ_ID.FieldName = "SZAMLA_FEJ_ID";
+            this.colSZAMLA_FEJ_ID.Name = "colSZAMLA_FEJ_ID";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // button6
             // 
             this.button6.BackgroundImage = global::e_Cafe.Properties.Resources.Printer_64x64;
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Location = new System.Drawing.Point(353, 9);
+            this.button6.Location = new System.Drawing.Point(925, 0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(35, 35);
             this.button6.TabIndex = 20;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // chkMind
+            // szfTA
             // 
-            this.chkMind.AutoSize = true;
-            this.chkMind.Location = new System.Drawing.Point(15, 28);
-            this.chkMind.Name = "chkMind";
-            this.chkMind.Size = new System.Drawing.Size(49, 17);
-            this.chkMind.TabIndex = 21;
-            this.chkMind.Text = "Mind";
-            this.chkMind.UseVisualStyleBackColor = true;
-            this.chkMind.CheckedChanged += new System.EventHandler(this.chkMind_CheckedChanged);
+            this.szfTA.ClearBeforeFill = true;
             // 
-            // cIKKMEGNEVEZESDataGridViewTextBoxColumn
+            // sztTA
             // 
-            this.cIKKMEGNEVEZESDataGridViewTextBoxColumn.DataPropertyName = "CIKK_MEGNEVEZES";
-            this.cIKKMEGNEVEZESDataGridViewTextBoxColumn.HeaderText = "Cikk";
-            this.cIKKMEGNEVEZESDataGridViewTextBoxColumn.Name = "cIKKMEGNEVEZESDataGridViewTextBoxColumn";
-            this.cIKKMEGNEVEZESDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sztTA.ClearBeforeFill = true;
             // 
-            // mENNYISEGDataGridViewTextBoxColumn
+            // labelControl1
             // 
-            this.mENNYISEGDataGridViewTextBoxColumn.DataPropertyName = "MENNYISEG";
-            this.mENNYISEGDataGridViewTextBoxColumn.HeaderText = "Mennyiség";
-            this.mENNYISEGDataGridViewTextBoxColumn.Name = "mENNYISEGDataGridViewTextBoxColumn";
-            this.mENNYISEGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // eGYSEGARDataGridViewTextBoxColumn
-            // 
-            this.eGYSEGARDataGridViewTextBoxColumn.DataPropertyName = "EGYSEGAR";
-            this.eGYSEGARDataGridViewTextBoxColumn.HeaderText = "Egységár";
-            this.eGYSEGARDataGridViewTextBoxColumn.Name = "eGYSEGARDataGridViewTextBoxColumn";
-            this.eGYSEGARDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nETTODataGridViewTextBoxColumn
-            // 
-            this.nETTODataGridViewTextBoxColumn.DataPropertyName = "NETTO";
-            this.nETTODataGridViewTextBoxColumn.HeaderText = "Nettó";
-            this.nETTODataGridViewTextBoxColumn.Name = "nETTODataGridViewTextBoxColumn";
-            this.nETTODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aFADataGridViewTextBoxColumn
-            // 
-            this.aFADataGridViewTextBoxColumn.DataPropertyName = "AFA";
-            this.aFADataGridViewTextBoxColumn.HeaderText = "Áfa érték";
-            this.aFADataGridViewTextBoxColumn.Name = "aFADataGridViewTextBoxColumn";
-            this.aFADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bRUTTODataGridViewTextBoxColumn
-            // 
-            this.bRUTTODataGridViewTextBoxColumn.DataPropertyName = "BRUTTO";
-            this.bRUTTODataGridViewTextBoxColumn.HeaderText = "Bruttó";
-            this.bRUTTODataGridViewTextBoxColumn.Name = "bRUTTODataGridViewTextBoxColumn";
-            this.bRUTTODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cIKKDataGridViewTextBoxColumn
-            // 
-            this.cIKKDataGridViewTextBoxColumn.DataPropertyName = "CIKK";
-            this.cIKKDataGridViewTextBoxColumn.HeaderText = "CIKK";
-            this.cIKKDataGridViewTextBoxColumn.Name = "cIKKDataGridViewTextBoxColumn";
-            this.cIKKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cIKKDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rENDELSORDataGridViewTextBoxColumn
-            // 
-            this.rENDELSORDataGridViewTextBoxColumn.DataPropertyName = "RENDELSOR";
-            this.rENDELSORDataGridViewTextBoxColumn.HeaderText = "RENDELSOR";
-            this.rENDELSORDataGridViewTextBoxColumn.Name = "rENDELSORDataGridViewTextBoxColumn";
-            this.rENDELSORDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rENDELSORDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // aFAKODDataGridViewTextBoxColumn
-            // 
-            this.aFAKODDataGridViewTextBoxColumn.DataPropertyName = "AFA_KOD";
-            this.aFAKODDataGridViewTextBoxColumn.HeaderText = "AFA_KOD";
-            this.aFAKODDataGridViewTextBoxColumn.Name = "aFAKODDataGridViewTextBoxColumn";
-            this.aFAKODDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aFAKODDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mEGJEGYZESDataGridViewTextBoxColumn
-            // 
-            this.mEGJEGYZESDataGridViewTextBoxColumn.DataPropertyName = "MEGJEGYZES";
-            this.mEGJEGYZESDataGridViewTextBoxColumn.HeaderText = "MEGJEGYZES";
-            this.mEGJEGYZESDataGridViewTextBoxColumn.Name = "mEGJEGYZESDataGridViewTextBoxColumn";
-            this.mEGJEGYZESDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mEGJEGYZESDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fEJIDDataGridViewTextBoxColumn1
-            // 
-            this.fEJIDDataGridViewTextBoxColumn1.DataPropertyName = "FEJ_ID";
-            this.fEJIDDataGridViewTextBoxColumn1.HeaderText = "FEJ_ID";
-            this.fEJIDDataGridViewTextBoxColumn1.Name = "fEJIDDataGridViewTextBoxColumn1";
-            this.fEJIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fEJIDDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // tETELIDDataGridViewTextBoxColumn
-            // 
-            this.tETELIDDataGridViewTextBoxColumn.DataPropertyName = "TETEL_ID";
-            this.tETELIDDataGridViewTextBoxColumn.HeaderText = "TETEL_ID";
-            this.tETELIDDataGridViewTextBoxColumn.Name = "tETELIDDataGridViewTextBoxColumn";
-            this.tETELIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tETELIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // szamlatetelBindingSource
-            // 
-            this.szamlatetelBindingSource.DataSource = typeof(BusinessLogic.Szamla_tetel);
-            // 
-            // sZAMLASORSZAMDataGridViewTextBoxColumn
-            // 
-            this.sZAMLASORSZAMDataGridViewTextBoxColumn.DataPropertyName = "SZAMLA_SORSZAM";
-            this.sZAMLASORSZAMDataGridViewTextBoxColumn.HeaderText = "Sorszám";
-            this.sZAMLASORSZAMDataGridViewTextBoxColumn.Name = "sZAMLASORSZAMDataGridViewTextBoxColumn";
-            this.sZAMLASORSZAMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sZAMLADATUMADataGridViewTextBoxColumn
-            // 
-            this.sZAMLADATUMADataGridViewTextBoxColumn.DataPropertyName = "SZAMLA_DATUMA";
-            this.sZAMLADATUMADataGridViewTextBoxColumn.HeaderText = "Dátum";
-            this.sZAMLADATUMADataGridViewTextBoxColumn.Name = "sZAMLADATUMADataGridViewTextBoxColumn";
-            this.sZAMLADATUMADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fEJIDDataGridViewTextBoxColumn
-            // 
-            this.fEJIDDataGridViewTextBoxColumn.DataPropertyName = "FEJ_ID";
-            this.fEJIDDataGridViewTextBoxColumn.HeaderText = "FEJ_ID";
-            this.fEJIDDataGridViewTextBoxColumn.Name = "fEJIDDataGridViewTextBoxColumn";
-            this.fEJIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fEJIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pARTNERIDDataGridViewTextBoxColumn
-            // 
-            this.pARTNERIDDataGridViewTextBoxColumn.DataPropertyName = "PARTNER_ID";
-            this.pARTNERIDDataGridViewTextBoxColumn.HeaderText = "PARTNER_ID";
-            this.pARTNERIDDataGridViewTextBoxColumn.Name = "pARTNERIDDataGridViewTextBoxColumn";
-            this.pARTNERIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pARTNERIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rENDELESIDDataGridViewTextBoxColumn
-            // 
-            this.rENDELESIDDataGridViewTextBoxColumn.DataPropertyName = "RENDELES_ID";
-            this.rENDELESIDDataGridViewTextBoxColumn.HeaderText = "RENDELES_ID";
-            this.rENDELESIDDataGridViewTextBoxColumn.Name = "rENDELESIDDataGridViewTextBoxColumn";
-            this.rENDELESIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rENDELESIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // kEDVEZMENYDataGridViewTextBoxColumn
-            // 
-            this.kEDVEZMENYDataGridViewTextBoxColumn.DataPropertyName = "KEDVEZMENY";
-            this.kEDVEZMENYDataGridViewTextBoxColumn.HeaderText = "KEDVEZMENY";
-            this.kEDVEZMENYDataGridViewTextBoxColumn.Name = "kEDVEZMENYDataGridViewTextBoxColumn";
-            this.kEDVEZMENYDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kEDVEZMENYDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fIZETESIMODDataGridViewTextBoxColumn
-            // 
-            this.fIZETESIMODDataGridViewTextBoxColumn.DataPropertyName = "FIZETESI_MOD";
-            this.fIZETESIMODDataGridViewTextBoxColumn.HeaderText = "FIZETESI_MOD";
-            this.fIZETESIMODDataGridViewTextBoxColumn.Name = "fIZETESIMODDataGridViewTextBoxColumn";
-            this.fIZETESIMODDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fIZETESIMODDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // eVDataGridViewTextBoxColumn
-            // 
-            this.eVDataGridViewTextBoxColumn.DataPropertyName = "EV";
-            this.eVDataGridViewTextBoxColumn.HeaderText = "EV";
-            this.eVDataGridViewTextBoxColumn.Name = "eVDataGridViewTextBoxColumn";
-            this.eVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eVDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // hODataGridViewTextBoxColumn
-            // 
-            this.hODataGridViewTextBoxColumn.DataPropertyName = "HO";
-            this.hODataGridViewTextBoxColumn.HeaderText = "HO";
-            this.hODataGridViewTextBoxColumn.Name = "hODataGridViewTextBoxColumn";
-            this.hODataGridViewTextBoxColumn.ReadOnly = true;
-            this.hODataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nAPDataGridViewTextBoxColumn
-            // 
-            this.nAPDataGridViewTextBoxColumn.DataPropertyName = "NAP";
-            this.nAPDataGridViewTextBoxColumn.HeaderText = "NAP";
-            this.nAPDataGridViewTextBoxColumn.Name = "nAPDataGridViewTextBoxColumn";
-            this.nAPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nAPDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // uSERIDDataGridViewTextBoxColumn
-            // 
-            this.uSERIDDataGridViewTextBoxColumn.DataPropertyName = "USER_ID";
-            this.uSERIDDataGridViewTextBoxColumn.HeaderText = "USER_ID";
-            this.uSERIDDataGridViewTextBoxColumn.Name = "uSERIDDataGridViewTextBoxColumn";
-            this.uSERIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.uSERIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // szamlaBindingSource
-            // 
-            this.szamlaBindingSource.DataSource = typeof(BusinessLogic.Szamla);
-            this.szamlaBindingSource.CurrentItemChanged += new System.EventHandler(this.szamlaBindingSource_CurrentItemChanged);
+            this.labelControl1.Location = new System.Drawing.Point(897, 41);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(63, 13);
+            this.labelControl1.TabIndex = 23;
+            this.labelControl1.Text = "labelControl1";
             // 
             // frmKimentBlokkok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 563);
-            this.Controls.Add(this.chkMind);
+            this.ClientSize = new System.Drawing.Size(973, 513);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtpTo);
-            this.Controls.Add(this.dtpFrom);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmKimentBlokkok";
             this.Text = "Értékseítések listája";
             this.Load += new System.EventHandler(this.frmKimentBlokkok_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.szamlatetelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.szamlaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eCafeSzamlakorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSZLA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advBandedGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,40 +435,37 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource szamlaBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource szamlatetelBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIKKMEGNEVEZESDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mENNYISEGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eGYSEGARDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nETTODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aFADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bRUTTODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIKKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rENDELSORDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aFAKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mEGJEGYZESDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fEJIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tETELIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DateTimePicker dtpFrom;
-        private System.Windows.Forms.DateTimePicker dtpTo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLASORSZAMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sZAMLADATUMADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIPUS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fEJIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pARTNERIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rENDELESIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kEDVEZMENYDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fIZETESIMODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nAPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uSERIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.CheckBox chkMind;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private System.Windows.Forms.BindingSource eCafeSzamlakorBindingSource;
+        private e_Cafe.SQL.DataSets.eCafe_SzamlakorTableAdapters.SZAMLA_FEJTableAdapter szfTA;
+        private e_Cafe.SQL.DataSets.eCafe_Szamlakor eSZLA;
+        private e_Cafe.SQL.DataSets.eCafe_SzamlakorTableAdapters.SZAMLA_TETELTableAdapter sztTA;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView advBandedGridView1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSZAMLA_DATUMA;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colEV;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colHO;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colNAP;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colP_NEV;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colP_NEV2;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSZAMLA_SORSZAM;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colOSSZESEN_NETTO;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colOSSZESEN_BRUTTO;
+        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView advBandedGridView2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colCIKK_MEGNEVEZES;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colAFA_KOD;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKALK_MENNYISEG;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKEDVEZMENY1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colMENNYISEG;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colEGYSEGAR;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colNETTO;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colAFA;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colBRUTTO;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSZAMLA_FEJ_ID;
     }
 }

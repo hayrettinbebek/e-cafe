@@ -236,6 +236,38 @@ namespace BusinessLogic
 
 
         }
+
+
+
+        public static void MakeSummariesOnSzamla()
+        { 
+
+            SqlConnection c = new SqlConnection(ConSTR);
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.Connection = c;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "update SZAMLA_FEJ set OSSZESEN_NETTO = NETTO, " +
+                                " OSSZESEN_BRUTTO = BRUTTO, " +
+                                " OSSZESEN_AFA = AFA " +
+                                " FROM SZAMLA_FEJ f " +
+                                " inner join (select t.szamla_fej_id, sum(isnull(t.NETTO,0)) as NETTO, " +
+	                            "         sum(isnull(t.BRUTTO,0)) as BRUTTO, " +
+	                            "         sum(isnull(t.AFA,0)) as AFA from " +
+                                " szamla_tetel t  group by t.szamla_fej_id) t on f.szamla_fej_id = t.szamla_fej_id";
+                c.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (cmd != null)
+                    cmd.Dispose();
+            }
+
+            c.Close();
+        
+        }
         #endregion
 
         #region könyvelési napokkal kapcsolatos lekérdezések
