@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using e_Cafe.UserControls;
 using BusinessLogic;
 using e_Cafe.Reports;
 using eCafe_SzamlakorTableAdaptersAlias = e_Cafe.SQL.DataSets.eCafe_SzamlakorTableAdapters;
 
 namespace e_Cafe.Admin
 {
-    public partial class frmKimentBlokkok : Form
+    public partial class frmKimentBlokkok : UserForm
     {
         List<Szamla> tmpSZL = (new SzamlaList()).getList();
 
