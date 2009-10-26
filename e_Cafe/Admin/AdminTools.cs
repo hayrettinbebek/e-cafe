@@ -386,6 +386,17 @@ namespace e_Cafe
             AddNewItem();
         }
 
+        private void AdminTools_Load(object sender, EventArgs e)
+        {
+            InitSpeedBar();
+            ribbonControl1.SelectedPage = rpKeszlet;
+        }
+
+        private void barButtonItem32_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            (new frmCikkcsoport { MdiParent = this }).Show();
+        }
+
 
 
 
