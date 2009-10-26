@@ -51,9 +51,9 @@
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem9 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
@@ -81,6 +81,7 @@
             this.iNew = new DevExpress.XtraBars.BarButtonItem();
             this.iDelete = new DevExpress.XtraBars.BarButtonItem();
             this.iBigDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -104,10 +105,9 @@
             this.rpSupport = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -187,7 +187,7 @@
             this.rpRiports,
             this.rpSupport,
             this.ribbonPage2});
-            this.ribbonControl1.SelectedPage = this.rpTorzsek;
+            this.ribbonControl1.SelectedPage = this.rpKeszlet;
             this.ribbonControl1.Size = new System.Drawing.Size(1123, 143);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.iNew);
@@ -207,7 +207,7 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Új";
+            this.barButtonItem2.Caption = "Új     megrendelés";
             this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 5;
             this.barButtonItem2.Name = "barButtonItem2";
@@ -225,7 +225,7 @@
             // 
             // barButtonItem4
             // 
-            this.barButtonItem4.Caption = "Új";
+            this.barButtonItem4.Caption = "Új     Bevételezés";
             this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
             this.barButtonItem4.Id = 9;
             this.barButtonItem4.Name = "barButtonItem4";
@@ -347,6 +347,16 @@
             this.barButtonItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
+            // barButtonItem11
+            // 
+            this.barButtonItem11.Caption = "Inaktív cikkek";
+            this.barButtonItem11.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.Glyph")));
+            this.barButtonItem11.Id = 25;
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            // 
             // barSubItem9
             // 
             this.barSubItem9.Caption = "Cikkcsoport";
@@ -360,13 +370,6 @@
             this.barSubItem10.Id = 27;
             this.barSubItem10.Name = "barSubItem10";
             this.barSubItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSubItem10_ItemClick);
-            // 
-            // barButtonItem11
-            // 
-            this.barButtonItem11.Caption = "Inaktív cikkek";
-            this.barButtonItem11.Id = 25;
-            this.barButtonItem11.Name = "barButtonItem11";
-            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
             // 
             // barButtonItem12
             // 
@@ -470,6 +473,7 @@
             // barButtonItem24
             // 
             this.barButtonItem24.Caption = "Blokkok";
+            this.barButtonItem24.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.Glyph")));
             this.barButtonItem24.Id = 43;
             this.barButtonItem24.Name = "barButtonItem24";
             this.barButtonItem24.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -587,6 +591,15 @@
             this.iBigDelete.Name = "iBigDelete";
             this.iBigDelete.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.iBigDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem36_ItemClick);
+            // 
+            // barButtonItem32
+            // 
+            this.barButtonItem32.Caption = "Cikkcsoport";
+            this.barButtonItem32.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem32.Glyph")));
+            this.barButtonItem32.Id = 58;
+            this.barButtonItem32.Name = "barButtonItem32";
+            this.barButtonItem32.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem32.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem32_ItemClick_1);
             // 
             // imageCollection1
             // 
@@ -775,24 +788,15 @@
             this.ribbonPageGroup14.ShowCaptionButton = false;
             this.ribbonPageGroup14.Text = "Zárás";
             // 
-            // imageCollection3
-            // 
-            this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
-            this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
-            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Pénztár";
             // 
-            // barButtonItem32
+            // imageCollection3
             // 
-            this.barButtonItem32.Caption = "Cikkcsoport";
-            this.barButtonItem32.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem32.Glyph")));
-            this.barButtonItem32.Id = 58;
-            this.barButtonItem32.Name = "barButtonItem32";
-            this.barButtonItem32.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barButtonItem32.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem32_ItemClick_1);
+            this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
+            this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
             // AdminTools
             // 
