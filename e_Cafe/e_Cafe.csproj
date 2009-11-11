@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23496019-7E6E-4263-A603-28B203C20C8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -89,6 +89,7 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Charts.v9.2.Core, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
     </Reference>
@@ -101,12 +102,21 @@
     <Reference Include="DevExpress.XtraBars.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraCharts.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v9.2.Core, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="MarqueeLabel, Version=1.0.1888.32534, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MarqueeLabel.dll</HintPath>
@@ -118,9 +128,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="nspring, Version=1.1.1389.36054, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BusinessLogic\nspring.dll</HintPath>
@@ -130,7 +137,11 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
@@ -218,6 +229,17 @@
     </Compile>
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsMegrendeles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMegrendeles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\xtraMegrendeles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xtraMegrendeles.Designer.cs">
+      <DependentUpon>xtraMegrendeles.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL\DataSets\eCafe_Szamlakor.cs">
       <DependentUpon>eCafe_Szamlakor.xsd</DependentUpon>
@@ -847,6 +869,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rMegrendeles.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xtraMegrendeles.resx">
+      <DependentUpon>xtraMegrendeles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Torzsek\frmAFA.resx">
       <DependentUpon>frmAFA.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1461,6 +1486,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram2.cd" />
+    <None Include="dsMegrendeles.xsc">
+      <DependentUpon>dsMegrendeles.xsd</DependentUpon>
+    </None>
+    <None Include="dsMegrendeles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMegrendeles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsMegrendeles.xss">
+      <DependentUpon>dsMegrendeles.xsd</DependentUpon>
+    </None>
     <None Include="SQL\DataSets\eCafe_Szamlakor.xsc">
       <DependentUpon>eCafe_Szamlakor.xsd</DependentUpon>
     </None>
@@ -1497,6 +1533,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="SQL\update_032.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Templates\repMegrendeles.repx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

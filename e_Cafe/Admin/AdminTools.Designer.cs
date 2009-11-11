@@ -108,6 +108,9 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -173,10 +176,11 @@
             this.iNew,
             this.iDelete,
             this.iBigDelete,
-            this.barButtonItem32});
+            this.barButtonItem32,
+            this.barButtonItem33});
             this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 59;
+            this.ribbonControl1.MaxItemId = 60;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -187,7 +191,7 @@
             this.rpRiports,
             this.rpSupport,
             this.ribbonPage2});
-            this.ribbonControl1.SelectedPage = this.rpKeszlet;
+            this.ribbonControl1.SelectedPage = this.rpRiports;
             this.ribbonControl1.Size = new System.Drawing.Size(1123, 143);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ItemLinks.Add(this.iNew);
@@ -745,7 +749,8 @@
             // 
             this.rpRiports.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup11,
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup16});
             this.rpRiports.Name = "rpRiports";
             this.rpRiports.Text = "Riportok";
             // 
@@ -798,11 +803,39 @@
             this.imageCollection3.ImageSize = new System.Drawing.Size(15, 15);
             this.imageCollection3.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection3.ImageStream")));
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(641, 223);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ribbonPageGroup16
+            // 
+            this.ribbonPageGroup16.AllowTextClipping = false;
+            this.ribbonPageGroup16.ItemLinks.Add(this.barButtonItem33);
+            this.ribbonPageGroup16.Name = "ribbonPageGroup16";
+            this.ribbonPageGroup16.Text = "Designer";
+            // 
+            // barButtonItem33
+            // 
+            this.barButtonItem33.Caption = "Riport Tervező";
+            this.barButtonItem33.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.Glyph")));
+            this.barButtonItem33.Id = 59;
+            this.barButtonItem33.Name = "barButtonItem33";
+            this.barButtonItem33.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem33.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem33_ItemClick_1);
+            // 
             // AdminTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 760);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.IsMdiContainer = true;
@@ -900,6 +933,9 @@
         private DevExpress.XtraBars.BarButtonItem iBigDelete;
         private DevExpress.XtraBars.BarButtonItem barButtonItem32;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem33;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
     }
 }
 

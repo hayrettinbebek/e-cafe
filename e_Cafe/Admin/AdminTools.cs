@@ -7,6 +7,7 @@ using DevExpress.XtraBars.Ribbon;
 using e_Cafe.Admin;
 using e_Cafe.Keszlet;
 using e_Cafe.Torzsek;
+using e_Cafe.Reports;
 using e_Cafe.UserControls;
 
 
@@ -395,6 +396,28 @@ namespace e_Cafe
         private void barButtonItem32_ItemClick_1(object sender, ItemClickEventArgs e)
         {
             (new frmCikkcsoport { MdiParent = this }).Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //DEFS.DefProgramLocation+@"\Templates\repMegrendeles.repx"
+            xtraMegrendeles xr = new xtraMegrendeles(1);
+            xr.LoadLayout(DEFS.DefProgramLocation + @"\Templates\repMegrendeles.repx");
+            xr.ShowPreview();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem33_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.XtraReports.UI.XtraReport xr = new DevExpress.XtraReports.UI.XtraReport();
+            xr.ShowDesigner();
+            //xtraMegrendeles.FromFile( DEFS.DefProgramLocation + @"\Templates\repMegrendeles.repx",true).ShowDesigner();
+
         }
 
 

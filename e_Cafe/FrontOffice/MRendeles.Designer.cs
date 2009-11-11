@@ -338,7 +338,7 @@
             this.tblRendeles.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tblRendeles.SelectionForeColor = System.Drawing.Color.Black;
             this.tblRendeles.SelectionStyle = XPTable.Models.SelectionStyle.Grid;
-            this.tblRendeles.Size = new System.Drawing.Size(293, 197);
+            this.tblRendeles.Size = new System.Drawing.Size(293, 380);
             this.tblRendeles.TabIndex = 1;
             this.tblRendeles.Text = "table1";
             this.tblRendeles.CellClick += new XPTable.Events.CellMouseEventHandler(this.tblRendeles_CellClick);

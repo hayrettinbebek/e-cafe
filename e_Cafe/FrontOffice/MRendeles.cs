@@ -640,7 +640,7 @@ namespace e_Cafe
 
         private void initSums()
         {
-            if (_AktRendeles != null)
+            if (_AktRendeles != null && (!(rbOsszetett.Checked)))
             {
 
                 if (_AktRendeles.KEDVEZMENY > 0)
