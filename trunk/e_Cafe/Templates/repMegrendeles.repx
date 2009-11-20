@@ -4,7 +4,7 @@
 ///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
 ///   <Localization>en-US</Localization>
 ///   <References>
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\kgcgmdny01\e_Cafe.exe" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\yoe6s4fk01\e_Cafe.exe" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" />
@@ -32,10 +32,10 @@
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Configuration.Install\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.Install.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Data.DataSetExtensions\3.5.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Core\3.5.0.0__b77a5c561934e089\System.Core.dll" />
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\bmglaof001\ReportPrinting.dll" />
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\jnfabzri01\BusinessLogic.dll" />
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\neimj1et01\XPTable.dll" />
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\nz5tbpeg01\nspring.dll" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\qf46ioop01\ReportPrinting.dll" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\cwnxlkxs01\BusinessLogic.dll" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\aq3dgelk01\XPTable.dll" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\bdq-pvtj01\nspring.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Messaging\2.0.0.0__b03f5f7f11d50a3a\System.Messaging.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\DevExpress.XtraBars.v9.2\9.2.6.0__b88d1754d700e49a\DevExpress.XtraBars.v9.2.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\10.5.3700.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll" />
@@ -56,7 +56,7 @@
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\CrystalDecisions.KeyCode\10.5.3700.0__692fbea5521e1304\CrystalDecisions.KeyCode.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportAppServer.ObjectFactory\10.5.3700.0__692fbea5521e1304\CrystalDecisions.ReportAppServer.ObjectFactory.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportSource\10.5.3700.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll" />
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\gwz3fmiz01\GUI.dll" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\hyoq9_dn01\GUI.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\Microsoft.VisualBasic.PowerPacks\9.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.PowerPacks.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\Microsoft.VisualBasic\8.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\System.Management\2.0.0.0__b03f5f7f11d50a3a\System.Management.dll" />
@@ -65,10 +65,10 @@
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\CrystalDecisions.Windows.Forms\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Windows.Forms.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\DevExpress.XtraGrid.v9.2\9.2.6.0__b88d1754d700e49a\DevExpress.XtraGrid.v9.2.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\DevExpress.XtraLayout.v9.2\9.2.6.0__b88d1754d700e49a\DevExpress.XtraLayout.v9.2.dll" />
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\s5jujgiu01\WinampFrontEndLib.dll" />
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\hzpjnowi01\Microsoft.SqlServer.ConnectionInfo.dll" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\qxekkybc01\WinampFrontEndLib.dll" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\e1eeowon01\Microsoft.SqlServer.ConnectionInfo.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_32\Microsoft.SqlServer.BatchParser\10.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.BatchParser.dll" />
-///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\3sb8z0np01\Microsoft.SqlServer.Smo.dll" />
+///     <Reference Path="C:\Users\Ernie\AppData\Local\Microsoft\VisualStudio\9.0\ProjectAssemblies\fphoijv801\Microsoft.SqlServer.Smo.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.SqlEnum\10.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.SqlEnum.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.Sdk.Sfc\10.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
 ///     <Reference Path="C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.SqlClrProvider\10.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.SqlClrProvider.dll" />
@@ -84,6 +84,16 @@
 namespace XtraReportSerialization {
     
     public class xtraMegrendeles : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel5;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel12;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel14;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.DetailBand Detail;
         private DevExpress.XtraReports.UI.XRLine xrLine1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
@@ -92,11 +102,6 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo2;
         private DevExpress.XtraReports.UI.ReportHeaderBand reportHeaderBand1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel5;
-        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRControlStyle Title;
         private DevExpress.XtraReports.UI.XRControlStyle FieldCaption;
         private DevExpress.XtraReports.UI.XRControlStyle PageInfo;
@@ -118,19 +123,24 @@ namespace XtraReportSerialization {
             }
         }
         private void InitializeComponent() {
+            this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
-            this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
             this.FieldCaption = new DevExpress.XtraReports.UI.XRControlStyle();
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
@@ -140,13 +150,30 @@ namespace XtraReportSerialization {
             this.mEGRENDELES_SORTableAdapter = new e_Cafe.dsMegrendelesTableAdapters.MEGRENDELES_SORTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
+            // GroupHeader1
+            // 
+            this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.xrLabel3,
+                        this.xrLabel4,
+                        this.xrLabel5,
+                        this.xrLabel12,
+                        this.xrLabel14,
+                        this.xrLabel13,
+                        this.xrLabel6,
+                        this.xrLabel7,
+                        this.xrLabel8});
+            this.GroupHeader1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+                        new DevExpress.XtraReports.UI.GroupField("MEGRENDELES_FEJ_ID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.GroupHeader1.Height = 144;
+            this.GroupHeader1.Name = "GroupHeader1";
+            // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
                         this.xrLine1,
                         this.xrLabel1,
                         this.xrLabel2});
-            this.Detail.Height = 50;
+            this.Detail.Height = 58;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -161,21 +188,100 @@ namespace XtraReportSerialization {
             // 
             // reportHeaderBand1
             // 
-            this.reportHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-                        this.xrLabel5});
-            this.reportHeaderBand1.Height = 58;
+            this.reportHeaderBand1.Height = 14;
             this.reportHeaderBand1.Name = "reportHeaderBand1";
             // 
-            // GroupHeader1
+            // xrLabel3
             // 
-            this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-                        this.xrLabel3,
-                        this.xrLabel4,
-                        this.xrLabel6});
-            this.GroupHeader1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-                        new DevExpress.XtraReports.UI.GroupField("MEGRENDELES_FEJ_ID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-            this.GroupHeader1.Height = 36;
-            this.GroupHeader1.Name = "GroupHeader1";
+            this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.DATUM", "")});
+            this.xrLabel3.Location = new System.Drawing.Point(17, 33);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Size = new System.Drawing.Size(167, 18);
+            this.xrLabel3.StyleName = "DataField";
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.SORSZAM", "")});
+            this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
+            this.xrLabel4.ForeColor = System.Drawing.Color.Maroon;
+            this.xrLabel4.Location = new System.Drawing.Point(225, 0);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Size = new System.Drawing.Size(125, 33);
+            this.xrLabel4.StyleName = "DataField";
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.StylePriority.UseForeColor = false;
+            this.xrLabel4.StylePriority.UseTextAlignment = false;
+            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // xrLabel5
+            // 
+            this.xrLabel5.Location = new System.Drawing.Point(17, 0);
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Size = new System.Drawing.Size(208, 33);
+            this.xrLabel5.StyleName = "Title";
+            this.xrLabel5.Text = "Megrendelés";
+            // 
+            // xrLabel12
+            // 
+            this.xrLabel12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.MEGRENDELES_FEJ_PARTNER.P_NEV", "")});
+            this.xrLabel12.Location = new System.Drawing.Point(417, 0);
+            this.xrLabel12.Name = "xrLabel12";
+            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel12.Size = new System.Drawing.Size(208, 25);
+            this.xrLabel12.Text = "xrLabel12";
+            // 
+            // xrLabel14
+            // 
+            this.xrLabel14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.MEGRENDELES_FEJ_PARTNER.P_NEV3", "")});
+            this.xrLabel14.Location = new System.Drawing.Point(417, 50);
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel14.Size = new System.Drawing.Size(208, 25);
+            this.xrLabel14.Text = "xrLabel14";
+            // 
+            // xrLabel13
+            // 
+            this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.MEGRENDELES_FEJ_PARTNER.P_NEV2", "")});
+            this.xrLabel13.Location = new System.Drawing.Point(417, 25);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel13.Size = new System.Drawing.Size(208, 25);
+            this.xrLabel13.Text = "xrLabel13";
+            // 
+            // xrLabel6
+            // 
+            this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.MEGRENDELES_FEJ_PARTNER.IRSZ", "")});
+            this.xrLabel6.Location = new System.Drawing.Point(417, 83);
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel6.Size = new System.Drawing.Size(58, 25);
+            this.xrLabel6.Text = "xrLabel6";
+            // 
+            // xrLabel7
+            // 
+            this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.MEGRENDELES_FEJ_PARTNER.VAROS", "")});
+            this.xrLabel7.Location = new System.Drawing.Point(483, 83);
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel7.Size = new System.Drawing.Size(142, 25);
+            this.xrLabel7.Text = "xrLabel7";
+            // 
+            // xrLabel8
+            // 
+            this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.MEGRENDELES_FEJ_PARTNER.CIM", "")});
+            this.xrLabel8.Location = new System.Drawing.Point(417, 108);
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel8.Size = new System.Drawing.Size(208, 25);
+            this.xrLabel8.Text = "xrLabel8";
             // 
             // xrLine1
             // 
@@ -199,7 +305,7 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "CIKK.MEGNEVEZES", "")});
             this.xrLabel2.Location = new System.Drawing.Point(50, 17);
             this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel2.Size = new System.Drawing.Size(100, 25);
             this.xrLabel2.Text = "xrLabel2";
             // 
@@ -219,42 +325,6 @@ namespace XtraReportSerialization {
             this.xrPageInfo2.Size = new System.Drawing.Size(313, 23);
             this.xrPageInfo2.StyleName = "PageInfo";
             this.xrPageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrLabel5
-            // 
-            this.xrLabel5.Location = new System.Drawing.Point(58, 25);
-            this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Size = new System.Drawing.Size(227, 33);
-            this.xrLabel5.StyleName = "Title";
-            this.xrLabel5.Text = "Megrendelés";
-            // 
-            // xrLabel3
-            // 
-            this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.DATUM", "")});
-            this.xrLabel3.Location = new System.Drawing.Point(25, 0);
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Size = new System.Drawing.Size(167, 18);
-            this.xrLabel3.StyleName = "DataField";
-            // 
-            // xrLabel4
-            // 
-            this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "MEGRENDELES_FEJ.SORSZAM", "")});
-            this.xrLabel4.Location = new System.Drawing.Point(242, 0);
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Size = new System.Drawing.Size(308, 18);
-            this.xrLabel4.StyleName = "DataField";
-            // 
-            // xrLabel6
-            // 
-            this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "PARTNER.P_NEV", "")});
-            this.xrLabel6.Location = new System.Drawing.Point(575, 8);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.Size = new System.Drawing.Size(100, 25);
-            this.xrLabel6.Text = "xrLabel6";
             // 
             // Title
             // 
@@ -312,10 +382,10 @@ namespace XtraReportSerialization {
             // xtraMegrendeles
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.GroupHeader1,
                         this.Detail,
                         this.pageFooterBand1,
-                        this.reportHeaderBand1,
-                        this.GroupHeader1});
+                        this.reportHeaderBand1});
             this.Name = "xtraMegrendeles";
             this.PageHeight = 1100;
             this.PageWidth = 850;

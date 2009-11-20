@@ -250,6 +250,10 @@
     <Compile Include="Admin\frmSyspar.Designer.cs">
       <DependentUpon>frmSyspar.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsMegrendeles.cs">
+      <DependentUpon>dsMegrendeles.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dsMegrendeles.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
