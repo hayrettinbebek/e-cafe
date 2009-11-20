@@ -11,11 +11,11 @@ namespace e_Cafe.Reports
         public xtraMegrendeles(int megrID)
         {
             InitializeComponent();
-            megrendeleS_FEJAdapter1.Fill(dsMegrendeles1.MEGRENDELES_FEJ, 1);
-            
+            megrendeleS_FEJAdapter1.Fill(dsMegrendeles1.MEGRENDELES_FEJ, megrID);
+            partnerTableAdapter.Fill(dsMegrendeles1.PARTNER);
             mEGRENDELES_SORTableAdapter.Fill(dsMegrendeles1.MEGRENDELES_SOR);
             cikkTableAdapter.Fill(dsMegrendeles1.CIKK);
-            partnerTableAdapter.Fill(dsMegrendeles1.PARTNER);
+            
         }
 
     }
