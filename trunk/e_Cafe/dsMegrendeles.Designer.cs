@@ -33,11 +33,15 @@ namespace e_Cafe {
         
         private PARTNERDataTable tablePARTNER;
         
+        private MEGYSDataTable tableMEGYS;
+        
         private global::System.Data.DataRelation relationMEGRENDELES_SOR_CIKK;
         
         private global::System.Data.DataRelation relationMEGRENDELES_FEJ_MEGRENDELES_SOR;
         
         private global::System.Data.DataRelation relationMEGRENDELES_FEJ_PARTNER;
+        
+        private global::System.Data.DataRelation relationCIKK_MEGYS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -76,6 +80,9 @@ namespace e_Cafe {
                 }
                 if ((ds.Tables["PARTNER"] != null)) {
                     base.Tables.Add(new PARTNERDataTable(ds.Tables["PARTNER"]));
+                }
+                if ((ds.Tables["MEGYS"] != null)) {
+                    base.Tables.Add(new MEGYSDataTable(ds.Tables["MEGYS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -128,6 +135,15 @@ namespace e_Cafe {
         public PARTNERDataTable PARTNER {
             get {
                 return this.tablePARTNER;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public MEGYSDataTable MEGYS {
+            get {
+                return this.tableMEGYS;
             }
         }
         
@@ -202,6 +218,9 @@ namespace e_Cafe {
                 if ((ds.Tables["PARTNER"] != null)) {
                     base.Tables.Add(new PARTNERDataTable(ds.Tables["PARTNER"]));
                 }
+                if ((ds.Tables["MEGYS"] != null)) {
+                    base.Tables.Add(new MEGYSDataTable(ds.Tables["MEGYS"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -256,9 +275,16 @@ namespace e_Cafe {
                     this.tablePARTNER.InitVars();
                 }
             }
+            this.tableMEGYS = ((MEGYSDataTable)(base.Tables["MEGYS"]));
+            if ((initTable == true)) {
+                if ((this.tableMEGYS != null)) {
+                    this.tableMEGYS.InitVars();
+                }
+            }
             this.relationMEGRENDELES_SOR_CIKK = this.Relations["MEGRENDELES_SOR_CIKK"];
             this.relationMEGRENDELES_FEJ_MEGRENDELES_SOR = this.Relations["MEGRENDELES_FEJ_MEGRENDELES_SOR"];
             this.relationMEGRENDELES_FEJ_PARTNER = this.Relations["MEGRENDELES_FEJ_PARTNER"];
+            this.relationCIKK_MEGYS = this.Relations["CIKK_MEGYS"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +301,8 @@ namespace e_Cafe {
             base.Tables.Add(this.tableCIKK);
             this.tablePARTNER = new PARTNERDataTable();
             base.Tables.Add(this.tablePARTNER);
+            this.tableMEGYS = new MEGYSDataTable();
+            base.Tables.Add(this.tableMEGYS);
             this.relationMEGRENDELES_SOR_CIKK = new global::System.Data.DataRelation("MEGRENDELES_SOR_CIKK", new global::System.Data.DataColumn[] {
                         this.tableMEGRENDELES_SOR.CIKK_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCIKK.CIKK_IDColumn}, false);
@@ -287,6 +315,10 @@ namespace e_Cafe {
                         this.tableMEGRENDELES_FEJ.SZALLITO_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePARTNER.PARTNER_IDColumn}, false);
             this.Relations.Add(this.relationMEGRENDELES_FEJ_PARTNER);
+            this.relationCIKK_MEGYS = new global::System.Data.DataRelation("CIKK_MEGYS", new global::System.Data.DataColumn[] {
+                        this.tableCIKK.MEGYS_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableMEGYS.MEGYS_IDColumn}, false);
+            this.Relations.Add(this.relationCIKK_MEGYS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -306,6 +338,11 @@ namespace e_Cafe {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private bool ShouldSerializePARTNER() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeMEGYS() {
             return false;
         }
         
@@ -369,6 +406,8 @@ namespace e_Cafe {
         public delegate void CIKKRowChangeEventHandler(object sender, CIKKRowChangeEvent e);
         
         public delegate void PARTNERRowChangeEventHandler(object sender, PARTNERRowChangeEvent e);
+        
+        public delegate void MEGYSRowChangeEventHandler(object sender, MEGYSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2026,6 +2065,247 @@ namespace e_Cafe {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MEGYSDataTable : global::System.Data.TypedTableBase<MEGYSRow> {
+            
+            private global::System.Data.DataColumn columnMEGYS_MEGNEVEZES;
+            
+            private global::System.Data.DataColumn columnMEGYS_ID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MEGYSDataTable() {
+                this.TableName = "MEGYS";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal MEGYSDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected MEGYSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MEGYS_MEGNEVEZESColumn {
+                get {
+                    return this.columnMEGYS_MEGNEVEZES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn MEGYS_IDColumn {
+                get {
+                    return this.columnMEGYS_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MEGYSRow this[int index] {
+                get {
+                    return ((MEGYSRow)(this.Rows[index]));
+                }
+            }
+            
+            public event MEGYSRowChangeEventHandler MEGYSRowChanging;
+            
+            public event MEGYSRowChangeEventHandler MEGYSRowChanged;
+            
+            public event MEGYSRowChangeEventHandler MEGYSRowDeleting;
+            
+            public event MEGYSRowChangeEventHandler MEGYSRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddMEGYSRow(MEGYSRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MEGYSRow AddMEGYSRow(string MEGYS_MEGNEVEZES, CIKKRow parentCIKKRowByCIKK_MEGYS) {
+                MEGYSRow rowMEGYSRow = ((MEGYSRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        MEGYS_MEGNEVEZES,
+                        null};
+                if ((parentCIKKRowByCIKK_MEGYS != null)) {
+                    columnValuesArray[1] = parentCIKKRowByCIKK_MEGYS[5];
+                }
+                rowMEGYSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMEGYSRow);
+                return rowMEGYSRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                MEGYSDataTable cln = ((MEGYSDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MEGYSDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnMEGYS_MEGNEVEZES = base.Columns["MEGYS_MEGNEVEZES"];
+                this.columnMEGYS_ID = base.Columns["MEGYS_ID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnMEGYS_MEGNEVEZES = new global::System.Data.DataColumn("MEGYS_MEGNEVEZES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMEGYS_MEGNEVEZES);
+                this.columnMEGYS_ID = new global::System.Data.DataColumn("MEGYS_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMEGYS_ID);
+                this.columnMEGYS_MEGNEVEZES.MaxLength = 50;
+                this.columnMEGYS_ID.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MEGYSRow NewMEGYSRow() {
+                return ((MEGYSRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MEGYSRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(MEGYSRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MEGYSRowChanged != null)) {
+                    this.MEGYSRowChanged(this, new MEGYSRowChangeEvent(((MEGYSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MEGYSRowChanging != null)) {
+                    this.MEGYSRowChanging(this, new MEGYSRowChangeEvent(((MEGYSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MEGYSRowDeleted != null)) {
+                    this.MEGYSRowDeleted(this, new MEGYSRowChangeEvent(((MEGYSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MEGYSRowDeleting != null)) {
+                    this.MEGYSRowDeleting(this, new MEGYSRowChangeEvent(((MEGYSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoveMEGYSRow(MEGYSRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsMegrendeles ds = new dsMegrendeles();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MEGYSDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -3068,6 +3348,16 @@ namespace e_Cafe {
             public void SetCIKKCSOP_PREFERNull() {
                 this[this.tableCIKK.CIKKCSOP_PREFERColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MEGYSRow[] GetMEGYSRows() {
+                if ((this.Table.ChildRelations["CIKK_MEGYS"] == null)) {
+                    return new MEGYSRow[0];
+                }
+                else {
+                    return ((MEGYSRow[])(base.GetChildRows(this.Table.ChildRelations["CIKK_MEGYS"])));
+                }
+            }
         }
         
         /// <summary>
@@ -3406,6 +3696,81 @@ namespace e_Cafe {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public partial class MEGYSRow : global::System.Data.DataRow {
+            
+            private MEGYSDataTable tableMEGYS;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal MEGYSRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMEGYS = ((MEGYSDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string MEGYS_MEGNEVEZES {
+                get {
+                    try {
+                        return ((string)(this[this.tableMEGYS.MEGYS_MEGNEVEZESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MEGYS_MEGNEVEZES\' in table \'MEGYS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMEGYS.MEGYS_MEGNEVEZESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string MEGYS_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableMEGYS.MEGYS_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MEGYS_ID\' in table \'MEGYS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMEGYS.MEGYS_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public CIKKRow CIKKRow {
+                get {
+                    return ((CIKKRow)(this.GetParentRow(this.Table.ParentRelations["CIKK_MEGYS"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["CIKK_MEGYS"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsMEGYS_MEGNEVEZESNull() {
+                return this.IsNull(this.tableMEGYS.MEGYS_MEGNEVEZESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetMEGYS_MEGNEVEZESNull() {
+                this[this.tableMEGYS.MEGYS_MEGNEVEZESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsMEGYS_IDNull() {
+                return this.IsNull(this.tableMEGYS.MEGYS_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetMEGYS_IDNull() {
+                this[this.tableMEGYS.MEGYS_IDColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -3516,6 +3881,37 @@ namespace e_Cafe {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public PARTNERRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public class MEGYSRowChangeEvent : global::System.EventArgs {
+            
+            private MEGYSRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MEGYSRowChangeEvent(MEGYSRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public MEGYSRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5715,6 +6111,202 @@ FROM            PARTNER LEFT OUTER JOIN
             dsMegrendeles.PARTNERDataTable dataTable = new dsMegrendeles.PARTNERDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MEGYSTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public MEGYSTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "MEGYS";
+            tableMapping.ColumnMappings.Add("MEGYS_MEGNEVEZES", "MEGYS_MEGNEVEZES");
+            tableMapping.ColumnMappings.Add("MEGYS_ID", "MEGYS_ID");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [MEGYS] ([MEGYS_MEGNEVEZES], [MEGYS_ID]) VALUES (@MEGYS_MEGNEVEZES, @" +
+                "MEGYS_ID)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGYS_MEGNEVEZES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGYS_MEGNEVEZES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEGYS_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEGYS_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = "Data Source=ERNIE-HOME\\SQL2K8;Initial Catalog=E_CAFE;Persist Security Info=True;U" +
+                "ser ID=sa;Password=x";
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        MEGYS_MEGNEVEZES, MEGYS_ID\r\nFROM            MEGYS";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsMegrendeles.MEGYSDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsMegrendeles.MEGYSDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsMegrendeles.MEGYSDataTable dataTable = new dsMegrendeles.MEGYSDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsMegrendeles.MEGYSDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsMegrendeles dataSet) {
+            return this.Adapter.Update(dataSet, "MEGYS");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string MEGYS_MEGNEVEZES, string MEGYS_ID) {
+            if ((MEGYS_MEGNEVEZES == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(MEGYS_MEGNEVEZES));
+            }
+            if ((MEGYS_ID == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(MEGYS_ID));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
         }
     }
 }

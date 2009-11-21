@@ -117,17 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Detail.Expanded" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="Detail.Name" xml:space="preserve">
     <value>Detail</value>
-  </metadata>
-  <metadata name="xrLine1.Name" xml:space="preserve">
-    <value>xrLine1</value>
-  </metadata>
-  <metadata name="xrLabel1.Name" xml:space="preserve">
-    <value>xrLabel1</value>
-  </metadata>
-  <metadata name="xrLabel2.Name" xml:space="preserve">
-    <value>xrLabel2</value>
   </metadata>
   <metadata name="xrLabel3.Name" xml:space="preserve">
     <value>xrLabel3</value>
@@ -136,28 +130,28 @@
     <value>xrLabel4</value>
   </metadata>
   <metadata name="megrendeleS_FEJAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>328, 17</value>
+    <value>488, 17</value>
   </metadata>
   <metadata name="megrendeleS_FEJAdapter1.Name" xml:space="preserve">
     <value>megrendeleS_FEJAdapter1</value>
   </metadata>
   <metadata name="cikkTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>177, 17</value>
   </metadata>
   <metadata name="cikkTableAdapter.Name" xml:space="preserve">
     <value>cikkTableAdapter</value>
   </metadata>
   <metadata name="partnerTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>163, 17</value>
+    <value>323, 17</value>
   </metadata>
   <metadata name="partnerTableAdapter.Name" xml:space="preserve">
     <value>partnerTableAdapter</value>
   </metadata>
-  <metadata name="dsMegrendeles1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>524, 17</value>
-  </metadata>
   <metadata name="dsMegrendeles1.Name" xml:space="preserve">
     <value>dsMegrendeles1</value>
+  </metadata>
+  <metadata name="dsMegrendeles1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>684, 17</value>
   </metadata>
   <metadata name="Title.Name" xml:space="preserve">
     <value>Title</value>
@@ -207,11 +201,62 @@
   <metadata name="xrLabel8.Name" xml:space="preserve">
     <value>xrLabel8</value>
   </metadata>
+  <metadata name="xrLabel2.Name" xml:space="preserve">
+    <value>xrLabel2</value>
+  </metadata>
+  <metadata name="xrLabel9.Name" xml:space="preserve">
+    <value>xrLabel9</value>
+  </metadata>
+  <metadata name="xrLabel15.Name" xml:space="preserve">
+    <value>xrLabel15</value>
+  </metadata>
+  <metadata name="xrLabel17.Name" xml:space="preserve">
+    <value>xrLabel17</value>
+  </metadata>
+  <metadata name="xrLabel19.Name" xml:space="preserve">
+    <value>xrLabel19</value>
+  </metadata>
+  <metadata name="xrLine1.Name" xml:space="preserve">
+    <value>xrLine1</value>
+  </metadata>
   <metadata name="mEGRENDELES_SORTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>666, 17</value>
+    <value>826, 17</value>
   </metadata>
   <metadata name="mEGRENDELES_SORTableAdapter.Name" xml:space="preserve">
     <value>mEGRENDELES_SORTableAdapter</value>
+  </metadata>
+  <metadata name="id.Name" xml:space="preserve">
+    <value>id</value>
+  </metadata>
+  <metadata name="DetailReport.Name" xml:space="preserve">
+    <value>DetailReport</value>
+  </metadata>
+  <metadata name="GroupFooter1.Name" xml:space="preserve">
+    <value>GroupFooter1</value>
+  </metadata>
+  <metadata name="xrLabel16.Name" xml:space="preserve">
+    <value>xrLabel16</value>
+  </metadata>
+  <metadata name="Detail1.Name" xml:space="preserve">
+    <value>Detail1</value>
+  </metadata>
+  <metadata name="xrLabel10.Name" xml:space="preserve">
+    <value>xrLabel10</value>
+  </metadata>
+  <metadata name="xrLabel11.Name" xml:space="preserve">
+    <value>xrLabel11</value>
+  </metadata>
+  <metadata name="xrLabel1.Name" xml:space="preserve">
+    <value>xrLabel1</value>
+  </metadata>
+  <metadata name="xrLabel18.Name" xml:space="preserve">
+    <value>xrLabel18</value>
+  </metadata>
+  <metadata name="besz_ertek.Name" xml:space="preserve">
+    <value>besz_ertek</value>
+  </metadata>
+  <metadata name="calculatedField1.Name" xml:space="preserve">
+    <value>calculatedField1</value>
   </metadata>
   <metadata name="$this.Name" xml:space="preserve">
     <value>xtraMegrendeles</value>
