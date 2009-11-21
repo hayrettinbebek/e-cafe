@@ -401,8 +401,9 @@ namespace e_Cafe
         private void button1_Click(object sender, EventArgs e)
         {
             //DEFS.DefProgramLocation+@"\Templates\repMegrendeles.repx"
-            xtraMegrendeles xr = new xtraMegrendeles(1);
+            xtraMegrendeles xr = new xtraMegrendeles();
             xr.LoadLayout(DEFS.DefProgramLocation + @"\Templates\repMegrendeles.repx");
+            xr.Parameters[0].Value = 5;
             xr.ShowPreview();
 
         }
