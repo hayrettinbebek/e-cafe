@@ -920,6 +920,7 @@
             this.Controls.Add(this.pnlButtons);
             this.Controls.Add(this.pnlRendeles);
             this.Controls.Add(this.pnlAlsoGombok);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MRendeles";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
