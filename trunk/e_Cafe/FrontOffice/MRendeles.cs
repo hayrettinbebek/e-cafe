@@ -266,7 +266,7 @@ namespace e_Cafe
                     bt.Dock = DockStyle.Fill;
 
                     bt.BackColor = Color.Transparent;
-                    bt.Click += CikkcsopMenuClick;
+                    bt.Click += CikkcsopClick;
                     //bt.ImageList = btmImgList;
 
                     bt.BackgroundImageLayout = ImageLayout.Stretch;
@@ -290,12 +290,21 @@ namespace e_Cafe
             reset_scrolls = true;
         }
 
+        private void CikkcsopClick(object sender, EventArgs e)
+        {
+            Cikkek_ScrollPos = 0;
+            CikkcsopMenuClick(sender, e);
+        }
+
         private void CikkcsopMenuClick(object sender, EventArgs e)
         {
             if (reset_scrolls)
             {
                 AlCsopScrollPos = 0;
+                
             }
+
+            
 
             resetCounter();
            

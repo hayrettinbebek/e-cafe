@@ -185,7 +185,7 @@ namespace e_Cafe
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cmbHelyek.SelectedIndex > 0)
+            if (cmbHelyek.SelectedIndex >= 0)
             {
                 SqlConnection sc = new SqlConnection(DEFS.ConSTR);
                 sc.Open();
