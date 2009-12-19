@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AsztalSetup));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rb270 = new System.Windows.Forms.RadioButton();
@@ -44,7 +45,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblAktAsztalId = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.cmbTipus = new System.Windows.Forms.ComboBox();
             this.dynComboBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbHelyek = new System.Windows.Forms.ComboBox();
             this.nrRot = new System.Windows.Forms.NumericUpDown();
@@ -52,11 +52,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlAsztalHelyek = new System.Windows.Forms.Panel();
+            this.icmbTipus = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.ilLogin = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nrRot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icmbTipus.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,9 +67,9 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(858, 0);
+            this.panel1.Location = new System.Drawing.Point(852, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(130, 580);
+            this.panel1.Size = new System.Drawing.Size(136, 580);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
@@ -78,7 +81,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 325);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(130, 100);
+            this.groupBox1.Size = new System.Drawing.Size(136, 100);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Forgatás";
@@ -133,6 +136,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.icmbTipus);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button4);
@@ -141,7 +145,6 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.lblAktAsztalId);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.cmbTipus);
             this.panel2.Controls.Add(this.cmbHelyek);
             this.panel2.Controls.Add(this.nrRot);
             this.panel2.Controls.Add(this.txtAsztalSzam);
@@ -150,7 +153,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(130, 325);
+            this.panel2.Size = new System.Drawing.Size(136, 325);
             this.panel2.TabIndex = 13;
             // 
             // label1
@@ -169,7 +172,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 20);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Mentés";
+            this.button2.Text = "Mentés / Frissítés";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -187,7 +190,7 @@
             // chkRendelFel
             // 
             this.chkRendelFel.AutoSize = true;
-            this.chkRendelFel.Location = new System.Drawing.Point(5, 246);
+            this.chkRendelFel.Location = new System.Drawing.Point(5, 256);
             this.chkRendelFel.Name = "chkRendelFel";
             this.chkRendelFel.Size = new System.Drawing.Size(114, 17);
             this.chkRendelFel.TabIndex = 11;
@@ -197,7 +200,7 @@
             // chkNameVis
             // 
             this.chkNameVis.AutoSize = true;
-            this.chkNameVis.Location = new System.Drawing.Point(5, 223);
+            this.chkNameVis.Location = new System.Drawing.Point(6, 233);
             this.chkNameVis.Name = "chkNameVis";
             this.chkNameVis.Size = new System.Drawing.Size(78, 17);
             this.chkNameVis.TabIndex = 11;
@@ -236,17 +239,6 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // cmbTipus
-            // 
-            this.cmbTipus.DataSource = this.dynComboBindingSource;
-            this.cmbTipus.DisplayMember = "DISPLAY_MEMBER";
-            this.cmbTipus.FormattingEnabled = true;
-            this.cmbTipus.Location = new System.Drawing.Point(5, 143);
-            this.cmbTipus.Name = "cmbTipus";
-            this.cmbTipus.Size = new System.Drawing.Size(100, 21);
-            this.cmbTipus.TabIndex = 9;
-            this.cmbTipus.ValueMember = "VALUE_MEMBER";
-            // 
             // dynComboBindingSource
             // 
             this.dynComboBindingSource.DataSource = typeof(BusinessLogic.DynCombo);
@@ -262,7 +254,7 @@
             // 
             // nrRot
             // 
-            this.nrRot.Location = new System.Drawing.Point(92, 120);
+            this.nrRot.Location = new System.Drawing.Point(86, 120);
             this.nrRot.Maximum = new decimal(new int[] {
             360,
             0,
@@ -272,10 +264,11 @@
             this.nrRot.Size = new System.Drawing.Size(33, 20);
             this.nrRot.TabIndex = 8;
             this.nrRot.Visible = false;
+            this.nrRot.ValueChanged += new System.EventHandler(this.nrRot_ValueChanged);
             // 
             // txtAsztalSzam
             // 
-            this.txtAsztalSzam.Location = new System.Drawing.Point(5, 197);
+            this.txtAsztalSzam.Location = new System.Drawing.Point(5, 207);
             this.txtAsztalSzam.Name = "txtAsztalSzam";
             this.txtAsztalSzam.Size = new System.Drawing.Size(100, 20);
             this.txtAsztalSzam.TabIndex = 4;
@@ -284,7 +277,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 181);
+            this.label3.Location = new System.Drawing.Point(5, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 5;
@@ -304,8 +297,52 @@
             this.pnlAsztalHelyek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAsztalHelyek.Location = new System.Drawing.Point(0, 0);
             this.pnlAsztalHelyek.Name = "pnlAsztalHelyek";
-            this.pnlAsztalHelyek.Size = new System.Drawing.Size(858, 580);
+            this.pnlAsztalHelyek.Size = new System.Drawing.Size(852, 580);
             this.pnlAsztalHelyek.TabIndex = 1;
+            // 
+            // icmbTipus
+            // 
+            this.icmbTipus.Location = new System.Drawing.Point(6, 143);
+            this.icmbTipus.Name = "icmbTipus";
+            this.icmbTipus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.icmbTipus.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 11, 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 12, 1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 13, 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 14, 3),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 15, 4),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 16, 5),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 17, 6),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 18, 7),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 19, 8),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 20, 9),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 21, 10),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 97, 11),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 98, 12),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", 99, 13)});
+            this.icmbTipus.Properties.SmallImages = this.ilLogin;
+            this.icmbTipus.Size = new System.Drawing.Size(94, 47);
+            this.icmbTipus.TabIndex = 12;
+            // 
+            // ilLogin
+            // 
+            this.ilLogin.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLogin.ImageStream")));
+            this.ilLogin.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilLogin.Images.SetKeyName(0, "11");
+            this.ilLogin.Images.SetKeyName(1, "12");
+            this.ilLogin.Images.SetKeyName(2, "13");
+            this.ilLogin.Images.SetKeyName(3, "14");
+            this.ilLogin.Images.SetKeyName(4, "15");
+            this.ilLogin.Images.SetKeyName(5, "16");
+            this.ilLogin.Images.SetKeyName(6, "17");
+            this.ilLogin.Images.SetKeyName(7, "18");
+            this.ilLogin.Images.SetKeyName(8, "19");
+            this.ilLogin.Images.SetKeyName(9, "20");
+            this.ilLogin.Images.SetKeyName(10, "21");
+            this.ilLogin.Images.SetKeyName(11, "97");
+            this.ilLogin.Images.SetKeyName(12, "98");
+            this.ilLogin.Images.SetKeyName(13, "99");
             // 
             // AsztalSetup
             // 
@@ -324,6 +361,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dynComboBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nrRot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icmbTipus.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,7 +383,6 @@
         private System.Windows.Forms.RadioButton rb270;
         private System.Windows.Forms.RadioButton rb90;
         private System.Windows.Forms.NumericUpDown nrRot;
-        private System.Windows.Forms.ComboBox cmbTipus;
         private System.Windows.Forms.BindingSource dynComboBindingSource;
         private System.Windows.Forms.Label lblAktAsztalId;
         private System.Windows.Forms.Button button4;
@@ -353,5 +390,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chkRendelFel;
+        private DevExpress.XtraEditors.ImageComboBoxEdit icmbTipus;
+        private System.Windows.Forms.ImageList ilLogin;
     }
 }

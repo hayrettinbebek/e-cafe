@@ -27,19 +27,21 @@ namespace e_Cafe
 
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)       
         {
-            updateSettings();
-            for (int i = 0; i < a.aList.lASZTAL.Count; i++)
+            if (a != null)
             {
-                a.aList.SaveList();
+                updateSettings();
+                for (int i = 0; i < a.aList.lASZTAL.Count; i++)
+                {
+                    a.aList.SaveList();
 
+                }
+                pnlAsztalHelyek.Controls.Clear();
+                a = new Asztalok(pnlAsztalHelyek, ((Hely)cmbHelyek.Items[cmbHelyek.SelectedIndex]).fHELY_ID, true);
+
+                a.RefreshAsztalok(true);
             }
-            pnlAsztalHelyek.Controls.Clear();
-            a = new Asztalok(pnlAsztalHelyek, ((Hely)cmbHelyek.Items[cmbHelyek.SelectedIndex]).fHELY_ID, true);
-            
-            a.RefreshAsztalok(true);
-            
         }
 
         private void AsztalSetup_Load(object sender, EventArgs e)
@@ -90,7 +92,15 @@ namespace e_Cafe
         {
             AktAsztal = ((GUI.Asztal_Button)sender).aObj;
             txtAsztalSzam.Text = ((GUI.Asztal_Button)sender).aObj.fASZTAL_SZAM;
-            cmbTipus.SelectedValue = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
+            for (int i = 0; i < icmbTipus.Properties.Items.Count-1; i++)
+            {
+            	if ((int)icmbTipus.Properties.Items[i].Value == ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS)
+                {
+                    icmbTipus.SelectedIndex = i;
+                }
+            }
+
+            //icmbTipus.SelectedIndex =  .SelectedValue = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
             //txtAsztalTipus.Text = ((GUI.Asztal_Button)sender).aObj.fASZTAL_TIPUS.ToString();
 
             chkNameVis.Checked = DEFS.IntToBool(a.aList.GetItem(AktAsztal.fASZTAL_ID).fNAME_VISIBLE);
@@ -133,22 +143,28 @@ namespace e_Cafe
 
         private void txtAsztal_TextChanged(object sender, EventArgs e)
         {
-            nrRot.Value = setRoatation();
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(cmbTipus.SelectedValue);
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fNAME_VISIBLE = DEFS.BoolToInt(chkNameVis.Checked);
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fUSEABLE = DEFS.BoolToInt(chkRendelFel.Checked);
+            if (a != null)
+            {
+                nrRot.Value = setRoatation();
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16((int)icmbTipus.Properties.Items[icmbTipus.SelectedIndex].Value);
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fNAME_VISIBLE = DEFS.BoolToInt(chkNameVis.Checked);
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fUSEABLE = DEFS.BoolToInt(chkRendelFel.Checked);
+            }
         }
 
         private void updateSettings()
         {
-            nrRot.Value = setRoatation();
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16(cmbTipus.SelectedValue);
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fNAME_VISIBLE = DEFS.BoolToInt(chkNameVis.Checked);
-            a.aList.GetItem(AktAsztal.fASZTAL_ID).fUSEABLE = DEFS.BoolToInt(chkRendelFel.Checked);
+            if (a != null)
+            {
+                nrRot.Value = setRoatation();
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_SZAM = txtAsztalSzam.Text;
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_TIPUS = Convert.ToInt16((int)icmbTipus.Properties.Items[icmbTipus.SelectedIndex].Value);
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fASZTAL_ROTATE = Convert.ToInt16(nrRot.Value);
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fNAME_VISIBLE = DEFS.BoolToInt(chkNameVis.Checked);
+                a.aList.GetItem(AktAsztal.fASZTAL_ID).fUSEABLE = DEFS.BoolToInt(chkRendelFel.Checked);
+            }
         }
 
         private int setRoatation()
@@ -220,6 +236,11 @@ namespace e_Cafe
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void nrRot_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
