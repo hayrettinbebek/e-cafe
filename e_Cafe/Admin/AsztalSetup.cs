@@ -237,10 +237,5 @@ namespace e_Cafe
         {
             this.Close();
         }
-
-        private void nrRot_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

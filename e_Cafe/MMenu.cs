@@ -163,7 +163,7 @@ namespace e_Cafe
         }
 
 
-        void UpdateClock(DateTime dt, IArcScale h, IArcScale m, IArcScale s)
+        static void UpdateClock(DateTime dt, IArcScale h, IArcScale m, IArcScale s)
         {
             int hour = dt.Hour <= 12 ? dt.Hour : dt.Hour - 12;
             int min = dt.Minute;
@@ -172,7 +172,7 @@ namespace e_Cafe
             m.Value = ((float)min + (float)(sec) / 60.0f) / 5f;
             s.Value = sec / 5.0f;
         }
-        private string DisplaySong()
+        static string DisplaySong()
         {
             try
             {
@@ -528,14 +528,14 @@ namespace e_Cafe
 
         private void btnLevelek_Click(object sender, EventArgs e)
         {
-            frmUzenetek fu = new frmUzenetek();
-            fu.ShowDialog();
+            
+            new frmUzenetek().ShowDialog();
         }
 
         private void btnReceptek_Click(object sender, EventArgs e)
         {
-            MRendeles mr = new MRendeles(true);
-            mr.ShowDialog();
+            
+            new MRendeles(true).ShowDialog();
         }
 
         private void btnKijelent_Click(object sender, EventArgs e)
