@@ -10,6 +10,7 @@ using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using NSpring.Logging;
 using WinampFrontEndLib;
+using DevExpress.XtraGauges.Core.Model;
 
 
 namespace e_Cafe
@@ -26,6 +27,10 @@ namespace e_Cafe
 
         private static int C_HELYEK_WIDTH = 120;
         private static int C_HELYEK_HEIGHT = 60;
+
+        int lockTimerCounter = 0;
+        private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent scaleHours, scaleMinutes, scaleSeconds;
+     
 
         public MMenu()
         {
@@ -50,6 +55,7 @@ namespace e_Cafe
             DEFS.LoadPossibleOpenDays();
             DEFS.LoadNyitottNap();
             DEFS.SendShortMessage("Nyitott nap:" + DEFS.NyitNap_EV.ToString() + DEFS.NyitNap_HO.ToString() + DEFS.NyitNap_NAP.ToString(), 1000);
+
 
 
             login_ok = Login(0);
@@ -146,8 +152,25 @@ namespace e_Cafe
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblTime.Text = Convert.ToString(Convert.ToDateTime(DateTime.Now).Hour) + ":" + Convert.ToString(Convert.ToDateTime(DateTime.Now).Minute) + ":" + Convert.ToString(Convert.ToDateTime(DateTime.Now).Second);
-            lbltrackInfo.Text = DisplaySong();
+            //lblTime.Text = Convert.ToString(Convert.ToDateTime(DateTime.Now).Hour) + ":" + Convert.ToString(Convert.ToDateTime(DateTime.Now).Minute) + ":" + Convert.ToString(Convert.ToDateTime(DateTime.Now).Second);
+            lbltrackInfo.Text = DisplaySong();            
+            if (lockTimerCounter == 0)
+            {
+                lockTimerCounter++;
+                UpdateClock(DateTime.Now, arcScaleComponent1, arcScaleComponent2, arcScaleComponent3);
+                lockTimerCounter--;
+            }
+        }
+
+
+        void UpdateClock(DateTime dt, IArcScale h, IArcScale m, IArcScale s)
+        {
+            int hour = dt.Hour <= 12 ? dt.Hour : dt.Hour - 12;
+            int min = dt.Minute;
+            int sec = dt.Second;
+            h.Value = (float)hour + (float)(min) / 60.0f;
+            m.Value = ((float)min + (float)(sec) / 60.0f) / 5f;
+            s.Value = sec / 5.0f;
         }
         private string DisplaySong()
         {
