@@ -264,7 +264,6 @@
             this.nrRot.Size = new System.Drawing.Size(33, 20);
             this.nrRot.TabIndex = 8;
             this.nrRot.Visible = false;
-            this.nrRot.ValueChanged += new System.EventHandler(this.nrRot_ValueChanged);
             // 
             // txtAsztalSzam
             // 
